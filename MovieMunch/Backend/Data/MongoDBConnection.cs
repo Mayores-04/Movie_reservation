@@ -25,4 +25,9 @@ public class MongoDBConnection
     {
         return _database.GetCollection<Movie>("Movies"); //Collection for Movies 
     }
+
+    public IMongoCollection<AdminAccount> GetAdminAccountsCollection()
+    {
+        return _database.GetCollection<AdminAccount>("AdminAccounts");
+    }
 }

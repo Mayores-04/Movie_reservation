@@ -1,18 +1,22 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 public class UserService
 {
     private readonly IMongoCollection<User> _usersCollection;
     private readonly IMongoCollection<Counts> _countsCollection;
+    private readonly IMongoCollection<AdminAccount> _adminAccountCollection;
 
     public UserService()
     {
         var dbConnection = new MongoDBConnection();
         _usersCollection = dbConnection.GetUsersCollection(); // Get the Users collection from MongoDB.
         _countsCollection = dbConnection.GetNumberOfUsersCollection(); // Get the Counts collection for tracking user numbers.
+        _adminAccountCollection = dbConnection.GetAdminAccountsCollection();
 
         // Create a unique index on email only once, not every time the service is instantiated.
         CreateEmailIndex();
@@ -42,7 +46,6 @@ public class UserService
     {
         if (!IsValidEmail(email))
         {
-            ShowMessage("Invalid email format.");
             return false;
         }
 
@@ -71,12 +74,10 @@ public class UserService
             // Increment user count after successful registration.
             IncrementUserCount();
 
-            ShowMessage("Registration successful!");
             return true;
         }
         catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
         {
-            ShowMessage("User already exists.");
             return false;
         }
         catch (Exception ex)
@@ -91,27 +92,48 @@ public class UserService
     {
         if (!IsValidEmail(email))
         {
-            ShowMessage("Invalid email format.");
             return false;
         }
 
-        // Find the user and validate the password.
+        // Find the user in the regular user collection.
         var existingUser = _usersCollection.Find(u => u.Email == email).FirstOrDefault();
+
         if (existingUser == null)
         {
-            ShowMessage("User does not exist.");
             return false;
         }
 
-        // Verify the password.
+        // Verify the password for the regular user.
         if (!PasswordHelper.VerifyPassword(password, existingUser.Password))
         {
-            ShowMessage("Incorrect password.");
-            return false; 
+            return false;
         }
 
-        ShowMessage("Login successful.");
-        return true;
+        return true;  // Return true for successful user login
+    }
+
+    public bool AdminLogin(string email, string password)
+    {
+        if (!IsValidEmail(email))
+        {
+            return false;
+        }
+
+        // Find the user in the admin account collection.
+        var adminAccount = _adminAccountCollection.Find(a => a.Email == email).FirstOrDefault();
+
+        if (adminAccount == null)
+        {
+            return false;
+        }
+
+        // Verify the password for the admin.
+        if (!PasswordHelper.VerifyPassword(password, adminAccount.Password))
+        {
+            return false;
+        }
+
+        return true;  // Return true for successful admin login
     }
 
     // Method to increment the user count in the database.
@@ -142,5 +164,53 @@ public class UserService
     private void ShowMessage(string message)
     {
         MessageBox.Show(message); //ShowMessage lang is yung kung success or failed sa pag register or login
+    }
+
+    //Edited Account
+    public bool new_edited_account(string email, string password)
+    {
+        if (!IsValidEmail(email))
+        {
+            ShowMessage("Invalid email format.");
+            return false;
+        }
+
+        if (!IsValidPassword(password))
+        {
+            ShowMessage("Password must be at least 8 characters long and contain letters and numbers.");
+            return false;
+        }
+
+        // Hash the new password before storing it in the database.
+        string hashedPassword = PasswordHelper.HashPassword(password);
+
+        // Filter to find the document by email.
+        var filter = Builders<User>.Filter.Eq(u => u.Email, email);
+
+        // Update definition to set the new hashed password.
+        var update = Builders<User>.Update.Set(u => u.Password, hashedPassword);
+
+        try
+        {
+            // Attempt to update the user's password.
+            var updateResult = _usersCollection.UpdateOne(filter, update);
+
+            if (updateResult.ModifiedCount > 0)
+            {
+                ShowMessage("Password updated successfully.");
+                return true;
+            }
+            else
+            {
+                ShowMessage("User not found or no changes made.");
+                return false;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating password: {ex.Message}");
+            ShowMessage("An error occurred while updating the password.");
+            return false;
+        }
     }
 }
