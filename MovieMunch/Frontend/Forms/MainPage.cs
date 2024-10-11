@@ -1,5 +1,4 @@
-﻿using MovieMunch.Forms.Components;
-using MovieMunch.Frontend.Forms;
+﻿using MovieMunch.Frontend.Forms;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -15,7 +14,7 @@ namespace MovieMunch
         private int _currentImageIndex = 0;
 
         private readonly string[] _circleColors;
-        private PictureBox[] _circleColorBoxes; // 4 circles for image index
+        private readonly PictureBox[] _circleColorBoxes; // 4 circles for image index
         private SettingsForm _settingsForm;
 
         public MainPage()
@@ -167,5 +166,11 @@ namespace MovieMunch
             _settingsForm = new SettingsForm();
             _settingsForm.Show();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

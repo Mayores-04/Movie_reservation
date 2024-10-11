@@ -270,6 +270,9 @@
     <Content Include="Frontend\Forms\Assets\bgColor.png" />
     <None Include="Frontend\Forms\Assets\ColoredCircle.png" />
     <None Include="Frontend\Forms\Assets\BGOVERLAY.png" />
+    <None Include="Frontend\Forms\Assets\HomeIconCircle.png" />
+    <None Include="Frontend\Forms\Assets\homeIcon.png" />
+    <None Include="Frontend\Forms\Assets\FavIcon.png" />
     <Content Include="Frontend\Forms\Assets\leftBtn.png" />
     <None Include="Frontend\Forms\Assets\Logo.jpg" />
     <Content Include="Frontend\Forms\Assets\movie1.png" />
@@ -279,8 +282,10 @@
     <None Include="Frontend\Forms\Assets\ReserveSeatBtn.png" />
     <Content Include="Frontend\Forms\Assets\right.png" />
     <None Include="Frontend\Forms\Assets\SearchBtn.png" />
+    <None Include="Frontend\Forms\Assets\SettingIcon.png" />
     <Content Include="Frontend\Forms\Assets\ticket 1.png" />
     <None Include="Frontend\Forms\Assets\UncolloredCircle.png" />
+    <None Include="Frontend\Forms\Assets\TicketIcon.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>
