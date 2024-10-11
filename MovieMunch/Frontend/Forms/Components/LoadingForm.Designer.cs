@@ -1,7 +1,8 @@
 ﻿using System;
+
 namespace MovieMunch
 {
-    partial class LoadingForm
+    partial class LoadingForm 
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Timer timer;
@@ -26,7 +27,7 @@ namespace MovieMunch
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::MovieMunch.Properties.Resources.Logo;
+            this.pictureBox1.BackgroundImage = global::MovieMunch.Properties.Resources.lg;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(270, 119);
             this.pictureBox1.Name = "pictureBox1";
