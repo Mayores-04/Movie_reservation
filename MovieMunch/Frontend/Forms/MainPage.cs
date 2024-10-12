@@ -17,22 +17,40 @@ namespace MovieMunch
         private readonly PictureBox[] _circleColorBoxes; // 4 circles for image index
         private SettingsForm _settingsForm;
 
+        //Button BG Design
+        private readonly string BtnBG = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\HomeIconCircle.png";
+
+        private readonly string HomeImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\homeIcon.png";
+        private readonly string HomeDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\home down 1.png"; // Default Home button image
+
+        private readonly string TicketImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\ticketup 1.png";
+        private readonly string TicketDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\TicketIcon.png"; // Default Ticket button image
+
+        private readonly string FavImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\heartup 1.png";
+        private readonly string FavDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\FavIcon.png"; // Default Fav button image
+
+        private readonly string SettingImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\settingup.png";
+        private readonly string SettingDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\SettingIcon.png"; // Default Setting button image
+
+        private Button _selectedButton = null; // To track the currently selected button
+
+
         public MainPage()
         {
             InitializeComponent();
 
             _imagePaths = new string[]
             {
-                @"C:\Users\jakem\source\repos\MovieMunch\MovieMunch\Frontend\Forms\Assets\movie1.png",
-                @"C:\Users\jakem\source\repos\MovieMunch\MovieMunch\Frontend\Forms\Assets\movie2.png",
-                @"C:\Users\jakem\source\repos\MovieMunch\MovieMunch\Frontend\Forms\Assets\movie3.png",
-                @"C:\Users\jakem\source\repos\MovieMunch\MovieMunch\Frontend\Forms\Assets\movie4.png"
+                @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\movie1.png",
+                @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\movie2.png",
+                @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\movie3.png",
+                @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\movie4.png"
             };
 
             _circleColors = new string[]
             {
-                @"C:\Users\jakem\source\repos\MovieMunch\MovieMunch\Frontend\Forms\Assets\ColoredCircle.png",
-                @"C:\Users\jakem\source\repos\MovieMunch\MovieMunch\Frontend\Forms\Assets\UncolloredCircle.png"
+                @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\ColoredCircle.png",
+                @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\UncolloredCircle.png"
             };
 
             // Initialize circle color boxes
@@ -160,17 +178,66 @@ namespace MovieMunch
             RegisterForm registrationForm = new RegisterForm();
             registrationForm.Show();
         }
+        // Helper method to reset all buttons' backgrounds
+        private void ResetAllButtonsToDefault()
+        {
+            // Reset all buttons to their default images
+            SetButtonToDefault(SettingBtn, SettingDefaultImage);
+            SetButtonToDefault(HomeBtn, HomeDefaultImage);
+            SetButtonToDefault(FavBtn, FavDefaultImage);
+            SetButtonToDefault(TicketBtn, TicketDefaultImage);
+        }
 
+        private void SetButtonToDefault(Button button, string defaultImagePath)
+        {
+            if (File.Exists(defaultImagePath))
+            {
+                button.BackgroundImage = null;
+                button.Image = new Bitmap(defaultImagePath);
+            }
+            else
+            {
+                MessageBox.Show("Default image not found at path: " + defaultImagePath);
+            }
+        }
+
+        private void SetButtonBackground(Button selectedButton, string selectedButtonImagePath)
+        {
+            // Reset all buttons to their default state before updating the selected button
+            ResetAllButtonsToDefault();
+
+            // Set the background for the selected button
+            if (selectedButton != null)
+            {
+                Bitmap bgImage = new Bitmap(BtnBG);
+                Bitmap image = new Bitmap(selectedButtonImagePath);
+                selectedButton.BackgroundImage = bgImage;
+                selectedButton.Image = image;
+                _selectedButton = selectedButton; // Update the selected button reference
+            }
+        }
+
+        // Button click event handlers
         private void SettingBtn_Click(object sender, EventArgs e)
         {
             _settingsForm = new SettingsForm();
             _settingsForm.Show();
+            SetButtonBackground(SettingBtn, SettingImage);
         }
 
-        private void searchBtn_Click(object sender, EventArgs e)
+        private void HomeBtn_Click(object sender, EventArgs e)
         {
-
+            SetButtonBackground(HomeBtn, HomeImage);
         }
 
+        private void FavBtn_Click(object sender, EventArgs e)
+        {
+            SetButtonBackground(FavBtn, FavImage);
+        }
+
+        private void TicketBtn_Click(object sender, EventArgs e)
+        {
+            SetButtonBackground(TicketBtn, TicketImage);
+        }
     }
 }

@@ -308,6 +308,7 @@
     <None Include="Frontend\Forms\Assets\HomeIconCircle.png" />
     <None Include="Frontend\Forms\Assets\homeIcon.png" />
     <None Include="Frontend\Forms\Assets\FavIcon.png" />
+    <None Include="Frontend\Forms\Assets\home down 1.png" />
     <Content Include="Frontend\Forms\Assets\leftBtn.png" />
     <None Include="Frontend\Forms\Assets\Logo.jpg" />
     <None Include="Frontend\Forms\Assets\lg.png" />
@@ -320,7 +321,6 @@
     <Content Include="Frontend\Forms\Assets\right.png" />
     <None Include="Frontend\Forms\Assets\SearchBtn.png" />
     <None Include="Frontend\Forms\Assets\SettingIcon.png" />
-    <Content Include="Frontend\Forms\Assets\ticket 1.png" />
     <None Include="Frontend\Forms\Assets\UncolloredCircle.png" />
     <None Include="Frontend\Forms\Assets\TicketIcon.png" />
     <Content Include="mongocrypt.dll" />
