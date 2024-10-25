@@ -56,8 +56,11 @@
     <Reference Include="AWSSDK.SecurityToken, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>..\packages\AWSSDK.SecurityToken.3.7.100.14\lib\net45\AWSSDK.SecurityToken.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.Licensing.6.0.4\lib\net472\Bunifu.Licensing.dll</HintPath>
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.7.2.0\lib\net472\Bunifu.UI.WinForms.dll</HintPath>
@@ -206,11 +209,11 @@
     <Compile Include="Admin\MainAdminForm.Designer.cs">
       <DependentUpon>MainAdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\Controllers\MovieController.cs" />
     <Compile Include="Backend\Data\MongoDBConnection.cs" />
     <Compile Include="Backend\Helpers\PasswordHelper.cs" />
     <Compile Include="Backend\Models\AdminAccount.cs" />
     <Compile Include="Backend\Models\Counts.cs" />
+    <Compile Include="Backend\Models\FilmsInCinema.cs" />
     <Compile Include="Backend\Models\Movie.cs" />
     <Compile Include="Backend\Models\User.cs" />
     <Compile Include="Backend\Services\MovieService.cs" />
@@ -253,6 +256,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\MainAdminForm.resx">
+      <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
       <DependentUpon>editEmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,15 +315,19 @@
     <None Include="Frontend\Forms\Assets\homeIcon.png" />
     <None Include="Frontend\Forms\Assets\FavIcon.png" />
     <None Include="Frontend\Forms\Assets\home down 1.png" />
+    <None Include="Frontend\Forms\Assets\Ellipse 7.png" />
     <Content Include="Frontend\Forms\Assets\leftBtn.png" />
     <None Include="Frontend\Forms\Assets\Logo.jpg" />
     <None Include="Frontend\Forms\Assets\lg.png" />
     <None Include="Frontend\Forms\Assets\lg2.png" />
+    <None Include="Frontend\Forms\Assets\MM-removebg-preview.png" />
     <Content Include="Frontend\Forms\Assets\movie1.png" />
     <Content Include="Frontend\Forms\Assets\movie2.png" />
     <Content Include="Frontend\Forms\Assets\movie3.png" />
     <Content Include="Frontend\Forms\Assets\movie4.png" />
     <None Include="Frontend\Forms\Assets\ReserveSeatBtn.png" />
+    <None Include="Frontend\Forms\Assets\MovieMunchLogo-removebg-preview.png" />
+    <None Include="Frontend\Forms\Assets\MovieM-removebg-preview.png" />
     <Content Include="Frontend\Forms\Assets\right.png" />
     <None Include="Frontend\Forms\Assets\SearchBtn.png" />
     <None Include="Frontend\Forms\Assets\SettingIcon.png" />
@@ -340,7 +350,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Frontend\Forms\images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

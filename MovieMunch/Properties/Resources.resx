@@ -124,11 +124,11 @@
   <data name="leftBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\leftBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SettingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\SettingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MovieMunchLogo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\MovieMunchLogo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ColoredCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\ColoredCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +148,20 @@
   <data name="UncolloredCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\UncolloredCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HomeIconCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\HomeIconCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="applogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\applogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\lg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ellipse 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\Ellipse 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BGOVERLAY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\BGOVERLAY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +169,11 @@
   <data name="lg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\lg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="applogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\applogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MM-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\MM-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\homeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,5 +183,8 @@
   </data>
   <data name="home down 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\home down 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MovieM-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\MovieM-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

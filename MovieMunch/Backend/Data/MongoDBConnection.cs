@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using MovieMunch.Backend.Models;
 using MovieMunch.Models;
 
 public class MongoDBConnection
@@ -29,5 +30,10 @@ public class MongoDBConnection
     public IMongoCollection<AdminAccount> GetAdminAccountsCollection()
     {
         return _database.GetCollection<AdminAccount>("AdminAccounts");
+    }
+
+    public IMongoCollection<FilmsInCinema> GetFilmsInCinemaCollection()
+    {
+        return _database.GetCollection<FilmsInCinema>("FilmsInCinema");
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MovieMunch.Admin
 {
-    public partial class MainAdminForm : Form
+    public partial class AdminForm : Form
     {
-        public MainAdminForm()
+        public AdminForm()
         {
             InitializeComponent();
         }

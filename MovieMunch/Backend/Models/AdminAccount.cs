@@ -3,7 +3,6 @@ using MongoDB.Bson.Serialization.Attributes;
 using System;
 
 
-//Dito dumadaan yung mga data na papasok at lalabas from database collections
 public class AdminAccount
 {
     [BsonId]

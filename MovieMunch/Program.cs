@@ -11,9 +11,11 @@ namespace MovieMunch
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Show the loading form first
             LoadingForm loadingForm = new LoadingForm();
-            Application.Run(loadingForm); // Application will start with LoadingForm
+            Application.Run(loadingForm);
+
+            //MainAdminForm mainAdminForm = new MainAdminForm();
+            //Application.Run(mainAdminForm);
         }
     }
 }
