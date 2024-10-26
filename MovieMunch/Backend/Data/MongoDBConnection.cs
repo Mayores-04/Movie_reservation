@@ -1,6 +1,8 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using MovieMunch.Backend.Models;
 using MovieMunch.Models;
+using System.Threading.Tasks;
 
 public class MongoDBConnection
 {
@@ -36,4 +38,6 @@ public class MongoDBConnection
     {
         return _database.GetCollection<FilmsInCinema>("FilmsInCinema");
     }
+
+    public IMongoDatabase Database => _database;
 }

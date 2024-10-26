@@ -212,11 +212,13 @@
     <Compile Include="Backend\Data\MongoDBConnection.cs" />
     <Compile Include="Backend\Helpers\PasswordHelper.cs" />
     <Compile Include="Backend\Models\AdminAccount.cs" />
+    <Compile Include="Backend\Models\CinemaSeats.cs" />
     <Compile Include="Backend\Models\Counts.cs" />
     <Compile Include="Backend\Models\FilmsInCinema.cs" />
     <Compile Include="Backend\Models\Movie.cs" />
     <Compile Include="Backend\Models\User.cs" />
     <Compile Include="Backend\Services\MovieService.cs" />
+    <Compile Include="Backend\Services\SeatReservationServices.cs" />
     <Compile Include="Backend\Services\UserService.cs" />
     <Compile Include="Frontend\Forms\Components\editEmail.cs">
       <SubType>Form</SubType>
@@ -248,6 +250,12 @@
     <Compile Include="Frontend\Forms\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\Forms\SeatReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\SeatReservation.Designer.cs">
+      <DependentUpon>SeatReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\Forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +282,9 @@
     <EmbeddedResource Include="Frontend\Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\SeatReservation.resx">
+      <DependentUpon>SeatReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
