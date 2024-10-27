@@ -6,27 +6,39 @@ using System.Threading.Tasks;
 
 public class MongoDBConnection
 {
-    private readonly IMongoDatabase _database;  // Private field to store the database connection.
+    private readonly IMongoDatabase _database; 
 
     public MongoDBConnection()
     {
-        var client = new MongoClient("mongodb://localhost:27017/"); //mongodb://localhost:27017/ ito yung mongoDB string, link sya ng server sa database
+        var client = new MongoClient("mongodb://localhost:27017/"); 
 
-        _database = client.GetDatabase("MovieReservationDB");  //MovieReservationDB the Name of the database.
+        _database = client.GetDatabase("MovieReservationDB");
+
+        CreateCollectionIfNotExists<FilmsInCinema>("FilmsInCinema");
     }
+
+    private void CreateCollectionIfNotExists<T>(string collectionName)
+    {
+        var collectionNames = _database.ListCollectionNames().ToList();
+        if (!collectionNames.Contains(collectionName))
+        {
+            _database.CreateCollection(collectionName);
+        }
+    }
+
 
     public IMongoCollection<User> GetUsersCollection()
     {
-        return _database.GetCollection<User>("Users");  // Returns the Users collection. Users is yung collection sa database na MovieReservationDB.
+        return _database.GetCollection<User>("Users");  
     }
     public IMongoCollection<Counts> GetNumberOfUsersCollection()
     {
-        return _database.GetCollection<Counts>("number_of_users"); // Collection for counting the number of users.
+        return _database.GetCollection<Counts>("number_of_users");
     }
 
     public IMongoCollection<Movie> GetMoviesCollection()
     {
-        return _database.GetCollection<Movie>("Movies"); //Collection for Movies 
+        return _database.GetCollection<Movie>("Movies"); 
     }
 
     public IMongoCollection<AdminAccount> GetAdminAccountsCollection()

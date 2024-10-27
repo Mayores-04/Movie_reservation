@@ -1,7 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-
 namespace MovieMunch.Backend.Models
 {
     public class FilmsInCinema
@@ -11,9 +10,12 @@ namespace MovieMunch.Backend.Models
         public string Id { get; set; }
 
         [BsonElement("title")]
-        public string Title { get; set; }
+        public string FilmTitle { get; set; } 
+
+        [BsonElement("description")]
+        public string FilmsDescription { get; set; } 
 
         [BsonElement("imagePath")]
-        public string ImagePath { get; set; }
+        public string FilmImagePath { get; set; }
     }
 }

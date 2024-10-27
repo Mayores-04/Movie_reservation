@@ -1,4 +1,5 @@
-﻿using MovieMunch.Frontend.Forms;
+﻿using MovieMunch.Admin.Components;
+using MovieMunch.Frontend.Forms;
 using MovieMunch.Services;
 using System;
 using System.Windows.Forms;
@@ -18,12 +19,9 @@ namespace MovieMunch
 
             //MainAdminForm mainAdminForm = new MainAdminForm();
             //Application.Run(mainAdminForm);
-            var dbConnection = new MongoDBConnection();
-            var seatReservationService = new SeatReservationServices(dbConnection);
 
-            // Pass the service to the SeatReservation form
-            var seatReservationForm = new SeatReservation(seatReservationService);
-            Application.Run(seatReservationForm);
+            FilmsInCinemaForm filmsInCinema = new FilmsInCinemaForm();
+            Application.Run(filmsInCinema);
         }
     }
 }

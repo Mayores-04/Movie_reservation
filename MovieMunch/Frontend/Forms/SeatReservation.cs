@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,13 +21,12 @@ namespace MovieMunch
             InitializeComponent();
             _seatReservationService = seatReservationService;
 
-            // Define all seats here
             _allSeats = new List<string>();
-            for (int i = 1; i <= 10; i++) // Assuming 10 rows and 10 columns
+            for (int i = 1; i <= 10; i++) // Implementing 10 rows, 10 columns
             {
                 for (char j = 'A'; j <= 'J'; j++)
                 {
-                    _allSeats.Add($"btnSeat{j}{i}");
+                    _allSeats.Add($"{j}{i}"); // Adds seats as "A1", "B2", etc.
                 }
             }
 
@@ -33,34 +34,45 @@ namespace MovieMunch
         }
 
 
+
         private async void SeatReservation_Load(object sender, EventArgs e)
         {
-            string movieName = txtMovieName; 
+            string movieName = txtMovieName;
 
             await _seatReservationService.InitializeSeatsAsync(movieName, _allSeats);
-
             await LoadSeatStatusAsync(movieName);
 
+            // Loop through the controls to find buttons
             foreach (var seat in _allSeats)
             {
-                if (this.Controls.ContainsKey(seat))
+                // Check if the control is a BunifuButton by its name
+                Control seatButton = this.Controls.Find(seat, true).FirstOrDefault();
+
+                if (seatButton is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn)
                 {
-                    this.Controls[seat].Click += SeatButton_Click;
+                    btn.Click += SeatButton_Click;
+                }
+                else
+                {
+                    MessageBox.Show($"Button {seat} not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
+
+
 
         private void SeatButton_Click(object sender, EventArgs e)
         {
             if (sender is Bunifu.UI.WinForms.BunifuButton.BunifuButton seatButton)
             {
-                if (seatButton.BackColor == Color.Green) 
+                // Toggle between Green and Red colors for selected/unselected states
+                if (seatButton.BackColor == Color.Green)
                 {
-                    seatButton.BackColor = Color.Red;
+                    seatButton.BackColor = Color.Red; // Selected
                 }
                 else if (seatButton.BackColor == Color.Red)
                 {
-                    seatButton.BackColor = Color.Green;
+                    seatButton.BackColor = Color.Green; // Unselected
                 }
             }
             else
@@ -81,9 +93,12 @@ namespace MovieMunch
                 {
                     foreach (string seatNumber in reservation.SeatNumbers)
                     {
-                        if (this.Controls.ContainsKey(seatNumber))
+                        // Use Controls.Find to ensure you find the button correctly
+                        Control seatButton = this.Controls.Find(seatNumber, true).FirstOrDefault();
+
+                        if (seatButton is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn)
                         {
-                            this.Controls[seatNumber].BackColor = reservation.IsReserved ? Color.Gray : Color.Green;
+                            btn.BackColor = reservation.IsReserved ? Color.Gray : Color.Green; // Set color based on status
                         }
                     }
                 }
@@ -98,7 +113,7 @@ namespace MovieMunch
             List<string> selectedSeats = new List<string>();
             foreach (Control control in this.Controls)
             {
-                if (control is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn && btn.BackColor == Color.Red) // Collect selected seats
+                if (control is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn && btn.BackColor == Color.Red) 
                 {
                     selectedSeats.Add(btn.Name);
                 }

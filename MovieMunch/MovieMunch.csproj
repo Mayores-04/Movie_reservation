@@ -203,6 +203,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Components\FilmsInCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Components\FilmsInCinema.Designer.cs">
+      <DependentUpon>FilmsInCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Components\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Components\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\MainAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,8 +274,17 @@
     <Compile Include="Frontend\Forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\Forms\UserProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\UserProfileForm.Designer.cs">
+      <DependentUpon>UserProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\Components\FilmsInCinema.resx">
+      <DependentUpon>FilmsInCinema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\MainAdminForm.resx">
       <DependentUpon>MainAdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\UserProfileForm.resx">
+      <DependentUpon>UserProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -344,6 +368,7 @@
     <None Include="Frontend\Forms\Assets\SettingIcon.png" />
     <None Include="Frontend\Forms\Assets\UncolloredCircle.png" />
     <None Include="Frontend\Forms\Assets\TicketIcon.png" />
+    <None Include="Frontend\Forms\images\coming_soon.jpg" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -361,9 +386,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Frontend\Forms\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

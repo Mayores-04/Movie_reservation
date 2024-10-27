@@ -10,12 +10,24 @@ namespace MovieMunch
             InitializeComponent();
         }
 
-        private void registerButton_Click(object sender, EventArgs e)
+        private void LoginBtnLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            LoginForm logForm = new LoginForm();
+            logForm.ShowDialog();
+        }
+
+        private void regCloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RegisterBtn_Click(object sender, EventArgs e)
         {
             UserService userService = new UserService();
 
-            string email = email_input.Text;
-            string password = password_input.Text;
+            string email = regEmailInput.Text;
+            string password = regPasswordInput.Text;
 
             bool isRegistered = userService.RegisterUser(email, password);
             if (isRegistered)
@@ -23,12 +35,8 @@ namespace MovieMunch
                 MessageBox.Show("Successful Register");
                 this.Hide();
                 LoginForm loginForm = new LoginForm();
-                loginForm.Show();
+                loginForm.ShowDialog();
             }
-        }
-        private void CloseBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

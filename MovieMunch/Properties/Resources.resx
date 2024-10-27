@@ -127,20 +127,26 @@
   <data name="SettingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\SettingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MovieM-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\MovieM-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MovieMunchLogo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\MovieMunchLogo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ColoredCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\ColoredCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FavIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\FavIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ReserveSeatBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\ReserveSeatBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\lg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +160,8 @@
   <data name="HomeIconCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\HomeIconCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="applogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\applogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\lg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FavIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\FavIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ellipse 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\Ellipse 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +172,8 @@
   <data name="lg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\lg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="applogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\Assets\applogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MM-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\MM-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,7 +187,7 @@
   <data name="home down 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Frontend\Forms\Assets\home down 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MovieM-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Frontend\Forms\Assets\MovieM-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coming_soon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Frontend\Forms\images\coming_soon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

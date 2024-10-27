@@ -10,9 +10,12 @@ namespace MovieMunch.Models
         public string Id { get; set; }
 
         [BsonElement("title")]
-        public string Title { get; set; }
+        public string MovieTitle { get; set; }
+
+        [BsonElement("description")]
+        public string MovieDescription { get; set; }
 
         [BsonElement("imagePath")]
-        public string ImagePath { get; set; }
+        public string MovieImagePath { get; set; }
     }
 }

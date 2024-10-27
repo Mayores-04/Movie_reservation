@@ -17,8 +17,8 @@ namespace MovieMunch
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             UserService userService = new UserService();
-            string email = email_input.Text;
-            string password = password_input.Text;
+            string email = emailInput.Text;
+            string password = passwordInput.Text;
 
             // First, check if it's an admin login
             bool isAdminLogin = userService.AdminLogin(email, password);
@@ -102,7 +102,14 @@ namespace MovieMunch
         }
         private void CloseButton(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+        }
+
+        private void SignUpBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            RegisterForm regForm = new RegisterForm();
+            regForm.ShowDialog();
         }
     }
 }

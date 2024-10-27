@@ -1,8 +1,10 @@
 ﻿using Bunifu.UI.WinForms;
 using MongoDB.Driver;
+using MovieMunch.Admin;
 using MovieMunch.Backend.Models;
 using MovieMunch.Frontend.Forms;
 using MovieMunch.Models;
+using MovieMunch.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -28,7 +30,7 @@ namespace MovieMunch
         // Array that stores image paths
         private string[] _imagePaths;
 
-        // Button images (assuming these paths are correct)
+        // Button images 
         private readonly string BtnBG = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\Ellipse 7.png";
         private readonly string HomeImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\homeIcon.png";
         private readonly string HomeDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\home down 1.png";
@@ -52,11 +54,17 @@ namespace MovieMunch
 
             PopulateImagePaths();
 
-            UpdateDisplayedImage(); 
+            UpdateDisplayedImage();
             LoadMoviesToFlowLayoutPanel();
 
             FadeIn(this);
 
+            defaultWidth = userPanel.Width;
+            userPanel.Width = 0;
+            userPanel.Visible = false;
+
+            userPanelTimer.Interval = 10;
+            userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
         }
 
         private void CloseCurrentForm()
@@ -70,11 +78,11 @@ namespace MovieMunch
             _imagePaths = new string[_movies.Count];
             for (int i = 0; i < _movies.Count; i++)
             {
-                _imagePaths[i] = _movies[i].ImagePath;
+                _imagePaths[i] = _movies[i].MovieImagePath;
             }
         }
 
-       
+
 
         private Bitmap LoadImage(string imagePath)
         {
@@ -164,7 +172,7 @@ namespace MovieMunch
 
                 Bitmap image = new Bitmap(imagePath);
                 pictureBox.Image = ApplyOpacity(image, opacity);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             }
             else
             {
@@ -196,13 +204,13 @@ namespace MovieMunch
         private void rightTurnBtn_Click(object sender, EventArgs e)
         {
             _currentImageIndex = (_currentImageIndex + 1) % _imagePaths.Length;
-            UpdateDisplayedImage(); 
+            UpdateDisplayedImage();
         }
 
         private void leftTurnBtn_Click(object sender, EventArgs e)
         {
             _currentImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
-            UpdateDisplayedImage(); 
+            UpdateDisplayedImage();
         }
 
         private void ResetAllButtonsToDefault()
@@ -218,7 +226,7 @@ namespace MovieMunch
             if (File.Exists(defaultImage))
             {
                 button.BackgroundImage = new Bitmap(defaultImage);
-                button.Image = null; 
+                button.Image = null;
             }
             else
             {
@@ -233,7 +241,7 @@ namespace MovieMunch
             if (File.Exists(BtnBG))
             {
                 selectedButton.BackgroundImage = new Bitmap(BtnBG);
-                selectedButton.Image = new Bitmap(selectedButtonImage); 
+                selectedButton.Image = new Bitmap(selectedButtonImage);
             }
             else
             {
@@ -259,19 +267,6 @@ namespace MovieMunch
             SetButtonBackground(TicketBtn, TicketImage);
         }
 
-        private void SettingBtn_Click(object sender, EventArgs e)
-        {
-            ResetAllButtonsToDefault();
-            SetButtonBackground(SettingBtn, SettingImage);
-            if (_settingsForm == null || _settingsForm.IsDisposed)
-            {
-                _settingsForm = new SettingsForm();
-            }
-
-            FadeOut(this);
-            _settingsForm.ShowDialog();
-            FadeIn(this); 
-        }
 
         private void LoadMoviesToFlowLayoutPanel()
         {
@@ -286,7 +281,7 @@ namespace MovieMunch
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Size = new Size(200, 250),
                     Margin = new Padding(10),
-                    ImageLocation = movie.ImagePath,
+                    ImageLocation = movie.FilmImagePath,
                     Cursor = Cursors.Hand
                 };
 
@@ -335,7 +330,7 @@ namespace MovieMunch
 
         private void FilmsInCinemaFlowLayout_MouseUp(object sender, MouseEventArgs e)
         {
-            isDragging = false; 
+            isDragging = false;
         }
 
         private void FadeIn(Control control)
@@ -395,6 +390,89 @@ namespace MovieMunch
         }
 
         private void reserveSeatBtn_Click(object sender, EventArgs e)
+        {
+            //Seat Reservation
+            var dbConnection = new MongoDBConnection();
+            var seatReservationService = new SeatReservationServices(dbConnection);
+
+            var seatReservationForm = new SeatReservation(seatReservationService);
+            seatReservationForm.Show();
+        }
+
+
+        int targetWidth;
+        int defaultWidth;
+        bool isExpanding;
+
+        Timer userPanelTimer = new Timer();
+
+
+        private void SettingBtn_Click(object sender, EventArgs e)
+        {
+
+
+            userPanelTimer.Start();
+            ResetAllButtonsToDefault();
+            SetButtonBackground(SettingBtn, SettingImage);
+
+            if (userPanel.Width == 0) 
+            {
+                targetWidth = defaultWidth; 
+                isExpanding = true;
+                userPanel.Visible = true; 
+            }
+            else 
+            {
+                targetWidth = 0; 
+                isExpanding = false;
+            }
+
+            userPanelTimer.Start(); 
+        }
+
+
+        private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
+        {
+            if (isExpanding)
+            {
+                if (userPanel.Width < targetWidth)
+                {
+                    userPanel.Width += 10;
+                    if (userPanel.Width >= targetWidth)
+                    {
+                        userPanel.Width = targetWidth; 
+                        userPanelTimer.Stop();       
+                    }
+                }
+            }
+            else 
+            {
+                if (userPanel.Width > targetWidth)
+                {
+                    userPanel.Width -= 10;
+                    if (userPanel.Width <= targetWidth)
+                    {
+                        userPanel.Width = targetWidth; 
+                        userPanelTimer.Stop();         
+                        userPanel.Visible = false;  
+                    }
+                }
+            }
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+        }
+
+        private void films2_Paint(object sender, PaintEventArgs e)
         {
 
         }
