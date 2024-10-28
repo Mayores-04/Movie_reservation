@@ -262,6 +262,12 @@
     <Compile Include="Frontend\Forms\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\Forms\PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\Forms\SeatReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     <EmbeddedResource Include="Frontend\Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\SeatReservation.resx">
       <DependentUpon>SeatReservation.cs</DependentUpon>
@@ -369,6 +378,7 @@
     <None Include="Frontend\Forms\Assets\UncolloredCircle.png" />
     <None Include="Frontend\Forms\Assets\TicketIcon.png" />
     <None Include="Frontend\Forms\images\coming_soon.jpg" />
+    <None Include="Frontend\Forms\images\CardIcon.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>

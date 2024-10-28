@@ -83,11 +83,10 @@ namespace MovieMunch.Admin.Components
 
                 if (film != null)
                 {
-                    // Assuming the current row is the one being edited
                     var currentRow = MoviesTable.Rows[MoviesTable.CurrentCell.RowIndex];
-                    film.FilmTitle = currentRow.Cells["Title"].Value.ToString(); // Adjust the column name accordingly
-                    film.FilmsDescription = currentRow.Cells["Description"].Value.ToString(); // Adjust the column name accordingly
-                    film.FilmImagePath = currentRow.Cells["imagePath"].Value.ToString(); // Adjust the column name accordingly
+                    film.FilmTitle = currentRow.Cells["Title"].Value.ToString(); 
+                    film.FilmsDescription = currentRow.Cells["Description"].Value.ToString(); 
+                    film.FilmImagePath = currentRow.Cells["imagePath"].Value.ToString(); 
 
                     _movieService.UpdateFilm(film);
                     MessageBox.Show("Film updated successfully.");

@@ -1,6 +1,9 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using MovieMunch;
+using MovieMunch.Backend.Models;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -42,8 +45,9 @@ public class UserService
         }
     }
 
-    public bool RegisterUser(string email, string password)
+    public bool RegisterUser(string name, string email, string password)
     {
+
         if (!IsValidEmail(email))
         {
             return false;
@@ -61,6 +65,7 @@ public class UserService
         // Create a new user.
         var user = new User
         {
+            Name = name,
             Email = email,
             Password = hashedPassword,
             CreatedAt = DateTime.UtcNow
@@ -92,25 +97,25 @@ public class UserService
     {
         if (!IsValidEmail(email))
         {
+            ShowMessage("Invalid email format.");
             return false;
         }
 
-        // Find the user in the regular user collection.
         var existingUser = _usersCollection.Find(u => u.Email == email).FirstOrDefault();
 
-        if (existingUser == null)
+        if (existingUser == null || !PasswordHelper.VerifyPassword(password, existingUser.Password))
         {
+            ShowMessage("Incorrect email or password.");
             return false;
         }
 
-        // Verify the password for the regular user.
-        if (!PasswordHelper.VerifyPassword(password, existingUser.Password))
-        {
-            return false;
-        }
+        // User is successfully authenticated, retrieve and set their information.
+        MainPage mainPage = new MainPage();
+        mainPage.SetUserInfo(existingUser.Name);
 
-        return true;  // Return true for successful user login
+        return true;
     }
+
 
     public bool AdminLogin(string email, string password)
     {
@@ -212,5 +217,11 @@ public class UserService
             ShowMessage("An error occurred while updating the password.");
             return false;
         }
+    }
+    public void Logout()
+    {
+        MainPage mainPage = new MainPage();
+        mainPage.ClearUserInfo();
+        ShowMessage("You have successfully logged out.");
     }
 }

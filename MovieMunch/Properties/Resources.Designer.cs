@@ -93,6 +93,16 @@ namespace MovieMunch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CardIcon {
+            get {
+                object obj = ResourceManager.GetObject("CardIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColoredCircle {
             get {
                 object obj = ResourceManager.GetObject("ColoredCircle", resourceCulture);

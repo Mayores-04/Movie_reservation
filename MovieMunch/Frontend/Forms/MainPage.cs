@@ -11,11 +11,14 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch
 {
     public partial class MainPage : Form
     {
+
         private MovieService _movieService;
         private List<Movie> _movies;
         private List<FilmsInCinema> _filmsInCinemas;
@@ -45,6 +48,7 @@ namespace MovieMunch
 
         public MainPage()
         {
+
             InitializeComponent();
             this.DoubleBuffered = true;
             _movieService = new MovieService();
@@ -65,6 +69,20 @@ namespace MovieMunch
 
             userPanelTimer.Interval = 10;
             userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
+
+
+        }
+        public void SetUserInfo(string name)
+        {
+            char firstLetter = name[0];
+            userNameHolder.Text = firstLetter.ToString().ToUpper();
+            //userNameHolder.Email = email;
+        }
+
+        public void ClearUserInfo()
+        {
+            userNameHolder.Text = string.Empty;
+            //userNameHolder.Email = string.Empty;
         }
 
         private void CloseCurrentForm()
@@ -82,20 +100,6 @@ namespace MovieMunch
             }
         }
 
-
-
-        private Bitmap LoadImage(string imagePath)
-        {
-            if (File.Exists(imagePath))
-            {
-                return new Bitmap(imagePath);
-            }
-            else
-            {
-                MessageBox.Show("Image not found: " + imagePath);
-                return null;
-            }
-        }
 
         private void UpdateDisplayedImage()
         {
@@ -391,6 +395,8 @@ namespace MovieMunch
 
         private void reserveSeatBtn_Click(object sender, EventArgs e)
         {
+            
+
             //Seat Reservation
             var dbConnection = new MongoDBConnection();
             var seatReservationService = new SeatReservationServices(dbConnection);
@@ -399,6 +405,7 @@ namespace MovieMunch
             seatReservationForm.Show();
         }
 
+        
 
         int targetWidth;
         int defaultWidth;
@@ -462,19 +469,24 @@ namespace MovieMunch
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
 
         private void SignUpBtn_Click(object sender, EventArgs e)
         {
+            this.Close();
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
         }
 
-        private void films2_Paint(object sender, PaintEventArgs e)
+        private void LogoutBtn_Click(object sender, EventArgs e)
         {
-
+            
+            var userService = new UserService();
+            userService.Logout();
         }
+
     }
 }

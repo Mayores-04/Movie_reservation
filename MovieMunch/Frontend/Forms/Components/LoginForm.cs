@@ -35,13 +35,7 @@ namespace MovieMunch
 
                 if (result == DialogResult.Yes)
                 {
-                    // Open Admin interface and ensure MainPage is closed
                     OpenAdminInterface();
-                }
-                else
-                {
-                    // Open regular user interface
-                    OpenUserInterface();
                 }
             }
             else
@@ -51,7 +45,7 @@ namespace MovieMunch
 
                 if (isLogin)
                 {
-                    OpenUserInterface();
+                    this.Close();
                     MessageBox.Show("Login successful!");
                 }
                 else
@@ -63,31 +57,7 @@ namespace MovieMunch
 
         private void OpenAdminInterface()
         {
-            // Check if MainPage is open and close it if necessary
-            if (mainPage != null && !mainPage.IsDisposed)
-            {
-                mainPage.Close(); // Close MainPage if open
-                mainPage.Dispose();
-                mainPage = null;
-            }
-
-            // Hide the login form and open the admin interface
-            this.Hide();
-            mainAdminForm = new MainAdminForm();
-            mainAdminForm.Show();
-        }
-
-        private void OpenUserInterface()
-        {
-            // Close and dispose of the MainAdminForm if it's open
-            if (mainAdminForm != null && !mainAdminForm.IsDisposed)
-            {
-                mainAdminForm.Close();
-                mainAdminForm.Dispose();
-                mainAdminForm = null;
-            }
-
-            // Close and dispose of the current MainPage instance if it's open
+            // Ensure MainPage is closed if it is open
             if (mainPage != null && !mainPage.IsDisposed)
             {
                 mainPage.Close();
@@ -95,11 +65,34 @@ namespace MovieMunch
                 mainPage = null;
             }
 
-            // Hide the login form and open a new instance of MainPage
-            this.Hide();
-            mainPage = new MainPage();
+            // Close the login form and open the admin interface
+            this.Close();
+            if (mainAdminForm == null || mainAdminForm.IsDisposed)
+            {
+                mainAdminForm = new MainAdminForm();
+            }
+            mainAdminForm.Show();
+        }
+
+        private void OpenUserInterface()
+        {
+            // Ensure MainAdminForm is closed if it is open
+            if (mainAdminForm != null && !mainAdminForm.IsDisposed)
+            {
+                mainAdminForm.Close();
+                mainAdminForm.Dispose();
+                mainAdminForm = null;
+            }
+
+            // Close the login form and open the user interface
+            this.Close();
+            if (mainPage == null || mainPage.IsDisposed)
+            {
+                mainPage = new MainPage();
+            }
             mainPage.Show();
         }
+
         private void CloseButton(object sender, EventArgs e)
         {
             this.Close();

@@ -155,6 +155,7 @@ namespace MovieMunch
             this.numberInput.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberInput.DefaultText = "";
             this.numberInput.FillColor = System.Drawing.Color.White;
+            this.numberInput.ForeColor = System.Drawing.Color.Black;
             this.numberInput.HideSelection = true;
             this.numberInput.IconLeft = null;
             this.numberInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -185,7 +186,7 @@ namespace MovieMunch
             this.numberInput.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.ForeColor = System.Drawing.Color.Black;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.numberInput.OnIdleState = stateProperties4;
             this.numberInput.Padding = new System.Windows.Forms.Padding(3);
@@ -231,6 +232,7 @@ namespace MovieMunch
             this.ageInput.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageInput.DefaultText = "";
             this.ageInput.FillColor = System.Drawing.Color.White;
+            this.ageInput.ForeColor = System.Drawing.Color.Black;
             this.ageInput.HideSelection = true;
             this.ageInput.IconLeft = null;
             this.ageInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -261,7 +263,7 @@ namespace MovieMunch
             this.ageInput.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.ForeColor = System.Drawing.Color.Black;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.ageInput.OnIdleState = stateProperties8;
             this.ageInput.Padding = new System.Windows.Forms.Padding(3);
@@ -307,6 +309,7 @@ namespace MovieMunch
             this.nameInput.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameInput.DefaultText = "";
             this.nameInput.FillColor = System.Drawing.Color.White;
+            this.nameInput.ForeColor = System.Drawing.Color.Black;
             this.nameInput.HideSelection = true;
             this.nameInput.IconLeft = null;
             this.nameInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -337,7 +340,7 @@ namespace MovieMunch
             this.nameInput.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.ForeColor = System.Drawing.Color.Black;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.nameInput.OnIdleState = stateProperties12;
             this.nameInput.Padding = new System.Windows.Forms.Padding(3);
@@ -383,6 +386,7 @@ namespace MovieMunch
             this.regConfirmPasswordInput.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regConfirmPasswordInput.DefaultText = "";
             this.regConfirmPasswordInput.FillColor = System.Drawing.Color.White;
+            this.regConfirmPasswordInput.ForeColor = System.Drawing.Color.Black;
             this.regConfirmPasswordInput.HideSelection = true;
             this.regConfirmPasswordInput.IconLeft = null;
             this.regConfirmPasswordInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -413,7 +417,7 @@ namespace MovieMunch
             this.regConfirmPasswordInput.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.Silver;
             stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.ForeColor = System.Drawing.Color.Black;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.regConfirmPasswordInput.OnIdleState = stateProperties16;
             this.regConfirmPasswordInput.Padding = new System.Windows.Forms.Padding(3);
@@ -587,6 +591,7 @@ namespace MovieMunch
             this.regPasswordInput.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regPasswordInput.DefaultText = "";
             this.regPasswordInput.FillColor = System.Drawing.Color.White;
+            this.regPasswordInput.ForeColor = System.Drawing.Color.Black;
             this.regPasswordInput.HideSelection = true;
             this.regPasswordInput.IconLeft = null;
             this.regPasswordInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -617,7 +622,7 @@ namespace MovieMunch
             this.regPasswordInput.OnHoverState = stateProperties19;
             stateProperties20.BorderColor = System.Drawing.Color.Silver;
             stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.ForeColor = System.Drawing.Color.Black;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.regPasswordInput.OnIdleState = stateProperties20;
             this.regPasswordInput.Padding = new System.Windows.Forms.Padding(3);
@@ -663,6 +668,7 @@ namespace MovieMunch
             this.regEmailInput.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regEmailInput.DefaultText = "";
             this.regEmailInput.FillColor = System.Drawing.Color.White;
+            this.regEmailInput.ForeColor = System.Drawing.Color.Black;
             this.regEmailInput.HideSelection = true;
             this.regEmailInput.IconLeft = null;
             this.regEmailInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -693,7 +699,7 @@ namespace MovieMunch
             this.regEmailInput.OnHoverState = stateProperties23;
             stateProperties24.BorderColor = System.Drawing.Color.Silver;
             stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.ForeColor = System.Drawing.Color.Black;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.regEmailInput.OnIdleState = stateProperties24;
             this.regEmailInput.Padding = new System.Windows.Forms.Padding(3);

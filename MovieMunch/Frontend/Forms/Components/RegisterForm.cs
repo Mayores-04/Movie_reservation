@@ -26,10 +26,11 @@ namespace MovieMunch
         {
             UserService userService = new UserService();
 
+            string name = nameInput.Text;
             string email = regEmailInput.Text;
             string password = regPasswordInput.Text;
 
-            bool isRegistered = userService.RegisterUser(email, password);
+            bool isRegistered = userService.RegisterUser(name, email, password);
             if (isRegistered)
             {
                 MessageBox.Show("Successful Register");

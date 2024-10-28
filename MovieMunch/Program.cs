@@ -20,8 +20,8 @@ namespace MovieMunch
             //MainAdminForm mainAdminForm = new MainAdminForm();
             //Application.Run(mainAdminForm);
 
-            FilmsInCinemaForm filmsInCinema = new FilmsInCinemaForm();
-            Application.Run(filmsInCinema);
+            //FilmsInCinemaForm filmsInCinema = new FilmsInCinemaForm();
+            //Application.Run(filmsInCinema);
 
             //Seat Reservation
             //var dbConnection = new MongoDBConnection();
@@ -29,6 +29,9 @@ namespace MovieMunch
 
             //var seatReservationForm = new SeatReservation(seatReservationService);
             //Application.Run(seatReservationForm);
+
+            PaymentForm paymentForm = new PaymentForm();
+            Application.Run(paymentForm);
         }
     }
 }
