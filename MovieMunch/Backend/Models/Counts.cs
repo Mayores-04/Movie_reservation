@@ -2,7 +2,6 @@
 using MongoDB.Bson.Serialization.Attributes;
 
 
-//Dito dumadaan yung mga data na papasok na user registered
 public class Counts
 {
 

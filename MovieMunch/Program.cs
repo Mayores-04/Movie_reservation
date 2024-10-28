@@ -22,6 +22,13 @@ namespace MovieMunch
 
             FilmsInCinemaForm filmsInCinema = new FilmsInCinemaForm();
             Application.Run(filmsInCinema);
+
+            //Seat Reservation
+            //var dbConnection = new MongoDBConnection();
+            //var seatReservationService = new SeatReservationServices(dbConnection);
+
+            //var seatReservationForm = new SeatReservation(seatReservationService);
+            //Application.Run(seatReservationForm);
         }
     }
 }

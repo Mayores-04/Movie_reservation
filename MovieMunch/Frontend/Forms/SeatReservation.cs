@@ -22,7 +22,7 @@ namespace MovieMunch
             _seatReservationService = seatReservationService;
 
             _allSeats = new List<string>();
-            for (int i = 1; i <= 10; i++) // Implementing 10 rows, 10 columns
+            for (int i = 1; i <= 10; i++) 
             {
                 for (char j = 'A'; j <= 'J'; j++)
                 {

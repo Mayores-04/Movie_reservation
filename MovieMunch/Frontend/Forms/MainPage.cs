@@ -172,7 +172,7 @@ namespace MovieMunch
 
                 Bitmap image = new Bitmap(imagePath);
                 pictureBox.Image = ApplyOpacity(image, opacity);
-                pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
             {

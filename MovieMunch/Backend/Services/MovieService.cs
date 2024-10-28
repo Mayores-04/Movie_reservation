@@ -54,7 +54,6 @@ public class MovieService
             Console.WriteLine($"Error adding film: {ex.Message}");
         }
     }
-
     public void UpdateFilm(FilmsInCinema film)
     {
         try
@@ -72,15 +71,14 @@ public class MovieService
             Console.WriteLine($"Error updating film: {ex.Message}");
         }
     }
-    public bool DeleteFilm(FilmsInCinema film)
+
+    public bool DeleteFilmById(ObjectId filmId) 
     {
         try
         {
-            var filter = Builders<FilmsInCinema>.Filter.Eq(f => f.Id, film.Id);
-
+            var filter = Builders<FilmsInCinema>.Filter.Eq(f => f.Id, filmId);
             var result = _filmsInCinema.DeleteOne(filter);
-
-            return result.DeletedCount > 0; 
+            return result.DeletedCount > 0;
         }
         catch (Exception ex)
         {
@@ -88,4 +86,20 @@ public class MovieService
             return false;
         }
     }
+
+    public FilmsInCinema GetFilmById(ObjectId id)
+    {
+        try
+        {
+            return _filmsInCinema.Find(film => film.Id == id).FirstOrDefault();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching film by ID: {ex.Message}");
+            return null;
+        }
+    }
+
+
+
 }
