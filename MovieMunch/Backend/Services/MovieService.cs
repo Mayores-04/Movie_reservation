@@ -4,17 +4,19 @@ using MovieMunch.Backend.Models;
 using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 public class MovieService
 {
     private readonly IMongoCollection<FilmsInCinema> _filmsInCinema;
-    private readonly IMongoCollection<Movie> _movies; 
+    private readonly IMongoCollection<Movie> _movies;
 
     public MovieService()
     {
         var dbConnection = new MongoDBConnection();
         _filmsInCinema = dbConnection.GetFilmsInCinemaCollection();
-        _movies = dbConnection.GetMoviesCollection(); 
+        _movies = dbConnection.GetMoviesCollection();
     }
 
     public List<FilmsInCinema> GetFilmsInCinemas()
@@ -30,18 +32,27 @@ public class MovieService
         }
     }
 
-    public List<Movie> GetAllMovies()
+    public List<MovieInfo> GetAllMovieInfos()
     {
         try
         {
-            return _movies.Find(movie => true).Limit(4).ToList();
+            var movies = _movies.Find(movie => true).Limit(4).ToList();
+            // Map to a list of MovieInfo with title and price
+            return movies.Select(movie => new MovieInfo
+            {
+                Title = movie.MovieTitle,         // Correct property name
+                ImagePath = movie.MovieImagePath, // Correct property name
+                Price = movie.MoviePrice           // Correct property name
+            }).ToList();
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error fetching movies: {ex.Message}");
-            return new List<Movie>();
+            return new List<MovieInfo>();
         }
     }
+
+
 
     public void AddFilm(FilmsInCinema film)
     {
@@ -72,7 +83,7 @@ public class MovieService
         }
     }
 
-    public bool DeleteFilmById(ObjectId filmId) 
+    public bool DeleteFilmById(ObjectId filmId)
     {
         try
         {
@@ -99,7 +110,4 @@ public class MovieService
             return null;
         }
     }
-
-
-
 }

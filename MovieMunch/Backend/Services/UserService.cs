@@ -2,6 +2,7 @@
 using MongoDB.Driver;
 using MovieMunch;
 using MovieMunch.Backend.Models;
+using MovieMunch.Frontend.Forms;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -93,6 +94,7 @@ public class UserService
         }
     }
 
+
     public bool LoginUser(string email, string password)
     {
         if (!IsValidEmail(email))
@@ -112,6 +114,7 @@ public class UserService
         // User is successfully authenticated, retrieve and set their information.
         MainPage mainPage = new MainPage();
         mainPage.SetUserInfo(existingUser.Name);
+
 
         return true;
     }

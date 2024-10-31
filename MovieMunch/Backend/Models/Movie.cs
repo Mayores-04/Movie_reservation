@@ -17,5 +17,17 @@ namespace MovieMunch.Models
 
         [BsonElement("imagePath")]
         public string MovieImagePath { get; set; }
+
+        [BsonElement("Price")]
+        public decimal MoviePrice { get; set; }
     }
+
+    public class MovieInfo
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string ImagePath { get; set; }
+        public decimal Price { get; set; }
+    }
+
 }

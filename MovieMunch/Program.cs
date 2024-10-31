@@ -14,8 +14,8 @@ namespace MovieMunch
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //LoadingForm loadingForm = new LoadingForm();
-            //Application.Run(loadingForm);
+            LoadingForm loadingForm = new LoadingForm();
+            Application.Run(loadingForm);
 
             //MainAdminForm mainAdminForm = new MainAdminForm();
             //Application.Run(mainAdminForm);
@@ -23,15 +23,15 @@ namespace MovieMunch
             //FilmsInCinemaForm filmsInCinema = new FilmsInCinemaForm();
             //Application.Run(filmsInCinema);
 
-            //Seat Reservation
+            ////Seat Reservation
             //var dbConnection = new MongoDBConnection();
             //var seatReservationService = new SeatReservationServices(dbConnection);
 
             //var seatReservationForm = new SeatReservation(seatReservationService);
             //Application.Run(seatReservationForm);
 
-            PaymentForm paymentForm = new PaymentForm();
-            Application.Run(paymentForm);
+            //PaymentForm paymentForm = new PaymentForm(movieName, selectedSeats, moviePrice, reservedBy);
+            //paymentForm.ShowDialog();
         }
     }
 }

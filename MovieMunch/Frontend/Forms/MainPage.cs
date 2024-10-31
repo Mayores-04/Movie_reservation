@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -20,7 +21,6 @@ namespace MovieMunch
     {
 
         private MovieService _movieService;
-        private List<Movie> _movies;
         private List<FilmsInCinema> _filmsInCinemas;
         private SettingsForm _settingsForm;
 
@@ -45,14 +45,14 @@ namespace MovieMunch
         private readonly string SettingDefaultImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\SettingIcon.png";
 
         private Button _selectedButton = null;
-
+        private List<MovieInfo> _movies; 
         public MainPage()
         {
 
             InitializeComponent();
             this.DoubleBuffered = true;
             _movieService = new MovieService();
-            _movies = _movieService.GetAllMovies();
+            _movies = _movieService.GetAllMovieInfos();
 
             _filmsInCinemas = _movieService.GetFilmsInCinemas();
 
@@ -76,13 +76,31 @@ namespace MovieMunch
         {
             char firstLetter = name[0];
             userNameHolder.Text = firstLetter.ToString().ToUpper();
-            //userNameHolder.Email = email;
         }
+
+        private MovieInfo GetCurrentMovieInfo()
+        {
+            var seatReservationService = new MovieService();
+            List<MovieInfo> movies = seatReservationService.GetAllMovieInfos(); 
+
+            if (_currentImageIndex >= 0 && _currentImageIndex < movies.Count)
+            {
+                return movies[_currentImageIndex]; 
+            }
+            return null; 
+        }
+
+        private MovieInfo GetMovieInfoFromImagePath(string imagePath)
+        {
+            var seatReservationService = new MovieService();
+            List<MovieInfo> movies = seatReservationService.GetAllMovieInfos();
+            return movies.FirstOrDefault(m => m.ImagePath == imagePath);
+        }
+
 
         public void ClearUserInfo()
         {
             userNameHolder.Text = string.Empty;
-            //userNameHolder.Email = string.Empty;
         }
 
         private void CloseCurrentForm()
@@ -96,7 +114,7 @@ namespace MovieMunch
             _imagePaths = new string[_movies.Count];
             for (int i = 0; i < _movies.Count; i++)
             {
-                _imagePaths[i] = _movies[i].MovieImagePath;
+                _imagePaths[i] = _movies[i].ImagePath;
             }
         }
 
@@ -167,22 +185,54 @@ namespace MovieMunch
 
         private void SetImageInPictureBox(PictureBox pictureBox, string imagePath, float opacity = 1.0f)
         {
-            if (File.Exists(imagePath))
-            {
-                if (pictureBox.Image != null)
-                {
-                    pictureBox.Image.Dispose();
-                }
+            if (!ValidateImagePath(imagePath)) return; // Validate early
 
-                Bitmap image = new Bitmap(imagePath);
-                pictureBox.Image = ApplyOpacity(image, opacity);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (pictureBox == pictureBoxMain)
+            {
+                MovieInfo imageInfo = GetMovieInfoFromImagePath(imagePath);
+                if (imageInfo != null)
+                {
+                    imageToReserve(imageInfo); // Store the image info for reservation
+                }
             }
-            else
+
+            LoadAndSetImage(pictureBox, imagePath, opacity);
+        }
+
+        private bool ValidateImagePath(string imagePath)
+        {
+            if (!File.Exists(imagePath))
             {
                 MessageBox.Show("Image not found at path: " + imagePath);
+                return false;
+            }
+            return true;
+        }
+
+        private void LoadAndSetImage(PictureBox pictureBox, string imagePath, float opacity)
+        {
+            if (pictureBox.Image != null)
+            {
+                pictureBox.Image.Dispose();
+            }
+
+            try
+            {
+                using (Bitmap image = new Bitmap(imagePath))
+                {
+                    Image processedImage = ApplyOpacity(image, opacity);
+                    pictureBox.Image = processedImage;
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while processing the image: " + ex.Message);
             }
         }
+
+
+
 
         private Bitmap ApplyOpacity(Bitmap image, float opacity)
         {
@@ -393,19 +443,41 @@ namespace MovieMunch
             timer.Start();
         }
 
-        private void reserveSeatBtn_Click(object sender, EventArgs e)
+        private MovieInfo _reservedImageInfo;
+
+        public void imageToReserve(MovieInfo movieInfo)
         {
-            
-
-            //Seat Reservation
-            var dbConnection = new MongoDBConnection();
-            var seatReservationService = new SeatReservationServices(dbConnection);
-
-            var seatReservationForm = new SeatReservation(seatReservationService);
-            seatReservationForm.Show();
+            _reservedImageInfo = movieInfo;
         }
 
-        
+        private void reserveSeatBtn_Click(object sender, EventArgs e)
+        {
+            string _reservedBy = "Jake";
+            var currentMovieInfo = GetCurrentMovieInfo();
+
+            if (currentMovieInfo != null)
+            {
+                // You may want to pass the reservedBy parameter here
+                var seatReservationForm = new SeatReservation(
+                    currentMovieInfo.Title,
+                    currentMovieInfo.Price,
+                    _reservedBy // Pass the reservedBy parameter if applicable
+                );
+
+                seatReservationForm.Show();
+
+                // If needed, handle any additional setup for the payment form here
+            }
+            else
+            {
+                MessageBox.Show("No movie selected to reserve.");
+            }
+        }
+
+
+
+
+
 
         int targetWidth;
         int defaultWidth;

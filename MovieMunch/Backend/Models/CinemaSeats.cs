@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System.Collections.Generic;
+using System.Dynamic;
 
 namespace MovieMunch.Models
 {
@@ -11,6 +12,9 @@ namespace MovieMunch.Models
 
         [BsonElement("MovieName")]
         public string MovieName { get; set; }
+
+        [BsonElement("MoviePrice")]
+        public double MoviePrice { get; set; }
 
         [BsonElement("SeatNumbers")]
         public List<string> SeatNumbers { get; set; }

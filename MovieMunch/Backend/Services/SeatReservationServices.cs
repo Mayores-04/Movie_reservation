@@ -14,11 +14,12 @@ namespace MovieMunch.Services
             _cinemaSeats = dbConnection.Database.GetCollection<CinemaSeats>("CinemaSeats");
         }
 
-        public async Task ReserveSeatsAsync(string movieName, List<string> seatNumbers, string reservedBy)
+        public async Task ReserveSeatsAsync(string movieName, double moviePrice, List<string> seatNumbers, string reservedBy)
         {
             var reservation = new CinemaSeats
             {
                 MovieName = movieName,
+                MoviePrice = moviePrice,
                 SeatNumbers = seatNumbers,
                 ReservedBy = reservedBy,
                 IsReserved = true
@@ -32,7 +33,7 @@ namespace MovieMunch.Services
             return await _cinemaSeats.Find(seat => seat.MovieName == movieName).ToListAsync();
         }
 
-        public async Task InitializeSeatsAsync(string movieName, List<string> seatNumbers)
+        public async Task InitializeSeatsAsync(string movieName, double moviePrice,List<string> seatNumbers)
         {
             var existingSeats = await _cinemaSeats.Find(seat => seat.MovieName == movieName).FirstOrDefaultAsync();
 
@@ -41,6 +42,7 @@ namespace MovieMunch.Services
                 var defaultSeats = new CinemaSeats
                 {
                     MovieName = movieName,
+                    MoviePrice = moviePrice,
                     SeatNumbers = seatNumbers,
                     ReservedBy = null,
                     IsReserved = false
