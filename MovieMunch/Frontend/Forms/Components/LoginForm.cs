@@ -20,12 +20,10 @@ namespace MovieMunch
             string email = emailInput.Text;
             string password = passwordInput.Text;
 
-            // First, check if it's an admin login
             bool isAdminLogin = userService.AdminLogin(email, password);
 
             if (isAdminLogin)
             {
-                // Show dialog to choose between Admin and User interface
                 DialogResult result = MessageBox.Show(
                     "Login successful as Admin. Do you want to open the Admin interface?",
                     "Admin Login",
@@ -40,7 +38,6 @@ namespace MovieMunch
             }
             else
             {
-                // Check for regular user login
                 bool isLogin = userService.LoginUser(email, password);
 
                 if (isLogin)
@@ -54,6 +51,7 @@ namespace MovieMunch
                 }
             }
         }
+
 
         private void OpenAdminInterface()
         {
@@ -96,6 +94,8 @@ namespace MovieMunch
         private void CloseButton(object sender, EventArgs e)
         {
             this.Close();
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
         }
 
         private void SignUpBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

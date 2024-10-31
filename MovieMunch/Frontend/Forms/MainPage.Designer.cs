@@ -1086,7 +1086,7 @@ namespace MovieMunch
             this.userNameHolder.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.userNameHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userNameHolder.BackgroundImage")));
             this.userNameHolder.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.userNameHolder.ButtonText = "JM";
+            this.userNameHolder.ButtonText = "MM";
             this.userNameHolder.ButtonTextMarginLeft = 0;
             this.userNameHolder.ColorContrastOnClick = 45;
             this.userNameHolder.ColorContrastOnHover = 45;

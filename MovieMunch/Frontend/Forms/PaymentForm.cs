@@ -23,13 +23,6 @@ namespace MovieMunch.Frontend.Forms
             _reservedBy = reservedBy;
 
         }
-        public void SetUserInfo(string name)
-        {
-            _reservedBy = name;
-            MovietoReserveDetails.Text = name;
-
-            orderDetailsPanel.Refresh();
-        }
 
         private void cardPaymentMethodBtn_Click_1(object sender, EventArgs e)
         {
@@ -68,6 +61,7 @@ namespace MovieMunch.Frontend.Forms
                 string gcashName = gcashPaypalUserNameInput.Text;
                 string gcashEmail = gcashPaypalUserEmailInput.Text;
 
+                NameDetails.Text = _reservedBy;
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "GCash";
@@ -83,6 +77,7 @@ namespace MovieMunch.Frontend.Forms
                 string paypalName = gcashPaypalUserNameInput.Text;
                 string paypalEmail = gcashPaypalUserEmailInput.Text;
 
+                NameDetails.Text = _reservedBy;
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "PayPal"; 

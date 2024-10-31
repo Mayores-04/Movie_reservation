@@ -26,7 +26,6 @@ public class UserService
         CreateEmailIndex();
     }
 
-    // Create unique index for email only once.
     private void CreateEmailIndex()
     {
         var indexKeys = Builders<User>.IndexKeys.Ascending(user => user.Email);
@@ -94,7 +93,11 @@ public class UserService
         }
     }
 
-
+    private string _movieName;
+    private List<string> _reservedSeats;
+    private decimal _moviePrice;
+    private string _reservedBy;
+    public bool IsUserLoggedIn { get; private set; }
     public bool LoginUser(string email, string password)
     {
         if (!IsValidEmail(email))
@@ -111,14 +114,12 @@ public class UserService
             return false;
         }
 
-        // User is successfully authenticated, retrieve and set their information.
         MainPage mainPage = new MainPage();
         mainPage.SetUserInfo(existingUser.Name);
-
+        
 
         return true;
     }
-
 
     public bool AdminLogin(string email, string password)
     {
@@ -144,7 +145,6 @@ public class UserService
         return true;  // Return true for successful admin login
     }
 
-    // Method to increment the user count in the database.
     private void IncrementUserCount()
     {
         var filter = Builders<Counts>.Filter.Empty; // Empty filter to target the single document.
@@ -223,6 +223,7 @@ public class UserService
     }
     public void Logout()
     {
+        IsUserLoggedIn = false;
         MainPage mainPage = new MainPage();
         mainPage.ClearUserInfo();
         ShowMessage("You have successfully logged out.");

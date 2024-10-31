@@ -1414,7 +1414,7 @@
             this.orderDetailsPanel.Controls.Add(this.label13);
             this.orderDetailsPanel.Controls.Add(this.label12);
             this.orderDetailsPanel.Controls.Add(this.label11);
-            this.orderDetailsPanel.Location = new System.Drawing.Point(239, 105);
+            this.orderDetailsPanel.Location = new System.Drawing.Point(293, 105);
             this.orderDetailsPanel.Name = "orderDetailsPanel";
             this.orderDetailsPanel.ShowBorders = true;
             this.orderDetailsPanel.Size = new System.Drawing.Size(755, 518);

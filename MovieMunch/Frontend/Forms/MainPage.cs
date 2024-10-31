@@ -12,8 +12,6 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch
 {
@@ -46,6 +44,7 @@ namespace MovieMunch
 
         private Button _selectedButton = null;
         private List<MovieInfo> _movies; 
+        private string userName;
         public MainPage()
         {
 
@@ -74,6 +73,7 @@ namespace MovieMunch
         }
         public void SetUserInfo(string name)
         {
+            userName = name;
             char firstLetter = name[0];
             userNameHolder.Text = firstLetter.ToString().ToUpper();
         }
@@ -185,14 +185,14 @@ namespace MovieMunch
 
         private void SetImageInPictureBox(PictureBox pictureBox, string imagePath, float opacity = 1.0f)
         {
-            if (!ValidateImagePath(imagePath)) return; // Validate early
+            if (!ValidateImagePath(imagePath)) return; 
 
             if (pictureBox == pictureBoxMain)
             {
                 MovieInfo imageInfo = GetMovieInfoFromImagePath(imagePath);
                 if (imageInfo != null)
                 {
-                    imageToReserve(imageInfo); // Store the image info for reservation
+                    imageToReserve(imageInfo); 
                 }
             }
 
@@ -230,9 +230,6 @@ namespace MovieMunch
                 MessageBox.Show("An error occurred while processing the image: " + ex.Message);
             }
         }
-
-
-
 
         private Bitmap ApplyOpacity(Bitmap image, float opacity)
         {
@@ -452,32 +449,37 @@ namespace MovieMunch
 
         private void reserveSeatBtn_Click(object sender, EventArgs e)
         {
-            string _reservedBy = "Jake";
-            var currentMovieInfo = GetCurrentMovieInfo();
+            UserService userService = new UserService();
 
-            if (currentMovieInfo != null)
+            if (userNameHolder.Text == "MM")
             {
-                // You may want to pass the reservedBy parameter here
-                var seatReservationForm = new SeatReservation(
-                    currentMovieInfo.Title,
-                    currentMovieInfo.Price,
-                    _reservedBy // Pass the reservedBy parameter if applicable
-                );
-
-                seatReservationForm.Show();
-
-                // If needed, handle any additional setup for the payment form here
+                this.Close();
+                MessageBox.Show("You must log in to reserve a seat.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog();
+                return;
             }
             else
             {
-                MessageBox.Show("No movie selected to reserve.");
+                string _reservedBy = userName;
+                var currentMovieInfo = GetCurrentMovieInfo();
+
+                if (currentMovieInfo != null)
+                {
+                    var seatReservationForm = new SeatReservation(
+                        currentMovieInfo.Title,
+                        currentMovieInfo.Price,
+                        _reservedBy
+                    );
+
+                    seatReservationForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No movie selected to reserve.");
+                }
             }
         }
-
-
-
-
-
 
         int targetWidth;
         int defaultWidth;

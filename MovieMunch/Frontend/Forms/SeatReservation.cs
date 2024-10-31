@@ -63,14 +63,20 @@ namespace MovieMunch
 
             if (selectedSeats.Count > 0)
             {
-                PaymentForm paymentForm = new PaymentForm(movieName, moviePrice, selectedSeats, reservedBy);
+                // Calculate the total price
+                decimal totalPrice = moviePrice * selectedSeats.Count;
+
+                // Pass the calculated total price to the payment form
+                PaymentForm paymentForm = new PaymentForm(movieName, totalPrice, selectedSeats, reservedBy);
                 paymentForm.ShowDialog();
 
                 if (paymentForm.IsPaymentSuccessful)
                 {
-                    await _seatReservationService.ReserveSeatsAsync(movieName, (double)moviePrice, selectedSeats, reservedBy);
+                    // Save the reservation with the total price in the database
+                    await _seatReservationService.ReserveSeatsAsync(movieName, (double)totalPrice, selectedSeats, reservedBy);
                     MessageBox.Show("Seats reserved successfully!");
 
+                    // Change the button color for reserved seats
                     foreach (string seat in selectedSeats)
                     {
                         if (this.Controls[seat] is Bunifu.UI.WinForms.BunifuButton.BunifuButton seatButton)
@@ -91,8 +97,6 @@ namespace MovieMunch
         }
 
 
-
-
         private async void SeatReservation_Load(object sender, EventArgs e)
         {
             string movieName = _movieName;
@@ -101,10 +105,8 @@ namespace MovieMunch
             await _seatReservationService.InitializeSeatsAsync(movieName, (double)moviePrice,_allSeats);
             await LoadSeatStatusAsync(movieName);
 
-            // Loop through the controls to find buttons
             foreach (var seat in _allSeats)
             {
-                // Check if the control is a BunifuButton by its name
                 Control seatButton = this.Controls.Find(seat, true).FirstOrDefault();
 
                 if (seatButton is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn)
@@ -145,7 +147,6 @@ namespace MovieMunch
         private async Task LoadSeatStatusAsync(string movieName)
         {
             var reservedSeats = await _seatReservationService.CheckSeatStatusAsync(movieName);
-
 
             if (reservedSeats != null)
             {

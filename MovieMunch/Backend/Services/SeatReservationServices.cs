@@ -51,6 +51,5 @@ namespace MovieMunch.Services
                 await _cinemaSeats.InsertOneAsync(defaultSeats);
             }
         }
-
     }
 }
