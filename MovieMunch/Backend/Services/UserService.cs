@@ -18,11 +18,10 @@ public class UserService
     public UserService()
     {
         var dbConnection = new MongoDBConnection();
-        _usersCollection = dbConnection.GetUsersCollection(); // Get the Users collection from MongoDB.
-        _countsCollection = dbConnection.GetNumberOfUsersCollection(); // Get the Counts collection for tracking user numbers.
+        _usersCollection = dbConnection.GetUsersCollection();
+        _countsCollection = dbConnection.GetNumberOfUsersCollection(); 
         _adminAccountCollection = dbConnection.GetAdminAccountsCollection();
 
-        // Create a unique index on email only once, not every time the service is instantiated.
         CreateEmailIndex();
     }
 
@@ -31,7 +30,6 @@ public class UserService
         var indexKeys = Builders<User>.IndexKeys.Ascending(user => user.Email);
         var indexOptions = new CreateIndexOptions { Unique = true };
 
-        // Ensure the index exists.
         try
         {
             _usersCollection.Indexes.CreateOne(new CreateIndexModel<User>(indexKeys, indexOptions));
@@ -45,7 +43,7 @@ public class UserService
         }
     }
 
-    public bool RegisterUser(string name, string email, string password)
+    public bool RegisterUser(string name, int age, long phoneNumber, string email, string password, string confirmPassword)
     {
 
         if (!IsValidEmail(email))
@@ -66,8 +64,11 @@ public class UserService
         var user = new User
         {
             Name = name,
+            Age = age,
+            PhoneNumber = phoneNumber,
             Email = email,
             Password = hashedPassword,
+            ConfirmPassword = hashedPassword,
             CreatedAt = DateTime.UtcNow
         };
 

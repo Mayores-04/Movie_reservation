@@ -27,11 +27,11 @@ namespace MovieMunch
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.TicketBtn = new System.Windows.Forms.Button();
@@ -40,6 +40,10 @@ namespace MovieMunch
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.filmsInCinemaPanel = new System.Windows.Forms.Panel();
+            this.yummyFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.yummy1 = new System.Windows.Forms.Panel();
+            this.yummy2 = new System.Windows.Forms.Panel();
+            this.yummy3 = new System.Windows.Forms.Panel();
             this.reserveSeatBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.rightTurnBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             this.LeftTurnBtn = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -49,15 +53,15 @@ namespace MovieMunch
             this.firstCircle = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
+            this.ComingSoonFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.soon1 = new System.Windows.Forms.Panel();
+            this.soon2 = new System.Windows.Forms.Panel();
+            this.soon3 = new System.Windows.Forms.Panel();
+            this.soon4 = new System.Windows.Forms.Panel();
+            this.soon5 = new System.Windows.Forms.Panel();
+            this.soon6 = new System.Windows.Forms.Panel();
+            this.soon7 = new System.Windows.Forms.Panel();
+            this.soon8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -76,6 +80,9 @@ namespace MovieMunch
             this.pictureBoxRight = new System.Windows.Forms.PictureBox();
             this.pictureBoxLeft = new System.Windows.Forms.PictureBox();
             this.pictureBoxMain = new System.Windows.Forms.PictureBox();
+            this.food1 = new System.Windows.Forms.Panel();
+            this.food2 = new System.Windows.Forms.Panel();
+            this.food3 = new System.Windows.Forms.Panel();
             this.userPanel = new System.Windows.Forms.Panel();
             this.LogoutBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SignUpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -88,12 +95,13 @@ namespace MovieMunch
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.filmsInCinemaPanel.SuspendLayout();
+            this.yummyFlowLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fourthCircle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdCircle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCircle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstCircle)).BeginInit();
             this.panel5.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.ComingSoonFlowLayoutPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel13.SuspendLayout();
             this.FilmsInCinemaFlowLayout.SuspendLayout();
@@ -180,7 +188,7 @@ namespace MovieMunch
             this.SettingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingBtn.ForeColor = System.Drawing.Color.White;
             this.SettingBtn.Image = global::MovieMunch.Properties.Resources.SettingIcon;
-            this.SettingBtn.Location = new System.Drawing.Point(0, 541);
+            this.SettingBtn.Location = new System.Drawing.Point(0, 526);
             this.SettingBtn.Name = "SettingBtn";
             this.SettingBtn.Size = new System.Drawing.Size(144, 114);
             this.SettingBtn.TabIndex = 10;
@@ -201,6 +209,7 @@ namespace MovieMunch
             // 
             this.filmsInCinemaPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.filmsInCinemaPanel.BackColor = System.Drawing.Color.Transparent;
+            this.filmsInCinemaPanel.Controls.Add(this.yummyFlowLayoutPanel);
             this.filmsInCinemaPanel.Controls.Add(this.reserveSeatBtn);
             this.filmsInCinemaPanel.Controls.Add(this.rightTurnBtn);
             this.filmsInCinemaPanel.Controls.Add(this.LeftTurnBtn);
@@ -209,7 +218,7 @@ namespace MovieMunch
             this.filmsInCinemaPanel.Controls.Add(this.secondCircle);
             this.filmsInCinemaPanel.Controls.Add(this.firstCircle);
             this.filmsInCinemaPanel.Controls.Add(this.panel5);
-            this.filmsInCinemaPanel.Controls.Add(this.flowLayoutPanel2);
+            this.filmsInCinemaPanel.Controls.Add(this.ComingSoonFlowLayoutPanel);
             this.filmsInCinemaPanel.Controls.Add(this.panel3);
             this.filmsInCinemaPanel.Controls.Add(this.panel13);
             this.filmsInCinemaPanel.Controls.Add(this.FilmsInCinemaFlowLayout);
@@ -219,8 +228,61 @@ namespace MovieMunch
             this.filmsInCinemaPanel.Controls.Add(this.pictureBoxMain);
             this.filmsInCinemaPanel.Location = new System.Drawing.Point(3, 3);
             this.filmsInCinemaPanel.Name = "filmsInCinemaPanel";
-            this.filmsInCinemaPanel.Size = new System.Drawing.Size(1159, 1585);
+            this.filmsInCinemaPanel.Size = new System.Drawing.Size(1159, 1602);
             this.filmsInCinemaPanel.TabIndex = 0;
+            // 
+            // yummyFlowLayoutPanel
+            // 
+            this.yummyFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yummyFlowLayoutPanel.AutoScroll = true;
+            this.yummyFlowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.yummyFlowLayoutPanel.Controls.Add(this.yummy1);
+            this.yummyFlowLayoutPanel.Controls.Add(this.yummy2);
+            this.yummyFlowLayoutPanel.Controls.Add(this.yummy3);
+            this.yummyFlowLayoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.yummyFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.yummyFlowLayoutPanel.Location = new System.Drawing.Point(-3, 1298);
+            this.yummyFlowLayoutPanel.MinimumSize = new System.Drawing.Size(150, 250);
+            this.yummyFlowLayoutPanel.Name = "yummyFlowLayoutPanel";
+            this.yummyFlowLayoutPanel.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
+            this.yummyFlowLayoutPanel.Size = new System.Drawing.Size(1176, 326);
+            this.yummyFlowLayoutPanel.TabIndex = 35;
+            this.yummyFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.yummyFlowLayoutPanel_Paint);
+            // 
+            // yummy1
+            // 
+            this.yummy1.BackColor = System.Drawing.Color.Transparent;
+            this.yummy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.yummy1.Location = new System.Drawing.Point(0, 25);
+            this.yummy1.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.yummy1.MinimumSize = new System.Drawing.Size(150, 250);
+            this.yummy1.Name = "yummy1";
+            this.yummy1.Size = new System.Drawing.Size(469, 250);
+            this.yummy1.TabIndex = 3;
+            // 
+            // yummy2
+            // 
+            this.yummy2.BackColor = System.Drawing.Color.Transparent;
+            this.yummy2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.yummy2.Location = new System.Drawing.Point(489, 25);
+            this.yummy2.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.yummy2.MinimumSize = new System.Drawing.Size(150, 250);
+            this.yummy2.Name = "yummy2";
+            this.yummy2.Size = new System.Drawing.Size(469, 250);
+            this.yummy2.TabIndex = 3;
+            // 
+            // yummy3
+            // 
+            this.yummy3.BackColor = System.Drawing.Color.Transparent;
+            this.yummy3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.yummy3.Location = new System.Drawing.Point(978, 25);
+            this.yummy3.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.yummy3.MinimumSize = new System.Drawing.Size(150, 250);
+            this.yummy3.Name = "yummy3";
+            this.yummy3.Size = new System.Drawing.Size(469, 250);
+            this.yummy3.TabIndex = 3;
             // 
             // reserveSeatBtn
             // 
@@ -241,11 +303,11 @@ namespace MovieMunch
             this.reserveSeatBtn.ColorContrastOnClick = 45;
             this.reserveSeatBtn.ColorContrastOnHover = 45;
             this.reserveSeatBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.reserveSeatBtn.CustomizableEdges = borderEdges1;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.reserveSeatBtn.CustomizableEdges = borderEdges6;
             this.reserveSeatBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.reserveSeatBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.reserveSeatBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -435,9 +497,9 @@ namespace MovieMunch
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label1);
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(-3, 1255);
+            this.panel5.Location = new System.Drawing.Point(-3, 1253);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1218, 48);
+            this.panel5.Size = new System.Drawing.Size(1218, 50);
             this.panel5.TabIndex = 36;
             // 
             // label1
@@ -451,109 +513,118 @@ namespace MovieMunch
             this.label1.TabIndex = 0;
             this.label1.Text = "SNACKS AND BEVERAGE";
             // 
-            // flowLayoutPanel2
+            // ComingSoonFlowLayoutPanel
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ComingSoonFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.panel15);
-            this.flowLayoutPanel2.Controls.Add(this.panel16);
-            this.flowLayoutPanel2.Controls.Add(this.panel17);
-            this.flowLayoutPanel2.Controls.Add(this.panel18);
-            this.flowLayoutPanel2.Controls.Add(this.panel19);
-            this.flowLayoutPanel2.Controls.Add(this.panel20);
-            this.flowLayoutPanel2.Controls.Add(this.panel21);
-            this.flowLayoutPanel2.Controls.Add(this.panel22);
-            this.flowLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(-3, 949);
-            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(150, 250);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1162, 335);
-            this.flowLayoutPanel2.TabIndex = 34;
+            this.ComingSoonFlowLayoutPanel.AutoScroll = true;
+            this.ComingSoonFlowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon1);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon2);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon3);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon4);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon5);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon6);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon7);
+            this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon8);
+            this.ComingSoonFlowLayoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ComingSoonFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.ComingSoonFlowLayoutPanel.Location = new System.Drawing.Point(-3, 949);
+            this.ComingSoonFlowLayoutPanel.MinimumSize = new System.Drawing.Size(150, 250);
+            this.ComingSoonFlowLayoutPanel.Name = "ComingSoonFlowLayoutPanel";
+            this.ComingSoonFlowLayoutPanel.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
+            this.ComingSoonFlowLayoutPanel.Size = new System.Drawing.Size(1162, 329);
+            this.ComingSoonFlowLayoutPanel.TabIndex = 34;
+            this.ComingSoonFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ComingSoonFlowLayout_Paint);
             // 
-            // panel15
+            // soon1
             // 
-            this.panel15.BackColor = System.Drawing.Color.Red;
-            this.panel15.Location = new System.Drawing.Point(20, 25);
-            this.panel15.Margin = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.panel15.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(200, 250);
-            this.panel15.TabIndex = 0;
+            this.soon1.BackColor = System.Drawing.Color.Transparent;
+            this.soon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon1.Location = new System.Drawing.Point(20, 25);
+            this.soon1.Margin = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.soon1.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon1.Name = "soon1";
+            this.soon1.Size = new System.Drawing.Size(200, 250);
+            this.soon1.TabIndex = 0;
             // 
-            // panel16
+            // soon2
             // 
-            this.panel16.BackColor = System.Drawing.Color.Orange;
-            this.panel16.Location = new System.Drawing.Point(240, 25);
-            this.panel16.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel16.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(200, 250);
-            this.panel16.TabIndex = 1;
+            this.soon2.BackColor = System.Drawing.Color.Transparent;
+            this.soon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon2.Location = new System.Drawing.Point(240, 25);
+            this.soon2.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon2.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon2.Name = "soon2";
+            this.soon2.Size = new System.Drawing.Size(200, 250);
+            this.soon2.TabIndex = 1;
             // 
-            // panel17
+            // soon3
             // 
-            this.panel17.BackColor = System.Drawing.Color.Yellow;
-            this.panel17.Location = new System.Drawing.Point(460, 25);
-            this.panel17.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel17.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(200, 250);
-            this.panel17.TabIndex = 2;
+            this.soon3.BackColor = System.Drawing.Color.Transparent;
+            this.soon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon3.Location = new System.Drawing.Point(460, 25);
+            this.soon3.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon3.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon3.Name = "soon3";
+            this.soon3.Size = new System.Drawing.Size(200, 250);
+            this.soon3.TabIndex = 2;
             // 
-            // panel18
+            // soon4
             // 
-            this.panel18.BackColor = System.Drawing.Color.Green;
-            this.panel18.Location = new System.Drawing.Point(680, 25);
-            this.panel18.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel18.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(200, 250);
-            this.panel18.TabIndex = 2;
+            this.soon4.BackColor = System.Drawing.Color.Transparent;
+            this.soon4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon4.Location = new System.Drawing.Point(680, 25);
+            this.soon4.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon4.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon4.Name = "soon4";
+            this.soon4.Size = new System.Drawing.Size(200, 250);
+            this.soon4.TabIndex = 2;
             // 
-            // panel19
+            // soon5
             // 
-            this.panel19.BackColor = System.Drawing.Color.Blue;
-            this.panel19.Location = new System.Drawing.Point(900, 25);
-            this.panel19.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel19.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(200, 250);
-            this.panel19.TabIndex = 3;
+            this.soon5.BackColor = System.Drawing.Color.Transparent;
+            this.soon5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon5.Location = new System.Drawing.Point(900, 25);
+            this.soon5.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon5.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon5.Name = "soon5";
+            this.soon5.Size = new System.Drawing.Size(200, 250);
+            this.soon5.TabIndex = 3;
             // 
-            // panel20
+            // soon6
             // 
-            this.panel20.BackColor = System.Drawing.Color.Indigo;
-            this.panel20.Location = new System.Drawing.Point(1120, 25);
-            this.panel20.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel20.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(200, 250);
-            this.panel20.TabIndex = 3;
+            this.soon6.BackColor = System.Drawing.Color.Transparent;
+            this.soon6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon6.Location = new System.Drawing.Point(1120, 25);
+            this.soon6.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon6.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon6.Name = "soon6";
+            this.soon6.Size = new System.Drawing.Size(200, 250);
+            this.soon6.TabIndex = 3;
             // 
-            // panel21
+            // soon7
             // 
-            this.panel21.BackColor = System.Drawing.Color.Violet;
-            this.panel21.Location = new System.Drawing.Point(1340, 25);
-            this.panel21.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel21.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(200, 250);
-            this.panel21.TabIndex = 3;
+            this.soon7.BackColor = System.Drawing.Color.Transparent;
+            this.soon7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon7.Location = new System.Drawing.Point(1340, 25);
+            this.soon7.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon7.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon7.Name = "soon7";
+            this.soon7.Size = new System.Drawing.Size(200, 250);
+            this.soon7.TabIndex = 3;
             // 
-            // panel22
+            // soon8
             // 
-            this.panel22.BackColor = System.Drawing.Color.White;
-            this.panel22.Location = new System.Drawing.Point(1560, 25);
-            this.panel22.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
-            this.panel22.MinimumSize = new System.Drawing.Size(150, 250);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(200, 250);
-            this.panel22.TabIndex = 3;
+            this.soon8.BackColor = System.Drawing.Color.Transparent;
+            this.soon8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soon8.Location = new System.Drawing.Point(1560, 25);
+            this.soon8.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
+            this.soon8.MinimumSize = new System.Drawing.Size(150, 250);
+            this.soon8.Name = "soon8";
+            this.soon8.Size = new System.Drawing.Size(200, 250);
+            this.soon8.TabIndex = 3;
             // 
             // panel3
             // 
@@ -561,9 +632,9 @@ namespace MovieMunch
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(-3, 903);
+            this.panel3.Location = new System.Drawing.Point(-3, 902);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1218, 52);
+            this.panel3.Size = new System.Drawing.Size(1218, 53);
             this.panel3.TabIndex = 33;
             // 
             // label2
@@ -619,7 +690,7 @@ namespace MovieMunch
             this.FilmsInCinemaFlowLayout.MinimumSize = new System.Drawing.Size(150, 250);
             this.FilmsInCinemaFlowLayout.Name = "FilmsInCinemaFlowLayout";
             this.FilmsInCinemaFlowLayout.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
-            this.FilmsInCinemaFlowLayout.Size = new System.Drawing.Size(1162, 345);
+            this.FilmsInCinemaFlowLayout.Size = new System.Drawing.Size(1162, 335);
             this.FilmsInCinemaFlowLayout.TabIndex = 25;
             this.FilmsInCinemaFlowLayout.WrapContents = false;
             this.FilmsInCinemaFlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FilmsInCinemaFlowLayout_Paint);
@@ -629,7 +700,8 @@ namespace MovieMunch
             // 
             // films1
             // 
-            this.films1.BackColor = System.Drawing.Color.Red;
+            this.films1.BackColor = System.Drawing.Color.Transparent;
+            this.films1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films1.Location = new System.Drawing.Point(20, 25);
             this.films1.Margin = new System.Windows.Forms.Padding(20, 5, 20, 5);
             this.films1.MinimumSize = new System.Drawing.Size(150, 250);
@@ -639,8 +711,7 @@ namespace MovieMunch
             // 
             // films2
             // 
-            this.films2.BackColor = System.Drawing.Color.Orange;
-            this.films2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("films2.BackgroundImage")));
+            this.films2.BackColor = System.Drawing.Color.Transparent;
             this.films2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films2.Location = new System.Drawing.Point(240, 25);
             this.films2.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
@@ -651,8 +722,7 @@ namespace MovieMunch
             // 
             // films3
             // 
-            this.films3.BackColor = System.Drawing.Color.Yellow;
-            this.films3.BackgroundImage = global::MovieMunch.Properties.Resources.coming_soon;
+            this.films3.BackColor = System.Drawing.Color.Transparent;
             this.films3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films3.Location = new System.Drawing.Point(460, 25);
             this.films3.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
@@ -663,7 +733,8 @@ namespace MovieMunch
             // 
             // films4
             // 
-            this.films4.BackColor = System.Drawing.Color.Green;
+            this.films4.BackColor = System.Drawing.Color.Transparent;
+            this.films4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films4.Location = new System.Drawing.Point(680, 25);
             this.films4.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
             this.films4.MinimumSize = new System.Drawing.Size(150, 250);
@@ -673,7 +744,8 @@ namespace MovieMunch
             // 
             // films5
             // 
-            this.films5.BackColor = System.Drawing.Color.Blue;
+            this.films5.BackColor = System.Drawing.Color.Transparent;
+            this.films5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films5.Location = new System.Drawing.Point(900, 25);
             this.films5.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
             this.films5.MinimumSize = new System.Drawing.Size(150, 250);
@@ -683,7 +755,8 @@ namespace MovieMunch
             // 
             // films6
             // 
-            this.films6.BackColor = System.Drawing.Color.Indigo;
+            this.films6.BackColor = System.Drawing.Color.Transparent;
+            this.films6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films6.Location = new System.Drawing.Point(1120, 25);
             this.films6.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
             this.films6.MinimumSize = new System.Drawing.Size(150, 250);
@@ -693,7 +766,8 @@ namespace MovieMunch
             // 
             // films7
             // 
-            this.films7.BackColor = System.Drawing.Color.Violet;
+            this.films7.BackColor = System.Drawing.Color.Transparent;
+            this.films7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films7.Location = new System.Drawing.Point(1340, 25);
             this.films7.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
             this.films7.MinimumSize = new System.Drawing.Size(150, 250);
@@ -703,7 +777,8 @@ namespace MovieMunch
             // 
             // films8
             // 
-            this.films8.BackColor = System.Drawing.Color.White;
+            this.films8.BackColor = System.Drawing.Color.Transparent;
+            this.films8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.films8.Location = new System.Drawing.Point(1560, 25);
             this.films8.Margin = new System.Windows.Forms.Padding(0, 5, 20, 5);
             this.films8.MinimumSize = new System.Drawing.Size(150, 250);
@@ -768,6 +843,27 @@ namespace MovieMunch
             this.pictureBoxMain.TabIndex = 12;
             this.pictureBoxMain.TabStop = false;
             // 
+            // food1
+            // 
+            this.food1.Location = new System.Drawing.Point(0, 0);
+            this.food1.Name = "food1";
+            this.food1.Size = new System.Drawing.Size(200, 100);
+            this.food1.TabIndex = 0;
+            // 
+            // food2
+            // 
+            this.food2.Location = new System.Drawing.Point(0, 0);
+            this.food2.Name = "food2";
+            this.food2.Size = new System.Drawing.Size(200, 100);
+            this.food2.TabIndex = 0;
+            // 
+            // food3
+            // 
+            this.food3.Location = new System.Drawing.Point(0, 0);
+            this.food3.Name = "food3";
+            this.food3.Size = new System.Drawing.Size(200, 100);
+            this.food3.TabIndex = 0;
+            // 
             // userPanel
             // 
             this.userPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
@@ -799,11 +895,11 @@ namespace MovieMunch
             this.LogoutBtn.ColorContrastOnClick = 45;
             this.LogoutBtn.ColorContrastOnHover = 45;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.LogoutBtn.CustomizableEdges = borderEdges2;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.LogoutBtn.CustomizableEdges = borderEdges7;
             this.LogoutBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LogoutBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LogoutBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -889,11 +985,11 @@ namespace MovieMunch
             this.SignUpBtn.ColorContrastOnClick = 45;
             this.SignUpBtn.ColorContrastOnHover = 45;
             this.SignUpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.SignUpBtn.CustomizableEdges = borderEdges3;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.SignUpBtn.CustomizableEdges = borderEdges8;
             this.SignUpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignUpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -979,11 +1075,11 @@ namespace MovieMunch
             this.LoginBtn.ColorContrastOnClick = 45;
             this.LoginBtn.ColorContrastOnHover = 45;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.LoginBtn.CustomizableEdges = borderEdges4;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.LoginBtn.CustomizableEdges = borderEdges9;
             this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LoginBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LoginBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1091,11 +1187,11 @@ namespace MovieMunch
             this.userNameHolder.ColorContrastOnClick = 45;
             this.userNameHolder.ColorContrastOnHover = 45;
             this.userNameHolder.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.userNameHolder.CustomizableEdges = borderEdges5;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.userNameHolder.CustomizableEdges = borderEdges10;
             this.userNameHolder.DialogResult = System.Windows.Forms.DialogResult.None;
             this.userNameHolder.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.userNameHolder.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1204,13 +1300,14 @@ namespace MovieMunch
             this.panel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.filmsInCinemaPanel.ResumeLayout(false);
+            this.yummyFlowLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fourthCircle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdCircle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondCircle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstCircle)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.ComingSoonFlowLayoutPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -1250,15 +1347,15 @@ namespace MovieMunch
         private Bunifu.UI.WinForms.BunifuImageButton LeftTurnBtn;
         private Panel panel5;
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private Panel panel15;
-        private Panel panel16;
-        private Panel panel17;
-        private Panel panel18;
-        private Panel panel19;
-        private Panel panel20;
-        private Panel panel21;
-        private Panel panel22;
+        private FlowLayoutPanel ComingSoonFlowLayoutPanel;
+        private Panel soon1;
+        private Panel soon2;
+        private Panel soon3;
+        private Panel soon4;
+        private Panel soon5;
+        private Panel soon6;
+        private Panel soon7;
+        private Panel soon8;
         private Panel panel3;
         private Label label2;
         private Panel panel13;
@@ -1294,5 +1391,12 @@ namespace MovieMunch
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 SignUpBtn;
         private Timer smothFromLeftToRightTransition;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 LogoutBtn;
+        private Panel food1;
+        private Panel food2;
+        private Panel food3;
+        private FlowLayoutPanel yummyFlowLayoutPanel;
+        private Panel yummy1;
+        private Panel yummy2;
+        private Panel yummy3;
     }
 }

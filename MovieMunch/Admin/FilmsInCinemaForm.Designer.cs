@@ -1,4 +1,4 @@
-﻿namespace MovieMunch.Admin.Components
+﻿namespace MovieMunch.Admin.FilmsInCinema
 {
     partial class FilmsInCinemaForm
     {
@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmsInCinemaForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -45,16 +44,19 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.MoviesTable = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.SaveMoviesButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.directoryInput = new Bunifu.UI.WinForms.BunifuTextBox();
             this.descriptionInput = new Bunifu.UI.WinForms.BunifuTextBox();
             this.titleInput = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.imagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaveMoviesButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.AddMoviesButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.MoviesTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,97 +127,29 @@
             this.MoviesTable.TabIndex = 4;
             this.MoviesTable.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // SaveMoviesButton
+            // id
             // 
-            this.SaveMoviesButton.AllowAnimations = true;
-            this.SaveMoviesButton.AllowMouseEffects = true;
-            this.SaveMoviesButton.AllowToggling = false;
-            this.SaveMoviesButton.AnimationSpeed = 200;
-            this.SaveMoviesButton.AutoGenerateColors = false;
-            this.SaveMoviesButton.AutoRoundBorders = false;
-            this.SaveMoviesButton.AutoSizeLeftIcon = true;
-            this.SaveMoviesButton.AutoSizeRightIcon = true;
-            this.SaveMoviesButton.BackColor = System.Drawing.Color.Transparent;
-            this.SaveMoviesButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.SaveMoviesButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SaveMoviesButton.BackgroundImage")));
-            this.SaveMoviesButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.SaveMoviesButton.ButtonText = "Add";
-            this.SaveMoviesButton.ButtonTextMarginLeft = 0;
-            this.SaveMoviesButton.ColorContrastOnClick = 45;
-            this.SaveMoviesButton.ColorContrastOnHover = 45;
-            this.SaveMoviesButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.SaveMoviesButton.CustomizableEdges = borderEdges1;
-            this.SaveMoviesButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.SaveMoviesButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.SaveMoviesButton.DisabledFillColor = System.Drawing.Color.Empty;
-            this.SaveMoviesButton.DisabledForecolor = System.Drawing.Color.Empty;
-            this.SaveMoviesButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.SaveMoviesButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SaveMoviesButton.ForeColor = System.Drawing.Color.White;
-            this.SaveMoviesButton.IconLeft = null;
-            this.SaveMoviesButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveMoviesButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.SaveMoviesButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.SaveMoviesButton.IconMarginLeft = 11;
-            this.SaveMoviesButton.IconPadding = 10;
-            this.SaveMoviesButton.IconRight = null;
-            this.SaveMoviesButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SaveMoviesButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.SaveMoviesButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.SaveMoviesButton.IconSize = 25;
-            this.SaveMoviesButton.IdleBorderColor = System.Drawing.Color.Empty;
-            this.SaveMoviesButton.IdleBorderRadius = 0;
-            this.SaveMoviesButton.IdleBorderThickness = 0;
-            this.SaveMoviesButton.IdleFillColor = System.Drawing.Color.Empty;
-            this.SaveMoviesButton.IdleIconLeftImage = null;
-            this.SaveMoviesButton.IdleIconRightImage = null;
-            this.SaveMoviesButton.IndicateFocus = false;
-            this.SaveMoviesButton.Location = new System.Drawing.Point(357, 173);
-            this.SaveMoviesButton.Name = "SaveMoviesButton";
-            this.SaveMoviesButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.SaveMoviesButton.OnDisabledState.BorderRadius = 1;
-            this.SaveMoviesButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.SaveMoviesButton.OnDisabledState.BorderThickness = 1;
-            this.SaveMoviesButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.SaveMoviesButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.SaveMoviesButton.OnDisabledState.IconLeftImage = null;
-            this.SaveMoviesButton.OnDisabledState.IconRightImage = null;
-            this.SaveMoviesButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.SaveMoviesButton.onHoverState.BorderRadius = 1;
-            this.SaveMoviesButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.SaveMoviesButton.onHoverState.BorderThickness = 1;
-            this.SaveMoviesButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.SaveMoviesButton.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.SaveMoviesButton.onHoverState.IconLeftImage = null;
-            this.SaveMoviesButton.onHoverState.IconRightImage = null;
-            this.SaveMoviesButton.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.SaveMoviesButton.OnIdleState.BorderRadius = 1;
-            this.SaveMoviesButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.SaveMoviesButton.OnIdleState.BorderThickness = 1;
-            this.SaveMoviesButton.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.SaveMoviesButton.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.SaveMoviesButton.OnIdleState.IconLeftImage = null;
-            this.SaveMoviesButton.OnIdleState.IconRightImage = null;
-            this.SaveMoviesButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.SaveMoviesButton.OnPressedState.BorderRadius = 1;
-            this.SaveMoviesButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.SaveMoviesButton.OnPressedState.BorderThickness = 1;
-            this.SaveMoviesButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.SaveMoviesButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.SaveMoviesButton.OnPressedState.IconLeftImage = null;
-            this.SaveMoviesButton.OnPressedState.IconRightImage = null;
-            this.SaveMoviesButton.Size = new System.Drawing.Size(117, 41);
-            this.SaveMoviesButton.TabIndex = 3;
-            this.SaveMoviesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SaveMoviesButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SaveMoviesButton.TextMarginLeft = 0;
-            this.SaveMoviesButton.TextPadding = new System.Windows.Forms.Padding(0);
-            this.SaveMoviesButton.UseDefaultRadiusAndThickness = true;
-            this.SaveMoviesButton.Click += new System.EventHandler(this.AddMoviesButton_Click);
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            // 
+            // Title
+            // 
+            this.Title.HeaderText = "Title";
+            this.Title.MinimumWidth = 6;
+            this.Title.Name = "Title";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            // 
+            // imagePath
+            // 
+            this.imagePath.HeaderText = "Image Path";
+            this.imagePath.MinimumWidth = 6;
+            this.imagePath.Name = "imagePath";
             // 
             // bunifuLabel1
             // 
@@ -461,35 +395,196 @@
             this.titleInput.UseSystemPasswordChar = false;
             this.titleInput.WordWrap = true;
             // 
-            // imagePath
+            // SaveMoviesButton
             // 
-            this.imagePath.HeaderText = "Image Path";
-            this.imagePath.MinimumWidth = 6;
-            this.imagePath.Name = "imagePath";
+            this.SaveMoviesButton.AllowAnimations = true;
+            this.SaveMoviesButton.AllowMouseEffects = true;
+            this.SaveMoviesButton.AllowToggling = false;
+            this.SaveMoviesButton.AnimationSpeed = 200;
+            this.SaveMoviesButton.AutoGenerateColors = false;
+            this.SaveMoviesButton.AutoRoundBorders = false;
+            this.SaveMoviesButton.AutoSizeLeftIcon = true;
+            this.SaveMoviesButton.AutoSizeRightIcon = true;
+            this.SaveMoviesButton.BackColor = System.Drawing.Color.Transparent;
+            this.SaveMoviesButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.SaveMoviesButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SaveMoviesButton.BackgroundImage")));
+            this.SaveMoviesButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.SaveMoviesButton.ButtonText = "Add";
+            this.SaveMoviesButton.ButtonTextMarginLeft = 0;
+            this.SaveMoviesButton.ColorContrastOnClick = 45;
+            this.SaveMoviesButton.ColorContrastOnHover = 45;
+            this.SaveMoviesButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.SaveMoviesButton.CustomizableEdges = borderEdges1;
+            this.SaveMoviesButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SaveMoviesButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.SaveMoviesButton.DisabledFillColor = System.Drawing.Color.Empty;
+            this.SaveMoviesButton.DisabledForecolor = System.Drawing.Color.Empty;
+            this.SaveMoviesButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.SaveMoviesButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SaveMoviesButton.ForeColor = System.Drawing.Color.White;
+            this.SaveMoviesButton.IconLeft = null;
+            this.SaveMoviesButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveMoviesButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.SaveMoviesButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.SaveMoviesButton.IconMarginLeft = 11;
+            this.SaveMoviesButton.IconPadding = 10;
+            this.SaveMoviesButton.IconRight = null;
+            this.SaveMoviesButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SaveMoviesButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.SaveMoviesButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.SaveMoviesButton.IconSize = 25;
+            this.SaveMoviesButton.IdleBorderColor = System.Drawing.Color.Empty;
+            this.SaveMoviesButton.IdleBorderRadius = 0;
+            this.SaveMoviesButton.IdleBorderThickness = 0;
+            this.SaveMoviesButton.IdleFillColor = System.Drawing.Color.Empty;
+            this.SaveMoviesButton.IdleIconLeftImage = null;
+            this.SaveMoviesButton.IdleIconRightImage = null;
+            this.SaveMoviesButton.IndicateFocus = false;
+            this.SaveMoviesButton.Location = new System.Drawing.Point(357, 173);
+            this.SaveMoviesButton.Name = "SaveMoviesButton";
+            this.SaveMoviesButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.SaveMoviesButton.OnDisabledState.BorderRadius = 1;
+            this.SaveMoviesButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.SaveMoviesButton.OnDisabledState.BorderThickness = 1;
+            this.SaveMoviesButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.SaveMoviesButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.SaveMoviesButton.OnDisabledState.IconLeftImage = null;
+            this.SaveMoviesButton.OnDisabledState.IconRightImage = null;
+            this.SaveMoviesButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.SaveMoviesButton.onHoverState.BorderRadius = 1;
+            this.SaveMoviesButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.SaveMoviesButton.onHoverState.BorderThickness = 1;
+            this.SaveMoviesButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.SaveMoviesButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.SaveMoviesButton.onHoverState.IconLeftImage = null;
+            this.SaveMoviesButton.onHoverState.IconRightImage = null;
+            this.SaveMoviesButton.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.SaveMoviesButton.OnIdleState.BorderRadius = 1;
+            this.SaveMoviesButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.SaveMoviesButton.OnIdleState.BorderThickness = 1;
+            this.SaveMoviesButton.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.SaveMoviesButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.SaveMoviesButton.OnIdleState.IconLeftImage = null;
+            this.SaveMoviesButton.OnIdleState.IconRightImage = null;
+            this.SaveMoviesButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.SaveMoviesButton.OnPressedState.BorderRadius = 1;
+            this.SaveMoviesButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.SaveMoviesButton.OnPressedState.BorderThickness = 1;
+            this.SaveMoviesButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.SaveMoviesButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.SaveMoviesButton.OnPressedState.IconLeftImage = null;
+            this.SaveMoviesButton.OnPressedState.IconRightImage = null;
+            this.SaveMoviesButton.Size = new System.Drawing.Size(117, 41);
+            this.SaveMoviesButton.TabIndex = 3;
+            this.SaveMoviesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveMoviesButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SaveMoviesButton.TextMarginLeft = 0;
+            this.SaveMoviesButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.SaveMoviesButton.UseDefaultRadiusAndThickness = true;
+            this.SaveMoviesButton.Click += new System.EventHandler(this.AddMoviesButton_Click);
             // 
-            // Description
+            // AddMoviesButton
             // 
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
-            // 
-            // Title
-            // 
-            this.Title.HeaderText = "Title";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
+            this.AddMoviesButton.AllowAnimations = true;
+            this.AddMoviesButton.AllowMouseEffects = true;
+            this.AddMoviesButton.AllowToggling = false;
+            this.AddMoviesButton.AnimationSpeed = 200;
+            this.AddMoviesButton.AutoGenerateColors = false;
+            this.AddMoviesButton.AutoRoundBorders = false;
+            this.AddMoviesButton.AutoSizeLeftIcon = true;
+            this.AddMoviesButton.AutoSizeRightIcon = true;
+            this.AddMoviesButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddMoviesButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.AddMoviesButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddMoviesButton.BackgroundImage")));
+            this.AddMoviesButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AddMoviesButton.ButtonText = "Add";
+            this.AddMoviesButton.ButtonTextMarginLeft = 0;
+            this.AddMoviesButton.ColorContrastOnClick = 45;
+            this.AddMoviesButton.ColorContrastOnHover = 45;
+            this.AddMoviesButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.AddMoviesButton.CustomizableEdges = borderEdges2;
+            this.AddMoviesButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddMoviesButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.AddMoviesButton.DisabledFillColor = System.Drawing.Color.Empty;
+            this.AddMoviesButton.DisabledForecolor = System.Drawing.Color.Empty;
+            this.AddMoviesButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.AddMoviesButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AddMoviesButton.ForeColor = System.Drawing.Color.White;
+            this.AddMoviesButton.IconLeft = null;
+            this.AddMoviesButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddMoviesButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.AddMoviesButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.AddMoviesButton.IconMarginLeft = 11;
+            this.AddMoviesButton.IconPadding = 10;
+            this.AddMoviesButton.IconRight = null;
+            this.AddMoviesButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddMoviesButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.AddMoviesButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.AddMoviesButton.IconSize = 25;
+            this.AddMoviesButton.IdleBorderColor = System.Drawing.Color.Empty;
+            this.AddMoviesButton.IdleBorderRadius = 0;
+            this.AddMoviesButton.IdleBorderThickness = 0;
+            this.AddMoviesButton.IdleFillColor = System.Drawing.Color.Empty;
+            this.AddMoviesButton.IdleIconLeftImage = null;
+            this.AddMoviesButton.IdleIconRightImage = null;
+            this.AddMoviesButton.IndicateFocus = false;
+            this.AddMoviesButton.Location = new System.Drawing.Point(357, 173);
+            this.AddMoviesButton.Name = "AddMoviesButton";
+            this.AddMoviesButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.AddMoviesButton.OnDisabledState.BorderRadius = 1;
+            this.AddMoviesButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AddMoviesButton.OnDisabledState.BorderThickness = 1;
+            this.AddMoviesButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.AddMoviesButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.AddMoviesButton.OnDisabledState.IconLeftImage = null;
+            this.AddMoviesButton.OnDisabledState.IconRightImage = null;
+            this.AddMoviesButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.AddMoviesButton.onHoverState.BorderRadius = 1;
+            this.AddMoviesButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AddMoviesButton.onHoverState.BorderThickness = 1;
+            this.AddMoviesButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.AddMoviesButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.AddMoviesButton.onHoverState.IconLeftImage = null;
+            this.AddMoviesButton.onHoverState.IconRightImage = null;
+            this.AddMoviesButton.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.AddMoviesButton.OnIdleState.BorderRadius = 1;
+            this.AddMoviesButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AddMoviesButton.OnIdleState.BorderThickness = 1;
+            this.AddMoviesButton.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.AddMoviesButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.AddMoviesButton.OnIdleState.IconLeftImage = null;
+            this.AddMoviesButton.OnIdleState.IconRightImage = null;
+            this.AddMoviesButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.AddMoviesButton.OnPressedState.BorderRadius = 1;
+            this.AddMoviesButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AddMoviesButton.OnPressedState.BorderThickness = 1;
+            this.AddMoviesButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.AddMoviesButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.AddMoviesButton.OnPressedState.IconLeftImage = null;
+            this.AddMoviesButton.OnPressedState.IconRightImage = null;
+            this.AddMoviesButton.Size = new System.Drawing.Size(117, 41);
+            this.AddMoviesButton.TabIndex = 15;
+            this.AddMoviesButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddMoviesButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AddMoviesButton.TextMarginLeft = 0;
+            this.AddMoviesButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.AddMoviesButton.UseDefaultRadiusAndThickness = true;
+            this.AddMoviesButton.Click += new System.EventHandler(this.AddMoviesButton_Click);
             // 
             // FilmsInCinemaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1332, 686);
+            this.Controls.Add(this.AddMoviesButton);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.directoryInput);
             this.Controls.Add(this.descriptionInput);
@@ -518,5 +613,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn imagePath;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddMoviesButton;
     }
 }

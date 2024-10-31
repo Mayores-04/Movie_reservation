@@ -2,6 +2,7 @@
 using MongoDB.Driver;
 using MovieMunch.Admin;
 using MovieMunch.Backend.Models;
+using MovieMunch.Backend.Services;
 using MovieMunch.Frontend.Forms;
 using MovieMunch.Models;
 using MovieMunch.Services;
@@ -20,7 +21,12 @@ namespace MovieMunch
 
         private MovieService _movieService;
         private List<FilmsInCinema> _filmsInCinemas;
+        private List<ComingSoon> _comingSoon;
         private SettingsForm _settingsForm;
+
+        private FoodServices _foodServices; // Declare this at the class level
+        private List<Foods> _foodsCollection; // Use List<Foods> instead of a generic collection
+
 
         private int _currentImageIndex = 0;
 
@@ -52,13 +58,20 @@ namespace MovieMunch
             this.DoubleBuffered = true;
             _movieService = new MovieService();
             _movies = _movieService.GetAllMovieInfos();
-
             _filmsInCinemas = _movieService.GetFilmsInCinemas();
+            _comingSoon = _movieService.GetComingSoons();
 
             PopulateImagePaths();
 
             UpdateDisplayedImage();
-            LoadMoviesToFlowLayoutPanel();
+            LoadFilmsInCinemaToFlowLayoutPanel();
+            LoadComingSoonToFlowLayoutPanel();
+
+
+
+            _foodServices = new FoodServices(); 
+            _foodsCollection = _foodServices.GetFoodsInCollection();
+            LoadFoodsToYummyFlowLayoutPanel();
 
             FadeIn(this);
 
@@ -127,7 +140,6 @@ namespace MovieMunch
                 return;
             }
 
-            // Load images into picture boxes
             int previousImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
             int nextImageIndex = (_currentImageIndex + 1) % _imagePaths.Length;
 
@@ -162,8 +174,6 @@ namespace MovieMunch
                     break;
             }
         }
-
-
 
         public void SetCircleColor(PictureBox pictureColor, string circleColorPath)
         {
@@ -319,7 +329,7 @@ namespace MovieMunch
         }
 
 
-        private void LoadMoviesToFlowLayoutPanel()
+        private void LoadFilmsInCinemaToFlowLayoutPanel()
         {
             FilmsInCinemaFlowLayout.Controls.Clear();
 
@@ -330,9 +340,10 @@ namespace MovieMunch
                 PictureBox moviePictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Size = new Size(200, 250),
-                    Margin = new Padding(10),
+                    Height = 202,
+                    Width = 152,
                     ImageLocation = movie.FilmImagePath,
+                    
                     Cursor = Cursors.Hand
                 };
 
@@ -349,13 +360,155 @@ namespace MovieMunch
             FadeIn(FilmsInCinemaFlowLayout);
         }
 
+   
         private void FilmsInCinemaFlowLayout_Paint(object sender, PaintEventArgs e)
         {
             if (_filmsInCinemas == null || _filmsInCinemas.Count == 0)
             {
-                LoadMoviesToFlowLayoutPanel();
+                LoadFilmsInCinemaToFlowLayoutPanel();
             }
         }
+
+        private void LoadComingSoonToFlowLayoutPanel()
+        {
+            ComingSoonFlowLayoutPanel.Controls.Clear();
+
+            Panel[] soons = { soon1, soon2, soon3, soon4, soon5, soon6, soon7, soon8 };
+
+            foreach (var csoon in _comingSoon)
+            {
+                PictureBox moviePictureBox = new PictureBox
+                {
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 202,
+                    Width = 151,
+                    ImageLocation = csoon.FilmImagePath,
+
+                    Cursor = Cursors.Hand
+                };
+
+                int index = _comingSoon.IndexOf(csoon) % soons.Length;
+
+                soons[index].Controls.Add(moviePictureBox);
+            }
+
+            foreach (var panel in soons)
+            {
+                ComingSoonFlowLayoutPanel.Controls.Add(panel);
+            }
+
+            FadeIn(ComingSoonFlowLayoutPanel);
+        }
+
+        private void ComingSoonFlowLayout_Paint(object sender, PaintEventArgs e)
+        {
+            if (_comingSoon == null || _comingSoon.Count == 0)
+            {
+                LoadComingSoonToFlowLayoutPanel();
+            }
+        }
+
+        //private void LoadFoodsToFlowLayoutPanel()
+        //{
+        //    foodFlowLayoutPanel.Controls.Clear();
+        //    Panel[] foods = { food1, food2, food3 };
+
+        //    foreach (var food in _foodsCollection)
+        //    {
+        //        if (food == null)
+        //        {
+        //            Console.WriteLine("Food item is null!");
+        //            continue; // Skip null food items
+        //        }
+
+        //        PictureBox moviePictureBox = new PictureBox
+        //        {
+        //            SizeMode = PictureBoxSizeMode.StretchImage,
+        //            Height = 250,
+        //            Width = 484,
+        //            ImageLocation = food.FoodImagePath,
+        //            Cursor = Cursors.Hand
+        //        };
+
+        //        int index = _foodsCollection.IndexOf(food) % foods.Length;
+
+        //        if (index < foods.Length)
+        //        {
+        //            foods[index].Controls.Add(moviePictureBox);
+        //        }
+        //    }
+
+        //    foreach (var panel in foods)
+        //    {
+        //        if (panel != null)
+        //        {
+        //            foodFlowLayoutPanel.Controls.Add(panel);
+        //        }
+        //    }
+
+        //    FadeIn(foodFlowLayoutPanel);
+        //}
+
+
+        //private void foodFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        //{
+        //    if (_foodsCollection == null || _foodsCollection.Count == 0)
+        //    {
+        //        LoadFoodsToFlowLayoutPanel();
+        //    }
+        //}
+
+
+        private void LoadFoodsToYummyFlowLayoutPanel()
+        {
+            yummyFlowLayoutPanel.Controls.Clear();
+
+            Panel[] yummPanels = { yummy1, yummy2, yummy3 };
+
+            foreach (var food in _foodsCollection)
+            {
+                if (food == null)
+                {
+                    MessageBox.Show("Null");
+                    continue; 
+                }
+
+                PictureBox foodPictureBox = new PictureBox
+                {
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 245,
+                    Width = 480,
+                    ImageLocation = food.FoodImagePath, 
+                    Cursor = Cursors.Hand
+                };
+
+                int index = _foodsCollection.IndexOf(food) % yummPanels.Length;
+
+                if (index < yummPanels.Length)
+                {
+                    yummPanels[index].Controls.Add(foodPictureBox);
+                }
+            }
+
+            foreach (var panel in yummPanels)
+            {
+                if (panel != null)
+                {
+                    yummyFlowLayoutPanel.Controls.Add(panel);
+                }
+            }
+
+            FadeIn(yummyFlowLayoutPanel);
+        }
+
+        private void yummyFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (_foodsCollection == null || _foodsCollection.Count == 0)
+            {
+                LoadFoodsToYummyFlowLayoutPanel();
+            }
+        }
+
 
         private bool isDragging = false;
         private Point lastMousePosition;
@@ -388,24 +541,16 @@ namespace MovieMunch
         {
             control.Visible = true;
 
-            // Set the initial color to fully transparent
-            //control.BackColor = Color.FromArgb(0, control.BackColor.R, control.BackColor.G, control.BackColor.B);
-
             Timer timer = new Timer();
-            timer.Interval = 50; // Adjust as necessary
+            timer.Interval = 50; 
             timer.Tick += (s, e) =>
             {
-                // Get the current alpha value
                 int alpha = control.BackColor.A;
 
-                // Increase alpha value
                 if (alpha < 255)
                 {
                     alpha += 5; // Increase alpha (adjust as necessary)
                     if (alpha > 255) alpha = 255; // Clamp to 255
-
-                    // Set the new BackColor with updated alpha
-                    //control.BackColor = Color.FromArgb(alpha, control.BackColor.R, control.BackColor.G, control.BackColor.B);
                 }
                 else
                 {
@@ -561,6 +706,5 @@ namespace MovieMunch
             var userService = new UserService();
             userService.Logout();
         }
-
     }
 }

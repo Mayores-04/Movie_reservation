@@ -204,11 +204,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Components\FilmsInCinema.cs">
+    <Compile Include="Admin\FilmsInCinemaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Components\FilmsInCinema.Designer.cs">
-      <DependentUpon>FilmsInCinema.cs</DependentUpon>
+    <Compile Include="Admin\FilmsInCinemaForm.Designer.cs">
+      <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\Components\Form1.cs">
       <SubType>Form</SubType>
@@ -226,10 +226,13 @@
     <Compile Include="Backend\Helpers\PasswordHelper.cs" />
     <Compile Include="Backend\Models\AdminAccount.cs" />
     <Compile Include="Backend\Models\CinemaSeats.cs" />
+    <Compile Include="Backend\Models\ComingSoon.cs" />
     <Compile Include="Backend\Models\Counts.cs" />
     <Compile Include="Backend\Models\FilmsInCinema.cs" />
+    <Compile Include="Backend\Models\Foods.cs" />
     <Compile Include="Backend\Models\Movie.cs" />
     <Compile Include="Backend\Models\User.cs" />
+    <Compile Include="Backend\Services\FoodServices.cs" />
     <Compile Include="Backend\Services\MovieService.cs" />
     <Compile Include="Backend\Services\SeatReservationServices.cs" />
     <Compile Include="Backend\Services\UserService.cs" />
@@ -289,8 +292,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin\Components\FilmsInCinema.resx">
-      <DependentUpon>FilmsInCinema.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\FilmsInCinemaForm.resx">
+      <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MainAdminForm.resx">
       <DependentUpon>MainAdminForm.cs</DependentUpon>

@@ -51,6 +51,16 @@ public class MongoDBConnection
         return _database.GetCollection<FilmsInCinema>("FilmsInCinema");
     }
 
+    public IMongoCollection<ComingSoon> GetComingSoonCollection()
+    {
+        return _database.GetCollection<ComingSoon>("ComingSoon");
+    }
+
+    public IMongoCollection<Foods> GetFoodsCollection()
+    {
+        return _database.GetCollection<Foods>("Foods");
+    }
+
     public IMongoDatabase Database => _database;
 
 

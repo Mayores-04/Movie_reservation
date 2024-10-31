@@ -17,8 +17,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -50,10 +50,10 @@
             this.LoginContainer.Controls.Add(this.pictureBox2);
             this.LoginContainer.Controls.Add(this.label5);
             this.LoginContainer.Controls.Add(this.SignUpBtn);
-            this.LoginContainer.Controls.Add(this.bunifuFormCaptionButton1);
             this.LoginContainer.Controls.Add(this.LoginBtn);
             this.LoginContainer.Controls.Add(this.passwordInput);
             this.LoginContainer.Controls.Add(this.emailInput);
+            this.LoginContainer.Controls.Add(this.bunifuFormCaptionButton1);
             this.LoginContainer.Location = new System.Drawing.Point(473, 110);
             this.LoginContainer.Name = "LoginContainer";
             this.LoginContainer.ShowBorders = true;
@@ -112,18 +112,18 @@
             this.bunifuFormCaptionButton1.BorderColor = System.Drawing.Color.LightGray;
             this.bunifuFormCaptionButton1.BorderHoverColor = System.Drawing.Color.DarkGray;
             this.bunifuFormCaptionButton1.BorderPressedColor = System.Drawing.Color.DarkGray;
-            this.bunifuFormCaptionButton1.BorderRadius = 25;
+            this.bunifuFormCaptionButton1.BorderRadius = 15;
             this.bunifuFormCaptionButton1.BorderStyle = Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderStyles.Solid;
             this.bunifuFormCaptionButton1.BorderThickness = 1;
             this.bunifuFormCaptionButton1.CaptionType = Bunifu.UI.WinForms.BunifuFormCaptionButton.CaptionTypes.Close;
             this.bunifuFormCaptionButton1.ColorContrastOnClick = 30;
             this.bunifuFormCaptionButton1.ColorContrastOnHover = 30;
             this.bunifuFormCaptionButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges2;
             this.bunifuFormCaptionButton1.DefaultBorderColor = System.Drawing.Color.Silver;
             this.bunifuFormCaptionButton1.DefaultColor = System.Drawing.Color.Gainsboro;
             this.bunifuFormCaptionButton1.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -133,10 +133,10 @@
             this.bunifuFormCaptionButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuFormCaptionButton1.Image")));
             this.bunifuFormCaptionButton1.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.bunifuFormCaptionButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.bunifuFormCaptionButton1.Location = new System.Drawing.Point(356, 6);
+            this.bunifuFormCaptionButton1.Location = new System.Drawing.Point(356, 3);
             this.bunifuFormCaptionButton1.Name = "bunifuFormCaptionButton1";
             this.bunifuFormCaptionButton1.ShowBorders = true;
-            this.bunifuFormCaptionButton1.Size = new System.Drawing.Size(34, 30);
+            this.bunifuFormCaptionButton1.Size = new System.Drawing.Size(38, 33);
             this.bunifuFormCaptionButton1.TabIndex = 3;
             this.bunifuFormCaptionButton1.Click += new System.EventHandler(this.CloseButton);
             // 
@@ -159,11 +159,11 @@
             this.LoginBtn.ColorContrastOnClick = 45;
             this.LoginBtn.ColorContrastOnHover = 45;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.LoginBtn.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.LoginBtn.CustomizableEdges = borderEdges1;
             this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LoginBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LoginBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));

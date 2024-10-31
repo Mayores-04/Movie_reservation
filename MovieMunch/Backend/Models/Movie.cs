@@ -29,5 +29,4 @@ namespace MovieMunch.Models
         public string ImagePath { get; set; }
         public decimal Price { get; set; }
     }
-
 }

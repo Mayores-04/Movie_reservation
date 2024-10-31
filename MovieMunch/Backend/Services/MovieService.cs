@@ -5,18 +5,19 @@ using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 public class MovieService
 {
     private readonly IMongoCollection<FilmsInCinema> _filmsInCinema;
     private readonly IMongoCollection<Movie> _movies;
+    private readonly IMongoCollection<ComingSoon> _comingSoon;
 
     public MovieService()
     {
         var dbConnection = new MongoDBConnection();
         _filmsInCinema = dbConnection.GetFilmsInCinemaCollection();
         _movies = dbConnection.GetMoviesCollection();
+        _comingSoon = dbConnection.GetComingSoonCollection();
     }
 
     public List<FilmsInCinema> GetFilmsInCinemas()
@@ -32,6 +33,19 @@ public class MovieService
         }
     }
 
+    public List<ComingSoon> GetComingSoons()
+    {
+        try
+        {
+            return _comingSoon.Find(csoon => true).ToList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching coming soon in cinema: {ex.Message}");
+            return new List<ComingSoon>();
+        }
+    }
+
     public List<MovieInfo> GetAllMovieInfos()
     {
         try
@@ -40,9 +54,9 @@ public class MovieService
             // Map to a list of MovieInfo with title and price
             return movies.Select(movie => new MovieInfo
             {
-                Title = movie.MovieTitle,         // Correct property name
-                ImagePath = movie.MovieImagePath, // Correct property name
-                Price = movie.MoviePrice           // Correct property name
+                Title = movie.MovieTitle,        
+                ImagePath = movie.MovieImagePath, 
+                Price = movie.MoviePrice           
             }).ToList();
         }
         catch (Exception ex)
@@ -51,7 +65,6 @@ public class MovieService
             return new List<MovieInfo>();
         }
     }
-
 
 
     public void AddFilm(FilmsInCinema film)

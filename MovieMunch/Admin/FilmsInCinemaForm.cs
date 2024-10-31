@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System;
 using System.Drawing;
 
-namespace MovieMunch.Admin.Components
+namespace MovieMunch.Admin.FilmsInCinema
 {
     public partial class FilmsInCinemaForm : Form
     {
@@ -131,7 +131,6 @@ namespace MovieMunch.Admin.Components
                 }
             }
         }
-
 
 
         private void LoadFilmsInCinemaData()

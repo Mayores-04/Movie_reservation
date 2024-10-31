@@ -62,6 +62,7 @@ namespace MovieMunch.Frontend.Forms
                 string gcashEmail = gcashPaypalUserEmailInput.Text;
 
                 NameDetails.Text = _reservedBy;
+                AccountName.Text = gcashName;
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "GCash";
@@ -78,6 +79,7 @@ namespace MovieMunch.Frontend.Forms
                 string paypalEmail = gcashPaypalUserEmailInput.Text;
 
                 NameDetails.Text = _reservedBy;
+                AccountName.Text = paypalName;
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "PayPal"; 
@@ -118,6 +120,17 @@ namespace MovieMunch.Frontend.Forms
             string country = cardCountryInput.Text;
             string postalCode = cardPostalCodeInput.Text;
 
+            NameDetails.Text = _reservedBy;
+            AccountName.Text = cardName;
+            MovietoReserveDetails.Text = _movieName;
+            SeatsDetails.Text = string.Join(", ", _reservedSeats);
+            PayWithDetails.Text = "Card";
+            totalPriceDetails.Text = _moviePrice.ToString("C");
+
+            cardPaymentPanel.Visible = false;
+            orderDetailsPanel.Visible = true;
+
+            orderDetailsPanel.Refresh();
         }
 
         private void closeModal_Click(object sender, EventArgs e)

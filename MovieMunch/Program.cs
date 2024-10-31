@@ -1,4 +1,5 @@
 ﻿using MovieMunch.Admin.Components;
+using MovieMunch.Admin.FilmsInCinema;
 using MovieMunch.Frontend.Forms;
 using MovieMunch.Services;
 using System;
