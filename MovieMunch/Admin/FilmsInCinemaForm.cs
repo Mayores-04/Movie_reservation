@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System;
 using System.Drawing;
+using MovieMunch.Backend.Services;
 
 namespace MovieMunch.Admin.FilmsInCinema
 {
@@ -35,27 +36,56 @@ namespace MovieMunch.Admin.FilmsInCinema
             };
             MoviesTable.Columns.Add(deleteButtonColumn);
 
-            DataGridViewButtonColumn ViewFilm = new DataGridViewButtonColumn
+            DataGridViewButtonColumn viewButtonColumn = new DataGridViewButtonColumn
             {
                 HeaderText = "View",
                 Text = "View Film",
                 UseColumnTextForButtonValue = true,
                 Name = "ViewButton"
             };
-            MoviesTable.Columns.Add(ViewFilm);
+            MoviesTable.Columns.Add(viewButtonColumn);
 
             MoviesTable.CellContentClick += MoviesTable_CellContentClick;
         }
 
-        private void ViewFilm(string filmId)
+        private void ViewFilm(string filmsId)
         {
-            MessageBox.Show($"Viewing film with ID: {filmId}");
+            viewFilmPanel.Visible = true;
+            var film = _movieService.GetFilmById(new ObjectId(filmsId));
+
+            if (film != null)
+            {
+                try
+                {
+                    viewFilmBox.BackgroundImage = Image.FromFile(film.FilmImagePath);
+                    viewFilmBox.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading image: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Snack not found.");
+            }
         }
 
 
+        private void LoadFilmsInCinemaData()
+        {
+            List<MovieMunch.Backend.Models.FilmsInCinema> films = _movieService.GetFilmsInCinemas();
+            MoviesTable.Rows.Clear();
+
+            foreach (var film in films)
+            {
+                MoviesTable.Rows.Add(film.Id, film.FilmTitle, film.FilmsDescription, film.FilmImagePath);
+            }
+        }
+
         private void MoviesTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && (MoviesTable.Columns[e.ColumnIndex].Name == "UpdateButton" || MoviesTable.Columns[e.ColumnIndex].Name == "DeleteButton"))
+            if (e.RowIndex >= 0)
             {
                 string filmId = MoviesTable.Rows[e.RowIndex].Cells["id"].Value.ToString();
 
@@ -133,16 +163,6 @@ namespace MovieMunch.Admin.FilmsInCinema
         }
 
 
-        private void LoadFilmsInCinemaData()
-        {
-            List<MovieMunch.Backend.Models.FilmsInCinema> films = _movieService.GetFilmsInCinemas();
-            MoviesTable.Rows.Clear();
-
-            foreach (var film in films)
-            {
-                MoviesTable.Rows.Add(film.Id, film.FilmTitle, film.FilmsDescription, film.FilmImagePath);
-            }
-        }
 
         private string RemoveSurroundingQuotes(string input)
         {
@@ -160,7 +180,7 @@ namespace MovieMunch.Admin.FilmsInCinema
             directoryInput.Clear();
         }
 
-        private void AddMoviesButton_Click(object sender, EventArgs e)
+        private void AddFilm_Click(object sender, EventArgs e)
         {
             string movieTitle = RemoveSurroundingQuotes(titleInput.Text);
             string movieDescription = RemoveSurroundingQuotes(descriptionInput.Text);
@@ -183,6 +203,19 @@ namespace MovieMunch.Admin.FilmsInCinema
             MessageBox.Show("Film saved successfully.");
             LoadFilmsInCinemaData();
             ClearAdminInput();
+        }
+
+        private void closeFlimBtn_Click(object sender, EventArgs e)
+        {
+            viewFilmPanel.Visible = false;
+        }
+
+        private void backFilmBtn_Click(object sender, EventArgs e)
+        {
+
+            MainAdminForm mainAdminForm = new MainAdminForm();
+            mainAdminForm.Visible = true;
+            this.Close();
         }
     }
 }

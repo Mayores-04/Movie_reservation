@@ -117,80 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SnacksId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Title.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SnacksName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SnacksPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="imagePath.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SnacksImagePath.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SnacksDirectoryInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
+        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
+        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
+        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="SnacksDescriptionInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
+        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
+        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
+        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="SnacksTitleInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
+        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
+        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
+        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 28.2pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="AddMoviesButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHUAAAApCAYAAAALSGYwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACMSURBVHhe7dExEYAwAMDAKqll8FcZ7AUEYIDcDz9lzJjn
-        XvO8byr2eqd+Bf7M1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBT
-        g0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg8Y89vUV+KljXw8L8ROFVP4ieAAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="directoryInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
-        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
-        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
-        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="descriptionInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
-        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
-        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
-        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="titleInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
-        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
-        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
-        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="SaveMoviesButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHUAAAApCAYAAAALSGYwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACMSURBVHhe7dExEYAwAMDAKqll8FcZ7AUEYIDcDz9lzJjn
-        XvO8byr2eqd+Bf7M1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBT
-        g0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg8Y89vUV+KljXw8L8ROFVP4ieAAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="AddFilm.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHUAAAApCAYAAAALSGYwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACMSURBVHhe7dExEYAwAMDAKqll8FcZ7AUEYIDcDz9lzJjn
-        XvO8byr2eqd+Bf7M1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBT
-        g0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg8Y89vUV+KljXw8L8ROFVP4ieAAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="closeFlimBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="closeImageBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAWBJREFUeF7t
         ml1KA0EQBvdAgofxUS/go3oN9cAi0e6QgjBMQjbZ6ZnpfAVN2LxsV+3PQ8gihBBCCCGEWMvj4XMEwnf5
@@ -200,6 +173,15 @@
         c/KQNsIl8pAuwhp5SBPhGnmYPsIt8jBthC3kYboIW8rDNBFayMPwEVrKw7ARIuRhuAiR8jBMhB7y0D1C
         T3noFkF/kTHebThh9JUvKe+EN5sQPmx6ywMRfKdQ7vqPkkIIIYQQQkzNsvwD7lugSvSs96AAAAAASUVO
         RK5CYII=
+</value>
+  </data>
+  <data name="AddSnacksButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHUAAAApCAYAAAALSGYwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACMSURBVHhe7dExEYAwAMDAKqll8FcZ7AUEYIDcDz9lzJjn
+        XvO8byr2eqd+Bf7M1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBT
+        g0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg0wNMjXI1CBTg8Y89vUV+KljXw8L8ROFVP4ieAAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
 </root>

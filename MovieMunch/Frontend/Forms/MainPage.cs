@@ -287,7 +287,7 @@ namespace MovieMunch
             if (File.Exists(defaultImage))
             {
                 button.BackgroundImage = new Bitmap(defaultImage);
-                button.Image = null;
+                button.Image = default;
             }
             else
             {
@@ -382,8 +382,7 @@ namespace MovieMunch
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Height = 202,
                     Width = 151,
-                    ImageLocation = csoon.FilmImagePath,
-
+                    ImageLocation = csoon.ComingSoonImagePath,
                     Cursor = Cursors.Hand
                 };
 

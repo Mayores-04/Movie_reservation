@@ -20,6 +20,8 @@ namespace MovieMunch
         private void regCloseBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)

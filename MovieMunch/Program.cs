@@ -1,4 +1,4 @@
-﻿using MovieMunch.Admin.Components;
+﻿using MovieMunch.Admin;
 using MovieMunch.Admin.FilmsInCinema;
 using MovieMunch.Frontend.Forms;
 using MovieMunch.Services;
@@ -20,9 +20,6 @@ namespace MovieMunch
 
             //MainAdminForm mainAdminForm = new MainAdminForm();
             //Application.Run(mainAdminForm);
-
-            //FilmsInCinemaForm filmsInCinema = new FilmsInCinemaForm();
-            //Application.Run(filmsInCinema);
 
             ////Seat Reservation
             //var dbConnection = new MongoDBConnection();

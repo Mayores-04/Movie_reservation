@@ -75,8 +75,11 @@
     <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
@@ -99,6 +102,8 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
@@ -178,11 +183,11 @@
     <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -191,6 +196,8 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -199,28 +206,41 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="ZstdSharp, Version=0.7.3.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.7.3\lib\net461\ZstdSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\ComingSoonMoviesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ComingSoonMoviesForm.Designer.cs">
+      <DependentUpon>ComingSoonMoviesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FilmsInCinemaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\FilmsInCinemaForm.Designer.cs">
       <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Components\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Components\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\MainAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\MainAdminForm.Designer.cs">
       <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Showing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Showing.Designer.cs">
+      <DependentUpon>Showing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SnacksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\SnacksForm.Designer.cs">
+      <DependentUpon>SnacksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\Data\MongoDBConnection.cs" />
     <Compile Include="Backend\Helpers\PasswordHelper.cs" />
@@ -234,6 +254,7 @@
     <Compile Include="Backend\Models\User.cs" />
     <Compile Include="Backend\Services\FoodServices.cs" />
     <Compile Include="Backend\Services\MovieService.cs" />
+    <Compile Include="Backend\Services\Reports.cs" />
     <Compile Include="Backend\Services\SeatReservationServices.cs" />
     <Compile Include="Backend\Services\UserService.cs" />
     <Compile Include="Frontend\Forms\Components\editEmail.cs">
@@ -292,11 +313,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\ComingSoonMoviesForm.resx">
+      <DependentUpon>ComingSoonMoviesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\FilmsInCinemaForm.resx">
       <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MainAdminForm.resx">
       <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Showing.resx">
+      <DependentUpon>Showing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SnacksForm.resx">
+      <DependentUpon>SnacksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
       <DependentUpon>editEmail.cs</DependentUpon>
@@ -400,7 +430,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Admin\Components\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

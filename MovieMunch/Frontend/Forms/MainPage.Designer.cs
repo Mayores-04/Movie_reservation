@@ -27,11 +27,11 @@ namespace MovieMunch
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.TicketBtn = new System.Windows.Forms.Button();
@@ -125,24 +125,24 @@ namespace MovieMunch
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 686);
+            this.panel2.Size = new System.Drawing.Size(101, 650);
             this.panel2.TabIndex = 7;
             // 
             // HomeBtn
             // 
             this.HomeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.HomeBtn.BackgroundImage = global::MovieMunch.Properties.Resources.Ellipse_7;
-            this.HomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.HomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeBtn.ForeColor = System.Drawing.Color.White;
             this.HomeBtn.Image = global::MovieMunch.Properties.Resources.homeIcon;
-            this.HomeBtn.Location = new System.Drawing.Point(0, 49);
+            this.HomeBtn.Location = new System.Drawing.Point(3, 33);
             this.HomeBtn.Name = "HomeBtn";
             this.HomeBtn.Padding = new System.Windows.Forms.Padding(0, 28, 1, 0);
-            this.HomeBtn.Size = new System.Drawing.Size(144, 114);
+            this.HomeBtn.Size = new System.Drawing.Size(98, 93);
             this.HomeBtn.TabIndex = 16;
             this.HomeBtn.UseVisualStyleBackColor = false;
             this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
@@ -150,30 +150,34 @@ namespace MovieMunch
             // TicketBtn
             // 
             this.TicketBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.TicketBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.TicketBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TicketBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TicketBtn.FlatAppearance.BorderSize = 0;
             this.TicketBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TicketBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TicketBtn.ForeColor = System.Drawing.Color.White;
             this.TicketBtn.Image = global::MovieMunch.Properties.Resources.TicketIcon;
-            this.TicketBtn.Location = new System.Drawing.Point(0, 213);
+            this.TicketBtn.Location = new System.Drawing.Point(3, 193);
             this.TicketBtn.Name = "TicketBtn";
-            this.TicketBtn.Size = new System.Drawing.Size(144, 114);
+            this.TicketBtn.Size = new System.Drawing.Size(98, 93);
             this.TicketBtn.TabIndex = 15;
             this.TicketBtn.UseVisualStyleBackColor = false;
             this.TicketBtn.Click += new System.EventHandler(this.TicketBtn_Click);
             // 
             // FavBtn
             // 
-            this.FavBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.FavBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FavBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FavBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FavBtn.FlatAppearance.BorderSize = 0;
             this.FavBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FavBtn.Image = global::MovieMunch.Properties.Resources.FavIcon;
-            this.FavBtn.Location = new System.Drawing.Point(0, 378);
+            this.FavBtn.Location = new System.Drawing.Point(3, 364);
             this.FavBtn.Name = "FavBtn";
             this.FavBtn.Padding = new System.Windows.Forms.Padding(38, 13, 0, 0);
-            this.FavBtn.Size = new System.Drawing.Size(144, 114);
+            this.FavBtn.Size = new System.Drawing.Size(98, 93);
             this.FavBtn.TabIndex = 14;
             this.FavBtn.UseVisualStyleBackColor = true;
             this.FavBtn.Click += new System.EventHandler(this.FavBtn_Click);
@@ -181,16 +185,16 @@ namespace MovieMunch
             // SettingBtn
             // 
             this.SettingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SettingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.SettingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SettingBtn.FlatAppearance.BorderSize = 0;
             this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingBtn.ForeColor = System.Drawing.Color.White;
             this.SettingBtn.Image = global::MovieMunch.Properties.Resources.SettingIcon;
-            this.SettingBtn.Location = new System.Drawing.Point(0, 526);
+            this.SettingBtn.Location = new System.Drawing.Point(3, 518);
             this.SettingBtn.Name = "SettingBtn";
-            this.SettingBtn.Size = new System.Drawing.Size(144, 114);
+            this.SettingBtn.Size = new System.Drawing.Size(98, 93);
             this.SettingBtn.TabIndex = 10;
             this.SettingBtn.UseVisualStyleBackColor = false;
             this.SettingBtn.Click += new System.EventHandler(this.SettingBtn_Click);
@@ -200,9 +204,9 @@ namespace MovieMunch
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.flowLayoutPanel1.Controls.Add(this.filmsInCinemaPanel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(144, 92);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(101, 72);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1187, 594);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1099, 602);
             this.flowLayoutPanel1.TabIndex = 42;
             // 
             // filmsInCinemaPanel
@@ -228,7 +232,7 @@ namespace MovieMunch
             this.filmsInCinemaPanel.Controls.Add(this.pictureBoxMain);
             this.filmsInCinemaPanel.Location = new System.Drawing.Point(3, 3);
             this.filmsInCinemaPanel.Name = "filmsInCinemaPanel";
-            this.filmsInCinemaPanel.Size = new System.Drawing.Size(1159, 1602);
+            this.filmsInCinemaPanel.Size = new System.Drawing.Size(1084, 1610);
             this.filmsInCinemaPanel.TabIndex = 0;
             // 
             // yummyFlowLayoutPanel
@@ -243,11 +247,11 @@ namespace MovieMunch
             this.yummyFlowLayoutPanel.Controls.Add(this.yummy3);
             this.yummyFlowLayoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.yummyFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.yummyFlowLayoutPanel.Location = new System.Drawing.Point(-3, 1298);
+            this.yummyFlowLayoutPanel.Location = new System.Drawing.Point(-3, 1282);
             this.yummyFlowLayoutPanel.MinimumSize = new System.Drawing.Size(150, 250);
             this.yummyFlowLayoutPanel.Name = "yummyFlowLayoutPanel";
             this.yummyFlowLayoutPanel.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
-            this.yummyFlowLayoutPanel.Size = new System.Drawing.Size(1176, 326);
+            this.yummyFlowLayoutPanel.Size = new System.Drawing.Size(1101, 352);
             this.yummyFlowLayoutPanel.TabIndex = 35;
             this.yummyFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.yummyFlowLayoutPanel_Paint);
             // 
@@ -303,11 +307,11 @@ namespace MovieMunch
             this.reserveSeatBtn.ColorContrastOnClick = 45;
             this.reserveSeatBtn.ColorContrastOnHover = 45;
             this.reserveSeatBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.reserveSeatBtn.CustomizableEdges = borderEdges6;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.reserveSeatBtn.CustomizableEdges = borderEdges11;
             this.reserveSeatBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.reserveSeatBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.reserveSeatBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -331,7 +335,7 @@ namespace MovieMunch
             this.reserveSeatBtn.IdleIconLeftImage = null;
             this.reserveSeatBtn.IdleIconRightImage = null;
             this.reserveSeatBtn.IndicateFocus = false;
-            this.reserveSeatBtn.Location = new System.Drawing.Point(626, 384);
+            this.reserveSeatBtn.Location = new System.Drawing.Point(596, 362);
             this.reserveSeatBtn.Name = "reserveSeatBtn";
             this.reserveSeatBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.reserveSeatBtn.OnDisabledState.BorderRadius = 1;
@@ -396,7 +400,7 @@ namespace MovieMunch
             this.rightTurnBtn.ImageSize = new System.Drawing.Size(70, 70);
             this.rightTurnBtn.ImageZoomSize = new System.Drawing.Size(90, 90);
             this.rightTurnBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("rightTurnBtn.InitialImage")));
-            this.rightTurnBtn.Location = new System.Drawing.Point(877, 255);
+            this.rightTurnBtn.Location = new System.Drawing.Point(845, 255);
             this.rightTurnBtn.Name = "rightTurnBtn";
             this.rightTurnBtn.Rotation = 0;
             this.rightTurnBtn.ShowActiveImage = true;
@@ -451,7 +455,7 @@ namespace MovieMunch
             // 
             this.fourthCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fourthCircle.Image = global::MovieMunch.Properties.Resources.UncolloredCircle;
-            this.fourthCircle.Location = new System.Drawing.Point(630, 489);
+            this.fourthCircle.Location = new System.Drawing.Point(621, 461);
             this.fourthCircle.Name = "fourthCircle";
             this.fourthCircle.Size = new System.Drawing.Size(38, 35);
             this.fourthCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -462,7 +466,7 @@ namespace MovieMunch
             // 
             this.thirdCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.thirdCircle.Image = global::MovieMunch.Properties.Resources.UncolloredCircle;
-            this.thirdCircle.Location = new System.Drawing.Point(579, 489);
+            this.thirdCircle.Location = new System.Drawing.Point(570, 461);
             this.thirdCircle.Name = "thirdCircle";
             this.thirdCircle.Size = new System.Drawing.Size(36, 35);
             this.thirdCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -473,7 +477,7 @@ namespace MovieMunch
             // 
             this.secondCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.secondCircle.Image = global::MovieMunch.Properties.Resources.UncolloredCircle;
-            this.secondCircle.Location = new System.Drawing.Point(524, 489);
+            this.secondCircle.Location = new System.Drawing.Point(515, 461);
             this.secondCircle.Name = "secondCircle";
             this.secondCircle.Size = new System.Drawing.Size(39, 35);
             this.secondCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -484,7 +488,7 @@ namespace MovieMunch
             // 
             this.firstCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.firstCircle.Image = global::MovieMunch.Properties.Resources.UncolloredCircle;
-            this.firstCircle.Location = new System.Drawing.Point(468, 489);
+            this.firstCircle.Location = new System.Drawing.Point(459, 461);
             this.firstCircle.Name = "firstCircle";
             this.firstCircle.Size = new System.Drawing.Size(38, 35);
             this.firstCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -497,9 +501,9 @@ namespace MovieMunch
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label1);
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(-3, 1253);
+            this.panel5.Location = new System.Drawing.Point(-12, 1237);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1218, 50);
+            this.panel5.Size = new System.Drawing.Size(1217, 52);
             this.panel5.TabIndex = 36;
             // 
             // label1
@@ -530,11 +534,11 @@ namespace MovieMunch
             this.ComingSoonFlowLayoutPanel.Controls.Add(this.soon8);
             this.ComingSoonFlowLayoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ComingSoonFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.ComingSoonFlowLayoutPanel.Location = new System.Drawing.Point(-3, 949);
+            this.ComingSoonFlowLayoutPanel.Location = new System.Drawing.Point(-3, 936);
             this.ComingSoonFlowLayoutPanel.MinimumSize = new System.Drawing.Size(150, 250);
             this.ComingSoonFlowLayoutPanel.Name = "ComingSoonFlowLayoutPanel";
             this.ComingSoonFlowLayoutPanel.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
-            this.ComingSoonFlowLayoutPanel.Size = new System.Drawing.Size(1162, 329);
+            this.ComingSoonFlowLayoutPanel.Size = new System.Drawing.Size(1087, 350);
             this.ComingSoonFlowLayoutPanel.TabIndex = 34;
             this.ComingSoonFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ComingSoonFlowLayout_Paint);
             // 
@@ -632,9 +636,9 @@ namespace MovieMunch
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(-3, 902);
+            this.panel3.Location = new System.Drawing.Point(-12, 882);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1218, 53);
+            this.panel3.Size = new System.Drawing.Size(1218, 52);
             this.panel3.TabIndex = 33;
             // 
             // label2
@@ -642,7 +646,7 @@ namespace MovieMunch
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(481, 7);
+            this.label2.Location = new System.Drawing.Point(462, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(229, 32);
             this.label2.TabIndex = 0;
@@ -654,9 +658,9 @@ namespace MovieMunch
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.label4);
             this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel13.Location = new System.Drawing.Point(-3, 551);
+            this.panel13.Location = new System.Drawing.Point(-12, 524);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1218, 53);
+            this.panel13.Size = new System.Drawing.Size(1218, 52);
             this.panel13.TabIndex = 32;
             // 
             // label4
@@ -686,11 +690,11 @@ namespace MovieMunch
             this.FilmsInCinemaFlowLayout.Controls.Add(this.films7);
             this.FilmsInCinemaFlowLayout.Controls.Add(this.films8);
             this.FilmsInCinemaFlowLayout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FilmsInCinemaFlowLayout.Location = new System.Drawing.Point(-3, 598);
+            this.FilmsInCinemaFlowLayout.Location = new System.Drawing.Point(-3, 575);
             this.FilmsInCinemaFlowLayout.MinimumSize = new System.Drawing.Size(150, 250);
             this.FilmsInCinemaFlowLayout.Name = "FilmsInCinemaFlowLayout";
             this.FilmsInCinemaFlowLayout.Padding = new System.Windows.Forms.Padding(0, 20, 8, 10);
-            this.FilmsInCinemaFlowLayout.Size = new System.Drawing.Size(1162, 335);
+            this.FilmsInCinemaFlowLayout.Size = new System.Drawing.Size(1087, 336);
             this.FilmsInCinemaFlowLayout.TabIndex = 25;
             this.FilmsInCinemaFlowLayout.WrapContents = false;
             this.FilmsInCinemaFlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FilmsInCinemaFlowLayout_Paint);
@@ -812,10 +816,10 @@ namespace MovieMunch
             // 
             this.pictureBoxRight.BackColor = System.Drawing.Color.Black;
             this.pictureBoxRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxRight.Location = new System.Drawing.Point(987, 92);
+            this.pictureBoxRight.Location = new System.Drawing.Point(961, 91);
             this.pictureBoxRight.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxRight.Name = "pictureBoxRight";
-            this.pictureBoxRight.Size = new System.Drawing.Size(468, 376);
+            this.pictureBoxRight.Size = new System.Drawing.Size(548, 349);
             this.pictureBoxRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRight.TabIndex = 19;
             this.pictureBoxRight.TabStop = false;
@@ -824,10 +828,10 @@ namespace MovieMunch
             // 
             this.pictureBoxLeft.BackColor = System.Drawing.Color.Black;
             this.pictureBoxLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxLeft.Location = new System.Drawing.Point(-328, 92);
+            this.pictureBoxLeft.Location = new System.Drawing.Point(-379, 91);
             this.pictureBoxLeft.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxLeft.Name = "pictureBoxLeft";
-            this.pictureBoxLeft.Size = new System.Drawing.Size(476, 376);
+            this.pictureBoxLeft.Size = new System.Drawing.Size(548, 349);
             this.pictureBoxLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLeft.TabIndex = 18;
             this.pictureBoxLeft.TabStop = false;
@@ -838,7 +842,7 @@ namespace MovieMunch
             this.pictureBoxMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBoxMain.Location = new System.Drawing.Point(282, 92);
             this.pictureBoxMain.Name = "pictureBoxMain";
-            this.pictureBoxMain.Size = new System.Drawing.Size(578, 376);
+            this.pictureBoxMain.Size = new System.Drawing.Size(548, 349);
             this.pictureBoxMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMain.TabIndex = 12;
             this.pictureBoxMain.TabStop = false;
@@ -867,12 +871,13 @@ namespace MovieMunch
             // userPanel
             // 
             this.userPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.userPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.userPanel.Controls.Add(this.LogoutBtn);
             this.userPanel.Controls.Add(this.SignUpBtn);
             this.userPanel.Controls.Add(this.LoginBtn);
-            this.userPanel.Location = new System.Drawing.Point(144, 3);
+            this.userPanel.Location = new System.Drawing.Point(101, 0);
             this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(265, 683);
+            this.userPanel.Size = new System.Drawing.Size(265, 650);
             this.userPanel.TabIndex = 43;
             this.userPanel.Visible = false;
             // 
@@ -895,11 +900,11 @@ namespace MovieMunch
             this.LogoutBtn.ColorContrastOnClick = 45;
             this.LogoutBtn.ColorContrastOnHover = 45;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.LogoutBtn.CustomizableEdges = borderEdges7;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.LogoutBtn.CustomizableEdges = borderEdges12;
             this.LogoutBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LogoutBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LogoutBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -985,11 +990,11 @@ namespace MovieMunch
             this.SignUpBtn.ColorContrastOnClick = 45;
             this.SignUpBtn.ColorContrastOnHover = 45;
             this.SignUpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.SignUpBtn.CustomizableEdges = borderEdges8;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.SignUpBtn.CustomizableEdges = borderEdges13;
             this.SignUpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignUpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1075,11 +1080,11 @@ namespace MovieMunch
             this.LoginBtn.ColorContrastOnClick = 45;
             this.LoginBtn.ColorContrastOnHover = 45;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.LoginBtn.CustomizableEdges = borderEdges9;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.LoginBtn.CustomizableEdges = borderEdges14;
             this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LoginBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LoginBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1162,10 +1167,10 @@ namespace MovieMunch
             this.bunifuPanel1.Controls.Add(this.searchBtn);
             this.bunifuPanel1.Controls.Add(this.pictureBox1);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel1.Location = new System.Drawing.Point(144, 0);
+            this.bunifuPanel1.Location = new System.Drawing.Point(101, 0);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1188, 92);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1099, 79);
             this.bunifuPanel1.TabIndex = 41;
             // 
             // userNameHolder
@@ -1187,17 +1192,17 @@ namespace MovieMunch
             this.userNameHolder.ColorContrastOnClick = 45;
             this.userNameHolder.ColorContrastOnHover = 45;
             this.userNameHolder.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.userNameHolder.CustomizableEdges = borderEdges10;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.userNameHolder.CustomizableEdges = borderEdges15;
             this.userNameHolder.DialogResult = System.Windows.Forms.DialogResult.None;
             this.userNameHolder.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.userNameHolder.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.userNameHolder.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.userNameHolder.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.userNameHolder.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameHolder.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameHolder.ForeColor = System.Drawing.Color.White;
             this.userNameHolder.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.userNameHolder.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1215,7 +1220,7 @@ namespace MovieMunch
             this.userNameHolder.IdleIconLeftImage = null;
             this.userNameHolder.IdleIconRightImage = null;
             this.userNameHolder.IndicateFocus = false;
-            this.userNameHolder.Location = new System.Drawing.Point(1073, 12);
+            this.userNameHolder.Location = new System.Drawing.Point(961, 4);
             this.userNameHolder.Name = "userNameHolder";
             this.userNameHolder.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.userNameHolder.OnDisabledState.BorderRadius = 50;
@@ -1249,7 +1254,7 @@ namespace MovieMunch
             this.userNameHolder.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.userNameHolder.OnPressedState.IconLeftImage = null;
             this.userNameHolder.OnPressedState.IconRightImage = null;
-            this.userNameHolder.Size = new System.Drawing.Size(77, 65);
+            this.userNameHolder.Size = new System.Drawing.Size(70, 65);
             this.userNameHolder.TabIndex = 43;
             this.userNameHolder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userNameHolder.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1263,7 +1268,7 @@ namespace MovieMunch
             this.searchBtn.BackgroundImage = global::MovieMunch.Properties.Resources.SearchBtn;
             this.searchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBtn.Location = new System.Drawing.Point(977, 12);
+            this.searchBtn.Location = new System.Drawing.Point(865, 4);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(70, 62);
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1275,7 +1280,7 @@ namespace MovieMunch
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::MovieMunch.Properties.Resources.MovieM_removebg_preview;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(762, -39);
+            this.pictureBox1.Location = new System.Drawing.Point(650, -47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(226, 183);
             this.pictureBox1.TabIndex = 42;
@@ -1287,10 +1292,10 @@ namespace MovieMunch
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1332, 686);
+            this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.userPanel);
-            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1334,7 +1339,6 @@ namespace MovieMunch
         private PictureBox thirdCircle;
         private PictureBox secondCircle;
         private PictureBox firstCircle;
-        private Button HomeBtn;
         private Button TicketBtn;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private PictureBox searchBtn;
@@ -1398,5 +1402,6 @@ namespace MovieMunch
         private Panel yummy1;
         private Panel yummy2;
         private Panel yummy3;
+        private Button HomeBtn;
     }
 }

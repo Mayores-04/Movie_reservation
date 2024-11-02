@@ -10,12 +10,12 @@ namespace MovieMunch.Backend.Models
         public ObjectId Id { get; set; }
 
         [BsonElement("title")]
-        public string FilmTitle { get; set; }
+        public string ComingSoonTitle { get; set; }
 
         [BsonElement("description")]
-        public string FilmsDescription { get; set; }
+        public string ComingSoonDescription { get; set; }
 
         [BsonElement("imagePath")]
-        public string FilmImagePath { get; set; }
+        public string ComingSoonImagePath { get; set; }
     }
 }
