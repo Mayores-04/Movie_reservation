@@ -724,7 +724,7 @@
             this.closeFlimBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeFlimBtn.Image")));
             this.closeFlimBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeFlimBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeFlimBtn.Location = new System.Drawing.Point(871, 122);
+            this.closeFlimBtn.Location = new System.Drawing.Point(841, 20);
             this.closeFlimBtn.Name = "closeFlimBtn";
             this.closeFlimBtn.ShowBorders = true;
             this.closeFlimBtn.Size = new System.Drawing.Size(38, 33);
@@ -733,9 +733,9 @@
             // 
             // viewFilmBox
             // 
-            this.viewFilmBox.Location = new System.Drawing.Point(335, 175);
+            this.viewFilmBox.Location = new System.Drawing.Point(435, 79);
             this.viewFilmBox.Name = "viewFilmBox";
-            this.viewFilmBox.Size = new System.Drawing.Size(519, 300);
+            this.viewFilmBox.Size = new System.Drawing.Size(384, 512);
             this.viewFilmBox.TabIndex = 0;
             this.viewFilmBox.TabStop = false;
             // 

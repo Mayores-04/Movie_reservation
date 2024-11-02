@@ -314,6 +314,7 @@ namespace MovieMunch
         {
             ResetAllButtonsToDefault();
             SetButtonBackground(HomeBtn, HomeImage);
+
         }
 
         private void FavBtn_Click(object sender, EventArgs e)

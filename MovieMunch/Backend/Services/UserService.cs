@@ -130,7 +130,7 @@ public class UserService
         }
 
         // Find the user in the admin account collection.
-        var adminAccount = _adminAccountCollection.Find(a => a.Email == email).FirstOrDefault();
+        var adminAccount = _adminAccountCollection.Find(a => a.employeeEmail == email).FirstOrDefault();
 
         if (adminAccount == null)
         {
@@ -138,7 +138,7 @@ public class UserService
         }
 
         // Verify the password for the admin.
-        if (!PasswordHelper.VerifyPassword(password, adminAccount.Password))
+        if (!PasswordHelper.VerifyPassword(password, adminAccount.employeePassword))
         {
             return false;
         }

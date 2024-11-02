@@ -14,7 +14,9 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\jakem\Downloads\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,12 +26,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,6 +50,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3B9C44A7ED1D08D79B9EC5ECB6E75310D2123C23</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MovieMunch_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
@@ -218,6 +231,12 @@
     <Compile Include="Admin\ComingSoonMoviesForm.Designer.cs">
       <DependentUpon>ComingSoonMoviesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EmployeeList.Designer.cs">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FilmsInCinemaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +271,7 @@
     <Compile Include="Backend\Models\Foods.cs" />
     <Compile Include="Backend\Models\Movie.cs" />
     <Compile Include="Backend\Models\User.cs" />
+    <Compile Include="Backend\Services\EmployeesService.cs" />
     <Compile Include="Backend\Services\FoodServices.cs" />
     <Compile Include="Backend\Services\MovieService.cs" />
     <Compile Include="Backend\Services\Reports.cs" />
@@ -315,6 +335,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\ComingSoonMoviesForm.resx">
       <DependentUpon>ComingSoonMoviesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EmployeeList.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FilmsInCinemaForm.resx">
       <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>

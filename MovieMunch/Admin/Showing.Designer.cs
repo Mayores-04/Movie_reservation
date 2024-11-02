@@ -631,7 +631,7 @@
             this.closeShowingImageBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeShowingImageBtn.Image")));
             this.closeShowingImageBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeShowingImageBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeShowingImageBtn.Location = new System.Drawing.Point(865, 130);
+            this.closeShowingImageBtn.Location = new System.Drawing.Point(914, 75);
             this.closeShowingImageBtn.Name = "closeShowingImageBtn";
             this.closeShowingImageBtn.ShowBorders = true;
             this.closeShowingImageBtn.Size = new System.Drawing.Size(38, 33);
@@ -640,9 +640,9 @@
             // 
             // viewShowingImageBox
             // 
-            this.viewShowingImageBox.Location = new System.Drawing.Point(335, 175);
+            this.viewShowingImageBox.Location = new System.Drawing.Point(288, 127);
             this.viewShowingImageBox.Name = "viewShowingImageBox";
-            this.viewShowingImageBox.Size = new System.Drawing.Size(519, 300);
+            this.viewShowingImageBox.Size = new System.Drawing.Size(598, 399);
             this.viewShowingImageBox.TabIndex = 0;
             this.viewShowingImageBox.TabStop = false;
             // 

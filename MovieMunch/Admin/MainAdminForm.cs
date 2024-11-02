@@ -46,9 +46,11 @@ namespace MovieMunch.Admin
             mainPage.Show();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
+        private void EmployeeListBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            EmployeeList employeeList = new EmployeeList();
+            employeeList.Show();
         }
     }
 }

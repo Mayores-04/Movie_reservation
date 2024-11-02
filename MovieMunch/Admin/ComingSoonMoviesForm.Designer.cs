@@ -496,9 +496,9 @@
             // 
             this.viewComingSoonPanel.Controls.Add(this.closeImageBtn);
             this.viewComingSoonPanel.Controls.Add(this.viewComingSoonBox);
-            this.viewComingSoonPanel.Location = new System.Drawing.Point(-3, 0);
+            this.viewComingSoonPanel.Location = new System.Drawing.Point(-3, -1);
             this.viewComingSoonPanel.Name = "viewComingSoonPanel";
-            this.viewComingSoonPanel.Size = new System.Drawing.Size(1206, 653);
+            this.viewComingSoonPanel.Size = new System.Drawing.Size(1206, 654);
             this.viewComingSoonPanel.TabIndex = 31;
             this.viewComingSoonPanel.Visible = false;
             // 
@@ -538,7 +538,7 @@
             this.closeImageBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeImageBtn.Image")));
             this.closeImageBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeImageBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeImageBtn.Location = new System.Drawing.Point(871, 124);
+            this.closeImageBtn.Location = new System.Drawing.Point(829, 31);
             this.closeImageBtn.Name = "closeImageBtn";
             this.closeImageBtn.ShowBorders = true;
             this.closeImageBtn.Size = new System.Drawing.Size(38, 33);
@@ -547,9 +547,9 @@
             // 
             // viewComingSoonBox
             // 
-            this.viewComingSoonBox.Location = new System.Drawing.Point(335, 175);
+            this.viewComingSoonBox.Location = new System.Drawing.Point(423, 83);
             this.viewComingSoonBox.Name = "viewComingSoonBox";
-            this.viewComingSoonBox.Size = new System.Drawing.Size(519, 300);
+            this.viewComingSoonBox.Size = new System.Drawing.Size(384, 512);
             this.viewComingSoonBox.TabIndex = 0;
             this.viewComingSoonBox.TabStop = false;
             // 

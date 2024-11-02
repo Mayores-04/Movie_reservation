@@ -1,19 +1,24 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 using System;
-
 
 public class AdminAccount
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public ObjectId Id { get; set; }
+
+    [BsonElement("Name")]
+    public string employeeName { get; set; }
 
     [BsonElement("email")]
-    public string Email { get; set; }
+    public string employeeEmail { get; set; }
 
     [BsonElement("password")]
-    public string Password { get; set; }
+    public string employeePassword { get; set; }
+
+    [BsonElement("Profile Picture")]
+    public string employeeProfilePic { get; set; }
 
     [BsonElement("createdAt")]
     public DateTime CreatedAt { get; set; }
