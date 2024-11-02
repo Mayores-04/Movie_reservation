@@ -154,23 +154,22 @@ public class MovieService
     }
 
 
-    public void UpdateComingSoon(ComingSoon csoon)
+    public bool UpdateComingSoon(ComingSoon movie)
     {
         try
         {
-            var filter = Builders<ComingSoon>.Filter.Eq(f => f.Id, csoon.Id);
-            var result = _comingSoon.ReplaceOne(filter, csoon);
+            var filter = Builders<ComingSoon>.Filter.Eq(m => m.Id, movie.Id);
+            var result = _comingSoon.ReplaceOne(filter, movie);
 
-            if (result.ModifiedCount == 0)
-            {
-                Console.WriteLine("No film found with the given ID, so no update was made.");
-            }
+            return result.ModifiedCount > 0;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error updating coming soon movie: {ex.Message}");
+            Console.WriteLine($"Error updating movie: {ex.Message}");
+            return false;
         }
     }
+
 
     public bool DeleteFilmById(ObjectId filmId)
     {

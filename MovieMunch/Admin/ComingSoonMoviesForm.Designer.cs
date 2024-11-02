@@ -494,11 +494,12 @@
             // 
             // viewComingSoonPanel
             // 
+            this.viewComingSoonPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.viewComingSoonPanel.Controls.Add(this.closeImageBtn);
             this.viewComingSoonPanel.Controls.Add(this.viewComingSoonBox);
             this.viewComingSoonPanel.Location = new System.Drawing.Point(-3, -1);
             this.viewComingSoonPanel.Name = "viewComingSoonPanel";
-            this.viewComingSoonPanel.Size = new System.Drawing.Size(1206, 654);
+            this.viewComingSoonPanel.Size = new System.Drawing.Size(1217, 655);
             this.viewComingSoonPanel.TabIndex = 31;
             this.viewComingSoonPanel.Visible = false;
             // 
@@ -538,7 +539,7 @@
             this.closeImageBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeImageBtn.Image")));
             this.closeImageBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeImageBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeImageBtn.Location = new System.Drawing.Point(829, 31);
+            this.closeImageBtn.Location = new System.Drawing.Point(803, 51);
             this.closeImageBtn.Name = "closeImageBtn";
             this.closeImageBtn.ShowBorders = true;
             this.closeImageBtn.Size = new System.Drawing.Size(38, 33);
@@ -547,7 +548,7 @@
             // 
             // viewComingSoonBox
             // 
-            this.viewComingSoonBox.Location = new System.Drawing.Point(423, 83);
+            this.viewComingSoonBox.Location = new System.Drawing.Point(397, 103);
             this.viewComingSoonBox.Name = "viewComingSoonBox";
             this.viewComingSoonBox.Size = new System.Drawing.Size(384, 512);
             this.viewComingSoonBox.TabIndex = 0;
@@ -567,8 +568,7 @@
             // 
             // ComingSoonMoviesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.viewComingSoonPanel);
             this.Controls.Add(this.backComingSoonBtn);

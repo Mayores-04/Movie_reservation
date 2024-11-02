@@ -680,11 +680,12 @@
             // 
             // viewFilmPanel
             // 
+            this.viewFilmPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.viewFilmPanel.Controls.Add(this.closeFlimBtn);
             this.viewFilmPanel.Controls.Add(this.viewFilmBox);
             this.viewFilmPanel.Location = new System.Drawing.Point(-3, 1);
             this.viewFilmPanel.Name = "viewFilmPanel";
-            this.viewFilmPanel.Size = new System.Drawing.Size(1200, 647);
+            this.viewFilmPanel.Size = new System.Drawing.Size(1214, 663);
             this.viewFilmPanel.TabIndex = 32;
             this.viewFilmPanel.Visible = false;
             // 
@@ -724,7 +725,7 @@
             this.closeFlimBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeFlimBtn.Image")));
             this.closeFlimBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeFlimBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeFlimBtn.Location = new System.Drawing.Point(841, 20);
+            this.closeFlimBtn.Location = new System.Drawing.Point(841, 38);
             this.closeFlimBtn.Name = "closeFlimBtn";
             this.closeFlimBtn.ShowBorders = true;
             this.closeFlimBtn.Size = new System.Drawing.Size(38, 33);
@@ -733,7 +734,7 @@
             // 
             // viewFilmBox
             // 
-            this.viewFilmBox.Location = new System.Drawing.Point(435, 79);
+            this.viewFilmBox.Location = new System.Drawing.Point(435, 97);
             this.viewFilmBox.Name = "viewFilmBox";
             this.viewFilmBox.Size = new System.Drawing.Size(384, 512);
             this.viewFilmBox.TabIndex = 0;
@@ -753,8 +754,7 @@
             // 
             // FilmsInCinemaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.viewFilmPanel);
             this.Controls.Add(this.backFilmBtn);

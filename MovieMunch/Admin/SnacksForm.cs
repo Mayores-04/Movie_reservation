@@ -85,7 +85,7 @@ namespace MovieMunch.Admin
         {
             if (e.RowIndex >= 0)
             {
-                string snackId = SnacksTable.Rows[e.RowIndex].Cells[0].Value.ToString(); // Assuming ID is in first column
+                string snackId = SnacksTable.Rows[e.RowIndex].Cells[0].Value.ToString();
 
                 if (SnacksTable.Columns[e.ColumnIndex].Name == "UpdateButton")
                 {
@@ -111,9 +111,9 @@ namespace MovieMunch.Admin
                 if (snack != null)
                 {
                     var currentRow = SnacksTable.Rows[SnacksTable.CurrentCell.RowIndex];
-                    snack.FoodName = currentRow.Cells[1].Value.ToString(); // FoodName column
-                    snack.FoodPrice = Convert.ToDecimal(currentRow.Cells[2].Value); // FoodPrice column
-                    snack.FoodImagePath = currentRow.Cells[3].Value.ToString(); // FoodImagePath column
+                    snack.FoodName = currentRow.Cells[1].Value.ToString(); 
+                    snack.FoodPrice = Convert.ToDecimal(currentRow.Cells[2].Value); 
+                    snack.FoodImagePath = currentRow.Cells[3].Value.ToString();
 
                     _foodServices.UpdateFood(snack);
                     MessageBox.Show("Snack updated successfully.");

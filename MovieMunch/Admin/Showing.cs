@@ -117,9 +117,9 @@ namespace MovieMunch.Admin
                 if (movie != null)
                 {
                     var currentRow = MoviesToShowTable.Rows[MoviesToShowTable.CurrentCell.RowIndex];
-                    movie.MovieTitle = currentRow.Cells["Title"].Value.ToString();
-                    movie.MovieDescription = currentRow.Cells["Description"].Value.ToString();
-                    movie.MovieImagePath = currentRow.Cells["imagePath"].Value.ToString();
+                    movie.MovieTitle = currentRow.Cells["moviesTitle"].Value.ToString();
+                    movie.MovieDescription = currentRow.Cells["moviesDescription"].Value.ToString();
+                    movie.MovieImagePath = currentRow.Cells["moviesImagePath"].Value.ToString();
 
                     _movieService.UpdateMovies(movie);
                     MessageBox.Show("Movie updated successfully.");

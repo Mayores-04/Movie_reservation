@@ -29,7 +29,7 @@ namespace MovieMunch
             // 
             this.pictureBox1.BackgroundImage = global::MovieMunch.Properties.Resources.MovieMunchLogo_removebg_preview;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(238, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(429, 181);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(331, 293);
             this.pictureBox1.TabIndex = 0;
@@ -38,7 +38,8 @@ namespace MovieMunch
             // 
             // LoadingForm
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoadingForm";

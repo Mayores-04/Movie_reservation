@@ -249,6 +249,12 @@
     <Compile Include="Admin\MainAdminForm.Designer.cs">
       <DependentUpon>MainAdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\PastEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\PastEmployees.Designer.cs">
+      <DependentUpon>PastEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Showing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,11 +331,23 @@
     <Compile Include="Frontend\Forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\Forms\TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\Forms\UserProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frontend\Forms\UserProfileForm.Designer.cs">
       <DependentUpon>UserProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Forms\WatchListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\WatchListForm.Designer.cs">
+      <DependentUpon>WatchListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -344,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MainAdminForm.resx">
       <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\PastEmployees.resx">
+      <DependentUpon>PastEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Showing.resx">
       <DependentUpon>Showing.cs</DependentUpon>
@@ -376,9 +397,16 @@
     <EmbeddedResource Include="Frontend\Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\UserProfileForm.resx">
       <DependentUpon>UserProfileForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\WatchListForm.resx">
+      <DependentUpon>WatchListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -417,6 +445,7 @@
     <None Include="Frontend\Forms\Assets\FavIcon.png" />
     <None Include="Frontend\Forms\Assets\home down 1.png" />
     <None Include="Frontend\Forms\Assets\Ellipse 7.png" />
+    <None Include="Frontend\Forms\Assets\heartup 1.png" />
     <Content Include="Frontend\Forms\Assets\leftBtn.png" />
     <None Include="Frontend\Forms\Assets\Logo.jpg" />
     <None Include="Frontend\Forms\Assets\lg.png" />
@@ -453,9 +482,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -110,9 +110,9 @@ namespace MovieMunch.Admin
                 if (movie != null)
                 {
                     var currentRow = ComingSoonTable.Rows[ComingSoonTable.CurrentCell.RowIndex];
-                    movie.ComingSoonTitle = currentRow.Cells["Title"].Value.ToString();
-                    movie.ComingSoonDescription = currentRow.Cells["Description"].Value.ToString();
-                    movie.ComingSoonImagePath = currentRow.Cells["ImagePath"].Value.ToString();
+                    movie.ComingSoonTitle = currentRow.Cells["ComingSoonTitle"].Value.ToString();
+                    movie.ComingSoonDescription = currentRow.Cells["ComingSoonDescription"].Value.ToString();
+                    movie.ComingSoonImagePath = currentRow.Cells["ComingSoonImagePath"].Value.ToString();
 
                     _movieService.UpdateComingSoon(movie);
                     MessageBox.Show("Coming soon movie updated successfully.");

@@ -420,7 +420,7 @@
             this.homeBtn.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
             this.homeBtn.IconColor = System.Drawing.Color.Black;
             this.homeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.homeBtn.Location = new System.Drawing.Point(1113, 12);
+            this.homeBtn.Location = new System.Drawing.Point(1037, 12);
             this.homeBtn.Name = "homeBtn";
             this.homeBtn.Size = new System.Drawing.Size(75, 57);
             this.homeBtn.TabIndex = 4;
@@ -433,7 +433,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(325, 133);
+            this.chart1.Location = new System.Drawing.Point(354, 178);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "Total User";
@@ -559,8 +559,7 @@
             // 
             // MainAdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.EmployeeListBtn);
             this.Controls.Add(this.chart1);

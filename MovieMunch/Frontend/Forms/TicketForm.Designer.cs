@@ -1,6 +1,6 @@
 ﻿namespace MovieMunch.Frontend.Forms
 {
-    partial class UserProfileForm
+    partial class TicketForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // UserProfileForm
+            // TicketForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 750);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1200, 650);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UserProfileForm";
-            this.Text = "UserProfileForm";
+            this.Name = "TicketForm";
+            this.Text = "TicketForm";
             this.ResumeLayout(false);
 
         }

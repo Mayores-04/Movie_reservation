@@ -18,26 +18,21 @@ namespace MovieMunch
 {
     public partial class MainPage : Form
     {
-
         private MovieService _movieService;
         private List<FilmsInCinema> _filmsInCinemas;
         private List<ComingSoon> _comingSoon;
         private SettingsForm _settingsForm;
 
-        private FoodServices _foodServices; // Declare this at the class level
-        private List<Foods> _foodsCollection; // Use List<Foods> instead of a generic collection
-
+        private FoodServices _foodServices; 
+        private List<Foods> _foodsCollection;
 
         private int _currentImageIndex = 0;
 
-        // Circle image paths
         private readonly string coloredCirclePath = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\ColoredCircle.png";
         private readonly string uncoloredCirclePath = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\UncolloredCircle.png";
 
-        // Array that stores image paths
         private string[] _imagePaths;
 
-        // Button images 
         private readonly string BtnBG = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\Ellipse 7.png";
         private readonly string HomeImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\homeIcon.png";
         private readonly string HomeDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\home down 1.png";
@@ -110,7 +105,6 @@ namespace MovieMunch
             return movies.FirstOrDefault(m => m.ImagePath == imagePath);
         }
 
-
         public void ClearUserInfo()
         {
             userNameHolder.Text = string.Empty;
@@ -131,7 +125,6 @@ namespace MovieMunch
             }
         }
 
-
         private void UpdateDisplayedImage()
         {
             if (_imagePaths.Length == 0)
@@ -149,7 +142,6 @@ namespace MovieMunch
 
             UpdateCircleColors();
         }
-
 
         private void UpdateCircleColors()
         {
@@ -314,6 +306,7 @@ namespace MovieMunch
         {
             ResetAllButtonsToDefault();
             SetButtonBackground(HomeBtn, HomeImage);
+            //watchListWholePanel.Visible = false;
 
         }
 
@@ -321,6 +314,10 @@ namespace MovieMunch
         {
             ResetAllButtonsToDefault();
             SetButtonBackground(FavBtn, FavImage);
+            //watchListWholePanel.Visible = true;
+            //this.Visible = false;
+            //WatchListForm watchListForm = new WatchListForm();
+            //watchListForm.ShowDialog();
         }
 
         private void TicketBtn_Click(object sender, EventArgs e)
@@ -328,7 +325,6 @@ namespace MovieMunch
             ResetAllButtonsToDefault();
             SetButtonBackground(TicketBtn, TicketImage);
         }
-
 
         private void LoadFilmsInCinemaToFlowLayoutPanel()
         {
@@ -341,8 +337,6 @@ namespace MovieMunch
                 PictureBox moviePictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Height = 202,
-                    Width = 152,
                     ImageLocation = movie.FilmImagePath,
                     
                     Cursor = Cursors.Hand
@@ -361,7 +355,6 @@ namespace MovieMunch
             FadeIn(FilmsInCinemaFlowLayout);
         }
 
-   
         private void FilmsInCinemaFlowLayout_Paint(object sender, PaintEventArgs e)
         {
             if (_filmsInCinemas == null || _filmsInCinemas.Count == 0)
@@ -381,8 +374,6 @@ namespace MovieMunch
                 PictureBox moviePictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Height = 202,
-                    Width = 151,
                     ImageLocation = csoon.ComingSoonImagePath,
                     Cursor = Cursors.Hand
                 };
@@ -408,57 +399,6 @@ namespace MovieMunch
             }
         }
 
-        //private void LoadFoodsToFlowLayoutPanel()
-        //{
-        //    foodFlowLayoutPanel.Controls.Clear();
-        //    Panel[] foods = { food1, food2, food3 };
-
-        //    foreach (var food in _foodsCollection)
-        //    {
-        //        if (food == null)
-        //        {
-        //            Console.WriteLine("Food item is null!");
-        //            continue; // Skip null food items
-        //        }
-
-        //        PictureBox moviePictureBox = new PictureBox
-        //        {
-        //            SizeMode = PictureBoxSizeMode.StretchImage,
-        //            Height = 250,
-        //            Width = 484,
-        //            ImageLocation = food.FoodImagePath,
-        //            Cursor = Cursors.Hand
-        //        };
-
-        //        int index = _foodsCollection.IndexOf(food) % foods.Length;
-
-        //        if (index < foods.Length)
-        //        {
-        //            foods[index].Controls.Add(moviePictureBox);
-        //        }
-        //    }
-
-        //    foreach (var panel in foods)
-        //    {
-        //        if (panel != null)
-        //        {
-        //            foodFlowLayoutPanel.Controls.Add(panel);
-        //        }
-        //    }
-
-        //    FadeIn(foodFlowLayoutPanel);
-        //}
-
-
-        //private void foodFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
-        //{
-        //    if (_foodsCollection == null || _foodsCollection.Count == 0)
-        //    {
-        //        LoadFoodsToFlowLayoutPanel();
-        //    }
-        //}
-
-
         private void LoadFoodsToYummyFlowLayoutPanel()
         {
             yummyFlowLayoutPanel.Controls.Clear();
@@ -476,8 +416,6 @@ namespace MovieMunch
                 PictureBox foodPictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    Height = 245,
-                    Width = 480,
                     ImageLocation = food.FoodImagePath, 
                     Cursor = Cursors.Hand
                 };
@@ -509,7 +447,6 @@ namespace MovieMunch
             }
         }
 
-
         private bool isDragging = false;
         private Point lastMousePosition;
 
@@ -537,6 +474,31 @@ namespace MovieMunch
             isDragging = false;
         }
 
+        private void ComingSoonFlowLayout_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastMousePosition = e.Location;
+            }
+        }
+
+        private void ComingSoonFlowLayout_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = lastMousePosition.X - e.Location.X;
+                ComingSoonFlowLayoutPanel.HorizontalScroll.Value = Math.Max(0, Math.Min(ComingSoonFlowLayoutPanel.HorizontalScroll.Maximum, ComingSoonFlowLayoutPanel.HorizontalScroll.Value + deltaX));
+                lastMousePosition = e.Location;
+            }
+        }
+
+        private void ComingSoonFlowLayout_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+
         private void FadeIn(Control control)
         {
             control.Visible = true;
@@ -560,7 +522,6 @@ namespace MovieMunch
             };
             timer.Start();
         }
-
 
         private void FadeOut(Control control)
         {
@@ -632,7 +593,6 @@ namespace MovieMunch
 
         Timer userPanelTimer = new Timer();
 
-
         private void SettingBtn_Click(object sender, EventArgs e)
         {
 
@@ -655,7 +615,6 @@ namespace MovieMunch
 
             userPanelTimer.Start(); 
         }
-
 
         private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
         {
@@ -705,6 +664,26 @@ namespace MovieMunch
             
             var userService = new UserService();
             userService.Logout();
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

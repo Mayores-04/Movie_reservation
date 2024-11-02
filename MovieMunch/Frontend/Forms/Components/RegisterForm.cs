@@ -31,6 +31,10 @@ namespace MovieMunch
             string name = regNameInput.Text;
             int age = Convert.ToInt32(regAgeInput.Text);
             long phoneNumber = Convert.ToInt64(regNumberInput.Text);
+            if(phoneNumber == null)
+            {
+                phoneNumber = 09000000000;
+            }
             string email = regEmailInput.Text;
             string password = regPasswordInput.Text;
             string confirmPassword = regConfirmPasswordInput.Text;

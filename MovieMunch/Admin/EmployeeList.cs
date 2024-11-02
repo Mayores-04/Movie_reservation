@@ -111,10 +111,10 @@ namespace MovieMunch.Admin
                 if (employee != null)
                 {
                     var currentRow = EmployeeListTable.Rows[EmployeeListTable.CurrentCell.RowIndex];
-                    employee.employeeName = currentRow.Cells["Name"].Value.ToString();
-                    employee.employeeEmail = currentRow.Cells["Email"].Value.ToString();
-                    employee.employeePassword = currentRow.Cells["Password"].Value.ToString();
-                    employee.employeeProfilePic = currentRow.Cells["ProfilePicture"].Value.ToString();
+                    employee.employeeName = currentRow.Cells["employeeName"].Value.ToString();
+                    employee.employeeEmail = currentRow.Cells["employeeEmail"].Value.ToString();
+                    employee.employeePassword = currentRow.Cells["employeePassword"].Value.ToString();
+                    employee.employeeProfilePic = currentRow.Cells["employeeProfile"].Value.ToString();
 
                     _employees.UpdateEmployee(employee);
                     MessageBox.Show("Employee updated successfully.");
