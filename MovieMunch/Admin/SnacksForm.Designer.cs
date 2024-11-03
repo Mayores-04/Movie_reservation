@@ -406,9 +406,10 @@
             this.viewSnacksPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.viewSnacksPanel.Controls.Add(this.viewSnacksBox);
             this.viewSnacksPanel.Controls.Add(this.closeImageBtn);
-            this.viewSnacksPanel.Location = new System.Drawing.Point(0, -1);
+            this.viewSnacksPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewSnacksPanel.Location = new System.Drawing.Point(0, 0);
             this.viewSnacksPanel.Name = "viewSnacksPanel";
-            this.viewSnacksPanel.Size = new System.Drawing.Size(1207, 665);
+            this.viewSnacksPanel.Size = new System.Drawing.Size(1200, 650);
             this.viewSnacksPanel.TabIndex = 30;
             this.viewSnacksPanel.Visible = false;
             // 

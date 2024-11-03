@@ -48,9 +48,11 @@ namespace MovieMunch
         private string userName;
         public MainPage()
         {
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
 
             InitializeComponent();
-            this.DoubleBuffered = true;
             _movieService = new MovieService();
             _movies = _movieService.GetAllMovieInfos();
             _filmsInCinemas = _movieService.GetFilmsInCinemas();
@@ -107,7 +109,7 @@ namespace MovieMunch
 
         public void ClearUserInfo()
         {
-            userNameHolder.Text = string.Empty;
+            userNameHolder.Text = "MM";
         }
 
         private void CloseCurrentForm()
@@ -125,23 +127,29 @@ namespace MovieMunch
             }
         }
 
-        private void UpdateDisplayedImage()
+
+        private void closeTrendingMoviesDetails_Click(object sender, EventArgs e)
         {
-            if (_imagePaths.Length == 0)
-            {
-                MessageBox.Show("No images found.");
-                return;
-            }
-
-            int previousImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
-            int nextImageIndex = (_currentImageIndex + 1) % _imagePaths.Length;
-
-            SetImageInPictureBox(pictureBoxLeft, _imagePaths[previousImageIndex], 0.5f);
-            SetImageInPictureBox(pictureBoxMain, _imagePaths[_currentImageIndex], 1.0f);
-            SetImageInPictureBox(pictureBoxRight, _imagePaths[nextImageIndex], 0.5f);
-
-            UpdateCircleColors();
+            trendingMoviesDetailsPanel.Visible = false;
         }
+
+        //private void UpdateDisplayedImage()
+        //{
+        //    if (_imagePaths.Length == 0)
+        //    {
+        //        MessageBox.Show("No images found.");
+        //        return;
+        //    }
+
+        //    int previousImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
+        //    int nextImageIndex = (_currentImageIndex + 1) % _imagePaths.Length;
+
+        //    SetImageInPictureBox(pictureBoxLeft, _imagePaths[previousImageIndex], 0.5f);
+        //    SetImageInPictureBox(pictureBoxMain, _imagePaths[_currentImageIndex], 1.0f);
+        //    SetImageInPictureBox(pictureBoxRight, _imagePaths[nextImageIndex], 0.5f);
+
+        //    UpdateCircleColors();
+        //}
 
         private void UpdateCircleColors()
         {
@@ -187,19 +195,62 @@ namespace MovieMunch
 
         private void SetImageInPictureBox(PictureBox pictureBox, string imagePath, float opacity = 1.0f)
         {
-            if (!ValidateImagePath(imagePath)) return; 
+            if (!ValidateImagePath(imagePath)) return;
 
             if (pictureBox == pictureBoxMain)
             {
                 MovieInfo imageInfo = GetMovieInfoFromImagePath(imagePath);
                 if (imageInfo != null)
                 {
-                    imageToReserve(imageInfo); 
+                    pictureBoxMain.Click += MainImage_Click;  
+                    pictureBoxMain.Tag = imageInfo;  
                 }
             }
 
             LoadAndSetImage(pictureBox, imagePath, opacity);
         }
+
+        private void UpdateDisplayedImage()
+        {
+            if (_imagePaths.Length == 0)
+            {
+                MessageBox.Show("No images found.");
+                return;
+            }
+
+            int previousImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
+            int nextImageIndex = (_currentImageIndex + 1) % _imagePaths.Length;
+
+            SetImageInPictureBox(pictureBoxLeft, _imagePaths[previousImageIndex], 0.5f);
+            SetImageInPictureBox(pictureBoxMain, _imagePaths[_currentImageIndex], 1.0f);
+            SetImageInPictureBox(pictureBoxRight, _imagePaths[nextImageIndex], 0.5f);
+
+            pictureBoxLeft.Enabled = false;
+            pictureBoxRight.Enabled = false;
+            pictureBoxMain.Enabled = true;
+
+            UpdateCircleColors();
+        }
+
+        private void MainImage_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+            var movieInfo = clickedPictureBox.Tag as MovieInfo;
+
+            if (movieInfo != null)
+            {
+                trendingMoviesDetailsPanel.Visible = true;
+                trendingDetailsPictureBox.BackgroundImage = Image.FromFile(movieInfo.ImagePath);
+                trendingMovieTitleDetails.Text = movieInfo.Title;
+                trendingDescriptionDetails.Text = movieInfo.Description; 
+                trendingMoviePriceDetails.Text = movieInfo.Price.ToString("C");
+            }
+            else
+            {
+                MessageBox.Show("movieInfo is null");
+            }
+        }
+
 
         private bool ValidateImagePath(string imagePath)
         {
@@ -260,7 +311,7 @@ namespace MovieMunch
             UpdateDisplayedImage();
         }
 
-        private void leftTurnBtn_Click(object sender, EventArgs e)
+        private void LeftTurnBtn_Click_1(object sender, EventArgs e)
         {
             _currentImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
             UpdateDisplayedImage();
@@ -326,6 +377,10 @@ namespace MovieMunch
             SetButtonBackground(TicketBtn, TicketImage);
         }
 
+        private void closeFilmsDetailsBtn_Click(object sender, EventArgs e)
+        {
+            filmsDetailsPanel.Visible = false;
+        }
         private void LoadFilmsInCinemaToFlowLayoutPanel()
         {
             FilmsInCinemaFlowLayout.Controls.Clear();
@@ -337,14 +392,21 @@ namespace MovieMunch
                 PictureBox moviePictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 250,
+                    Width = 200,
                     ImageLocation = movie.FilmImagePath,
-                    
-                    Cursor = Cursors.Hand
+                    Cursor = Cursors.Hand,
+                    Tag = movie 
                 };
+
+                moviePictureBox.Click += new EventHandler(FilmsPictureBox_Click);
 
                 int index = _filmsInCinemas.IndexOf(movie) % films.Length;
 
-                films[index].Controls.Add(moviePictureBox);
+                if (index < films.Length)
+                {
+                    films[index].Controls.Add(moviePictureBox);
+                }
             }
 
             foreach (var panel in films)
@@ -355,6 +417,23 @@ namespace MovieMunch
             FadeIn(FilmsInCinemaFlowLayout);
         }
 
+        private void FilmsPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            var films = clickedPictureBox.Tag as FilmsInCinema;
+
+            if (films != null)
+            {
+                filmsDetailsPanel.Visible = true;
+
+                filmsPictureBoxDetails.BackgroundImage = Image.FromFile(films.FilmImagePath);
+                filmsTitleDetails.Text = films.FilmTitle;
+                filmsDescriptionDetails.Text = films.FilmsDescription;
+                filmsPriceDetails.Text = films.FilmsPrice.ToString("C"); 
+            }
+        }
+
         private void FilmsInCinemaFlowLayout_Paint(object sender, PaintEventArgs e)
         {
             if (_filmsInCinemas == null || _filmsInCinemas.Count == 0)
@@ -362,6 +441,12 @@ namespace MovieMunch
                 LoadFilmsInCinemaToFlowLayoutPanel();
             }
         }
+
+        private void closeComingSoonMovieDetailsBtn_Click(object sender, EventArgs e)
+        {
+            comingSoonMovieDetailsPanel.Visible = false;
+        }
+
 
         private void LoadComingSoonToFlowLayoutPanel()
         {
@@ -374,13 +459,21 @@ namespace MovieMunch
                 PictureBox moviePictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 250,
+                    Width = 200,
                     ImageLocation = csoon.ComingSoonImagePath,
-                    Cursor = Cursors.Hand
+                    Cursor = Cursors.Hand,
+                    Tag = csoon 
                 };
+
+                moviePictureBox.Click += new EventHandler(ComingSoonPictureBox_Click);
 
                 int index = _comingSoon.IndexOf(csoon) % soons.Length;
 
-                soons[index].Controls.Add(moviePictureBox);
+                if (index < soons.Length)
+                {
+                    soons[index].Controls.Add(moviePictureBox);
+                }
             }
 
             foreach (var panel in soons)
@@ -391,6 +484,24 @@ namespace MovieMunch
             FadeIn(ComingSoonFlowLayoutPanel);
         }
 
+        private void ComingSoonPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            var csoon = clickedPictureBox.Tag as ComingSoon;
+
+            if (csoon != null)
+            {
+                comingSoonMovieDetailsPanel.Visible = true;
+
+                comingSoonMoviePicBoxDetails.BackgroundImage = Image.FromFile(csoon.ComingSoonImagePath);
+                comingSoonTitleDetails.Text = csoon.ComingSoonTitle;
+                comingSoonMovieDescriptionDetails.Text = csoon.ComingSoonDescription;
+                comingSoonPriceDetails.Text = csoon.ComingSoonPrice.ToString("C");
+            }
+        }
+
+
         private void ComingSoonFlowLayout_Paint(object sender, PaintEventArgs e)
         {
             if (_comingSoon == null || _comingSoon.Count == 0)
@@ -398,6 +509,14 @@ namespace MovieMunch
                 LoadComingSoonToFlowLayoutPanel();
             }
         }
+
+
+
+        private void closeFoodDetails_Click(object sender, EventArgs e)
+        {
+            foodDetailsPanel.Visible = false;
+        }
+
 
         private void LoadFoodsToYummyFlowLayoutPanel()
         {
@@ -410,15 +529,20 @@ namespace MovieMunch
                 if (food == null)
                 {
                     MessageBox.Show("Null");
-                    continue; 
+                    continue;
                 }
 
                 PictureBox foodPictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
-                    ImageLocation = food.FoodImagePath, 
+                    Height = 323,
+                    Width = 560,
+                    ImageLocation = food.FoodImagePath,
                     Cursor = Cursors.Hand
                 };
+
+                foodPictureBox.Tag = food;
+                foodPictureBox.Click += new EventHandler(FoodPictureBox_Click);
 
                 int index = _foodsCollection.IndexOf(food) % yummPanels.Length;
 
@@ -437,6 +561,22 @@ namespace MovieMunch
             }
 
             FadeIn(yummyFlowLayoutPanel);
+        }
+
+        private void FoodPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            var food = clickedPictureBox.Tag as Foods; 
+
+            if (food != null)
+            {
+                foodDetailsPanel.Visible = true;
+
+                foodPicDetails.BackgroundImage = Image.FromFile(food.FoodImagePath);
+                foodNameDetails.Text = food.FoodName; 
+                foodPriceDetails.Text = food.FoodPrice.ToString("C"); 
+            }
         }
 
         private void yummyFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
@@ -498,6 +638,29 @@ namespace MovieMunch
             isDragging = false;
         }
 
+        private void yummyFlowLayoutPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastMousePosition = e.Location;
+            }
+        }
+
+        private void yummyFlowLayoutPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = lastMousePosition.X - e.Location.X;
+                yummyFlowLayoutPanel.HorizontalScroll.Value = Math.Max(0, Math.Min(yummyFlowLayoutPanel.HorizontalScroll.Maximum, yummyFlowLayoutPanel.HorizontalScroll.Value + deltaX));
+                lastMousePosition = e.Location;
+            }
+        }
+
+        private void yummyFlowLayoutPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
 
         private void FadeIn(Control control)
         {
@@ -666,24 +829,97 @@ namespace MovieMunch
             userService.Logout();
         }
 
-        private void panel13_Paint(object sender, PaintEventArgs e)
+        private void searchBtn_Click_1(object sender, EventArgs e)
         {
+            exisSearchBtn.Visible = true;
 
+            searchBtnBefore.Visible = false;
+            logoBefore.Visible = false;
+            logoAfter.Visible = true;
+            searchInput.Visible = true;
+            searchResultFlowWholePanel.Visible = false;
+            searchResultsFlowLayoutPanel.Visible = false;
+            
+            LeftTurnBtn.BringToFront();
+            rightTurnBtn.BringToFront();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
+        private void exisSearchBtn_Click(object sender, EventArgs e)
+        {
+            searchBtnBefore.Visible = true;
+            logoBefore.Visible = true;
+            logoAfter.Visible = false;
+            searchInput.Visible = false;
+            searchResultFlowWholePanel.Visible = false;
+            searchResultsFlowLayoutPanel.Visible = false;
+            exisSearchBtn.Visible = false;
+
+            LeftTurnBtn.BringToFront();
+            rightTurnBtn.BringToFront();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void searchInput_TextChanged_1(object sender, EventArgs e)
         {
+            string searchText = searchInput.Text.ToLower();
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                searchResultFlowWholePanel.Visible = false;
+                searchResultsFlowLayoutPanel.Visible = false;
+            }
+            else
+            {
+                searchResultFlowWholePanel.Visible = true;
+                searchResultsFlowLayoutPanel.Visible = true;
 
+                searchResultsFlowLayoutPanel.Controls.Clear();
+
+                List<string> trendingMovies = _movieService.GetAllMovies()
+                                                           .Select(movie => movie.MovieTitle)
+                                                           .ToList();
+                List<string> filmsInCinema = _movieService.GetFilmsInCinemas()
+                                                          .Select(movie => movie.FilmTitle)
+                                                          .ToList();
+                List<string> comingSoon = _movieService.GetComingSoons()
+                                                       .Select(movie => movie.ComingSoonTitle)
+                                                       .ToList();
+                List<string> snacks = _foodServices.GetFoodsInCollection()
+                                                   .Select(snack => snack.FoodName)
+                                                   .ToList();
+
+                List<string> filteredTrendingMovies = trendingMovies.Where(title => title.ToLower().Contains(searchText)).ToList();
+                List<string> filteredFilmsInCinema = filmsInCinema.Where(title => title.ToLower().Contains(searchText)).ToList();
+                List<string> filteredComingSoon = comingSoon.Where(title => title.ToLower().Contains(searchText)).ToList();
+                List<string> filteredSnacks = snacks.Where(name => name.ToLower().Contains(searchText)).ToList();
+
+                DisplaySearchResults(filteredTrendingMovies, "Trending Movies");
+                DisplaySearchResults(filteredFilmsInCinema, "Films in Cinema");
+                DisplaySearchResults(filteredComingSoon, "Coming Soon");
+                DisplaySearchResults(filteredSnacks, "Snacks");
+            }
+        }
+        private void DisplaySearchResults(List<string> items, string category)
+        {
+            if (items.Count > 0)
+            {
+                Label categoryLabel = new Label();
+                categoryLabel.Text = category;
+                categoryLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+                categoryLabel.AutoSize = true;
+                categoryLabel.Margin = new Padding(0, 10, 0, 5);  
+                searchResultsFlowLayoutPanel.Controls.Add(categoryLabel);
+
+                foreach (string item in items)
+                {
+                    Label itemLabel = new Label();
+                    itemLabel.Text = $"• {item}"; 
+                    itemLabel.Font = new Font("Segoe UI", 12F);
+                    itemLabel.AutoSize = true;
+                    itemLabel.Margin = new Padding(20, 0, 0, 5);  
+                    searchResultsFlowLayoutPanel.Controls.Add(itemLabel);
+                }
+            }
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

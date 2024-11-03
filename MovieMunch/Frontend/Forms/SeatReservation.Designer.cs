@@ -744,7 +744,7 @@ namespace MovieMunch
             this.A6.IdleIconLeftImage = null;
             this.A6.IdleIconRightImage = null;
             this.A6.IndicateFocus = false;
-            this.A6.Location = new System.Drawing.Point(134, 160);
+            this.A6.Location = new System.Drawing.Point(384, 115);
             this.A6.Name = "A6";
             this.A6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.A6.OnDisabledState.BorderRadius = 1;
@@ -836,7 +836,7 @@ namespace MovieMunch
             this.A7.IdleIconLeftImage = null;
             this.A7.IdleIconRightImage = null;
             this.A7.IndicateFocus = false;
-            this.A7.Location = new System.Drawing.Point(184, 160);
+            this.A7.Location = new System.Drawing.Point(480, 115);
             this.A7.Name = "A7";
             this.A7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.A7.OnDisabledState.BorderRadius = 1;
@@ -928,7 +928,7 @@ namespace MovieMunch
             this.A8.IdleIconLeftImage = null;
             this.A8.IdleIconRightImage = null;
             this.A8.IndicateFocus = false;
-            this.A8.Location = new System.Drawing.Point(234, 160);
+            this.A8.Location = new System.Drawing.Point(530, 115);
             this.A8.Name = "A8";
             this.A8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.A8.OnDisabledState.BorderRadius = 1;
@@ -1020,7 +1020,7 @@ namespace MovieMunch
             this.A9.IdleIconLeftImage = null;
             this.A9.IdleIconRightImage = null;
             this.A9.IndicateFocus = false;
-            this.A9.Location = new System.Drawing.Point(284, 160);
+            this.A9.Location = new System.Drawing.Point(580, 115);
             this.A9.Name = "A9";
             this.A9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.A9.OnDisabledState.BorderRadius = 1;
@@ -1112,7 +1112,7 @@ namespace MovieMunch
             this.A10.IdleIconLeftImage = null;
             this.A10.IdleIconRightImage = null;
             this.A10.IndicateFocus = false;
-            this.A10.Location = new System.Drawing.Point(334, 160);
+            this.A10.Location = new System.Drawing.Point(630, 115);
             this.A10.Name = "A10";
             this.A10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.A10.OnDisabledState.BorderRadius = 1;
@@ -1204,7 +1204,7 @@ namespace MovieMunch
             this.B10.IdleIconLeftImage = null;
             this.B10.IdleIconRightImage = null;
             this.B10.IndicateFocus = false;
-            this.B10.Location = new System.Drawing.Point(334, 250);
+            this.B10.Location = new System.Drawing.Point(1185, 115);
             this.B10.Name = "B10";
             this.B10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B10.OnDisabledState.BorderRadius = 1;
@@ -1296,7 +1296,7 @@ namespace MovieMunch
             this.B9.IdleIconLeftImage = null;
             this.B9.IdleIconRightImage = null;
             this.B9.IndicateFocus = false;
-            this.B9.Location = new System.Drawing.Point(284, 250);
+            this.B9.Location = new System.Drawing.Point(1135, 115);
             this.B9.Name = "B9";
             this.B9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B9.OnDisabledState.BorderRadius = 1;
@@ -1388,7 +1388,7 @@ namespace MovieMunch
             this.B8.IdleIconLeftImage = null;
             this.B8.IdleIconRightImage = null;
             this.B8.IndicateFocus = false;
-            this.B8.Location = new System.Drawing.Point(234, 250);
+            this.B8.Location = new System.Drawing.Point(1085, 115);
             this.B8.Name = "B8";
             this.B8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B8.OnDisabledState.BorderRadius = 1;
@@ -1480,7 +1480,7 @@ namespace MovieMunch
             this.B7.IdleIconLeftImage = null;
             this.B7.IdleIconRightImage = null;
             this.B7.IndicateFocus = false;
-            this.B7.Location = new System.Drawing.Point(184, 250);
+            this.B7.Location = new System.Drawing.Point(1035, 115);
             this.B7.Name = "B7";
             this.B7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B7.OnDisabledState.BorderRadius = 1;
@@ -1572,7 +1572,7 @@ namespace MovieMunch
             this.B6.IdleIconLeftImage = null;
             this.B6.IdleIconRightImage = null;
             this.B6.IndicateFocus = false;
-            this.B6.Location = new System.Drawing.Point(134, 250);
+            this.B6.Location = new System.Drawing.Point(930, 115);
             this.B6.Name = "B6";
             this.B6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B6.OnDisabledState.BorderRadius = 1;
@@ -1664,7 +1664,7 @@ namespace MovieMunch
             this.B5.IdleIconLeftImage = null;
             this.B5.IdleIconRightImage = null;
             this.B5.IndicateFocus = false;
-            this.B5.Location = new System.Drawing.Point(334, 205);
+            this.B5.Location = new System.Drawing.Point(880, 115);
             this.B5.Name = "B5";
             this.B5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B5.OnDisabledState.BorderRadius = 1;
@@ -1756,7 +1756,7 @@ namespace MovieMunch
             this.B4.IdleIconLeftImage = null;
             this.B4.IdleIconRightImage = null;
             this.B4.IndicateFocus = false;
-            this.B4.Location = new System.Drawing.Point(284, 205);
+            this.B4.Location = new System.Drawing.Point(830, 115);
             this.B4.Name = "B4";
             this.B4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B4.OnDisabledState.BorderRadius = 1;
@@ -1848,7 +1848,7 @@ namespace MovieMunch
             this.B3.IdleIconLeftImage = null;
             this.B3.IdleIconRightImage = null;
             this.B3.IndicateFocus = false;
-            this.B3.Location = new System.Drawing.Point(234, 205);
+            this.B3.Location = new System.Drawing.Point(780, 115);
             this.B3.Name = "B3";
             this.B3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B3.OnDisabledState.BorderRadius = 1;
@@ -1940,7 +1940,7 @@ namespace MovieMunch
             this.B2.IdleIconLeftImage = null;
             this.B2.IdleIconRightImage = null;
             this.B2.IndicateFocus = false;
-            this.B2.Location = new System.Drawing.Point(184, 205);
+            this.B2.Location = new System.Drawing.Point(730, 115);
             this.B2.Name = "B2";
             this.B2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B2.OnDisabledState.BorderRadius = 1;
@@ -2032,7 +2032,7 @@ namespace MovieMunch
             this.B1.IdleIconLeftImage = null;
             this.B1.IdleIconRightImage = null;
             this.B1.IndicateFocus = false;
-            this.B1.Location = new System.Drawing.Point(134, 205);
+            this.B1.Location = new System.Drawing.Point(680, 115);
             this.B1.Name = "B1";
             this.B1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.B1.OnDisabledState.BorderRadius = 1;
@@ -2124,7 +2124,7 @@ namespace MovieMunch
             this.D5.IdleIconLeftImage = null;
             this.D5.IdleIconRightImage = null;
             this.D5.IndicateFocus = false;
-            this.D5.Location = new System.Drawing.Point(643, 160);
+            this.D5.Location = new System.Drawing.Point(1213, 312);
             this.D5.Name = "D5";
             this.D5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D5.OnDisabledState.BorderRadius = 1;
@@ -2216,7 +2216,7 @@ namespace MovieMunch
             this.D4.IdleIconLeftImage = null;
             this.D4.IdleIconRightImage = null;
             this.D4.IndicateFocus = false;
-            this.D4.Location = new System.Drawing.Point(593, 160);
+            this.D4.Location = new System.Drawing.Point(1163, 312);
             this.D4.Name = "D4";
             this.D4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D4.OnDisabledState.BorderRadius = 1;
@@ -2308,7 +2308,7 @@ namespace MovieMunch
             this.D3.IdleIconLeftImage = null;
             this.D3.IdleIconRightImage = null;
             this.D3.IndicateFocus = false;
-            this.D3.Location = new System.Drawing.Point(543, 160);
+            this.D3.Location = new System.Drawing.Point(1113, 312);
             this.D3.Name = "D3";
             this.D3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D3.OnDisabledState.BorderRadius = 1;
@@ -2400,7 +2400,7 @@ namespace MovieMunch
             this.D2.IdleIconLeftImage = null;
             this.D2.IdleIconRightImage = null;
             this.D2.IndicateFocus = false;
-            this.D2.Location = new System.Drawing.Point(493, 160);
+            this.D2.Location = new System.Drawing.Point(1063, 312);
             this.D2.Name = "D2";
             this.D2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D2.OnDisabledState.BorderRadius = 1;
@@ -2492,7 +2492,7 @@ namespace MovieMunch
             this.D1.IdleIconLeftImage = null;
             this.D1.IdleIconRightImage = null;
             this.D1.IndicateFocus = false;
-            this.D1.Location = new System.Drawing.Point(443, 160);
+            this.D1.Location = new System.Drawing.Point(1013, 312);
             this.D1.Name = "D1";
             this.D1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D1.OnDisabledState.BorderRadius = 1;
@@ -2584,7 +2584,7 @@ namespace MovieMunch
             this.C10.IdleIconLeftImage = null;
             this.C10.IdleIconRightImage = null;
             this.C10.IndicateFocus = false;
-            this.C10.Location = new System.Drawing.Point(643, 115);
+            this.C10.Location = new System.Drawing.Point(1213, 267);
             this.C10.Name = "C10";
             this.C10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.C10.OnDisabledState.BorderRadius = 1;
@@ -2676,7 +2676,7 @@ namespace MovieMunch
             this.C9.IdleIconLeftImage = null;
             this.C9.IdleIconRightImage = null;
             this.C9.IndicateFocus = false;
-            this.C9.Location = new System.Drawing.Point(593, 115);
+            this.C9.Location = new System.Drawing.Point(1163, 267);
             this.C9.Name = "C9";
             this.C9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.C9.OnDisabledState.BorderRadius = 1;
@@ -2768,7 +2768,7 @@ namespace MovieMunch
             this.C8.IdleIconLeftImage = null;
             this.C8.IdleIconRightImage = null;
             this.C8.IndicateFocus = false;
-            this.C8.Location = new System.Drawing.Point(543, 115);
+            this.C8.Location = new System.Drawing.Point(1113, 267);
             this.C8.Name = "C8";
             this.C8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.C8.OnDisabledState.BorderRadius = 1;
@@ -2860,7 +2860,7 @@ namespace MovieMunch
             this.C7.IdleIconLeftImage = null;
             this.C7.IdleIconRightImage = null;
             this.C7.IndicateFocus = false;
-            this.C7.Location = new System.Drawing.Point(493, 115);
+            this.C7.Location = new System.Drawing.Point(1063, 267);
             this.C7.Name = "C7";
             this.C7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.C7.OnDisabledState.BorderRadius = 1;
@@ -2952,7 +2952,7 @@ namespace MovieMunch
             this.C6.IdleIconLeftImage = null;
             this.C6.IdleIconRightImage = null;
             this.C6.IndicateFocus = false;
-            this.C6.Location = new System.Drawing.Point(443, 115);
+            this.C6.Location = new System.Drawing.Point(1013, 267);
             this.C6.Name = "C6";
             this.C6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.C6.OnDisabledState.BorderRadius = 1;
@@ -3044,7 +3044,7 @@ namespace MovieMunch
             this.E5.IdleIconLeftImage = null;
             this.E5.IdleIconRightImage = null;
             this.E5.IndicateFocus = false;
-            this.E5.Location = new System.Drawing.Point(643, 250);
+            this.E5.Location = new System.Drawing.Point(1213, 402);
             this.E5.Name = "E5";
             this.E5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E5.OnDisabledState.BorderRadius = 1;
@@ -3136,7 +3136,7 @@ namespace MovieMunch
             this.E4.IdleIconLeftImage = null;
             this.E4.IdleIconRightImage = null;
             this.E4.IndicateFocus = false;
-            this.E4.Location = new System.Drawing.Point(593, 250);
+            this.E4.Location = new System.Drawing.Point(1163, 402);
             this.E4.Name = "E4";
             this.E4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E4.OnDisabledState.BorderRadius = 1;
@@ -3228,7 +3228,7 @@ namespace MovieMunch
             this.E3.IdleIconLeftImage = null;
             this.E3.IdleIconRightImage = null;
             this.E3.IndicateFocus = false;
-            this.E3.Location = new System.Drawing.Point(543, 250);
+            this.E3.Location = new System.Drawing.Point(1113, 402);
             this.E3.Name = "E3";
             this.E3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E3.OnDisabledState.BorderRadius = 1;
@@ -3320,7 +3320,7 @@ namespace MovieMunch
             this.E2.IdleIconLeftImage = null;
             this.E2.IdleIconRightImage = null;
             this.E2.IndicateFocus = false;
-            this.E2.Location = new System.Drawing.Point(493, 250);
+            this.E2.Location = new System.Drawing.Point(1063, 402);
             this.E2.Name = "E2";
             this.E2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E2.OnDisabledState.BorderRadius = 1;
@@ -3412,7 +3412,7 @@ namespace MovieMunch
             this.E1.IdleIconLeftImage = null;
             this.E1.IdleIconRightImage = null;
             this.E1.IndicateFocus = false;
-            this.E1.Location = new System.Drawing.Point(443, 250);
+            this.E1.Location = new System.Drawing.Point(1013, 402);
             this.E1.Name = "E1";
             this.E1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E1.OnDisabledState.BorderRadius = 1;
@@ -3504,7 +3504,7 @@ namespace MovieMunch
             this.D10.IdleIconLeftImage = null;
             this.D10.IdleIconRightImage = null;
             this.D10.IndicateFocus = false;
-            this.D10.Location = new System.Drawing.Point(643, 205);
+            this.D10.Location = new System.Drawing.Point(1213, 357);
             this.D10.Name = "D10";
             this.D10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D10.OnDisabledState.BorderRadius = 1;
@@ -3596,7 +3596,7 @@ namespace MovieMunch
             this.D9.IdleIconLeftImage = null;
             this.D9.IdleIconRightImage = null;
             this.D9.IndicateFocus = false;
-            this.D9.Location = new System.Drawing.Point(593, 205);
+            this.D9.Location = new System.Drawing.Point(1163, 357);
             this.D9.Name = "D9";
             this.D9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D9.OnDisabledState.BorderRadius = 1;
@@ -3688,7 +3688,7 @@ namespace MovieMunch
             this.D8.IdleIconLeftImage = null;
             this.D8.IdleIconRightImage = null;
             this.D8.IndicateFocus = false;
-            this.D8.Location = new System.Drawing.Point(543, 205);
+            this.D8.Location = new System.Drawing.Point(1113, 357);
             this.D8.Name = "D8";
             this.D8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D8.OnDisabledState.BorderRadius = 1;
@@ -3780,7 +3780,7 @@ namespace MovieMunch
             this.D7.IdleIconLeftImage = null;
             this.D7.IdleIconRightImage = null;
             this.D7.IndicateFocus = false;
-            this.D7.Location = new System.Drawing.Point(493, 205);
+            this.D7.Location = new System.Drawing.Point(1063, 357);
             this.D7.Name = "D7";
             this.D7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D7.OnDisabledState.BorderRadius = 1;
@@ -3872,7 +3872,7 @@ namespace MovieMunch
             this.D6.IdleIconLeftImage = null;
             this.D6.IdleIconRightImage = null;
             this.D6.IndicateFocus = false;
-            this.D6.Location = new System.Drawing.Point(443, 205);
+            this.D6.Location = new System.Drawing.Point(1013, 357);
             this.D6.Name = "D6";
             this.D6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.D6.OnDisabledState.BorderRadius = 1;
@@ -4332,7 +4332,7 @@ namespace MovieMunch
             this.C1.IdleIconLeftImage = null;
             this.C1.IdleIconRightImage = null;
             this.C1.IndicateFocus = false;
-            this.C1.Location = new System.Drawing.Point(134, 295);
+            this.C1.Location = new System.Drawing.Point(1235, 115);
             this.C1.Name = "C1";
             this.C1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.C1.OnDisabledState.BorderRadius = 1;
@@ -4424,7 +4424,7 @@ namespace MovieMunch
             this.E10.IdleIconLeftImage = null;
             this.E10.IdleIconRightImage = null;
             this.E10.IndicateFocus = false;
-            this.E10.Location = new System.Drawing.Point(643, 295);
+            this.E10.Location = new System.Drawing.Point(1213, 447);
             this.E10.Name = "E10";
             this.E10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E10.OnDisabledState.BorderRadius = 1;
@@ -4516,7 +4516,7 @@ namespace MovieMunch
             this.E9.IdleIconLeftImage = null;
             this.E9.IdleIconRightImage = null;
             this.E9.IndicateFocus = false;
-            this.E9.Location = new System.Drawing.Point(593, 295);
+            this.E9.Location = new System.Drawing.Point(1163, 447);
             this.E9.Name = "E9";
             this.E9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E9.OnDisabledState.BorderRadius = 1;
@@ -4608,7 +4608,7 @@ namespace MovieMunch
             this.E8.IdleIconLeftImage = null;
             this.E8.IdleIconRightImage = null;
             this.E8.IndicateFocus = false;
-            this.E8.Location = new System.Drawing.Point(543, 295);
+            this.E8.Location = new System.Drawing.Point(1113, 447);
             this.E8.Name = "E8";
             this.E8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E8.OnDisabledState.BorderRadius = 1;
@@ -4700,7 +4700,7 @@ namespace MovieMunch
             this.E7.IdleIconLeftImage = null;
             this.E7.IdleIconRightImage = null;
             this.E7.IndicateFocus = false;
-            this.E7.Location = new System.Drawing.Point(493, 295);
+            this.E7.Location = new System.Drawing.Point(1063, 447);
             this.E7.Name = "E7";
             this.E7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E7.OnDisabledState.BorderRadius = 1;
@@ -4792,7 +4792,7 @@ namespace MovieMunch
             this.E6.IdleIconLeftImage = null;
             this.E6.IdleIconRightImage = null;
             this.E6.IndicateFocus = false;
-            this.E6.Location = new System.Drawing.Point(443, 295);
+            this.E6.Location = new System.Drawing.Point(1013, 447);
             this.E6.Name = "E6";
             this.E6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.E6.OnDisabledState.BorderRadius = 1;
@@ -4884,7 +4884,7 @@ namespace MovieMunch
             this.J10.IdleIconLeftImage = null;
             this.J10.IdleIconRightImage = null;
             this.J10.IndicateFocus = false;
-            this.J10.Location = new System.Drawing.Point(643, 547);
+            this.J10.Location = new System.Drawing.Point(1213, 699);
             this.J10.Name = "J10";
             this.J10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J10.OnDisabledState.BorderRadius = 1;
@@ -4976,7 +4976,7 @@ namespace MovieMunch
             this.J9.IdleIconLeftImage = null;
             this.J9.IdleIconRightImage = null;
             this.J9.IndicateFocus = false;
-            this.J9.Location = new System.Drawing.Point(593, 547);
+            this.J9.Location = new System.Drawing.Point(1163, 699);
             this.J9.Name = "J9";
             this.J9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J9.OnDisabledState.BorderRadius = 1;
@@ -5068,7 +5068,7 @@ namespace MovieMunch
             this.J8.IdleIconLeftImage = null;
             this.J8.IdleIconRightImage = null;
             this.J8.IndicateFocus = false;
-            this.J8.Location = new System.Drawing.Point(543, 547);
+            this.J8.Location = new System.Drawing.Point(1113, 699);
             this.J8.Name = "J8";
             this.J8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J8.OnDisabledState.BorderRadius = 1;
@@ -5160,7 +5160,7 @@ namespace MovieMunch
             this.J7.IdleIconLeftImage = null;
             this.J7.IdleIconRightImage = null;
             this.J7.IndicateFocus = false;
-            this.J7.Location = new System.Drawing.Point(493, 547);
+            this.J7.Location = new System.Drawing.Point(1063, 699);
             this.J7.Name = "J7";
             this.J7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J7.OnDisabledState.BorderRadius = 1;
@@ -5252,7 +5252,7 @@ namespace MovieMunch
             this.J6.IdleIconLeftImage = null;
             this.J6.IdleIconRightImage = null;
             this.J6.IndicateFocus = false;
-            this.J6.Location = new System.Drawing.Point(443, 547);
+            this.J6.Location = new System.Drawing.Point(1013, 699);
             this.J6.Name = "J6";
             this.J6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J6.OnDisabledState.BorderRadius = 1;
@@ -5804,7 +5804,7 @@ namespace MovieMunch
             this.J5.IdleIconLeftImage = null;
             this.J5.IdleIconRightImage = null;
             this.J5.IndicateFocus = false;
-            this.J5.Location = new System.Drawing.Point(643, 502);
+            this.J5.Location = new System.Drawing.Point(1213, 654);
             this.J5.Name = "J5";
             this.J5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J5.OnDisabledState.BorderRadius = 1;
@@ -5896,7 +5896,7 @@ namespace MovieMunch
             this.J4.IdleIconLeftImage = null;
             this.J4.IdleIconRightImage = null;
             this.J4.IndicateFocus = false;
-            this.J4.Location = new System.Drawing.Point(593, 502);
+            this.J4.Location = new System.Drawing.Point(1163, 654);
             this.J4.Name = "J4";
             this.J4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J4.OnDisabledState.BorderRadius = 1;
@@ -5988,7 +5988,7 @@ namespace MovieMunch
             this.J3.IdleIconLeftImage = null;
             this.J3.IdleIconRightImage = null;
             this.J3.IndicateFocus = false;
-            this.J3.Location = new System.Drawing.Point(543, 502);
+            this.J3.Location = new System.Drawing.Point(1113, 654);
             this.J3.Name = "J3";
             this.J3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J3.OnDisabledState.BorderRadius = 1;
@@ -6080,7 +6080,7 @@ namespace MovieMunch
             this.J2.IdleIconLeftImage = null;
             this.J2.IdleIconRightImage = null;
             this.J2.IndicateFocus = false;
-            this.J2.Location = new System.Drawing.Point(493, 502);
+            this.J2.Location = new System.Drawing.Point(1063, 654);
             this.J2.Name = "J2";
             this.J2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J2.OnDisabledState.BorderRadius = 1;
@@ -6172,7 +6172,7 @@ namespace MovieMunch
             this.J1.IdleIconLeftImage = null;
             this.J1.IdleIconRightImage = null;
             this.J1.IndicateFocus = false;
-            this.J1.Location = new System.Drawing.Point(443, 502);
+            this.J1.Location = new System.Drawing.Point(1013, 654);
             this.J1.Name = "J1";
             this.J1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.J1.OnDisabledState.BorderRadius = 1;
@@ -6264,7 +6264,7 @@ namespace MovieMunch
             this.I10.IdleIconLeftImage = null;
             this.I10.IdleIconRightImage = null;
             this.I10.IndicateFocus = false;
-            this.I10.Location = new System.Drawing.Point(643, 457);
+            this.I10.Location = new System.Drawing.Point(1213, 609);
             this.I10.Name = "I10";
             this.I10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I10.OnDisabledState.BorderRadius = 1;
@@ -6356,7 +6356,7 @@ namespace MovieMunch
             this.I9.IdleIconLeftImage = null;
             this.I9.IdleIconRightImage = null;
             this.I9.IndicateFocus = false;
-            this.I9.Location = new System.Drawing.Point(593, 457);
+            this.I9.Location = new System.Drawing.Point(1163, 609);
             this.I9.Name = "I9";
             this.I9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I9.OnDisabledState.BorderRadius = 1;
@@ -6448,7 +6448,7 @@ namespace MovieMunch
             this.I8.IdleIconLeftImage = null;
             this.I8.IdleIconRightImage = null;
             this.I8.IndicateFocus = false;
-            this.I8.Location = new System.Drawing.Point(543, 457);
+            this.I8.Location = new System.Drawing.Point(1113, 609);
             this.I8.Name = "I8";
             this.I8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I8.OnDisabledState.BorderRadius = 1;
@@ -6540,7 +6540,7 @@ namespace MovieMunch
             this.I7.IdleIconLeftImage = null;
             this.I7.IdleIconRightImage = null;
             this.I7.IndicateFocus = false;
-            this.I7.Location = new System.Drawing.Point(493, 457);
+            this.I7.Location = new System.Drawing.Point(1063, 609);
             this.I7.Name = "I7";
             this.I7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I7.OnDisabledState.BorderRadius = 1;
@@ -6632,7 +6632,7 @@ namespace MovieMunch
             this.I6.IdleIconLeftImage = null;
             this.I6.IdleIconRightImage = null;
             this.I6.IndicateFocus = false;
-            this.I6.Location = new System.Drawing.Point(443, 457);
+            this.I6.Location = new System.Drawing.Point(1013, 609);
             this.I6.Name = "I6";
             this.I6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I6.OnDisabledState.BorderRadius = 1;
@@ -6724,7 +6724,7 @@ namespace MovieMunch
             this.I5.IdleIconLeftImage = null;
             this.I5.IdleIconRightImage = null;
             this.I5.IndicateFocus = false;
-            this.I5.Location = new System.Drawing.Point(643, 412);
+            this.I5.Location = new System.Drawing.Point(1213, 564);
             this.I5.Name = "I5";
             this.I5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I5.OnDisabledState.BorderRadius = 1;
@@ -6816,7 +6816,7 @@ namespace MovieMunch
             this.I4.IdleIconLeftImage = null;
             this.I4.IdleIconRightImage = null;
             this.I4.IndicateFocus = false;
-            this.I4.Location = new System.Drawing.Point(593, 412);
+            this.I4.Location = new System.Drawing.Point(1163, 564);
             this.I4.Name = "I4";
             this.I4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I4.OnDisabledState.BorderRadius = 1;
@@ -6908,7 +6908,7 @@ namespace MovieMunch
             this.I3.IdleIconLeftImage = null;
             this.I3.IdleIconRightImage = null;
             this.I3.IndicateFocus = false;
-            this.I3.Location = new System.Drawing.Point(543, 412);
+            this.I3.Location = new System.Drawing.Point(1113, 564);
             this.I3.Name = "I3";
             this.I3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I3.OnDisabledState.BorderRadius = 1;
@@ -7000,7 +7000,7 @@ namespace MovieMunch
             this.I2.IdleIconLeftImage = null;
             this.I2.IdleIconRightImage = null;
             this.I2.IndicateFocus = false;
-            this.I2.Location = new System.Drawing.Point(493, 412);
+            this.I2.Location = new System.Drawing.Point(1063, 564);
             this.I2.Name = "I2";
             this.I2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I2.OnDisabledState.BorderRadius = 1;
@@ -7092,7 +7092,7 @@ namespace MovieMunch
             this.I1.IdleIconLeftImage = null;
             this.I1.IdleIconRightImage = null;
             this.I1.IndicateFocus = false;
-            this.I1.Location = new System.Drawing.Point(443, 412);
+            this.I1.Location = new System.Drawing.Point(1013, 564);
             this.I1.Name = "I1";
             this.I1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.I1.OnDisabledState.BorderRadius = 1;
@@ -7184,7 +7184,7 @@ namespace MovieMunch
             this.H10.IdleIconLeftImage = null;
             this.H10.IdleIconRightImage = null;
             this.H10.IndicateFocus = false;
-            this.H10.Location = new System.Drawing.Point(643, 367);
+            this.H10.Location = new System.Drawing.Point(1213, 519);
             this.H10.Name = "H10";
             this.H10.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.H10.OnDisabledState.BorderRadius = 1;
@@ -7276,7 +7276,7 @@ namespace MovieMunch
             this.H9.IdleIconLeftImage = null;
             this.H9.IdleIconRightImage = null;
             this.H9.IndicateFocus = false;
-            this.H9.Location = new System.Drawing.Point(593, 367);
+            this.H9.Location = new System.Drawing.Point(1163, 519);
             this.H9.Name = "H9";
             this.H9.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.H9.OnDisabledState.BorderRadius = 1;
@@ -7368,7 +7368,7 @@ namespace MovieMunch
             this.H8.IdleIconLeftImage = null;
             this.H8.IdleIconRightImage = null;
             this.H8.IndicateFocus = false;
-            this.H8.Location = new System.Drawing.Point(543, 367);
+            this.H8.Location = new System.Drawing.Point(1113, 519);
             this.H8.Name = "H8";
             this.H8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.H8.OnDisabledState.BorderRadius = 1;
@@ -7460,7 +7460,7 @@ namespace MovieMunch
             this.H7.IdleIconLeftImage = null;
             this.H7.IdleIconRightImage = null;
             this.H7.IndicateFocus = false;
-            this.H7.Location = new System.Drawing.Point(493, 367);
+            this.H7.Location = new System.Drawing.Point(1063, 519);
             this.H7.Name = "H7";
             this.H7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.H7.OnDisabledState.BorderRadius = 1;
@@ -7552,7 +7552,7 @@ namespace MovieMunch
             this.H6.IdleIconLeftImage = null;
             this.H6.IdleIconRightImage = null;
             this.H6.IndicateFocus = false;
-            this.H6.Location = new System.Drawing.Point(443, 367);
+            this.H6.Location = new System.Drawing.Point(1013, 519);
             this.H6.Name = "H6";
             this.H6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.H6.OnDisabledState.BorderRadius = 1;
@@ -7871,132 +7871,9 @@ namespace MovieMunch
             this.G8.UseDefaultRadiusAndThickness = true;
             this.G8.Click += new System.EventHandler(this.SeatButton_Click);
             // 
-            // Buttons
-            // 
-            // Row A
-            this.A1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.A10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row B
-            this.B1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.B10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row C
-            this.C1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.C10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row D
-            this.D1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.D10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row E
-            this.E1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.E10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row F
-            this.F1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.F10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row G
-            this.G1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.G10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row H
-            this.H1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.H10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row I
-            this.I1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.I10.Click += new System.EventHandler(this.SeatButton_Click);
-
-            // Row J
-            this.J1.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J2.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J3.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J4.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J5.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J6.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J7.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J8.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J9.Click += new System.EventHandler(this.SeatButton_Click);
-            this.J10.Click += new System.EventHandler(this.SeatButton_Click);
-
-
-            //
             // G7
             //
+   
             this.G7.AllowAnimations = true;
             this.G7.AllowMouseEffects = true;
             this.G7.AllowToggling = false;
@@ -8179,8 +8056,128 @@ namespace MovieMunch
             this.G6.UseDefaultRadiusAndThickness = true;
             this.G6.Click += new System.EventHandler(this.SeatButton_Click);
             // 
+            // Row A
+            this.A1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.A10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row B
+            this.B1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.B10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row C
+            this.C1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.C10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row D
+            this.D1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.D10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row E
+            this.E1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.E10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row F
+            this.F1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.F10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row G
+            this.G1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.G10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row H
+            this.H1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.H10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row I
+            this.I1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.I10.Click += new System.EventHandler(this.SeatButton_Click);
+
+            // Row J
+            this.J1.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J2.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J3.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J4.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J5.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J6.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J7.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J8.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J9.Click += new System.EventHandler(this.SeatButton_Click);
+            this.J10.Click += new System.EventHandler(this.SeatButton_Click);
             // G5
             // 
+
             this.G5.AllowAnimations = true;
             this.G5.AllowMouseEffects = true;
             this.G5.AllowToggling = false;
@@ -9654,7 +9651,7 @@ namespace MovieMunch
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(800, 705);
+            this.ClientSize = new System.Drawing.Size(1300, 750);
             this.Controls.Add(this.btnReserveSeat);
             this.Controls.Add(this.J10);
             this.Controls.Add(this.J9);
@@ -9756,7 +9753,9 @@ namespace MovieMunch
             this.Controls.Add(this.A3);
             this.Controls.Add(this.A2);
             this.Controls.Add(this.A1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeatReservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeatReservation";
             this.ResumeLayout(false);
 

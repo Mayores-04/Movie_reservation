@@ -587,11 +587,13 @@
             // 
             // viewShowingImagePanel
             // 
+            this.viewShowingImagePanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.viewShowingImagePanel.Controls.Add(this.closeShowingImageBtn);
             this.viewShowingImagePanel.Controls.Add(this.viewShowingImageBox);
-            this.viewShowingImagePanel.Location = new System.Drawing.Point(-3, 0);
+            this.viewShowingImagePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewShowingImagePanel.Location = new System.Drawing.Point(0, 0);
             this.viewShowingImagePanel.Name = "viewShowingImagePanel";
-            this.viewShowingImagePanel.Size = new System.Drawing.Size(1214, 658);
+            this.viewShowingImagePanel.Size = new System.Drawing.Size(1200, 650);
             this.viewShowingImagePanel.TabIndex = 33;
             this.viewShowingImagePanel.Visible = false;
             // 
@@ -674,7 +676,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Showing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "f";
             ((System.ComponentModel.ISupportInitialize)(this.MoviesToShowTable)).EndInit();
             this.viewShowingImagePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.viewShowingImageBox)).EndInit();

@@ -72,24 +72,24 @@ namespace MovieMunch
             mainAdminForm.Show();
         }
 
-        private void OpenUserInterface()
-        {
-            // Ensure MainAdminForm is closed if it is open
-            if (mainAdminForm != null && !mainAdminForm.IsDisposed)
-            {
-                mainAdminForm.Close();
-                mainAdminForm.Dispose();
-                mainAdminForm = null;
-            }
+        //private void OpenUserInterface()
+        //{
+        //    // Ensure MainAdminForm is closed if it is open
+        //    if (mainAdminForm != null && !mainAdminForm.IsDisposed)
+        //    {
+        //        mainAdminForm.Close();
+        //        mainAdminForm.Dispose();
+        //        mainAdminForm = null;
+        //    }
 
-            // Close the login form and open the user interface
-            this.Close();
-            if (mainPage == null || mainPage.IsDisposed)
-            {
-                mainPage = new MainPage();
-            }
-            mainPage.Show();
-        }
+        //    // Close the login form and open the user interface
+        //    this.Close();
+        //    if (mainPage == null || mainPage.IsDisposed)
+        //    {
+        //        mainPage = new MainPage();
+        //    }
+        //    mainPage.Show();
+        //}
 
         private void CloseButton(object sender, EventArgs e)
         {

@@ -49,6 +49,7 @@ namespace MovieMunch.Backend.Services
         {
             try
             {
+                
                 _employees.InsertOne(employee);
             }
             catch (Exception ex)

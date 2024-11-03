@@ -497,9 +497,10 @@
             this.viewComingSoonPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.viewComingSoonPanel.Controls.Add(this.closeImageBtn);
             this.viewComingSoonPanel.Controls.Add(this.viewComingSoonBox);
-            this.viewComingSoonPanel.Location = new System.Drawing.Point(-3, -1);
+            this.viewComingSoonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewComingSoonPanel.Location = new System.Drawing.Point(0, 0);
             this.viewComingSoonPanel.Name = "viewComingSoonPanel";
-            this.viewComingSoonPanel.Size = new System.Drawing.Size(1217, 655);
+            this.viewComingSoonPanel.Size = new System.Drawing.Size(1200, 650);
             this.viewComingSoonPanel.TabIndex = 31;
             this.viewComingSoonPanel.Visible = false;
             // 

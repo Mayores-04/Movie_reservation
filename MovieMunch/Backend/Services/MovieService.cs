@@ -47,6 +47,8 @@ public class MovieService
         }
     }
 
+
+
     public List<Movie> GetAllMovies()
     {
         try
@@ -60,16 +62,18 @@ public class MovieService
         }
     }
 
+
     public List<MovieInfo> GetAllMovieInfos()
     {
         try
         {
             var movies = _movies.Find(movie => true).Limit(4).ToList();
-            // Map to a list of MovieInfo with title and price
+
             return movies.Select(movie => new MovieInfo
             {
                 Title = movie.MovieTitle,        
                 ImagePath = movie.MovieImagePath, 
+                Description = movie.MovieDescription,
                 Price = movie.MoviePrice           
             }).ToList();
         }

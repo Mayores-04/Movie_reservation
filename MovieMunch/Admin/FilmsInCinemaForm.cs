@@ -104,7 +104,6 @@ namespace MovieMunch.Admin.FilmsInCinema
             }
         }
 
-
         private void UpdateFilm(string filmId)
         {
             if (ObjectId.TryParse(filmId, out var objectId))
@@ -133,8 +132,6 @@ namespace MovieMunch.Admin.FilmsInCinema
             }
         }
 
-
-
         private void DeleteFilm(string filmId)
         {
             var confirmResult = MessageBox.Show("Are you sure you want to delete this film?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -161,8 +158,6 @@ namespace MovieMunch.Admin.FilmsInCinema
                 }
             }
         }
-
-
 
         private string RemoveSurroundingQuotes(string input)
         {

@@ -683,9 +683,10 @@
             this.viewFilmPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.viewFilmPanel.Controls.Add(this.closeFlimBtn);
             this.viewFilmPanel.Controls.Add(this.viewFilmBox);
-            this.viewFilmPanel.Location = new System.Drawing.Point(-3, 1);
+            this.viewFilmPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewFilmPanel.Location = new System.Drawing.Point(0, 0);
             this.viewFilmPanel.Name = "viewFilmPanel";
-            this.viewFilmPanel.Size = new System.Drawing.Size(1214, 663);
+            this.viewFilmPanel.Size = new System.Drawing.Size(1200, 650);
             this.viewFilmPanel.TabIndex = 32;
             this.viewFilmPanel.Visible = false;
             // 

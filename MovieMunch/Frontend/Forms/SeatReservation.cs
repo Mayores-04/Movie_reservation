@@ -45,7 +45,6 @@ namespace MovieMunch
             this.Load += SeatReservation_Load;
         }
 
-
         private async void btnReserveSeat_Click(object sender, EventArgs e)
         {
             string movieName = _movieName;
@@ -55,7 +54,7 @@ namespace MovieMunch
             List<string> selectedSeats = new List<string>();
             foreach (Control control in this.Controls)
             {
-                if (control is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn && btn.BackColor == Color.Red)
+                if (control is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn && btn.OnIdleState.FillColor == Color.Yellow)
                 {
                     selectedSeats.Add(btn.Name);
                 }
@@ -81,7 +80,10 @@ namespace MovieMunch
                     {
                         if (this.Controls[seat] is Bunifu.UI.WinForms.BunifuButton.BunifuButton seatButton)
                         {
-                            seatButton.BackColor = Color.Gray;
+                            seatButton.OnIdleState.FillColor = Color.Red;
+                            seatButton.OnPressedState.FillColor = Color.Red;
+                            seatButton.onHoverState.FillColor = Color.Red;
+                            seatButton.Refresh(); // Apply changes immediately
                         }
                     }
                 }
@@ -96,22 +98,26 @@ namespace MovieMunch
             }
         }
 
-
         private async void SeatReservation_Load(object sender, EventArgs e)
         {
-            string movieName = _movieName;
-            decimal moviePrice = _moviePrice;
+            // Load existing seat status directly
+            await LoadSeatStatusAsync(_movieName); // Load current seat status from the database
 
-            await _seatReservationService.InitializeSeatsAsync(movieName, (double)moviePrice,_allSeats);
-            await LoadSeatStatusAsync(movieName);
-
+            // Setup buttons for all seats
             foreach (var seat in _allSeats)
             {
                 Control seatButton = this.Controls.Find(seat, true).FirstOrDefault();
 
                 if (seatButton is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn)
                 {
-                    btn.Click += SeatButton_Click;
+                    // Initial fill color setup for each seat, if it's not reserved
+                    if (btn.OnIdleState.FillColor != Color.Red) // Only reset if not reserved
+                    {
+                        btn.OnIdleState.FillColor = Color.White;
+                    }
+
+                    btn.Click += SeatButton_Click; // Add event handler
+                    btn.Refresh();
                 }
                 else
                 {
@@ -121,28 +127,25 @@ namespace MovieMunch
         }
 
 
-
         private void SeatButton_Click(object sender, EventArgs e)
         {
             if (sender is Bunifu.UI.WinForms.BunifuButton.BunifuButton seatButton)
             {
-                // Toggle between Green and Red colors for selected/unselected states
-                if (seatButton.BackColor == Color.Green)
+                // Toggle colors between selected (Red) and unselected (Green)
+                if (seatButton.OnIdleState.FillColor == Color.White)
                 {
-                    seatButton.BackColor = Color.Red; // Selected
+                    seatButton.OnIdleState.FillColor = Color.Yellow;
+                    seatButton.OnPressedState.FillColor = Color.Yellow;
+                    seatButton.onHoverState.FillColor = Color.Yellow;
                 }
-                else if (seatButton.BackColor == Color.Red)
+                else if (seatButton.OnIdleState.FillColor == Color.Yellow)
                 {
-                    seatButton.BackColor = Color.Green; // Unselected
+                    seatButton.OnIdleState.FillColor = Color.White;
+                    seatButton.OnPressedState.FillColor = Color.White;
+                    seatButton.onHoverState.FillColor = Color.White;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Error: Seat button could not be identified.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         private async Task LoadSeatStatusAsync(string movieName)
         {
@@ -159,7 +162,7 @@ namespace MovieMunch
 
                         if (seatButton is Bunifu.UI.WinForms.BunifuButton.BunifuButton btn)
                         {
-                            btn.BackColor = reservation.IsReserved ? Color.Gray : Color.Green; // Set color based on status
+                            btn.OnIdleState.FillColor = reservation.IsReserved ? Color.Red : Color.White; // Set color based on status
                         }
                     }
                 }

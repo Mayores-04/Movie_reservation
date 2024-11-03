@@ -465,6 +465,7 @@
     <None Include="Frontend\Forms\Assets\TicketIcon.png" />
     <None Include="Frontend\Forms\images\coming_soon.jpg" />
     <None Include="Frontend\Forms\images\CardIcon.png" />
+    <None Include="Frontend\Forms\images\X.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>
