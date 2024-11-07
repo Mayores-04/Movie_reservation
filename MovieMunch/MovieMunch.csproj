@@ -16,7 +16,7 @@
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\jakem\Downloads\</PublishUrl>
+    <PublishUrl>C:\Users\jakem\Downloads\OneDrive\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -90,6 +90,12 @@
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.1.0\lib\net48\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -283,11 +289,23 @@
     <Compile Include="Backend\Services\Reports.cs" />
     <Compile Include="Backend\Services\SeatReservationServices.cs" />
     <Compile Include="Backend\Services\UserService.cs" />
+    <Compile Include="Frontend\Forms\Components\ComingSoonZoomIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\ComingSoonZoomIn.Designer.cs">
+      <DependentUpon>ComingSoonZoomIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\Forms\Components\editEmail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frontend\Forms\Components\editEmail.Designer.cs">
       <DependentUpon>editEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\FilmsInCinemaZoomIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\FilmsInCinemaZoomIn.Designer.cs">
+      <DependentUpon>FilmsInCinemaZoomIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Frontend\Forms\Components\LoadingForm.cs">
       <SubType>Form</SubType>
@@ -306,6 +324,18 @@
     </Compile>
     <Compile Include="Frontend\Forms\Components\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\SnackDealsZoomIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\SnackDealsZoomIn.Designer.cs">
+      <DependentUpon>SnackDealsZoomIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\TrendingMoviesZoomIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\TrendingMoviesZoomIn.Designer.cs">
+      <DependentUpon>TrendingMoviesZoomIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Frontend\Forms\MainPage.cs">
       <SubType>Form</SubType>
@@ -372,8 +402,14 @@
     <EmbeddedResource Include="Admin\SnacksForm.resx">
       <DependentUpon>SnacksForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\Components\ComingSoonZoomIn.resx">
+      <DependentUpon>ComingSoonZoomIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
       <DependentUpon>editEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\Components\FilmsInCinemaZoomIn.resx">
+      <DependentUpon>FilmsInCinemaZoomIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -383,6 +419,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\Components\SnackDealsZoomIn.resx">
+      <DependentUpon>SnackDealsZoomIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Forms\Components\TrendingMoviesZoomIn.resx">
+      <DependentUpon>TrendingMoviesZoomIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>

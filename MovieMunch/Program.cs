@@ -18,6 +18,9 @@ namespace MovieMunch
             LoadingForm loadingForm = new LoadingForm();
             Application.Run(loadingForm);
 
+            //TicketForm ticketForm = new TicketForm();
+            //Application.Run(ticketForm);
+
             //MainAdminForm mainAdminForm = new MainAdminForm();
             //Application.Run(mainAdminForm);
 

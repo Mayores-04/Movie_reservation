@@ -29,30 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainAdminForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.moviesToShowBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.filmsInCinemaBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.comingSoonBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.foodsBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.homeBtn = new FontAwesome.Sharp.IconButton();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.EmployeeListBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // moviesToShowBtn
@@ -74,11 +61,11 @@
             this.moviesToShowBtn.ColorContrastOnClick = 45;
             this.moviesToShowBtn.ColorContrastOnHover = 45;
             this.moviesToShowBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.moviesToShowBtn.CustomizableEdges = borderEdges1;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.moviesToShowBtn.CustomizableEdges = borderEdges6;
             this.moviesToShowBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.moviesToShowBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.moviesToShowBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -164,11 +151,11 @@
             this.filmsInCinemaBtn.ColorContrastOnClick = 45;
             this.filmsInCinemaBtn.ColorContrastOnHover = 45;
             this.filmsInCinemaBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.filmsInCinemaBtn.CustomizableEdges = borderEdges2;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.filmsInCinemaBtn.CustomizableEdges = borderEdges7;
             this.filmsInCinemaBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.filmsInCinemaBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.filmsInCinemaBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -254,11 +241,11 @@
             this.comingSoonBtn.ColorContrastOnClick = 45;
             this.comingSoonBtn.ColorContrastOnHover = 45;
             this.comingSoonBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.comingSoonBtn.CustomizableEdges = borderEdges3;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.comingSoonBtn.CustomizableEdges = borderEdges8;
             this.comingSoonBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.comingSoonBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.comingSoonBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -344,11 +331,11 @@
             this.foodsBtn.ColorContrastOnClick = 45;
             this.foodsBtn.ColorContrastOnHover = 45;
             this.foodsBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.foodsBtn.CustomizableEdges = borderEdges4;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.foodsBtn.CustomizableEdges = borderEdges9;
             this.foodsBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.foodsBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.foodsBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -420,52 +407,12 @@
             this.homeBtn.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
             this.homeBtn.IconColor = System.Drawing.Color.Black;
             this.homeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.homeBtn.Location = new System.Drawing.Point(1037, 12);
+            this.homeBtn.Location = new System.Drawing.Point(1113, 12);
             this.homeBtn.Name = "homeBtn";
             this.homeBtn.Size = new System.Drawing.Size(75, 57);
             this.homeBtn.TabIndex = 4;
             this.homeBtn.UseVisualStyleBackColor = true;
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "Total User";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(354, 178);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "Total User";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series1.Legend = "Legend1";
-            series1.Name = "Total User";
-            series2.ChartArea = "Total User";
-            series2.Legend = "Legend1";
-            series2.Name = "Series2";
-            series3.ChartArea = "Total User";
-            series3.Legend = "Legend1";
-            series3.Name = "Series3";
-            series4.ChartArea = "Total User";
-            series4.Legend = "Legend1";
-            series4.Name = "Series4";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(758, 457);
-            this.chart1.TabIndex = 7;
-            this.chart1.Text = "Report";
-            title1.Name = "Total User";
-            title2.Name = "Title1";
-            title3.Name = "Title2";
-            title4.Name = "Title3";
-            title5.Name = "Title4";
-            this.chart1.Titles.Add(title1);
-            this.chart1.Titles.Add(title2);
-            this.chart1.Titles.Add(title3);
-            this.chart1.Titles.Add(title4);
-            this.chart1.Titles.Add(title5);
             // 
             // EmployeeListBtn
             // 
@@ -486,11 +433,11 @@
             this.EmployeeListBtn.ColorContrastOnClick = 45;
             this.EmployeeListBtn.ColorContrastOnHover = 45;
             this.EmployeeListBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.EmployeeListBtn.CustomizableEdges = borderEdges5;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.EmployeeListBtn.CustomizableEdges = borderEdges10;
             this.EmployeeListBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.EmployeeListBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.EmployeeListBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -560,19 +507,24 @@
             // MainAdminForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.ControlBox = false;
             this.Controls.Add(this.EmployeeListBtn);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.homeBtn);
             this.Controls.Add(this.foodsBtn);
             this.Controls.Add(this.comingSoonBtn);
             this.Controls.Add(this.filmsInCinemaBtn);
             this.Controls.Add(this.moviesToShowBtn);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainAdminForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainAdminForm";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.Load += new System.EventHandler(this.MainAdminForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -584,7 +536,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 comingSoonBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 foodsBtn;
         private FontAwesome.Sharp.IconButton homeBtn;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 EmployeeListBtn;
     }
 }

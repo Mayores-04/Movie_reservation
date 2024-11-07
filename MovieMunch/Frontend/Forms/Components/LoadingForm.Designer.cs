@@ -29,9 +29,9 @@ namespace MovieMunch
             // 
             this.pictureBox1.BackgroundImage = global::MovieMunch.Properties.Resources.MovieMunchLogo_removebg_preview;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(429, 181);
+            this.pictureBox1.Location = new System.Drawing.Point(376, 114);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 293);
+            this.pictureBox1.Size = new System.Drawing.Size(483, 417);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);

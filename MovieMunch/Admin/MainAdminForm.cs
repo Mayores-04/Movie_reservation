@@ -52,5 +52,10 @@ namespace MovieMunch.Admin
             EmployeeList employeeList = new EmployeeList();
             employeeList.Show();
         }
+
+        private void MainAdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

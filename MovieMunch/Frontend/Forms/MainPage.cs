@@ -127,8 +127,7 @@ namespace MovieMunch
             }
         }
 
-
-        private void closeTrendingMoviesDetails_Click(object sender, EventArgs e)
+        private void closeTrendingMoviesDetails_Click_1(object sender, EventArgs e)
         {
             trendingMoviesDetailsPanel.Visible = false;
         }
@@ -232,6 +231,7 @@ namespace MovieMunch
             UpdateCircleColors();
         }
 
+
         private void MainImage_Click(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
@@ -239,10 +239,12 @@ namespace MovieMunch
 
             if (movieInfo != null)
             {
+                closeTrendingMoviesDetails.Visible = true;
                 trendingMoviesDetailsPanel.Visible = true;
+
                 trendingDetailsPictureBox.BackgroundImage = Image.FromFile(movieInfo.ImagePath);
                 trendingMovieTitleDetails.Text = movieInfo.Title;
-                trendingDescriptionDetails.Text = movieInfo.Description; 
+                trendingDescriptionDetails.Text = movieInfo.Description;
                 trendingMoviePriceDetails.Text = movieInfo.Price.ToString("C");
             }
             else
@@ -250,7 +252,6 @@ namespace MovieMunch
                 MessageBox.Show("movieInfo is null");
             }
         }
-
 
         private bool ValidateImagePath(string imagePath)
         {
@@ -358,7 +359,6 @@ namespace MovieMunch
             ResetAllButtonsToDefault();
             SetButtonBackground(HomeBtn, HomeImage);
             //watchListWholePanel.Visible = false;
-
         }
 
         private void FavBtn_Click(object sender, EventArgs e)
@@ -377,9 +377,10 @@ namespace MovieMunch
             SetButtonBackground(TicketBtn, TicketImage);
         }
 
-        private void closeFilmsDetailsBtn_Click(object sender, EventArgs e)
+        private void closeFilmsDetailsBtn_Click_1(object sender, EventArgs e)
         {
             filmsDetailsPanel.Visible = false;
+
         }
         private void LoadFilmsInCinemaToFlowLayoutPanel()
         {
@@ -425,12 +426,13 @@ namespace MovieMunch
 
             if (films != null)
             {
+                closeFilmsDetailsBtn.Visible = true;
                 filmsDetailsPanel.Visible = true;
 
                 filmsPictureBoxDetails.BackgroundImage = Image.FromFile(films.FilmImagePath);
                 filmsTitleDetails.Text = films.FilmTitle;
                 filmsDescriptionDetails.Text = films.FilmsDescription;
-                filmsPriceDetails.Text = films.FilmsPrice.ToString("C"); 
+                filmsPriceDetails.Text = films.FilmsPrice.ToString("C");
             }
         }
 
@@ -442,11 +444,10 @@ namespace MovieMunch
             }
         }
 
-        private void closeComingSoonMovieDetailsBtn_Click(object sender, EventArgs e)
+        private void closeComingSoonMovieDetailsBtn_Click_1(object sender, EventArgs e)
         {
             comingSoonMovieDetailsPanel.Visible = false;
         }
-
 
         private void LoadComingSoonToFlowLayoutPanel()
         {
@@ -492,6 +493,7 @@ namespace MovieMunch
 
             if (csoon != null)
             {
+                closeComingSoonMovieDetailsBtn.Visible = true;
                 comingSoonMovieDetailsPanel.Visible = true;
 
                 comingSoonMoviePicBoxDetails.BackgroundImage = Image.FromFile(csoon.ComingSoonImagePath);
@@ -501,7 +503,6 @@ namespace MovieMunch
             }
         }
 
-
         private void ComingSoonFlowLayout_Paint(object sender, PaintEventArgs e)
         {
             if (_comingSoon == null || _comingSoon.Count == 0)
@@ -510,13 +511,10 @@ namespace MovieMunch
             }
         }
 
-
-
-        private void closeFoodDetails_Click(object sender, EventArgs e)
+        private void closeFoodDetailsBtn_Click(object sender, EventArgs e)
         {
             foodDetailsPanel.Visible = false;
         }
-
 
         private void LoadFoodsToYummyFlowLayoutPanel()
         {
@@ -567,15 +565,16 @@ namespace MovieMunch
         {
             PictureBox clickedPictureBox = sender as PictureBox;
 
-            var food = clickedPictureBox.Tag as Foods; 
+            var food = clickedPictureBox.Tag as Foods;
 
             if (food != null)
             {
+                closeFoodDetailsBtn.Visible = true;
                 foodDetailsPanel.Visible = true;
 
                 foodPicDetails.BackgroundImage = Image.FromFile(food.FoodImagePath);
-                foodNameDetails.Text = food.FoodName; 
-                foodPriceDetails.Text = food.FoodPrice.ToString("C"); 
+                foodNameDetails.Text = food.FoodName;
+                foodPriceDetails.Text = food.FoodPrice.ToString("C");
             }
         }
 
@@ -807,7 +806,7 @@ namespace MovieMunch
                 }
             }
         }
-
+        
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -843,7 +842,6 @@ namespace MovieMunch
             LeftTurnBtn.BringToFront();
             rightTurnBtn.BringToFront();
         }
-
 
         private void exisSearchBtn_Click(object sender, EventArgs e)
         {
@@ -898,6 +896,7 @@ namespace MovieMunch
                 DisplaySearchResults(filteredSnacks, "Snacks");
             }
         }
+
         private void DisplaySearchResults(List<string> items, string category)
         {
             if (items.Count > 0)
@@ -920,6 +919,5 @@ namespace MovieMunch
                 }
             }
         }
-
     }
 }
