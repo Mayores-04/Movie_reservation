@@ -132,24 +132,6 @@ namespace MovieMunch
             trendingMoviesDetailsPanel.Visible = false;
         }
 
-        //private void UpdateDisplayedImage()
-        //{
-        //    if (_imagePaths.Length == 0)
-        //    {
-        //        MessageBox.Show("No images found.");
-        //        return;
-        //    }
-
-        //    int previousImageIndex = (_currentImageIndex - 1 + _imagePaths.Length) % _imagePaths.Length;
-        //    int nextImageIndex = (_currentImageIndex + 1) % _imagePaths.Length;
-
-        //    SetImageInPictureBox(pictureBoxLeft, _imagePaths[previousImageIndex], 0.5f);
-        //    SetImageInPictureBox(pictureBoxMain, _imagePaths[_currentImageIndex], 1.0f);
-        //    SetImageInPictureBox(pictureBoxRight, _imagePaths[nextImageIndex], 0.5f);
-
-        //    UpdateCircleColors();
-        //}
-
         private void UpdateCircleColors()
         {
             SetCircleColor(firstCircle, uncoloredCirclePath);
@@ -673,12 +655,12 @@ namespace MovieMunch
 
                 if (alpha < 255)
                 {
-                    alpha += 5; // Increase alpha (adjust as necessary)
-                    if (alpha > 255) alpha = 255; // Clamp to 255
+                    alpha += 5; 
+                    if (alpha > 255) alpha = 255;  
                 }
                 else
                 {
-                    timer.Stop(); // Stop the timer when fully visible
+                    timer.Stop(); 
                     timer.Dispose();
                 }
             };
@@ -688,20 +670,19 @@ namespace MovieMunch
         private void FadeOut(Control control)
         {
             Timer timer = new Timer();
-            timer.Interval = 50; // Adjust as necessary
+            timer.Interval = 50;
             timer.Tick += (s, e) =>
             {
-                // Create a color with reduced alpha
                 var color = control.BackColor;
-                int alpha = (int)(color.A * 0.95); // Decrease alpha
+                int alpha = (int)(color.A * 0.95); 
                 if (alpha > 0)
                 {
                     control.BackColor = Color.FromArgb(alpha, color.R, color.G, color.B);
                 }
                 else
                 {
-                    control.Visible = false; // Hide the control when fully transparent
-                    timer.Stop(); // Stop the timer
+                    control.Visible = false; 
+                    timer.Stop();  
                     timer.Dispose();
                 }
             };
@@ -709,11 +690,6 @@ namespace MovieMunch
         }
 
         private MovieInfo _reservedImageInfo;
-
-        public void imageToReserve(MovieInfo movieInfo)
-        {
-            _reservedImageInfo = movieInfo;
-        }
 
         private void reserveSeatBtn_Click(object sender, EventArgs e)
         {
@@ -749,6 +725,7 @@ namespace MovieMunch
             }
         }
 
+
         int targetWidth;
         int defaultWidth;
         bool isExpanding;
@@ -757,8 +734,6 @@ namespace MovieMunch
 
         private void SettingBtn_Click(object sender, EventArgs e)
         {
-
-
             userPanelTimer.Start();
             ResetAllButtonsToDefault();
             SetButtonBackground(SettingBtn, SettingImage);

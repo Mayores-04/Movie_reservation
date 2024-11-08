@@ -2,35 +2,44 @@
 using MongoDB.Driver;
 using MovieMunch.Backend.Models;
 using MovieMunch.Models;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MongoDBConnection
 {
-    private readonly IMongoDatabase _database; 
+    private readonly IMongoDatabase _database;
 
     public MongoDBConnection()
     {
-        var client = new MongoClient("mongodb://localhost:27017/"); 
-
+        var client = new MongoClient("mongodb://localhost:27017/");
         _database = client.GetDatabase("MovieReservationDB");
 
-        CreateCollectionIfNotExists<FilmsInCinema>("FilmsInCinema");
+        // Ensure essential collections exist
+        EnsureCollectionExists<FilmsInCinema>("FilmsInCinema");
+        EnsureCollectionExists<ComingSoon>("ComingSoon");
+        EnsureCollectionExists<Movie>("Movies");
+        EnsureCollectionExists<User>("Users");
+        EnsureCollectionExists<AdminAccount>("AdminAccounts");
+        EnsureCollectionExists<Foods>("Foods");
+        EnsureCollectionExists<Counts>("number_of_users");
     }
 
-    private void CreateCollectionIfNotExists<T>(string collectionName)
+    private void EnsureCollectionExists<T>(string collectionName)
     {
         var collectionNames = _database.ListCollectionNames().ToList();
         if (!collectionNames.Contains(collectionName))
         {
             _database.CreateCollection(collectionName);
+            Console.WriteLine($"Collection '{collectionName}' created.");
         }
     }
 
-
     public IMongoCollection<User> GetUsersCollection()
     {
-        return _database.GetCollection<User>("Users");  
+        return _database.GetCollection<User>("Users");
     }
+
     public IMongoCollection<Counts> GetNumberOfUsersCollection()
     {
         return _database.GetCollection<Counts>("number_of_users");
@@ -38,7 +47,7 @@ public class MongoDBConnection
 
     public IMongoCollection<Movie> GetMoviesCollection()
     {
-        return _database.GetCollection<Movie>("Movies"); 
+        return _database.GetCollection<Movie>("Movies");
     }
 
     public IMongoCollection<AdminAccount> GetAdminAccountsCollection()
@@ -62,6 +71,4 @@ public class MongoDBConnection
     }
 
     public IMongoDatabase Database => _database;
-
-
 }

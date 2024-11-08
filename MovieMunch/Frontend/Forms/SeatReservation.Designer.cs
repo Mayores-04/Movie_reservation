@@ -31,14 +31,14 @@ namespace MovieMunch
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatReservation));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.TicketBtn = new System.Windows.Forms.Button();
@@ -327,11 +327,12 @@ namespace MovieMunch
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.movieTitlelbl = new System.Windows.Forms.Label();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnReserveSeat = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuIconButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.moviePicToReserve = new System.Windows.Forms.PictureBox();
+            this.backToHomeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoAfter)).BeginInit();
@@ -341,7 +342,7 @@ namespace MovieMunch
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePicToReserve)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -477,26 +478,26 @@ namespace MovieMunch
             this.searchInput.Modified = false;
             this.searchInput.Multiline = false;
             this.searchInput.Name = "searchInput";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.searchInput.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.searchInput.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.searchInput.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.searchInput.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchInput.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.searchInput.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchInput.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchInput.OnIdleState = stateProperties4;
             this.searchInput.Padding = new System.Windows.Forms.Padding(3);
             this.searchInput.PasswordChar = '\0';
             this.searchInput.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -542,11 +543,11 @@ namespace MovieMunch
             this.exisSearchBtn.ColorContrastOnClick = 30;
             this.exisSearchBtn.ColorContrastOnHover = 30;
             this.exisSearchBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.exisSearchBtn.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.exisSearchBtn.CustomizableEdges = borderEdges1;
             this.exisSearchBtn.DefaultBorderColor = System.Drawing.Color.White;
             this.exisSearchBtn.DefaultColor = System.Drawing.Color.White;
             this.exisSearchBtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -580,11 +581,11 @@ namespace MovieMunch
             this.searchBtnBefore.ColorContrastOnClick = 30;
             this.searchBtnBefore.ColorContrastOnHover = 30;
             this.searchBtnBefore.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.searchBtnBefore.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.searchBtnBefore.CustomizableEdges = borderEdges2;
             this.searchBtnBefore.DialogResult = System.Windows.Forms.DialogResult.None;
             this.searchBtnBefore.Image = null;
             this.searchBtnBefore.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -615,11 +616,11 @@ namespace MovieMunch
             this.userNameHolder.ColorContrastOnClick = 45;
             this.userNameHolder.ColorContrastOnHover = 45;
             this.userNameHolder.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.userNameHolder.CustomizableEdges = borderEdges7;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.userNameHolder.CustomizableEdges = borderEdges3;
             this.userNameHolder.DialogResult = System.Windows.Forms.DialogResult.None;
             this.userNameHolder.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.userNameHolder.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -715,7 +716,7 @@ namespace MovieMunch
             this.seatReservationFlowLayoutPanel.Controls.Add(this.guna2Panel1);
             this.seatReservationFlowLayoutPanel.Location = new System.Drawing.Point(365, 75);
             this.seatReservationFlowLayoutPanel.Name = "seatReservationFlowLayoutPanel";
-            this.seatReservationFlowLayoutPanel.Size = new System.Drawing.Size(844, 575);
+            this.seatReservationFlowLayoutPanel.Size = new System.Drawing.Size(849, 575);
             this.seatReservationFlowLayoutPanel.TabIndex = 114;
             // 
             // guna2Panel1
@@ -1008,7 +1009,7 @@ namespace MovieMunch
             this.J6.FillColor = System.Drawing.Color.White;
             this.J6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J6.ForeColor = System.Drawing.Color.White;
-            this.J6.Location = new System.Drawing.Point(200, 478);
+            this.J6.Location = new System.Drawing.Point(197, 490);
             this.J6.Name = "J6";
             this.J6.Size = new System.Drawing.Size(25, 25);
             this.J6.TabIndex = 649;
@@ -1024,7 +1025,7 @@ namespace MovieMunch
             this.J5.FillColor = System.Drawing.Color.White;
             this.J5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J5.ForeColor = System.Drawing.Color.White;
-            this.J5.Location = new System.Drawing.Point(174, 478);
+            this.J5.Location = new System.Drawing.Point(171, 490);
             this.J5.Name = "J5";
             this.J5.Size = new System.Drawing.Size(25, 25);
             this.J5.TabIndex = 648;
@@ -1040,7 +1041,7 @@ namespace MovieMunch
             this.J4.FillColor = System.Drawing.Color.White;
             this.J4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J4.ForeColor = System.Drawing.Color.White;
-            this.J4.Location = new System.Drawing.Point(148, 478);
+            this.J4.Location = new System.Drawing.Point(145, 490);
             this.J4.Name = "J4";
             this.J4.Size = new System.Drawing.Size(25, 25);
             this.J4.TabIndex = 647;
@@ -1056,7 +1057,7 @@ namespace MovieMunch
             this.J3.FillColor = System.Drawing.Color.White;
             this.J3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J3.ForeColor = System.Drawing.Color.White;
-            this.J3.Location = new System.Drawing.Point(122, 478);
+            this.J3.Location = new System.Drawing.Point(119, 490);
             this.J3.Name = "J3";
             this.J3.Size = new System.Drawing.Size(25, 25);
             this.J3.TabIndex = 646;
@@ -1072,7 +1073,7 @@ namespace MovieMunch
             this.J2.FillColor = System.Drawing.Color.White;
             this.J2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J2.ForeColor = System.Drawing.Color.White;
-            this.J2.Location = new System.Drawing.Point(96, 478);
+            this.J2.Location = new System.Drawing.Point(93, 490);
             this.J2.Name = "J2";
             this.J2.Size = new System.Drawing.Size(25, 25);
             this.J2.TabIndex = 645;
@@ -1088,7 +1089,7 @@ namespace MovieMunch
             this.J1.FillColor = System.Drawing.Color.White;
             this.J1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J1.ForeColor = System.Drawing.Color.White;
-            this.J1.Location = new System.Drawing.Point(70, 478);
+            this.J1.Location = new System.Drawing.Point(67, 490);
             this.J1.Name = "J1";
             this.J1.Size = new System.Drawing.Size(25, 25);
             this.J1.TabIndex = 644;
@@ -1104,7 +1105,7 @@ namespace MovieMunch
             this.J24.FillColor = System.Drawing.Color.White;
             this.J24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J24.ForeColor = System.Drawing.Color.White;
-            this.J24.Location = new System.Drawing.Point(738, 478);
+            this.J24.Location = new System.Drawing.Point(735, 490);
             this.J24.Name = "J24";
             this.J24.Size = new System.Drawing.Size(25, 25);
             this.J24.TabIndex = 643;
@@ -1120,7 +1121,7 @@ namespace MovieMunch
             this.J23.FillColor = System.Drawing.Color.White;
             this.J23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J23.ForeColor = System.Drawing.Color.White;
-            this.J23.Location = new System.Drawing.Point(712, 478);
+            this.J23.Location = new System.Drawing.Point(709, 490);
             this.J23.Name = "J23";
             this.J23.Size = new System.Drawing.Size(25, 25);
             this.J23.TabIndex = 642;
@@ -1136,7 +1137,7 @@ namespace MovieMunch
             this.J22.FillColor = System.Drawing.Color.White;
             this.J22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J22.ForeColor = System.Drawing.Color.White;
-            this.J22.Location = new System.Drawing.Point(686, 478);
+            this.J22.Location = new System.Drawing.Point(683, 490);
             this.J22.Name = "J22";
             this.J22.Size = new System.Drawing.Size(25, 25);
             this.J22.TabIndex = 641;
@@ -1152,7 +1153,7 @@ namespace MovieMunch
             this.J21.FillColor = System.Drawing.Color.White;
             this.J21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J21.ForeColor = System.Drawing.Color.White;
-            this.J21.Location = new System.Drawing.Point(660, 478);
+            this.J21.Location = new System.Drawing.Point(657, 490);
             this.J21.Name = "J21";
             this.J21.Size = new System.Drawing.Size(25, 25);
             this.J21.TabIndex = 640;
@@ -1168,7 +1169,7 @@ namespace MovieMunch
             this.J20.FillColor = System.Drawing.Color.White;
             this.J20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J20.ForeColor = System.Drawing.Color.White;
-            this.J20.Location = new System.Drawing.Point(634, 478);
+            this.J20.Location = new System.Drawing.Point(631, 490);
             this.J20.Name = "J20";
             this.J20.Size = new System.Drawing.Size(25, 25);
             this.J20.TabIndex = 639;
@@ -1184,7 +1185,7 @@ namespace MovieMunch
             this.J19.FillColor = System.Drawing.Color.White;
             this.J19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J19.ForeColor = System.Drawing.Color.White;
-            this.J19.Location = new System.Drawing.Point(608, 478);
+            this.J19.Location = new System.Drawing.Point(605, 490);
             this.J19.Name = "J19";
             this.J19.Size = new System.Drawing.Size(25, 25);
             this.J19.TabIndex = 638;
@@ -1200,7 +1201,7 @@ namespace MovieMunch
             this.J11.FillColor = System.Drawing.Color.White;
             this.J11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J11.ForeColor = System.Drawing.Color.White;
-            this.J11.Location = new System.Drawing.Point(364, 478);
+            this.J11.Location = new System.Drawing.Point(361, 490);
             this.J11.Name = "J11";
             this.J11.Size = new System.Drawing.Size(25, 25);
             this.J11.TabIndex = 637;
@@ -1216,7 +1217,7 @@ namespace MovieMunch
             this.J10.FillColor = System.Drawing.Color.White;
             this.J10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J10.ForeColor = System.Drawing.Color.White;
-            this.J10.Location = new System.Drawing.Point(338, 478);
+            this.J10.Location = new System.Drawing.Point(335, 490);
             this.J10.Name = "J10";
             this.J10.Size = new System.Drawing.Size(25, 25);
             this.J10.TabIndex = 636;
@@ -1232,7 +1233,7 @@ namespace MovieMunch
             this.J9.FillColor = System.Drawing.Color.White;
             this.J9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J9.ForeColor = System.Drawing.Color.White;
-            this.J9.Location = new System.Drawing.Point(312, 478);
+            this.J9.Location = new System.Drawing.Point(309, 490);
             this.J9.Name = "J9";
             this.J9.Size = new System.Drawing.Size(25, 25);
             this.J9.TabIndex = 635;
@@ -1248,7 +1249,7 @@ namespace MovieMunch
             this.J8.FillColor = System.Drawing.Color.White;
             this.J8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J8.ForeColor = System.Drawing.Color.White;
-            this.J8.Location = new System.Drawing.Point(286, 478);
+            this.J8.Location = new System.Drawing.Point(283, 490);
             this.J8.Name = "J8";
             this.J8.Size = new System.Drawing.Size(25, 25);
             this.J8.TabIndex = 634;
@@ -1264,7 +1265,7 @@ namespace MovieMunch
             this.J7.FillColor = System.Drawing.Color.White;
             this.J7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J7.ForeColor = System.Drawing.Color.White;
-            this.J7.Location = new System.Drawing.Point(260, 478);
+            this.J7.Location = new System.Drawing.Point(257, 490);
             this.J7.Name = "J7";
             this.J7.Size = new System.Drawing.Size(25, 25);
             this.J7.TabIndex = 633;
@@ -1280,7 +1281,7 @@ namespace MovieMunch
             this.J18.FillColor = System.Drawing.Color.White;
             this.J18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J18.ForeColor = System.Drawing.Color.White;
-            this.J18.Location = new System.Drawing.Point(546, 478);
+            this.J18.Location = new System.Drawing.Point(543, 490);
             this.J18.Name = "J18";
             this.J18.Size = new System.Drawing.Size(25, 25);
             this.J18.TabIndex = 632;
@@ -1296,7 +1297,7 @@ namespace MovieMunch
             this.J17.FillColor = System.Drawing.Color.White;
             this.J17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J17.ForeColor = System.Drawing.Color.White;
-            this.J17.Location = new System.Drawing.Point(520, 478);
+            this.J17.Location = new System.Drawing.Point(517, 490);
             this.J17.Name = "J17";
             this.J17.Size = new System.Drawing.Size(25, 25);
             this.J17.TabIndex = 631;
@@ -1312,7 +1313,7 @@ namespace MovieMunch
             this.J16.FillColor = System.Drawing.Color.White;
             this.J16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J16.ForeColor = System.Drawing.Color.White;
-            this.J16.Location = new System.Drawing.Point(494, 478);
+            this.J16.Location = new System.Drawing.Point(491, 490);
             this.J16.Name = "J16";
             this.J16.Size = new System.Drawing.Size(25, 25);
             this.J16.TabIndex = 630;
@@ -1328,7 +1329,7 @@ namespace MovieMunch
             this.J15.FillColor = System.Drawing.Color.White;
             this.J15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J15.ForeColor = System.Drawing.Color.White;
-            this.J15.Location = new System.Drawing.Point(468, 478);
+            this.J15.Location = new System.Drawing.Point(465, 490);
             this.J15.Name = "J15";
             this.J15.Size = new System.Drawing.Size(25, 25);
             this.J15.TabIndex = 629;
@@ -1344,7 +1345,7 @@ namespace MovieMunch
             this.J14.FillColor = System.Drawing.Color.White;
             this.J14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J14.ForeColor = System.Drawing.Color.White;
-            this.J14.Location = new System.Drawing.Point(442, 478);
+            this.J14.Location = new System.Drawing.Point(439, 490);
             this.J14.Name = "J14";
             this.J14.Size = new System.Drawing.Size(25, 25);
             this.J14.TabIndex = 628;
@@ -1360,7 +1361,7 @@ namespace MovieMunch
             this.J13.FillColor = System.Drawing.Color.White;
             this.J13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J13.ForeColor = System.Drawing.Color.White;
-            this.J13.Location = new System.Drawing.Point(416, 478);
+            this.J13.Location = new System.Drawing.Point(413, 490);
             this.J13.Name = "J13";
             this.J13.Size = new System.Drawing.Size(25, 25);
             this.J13.TabIndex = 627;
@@ -1376,7 +1377,7 @@ namespace MovieMunch
             this.J12.FillColor = System.Drawing.Color.White;
             this.J12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.J12.ForeColor = System.Drawing.Color.White;
-            this.J12.Location = new System.Drawing.Point(390, 478);
+            this.J12.Location = new System.Drawing.Point(387, 490);
             this.J12.Name = "J12";
             this.J12.Size = new System.Drawing.Size(25, 25);
             this.J12.TabIndex = 626;
@@ -1392,7 +1393,7 @@ namespace MovieMunch
             this.I6.FillColor = System.Drawing.Color.White;
             this.I6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I6.ForeColor = System.Drawing.Color.White;
-            this.I6.Location = new System.Drawing.Point(200, 447);
+            this.I6.Location = new System.Drawing.Point(197, 459);
             this.I6.Name = "I6";
             this.I6.Size = new System.Drawing.Size(25, 25);
             this.I6.TabIndex = 625;
@@ -1408,7 +1409,7 @@ namespace MovieMunch
             this.I5.FillColor = System.Drawing.Color.White;
             this.I5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I5.ForeColor = System.Drawing.Color.White;
-            this.I5.Location = new System.Drawing.Point(174, 447);
+            this.I5.Location = new System.Drawing.Point(171, 459);
             this.I5.Name = "I5";
             this.I5.Size = new System.Drawing.Size(25, 25);
             this.I5.TabIndex = 624;
@@ -1424,7 +1425,7 @@ namespace MovieMunch
             this.I4.FillColor = System.Drawing.Color.White;
             this.I4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I4.ForeColor = System.Drawing.Color.White;
-            this.I4.Location = new System.Drawing.Point(148, 447);
+            this.I4.Location = new System.Drawing.Point(145, 459);
             this.I4.Name = "I4";
             this.I4.Size = new System.Drawing.Size(25, 25);
             this.I4.TabIndex = 623;
@@ -1440,7 +1441,7 @@ namespace MovieMunch
             this.I3.FillColor = System.Drawing.Color.White;
             this.I3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I3.ForeColor = System.Drawing.Color.White;
-            this.I3.Location = new System.Drawing.Point(122, 447);
+            this.I3.Location = new System.Drawing.Point(119, 459);
             this.I3.Name = "I3";
             this.I3.Size = new System.Drawing.Size(25, 25);
             this.I3.TabIndex = 622;
@@ -1456,7 +1457,7 @@ namespace MovieMunch
             this.I2.FillColor = System.Drawing.Color.White;
             this.I2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I2.ForeColor = System.Drawing.Color.White;
-            this.I2.Location = new System.Drawing.Point(96, 447);
+            this.I2.Location = new System.Drawing.Point(93, 459);
             this.I2.Name = "I2";
             this.I2.Size = new System.Drawing.Size(25, 25);
             this.I2.TabIndex = 621;
@@ -1472,7 +1473,7 @@ namespace MovieMunch
             this.I1.FillColor = System.Drawing.Color.White;
             this.I1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I1.ForeColor = System.Drawing.Color.White;
-            this.I1.Location = new System.Drawing.Point(70, 447);
+            this.I1.Location = new System.Drawing.Point(67, 459);
             this.I1.Name = "I1";
             this.I1.Size = new System.Drawing.Size(25, 25);
             this.I1.TabIndex = 620;
@@ -1488,7 +1489,7 @@ namespace MovieMunch
             this.I24.FillColor = System.Drawing.Color.White;
             this.I24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I24.ForeColor = System.Drawing.Color.White;
-            this.I24.Location = new System.Drawing.Point(738, 447);
+            this.I24.Location = new System.Drawing.Point(735, 459);
             this.I24.Name = "I24";
             this.I24.Size = new System.Drawing.Size(25, 25);
             this.I24.TabIndex = 619;
@@ -1504,7 +1505,7 @@ namespace MovieMunch
             this.I23.FillColor = System.Drawing.Color.White;
             this.I23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I23.ForeColor = System.Drawing.Color.White;
-            this.I23.Location = new System.Drawing.Point(712, 447);
+            this.I23.Location = new System.Drawing.Point(709, 459);
             this.I23.Name = "I23";
             this.I23.Size = new System.Drawing.Size(25, 25);
             this.I23.TabIndex = 618;
@@ -1520,7 +1521,7 @@ namespace MovieMunch
             this.I22.FillColor = System.Drawing.Color.White;
             this.I22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I22.ForeColor = System.Drawing.Color.White;
-            this.I22.Location = new System.Drawing.Point(686, 447);
+            this.I22.Location = new System.Drawing.Point(683, 459);
             this.I22.Name = "I22";
             this.I22.Size = new System.Drawing.Size(25, 25);
             this.I22.TabIndex = 617;
@@ -1536,7 +1537,7 @@ namespace MovieMunch
             this.I21.FillColor = System.Drawing.Color.White;
             this.I21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I21.ForeColor = System.Drawing.Color.White;
-            this.I21.Location = new System.Drawing.Point(660, 447);
+            this.I21.Location = new System.Drawing.Point(657, 459);
             this.I21.Name = "I21";
             this.I21.Size = new System.Drawing.Size(25, 25);
             this.I21.TabIndex = 616;
@@ -1552,7 +1553,7 @@ namespace MovieMunch
             this.I20.FillColor = System.Drawing.Color.White;
             this.I20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I20.ForeColor = System.Drawing.Color.White;
-            this.I20.Location = new System.Drawing.Point(634, 447);
+            this.I20.Location = new System.Drawing.Point(631, 459);
             this.I20.Name = "I20";
             this.I20.Size = new System.Drawing.Size(25, 25);
             this.I20.TabIndex = 615;
@@ -1568,7 +1569,7 @@ namespace MovieMunch
             this.I19.FillColor = System.Drawing.Color.White;
             this.I19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I19.ForeColor = System.Drawing.Color.White;
-            this.I19.Location = new System.Drawing.Point(608, 447);
+            this.I19.Location = new System.Drawing.Point(605, 459);
             this.I19.Name = "I19";
             this.I19.Size = new System.Drawing.Size(25, 25);
             this.I19.TabIndex = 614;
@@ -1584,7 +1585,7 @@ namespace MovieMunch
             this.I11.FillColor = System.Drawing.Color.White;
             this.I11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I11.ForeColor = System.Drawing.Color.White;
-            this.I11.Location = new System.Drawing.Point(364, 447);
+            this.I11.Location = new System.Drawing.Point(361, 459);
             this.I11.Name = "I11";
             this.I11.Size = new System.Drawing.Size(25, 25);
             this.I11.TabIndex = 613;
@@ -1600,7 +1601,7 @@ namespace MovieMunch
             this.I10.FillColor = System.Drawing.Color.White;
             this.I10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I10.ForeColor = System.Drawing.Color.White;
-            this.I10.Location = new System.Drawing.Point(338, 447);
+            this.I10.Location = new System.Drawing.Point(335, 459);
             this.I10.Name = "I10";
             this.I10.Size = new System.Drawing.Size(25, 25);
             this.I10.TabIndex = 612;
@@ -1616,7 +1617,7 @@ namespace MovieMunch
             this.I9.FillColor = System.Drawing.Color.White;
             this.I9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I9.ForeColor = System.Drawing.Color.White;
-            this.I9.Location = new System.Drawing.Point(312, 447);
+            this.I9.Location = new System.Drawing.Point(309, 459);
             this.I9.Name = "I9";
             this.I9.Size = new System.Drawing.Size(25, 25);
             this.I9.TabIndex = 611;
@@ -1632,7 +1633,7 @@ namespace MovieMunch
             this.I8.FillColor = System.Drawing.Color.White;
             this.I8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I8.ForeColor = System.Drawing.Color.White;
-            this.I8.Location = new System.Drawing.Point(286, 447);
+            this.I8.Location = new System.Drawing.Point(283, 459);
             this.I8.Name = "I8";
             this.I8.Size = new System.Drawing.Size(25, 25);
             this.I8.TabIndex = 610;
@@ -1648,7 +1649,7 @@ namespace MovieMunch
             this.I7.FillColor = System.Drawing.Color.White;
             this.I7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I7.ForeColor = System.Drawing.Color.White;
-            this.I7.Location = new System.Drawing.Point(260, 447);
+            this.I7.Location = new System.Drawing.Point(257, 459);
             this.I7.Name = "I7";
             this.I7.Size = new System.Drawing.Size(25, 25);
             this.I7.TabIndex = 609;
@@ -1664,7 +1665,7 @@ namespace MovieMunch
             this.I18.FillColor = System.Drawing.Color.White;
             this.I18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I18.ForeColor = System.Drawing.Color.White;
-            this.I18.Location = new System.Drawing.Point(546, 447);
+            this.I18.Location = new System.Drawing.Point(543, 459);
             this.I18.Name = "I18";
             this.I18.Size = new System.Drawing.Size(25, 25);
             this.I18.TabIndex = 608;
@@ -1680,7 +1681,7 @@ namespace MovieMunch
             this.I17.FillColor = System.Drawing.Color.White;
             this.I17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I17.ForeColor = System.Drawing.Color.White;
-            this.I17.Location = new System.Drawing.Point(520, 447);
+            this.I17.Location = new System.Drawing.Point(517, 459);
             this.I17.Name = "I17";
             this.I17.Size = new System.Drawing.Size(25, 25);
             this.I17.TabIndex = 607;
@@ -1696,7 +1697,7 @@ namespace MovieMunch
             this.I16.FillColor = System.Drawing.Color.White;
             this.I16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I16.ForeColor = System.Drawing.Color.White;
-            this.I16.Location = new System.Drawing.Point(494, 447);
+            this.I16.Location = new System.Drawing.Point(491, 459);
             this.I16.Name = "I16";
             this.I16.Size = new System.Drawing.Size(25, 25);
             this.I16.TabIndex = 606;
@@ -1712,7 +1713,7 @@ namespace MovieMunch
             this.I15.FillColor = System.Drawing.Color.White;
             this.I15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I15.ForeColor = System.Drawing.Color.White;
-            this.I15.Location = new System.Drawing.Point(468, 447);
+            this.I15.Location = new System.Drawing.Point(465, 459);
             this.I15.Name = "I15";
             this.I15.Size = new System.Drawing.Size(25, 25);
             this.I15.TabIndex = 605;
@@ -1728,7 +1729,7 @@ namespace MovieMunch
             this.I14.FillColor = System.Drawing.Color.White;
             this.I14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I14.ForeColor = System.Drawing.Color.White;
-            this.I14.Location = new System.Drawing.Point(442, 447);
+            this.I14.Location = new System.Drawing.Point(439, 459);
             this.I14.Name = "I14";
             this.I14.Size = new System.Drawing.Size(25, 25);
             this.I14.TabIndex = 604;
@@ -1744,7 +1745,7 @@ namespace MovieMunch
             this.I13.FillColor = System.Drawing.Color.White;
             this.I13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I13.ForeColor = System.Drawing.Color.White;
-            this.I13.Location = new System.Drawing.Point(416, 447);
+            this.I13.Location = new System.Drawing.Point(413, 459);
             this.I13.Name = "I13";
             this.I13.Size = new System.Drawing.Size(25, 25);
             this.I13.TabIndex = 603;
@@ -1760,7 +1761,7 @@ namespace MovieMunch
             this.I12.FillColor = System.Drawing.Color.White;
             this.I12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.I12.ForeColor = System.Drawing.Color.White;
-            this.I12.Location = new System.Drawing.Point(390, 447);
+            this.I12.Location = new System.Drawing.Point(387, 459);
             this.I12.Name = "I12";
             this.I12.Size = new System.Drawing.Size(25, 25);
             this.I12.TabIndex = 602;
@@ -1776,7 +1777,7 @@ namespace MovieMunch
             this.H6.FillColor = System.Drawing.Color.White;
             this.H6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H6.ForeColor = System.Drawing.Color.White;
-            this.H6.Location = new System.Drawing.Point(200, 416);
+            this.H6.Location = new System.Drawing.Point(197, 428);
             this.H6.Name = "H6";
             this.H6.Size = new System.Drawing.Size(25, 25);
             this.H6.TabIndex = 601;
@@ -1792,7 +1793,7 @@ namespace MovieMunch
             this.H5.FillColor = System.Drawing.Color.White;
             this.H5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H5.ForeColor = System.Drawing.Color.White;
-            this.H5.Location = new System.Drawing.Point(174, 416);
+            this.H5.Location = new System.Drawing.Point(171, 428);
             this.H5.Name = "H5";
             this.H5.Size = new System.Drawing.Size(25, 25);
             this.H5.TabIndex = 600;
@@ -1808,7 +1809,7 @@ namespace MovieMunch
             this.H4.FillColor = System.Drawing.Color.White;
             this.H4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H4.ForeColor = System.Drawing.Color.White;
-            this.H4.Location = new System.Drawing.Point(148, 416);
+            this.H4.Location = new System.Drawing.Point(145, 428);
             this.H4.Name = "H4";
             this.H4.Size = new System.Drawing.Size(25, 25);
             this.H4.TabIndex = 599;
@@ -1824,7 +1825,7 @@ namespace MovieMunch
             this.H3.FillColor = System.Drawing.Color.White;
             this.H3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H3.ForeColor = System.Drawing.Color.White;
-            this.H3.Location = new System.Drawing.Point(122, 416);
+            this.H3.Location = new System.Drawing.Point(119, 428);
             this.H3.Name = "H3";
             this.H3.Size = new System.Drawing.Size(25, 25);
             this.H3.TabIndex = 598;
@@ -1840,7 +1841,7 @@ namespace MovieMunch
             this.H2.FillColor = System.Drawing.Color.White;
             this.H2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H2.ForeColor = System.Drawing.Color.White;
-            this.H2.Location = new System.Drawing.Point(96, 416);
+            this.H2.Location = new System.Drawing.Point(93, 428);
             this.H2.Name = "H2";
             this.H2.Size = new System.Drawing.Size(25, 25);
             this.H2.TabIndex = 597;
@@ -1856,7 +1857,7 @@ namespace MovieMunch
             this.H1.FillColor = System.Drawing.Color.White;
             this.H1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H1.ForeColor = System.Drawing.Color.White;
-            this.H1.Location = new System.Drawing.Point(70, 416);
+            this.H1.Location = new System.Drawing.Point(67, 428);
             this.H1.Name = "H1";
             this.H1.Size = new System.Drawing.Size(25, 25);
             this.H1.TabIndex = 596;
@@ -1872,7 +1873,7 @@ namespace MovieMunch
             this.H24.FillColor = System.Drawing.Color.White;
             this.H24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H24.ForeColor = System.Drawing.Color.White;
-            this.H24.Location = new System.Drawing.Point(738, 416);
+            this.H24.Location = new System.Drawing.Point(735, 428);
             this.H24.Name = "H24";
             this.H24.Size = new System.Drawing.Size(25, 25);
             this.H24.TabIndex = 595;
@@ -1888,7 +1889,7 @@ namespace MovieMunch
             this.H23.FillColor = System.Drawing.Color.White;
             this.H23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H23.ForeColor = System.Drawing.Color.White;
-            this.H23.Location = new System.Drawing.Point(712, 416);
+            this.H23.Location = new System.Drawing.Point(709, 428);
             this.H23.Name = "H23";
             this.H23.Size = new System.Drawing.Size(25, 25);
             this.H23.TabIndex = 594;
@@ -1904,7 +1905,7 @@ namespace MovieMunch
             this.H22.FillColor = System.Drawing.Color.White;
             this.H22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H22.ForeColor = System.Drawing.Color.White;
-            this.H22.Location = new System.Drawing.Point(686, 416);
+            this.H22.Location = new System.Drawing.Point(683, 428);
             this.H22.Name = "H22";
             this.H22.Size = new System.Drawing.Size(25, 25);
             this.H22.TabIndex = 593;
@@ -1920,7 +1921,7 @@ namespace MovieMunch
             this.H21.FillColor = System.Drawing.Color.White;
             this.H21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H21.ForeColor = System.Drawing.Color.White;
-            this.H21.Location = new System.Drawing.Point(660, 416);
+            this.H21.Location = new System.Drawing.Point(657, 428);
             this.H21.Name = "H21";
             this.H21.Size = new System.Drawing.Size(25, 25);
             this.H21.TabIndex = 592;
@@ -1936,7 +1937,7 @@ namespace MovieMunch
             this.H20.FillColor = System.Drawing.Color.White;
             this.H20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H20.ForeColor = System.Drawing.Color.White;
-            this.H20.Location = new System.Drawing.Point(634, 416);
+            this.H20.Location = new System.Drawing.Point(631, 428);
             this.H20.Name = "H20";
             this.H20.Size = new System.Drawing.Size(25, 25);
             this.H20.TabIndex = 591;
@@ -1952,7 +1953,7 @@ namespace MovieMunch
             this.H19.FillColor = System.Drawing.Color.White;
             this.H19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H19.ForeColor = System.Drawing.Color.White;
-            this.H19.Location = new System.Drawing.Point(608, 416);
+            this.H19.Location = new System.Drawing.Point(605, 428);
             this.H19.Name = "H19";
             this.H19.Size = new System.Drawing.Size(25, 25);
             this.H19.TabIndex = 590;
@@ -1968,7 +1969,7 @@ namespace MovieMunch
             this.H11.FillColor = System.Drawing.Color.White;
             this.H11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H11.ForeColor = System.Drawing.Color.White;
-            this.H11.Location = new System.Drawing.Point(364, 416);
+            this.H11.Location = new System.Drawing.Point(361, 428);
             this.H11.Name = "H11";
             this.H11.Size = new System.Drawing.Size(25, 25);
             this.H11.TabIndex = 589;
@@ -1984,7 +1985,7 @@ namespace MovieMunch
             this.H10.FillColor = System.Drawing.Color.White;
             this.H10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H10.ForeColor = System.Drawing.Color.White;
-            this.H10.Location = new System.Drawing.Point(338, 416);
+            this.H10.Location = new System.Drawing.Point(335, 428);
             this.H10.Name = "H10";
             this.H10.Size = new System.Drawing.Size(25, 25);
             this.H10.TabIndex = 588;
@@ -2000,7 +2001,7 @@ namespace MovieMunch
             this.H9.FillColor = System.Drawing.Color.White;
             this.H9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H9.ForeColor = System.Drawing.Color.White;
-            this.H9.Location = new System.Drawing.Point(312, 416);
+            this.H9.Location = new System.Drawing.Point(309, 428);
             this.H9.Name = "H9";
             this.H9.Size = new System.Drawing.Size(25, 25);
             this.H9.TabIndex = 587;
@@ -2016,7 +2017,7 @@ namespace MovieMunch
             this.H8.FillColor = System.Drawing.Color.White;
             this.H8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H8.ForeColor = System.Drawing.Color.White;
-            this.H8.Location = new System.Drawing.Point(286, 416);
+            this.H8.Location = new System.Drawing.Point(283, 428);
             this.H8.Name = "H8";
             this.H8.Size = new System.Drawing.Size(25, 25);
             this.H8.TabIndex = 586;
@@ -2032,7 +2033,7 @@ namespace MovieMunch
             this.H7.FillColor = System.Drawing.Color.White;
             this.H7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H7.ForeColor = System.Drawing.Color.White;
-            this.H7.Location = new System.Drawing.Point(260, 416);
+            this.H7.Location = new System.Drawing.Point(257, 428);
             this.H7.Name = "H7";
             this.H7.Size = new System.Drawing.Size(25, 25);
             this.H7.TabIndex = 585;
@@ -2048,7 +2049,7 @@ namespace MovieMunch
             this.H18.FillColor = System.Drawing.Color.White;
             this.H18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H18.ForeColor = System.Drawing.Color.White;
-            this.H18.Location = new System.Drawing.Point(546, 416);
+            this.H18.Location = new System.Drawing.Point(543, 428);
             this.H18.Name = "H18";
             this.H18.Size = new System.Drawing.Size(25, 25);
             this.H18.TabIndex = 584;
@@ -2064,7 +2065,7 @@ namespace MovieMunch
             this.H17.FillColor = System.Drawing.Color.White;
             this.H17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H17.ForeColor = System.Drawing.Color.White;
-            this.H17.Location = new System.Drawing.Point(520, 416);
+            this.H17.Location = new System.Drawing.Point(517, 428);
             this.H17.Name = "H17";
             this.H17.Size = new System.Drawing.Size(25, 25);
             this.H17.TabIndex = 583;
@@ -2080,7 +2081,7 @@ namespace MovieMunch
             this.H16.FillColor = System.Drawing.Color.White;
             this.H16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H16.ForeColor = System.Drawing.Color.White;
-            this.H16.Location = new System.Drawing.Point(494, 416);
+            this.H16.Location = new System.Drawing.Point(491, 428);
             this.H16.Name = "H16";
             this.H16.Size = new System.Drawing.Size(25, 25);
             this.H16.TabIndex = 582;
@@ -2096,7 +2097,7 @@ namespace MovieMunch
             this.H15.FillColor = System.Drawing.Color.White;
             this.H15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H15.ForeColor = System.Drawing.Color.White;
-            this.H15.Location = new System.Drawing.Point(468, 416);
+            this.H15.Location = new System.Drawing.Point(465, 428);
             this.H15.Name = "H15";
             this.H15.Size = new System.Drawing.Size(25, 25);
             this.H15.TabIndex = 581;
@@ -2112,7 +2113,7 @@ namespace MovieMunch
             this.H14.FillColor = System.Drawing.Color.White;
             this.H14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H14.ForeColor = System.Drawing.Color.White;
-            this.H14.Location = new System.Drawing.Point(442, 416);
+            this.H14.Location = new System.Drawing.Point(439, 428);
             this.H14.Name = "H14";
             this.H14.Size = new System.Drawing.Size(25, 25);
             this.H14.TabIndex = 580;
@@ -2128,7 +2129,7 @@ namespace MovieMunch
             this.H13.FillColor = System.Drawing.Color.White;
             this.H13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H13.ForeColor = System.Drawing.Color.White;
-            this.H13.Location = new System.Drawing.Point(416, 416);
+            this.H13.Location = new System.Drawing.Point(413, 428);
             this.H13.Name = "H13";
             this.H13.Size = new System.Drawing.Size(25, 25);
             this.H13.TabIndex = 579;
@@ -2144,7 +2145,7 @@ namespace MovieMunch
             this.H12.FillColor = System.Drawing.Color.White;
             this.H12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H12.ForeColor = System.Drawing.Color.White;
-            this.H12.Location = new System.Drawing.Point(390, 416);
+            this.H12.Location = new System.Drawing.Point(387, 428);
             this.H12.Name = "H12";
             this.H12.Size = new System.Drawing.Size(25, 25);
             this.H12.TabIndex = 578;
@@ -2160,7 +2161,7 @@ namespace MovieMunch
             this.G6.FillColor = System.Drawing.Color.White;
             this.G6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G6.ForeColor = System.Drawing.Color.White;
-            this.G6.Location = new System.Drawing.Point(200, 385);
+            this.G6.Location = new System.Drawing.Point(197, 397);
             this.G6.Name = "G6";
             this.G6.Size = new System.Drawing.Size(25, 25);
             this.G6.TabIndex = 577;
@@ -2176,7 +2177,7 @@ namespace MovieMunch
             this.G5.FillColor = System.Drawing.Color.White;
             this.G5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G5.ForeColor = System.Drawing.Color.White;
-            this.G5.Location = new System.Drawing.Point(174, 385);
+            this.G5.Location = new System.Drawing.Point(171, 397);
             this.G5.Name = "G5";
             this.G5.Size = new System.Drawing.Size(25, 25);
             this.G5.TabIndex = 576;
@@ -2192,7 +2193,7 @@ namespace MovieMunch
             this.G4.FillColor = System.Drawing.Color.White;
             this.G4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G4.ForeColor = System.Drawing.Color.White;
-            this.G4.Location = new System.Drawing.Point(148, 385);
+            this.G4.Location = new System.Drawing.Point(145, 397);
             this.G4.Name = "G4";
             this.G4.Size = new System.Drawing.Size(25, 25);
             this.G4.TabIndex = 575;
@@ -2208,7 +2209,7 @@ namespace MovieMunch
             this.G3.FillColor = System.Drawing.Color.White;
             this.G3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G3.ForeColor = System.Drawing.Color.White;
-            this.G3.Location = new System.Drawing.Point(122, 385);
+            this.G3.Location = new System.Drawing.Point(119, 397);
             this.G3.Name = "G3";
             this.G3.Size = new System.Drawing.Size(25, 25);
             this.G3.TabIndex = 574;
@@ -2224,7 +2225,7 @@ namespace MovieMunch
             this.G2.FillColor = System.Drawing.Color.White;
             this.G2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G2.ForeColor = System.Drawing.Color.White;
-            this.G2.Location = new System.Drawing.Point(96, 385);
+            this.G2.Location = new System.Drawing.Point(93, 397);
             this.G2.Name = "G2";
             this.G2.Size = new System.Drawing.Size(25, 25);
             this.G2.TabIndex = 573;
@@ -2240,7 +2241,7 @@ namespace MovieMunch
             this.G1.FillColor = System.Drawing.Color.White;
             this.G1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G1.ForeColor = System.Drawing.Color.White;
-            this.G1.Location = new System.Drawing.Point(70, 385);
+            this.G1.Location = new System.Drawing.Point(67, 397);
             this.G1.Name = "G1";
             this.G1.Size = new System.Drawing.Size(25, 25);
             this.G1.TabIndex = 572;
@@ -2256,7 +2257,7 @@ namespace MovieMunch
             this.G24.FillColor = System.Drawing.Color.White;
             this.G24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G24.ForeColor = System.Drawing.Color.White;
-            this.G24.Location = new System.Drawing.Point(738, 385);
+            this.G24.Location = new System.Drawing.Point(735, 397);
             this.G24.Name = "G24";
             this.G24.Size = new System.Drawing.Size(25, 25);
             this.G24.TabIndex = 571;
@@ -2272,7 +2273,7 @@ namespace MovieMunch
             this.G23.FillColor = System.Drawing.Color.White;
             this.G23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G23.ForeColor = System.Drawing.Color.White;
-            this.G23.Location = new System.Drawing.Point(712, 385);
+            this.G23.Location = new System.Drawing.Point(709, 397);
             this.G23.Name = "G23";
             this.G23.Size = new System.Drawing.Size(25, 25);
             this.G23.TabIndex = 570;
@@ -2288,7 +2289,7 @@ namespace MovieMunch
             this.G22.FillColor = System.Drawing.Color.White;
             this.G22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G22.ForeColor = System.Drawing.Color.White;
-            this.G22.Location = new System.Drawing.Point(686, 385);
+            this.G22.Location = new System.Drawing.Point(683, 397);
             this.G22.Name = "G22";
             this.G22.Size = new System.Drawing.Size(25, 25);
             this.G22.TabIndex = 569;
@@ -2304,7 +2305,7 @@ namespace MovieMunch
             this.G21.FillColor = System.Drawing.Color.White;
             this.G21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G21.ForeColor = System.Drawing.Color.White;
-            this.G21.Location = new System.Drawing.Point(660, 385);
+            this.G21.Location = new System.Drawing.Point(657, 397);
             this.G21.Name = "G21";
             this.G21.Size = new System.Drawing.Size(25, 25);
             this.G21.TabIndex = 568;
@@ -2320,7 +2321,7 @@ namespace MovieMunch
             this.G20.FillColor = System.Drawing.Color.White;
             this.G20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G20.ForeColor = System.Drawing.Color.White;
-            this.G20.Location = new System.Drawing.Point(634, 385);
+            this.G20.Location = new System.Drawing.Point(631, 397);
             this.G20.Name = "G20";
             this.G20.Size = new System.Drawing.Size(25, 25);
             this.G20.TabIndex = 567;
@@ -2336,7 +2337,7 @@ namespace MovieMunch
             this.G19.FillColor = System.Drawing.Color.White;
             this.G19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G19.ForeColor = System.Drawing.Color.White;
-            this.G19.Location = new System.Drawing.Point(608, 385);
+            this.G19.Location = new System.Drawing.Point(605, 397);
             this.G19.Name = "G19";
             this.G19.Size = new System.Drawing.Size(25, 25);
             this.G19.TabIndex = 566;
@@ -2352,7 +2353,7 @@ namespace MovieMunch
             this.G11.FillColor = System.Drawing.Color.White;
             this.G11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G11.ForeColor = System.Drawing.Color.White;
-            this.G11.Location = new System.Drawing.Point(364, 385);
+            this.G11.Location = new System.Drawing.Point(361, 397);
             this.G11.Name = "G11";
             this.G11.Size = new System.Drawing.Size(25, 25);
             this.G11.TabIndex = 565;
@@ -2368,7 +2369,7 @@ namespace MovieMunch
             this.G10.FillColor = System.Drawing.Color.White;
             this.G10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G10.ForeColor = System.Drawing.Color.White;
-            this.G10.Location = new System.Drawing.Point(338, 385);
+            this.G10.Location = new System.Drawing.Point(335, 397);
             this.G10.Name = "G10";
             this.G10.Size = new System.Drawing.Size(25, 25);
             this.G10.TabIndex = 564;
@@ -2384,7 +2385,7 @@ namespace MovieMunch
             this.G9.FillColor = System.Drawing.Color.White;
             this.G9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G9.ForeColor = System.Drawing.Color.White;
-            this.G9.Location = new System.Drawing.Point(312, 385);
+            this.G9.Location = new System.Drawing.Point(309, 397);
             this.G9.Name = "G9";
             this.G9.Size = new System.Drawing.Size(25, 25);
             this.G9.TabIndex = 563;
@@ -2400,7 +2401,7 @@ namespace MovieMunch
             this.G8.FillColor = System.Drawing.Color.White;
             this.G8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G8.ForeColor = System.Drawing.Color.White;
-            this.G8.Location = new System.Drawing.Point(286, 385);
+            this.G8.Location = new System.Drawing.Point(283, 397);
             this.G8.Name = "G8";
             this.G8.Size = new System.Drawing.Size(25, 25);
             this.G8.TabIndex = 562;
@@ -2416,7 +2417,7 @@ namespace MovieMunch
             this.G7.FillColor = System.Drawing.Color.White;
             this.G7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G7.ForeColor = System.Drawing.Color.White;
-            this.G7.Location = new System.Drawing.Point(260, 385);
+            this.G7.Location = new System.Drawing.Point(257, 397);
             this.G7.Name = "G7";
             this.G7.Size = new System.Drawing.Size(25, 25);
             this.G7.TabIndex = 561;
@@ -2432,7 +2433,7 @@ namespace MovieMunch
             this.G18.FillColor = System.Drawing.Color.White;
             this.G18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G18.ForeColor = System.Drawing.Color.White;
-            this.G18.Location = new System.Drawing.Point(546, 385);
+            this.G18.Location = new System.Drawing.Point(543, 397);
             this.G18.Name = "G18";
             this.G18.Size = new System.Drawing.Size(25, 25);
             this.G18.TabIndex = 560;
@@ -2448,7 +2449,7 @@ namespace MovieMunch
             this.G17.FillColor = System.Drawing.Color.White;
             this.G17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G17.ForeColor = System.Drawing.Color.White;
-            this.G17.Location = new System.Drawing.Point(520, 385);
+            this.G17.Location = new System.Drawing.Point(517, 397);
             this.G17.Name = "G17";
             this.G17.Size = new System.Drawing.Size(25, 25);
             this.G17.TabIndex = 559;
@@ -2464,7 +2465,7 @@ namespace MovieMunch
             this.G16.FillColor = System.Drawing.Color.White;
             this.G16.Font = new System.Drawing.Font("Forte", 8.25F);
             this.G16.ForeColor = System.Drawing.Color.White;
-            this.G16.Location = new System.Drawing.Point(494, 385);
+            this.G16.Location = new System.Drawing.Point(491, 397);
             this.G16.Name = "G16";
             this.G16.Size = new System.Drawing.Size(25, 25);
             this.G16.TabIndex = 558;
@@ -2480,7 +2481,7 @@ namespace MovieMunch
             this.G15.FillColor = System.Drawing.Color.White;
             this.G15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G15.ForeColor = System.Drawing.Color.White;
-            this.G15.Location = new System.Drawing.Point(468, 385);
+            this.G15.Location = new System.Drawing.Point(465, 397);
             this.G15.Name = "G15";
             this.G15.Size = new System.Drawing.Size(25, 25);
             this.G15.TabIndex = 557;
@@ -2496,7 +2497,7 @@ namespace MovieMunch
             this.G14.FillColor = System.Drawing.Color.White;
             this.G14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G14.ForeColor = System.Drawing.Color.White;
-            this.G14.Location = new System.Drawing.Point(442, 385);
+            this.G14.Location = new System.Drawing.Point(439, 397);
             this.G14.Name = "G14";
             this.G14.Size = new System.Drawing.Size(25, 25);
             this.G14.TabIndex = 556;
@@ -2512,7 +2513,7 @@ namespace MovieMunch
             this.G13.FillColor = System.Drawing.Color.White;
             this.G13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G13.ForeColor = System.Drawing.Color.White;
-            this.G13.Location = new System.Drawing.Point(416, 385);
+            this.G13.Location = new System.Drawing.Point(413, 397);
             this.G13.Name = "G13";
             this.G13.Size = new System.Drawing.Size(25, 25);
             this.G13.TabIndex = 555;
@@ -2528,7 +2529,7 @@ namespace MovieMunch
             this.G12.FillColor = System.Drawing.Color.White;
             this.G12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G12.ForeColor = System.Drawing.Color.White;
-            this.G12.Location = new System.Drawing.Point(390, 385);
+            this.G12.Location = new System.Drawing.Point(387, 397);
             this.G12.Name = "G12";
             this.G12.Size = new System.Drawing.Size(25, 25);
             this.G12.TabIndex = 554;
@@ -2544,7 +2545,7 @@ namespace MovieMunch
             this.F6.FillColor = System.Drawing.Color.White;
             this.F6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F6.ForeColor = System.Drawing.Color.White;
-            this.F6.Location = new System.Drawing.Point(200, 354);
+            this.F6.Location = new System.Drawing.Point(197, 366);
             this.F6.Name = "F6";
             this.F6.Size = new System.Drawing.Size(25, 25);
             this.F6.TabIndex = 553;
@@ -2560,7 +2561,7 @@ namespace MovieMunch
             this.F5.FillColor = System.Drawing.Color.White;
             this.F5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F5.ForeColor = System.Drawing.Color.White;
-            this.F5.Location = new System.Drawing.Point(174, 354);
+            this.F5.Location = new System.Drawing.Point(171, 366);
             this.F5.Name = "F5";
             this.F5.Size = new System.Drawing.Size(25, 25);
             this.F5.TabIndex = 552;
@@ -2576,7 +2577,7 @@ namespace MovieMunch
             this.F4.FillColor = System.Drawing.Color.White;
             this.F4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F4.ForeColor = System.Drawing.Color.White;
-            this.F4.Location = new System.Drawing.Point(148, 354);
+            this.F4.Location = new System.Drawing.Point(145, 366);
             this.F4.Name = "F4";
             this.F4.Size = new System.Drawing.Size(25, 25);
             this.F4.TabIndex = 551;
@@ -2592,7 +2593,7 @@ namespace MovieMunch
             this.F3.FillColor = System.Drawing.Color.White;
             this.F3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F3.ForeColor = System.Drawing.Color.White;
-            this.F3.Location = new System.Drawing.Point(122, 354);
+            this.F3.Location = new System.Drawing.Point(119, 366);
             this.F3.Name = "F3";
             this.F3.Size = new System.Drawing.Size(25, 25);
             this.F3.TabIndex = 550;
@@ -2608,7 +2609,7 @@ namespace MovieMunch
             this.F2.FillColor = System.Drawing.Color.White;
             this.F2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F2.ForeColor = System.Drawing.Color.White;
-            this.F2.Location = new System.Drawing.Point(96, 354);
+            this.F2.Location = new System.Drawing.Point(93, 366);
             this.F2.Name = "F2";
             this.F2.Size = new System.Drawing.Size(25, 25);
             this.F2.TabIndex = 549;
@@ -2624,7 +2625,7 @@ namespace MovieMunch
             this.F1.FillColor = System.Drawing.Color.White;
             this.F1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F1.ForeColor = System.Drawing.Color.White;
-            this.F1.Location = new System.Drawing.Point(70, 354);
+            this.F1.Location = new System.Drawing.Point(67, 366);
             this.F1.Name = "F1";
             this.F1.Size = new System.Drawing.Size(25, 25);
             this.F1.TabIndex = 548;
@@ -2640,7 +2641,7 @@ namespace MovieMunch
             this.F24.FillColor = System.Drawing.Color.White;
             this.F24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F24.ForeColor = System.Drawing.Color.White;
-            this.F24.Location = new System.Drawing.Point(738, 354);
+            this.F24.Location = new System.Drawing.Point(735, 366);
             this.F24.Name = "F24";
             this.F24.Size = new System.Drawing.Size(25, 25);
             this.F24.TabIndex = 547;
@@ -2656,7 +2657,7 @@ namespace MovieMunch
             this.F23.FillColor = System.Drawing.Color.White;
             this.F23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F23.ForeColor = System.Drawing.Color.White;
-            this.F23.Location = new System.Drawing.Point(712, 354);
+            this.F23.Location = new System.Drawing.Point(709, 366);
             this.F23.Name = "F23";
             this.F23.Size = new System.Drawing.Size(25, 25);
             this.F23.TabIndex = 546;
@@ -2672,7 +2673,7 @@ namespace MovieMunch
             this.F22.FillColor = System.Drawing.Color.White;
             this.F22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F22.ForeColor = System.Drawing.Color.White;
-            this.F22.Location = new System.Drawing.Point(686, 354);
+            this.F22.Location = new System.Drawing.Point(683, 366);
             this.F22.Name = "F22";
             this.F22.Size = new System.Drawing.Size(25, 25);
             this.F22.TabIndex = 545;
@@ -2688,7 +2689,7 @@ namespace MovieMunch
             this.F21.FillColor = System.Drawing.Color.White;
             this.F21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F21.ForeColor = System.Drawing.Color.White;
-            this.F21.Location = new System.Drawing.Point(660, 354);
+            this.F21.Location = new System.Drawing.Point(657, 366);
             this.F21.Name = "F21";
             this.F21.Size = new System.Drawing.Size(25, 25);
             this.F21.TabIndex = 544;
@@ -2704,7 +2705,7 @@ namespace MovieMunch
             this.F20.FillColor = System.Drawing.Color.White;
             this.F20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F20.ForeColor = System.Drawing.Color.White;
-            this.F20.Location = new System.Drawing.Point(634, 354);
+            this.F20.Location = new System.Drawing.Point(631, 366);
             this.F20.Name = "F20";
             this.F20.Size = new System.Drawing.Size(25, 25);
             this.F20.TabIndex = 543;
@@ -2720,7 +2721,7 @@ namespace MovieMunch
             this.F19.FillColor = System.Drawing.Color.White;
             this.F19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F19.ForeColor = System.Drawing.Color.White;
-            this.F19.Location = new System.Drawing.Point(608, 354);
+            this.F19.Location = new System.Drawing.Point(605, 366);
             this.F19.Name = "F19";
             this.F19.Size = new System.Drawing.Size(25, 25);
             this.F19.TabIndex = 542;
@@ -2736,7 +2737,7 @@ namespace MovieMunch
             this.F11.FillColor = System.Drawing.Color.White;
             this.F11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F11.ForeColor = System.Drawing.Color.White;
-            this.F11.Location = new System.Drawing.Point(364, 354);
+            this.F11.Location = new System.Drawing.Point(361, 366);
             this.F11.Name = "F11";
             this.F11.Size = new System.Drawing.Size(25, 25);
             this.F11.TabIndex = 541;
@@ -2752,7 +2753,7 @@ namespace MovieMunch
             this.F10.FillColor = System.Drawing.Color.White;
             this.F10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F10.ForeColor = System.Drawing.Color.White;
-            this.F10.Location = new System.Drawing.Point(338, 354);
+            this.F10.Location = new System.Drawing.Point(335, 366);
             this.F10.Name = "F10";
             this.F10.Size = new System.Drawing.Size(25, 25);
             this.F10.TabIndex = 540;
@@ -2768,7 +2769,7 @@ namespace MovieMunch
             this.F9.FillColor = System.Drawing.Color.White;
             this.F9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F9.ForeColor = System.Drawing.Color.White;
-            this.F9.Location = new System.Drawing.Point(312, 354);
+            this.F9.Location = new System.Drawing.Point(309, 366);
             this.F9.Name = "F9";
             this.F9.Size = new System.Drawing.Size(25, 25);
             this.F9.TabIndex = 539;
@@ -2784,7 +2785,7 @@ namespace MovieMunch
             this.F8.FillColor = System.Drawing.Color.White;
             this.F8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F8.ForeColor = System.Drawing.Color.White;
-            this.F8.Location = new System.Drawing.Point(286, 354);
+            this.F8.Location = new System.Drawing.Point(283, 366);
             this.F8.Name = "F8";
             this.F8.Size = new System.Drawing.Size(25, 25);
             this.F8.TabIndex = 538;
@@ -2800,7 +2801,7 @@ namespace MovieMunch
             this.F7.FillColor = System.Drawing.Color.White;
             this.F7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F7.ForeColor = System.Drawing.Color.White;
-            this.F7.Location = new System.Drawing.Point(260, 354);
+            this.F7.Location = new System.Drawing.Point(257, 366);
             this.F7.Name = "F7";
             this.F7.Size = new System.Drawing.Size(25, 25);
             this.F7.TabIndex = 537;
@@ -2816,7 +2817,7 @@ namespace MovieMunch
             this.F18.FillColor = System.Drawing.Color.White;
             this.F18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F18.ForeColor = System.Drawing.Color.White;
-            this.F18.Location = new System.Drawing.Point(546, 354);
+            this.F18.Location = new System.Drawing.Point(543, 366);
             this.F18.Name = "F18";
             this.F18.Size = new System.Drawing.Size(25, 25);
             this.F18.TabIndex = 536;
@@ -2832,7 +2833,7 @@ namespace MovieMunch
             this.F17.FillColor = System.Drawing.Color.White;
             this.F17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F17.ForeColor = System.Drawing.Color.White;
-            this.F17.Location = new System.Drawing.Point(520, 354);
+            this.F17.Location = new System.Drawing.Point(517, 366);
             this.F17.Name = "F17";
             this.F17.Size = new System.Drawing.Size(25, 25);
             this.F17.TabIndex = 535;
@@ -2848,7 +2849,7 @@ namespace MovieMunch
             this.F16.FillColor = System.Drawing.Color.White;
             this.F16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F16.ForeColor = System.Drawing.Color.White;
-            this.F16.Location = new System.Drawing.Point(494, 354);
+            this.F16.Location = new System.Drawing.Point(491, 366);
             this.F16.Name = "F16";
             this.F16.Size = new System.Drawing.Size(25, 25);
             this.F16.TabIndex = 534;
@@ -2864,7 +2865,7 @@ namespace MovieMunch
             this.F15.FillColor = System.Drawing.Color.White;
             this.F15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F15.ForeColor = System.Drawing.Color.White;
-            this.F15.Location = new System.Drawing.Point(468, 354);
+            this.F15.Location = new System.Drawing.Point(465, 366);
             this.F15.Name = "F15";
             this.F15.Size = new System.Drawing.Size(25, 25);
             this.F15.TabIndex = 533;
@@ -2880,7 +2881,7 @@ namespace MovieMunch
             this.F14.FillColor = System.Drawing.Color.White;
             this.F14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F14.ForeColor = System.Drawing.Color.White;
-            this.F14.Location = new System.Drawing.Point(442, 354);
+            this.F14.Location = new System.Drawing.Point(439, 366);
             this.F14.Name = "F14";
             this.F14.Size = new System.Drawing.Size(25, 25);
             this.F14.TabIndex = 532;
@@ -2896,7 +2897,7 @@ namespace MovieMunch
             this.F13.FillColor = System.Drawing.Color.White;
             this.F13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F13.ForeColor = System.Drawing.Color.White;
-            this.F13.Location = new System.Drawing.Point(416, 354);
+            this.F13.Location = new System.Drawing.Point(413, 366);
             this.F13.Name = "F13";
             this.F13.Size = new System.Drawing.Size(25, 25);
             this.F13.TabIndex = 531;
@@ -2912,7 +2913,7 @@ namespace MovieMunch
             this.F12.FillColor = System.Drawing.Color.White;
             this.F12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.F12.ForeColor = System.Drawing.Color.White;
-            this.F12.Location = new System.Drawing.Point(390, 354);
+            this.F12.Location = new System.Drawing.Point(387, 366);
             this.F12.Name = "F12";
             this.F12.Size = new System.Drawing.Size(25, 25);
             this.F12.TabIndex = 530;
@@ -2928,7 +2929,7 @@ namespace MovieMunch
             this.E6.FillColor = System.Drawing.Color.White;
             this.E6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E6.ForeColor = System.Drawing.Color.White;
-            this.E6.Location = new System.Drawing.Point(200, 323);
+            this.E6.Location = new System.Drawing.Point(197, 335);
             this.E6.Name = "E6";
             this.E6.Size = new System.Drawing.Size(25, 25);
             this.E6.TabIndex = 529;
@@ -2944,7 +2945,7 @@ namespace MovieMunch
             this.E5.FillColor = System.Drawing.Color.White;
             this.E5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E5.ForeColor = System.Drawing.Color.White;
-            this.E5.Location = new System.Drawing.Point(174, 323);
+            this.E5.Location = new System.Drawing.Point(171, 335);
             this.E5.Name = "E5";
             this.E5.Size = new System.Drawing.Size(25, 25);
             this.E5.TabIndex = 528;
@@ -2960,7 +2961,7 @@ namespace MovieMunch
             this.E4.FillColor = System.Drawing.Color.White;
             this.E4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E4.ForeColor = System.Drawing.Color.White;
-            this.E4.Location = new System.Drawing.Point(148, 323);
+            this.E4.Location = new System.Drawing.Point(145, 335);
             this.E4.Name = "E4";
             this.E4.Size = new System.Drawing.Size(25, 25);
             this.E4.TabIndex = 527;
@@ -2976,7 +2977,7 @@ namespace MovieMunch
             this.E3.FillColor = System.Drawing.Color.White;
             this.E3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E3.ForeColor = System.Drawing.Color.White;
-            this.E3.Location = new System.Drawing.Point(122, 323);
+            this.E3.Location = new System.Drawing.Point(119, 335);
             this.E3.Name = "E3";
             this.E3.Size = new System.Drawing.Size(25, 25);
             this.E3.TabIndex = 526;
@@ -2992,7 +2993,7 @@ namespace MovieMunch
             this.E2.FillColor = System.Drawing.Color.White;
             this.E2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E2.ForeColor = System.Drawing.Color.White;
-            this.E2.Location = new System.Drawing.Point(96, 323);
+            this.E2.Location = new System.Drawing.Point(93, 335);
             this.E2.Name = "E2";
             this.E2.Size = new System.Drawing.Size(25, 25);
             this.E2.TabIndex = 525;
@@ -3008,7 +3009,7 @@ namespace MovieMunch
             this.E1.FillColor = System.Drawing.Color.White;
             this.E1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E1.ForeColor = System.Drawing.Color.White;
-            this.E1.Location = new System.Drawing.Point(70, 323);
+            this.E1.Location = new System.Drawing.Point(67, 335);
             this.E1.Name = "E1";
             this.E1.Size = new System.Drawing.Size(25, 25);
             this.E1.TabIndex = 524;
@@ -3024,7 +3025,7 @@ namespace MovieMunch
             this.E24.FillColor = System.Drawing.Color.White;
             this.E24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E24.ForeColor = System.Drawing.Color.White;
-            this.E24.Location = new System.Drawing.Point(738, 323);
+            this.E24.Location = new System.Drawing.Point(735, 335);
             this.E24.Name = "E24";
             this.E24.Size = new System.Drawing.Size(25, 25);
             this.E24.TabIndex = 523;
@@ -3040,7 +3041,7 @@ namespace MovieMunch
             this.E23.FillColor = System.Drawing.Color.White;
             this.E23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E23.ForeColor = System.Drawing.Color.White;
-            this.E23.Location = new System.Drawing.Point(712, 323);
+            this.E23.Location = new System.Drawing.Point(709, 335);
             this.E23.Name = "E23";
             this.E23.Size = new System.Drawing.Size(25, 25);
             this.E23.TabIndex = 522;
@@ -3056,7 +3057,7 @@ namespace MovieMunch
             this.E22.FillColor = System.Drawing.Color.White;
             this.E22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E22.ForeColor = System.Drawing.Color.White;
-            this.E22.Location = new System.Drawing.Point(686, 323);
+            this.E22.Location = new System.Drawing.Point(683, 335);
             this.E22.Name = "E22";
             this.E22.Size = new System.Drawing.Size(25, 25);
             this.E22.TabIndex = 521;
@@ -3072,7 +3073,7 @@ namespace MovieMunch
             this.E21.FillColor = System.Drawing.Color.White;
             this.E21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E21.ForeColor = System.Drawing.Color.White;
-            this.E21.Location = new System.Drawing.Point(660, 323);
+            this.E21.Location = new System.Drawing.Point(657, 335);
             this.E21.Name = "E21";
             this.E21.Size = new System.Drawing.Size(25, 25);
             this.E21.TabIndex = 520;
@@ -3088,7 +3089,7 @@ namespace MovieMunch
             this.E20.FillColor = System.Drawing.Color.White;
             this.E20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E20.ForeColor = System.Drawing.Color.White;
-            this.E20.Location = new System.Drawing.Point(634, 323);
+            this.E20.Location = new System.Drawing.Point(631, 335);
             this.E20.Name = "E20";
             this.E20.Size = new System.Drawing.Size(25, 25);
             this.E20.TabIndex = 519;
@@ -3104,7 +3105,7 @@ namespace MovieMunch
             this.E19.FillColor = System.Drawing.Color.White;
             this.E19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E19.ForeColor = System.Drawing.Color.White;
-            this.E19.Location = new System.Drawing.Point(608, 323);
+            this.E19.Location = new System.Drawing.Point(605, 335);
             this.E19.Name = "E19";
             this.E19.Size = new System.Drawing.Size(25, 25);
             this.E19.TabIndex = 518;
@@ -3120,7 +3121,7 @@ namespace MovieMunch
             this.E11.FillColor = System.Drawing.Color.White;
             this.E11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E11.ForeColor = System.Drawing.Color.White;
-            this.E11.Location = new System.Drawing.Point(364, 323);
+            this.E11.Location = new System.Drawing.Point(361, 335);
             this.E11.Name = "E11";
             this.E11.Size = new System.Drawing.Size(25, 25);
             this.E11.TabIndex = 517;
@@ -3136,7 +3137,7 @@ namespace MovieMunch
             this.E10.FillColor = System.Drawing.Color.White;
             this.E10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E10.ForeColor = System.Drawing.Color.White;
-            this.E10.Location = new System.Drawing.Point(338, 323);
+            this.E10.Location = new System.Drawing.Point(335, 335);
             this.E10.Name = "E10";
             this.E10.Size = new System.Drawing.Size(25, 25);
             this.E10.TabIndex = 516;
@@ -3152,7 +3153,7 @@ namespace MovieMunch
             this.E9.FillColor = System.Drawing.Color.White;
             this.E9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E9.ForeColor = System.Drawing.Color.White;
-            this.E9.Location = new System.Drawing.Point(312, 323);
+            this.E9.Location = new System.Drawing.Point(309, 335);
             this.E9.Name = "E9";
             this.E9.Size = new System.Drawing.Size(25, 25);
             this.E9.TabIndex = 515;
@@ -3168,7 +3169,7 @@ namespace MovieMunch
             this.E8.FillColor = System.Drawing.Color.White;
             this.E8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E8.ForeColor = System.Drawing.Color.White;
-            this.E8.Location = new System.Drawing.Point(286, 323);
+            this.E8.Location = new System.Drawing.Point(283, 335);
             this.E8.Name = "E8";
             this.E8.Size = new System.Drawing.Size(25, 25);
             this.E8.TabIndex = 514;
@@ -3184,7 +3185,7 @@ namespace MovieMunch
             this.E7.FillColor = System.Drawing.Color.White;
             this.E7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E7.ForeColor = System.Drawing.Color.White;
-            this.E7.Location = new System.Drawing.Point(260, 323);
+            this.E7.Location = new System.Drawing.Point(257, 335);
             this.E7.Name = "E7";
             this.E7.Size = new System.Drawing.Size(25, 25);
             this.E7.TabIndex = 513;
@@ -3200,7 +3201,7 @@ namespace MovieMunch
             this.E18.FillColor = System.Drawing.Color.White;
             this.E18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E18.ForeColor = System.Drawing.Color.White;
-            this.E18.Location = new System.Drawing.Point(546, 323);
+            this.E18.Location = new System.Drawing.Point(543, 335);
             this.E18.Name = "E18";
             this.E18.Size = new System.Drawing.Size(25, 25);
             this.E18.TabIndex = 512;
@@ -3216,7 +3217,7 @@ namespace MovieMunch
             this.E17.FillColor = System.Drawing.Color.White;
             this.E17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E17.ForeColor = System.Drawing.Color.White;
-            this.E17.Location = new System.Drawing.Point(520, 323);
+            this.E17.Location = new System.Drawing.Point(517, 335);
             this.E17.Name = "E17";
             this.E17.Size = new System.Drawing.Size(25, 25);
             this.E17.TabIndex = 511;
@@ -3232,7 +3233,7 @@ namespace MovieMunch
             this.E16.FillColor = System.Drawing.Color.White;
             this.E16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E16.ForeColor = System.Drawing.Color.White;
-            this.E16.Location = new System.Drawing.Point(494, 323);
+            this.E16.Location = new System.Drawing.Point(491, 335);
             this.E16.Name = "E16";
             this.E16.Size = new System.Drawing.Size(25, 25);
             this.E16.TabIndex = 510;
@@ -3248,7 +3249,7 @@ namespace MovieMunch
             this.E15.FillColor = System.Drawing.Color.White;
             this.E15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E15.ForeColor = System.Drawing.Color.White;
-            this.E15.Location = new System.Drawing.Point(468, 323);
+            this.E15.Location = new System.Drawing.Point(465, 335);
             this.E15.Name = "E15";
             this.E15.Size = new System.Drawing.Size(25, 25);
             this.E15.TabIndex = 509;
@@ -3264,7 +3265,7 @@ namespace MovieMunch
             this.E14.FillColor = System.Drawing.Color.White;
             this.E14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E14.ForeColor = System.Drawing.Color.White;
-            this.E14.Location = new System.Drawing.Point(442, 323);
+            this.E14.Location = new System.Drawing.Point(439, 335);
             this.E14.Name = "E14";
             this.E14.Size = new System.Drawing.Size(25, 25);
             this.E14.TabIndex = 508;
@@ -3280,7 +3281,7 @@ namespace MovieMunch
             this.E13.FillColor = System.Drawing.Color.White;
             this.E13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E13.ForeColor = System.Drawing.Color.White;
-            this.E13.Location = new System.Drawing.Point(416, 323);
+            this.E13.Location = new System.Drawing.Point(413, 335);
             this.E13.Name = "E13";
             this.E13.Size = new System.Drawing.Size(25, 25);
             this.E13.TabIndex = 507;
@@ -3296,7 +3297,7 @@ namespace MovieMunch
             this.E12.FillColor = System.Drawing.Color.White;
             this.E12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E12.ForeColor = System.Drawing.Color.White;
-            this.E12.Location = new System.Drawing.Point(390, 323);
+            this.E12.Location = new System.Drawing.Point(387, 335);
             this.E12.Name = "E12";
             this.E12.Size = new System.Drawing.Size(25, 25);
             this.E12.TabIndex = 506;
@@ -3312,7 +3313,7 @@ namespace MovieMunch
             this.D6.FillColor = System.Drawing.Color.White;
             this.D6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D6.ForeColor = System.Drawing.Color.White;
-            this.D6.Location = new System.Drawing.Point(200, 292);
+            this.D6.Location = new System.Drawing.Point(197, 304);
             this.D6.Name = "D6";
             this.D6.Size = new System.Drawing.Size(25, 25);
             this.D6.TabIndex = 505;
@@ -3328,7 +3329,7 @@ namespace MovieMunch
             this.D5.FillColor = System.Drawing.Color.White;
             this.D5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D5.ForeColor = System.Drawing.Color.White;
-            this.D5.Location = new System.Drawing.Point(174, 292);
+            this.D5.Location = new System.Drawing.Point(171, 304);
             this.D5.Name = "D5";
             this.D5.Size = new System.Drawing.Size(25, 25);
             this.D5.TabIndex = 504;
@@ -3344,7 +3345,7 @@ namespace MovieMunch
             this.D4.FillColor = System.Drawing.Color.White;
             this.D4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D4.ForeColor = System.Drawing.Color.White;
-            this.D4.Location = new System.Drawing.Point(148, 292);
+            this.D4.Location = new System.Drawing.Point(145, 304);
             this.D4.Name = "D4";
             this.D4.Size = new System.Drawing.Size(25, 25);
             this.D4.TabIndex = 503;
@@ -3360,7 +3361,7 @@ namespace MovieMunch
             this.D3.FillColor = System.Drawing.Color.White;
             this.D3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D3.ForeColor = System.Drawing.Color.White;
-            this.D3.Location = new System.Drawing.Point(122, 292);
+            this.D3.Location = new System.Drawing.Point(119, 304);
             this.D3.Name = "D3";
             this.D3.Size = new System.Drawing.Size(25, 25);
             this.D3.TabIndex = 502;
@@ -3376,7 +3377,7 @@ namespace MovieMunch
             this.D2.FillColor = System.Drawing.Color.White;
             this.D2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D2.ForeColor = System.Drawing.Color.White;
-            this.D2.Location = new System.Drawing.Point(96, 292);
+            this.D2.Location = new System.Drawing.Point(93, 304);
             this.D2.Name = "D2";
             this.D2.Size = new System.Drawing.Size(25, 25);
             this.D2.TabIndex = 501;
@@ -3392,7 +3393,7 @@ namespace MovieMunch
             this.D1.FillColor = System.Drawing.Color.White;
             this.D1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D1.ForeColor = System.Drawing.Color.White;
-            this.D1.Location = new System.Drawing.Point(70, 292);
+            this.D1.Location = new System.Drawing.Point(67, 304);
             this.D1.Name = "D1";
             this.D1.Size = new System.Drawing.Size(25, 25);
             this.D1.TabIndex = 500;
@@ -3408,7 +3409,7 @@ namespace MovieMunch
             this.D24.FillColor = System.Drawing.Color.White;
             this.D24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D24.ForeColor = System.Drawing.Color.White;
-            this.D24.Location = new System.Drawing.Point(738, 292);
+            this.D24.Location = new System.Drawing.Point(735, 304);
             this.D24.Name = "D24";
             this.D24.Size = new System.Drawing.Size(25, 25);
             this.D24.TabIndex = 499;
@@ -3424,7 +3425,7 @@ namespace MovieMunch
             this.D23.FillColor = System.Drawing.Color.White;
             this.D23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D23.ForeColor = System.Drawing.Color.White;
-            this.D23.Location = new System.Drawing.Point(712, 292);
+            this.D23.Location = new System.Drawing.Point(709, 304);
             this.D23.Name = "D23";
             this.D23.Size = new System.Drawing.Size(25, 25);
             this.D23.TabIndex = 498;
@@ -3440,7 +3441,7 @@ namespace MovieMunch
             this.D22.FillColor = System.Drawing.Color.White;
             this.D22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D22.ForeColor = System.Drawing.Color.White;
-            this.D22.Location = new System.Drawing.Point(686, 292);
+            this.D22.Location = new System.Drawing.Point(683, 304);
             this.D22.Name = "D22";
             this.D22.Size = new System.Drawing.Size(25, 25);
             this.D22.TabIndex = 497;
@@ -3456,7 +3457,7 @@ namespace MovieMunch
             this.D21.FillColor = System.Drawing.Color.White;
             this.D21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D21.ForeColor = System.Drawing.Color.White;
-            this.D21.Location = new System.Drawing.Point(660, 292);
+            this.D21.Location = new System.Drawing.Point(657, 304);
             this.D21.Name = "D21";
             this.D21.Size = new System.Drawing.Size(25, 25);
             this.D21.TabIndex = 496;
@@ -3472,7 +3473,7 @@ namespace MovieMunch
             this.D20.FillColor = System.Drawing.Color.White;
             this.D20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D20.ForeColor = System.Drawing.Color.White;
-            this.D20.Location = new System.Drawing.Point(634, 292);
+            this.D20.Location = new System.Drawing.Point(631, 304);
             this.D20.Name = "D20";
             this.D20.Size = new System.Drawing.Size(25, 25);
             this.D20.TabIndex = 495;
@@ -3488,7 +3489,7 @@ namespace MovieMunch
             this.D19.FillColor = System.Drawing.Color.White;
             this.D19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D19.ForeColor = System.Drawing.Color.White;
-            this.D19.Location = new System.Drawing.Point(608, 292);
+            this.D19.Location = new System.Drawing.Point(605, 304);
             this.D19.Name = "D19";
             this.D19.Size = new System.Drawing.Size(25, 25);
             this.D19.TabIndex = 494;
@@ -3504,7 +3505,7 @@ namespace MovieMunch
             this.D11.FillColor = System.Drawing.Color.White;
             this.D11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D11.ForeColor = System.Drawing.Color.White;
-            this.D11.Location = new System.Drawing.Point(364, 292);
+            this.D11.Location = new System.Drawing.Point(361, 304);
             this.D11.Name = "D11";
             this.D11.Size = new System.Drawing.Size(25, 25);
             this.D11.TabIndex = 493;
@@ -3520,7 +3521,7 @@ namespace MovieMunch
             this.D10.FillColor = System.Drawing.Color.White;
             this.D10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D10.ForeColor = System.Drawing.Color.White;
-            this.D10.Location = new System.Drawing.Point(338, 292);
+            this.D10.Location = new System.Drawing.Point(335, 304);
             this.D10.Name = "D10";
             this.D10.Size = new System.Drawing.Size(25, 25);
             this.D10.TabIndex = 492;
@@ -3536,7 +3537,7 @@ namespace MovieMunch
             this.D9.FillColor = System.Drawing.Color.White;
             this.D9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D9.ForeColor = System.Drawing.Color.White;
-            this.D9.Location = new System.Drawing.Point(312, 292);
+            this.D9.Location = new System.Drawing.Point(309, 304);
             this.D9.Name = "D9";
             this.D9.Size = new System.Drawing.Size(25, 25);
             this.D9.TabIndex = 491;
@@ -3552,7 +3553,7 @@ namespace MovieMunch
             this.D8.FillColor = System.Drawing.Color.White;
             this.D8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D8.ForeColor = System.Drawing.Color.White;
-            this.D8.Location = new System.Drawing.Point(286, 292);
+            this.D8.Location = new System.Drawing.Point(283, 304);
             this.D8.Name = "D8";
             this.D8.Size = new System.Drawing.Size(25, 25);
             this.D8.TabIndex = 490;
@@ -3568,7 +3569,7 @@ namespace MovieMunch
             this.D7.FillColor = System.Drawing.Color.White;
             this.D7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D7.ForeColor = System.Drawing.Color.White;
-            this.D7.Location = new System.Drawing.Point(260, 292);
+            this.D7.Location = new System.Drawing.Point(257, 304);
             this.D7.Name = "D7";
             this.D7.Size = new System.Drawing.Size(25, 25);
             this.D7.TabIndex = 489;
@@ -3584,7 +3585,7 @@ namespace MovieMunch
             this.D18.FillColor = System.Drawing.Color.White;
             this.D18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D18.ForeColor = System.Drawing.Color.White;
-            this.D18.Location = new System.Drawing.Point(546, 292);
+            this.D18.Location = new System.Drawing.Point(543, 304);
             this.D18.Name = "D18";
             this.D18.Size = new System.Drawing.Size(25, 25);
             this.D18.TabIndex = 488;
@@ -3600,7 +3601,7 @@ namespace MovieMunch
             this.D17.FillColor = System.Drawing.Color.White;
             this.D17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D17.ForeColor = System.Drawing.Color.White;
-            this.D17.Location = new System.Drawing.Point(520, 292);
+            this.D17.Location = new System.Drawing.Point(517, 304);
             this.D17.Name = "D17";
             this.D17.Size = new System.Drawing.Size(25, 25);
             this.D17.TabIndex = 487;
@@ -3616,7 +3617,7 @@ namespace MovieMunch
             this.D16.FillColor = System.Drawing.Color.White;
             this.D16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D16.ForeColor = System.Drawing.Color.White;
-            this.D16.Location = new System.Drawing.Point(494, 292);
+            this.D16.Location = new System.Drawing.Point(491, 304);
             this.D16.Name = "D16";
             this.D16.Size = new System.Drawing.Size(25, 25);
             this.D16.TabIndex = 486;
@@ -3632,7 +3633,7 @@ namespace MovieMunch
             this.D15.FillColor = System.Drawing.Color.White;
             this.D15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D15.ForeColor = System.Drawing.Color.White;
-            this.D15.Location = new System.Drawing.Point(468, 292);
+            this.D15.Location = new System.Drawing.Point(465, 304);
             this.D15.Name = "D15";
             this.D15.Size = new System.Drawing.Size(25, 25);
             this.D15.TabIndex = 485;
@@ -3648,7 +3649,7 @@ namespace MovieMunch
             this.D14.FillColor = System.Drawing.Color.White;
             this.D14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D14.ForeColor = System.Drawing.Color.White;
-            this.D14.Location = new System.Drawing.Point(442, 292);
+            this.D14.Location = new System.Drawing.Point(439, 304);
             this.D14.Name = "D14";
             this.D14.Size = new System.Drawing.Size(25, 25);
             this.D14.TabIndex = 484;
@@ -3664,7 +3665,7 @@ namespace MovieMunch
             this.D13.FillColor = System.Drawing.Color.White;
             this.D13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D13.ForeColor = System.Drawing.Color.White;
-            this.D13.Location = new System.Drawing.Point(416, 292);
+            this.D13.Location = new System.Drawing.Point(413, 304);
             this.D13.Name = "D13";
             this.D13.Size = new System.Drawing.Size(25, 25);
             this.D13.TabIndex = 483;
@@ -3680,7 +3681,7 @@ namespace MovieMunch
             this.D12.FillColor = System.Drawing.Color.White;
             this.D12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.D12.ForeColor = System.Drawing.Color.White;
-            this.D12.Location = new System.Drawing.Point(390, 292);
+            this.D12.Location = new System.Drawing.Point(387, 304);
             this.D12.Name = "D12";
             this.D12.Size = new System.Drawing.Size(25, 25);
             this.D12.TabIndex = 482;
@@ -3696,7 +3697,7 @@ namespace MovieMunch
             this.C6.FillColor = System.Drawing.Color.White;
             this.C6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C6.ForeColor = System.Drawing.Color.White;
-            this.C6.Location = new System.Drawing.Point(200, 261);
+            this.C6.Location = new System.Drawing.Point(197, 273);
             this.C6.Name = "C6";
             this.C6.Size = new System.Drawing.Size(25, 25);
             this.C6.TabIndex = 481;
@@ -3712,7 +3713,7 @@ namespace MovieMunch
             this.C5.FillColor = System.Drawing.Color.White;
             this.C5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C5.ForeColor = System.Drawing.Color.White;
-            this.C5.Location = new System.Drawing.Point(174, 261);
+            this.C5.Location = new System.Drawing.Point(171, 273);
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(25, 25);
             this.C5.TabIndex = 480;
@@ -3728,7 +3729,7 @@ namespace MovieMunch
             this.C4.FillColor = System.Drawing.Color.White;
             this.C4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C4.ForeColor = System.Drawing.Color.White;
-            this.C4.Location = new System.Drawing.Point(148, 261);
+            this.C4.Location = new System.Drawing.Point(145, 273);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(25, 25);
             this.C4.TabIndex = 479;
@@ -3744,7 +3745,7 @@ namespace MovieMunch
             this.C3.FillColor = System.Drawing.Color.White;
             this.C3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C3.ForeColor = System.Drawing.Color.White;
-            this.C3.Location = new System.Drawing.Point(122, 261);
+            this.C3.Location = new System.Drawing.Point(119, 273);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(25, 25);
             this.C3.TabIndex = 478;
@@ -3760,7 +3761,7 @@ namespace MovieMunch
             this.C2.FillColor = System.Drawing.Color.White;
             this.C2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C2.ForeColor = System.Drawing.Color.White;
-            this.C2.Location = new System.Drawing.Point(96, 261);
+            this.C2.Location = new System.Drawing.Point(93, 273);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(25, 25);
             this.C2.TabIndex = 477;
@@ -3776,7 +3777,7 @@ namespace MovieMunch
             this.C1.FillColor = System.Drawing.Color.White;
             this.C1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C1.ForeColor = System.Drawing.Color.White;
-            this.C1.Location = new System.Drawing.Point(70, 261);
+            this.C1.Location = new System.Drawing.Point(67, 273);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(25, 25);
             this.C1.TabIndex = 476;
@@ -3792,7 +3793,7 @@ namespace MovieMunch
             this.C24.FillColor = System.Drawing.Color.White;
             this.C24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C24.ForeColor = System.Drawing.Color.White;
-            this.C24.Location = new System.Drawing.Point(738, 261);
+            this.C24.Location = new System.Drawing.Point(735, 273);
             this.C24.Name = "C24";
             this.C24.Size = new System.Drawing.Size(25, 25);
             this.C24.TabIndex = 475;
@@ -3808,7 +3809,7 @@ namespace MovieMunch
             this.C23.FillColor = System.Drawing.Color.White;
             this.C23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C23.ForeColor = System.Drawing.Color.White;
-            this.C23.Location = new System.Drawing.Point(712, 261);
+            this.C23.Location = new System.Drawing.Point(709, 273);
             this.C23.Name = "C23";
             this.C23.Size = new System.Drawing.Size(25, 25);
             this.C23.TabIndex = 474;
@@ -3824,7 +3825,7 @@ namespace MovieMunch
             this.C22.FillColor = System.Drawing.Color.White;
             this.C22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C22.ForeColor = System.Drawing.Color.White;
-            this.C22.Location = new System.Drawing.Point(686, 261);
+            this.C22.Location = new System.Drawing.Point(683, 273);
             this.C22.Name = "C22";
             this.C22.Size = new System.Drawing.Size(25, 25);
             this.C22.TabIndex = 473;
@@ -3840,7 +3841,7 @@ namespace MovieMunch
             this.C21.FillColor = System.Drawing.Color.White;
             this.C21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C21.ForeColor = System.Drawing.Color.White;
-            this.C21.Location = new System.Drawing.Point(660, 261);
+            this.C21.Location = new System.Drawing.Point(657, 273);
             this.C21.Name = "C21";
             this.C21.Size = new System.Drawing.Size(25, 25);
             this.C21.TabIndex = 472;
@@ -3856,7 +3857,7 @@ namespace MovieMunch
             this.C20.FillColor = System.Drawing.Color.White;
             this.C20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C20.ForeColor = System.Drawing.Color.White;
-            this.C20.Location = new System.Drawing.Point(634, 261);
+            this.C20.Location = new System.Drawing.Point(631, 273);
             this.C20.Name = "C20";
             this.C20.Size = new System.Drawing.Size(25, 25);
             this.C20.TabIndex = 471;
@@ -3872,7 +3873,7 @@ namespace MovieMunch
             this.C19.FillColor = System.Drawing.Color.White;
             this.C19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C19.ForeColor = System.Drawing.Color.White;
-            this.C19.Location = new System.Drawing.Point(608, 261);
+            this.C19.Location = new System.Drawing.Point(605, 273);
             this.C19.Name = "C19";
             this.C19.Size = new System.Drawing.Size(25, 25);
             this.C19.TabIndex = 470;
@@ -3888,7 +3889,7 @@ namespace MovieMunch
             this.C11.FillColor = System.Drawing.Color.White;
             this.C11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C11.ForeColor = System.Drawing.Color.White;
-            this.C11.Location = new System.Drawing.Point(364, 261);
+            this.C11.Location = new System.Drawing.Point(361, 273);
             this.C11.Name = "C11";
             this.C11.Size = new System.Drawing.Size(25, 25);
             this.C11.TabIndex = 469;
@@ -3904,7 +3905,7 @@ namespace MovieMunch
             this.C10.FillColor = System.Drawing.Color.White;
             this.C10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C10.ForeColor = System.Drawing.Color.White;
-            this.C10.Location = new System.Drawing.Point(338, 261);
+            this.C10.Location = new System.Drawing.Point(335, 273);
             this.C10.Name = "C10";
             this.C10.Size = new System.Drawing.Size(25, 25);
             this.C10.TabIndex = 468;
@@ -3920,7 +3921,7 @@ namespace MovieMunch
             this.C9.FillColor = System.Drawing.Color.White;
             this.C9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C9.ForeColor = System.Drawing.Color.White;
-            this.C9.Location = new System.Drawing.Point(312, 261);
+            this.C9.Location = new System.Drawing.Point(309, 273);
             this.C9.Name = "C9";
             this.C9.Size = new System.Drawing.Size(25, 25);
             this.C9.TabIndex = 467;
@@ -3936,7 +3937,7 @@ namespace MovieMunch
             this.C8.FillColor = System.Drawing.Color.White;
             this.C8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C8.ForeColor = System.Drawing.Color.White;
-            this.C8.Location = new System.Drawing.Point(286, 261);
+            this.C8.Location = new System.Drawing.Point(283, 273);
             this.C8.Name = "C8";
             this.C8.Size = new System.Drawing.Size(25, 25);
             this.C8.TabIndex = 466;
@@ -3952,7 +3953,7 @@ namespace MovieMunch
             this.C7.FillColor = System.Drawing.Color.White;
             this.C7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C7.ForeColor = System.Drawing.Color.White;
-            this.C7.Location = new System.Drawing.Point(260, 261);
+            this.C7.Location = new System.Drawing.Point(257, 273);
             this.C7.Name = "C7";
             this.C7.Size = new System.Drawing.Size(25, 25);
             this.C7.TabIndex = 465;
@@ -3968,7 +3969,7 @@ namespace MovieMunch
             this.C18.FillColor = System.Drawing.Color.White;
             this.C18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C18.ForeColor = System.Drawing.Color.White;
-            this.C18.Location = new System.Drawing.Point(546, 261);
+            this.C18.Location = new System.Drawing.Point(543, 273);
             this.C18.Name = "C18";
             this.C18.Size = new System.Drawing.Size(25, 25);
             this.C18.TabIndex = 464;
@@ -3984,7 +3985,7 @@ namespace MovieMunch
             this.C17.FillColor = System.Drawing.Color.White;
             this.C17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C17.ForeColor = System.Drawing.Color.White;
-            this.C17.Location = new System.Drawing.Point(520, 261);
+            this.C17.Location = new System.Drawing.Point(517, 273);
             this.C17.Name = "C17";
             this.C17.Size = new System.Drawing.Size(25, 25);
             this.C17.TabIndex = 463;
@@ -4000,7 +4001,7 @@ namespace MovieMunch
             this.C16.FillColor = System.Drawing.Color.White;
             this.C16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C16.ForeColor = System.Drawing.Color.White;
-            this.C16.Location = new System.Drawing.Point(494, 261);
+            this.C16.Location = new System.Drawing.Point(491, 273);
             this.C16.Name = "C16";
             this.C16.Size = new System.Drawing.Size(25, 25);
             this.C16.TabIndex = 462;
@@ -4016,7 +4017,7 @@ namespace MovieMunch
             this.C15.FillColor = System.Drawing.Color.White;
             this.C15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C15.ForeColor = System.Drawing.Color.White;
-            this.C15.Location = new System.Drawing.Point(468, 261);
+            this.C15.Location = new System.Drawing.Point(465, 273);
             this.C15.Name = "C15";
             this.C15.Size = new System.Drawing.Size(25, 25);
             this.C15.TabIndex = 461;
@@ -4032,7 +4033,7 @@ namespace MovieMunch
             this.C14.FillColor = System.Drawing.Color.White;
             this.C14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C14.ForeColor = System.Drawing.Color.White;
-            this.C14.Location = new System.Drawing.Point(442, 261);
+            this.C14.Location = new System.Drawing.Point(439, 273);
             this.C14.Name = "C14";
             this.C14.Size = new System.Drawing.Size(25, 25);
             this.C14.TabIndex = 460;
@@ -4048,7 +4049,7 @@ namespace MovieMunch
             this.C13.FillColor = System.Drawing.Color.White;
             this.C13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C13.ForeColor = System.Drawing.Color.White;
-            this.C13.Location = new System.Drawing.Point(416, 261);
+            this.C13.Location = new System.Drawing.Point(413, 273);
             this.C13.Name = "C13";
             this.C13.Size = new System.Drawing.Size(25, 25);
             this.C13.TabIndex = 459;
@@ -4064,7 +4065,7 @@ namespace MovieMunch
             this.C12.FillColor = System.Drawing.Color.White;
             this.C12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.C12.ForeColor = System.Drawing.Color.White;
-            this.C12.Location = new System.Drawing.Point(390, 261);
+            this.C12.Location = new System.Drawing.Point(387, 273);
             this.C12.Name = "C12";
             this.C12.Size = new System.Drawing.Size(25, 25);
             this.C12.TabIndex = 458;
@@ -4080,7 +4081,7 @@ namespace MovieMunch
             this.B6.FillColor = System.Drawing.Color.White;
             this.B6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B6.ForeColor = System.Drawing.Color.White;
-            this.B6.Location = new System.Drawing.Point(200, 230);
+            this.B6.Location = new System.Drawing.Point(197, 242);
             this.B6.Name = "B6";
             this.B6.Size = new System.Drawing.Size(25, 25);
             this.B6.TabIndex = 457;
@@ -4096,7 +4097,7 @@ namespace MovieMunch
             this.B5.FillColor = System.Drawing.Color.White;
             this.B5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B5.ForeColor = System.Drawing.Color.White;
-            this.B5.Location = new System.Drawing.Point(174, 230);
+            this.B5.Location = new System.Drawing.Point(171, 242);
             this.B5.Name = "B5";
             this.B5.Size = new System.Drawing.Size(25, 25);
             this.B5.TabIndex = 456;
@@ -4112,7 +4113,7 @@ namespace MovieMunch
             this.B4.FillColor = System.Drawing.Color.White;
             this.B4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B4.ForeColor = System.Drawing.Color.White;
-            this.B4.Location = new System.Drawing.Point(148, 230);
+            this.B4.Location = new System.Drawing.Point(145, 242);
             this.B4.Name = "B4";
             this.B4.Size = new System.Drawing.Size(25, 25);
             this.B4.TabIndex = 455;
@@ -4128,7 +4129,7 @@ namespace MovieMunch
             this.B3.FillColor = System.Drawing.Color.White;
             this.B3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B3.ForeColor = System.Drawing.Color.White;
-            this.B3.Location = new System.Drawing.Point(122, 230);
+            this.B3.Location = new System.Drawing.Point(119, 242);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(25, 25);
             this.B3.TabIndex = 454;
@@ -4144,7 +4145,7 @@ namespace MovieMunch
             this.B2.FillColor = System.Drawing.Color.White;
             this.B2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B2.ForeColor = System.Drawing.Color.White;
-            this.B2.Location = new System.Drawing.Point(96, 230);
+            this.B2.Location = new System.Drawing.Point(93, 242);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(25, 25);
             this.B2.TabIndex = 453;
@@ -4160,7 +4161,7 @@ namespace MovieMunch
             this.B1.FillColor = System.Drawing.Color.White;
             this.B1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B1.ForeColor = System.Drawing.Color.White;
-            this.B1.Location = new System.Drawing.Point(70, 230);
+            this.B1.Location = new System.Drawing.Point(67, 242);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(25, 25);
             this.B1.TabIndex = 452;
@@ -4176,7 +4177,7 @@ namespace MovieMunch
             this.B24.FillColor = System.Drawing.Color.White;
             this.B24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B24.ForeColor = System.Drawing.Color.White;
-            this.B24.Location = new System.Drawing.Point(738, 230);
+            this.B24.Location = new System.Drawing.Point(735, 242);
             this.B24.Name = "B24";
             this.B24.Size = new System.Drawing.Size(25, 25);
             this.B24.TabIndex = 451;
@@ -4192,7 +4193,7 @@ namespace MovieMunch
             this.B23.FillColor = System.Drawing.Color.White;
             this.B23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B23.ForeColor = System.Drawing.Color.White;
-            this.B23.Location = new System.Drawing.Point(712, 230);
+            this.B23.Location = new System.Drawing.Point(709, 242);
             this.B23.Name = "B23";
             this.B23.Size = new System.Drawing.Size(25, 25);
             this.B23.TabIndex = 450;
@@ -4208,7 +4209,7 @@ namespace MovieMunch
             this.B22.FillColor = System.Drawing.Color.White;
             this.B22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B22.ForeColor = System.Drawing.Color.White;
-            this.B22.Location = new System.Drawing.Point(686, 230);
+            this.B22.Location = new System.Drawing.Point(683, 242);
             this.B22.Name = "B22";
             this.B22.Size = new System.Drawing.Size(25, 25);
             this.B22.TabIndex = 449;
@@ -4224,7 +4225,7 @@ namespace MovieMunch
             this.B21.FillColor = System.Drawing.Color.White;
             this.B21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B21.ForeColor = System.Drawing.Color.White;
-            this.B21.Location = new System.Drawing.Point(660, 230);
+            this.B21.Location = new System.Drawing.Point(657, 242);
             this.B21.Name = "B21";
             this.B21.Size = new System.Drawing.Size(25, 25);
             this.B21.TabIndex = 448;
@@ -4240,7 +4241,7 @@ namespace MovieMunch
             this.B20.FillColor = System.Drawing.Color.White;
             this.B20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B20.ForeColor = System.Drawing.Color.White;
-            this.B20.Location = new System.Drawing.Point(634, 230);
+            this.B20.Location = new System.Drawing.Point(631, 242);
             this.B20.Name = "B20";
             this.B20.Size = new System.Drawing.Size(25, 25);
             this.B20.TabIndex = 447;
@@ -4256,7 +4257,7 @@ namespace MovieMunch
             this.B19.FillColor = System.Drawing.Color.White;
             this.B19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B19.ForeColor = System.Drawing.Color.White;
-            this.B19.Location = new System.Drawing.Point(608, 230);
+            this.B19.Location = new System.Drawing.Point(605, 242);
             this.B19.Name = "B19";
             this.B19.Size = new System.Drawing.Size(25, 25);
             this.B19.TabIndex = 446;
@@ -4272,7 +4273,7 @@ namespace MovieMunch
             this.B11.FillColor = System.Drawing.Color.White;
             this.B11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B11.ForeColor = System.Drawing.Color.White;
-            this.B11.Location = new System.Drawing.Point(364, 230);
+            this.B11.Location = new System.Drawing.Point(361, 242);
             this.B11.Name = "B11";
             this.B11.Size = new System.Drawing.Size(25, 25);
             this.B11.TabIndex = 445;
@@ -4288,7 +4289,7 @@ namespace MovieMunch
             this.B10.FillColor = System.Drawing.Color.White;
             this.B10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B10.ForeColor = System.Drawing.Color.White;
-            this.B10.Location = new System.Drawing.Point(338, 230);
+            this.B10.Location = new System.Drawing.Point(335, 242);
             this.B10.Name = "B10";
             this.B10.Size = new System.Drawing.Size(25, 25);
             this.B10.TabIndex = 444;
@@ -4304,7 +4305,7 @@ namespace MovieMunch
             this.B9.FillColor = System.Drawing.Color.White;
             this.B9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B9.ForeColor = System.Drawing.Color.White;
-            this.B9.Location = new System.Drawing.Point(312, 230);
+            this.B9.Location = new System.Drawing.Point(309, 242);
             this.B9.Name = "B9";
             this.B9.Size = new System.Drawing.Size(25, 25);
             this.B9.TabIndex = 443;
@@ -4320,7 +4321,7 @@ namespace MovieMunch
             this.B8.FillColor = System.Drawing.Color.White;
             this.B8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B8.ForeColor = System.Drawing.Color.White;
-            this.B8.Location = new System.Drawing.Point(286, 230);
+            this.B8.Location = new System.Drawing.Point(283, 242);
             this.B8.Name = "B8";
             this.B8.Size = new System.Drawing.Size(25, 25);
             this.B8.TabIndex = 442;
@@ -4336,7 +4337,7 @@ namespace MovieMunch
             this.B7.FillColor = System.Drawing.Color.White;
             this.B7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B7.ForeColor = System.Drawing.Color.White;
-            this.B7.Location = new System.Drawing.Point(260, 230);
+            this.B7.Location = new System.Drawing.Point(257, 242);
             this.B7.Name = "B7";
             this.B7.Size = new System.Drawing.Size(25, 25);
             this.B7.TabIndex = 441;
@@ -4352,7 +4353,7 @@ namespace MovieMunch
             this.B18.FillColor = System.Drawing.Color.White;
             this.B18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B18.ForeColor = System.Drawing.Color.White;
-            this.B18.Location = new System.Drawing.Point(546, 230);
+            this.B18.Location = new System.Drawing.Point(543, 242);
             this.B18.Name = "B18";
             this.B18.Size = new System.Drawing.Size(25, 25);
             this.B18.TabIndex = 440;
@@ -4368,7 +4369,7 @@ namespace MovieMunch
             this.B17.FillColor = System.Drawing.Color.White;
             this.B17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B17.ForeColor = System.Drawing.Color.White;
-            this.B17.Location = new System.Drawing.Point(520, 230);
+            this.B17.Location = new System.Drawing.Point(517, 242);
             this.B17.Name = "B17";
             this.B17.Size = new System.Drawing.Size(25, 25);
             this.B17.TabIndex = 439;
@@ -4384,7 +4385,7 @@ namespace MovieMunch
             this.B16.FillColor = System.Drawing.Color.White;
             this.B16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B16.ForeColor = System.Drawing.Color.White;
-            this.B16.Location = new System.Drawing.Point(494, 230);
+            this.B16.Location = new System.Drawing.Point(491, 242);
             this.B16.Name = "B16";
             this.B16.Size = new System.Drawing.Size(28, 25);
             this.B16.TabIndex = 438;
@@ -4400,7 +4401,7 @@ namespace MovieMunch
             this.B15.FillColor = System.Drawing.Color.White;
             this.B15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B15.ForeColor = System.Drawing.Color.White;
-            this.B15.Location = new System.Drawing.Point(468, 230);
+            this.B15.Location = new System.Drawing.Point(465, 242);
             this.B15.Name = "B15";
             this.B15.Size = new System.Drawing.Size(25, 25);
             this.B15.TabIndex = 437;
@@ -4416,7 +4417,7 @@ namespace MovieMunch
             this.B14.FillColor = System.Drawing.Color.White;
             this.B14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B14.ForeColor = System.Drawing.Color.White;
-            this.B14.Location = new System.Drawing.Point(442, 230);
+            this.B14.Location = new System.Drawing.Point(439, 242);
             this.B14.Name = "B14";
             this.B14.Size = new System.Drawing.Size(25, 25);
             this.B14.TabIndex = 436;
@@ -4432,7 +4433,7 @@ namespace MovieMunch
             this.B13.FillColor = System.Drawing.Color.White;
             this.B13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B13.ForeColor = System.Drawing.Color.White;
-            this.B13.Location = new System.Drawing.Point(416, 230);
+            this.B13.Location = new System.Drawing.Point(413, 242);
             this.B13.Name = "B13";
             this.B13.Size = new System.Drawing.Size(25, 25);
             this.B13.TabIndex = 435;
@@ -4448,7 +4449,7 @@ namespace MovieMunch
             this.B12.FillColor = System.Drawing.Color.White;
             this.B12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.B12.ForeColor = System.Drawing.Color.White;
-            this.B12.Location = new System.Drawing.Point(390, 230);
+            this.B12.Location = new System.Drawing.Point(387, 242);
             this.B12.Name = "B12";
             this.B12.Size = new System.Drawing.Size(25, 25);
             this.B12.TabIndex = 434;
@@ -4464,7 +4465,7 @@ namespace MovieMunch
             this.A6.FillColor = System.Drawing.Color.White;
             this.A6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A6.ForeColor = System.Drawing.Color.White;
-            this.A6.Location = new System.Drawing.Point(200, 199);
+            this.A6.Location = new System.Drawing.Point(197, 211);
             this.A6.Name = "A6";
             this.A6.Size = new System.Drawing.Size(25, 25);
             this.A6.TabIndex = 433;
@@ -4480,7 +4481,7 @@ namespace MovieMunch
             this.A5.FillColor = System.Drawing.Color.White;
             this.A5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A5.ForeColor = System.Drawing.Color.White;
-            this.A5.Location = new System.Drawing.Point(174, 199);
+            this.A5.Location = new System.Drawing.Point(171, 211);
             this.A5.Name = "A5";
             this.A5.Size = new System.Drawing.Size(25, 25);
             this.A5.TabIndex = 432;
@@ -4496,7 +4497,7 @@ namespace MovieMunch
             this.A4.FillColor = System.Drawing.Color.White;
             this.A4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A4.ForeColor = System.Drawing.Color.White;
-            this.A4.Location = new System.Drawing.Point(148, 199);
+            this.A4.Location = new System.Drawing.Point(145, 211);
             this.A4.Name = "A4";
             this.A4.Size = new System.Drawing.Size(25, 25);
             this.A4.TabIndex = 431;
@@ -4512,7 +4513,7 @@ namespace MovieMunch
             this.A3.FillColor = System.Drawing.Color.White;
             this.A3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A3.ForeColor = System.Drawing.Color.White;
-            this.A3.Location = new System.Drawing.Point(122, 199);
+            this.A3.Location = new System.Drawing.Point(119, 211);
             this.A3.Name = "A3";
             this.A3.Size = new System.Drawing.Size(25, 25);
             this.A3.TabIndex = 430;
@@ -4528,7 +4529,7 @@ namespace MovieMunch
             this.A2.FillColor = System.Drawing.Color.White;
             this.A2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A2.ForeColor = System.Drawing.Color.White;
-            this.A2.Location = new System.Drawing.Point(96, 199);
+            this.A2.Location = new System.Drawing.Point(93, 211);
             this.A2.Name = "A2";
             this.A2.Size = new System.Drawing.Size(25, 25);
             this.A2.TabIndex = 429;
@@ -4544,7 +4545,7 @@ namespace MovieMunch
             this.A1.FillColor = System.Drawing.Color.White;
             this.A1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A1.ForeColor = System.Drawing.Color.White;
-            this.A1.Location = new System.Drawing.Point(70, 199);
+            this.A1.Location = new System.Drawing.Point(67, 211);
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(25, 25);
             this.A1.TabIndex = 428;
@@ -4560,7 +4561,7 @@ namespace MovieMunch
             this.A24.FillColor = System.Drawing.Color.White;
             this.A24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A24.ForeColor = System.Drawing.Color.White;
-            this.A24.Location = new System.Drawing.Point(738, 199);
+            this.A24.Location = new System.Drawing.Point(735, 211);
             this.A24.Name = "A24";
             this.A24.Size = new System.Drawing.Size(25, 25);
             this.A24.TabIndex = 427;
@@ -4576,7 +4577,7 @@ namespace MovieMunch
             this.A23.FillColor = System.Drawing.Color.White;
             this.A23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A23.ForeColor = System.Drawing.Color.White;
-            this.A23.Location = new System.Drawing.Point(712, 199);
+            this.A23.Location = new System.Drawing.Point(709, 211);
             this.A23.Name = "A23";
             this.A23.Size = new System.Drawing.Size(25, 25);
             this.A23.TabIndex = 426;
@@ -4592,7 +4593,7 @@ namespace MovieMunch
             this.A22.FillColor = System.Drawing.Color.White;
             this.A22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A22.ForeColor = System.Drawing.Color.White;
-            this.A22.Location = new System.Drawing.Point(686, 199);
+            this.A22.Location = new System.Drawing.Point(683, 211);
             this.A22.Name = "A22";
             this.A22.Size = new System.Drawing.Size(25, 25);
             this.A22.TabIndex = 425;
@@ -4608,7 +4609,7 @@ namespace MovieMunch
             this.A21.FillColor = System.Drawing.Color.White;
             this.A21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A21.ForeColor = System.Drawing.Color.White;
-            this.A21.Location = new System.Drawing.Point(660, 199);
+            this.A21.Location = new System.Drawing.Point(657, 211);
             this.A21.Name = "A21";
             this.A21.Size = new System.Drawing.Size(25, 25);
             this.A21.TabIndex = 424;
@@ -4624,7 +4625,7 @@ namespace MovieMunch
             this.A20.FillColor = System.Drawing.Color.White;
             this.A20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A20.ForeColor = System.Drawing.Color.White;
-            this.A20.Location = new System.Drawing.Point(634, 199);
+            this.A20.Location = new System.Drawing.Point(631, 211);
             this.A20.Name = "A20";
             this.A20.Size = new System.Drawing.Size(25, 25);
             this.A20.TabIndex = 423;
@@ -4640,7 +4641,7 @@ namespace MovieMunch
             this.A19.FillColor = System.Drawing.Color.White;
             this.A19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A19.ForeColor = System.Drawing.Color.White;
-            this.A19.Location = new System.Drawing.Point(608, 199);
+            this.A19.Location = new System.Drawing.Point(605, 211);
             this.A19.Name = "A19";
             this.A19.Size = new System.Drawing.Size(25, 25);
             this.A19.TabIndex = 422;
@@ -4656,7 +4657,7 @@ namespace MovieMunch
             this.A11.FillColor = System.Drawing.Color.White;
             this.A11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A11.ForeColor = System.Drawing.Color.White;
-            this.A11.Location = new System.Drawing.Point(364, 199);
+            this.A11.Location = new System.Drawing.Point(361, 211);
             this.A11.Name = "A11";
             this.A11.Size = new System.Drawing.Size(25, 25);
             this.A11.TabIndex = 421;
@@ -4672,7 +4673,7 @@ namespace MovieMunch
             this.A10.FillColor = System.Drawing.Color.White;
             this.A10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A10.ForeColor = System.Drawing.Color.White;
-            this.A10.Location = new System.Drawing.Point(338, 199);
+            this.A10.Location = new System.Drawing.Point(335, 211);
             this.A10.Name = "A10";
             this.A10.Size = new System.Drawing.Size(25, 25);
             this.A10.TabIndex = 420;
@@ -4688,7 +4689,7 @@ namespace MovieMunch
             this.A9.FillColor = System.Drawing.Color.White;
             this.A9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A9.ForeColor = System.Drawing.Color.White;
-            this.A9.Location = new System.Drawing.Point(312, 199);
+            this.A9.Location = new System.Drawing.Point(309, 211);
             this.A9.Name = "A9";
             this.A9.Size = new System.Drawing.Size(25, 25);
             this.A9.TabIndex = 419;
@@ -4704,7 +4705,7 @@ namespace MovieMunch
             this.A8.FillColor = System.Drawing.Color.White;
             this.A8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A8.ForeColor = System.Drawing.Color.White;
-            this.A8.Location = new System.Drawing.Point(286, 199);
+            this.A8.Location = new System.Drawing.Point(283, 211);
             this.A8.Name = "A8";
             this.A8.Size = new System.Drawing.Size(25, 25);
             this.A8.TabIndex = 418;
@@ -4720,7 +4721,7 @@ namespace MovieMunch
             this.A7.FillColor = System.Drawing.Color.White;
             this.A7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A7.ForeColor = System.Drawing.Color.White;
-            this.A7.Location = new System.Drawing.Point(260, 199);
+            this.A7.Location = new System.Drawing.Point(257, 211);
             this.A7.Name = "A7";
             this.A7.Size = new System.Drawing.Size(25, 25);
             this.A7.TabIndex = 417;
@@ -4736,7 +4737,7 @@ namespace MovieMunch
             this.A18.FillColor = System.Drawing.Color.White;
             this.A18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A18.ForeColor = System.Drawing.Color.White;
-            this.A18.Location = new System.Drawing.Point(546, 199);
+            this.A18.Location = new System.Drawing.Point(543, 211);
             this.A18.Name = "A18";
             this.A18.Size = new System.Drawing.Size(25, 25);
             this.A18.TabIndex = 416;
@@ -4752,7 +4753,7 @@ namespace MovieMunch
             this.A17.FillColor = System.Drawing.Color.White;
             this.A17.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A17.ForeColor = System.Drawing.Color.White;
-            this.A17.Location = new System.Drawing.Point(520, 199);
+            this.A17.Location = new System.Drawing.Point(517, 211);
             this.A17.Name = "A17";
             this.A17.Size = new System.Drawing.Size(25, 25);
             this.A17.TabIndex = 415;
@@ -4768,7 +4769,7 @@ namespace MovieMunch
             this.A16.FillColor = System.Drawing.Color.White;
             this.A16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A16.ForeColor = System.Drawing.Color.White;
-            this.A16.Location = new System.Drawing.Point(494, 199);
+            this.A16.Location = new System.Drawing.Point(491, 211);
             this.A16.Name = "A16";
             this.A16.Size = new System.Drawing.Size(25, 25);
             this.A16.TabIndex = 414;
@@ -4784,7 +4785,7 @@ namespace MovieMunch
             this.A15.FillColor = System.Drawing.Color.White;
             this.A15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A15.ForeColor = System.Drawing.Color.White;
-            this.A15.Location = new System.Drawing.Point(468, 199);
+            this.A15.Location = new System.Drawing.Point(465, 211);
             this.A15.Name = "A15";
             this.A15.Size = new System.Drawing.Size(25, 25);
             this.A15.TabIndex = 413;
@@ -4800,7 +4801,7 @@ namespace MovieMunch
             this.A14.FillColor = System.Drawing.Color.White;
             this.A14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A14.ForeColor = System.Drawing.Color.White;
-            this.A14.Location = new System.Drawing.Point(442, 199);
+            this.A14.Location = new System.Drawing.Point(439, 211);
             this.A14.Name = "A14";
             this.A14.Size = new System.Drawing.Size(25, 25);
             this.A14.TabIndex = 412;
@@ -4816,7 +4817,7 @@ namespace MovieMunch
             this.A13.FillColor = System.Drawing.Color.White;
             this.A13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A13.ForeColor = System.Drawing.Color.White;
-            this.A13.Location = new System.Drawing.Point(416, 199);
+            this.A13.Location = new System.Drawing.Point(413, 211);
             this.A13.Name = "A13";
             this.A13.Size = new System.Drawing.Size(25, 25);
             this.A13.TabIndex = 411;
@@ -4832,7 +4833,7 @@ namespace MovieMunch
             this.A12.FillColor = System.Drawing.Color.White;
             this.A12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.A12.ForeColor = System.Drawing.Color.White;
-            this.A12.Location = new System.Drawing.Point(390, 199);
+            this.A12.Location = new System.Drawing.Point(387, 211);
             this.A12.Name = "A12";
             this.A12.Size = new System.Drawing.Size(25, 25);
             this.A12.TabIndex = 410;
@@ -4843,7 +4844,7 @@ namespace MovieMunch
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(483, 603);
+            this.label28.Location = new System.Drawing.Point(480, 615);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(150, 16);
             this.label28.TabIndex = 678;
@@ -4854,7 +4855,7 @@ namespace MovieMunch
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(18, 603);
+            this.label27.Location = new System.Drawing.Point(15, 615);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(150, 16);
             this.label27.TabIndex = 677;
@@ -4866,7 +4867,7 @@ namespace MovieMunch
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label26);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(18, 559);
+            this.panel3.Location = new System.Drawing.Point(15, 571);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(791, 30);
             this.panel3.TabIndex = 676;
@@ -4892,7 +4893,7 @@ namespace MovieMunch
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(608, 531);
+            this.guna2Button3.Location = new System.Drawing.Point(605, 543);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(20, 20);
             this.guna2Button3.TabIndex = 675;
@@ -4902,7 +4903,7 @@ namespace MovieMunch
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(631, 533);
+            this.label25.Location = new System.Drawing.Point(628, 545);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(154, 16);
             this.label25.TabIndex = 674;
@@ -4918,7 +4919,7 @@ namespace MovieMunch
             this.guna2Button2.FillColor = System.Drawing.Color.White;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(338, 533);
+            this.guna2Button2.Location = new System.Drawing.Point(335, 545);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(20, 20);
             this.guna2Button2.TabIndex = 673;
@@ -4928,7 +4929,7 @@ namespace MovieMunch
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(361, 535);
+            this.label24.Location = new System.Drawing.Point(358, 547);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(151, 16);
             this.label24.TabIndex = 672;
@@ -4944,7 +4945,7 @@ namespace MovieMunch
             this.guna2Button1.FillColor = System.Drawing.Color.Yellow;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(52, 533);
+            this.guna2Button1.Location = new System.Drawing.Point(49, 545);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(20, 20);
             this.guna2Button1.TabIndex = 671;
@@ -4954,7 +4955,7 @@ namespace MovieMunch
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(75, 535);
+            this.label23.Location = new System.Drawing.Point(72, 547);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(150, 16);
             this.label23.TabIndex = 670;
@@ -4965,7 +4966,7 @@ namespace MovieMunch
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(790, 481);
+            this.label13.Location = new System.Drawing.Point(787, 493);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(19, 20);
             this.label13.TabIndex = 669;
@@ -4976,7 +4977,7 @@ namespace MovieMunch
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(795, 450);
+            this.label14.Location = new System.Drawing.Point(792, 462);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(14, 20);
             this.label14.TabIndex = 668;
@@ -4987,7 +4988,7 @@ namespace MovieMunch
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(790, 419);
+            this.label15.Location = new System.Drawing.Point(787, 431);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(23, 20);
             this.label15.TabIndex = 667;
@@ -4998,7 +4999,7 @@ namespace MovieMunch
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(790, 388);
+            this.label16.Location = new System.Drawing.Point(787, 400);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 20);
             this.label16.TabIndex = 666;
@@ -5009,7 +5010,7 @@ namespace MovieMunch
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(790, 357);
+            this.label17.Location = new System.Drawing.Point(787, 369);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(20, 20);
             this.label17.TabIndex = 665;
@@ -5020,7 +5021,7 @@ namespace MovieMunch
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(790, 326);
+            this.label18.Location = new System.Drawing.Point(787, 338);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(21, 20);
             this.label18.TabIndex = 664;
@@ -5031,7 +5032,7 @@ namespace MovieMunch
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(790, 295);
+            this.label19.Location = new System.Drawing.Point(787, 307);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(23, 20);
             this.label19.TabIndex = 663;
@@ -5042,7 +5043,7 @@ namespace MovieMunch
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(790, 264);
+            this.label20.Location = new System.Drawing.Point(787, 276);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(22, 20);
             this.label20.TabIndex = 662;
@@ -5053,7 +5054,7 @@ namespace MovieMunch
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(790, 233);
+            this.label21.Location = new System.Drawing.Point(787, 245);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(22, 20);
             this.label21.TabIndex = 661;
@@ -5064,7 +5065,7 @@ namespace MovieMunch
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(790, 202);
+            this.label22.Location = new System.Drawing.Point(787, 214);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(21, 20);
             this.label22.TabIndex = 660;
@@ -5075,7 +5076,7 @@ namespace MovieMunch
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(19, 481);
+            this.label12.Location = new System.Drawing.Point(16, 493);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(19, 20);
             this.label12.TabIndex = 659;
@@ -5086,7 +5087,7 @@ namespace MovieMunch
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(24, 450);
+            this.label11.Location = new System.Drawing.Point(21, 462);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(14, 20);
             this.label11.TabIndex = 658;
@@ -5097,7 +5098,7 @@ namespace MovieMunch
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(19, 419);
+            this.label10.Location = new System.Drawing.Point(16, 431);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(23, 20);
             this.label10.TabIndex = 657;
@@ -5108,7 +5109,7 @@ namespace MovieMunch
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(19, 388);
+            this.label9.Location = new System.Drawing.Point(16, 400);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 20);
             this.label9.TabIndex = 656;
@@ -5119,7 +5120,7 @@ namespace MovieMunch
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(19, 357);
+            this.label8.Location = new System.Drawing.Point(16, 369);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 20);
             this.label8.TabIndex = 655;
@@ -5130,7 +5131,7 @@ namespace MovieMunch
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(19, 326);
+            this.label7.Location = new System.Drawing.Point(16, 338);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 20);
             this.label7.TabIndex = 654;
@@ -5141,7 +5142,7 @@ namespace MovieMunch
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 295);
+            this.label6.Location = new System.Drawing.Point(16, 307);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 20);
             this.label6.TabIndex = 653;
@@ -5152,7 +5153,7 @@ namespace MovieMunch
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 264);
+            this.label5.Location = new System.Drawing.Point(16, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 20);
             this.label5.TabIndex = 652;
@@ -5163,7 +5164,7 @@ namespace MovieMunch
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 233);
+            this.label4.Location = new System.Drawing.Point(16, 245);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 20);
             this.label4.TabIndex = 651;
@@ -5174,7 +5175,7 @@ namespace MovieMunch
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 202);
+            this.label2.Location = new System.Drawing.Point(16, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 20);
             this.label2.TabIndex = 650;
@@ -5186,7 +5187,7 @@ namespace MovieMunch
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(18, 141);
+            this.panel1.Location = new System.Drawing.Point(15, 153);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(791, 30);
             this.panel1.TabIndex = 408;
@@ -5210,7 +5211,7 @@ namespace MovieMunch
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.White;
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(18, 85);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(15, 97);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -5222,30 +5223,30 @@ namespace MovieMunch
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.movieTitlelbl);
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(18, 17);
+            this.panel4.Location = new System.Drawing.Point(15, 29);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(791, 50);
             this.panel4.TabIndex = 407;
             // 
-            // label3
+            // movieTitlelbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 36);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "TRENDING";
+            this.movieTitlelbl.AutoSize = true;
+            this.movieTitlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movieTitlelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.movieTitlelbl.Location = new System.Drawing.Point(3, 6);
+            this.movieTitlelbl.Name = "movieTitlelbl";
+            this.movieTitlelbl.Size = new System.Drawing.Size(179, 36);
+            this.movieTitlelbl.TabIndex = 0;
+            this.movieTitlelbl.Text = "TRENDING";
             // 
             // guna2VScrollBar1
             // 
             this.guna2VScrollBar1.BindingContainer = this.seatReservationFlowLayoutPanel;
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 554;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1188, 75);
+            this.guna2VScrollBar1.LargeChange = 575;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1193, 75);
             this.guna2VScrollBar1.Maximum = 705;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 21;
@@ -5264,7 +5265,7 @@ namespace MovieMunch
             this.btnReserveSeat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.btnReserveSeat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnReserveSeat.ForeColor = System.Drawing.Color.White;
-            this.btnReserveSeat.Location = new System.Drawing.Point(149, 461);
+            this.btnReserveSeat.Location = new System.Drawing.Point(139, 454);
             this.btnReserveSeat.Name = "btnReserveSeat";
             this.btnReserveSeat.Size = new System.Drawing.Size(160, 40);
             this.btnReserveSeat.TabIndex = 682;
@@ -5288,15 +5289,15 @@ namespace MovieMunch
             this.bunifuIconButton4.ColorContrastOnClick = 30;
             this.bunifuIconButton4.ColorContrastOnHover = 30;
             this.bunifuIconButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.bunifuIconButton4.CustomizableEdges = borderEdges8;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bunifuIconButton4.CustomizableEdges = borderEdges4;
             this.bunifuIconButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton4.Image = null;
             this.bunifuIconButton4.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.bunifuIconButton4.Location = new System.Drawing.Point(315, 457);
+            this.bunifuIconButton4.Location = new System.Drawing.Point(305, 450);
             this.bunifuIconButton4.Name = "bunifuIconButton4";
             this.bunifuIconButton4.RoundBorders = true;
             this.bunifuIconButton4.ShowBorders = true;
@@ -5304,24 +5305,41 @@ namespace MovieMunch
             this.bunifuIconButton4.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.bunifuIconButton4.TabIndex = 681;
             // 
-            // pictureBox1
+            // moviePicToReserve
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox1.Location = new System.Drawing.Point(133, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 335);
-            this.pictureBox1.TabIndex = 680;
-            this.pictureBox1.TabStop = false;
+            this.moviePicToReserve.BackColor = System.Drawing.Color.Transparent;
+            this.moviePicToReserve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.moviePicToReserve.Location = new System.Drawing.Point(127, 107);
+            this.moviePicToReserve.Name = "moviePicToReserve";
+            this.moviePicToReserve.Size = new System.Drawing.Size(235, 331);
+            this.moviePicToReserve.TabIndex = 680;
+            this.moviePicToReserve.TabStop = false;
+            // 
+            // backToHomeBtn
+            // 
+            this.backToHomeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.backToHomeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.backToHomeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.backToHomeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.backToHomeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.backToHomeBtn.ForeColor = System.Drawing.Color.White;
+            this.backToHomeBtn.Location = new System.Drawing.Point(127, 583);
+            this.backToHomeBtn.Name = "backToHomeBtn";
+            this.backToHomeBtn.Size = new System.Drawing.Size(103, 45);
+            this.backToHomeBtn.TabIndex = 683;
+            this.backToHomeBtn.Text = "Back";
+            this.backToHomeBtn.Click += new System.EventHandler(this.backToHomeBtn_Click);
             // 
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.backToHomeBtn);
             this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.btnReserveSeat);
             this.Controls.Add(this.bunifuIconButton4);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.moviePicToReserve);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.seatReservationFlowLayoutPanel);
@@ -5342,7 +5360,7 @@ namespace MovieMunch
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePicToReserve)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5635,12 +5653,13 @@ namespace MovieMunch
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label movieTitlelbl;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2Button btnReserveSeat;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox moviePicToReserve;
+        private Guna.UI2.WinForms.Guna2Button backToHomeBtn;
     }
 }

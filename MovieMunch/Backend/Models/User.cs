@@ -28,6 +28,9 @@ public class User
     [BsonElement("confirmPassword")]
     public string ConfirmPassword { get; set; }
 
+    [BsonElement("Status")]
+    public string Status { get; set; }
+
     [BsonElement("createdAt")]
     public DateTime CreatedAt { get; set; }
 }

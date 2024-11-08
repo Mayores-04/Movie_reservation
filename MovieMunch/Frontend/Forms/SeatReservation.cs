@@ -18,7 +18,6 @@ namespace MovieMunch
         private string _movieName;
         private string _reservedBy;
         private decimal _moviePrice;
-
         private List<string> _selectedSeats;
 
         public SeatReservation(string movieTitle, decimal moviePrice, string reservedBy)
@@ -35,7 +34,7 @@ namespace MovieMunch
             _selectedSeats = new List<string>();
 
             _allSeats = new List<string>();
-            for (int i = 1; i <= 24; i++) 
+            for (int i = 1; i <= 24; i++)
             {
                 for (char j = 'A'; j <= 'J'; j++)
                 {
@@ -43,13 +42,29 @@ namespace MovieMunch
                 }
             }
 
+            movieTitlelbl.Text = _movieName;
             this.Load += SeatReservation_Load;
         }
 
         private async void SeatReservation_Load(object sender, EventArgs e)
         {
+            movieTitlelbl.Text = _movieName;
+
+            string imagePath = await _seatReservationService.GetMovieImagePathAsync(_movieName);
+
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+
+                moviePicToReserve.BackgroundImage = Image.FromFile(imagePath);
+            }
+            else
+            {
+                moviePicToReserve.Image = Properties.Resources.BG;
+            }
+
             await LoadSeatStatusAsync(_movieName);
         }
+
 
         private async Task LoadSeatStatusAsync(string movieName)
         {
@@ -66,13 +81,12 @@ namespace MovieMunch
                         if (seatButton is Guna2Button btn)
                         {
                             btn.FillColor = reservation.IsReserved ? Color.FromArgb(199, 44, 65) : Color.White;
-                            btn.Refresh(); 
+                            btn.Refresh();
                         }
                     }
                 }
             }
         }
-
 
         private async void btnReserveSeat_Click(object sender, EventArgs e)
         {
@@ -92,8 +106,8 @@ namespace MovieMunch
                     {
                         if (this.Controls[seat] is Guna2Button seatButton)
                         {
-                            seatButton.FillColor = Color.FromArgb(199, 44, 65); 
-                            seatButton.Refresh(); 
+                            seatButton.FillColor = Color.FromArgb(199, 44, 65);
+                            seatButton.Refresh();
                         }
                     }
 
@@ -112,7 +126,6 @@ namespace MovieMunch
             }
         }
 
-
         private void SeatButton_Click(object sender, EventArgs e)
         {
             if (sender is Guna2Button seatButton)
@@ -121,8 +134,8 @@ namespace MovieMunch
                 {
                     if (!_selectedSeats.Contains(seatButton.Name))
                     {
-                        seatButton.FillColor = Color.Yellow; 
-                        _selectedSeats.Add(seatButton.Name); 
+                        seatButton.FillColor = Color.Yellow;
+                        _selectedSeats.Add(seatButton.Name);
                     }
                     else
                     {
@@ -133,6 +146,11 @@ namespace MovieMunch
                     seatButton.Refresh();
                 }
             }
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }
