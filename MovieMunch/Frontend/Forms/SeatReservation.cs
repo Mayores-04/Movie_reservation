@@ -8,6 +8,8 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Xml.Linq;
 
 namespace MovieMunch
 {
@@ -151,6 +153,11 @@ namespace MovieMunch
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+
+            mainPage.SetUserInfo(_reservedBy);
         }
+
     }
 }

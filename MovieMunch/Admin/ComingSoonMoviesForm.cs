@@ -76,7 +76,7 @@ namespace MovieMunch.Admin
 
             foreach (var movie in comingSoonMovies)
             {
-                ComingSoonTable.Rows.Add(movie.Id, movie.ComingSoonTitle, movie.ComingSoonDescription, movie.ComingSoonImagePath);
+                ComingSoonTable.Rows.Add(movie.Id, movie.ComingSoonTitle, movie.ComingSoonDescription, movie.ComingSoonPrice, movie.ComingSoonImagePath);
             }
         }
 
@@ -112,6 +112,7 @@ namespace MovieMunch.Admin
                     var currentRow = ComingSoonTable.Rows[ComingSoonTable.CurrentCell.RowIndex];
                     movie.ComingSoonTitle = currentRow.Cells["ComingSoonTitle"].Value.ToString();
                     movie.ComingSoonDescription = currentRow.Cells["ComingSoonDescription"].Value.ToString();
+                    movie.ComingSoonPrice = Convert.ToDouble(currentRow.Cells["csoonPrice"].Value.ToString());
                     movie.ComingSoonImagePath = currentRow.Cells["ComingSoonImagePath"].Value.ToString();
 
                     _movieService.UpdateComingSoon(movie);
@@ -160,6 +161,7 @@ namespace MovieMunch.Admin
         {
             string movieTitle = RemoveSurroundingQuotes(comingSoonTitleInput.Text);
             string movieDescription = RemoveSurroundingQuotes(comingSoonDescriptionInput.Text);
+            double csoonPrice = Convert.ToDouble(RemoveSurroundingQuotes(csoonPriceInput.Text));
             string movieImagePath = RemoveSurroundingQuotes(comingSoonDirectoryInput.Text);
 
             if (string.IsNullOrEmpty(movieTitle) || string.IsNullOrEmpty(movieDescription) || string.IsNullOrEmpty(movieImagePath))
@@ -172,6 +174,7 @@ namespace MovieMunch.Admin
             {
                 ComingSoonTitle = movieTitle,
                 ComingSoonDescription = movieDescription,
+                ComingSoonPrice = csoonPrice,
                 ComingSoonImagePath = movieImagePath
             };
 
@@ -194,6 +197,7 @@ namespace MovieMunch.Admin
         {
             comingSoonTitleInput.Clear();
             comingSoonDescriptionInput.Clear();
+            csoonPriceInput.Clear();
             comingSoonDirectoryInput.Clear();
         }
 
@@ -204,7 +208,7 @@ namespace MovieMunch.Admin
 
         private void backComingSoonBtn_Click(object sender, EventArgs e)
         {
-            MainAdminForm mainAdminForm = new MainAdminForm();
+            MainAdmin mainAdminForm = new MainAdmin();
             mainAdminForm.Visible = true;
             this.Close();
         }

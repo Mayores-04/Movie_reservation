@@ -124,7 +124,7 @@
   <data name="LeftTurnBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFIAAABWCAYAAABcvcGNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAADEdJREFUeF7tnNtvXEcdx+PEsbO+xrcYO7Zlx5dk13HseH2/7J4kdhJUVWqoAk+o
+        DAAACwwBP0AiyAAADEdJREFUeF7tnNtvXEcdx+PEsbO+xrcYO7Zlx5dk13HseH2/7J4kdhJUVWqoAk+o
         rcJLK5XyUiHBQ9JKlAdE6UVClIsKQqmqVKVJH0AVtC5qhdQIKUhAQGlFaECYkrgW5A9Yfp+TmWg8nr3Y
         PrvZ4/onfXXs9ZmZ33z3d5vf2fW2LdmSLdmSLQmfLHtepwO71Z+3xBafoHnv4Zvz3nOfznsLnx73rss1
         lRF37llgzPJx7yEZP6Sm+2zJ8pzn+cTNecurSFo/ri/Ney8LsQ+oZTanLJ8UyzvunQ2YvHS4Q6qsqZYP
@@ -237,7 +237,7 @@
         OuKxXcKUB1ffL4QQQgg+IfwADtXa3hqNuyYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="trendingMovieSeatReservationBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAL4AAAA2CAYAAAB5lyMoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQBSURBVHhe7Z0/bBMxFMZvZGRkoyOKfSojE7ZvYkIsSCxI
@@ -288,7 +288,7 @@
         OuKxXcKUB1ffL4QQQgg+IfwADtXa3hqNuyYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="comingSoonMovieSeatReservationBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAL4AAAA2CAYAAAB5lyMoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQBSURBVHhe7Z0/bBMxFMZvZGRkoyOKfSojE7ZvYkIsSCxI
@@ -339,7 +339,7 @@
         OuKxXcKUB1ffL4QQQgg+IfwADtXa3hqNuyYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="filmsMovieSeatReservationBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAL4AAAA2CAYAAAB5lyMoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQBSURBVHhe7Z0/bBMxFMZvZGRkoyOKfSojE7ZvYkIsSCxI
@@ -390,7 +390,7 @@
         OuKxXcKUB1ffL4QQQgg+IfwADtXa3hqNuyYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton24.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="snackDealsReservedSeatBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAL4AAAA2CAYAAAB5lyMoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQBSURBVHhe7Z0/bBMxFMZvZGRkoyOKfSojE7ZvYkIsSCxI

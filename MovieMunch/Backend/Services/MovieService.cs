@@ -75,7 +75,7 @@ public class MovieService
                 Title = movie.MovieTitle,        
                 ImagePath = movie.MovieImagePath, 
                 Description = movie.MovieDescription,
-                Price = movie.MoviePrice           
+                Price = (decimal)movie.MoviePrice
             }).ToList();
         }
         catch (Exception ex)

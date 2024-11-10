@@ -79,7 +79,7 @@ namespace MovieMunch.Admin.FilmsInCinema
 
             foreach (var film in films)
             {
-                MoviesTable.Rows.Add(film.Id, film.FilmTitle, film.FilmsDescription, film.FilmImagePath);
+                MoviesTable.Rows.Add(film.Id, film.FilmTitle, film.FilmsDescription, film.FilmsPrice, film.FilmImagePath);
             }
         }
 
@@ -115,6 +115,7 @@ namespace MovieMunch.Admin.FilmsInCinema
                     var currentRow = MoviesTable.Rows[MoviesTable.CurrentCell.RowIndex];
                     film.FilmTitle = currentRow.Cells["Title"].Value.ToString(); 
                     film.FilmsDescription = currentRow.Cells["Description"].Value.ToString(); 
+                    film.FilmsPrice = Convert.ToDouble(currentRow.Cells["filmPrice"].Value.ToString()); 
                     film.FilmImagePath = currentRow.Cells["imagePath"].Value.ToString(); 
 
                     _movieService.UpdateFilm(film);
@@ -172,6 +173,7 @@ namespace MovieMunch.Admin.FilmsInCinema
         {
             titleInput.Clear();
             descriptionInput.Clear();
+            filmsPriceInput.Clear();
             directoryInput.Clear();
         }
 
@@ -179,6 +181,7 @@ namespace MovieMunch.Admin.FilmsInCinema
         {
             string movieTitle = RemoveSurroundingQuotes(titleInput.Text);
             string movieDescription = RemoveSurroundingQuotes(descriptionInput.Text);
+            double filmsPrice = Convert.ToDouble(RemoveSurroundingQuotes(filmsPriceInput.Text));
             string movieImagePath = RemoveSurroundingQuotes(directoryInput.Text);
 
             if (string.IsNullOrEmpty(movieTitle) || string.IsNullOrEmpty(movieImagePath) || string.IsNullOrEmpty(movieDescription))
@@ -191,6 +194,7 @@ namespace MovieMunch.Admin.FilmsInCinema
             {
                 FilmTitle = movieTitle,
                 FilmsDescription = movieDescription,
+                FilmsPrice = filmsPrice,
                 FilmImagePath = movieImagePath
             };
 
@@ -208,7 +212,7 @@ namespace MovieMunch.Admin.FilmsInCinema
         private void backFilmBtn_Click(object sender, EventArgs e)
         {
 
-            MainAdminForm mainAdminForm = new MainAdminForm();
+            MainAdmin mainAdminForm = new MainAdmin();
             mainAdminForm.Visible = true;
             this.Close();
         }

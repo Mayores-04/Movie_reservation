@@ -46,10 +46,15 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.ComingSoonTable = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.ComingSoonId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComingSoonTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComingSoonDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.csoonPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComingSoonImagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddComingSoonButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.comingSoonDirectoryInput = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -60,6 +65,7 @@
             this.closeImageBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.viewComingSoonBox = new System.Windows.Forms.PictureBox();
             this.backComingSoonBtn = new FontAwesome.Sharp.IconButton();
+            this.csoonPriceInput = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ComingSoonTable)).BeginInit();
             this.viewComingSoonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewComingSoonBox)).BeginInit();
@@ -90,6 +96,7 @@
             this.ComingSoonId,
             this.ComingSoonTitle,
             this.ComingSoonDescription,
+            this.csoonPrice,
             this.ComingSoonImagePath});
             this.ComingSoonTable.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.ComingSoonTable.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -149,6 +156,12 @@
             this.ComingSoonDescription.HeaderText = "Description";
             this.ComingSoonDescription.MinimumWidth = 6;
             this.ComingSoonDescription.Name = "ComingSoonDescription";
+            // 
+            // csoonPrice
+            // 
+            this.csoonPrice.HeaderText = "Price";
+            this.csoonPrice.MinimumWidth = 6;
+            this.csoonPrice.Name = "csoonPrice";
             // 
             // ComingSoonImagePath
             // 
@@ -353,7 +366,7 @@
             this.comingSoonDescriptionInput.IconRight = null;
             this.comingSoonDescriptionInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.comingSoonDescriptionInput.Lines = new string[0];
-            this.comingSoonDescriptionInput.Location = new System.Drawing.Point(512, 111);
+            this.comingSoonDescriptionInput.Location = new System.Drawing.Point(423, 111);
             this.comingSoonDescriptionInput.MaxLength = 32767;
             this.comingSoonDescriptionInput.MinimumSize = new System.Drawing.Size(1, 1);
             this.comingSoonDescriptionInput.Modified = false;
@@ -389,7 +402,7 @@
             this.comingSoonDescriptionInput.SelectionLength = 0;
             this.comingSoonDescriptionInput.SelectionStart = 0;
             this.comingSoonDescriptionInput.ShortcutsEnabled = true;
-            this.comingSoonDescriptionInput.Size = new System.Drawing.Size(276, 43);
+            this.comingSoonDescriptionInput.Size = new System.Drawing.Size(205, 43);
             this.comingSoonDescriptionInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.comingSoonDescriptionInput.TabIndex = 22;
             this.comingSoonDescriptionInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -465,7 +478,7 @@
             this.comingSoonTitleInput.SelectionLength = 0;
             this.comingSoonTitleInput.SelectionStart = 0;
             this.comingSoonTitleInput.ShortcutsEnabled = true;
-            this.comingSoonTitleInput.Size = new System.Drawing.Size(276, 43);
+            this.comingSoonTitleInput.Size = new System.Drawing.Size(187, 43);
             this.comingSoonTitleInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.comingSoonTitleInput.TabIndex = 21;
             this.comingSoonTitleInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -567,6 +580,82 @@
             this.backComingSoonBtn.UseVisualStyleBackColor = true;
             this.backComingSoonBtn.Click += new System.EventHandler(this.backComingSoonBtn_Click);
             // 
+            // csoonPriceInput
+            // 
+            this.csoonPriceInput.AcceptsReturn = false;
+            this.csoonPriceInput.AcceptsTab = false;
+            this.csoonPriceInput.AnimationSpeed = 200;
+            this.csoonPriceInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.csoonPriceInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.csoonPriceInput.AutoSizeHeight = true;
+            this.csoonPriceInput.BackColor = System.Drawing.Color.Transparent;
+            this.csoonPriceInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("csoonPriceInput.BackgroundImage")));
+            this.csoonPriceInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.csoonPriceInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.csoonPriceInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.csoonPriceInput.BorderColorIdle = System.Drawing.Color.Silver;
+            this.csoonPriceInput.BorderRadius = 1;
+            this.csoonPriceInput.BorderThickness = 1;
+            this.csoonPriceInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.csoonPriceInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.csoonPriceInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.csoonPriceInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.csoonPriceInput.DefaultText = "";
+            this.csoonPriceInput.FillColor = System.Drawing.Color.White;
+            this.csoonPriceInput.HideSelection = true;
+            this.csoonPriceInput.IconLeft = null;
+            this.csoonPriceInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.csoonPriceInput.IconPadding = 10;
+            this.csoonPriceInput.IconRight = null;
+            this.csoonPriceInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.csoonPriceInput.Lines = new string[0];
+            this.csoonPriceInput.Location = new System.Drawing.Point(634, 111);
+            this.csoonPriceInput.MaxLength = 32767;
+            this.csoonPriceInput.MinimumSize = new System.Drawing.Size(1, 1);
+            this.csoonPriceInput.Modified = false;
+            this.csoonPriceInput.Multiline = false;
+            this.csoonPriceInput.Name = "csoonPriceInput";
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.csoonPriceInput.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.csoonPriceInput.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.csoonPriceInput.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.csoonPriceInput.OnIdleState = stateProperties16;
+            this.csoonPriceInput.Padding = new System.Windows.Forms.Padding(3);
+            this.csoonPriceInput.PasswordChar = '\0';
+            this.csoonPriceInput.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.csoonPriceInput.PlaceholderText = "Price";
+            this.csoonPriceInput.ReadOnly = false;
+            this.csoonPriceInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.csoonPriceInput.SelectedText = "";
+            this.csoonPriceInput.SelectionLength = 0;
+            this.csoonPriceInput.SelectionStart = 0;
+            this.csoonPriceInput.ShortcutsEnabled = true;
+            this.csoonPriceInput.Size = new System.Drawing.Size(154, 43);
+            this.csoonPriceInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.csoonPriceInput.TabIndex = 37;
+            this.csoonPriceInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.csoonPriceInput.TextMarginBottom = 0;
+            this.csoonPriceInput.TextMarginLeft = 3;
+            this.csoonPriceInput.TextMarginTop = 1;
+            this.csoonPriceInput.TextPlaceholder = "Price";
+            this.csoonPriceInput.UseSystemPasswordChar = false;
+            this.csoonPriceInput.WordWrap = true;
+            // 
             // ComingSoonMoviesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -579,6 +668,7 @@
             this.Controls.Add(this.comingSoonDescriptionInput);
             this.Controls.Add(this.comingSoonTitleInput);
             this.Controls.Add(this.ComingSoonTable);
+            this.Controls.Add(this.csoonPriceInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ComingSoonMoviesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -594,10 +684,6 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuDataGridView ComingSoonTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonImagePath;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddComingSoonButton;
         private Bunifu.UI.WinForms.BunifuTextBox comingSoonDirectoryInput;
         private Bunifu.UI.WinForms.BunifuTextBox comingSoonDescriptionInput;
@@ -607,5 +693,11 @@
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeImageBtn;
         private System.Windows.Forms.PictureBox viewComingSoonBox;
         private FontAwesome.Sharp.IconButton backComingSoonBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn csoonPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonImagePath;
+        private Bunifu.UI.WinForms.BunifuTextBox csoonPriceInput;
     }
 }

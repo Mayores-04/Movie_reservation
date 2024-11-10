@@ -1,13 +1,14 @@
 ﻿using MovieMunch.Admin;
 using System;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace MovieMunch
 {
     public partial class LoginForm : Form
     {
         private MainPage mainPage;
-        private MainAdminForm mainAdminForm;
+        private MainAdmin mainAdminForm;
 
         public LoginForm()
         {
@@ -33,7 +34,13 @@ namespace MovieMunch
 
                 if (result == DialogResult.Yes)
                 {
-                    OpenAdminInterface();
+                    this.Close();
+                    MainPage mainPage = new MainPage();
+                    mainPage.Visible = false;
+                    
+                    MainAdmin mainAdmin = new MainAdmin();
+                    mainAdmin.Show();
+                    
                 }
             }
             else
@@ -53,24 +60,24 @@ namespace MovieMunch
         }
 
 
-        private void OpenAdminInterface()
-        {
-            // Ensure MainPage is closed if it is open
-            if (mainPage != null && !mainPage.IsDisposed)
-            {
-                mainPage.Close();
-                mainPage.Dispose();
-                mainPage = null;
-            }
+        //private void OpenAdminInterface()
+        //{
+        //    // Ensure MainPage is closed if it is open
+        //    if (mainPage != null && !mainPage.IsDisposed)
+        //    {
+        //        mainPage.Close();
+        //        mainPage.Dispose();
+        //        mainPage = null;
+        //    }
 
-            // Close the login form and open the admin interface
-            this.Close();
-            if (mainAdminForm == null || mainAdminForm.IsDisposed)
-            {
-                mainAdminForm = new MainAdminForm();
-            }
-            mainAdminForm.Show();
-        }
+        //    // Close the login form and open the admin interface
+        //    this.Close();
+        //    if (mainAdminForm == null || mainAdminForm.IsDisposed)
+        //    {
+        //        mainAdminForm = new MainAddmin();
+        //    }
+        //    mainAdminForm.Show();
+        //}
 
         //private void OpenUserInterface()
         //{

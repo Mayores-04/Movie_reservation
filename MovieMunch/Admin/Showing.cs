@@ -60,7 +60,7 @@ namespace MovieMunch.Admin
 
             foreach (var movie in movies)
             {
-                MoviesToShowTable.Rows.Add(movie.Id, movie.MovieTitle, movie.MovieDescription, movie.MovieImagePath);
+                MoviesToShowTable.Rows.Add(movie.Id, movie.MovieTitle, movie.MovieDescription, movie.MoviePrice, movie.MovieImagePath);
             }
         }
 
@@ -118,7 +118,8 @@ namespace MovieMunch.Admin
                 {
                     var currentRow = MoviesToShowTable.Rows[MoviesToShowTable.CurrentCell.RowIndex];
                     movie.MovieTitle = currentRow.Cells["moviesTitle"].Value.ToString();
-                    movie.MovieDescription = currentRow.Cells["moviesDescription"].Value.ToString();
+                    movie.MovieDescription = currentRow.Cells["moviesDescription"].Value.ToString(); 
+                    movie.MoviePrice = Convert.ToDouble(currentRow.Cells["moviePrice"].Value.ToString());
                     movie.MovieImagePath = currentRow.Cells["moviesImagePath"].Value.ToString();
 
                     _movieService.UpdateMovies(movie);
@@ -167,6 +168,7 @@ namespace MovieMunch.Admin
         {
             string movieTitle = RemoveSurroundingQuotes(movieTitleInput.Text);
             string movieDescription = RemoveSurroundingQuotes(movieDescriptionInput.Text);
+            double moviePrice = Convert.ToDouble(RemoveSurroundingQuotes(moviePriceInput.Text));
             string movieImagePath = RemoveSurroundingQuotes(movieDirectoryInput.Text);
 
             if (string.IsNullOrEmpty(movieTitle) || string.IsNullOrEmpty(movieImagePath) || string.IsNullOrEmpty(movieDescription))
@@ -179,6 +181,7 @@ namespace MovieMunch.Admin
             {
                 MovieTitle = movieTitle,
                 MovieDescription = movieDescription,
+                MoviePrice = moviePrice,
                 MovieImagePath = movieImagePath
             };
 
@@ -201,6 +204,7 @@ namespace MovieMunch.Admin
         {
             movieTitleInput.Clear();
             movieDescriptionInput.Clear();
+            moviePriceInput.Clear();
             movieDirectoryInput.Clear();
         }
 
@@ -211,7 +215,7 @@ namespace MovieMunch.Admin
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            MainAdminForm mainAdminForm = new MainAdminForm();
+            MainAdmin mainAdminForm = new MainAdmin();
             mainAdminForm.Visible = true;
             this.Close();
         }

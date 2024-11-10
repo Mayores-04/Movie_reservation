@@ -212,7 +212,7 @@ namespace MovieMunch.Admin
 
         private void backComingSoonBtn_Click_1(object sender, EventArgs e)
         {
-            MainAdminForm mainAdminForm = new MainAdminForm();
+            MainAdmin mainAdminForm = new MainAdmin();
             mainAdminForm.Visible = true;
             this.Close();
         }

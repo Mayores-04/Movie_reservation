@@ -76,7 +76,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 434);
+            this.label5.Location = new System.Drawing.Point(78, 424);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 18);
             this.label5.TabIndex = 5;
@@ -89,7 +89,7 @@
             this.SignUpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpBtn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SignUpBtn.LinkColor = System.Drawing.Color.Black;
-            this.SignUpBtn.Location = new System.Drawing.Point(263, 434);
+            this.SignUpBtn.Location = new System.Drawing.Point(247, 424);
             this.SignUpBtn.Name = "SignUpBtn";
             this.SignUpBtn.Size = new System.Drawing.Size(60, 18);
             this.SignUpBtn.TabIndex = 4;

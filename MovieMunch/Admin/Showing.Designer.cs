@@ -33,10 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Showing));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -45,13 +41,17 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.MoviesToShowTable = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.movieId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moviesTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moviesDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moviesImagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddMoviesToShowButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.movieDirectoryInput = new Bunifu.UI.WinForms.BunifuTextBox();
             this.movieDescriptionInput = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -62,6 +62,12 @@
             this.closeShowingImageBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.viewShowingImageBox = new System.Windows.Forms.PictureBox();
             this.backBtn = new FontAwesome.Sharp.IconButton();
+            this.movieId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moviesTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moviesDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moviePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moviesImagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moviePriceInput = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MoviesToShowTable)).BeginInit();
             this.viewShowingImagePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewShowingImageBox)).BeginInit();
@@ -92,6 +98,7 @@
             this.movieId,
             this.moviesTitle,
             this.moviesDescription,
+            this.moviePrice,
             this.moviesImagePath});
             this.MoviesToShowTable.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.MoviesToShowTable.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -126,37 +133,12 @@
             this.MoviesToShowTable.HeaderForeColor = System.Drawing.Color.White;
             this.MoviesToShowTable.Location = new System.Drawing.Point(131, 146);
             this.MoviesToShowTable.Name = "MoviesToShowTable";
-            this.MoviesToShowTable.RowHeadersVisible = false;
             this.MoviesToShowTable.RowHeadersWidth = 51;
             this.MoviesToShowTable.RowTemplate.Height = 40;
             this.MoviesToShowTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MoviesToShowTable.Size = new System.Drawing.Size(963, 454);
             this.MoviesToShowTable.TabIndex = 5;
             this.MoviesToShowTable.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // movieId
-            // 
-            this.movieId.HeaderText = "ID";
-            this.movieId.MinimumWidth = 6;
-            this.movieId.Name = "movieId";
-            // 
-            // moviesTitle
-            // 
-            this.moviesTitle.HeaderText = "Title";
-            this.moviesTitle.MinimumWidth = 6;
-            this.moviesTitle.Name = "moviesTitle";
-            // 
-            // moviesDescription
-            // 
-            this.moviesDescription.HeaderText = "Description";
-            this.moviesDescription.MinimumWidth = 6;
-            this.moviesDescription.Name = "moviesDescription";
-            // 
-            // moviesImagePath
-            // 
-            this.moviesImagePath.HeaderText = "Image Path";
-            this.moviesImagePath.MinimumWidth = 6;
-            this.moviesImagePath.Name = "moviesImagePath";
             // 
             // AddMoviesToShowButton
             // 
@@ -285,26 +267,26 @@
             this.movieDirectoryInput.Modified = false;
             this.movieDirectoryInput.Multiline = false;
             this.movieDirectoryInput.Name = "movieDirectoryInput";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieDirectoryInput.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.movieDirectoryInput.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieDirectoryInput.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieDirectoryInput.OnIdleState = stateProperties16;
+            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieDirectoryInput.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.movieDirectoryInput.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieDirectoryInput.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieDirectoryInput.OnIdleState = stateProperties20;
             this.movieDirectoryInput.Padding = new System.Windows.Forms.Padding(3);
             this.movieDirectoryInput.PasswordChar = '\0';
             this.movieDirectoryInput.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -355,32 +337,32 @@
             this.movieDescriptionInput.IconRight = null;
             this.movieDescriptionInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.movieDescriptionInput.Lines = new string[0];
-            this.movieDescriptionInput.Location = new System.Drawing.Point(535, 97);
+            this.movieDescriptionInput.Location = new System.Drawing.Point(431, 97);
             this.movieDescriptionInput.MaxLength = 32767;
             this.movieDescriptionInput.MinimumSize = new System.Drawing.Size(1, 1);
             this.movieDescriptionInput.Modified = false;
             this.movieDescriptionInput.Multiline = false;
             this.movieDescriptionInput.Name = "movieDescriptionInput";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieDescriptionInput.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.movieDescriptionInput.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieDescriptionInput.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieDescriptionInput.OnIdleState = stateProperties20;
+            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieDescriptionInput.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.movieDescriptionInput.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieDescriptionInput.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Silver;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieDescriptionInput.OnIdleState = stateProperties24;
             this.movieDescriptionInput.Padding = new System.Windows.Forms.Padding(3);
             this.movieDescriptionInput.PasswordChar = '\0';
             this.movieDescriptionInput.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -391,7 +373,7 @@
             this.movieDescriptionInput.SelectionLength = 0;
             this.movieDescriptionInput.SelectionStart = 0;
             this.movieDescriptionInput.ShortcutsEnabled = true;
-            this.movieDescriptionInput.Size = new System.Drawing.Size(276, 43);
+            this.movieDescriptionInput.Size = new System.Drawing.Size(215, 43);
             this.movieDescriptionInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.movieDescriptionInput.TabIndex = 18;
             this.movieDescriptionInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -437,26 +419,26 @@
             this.movieTitleInput.Modified = false;
             this.movieTitleInput.Multiline = false;
             this.movieTitleInput.Name = "movieTitleInput";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieTitleInput.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.movieTitleInput.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieTitleInput.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.movieTitleInput.OnIdleState = stateProperties24;
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieTitleInput.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.movieTitleInput.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieTitleInput.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.movieTitleInput.OnIdleState = stateProperties28;
             this.movieTitleInput.Padding = new System.Windows.Forms.Padding(3);
             this.movieTitleInput.PasswordChar = '\0';
             this.movieTitleInput.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -467,7 +449,7 @@
             this.movieTitleInput.SelectionLength = 0;
             this.movieTitleInput.SelectionStart = 0;
             this.movieTitleInput.ShortcutsEnabled = true;
-            this.movieTitleInput.Size = new System.Drawing.Size(276, 43);
+            this.movieTitleInput.Size = new System.Drawing.Size(172, 43);
             this.movieTitleInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.movieTitleInput.TabIndex = 17;
             this.movieTitleInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -633,7 +615,7 @@
             this.closeShowingImageBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeShowingImageBtn.Image")));
             this.closeShowingImageBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeShowingImageBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeShowingImageBtn.Location = new System.Drawing.Point(982, 115);
+            this.closeShowingImageBtn.Location = new System.Drawing.Point(920, 94);
             this.closeShowingImageBtn.Name = "closeShowingImageBtn";
             this.closeShowingImageBtn.ShowBorders = true;
             this.closeShowingImageBtn.Size = new System.Drawing.Size(38, 33);
@@ -642,7 +624,7 @@
             // 
             // viewShowingImageBox
             // 
-            this.viewShowingImageBox.Location = new System.Drawing.Point(356, 167);
+            this.viewShowingImageBox.Location = new System.Drawing.Point(294, 146);
             this.viewShowingImageBox.Name = "viewShowingImageBox";
             this.viewShowingImageBox.Size = new System.Drawing.Size(598, 399);
             this.viewShowingImageBox.TabIndex = 0;
@@ -660,10 +642,117 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // movieId
+            // 
+            this.movieId.HeaderText = "ID";
+            this.movieId.MinimumWidth = 6;
+            this.movieId.Name = "movieId";
+            // 
+            // moviesTitle
+            // 
+            this.moviesTitle.HeaderText = "Title";
+            this.moviesTitle.MinimumWidth = 6;
+            this.moviesTitle.Name = "moviesTitle";
+            // 
+            // moviesDescription
+            // 
+            this.moviesDescription.HeaderText = "Description";
+            this.moviesDescription.MinimumWidth = 6;
+            this.moviesDescription.Name = "moviesDescription";
+            // 
+            // moviePrice
+            // 
+            this.moviePrice.HeaderText = "Price";
+            this.moviePrice.MinimumWidth = 6;
+            this.moviePrice.Name = "moviePrice";
+            // 
+            // moviesImagePath
+            // 
+            this.moviesImagePath.HeaderText = "Image Path";
+            this.moviesImagePath.MinimumWidth = 6;
+            this.moviesImagePath.Name = "moviesImagePath";
+            // 
+            // moviePriceInput
+            // 
+            this.moviePriceInput.AcceptsReturn = false;
+            this.moviePriceInput.AcceptsTab = false;
+            this.moviePriceInput.AnimationSpeed = 200;
+            this.moviePriceInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.moviePriceInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.moviePriceInput.AutoSizeHeight = true;
+            this.moviePriceInput.BackColor = System.Drawing.Color.Transparent;
+            this.moviePriceInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("moviePriceInput.BackgroundImage")));
+            this.moviePriceInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.moviePriceInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.moviePriceInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.moviePriceInput.BorderColorIdle = System.Drawing.Color.Silver;
+            this.moviePriceInput.BorderRadius = 1;
+            this.moviePriceInput.BorderThickness = 1;
+            this.moviePriceInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.moviePriceInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.moviePriceInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.moviePriceInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.moviePriceInput.DefaultText = "";
+            this.moviePriceInput.FillColor = System.Drawing.Color.White;
+            this.moviePriceInput.HideSelection = true;
+            this.moviePriceInput.IconLeft = null;
+            this.moviePriceInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.moviePriceInput.IconPadding = 10;
+            this.moviePriceInput.IconRight = null;
+            this.moviePriceInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.moviePriceInput.Lines = new string[0];
+            this.moviePriceInput.Location = new System.Drawing.Point(652, 97);
+            this.moviePriceInput.MaxLength = 32767;
+            this.moviePriceInput.MinimumSize = new System.Drawing.Size(1, 1);
+            this.moviePriceInput.Modified = false;
+            this.moviePriceInput.Multiline = false;
+            this.moviePriceInput.Name = "moviePriceInput";
+            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.moviePriceInput.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.moviePriceInput.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.moviePriceInput.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Empty;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.moviePriceInput.OnIdleState = stateProperties32;
+            this.moviePriceInput.Padding = new System.Windows.Forms.Padding(3);
+            this.moviePriceInput.PasswordChar = '\0';
+            this.moviePriceInput.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.moviePriceInput.PlaceholderText = "Price";
+            this.moviePriceInput.ReadOnly = false;
+            this.moviePriceInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.moviePriceInput.SelectedText = "";
+            this.moviePriceInput.SelectionLength = 0;
+            this.moviePriceInput.SelectionStart = 0;
+            this.moviePriceInput.ShortcutsEnabled = true;
+            this.moviePriceInput.Size = new System.Drawing.Size(159, 43);
+            this.moviePriceInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.moviePriceInput.TabIndex = 35;
+            this.moviePriceInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.moviePriceInput.TextMarginBottom = 0;
+            this.moviePriceInput.TextMarginLeft = 3;
+            this.moviePriceInput.TextMarginTop = 1;
+            this.moviePriceInput.TextPlaceholder = "Price";
+            this.moviePriceInput.UseSystemPasswordChar = false;
+            this.moviePriceInput.WordWrap = true;
+            // 
             // Showing
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.moviePriceInput);
             this.Controls.Add(this.viewShowingImagePanel);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.bunifuLabel1);
@@ -693,13 +782,15 @@
         private Bunifu.UI.WinForms.BunifuTextBox movieTitleInput;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton SaveMoviesButton;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn movieId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn moviesTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn moviesDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn moviesImagePath;
         private System.Windows.Forms.Panel viewShowingImagePanel;
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeShowingImageBtn;
         private System.Windows.Forms.PictureBox viewShowingImageBox;
         private FontAwesome.Sharp.IconButton backBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn movieId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moviesTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moviesDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moviePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moviesImagePath;
+        private Bunifu.UI.WinForms.BunifuTextBox moviePriceInput;
     }
 }

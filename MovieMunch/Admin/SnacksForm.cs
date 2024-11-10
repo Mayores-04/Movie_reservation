@@ -210,7 +210,7 @@ namespace MovieMunch.Admin
 
         private void backSnacksBtn_Click(object sender, EventArgs e)
         {
-            MainAdminForm mainAdminForm = new MainAdminForm();
+            MainAdmin mainAdminForm = new MainAdmin();
             mainAdminForm.Visible = true;
             this.Close();
         }

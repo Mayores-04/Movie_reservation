@@ -37,8 +37,7 @@ namespace MovieMunch
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.TicketBtn = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@ namespace MovieMunch
             this.searchInput = new Bunifu.UI.WinForms.BunifuTextBox();
             this.exisSearchBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.searchBtnBefore = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
-            this.userNameHolder = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.logoAfter = new System.Windows.Forms.PictureBox();
             this.logoBefore = new System.Windows.Forms.PictureBox();
             this.seatReservationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -433,7 +431,6 @@ namespace MovieMunch
             this.bunifuPanel1.Controls.Add(this.searchInput);
             this.bunifuPanel1.Controls.Add(this.exisSearchBtn);
             this.bunifuPanel1.Controls.Add(this.searchBtnBefore);
-            this.bunifuPanel1.Controls.Add(this.userNameHolder);
             this.bunifuPanel1.Controls.Add(this.logoAfter);
             this.bunifuPanel1.Controls.Add(this.logoBefore);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -596,95 +593,6 @@ namespace MovieMunch
             this.searchBtnBefore.Size = new System.Drawing.Size(57, 57);
             this.searchBtnBefore.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.searchBtnBefore.TabIndex = 44;
-            // 
-            // userNameHolder
-            // 
-            this.userNameHolder.AllowAnimations = true;
-            this.userNameHolder.AllowMouseEffects = true;
-            this.userNameHolder.AllowToggling = false;
-            this.userNameHolder.AnimationSpeed = 200;
-            this.userNameHolder.AutoGenerateColors = false;
-            this.userNameHolder.AutoRoundBorders = true;
-            this.userNameHolder.AutoSizeLeftIcon = true;
-            this.userNameHolder.AutoSizeRightIcon = true;
-            this.userNameHolder.BackColor = System.Drawing.Color.Transparent;
-            this.userNameHolder.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userNameHolder.BackgroundImage")));
-            this.userNameHolder.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.userNameHolder.ButtonText = "MM";
-            this.userNameHolder.ButtonTextMarginLeft = 0;
-            this.userNameHolder.ColorContrastOnClick = 45;
-            this.userNameHolder.ColorContrastOnHover = 45;
-            this.userNameHolder.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.userNameHolder.CustomizableEdges = borderEdges3;
-            this.userNameHolder.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.userNameHolder.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.userNameHolder.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.userNameHolder.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.userNameHolder.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.userNameHolder.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameHolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.userNameHolder.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userNameHolder.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.userNameHolder.IconLeftPadding = new System.Windows.Forms.Padding(3);
-            this.userNameHolder.IconMarginLeft = 11;
-            this.userNameHolder.IconPadding = 10;
-            this.userNameHolder.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.userNameHolder.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.userNameHolder.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.userNameHolder.IconSize = 25;
-            this.userNameHolder.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.IdleBorderRadius = 55;
-            this.userNameHolder.IdleBorderThickness = 1;
-            this.userNameHolder.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.IdleIconLeftImage = null;
-            this.userNameHolder.IdleIconRightImage = null;
-            this.userNameHolder.IndicateFocus = false;
-            this.userNameHolder.Location = new System.Drawing.Point(977, 12);
-            this.userNameHolder.Name = "userNameHolder";
-            this.userNameHolder.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.userNameHolder.OnDisabledState.BorderRadius = 50;
-            this.userNameHolder.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.userNameHolder.OnDisabledState.BorderThickness = 1;
-            this.userNameHolder.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.userNameHolder.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.userNameHolder.OnDisabledState.IconLeftImage = null;
-            this.userNameHolder.OnDisabledState.IconRightImage = null;
-            this.userNameHolder.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.userNameHolder.onHoverState.BorderRadius = 50;
-            this.userNameHolder.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.userNameHolder.onHoverState.BorderThickness = 1;
-            this.userNameHolder.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.userNameHolder.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.userNameHolder.onHoverState.IconLeftImage = null;
-            this.userNameHolder.onHoverState.IconRightImage = null;
-            this.userNameHolder.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.OnIdleState.BorderRadius = 50;
-            this.userNameHolder.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.userNameHolder.OnIdleState.BorderThickness = 1;
-            this.userNameHolder.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.userNameHolder.OnIdleState.IconLeftImage = null;
-            this.userNameHolder.OnIdleState.IconRightImage = null;
-            this.userNameHolder.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.OnPressedState.BorderRadius = 50;
-            this.userNameHolder.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.userNameHolder.OnPressedState.BorderThickness = 1;
-            this.userNameHolder.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.userNameHolder.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.userNameHolder.OnPressedState.IconLeftImage = null;
-            this.userNameHolder.OnPressedState.IconRightImage = null;
-            this.userNameHolder.Size = new System.Drawing.Size(57, 57);
-            this.userNameHolder.TabIndex = 43;
-            this.userNameHolder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.userNameHolder.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.userNameHolder.TextMarginLeft = 0;
-            this.userNameHolder.TextPadding = new System.Windows.Forms.Padding(0);
-            this.userNameHolder.UseDefaultRadiusAndThickness = true;
             // 
             // logoAfter
             // 
@@ -5245,13 +5153,11 @@ namespace MovieMunch
             // 
             this.guna2VScrollBar1.BindingContainer = this.seatReservationFlowLayoutPanel;
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 575;
+            this.guna2VScrollBar1.LargeChange = 10;
             this.guna2VScrollBar1.Location = new System.Drawing.Point(1193, 75);
-            this.guna2VScrollBar1.Maximum = 705;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 21;
             this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 575);
-            this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 115;
             // 
             // btnReserveSeat
@@ -5289,11 +5195,11 @@ namespace MovieMunch
             this.bunifuIconButton4.ColorContrastOnClick = 30;
             this.bunifuIconButton4.ColorContrastOnHover = 30;
             this.bunifuIconButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bunifuIconButton4.CustomizableEdges = borderEdges4;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuIconButton4.CustomizableEdges = borderEdges3;
             this.bunifuIconButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton4.Image = null;
             this.bunifuIconButton4.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -5377,7 +5283,6 @@ namespace MovieMunch
         private Bunifu.UI.WinForms.BunifuFormCaptionButton exisSearchBtn;
         private System.Windows.Forms.PictureBox logoBefore;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton searchBtnBefore;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 userNameHolder;
         private System.Windows.Forms.PictureBox logoAfter;
         private System.Windows.Forms.FlowLayoutPanel seatReservationFlowLayoutPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

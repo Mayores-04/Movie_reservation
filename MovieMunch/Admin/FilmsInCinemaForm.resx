@@ -126,6 +126,9 @@
   <metadata name="Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="filmPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="imagePath.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -154,22 +157,20 @@
   </data>
   <data name="descriptionInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
-        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
-        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
-        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
-        rkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAANAAAAArCAYAAAAJ8QauAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACwSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESZ29vOgOX
+        XL4DiNZarznnx8yebTdz8hljH8Bzu5mTj4DgVwKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQCAgCAUEg
+        IAgEBIGAIBAQBAKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQCAgC
+        AUEgIAi+Arqu670PM3u23czJB/jPGDfnihGdWv7vOAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="titleInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAARQAAAArCAYAAAC5K3e1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVHhe7dSxDQIxAARB91+VXy6DMigAZMkJqdlwRrrk
-        CtgBkFprveacHzOzm+2GnJyMsQ+AW7shJyeCAvxHUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAA
-        GUEBMoICZAQFyAgKkBEUICMoQEZQgIygABlBATKCAmQEBcgICpARFCAjKEBGUICMoAAZQQEyggJkBAXI
-        CAqQERQgIyhARlCAjKAAGUEBMoICZAQFyPwE5Xme9z7MzG62G3JyAlAY4wuHIRQqKK89eAAAAABJRU5E
-        rkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAMAAAAArCAYAAAAuX4dGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACtSURBVHhe7dMxDQQxEARB80dlyzAexgG4kyUnj6GrpE02
+        nh6Qt/f+zTlf5yp3Nn/nP8Z5QMnZ/J2/AOgRAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
+        JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmA
+        NAGQ9hfAWus5D+cqdzZ/5w9VY3wNHvLYD6F3jgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="SaveMoviesButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -200,6 +201,15 @@
         c/KQNsIl8pAuwhp5SBPhGnmYPsIt8jBthC3kYboIW8rDNBFayMPwEVrKw7ARIuRhuAiR8jBMhB7y0D1C
         T3noFkF/kTHebThh9JUvKe+EN5sQPmx6ywMRfKdQ7vqPkkIIIYQQQkzNsvwD7lugSvSs96AAAAAASUVO
         RK5CYII=
+</value>
+  </data>
+  <data name="filmsPriceInput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJIAAAArCAYAAACTvtEzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACqSURBVHhe7dKxCQMxAARB9V+VHpXhMlyAjUCJw39vOAOX
+        XLwDMmut15zzY3Z3u52T0Rj7gCd2OycjIfGckEgIiYSQSAiJhJBICImEkEgIiYSQSAiJhJBICImEkEgI
+        iYSQSAiJhJBICImEkEgIiYSQSAiJhJBICImEkEgIiYSQSAiJhJBICImEkEgIiYSQSAiJhJBICImEkEj8
+        hHRd13sfZne32zkZwb/G+AKEFNqJfpzphwAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

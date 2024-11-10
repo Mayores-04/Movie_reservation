@@ -15,7 +15,6 @@ public class MongoDBConnection
         var client = new MongoClient("mongodb://localhost:27017/");
         _database = client.GetDatabase("MovieReservationDB");
 
-        // Ensure essential collections exist
         EnsureCollectionExists<FilmsInCinema>("FilmsInCinema");
         EnsureCollectionExists<ComingSoon>("ComingSoon");
         EnsureCollectionExists<Movie>("Movies");

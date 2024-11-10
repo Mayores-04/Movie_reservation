@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace MovieMunch.Admin
 {
-    public partial class MainAdminForm : Form
+    public partial class MainAdmin : Form
     {
-        public MainAdminForm()
+        public MainAdmin()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace MovieMunch.Admin
         {
             this.Close();
             MainPage mainPage = new MainPage();
-            mainPage.Show();
+            mainPage.Visible = true;
         }
 
         private void EmployeeListBtn_Click(object sender, EventArgs e)
@@ -51,11 +51,6 @@ namespace MovieMunch.Admin
             this.Close();
             EmployeeList employeeList = new EmployeeList();
             employeeList.Show();
-        }
-
-        private void MainAdminForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

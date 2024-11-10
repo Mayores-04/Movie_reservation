@@ -4,6 +4,7 @@ using MovieMunch.Admin;
 using MovieMunch.Backend.Models;
 using MovieMunch.Backend.Services;
 using MovieMunch.Frontend.Forms;
+using MovieMunch.Frontend.Forms.Components;
 using MovieMunch.Models;
 using MovieMunch.Services;
 using System;
@@ -13,6 +14,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace MovieMunch
 {
@@ -78,9 +80,8 @@ namespace MovieMunch
 
             userPanelTimer.Interval = 10;
             userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
-
-
         }
+
         public void SetUserInfo(string name)
         {
             userName = name;
@@ -88,6 +89,12 @@ namespace MovieMunch
             userNameHolder.Text = firstLetter.ToString().ToUpper();
         }
 
+        //public void userNameHolderShow(string name)
+        //{
+        //    userName = name;
+        //    char firstLetter = name[0];
+        //    userNameHolder.Text = firstLetter.ToString().ToUpper();
+        //}
         private MovieInfo GetCurrentMovieInfo()
         {
             var seatReservationService = new MovieService();
@@ -99,6 +106,7 @@ namespace MovieMunch
             }
             return null; 
         }
+
 
         private MovieInfo GetMovieInfoFromImagePath(string imagePath)
         {
@@ -158,7 +166,7 @@ namespace MovieMunch
 
         public void SetCircleColor(PictureBox pictureColor, string circleColorPath)
         {
-            if (File.Exists(circleColorPath))
+            if (System.IO.File.Exists(circleColorPath))
             {
                 if (pictureColor.Image != null)
                 {
@@ -237,7 +245,7 @@ namespace MovieMunch
 
         private bool ValidateImagePath(string imagePath)
         {
-            if (!File.Exists(imagePath))
+            if (!System.IO.File.Exists(imagePath))
             {
                 MessageBox.Show("Image not found at path: " + imagePath);
                 return false;
@@ -310,7 +318,7 @@ namespace MovieMunch
 
         private void SetButtonToDefault(Button button, string defaultImage)
         {
-            if (File.Exists(defaultImage))
+            if (System.IO.File.Exists(defaultImage))
             {
                 button.BackgroundImage = new Bitmap(defaultImage);
                 button.Image = default;
@@ -325,7 +333,7 @@ namespace MovieMunch
         {
             ResetAllButtonsToDefault();
 
-            if (File.Exists(BtnBG))
+            if (System.IO.File.Exists(BtnBG))
             {
                 selectedButton.BackgroundImage = new Bitmap(BtnBG);
                 selectedButton.Image = new Bitmap(selectedButtonImage);
@@ -370,21 +378,22 @@ namespace MovieMunch
 
             Panel[] films = { films1, films2, films3, films4, films5, films6, films7, films8 };
 
-            foreach (var movie in _filmsInCinemas)
+            foreach (var film in _filmsInCinemas)
             {
+
                 PictureBox moviePictureBox = new PictureBox
                 {
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Height = 250,
                     Width = 200,
-                    ImageLocation = movie.FilmImagePath,
+                    ImageLocation = film.FilmImagePath,
                     Cursor = Cursors.Hand,
-                    Tag = movie 
+                    Tag = film
                 };
 
                 moviePictureBox.Click += new EventHandler(FilmsPictureBox_Click);
 
-                int index = _filmsInCinemas.IndexOf(movie) % films.Length;
+                int index = _filmsInCinemas.IndexOf(film) % films.Length;
 
                 if (index < films.Length)
                 {
@@ -408,6 +417,7 @@ namespace MovieMunch
 
             if (films != null)
             {
+                _selectedFilm = films;
                 closeFilmsDetailsBtn.Visible = true;
                 filmsDetailsPanel.Visible = true;
 
@@ -415,6 +425,40 @@ namespace MovieMunch
                 filmsTitleDetails.Text = films.FilmTitle;
                 filmsDescriptionDetails.Text = films.FilmsDescription;
                 filmsPriceDetails.Text = films.FilmsPrice.ToString("C");
+            }
+
+        }
+
+        private FilmsInCinema _selectedFilm;
+
+        private void filmsInCinemaSeatReservationBtn_Click(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+             
+            if (userNameHolder.Text == "MM")
+            {
+                filmsDetailsPanel.Visible = false;
+                MessageBox.Show("You must log in to reserve a seat.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog();
+                return;
+            }
+             
+            if (_selectedFilm != null)
+            {
+                decimal price = Convert.ToDecimal(_selectedFilm.FilmsPrice);
+
+                var seatReservationForm = new SeatReservation(
+                    _selectedFilm.FilmTitle,     
+                    price,   
+                    userName                     
+                );
+
+                seatReservationForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No movie selected to reserve.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -425,6 +469,8 @@ namespace MovieMunch
                 LoadFilmsInCinemaToFlowLayoutPanel();
             }
         }
+
+
 
         private void closeComingSoonMovieDetailsBtn_Click_1(object sender, EventArgs e)
         {
@@ -475,6 +521,7 @@ namespace MovieMunch
 
             if (csoon != null)
             {
+                _selectedComingSoonMovie = csoon;
                 closeComingSoonMovieDetailsBtn.Visible = true;
                 comingSoonMovieDetailsPanel.Visible = true;
 
@@ -482,6 +529,37 @@ namespace MovieMunch
                 comingSoonTitleDetails.Text = csoon.ComingSoonTitle;
                 comingSoonMovieDescriptionDetails.Text = csoon.ComingSoonDescription;
                 comingSoonPriceDetails.Text = csoon.ComingSoonPrice.ToString("C");
+            }
+        }
+
+        private ComingSoon _selectedComingSoonMovie;
+        private void comingSoonMovieSeatReservationBtn_Click(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+            if (userNameHolder.Text == "MM")
+            {
+                comingSoonMovieDetailsPanel.Visible = false;
+                MessageBox.Show("You must log in to reserve a seat.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog();
+                return;
+            }
+
+            if (_selectedComingSoonMovie != null)
+            {
+                decimal price = Convert.ToDecimal(_selectedComingSoonMovie.ComingSoonPrice);
+
+                var seatReservationForm = new SeatReservation(
+                    _selectedComingSoonMovie.ComingSoonTitle,
+                    price,
+                    userName
+                );
+
+                seatReservationForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No movie selected to reserve.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -697,6 +775,7 @@ namespace MovieMunch
 
             if (userNameHolder.Text == "MM")
             {
+                trendingMoviesDetailsPanel.Visible = false;
                 this.Close();
                 MessageBox.Show("You must log in to reserve a seat.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 LoginForm loginForm = new LoginForm();
@@ -715,7 +794,7 @@ namespace MovieMunch
                         currentMovieInfo.Price,
                         _reservedBy
                     );
-
+                    this.Visible = false;
                     seatReservationForm.Show();
                 }
                 else
@@ -724,7 +803,6 @@ namespace MovieMunch
                 }
             }
         }
-
 
         int targetWidth;
         int defaultWidth;
@@ -798,7 +876,6 @@ namespace MovieMunch
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
-            
             var userService = new UserService();
             userService.Logout();
         }
@@ -847,18 +924,10 @@ namespace MovieMunch
 
                 searchResultsFlowLayoutPanel.Controls.Clear();
 
-                List<string> trendingMovies = _movieService.GetAllMovies()
-                                                           .Select(movie => movie.MovieTitle)
-                                                           .ToList();
-                List<string> filmsInCinema = _movieService.GetFilmsInCinemas()
-                                                          .Select(movie => movie.FilmTitle)
-                                                          .ToList();
-                List<string> comingSoon = _movieService.GetComingSoons()
-                                                       .Select(movie => movie.ComingSoonTitle)
-                                                       .ToList();
-                List<string> snacks = _foodServices.GetFoodsInCollection()
-                                                   .Select(snack => snack.FoodName)
-                                                   .ToList();
+                List<string> trendingMovies = _movieService.GetAllMovies().Select(movie => movie.MovieTitle).ToList();
+                List<string> filmsInCinema = _movieService.GetFilmsInCinemas().Select(movie => movie.FilmTitle).ToList();
+                List<string> comingSoon = _movieService.GetComingSoons().Select(movie => movie.ComingSoonTitle).ToList();
+                List<string> snacks = _foodServices.GetFoodsInCollection().Select(snack => snack.FoodName).ToList();
 
                 List<string> filteredTrendingMovies = trendingMovies.Where(title => title.ToLower().Contains(searchText)).ToList();
                 List<string> filteredFilmsInCinema = filmsInCinema.Where(title => title.ToLower().Contains(searchText)).ToList();
@@ -895,5 +964,9 @@ namespace MovieMunch
             }
         }
 
+        private void snackDealsReservedSeatBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

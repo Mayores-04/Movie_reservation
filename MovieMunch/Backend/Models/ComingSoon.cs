@@ -13,7 +13,7 @@ namespace MovieMunch.Backend.Models
         public string ComingSoonTitle { get; set; }
 
         [BsonElement("price")]
-        public decimal ComingSoonPrice { get; set; }
+        public double ComingSoonPrice { get; set; }
 
         [BsonElement("description")]
         public string ComingSoonDescription { get; set; }

@@ -48,10 +48,15 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.MoviesTable = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.AddMoviesButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -64,6 +69,7 @@
             this.closeFlimBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.viewFilmBox = new System.Windows.Forms.PictureBox();
             this.backFilmBtn = new FontAwesome.Sharp.IconButton();
+            this.filmsPriceInput = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MoviesTable)).BeginInit();
             this.viewFilmPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewFilmBox)).BeginInit();
@@ -94,6 +100,7 @@
             this.id,
             this.Title,
             this.Description,
+            this.filmPrice,
             this.imagePath});
             this.MoviesTable.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.MoviesTable.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -153,6 +160,12 @@
             this.Description.HeaderText = "Description";
             this.Description.MinimumWidth = 6;
             this.Description.Name = "Description";
+            // 
+            // filmPrice
+            // 
+            this.filmPrice.HeaderText = "Price";
+            this.filmPrice.MinimumWidth = 6;
+            this.filmPrice.Name = "filmPrice";
             // 
             // imagePath
             // 
@@ -372,7 +385,7 @@
             this.descriptionInput.IconRight = null;
             this.descriptionInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.descriptionInput.Lines = new string[0];
-            this.descriptionInput.Location = new System.Drawing.Point(540, 98);
+            this.descriptionInput.Location = new System.Drawing.Point(456, 98);
             this.descriptionInput.MaxLength = 32767;
             this.descriptionInput.MinimumSize = new System.Drawing.Size(1, 1);
             this.descriptionInput.Modified = false;
@@ -408,7 +421,7 @@
             this.descriptionInput.SelectionLength = 0;
             this.descriptionInput.SelectionStart = 0;
             this.descriptionInput.ShortcutsEnabled = true;
-            this.descriptionInput.Size = new System.Drawing.Size(276, 43);
+            this.descriptionInput.Size = new System.Drawing.Size(208, 43);
             this.descriptionInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.descriptionInput.TabIndex = 6;
             this.descriptionInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -484,7 +497,7 @@
             this.titleInput.SelectionLength = 0;
             this.titleInput.SelectionStart = 0;
             this.titleInput.ShortcutsEnabled = true;
-            this.titleInput.Size = new System.Drawing.Size(276, 43);
+            this.titleInput.Size = new System.Drawing.Size(192, 43);
             this.titleInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.titleInput.TabIndex = 5;
             this.titleInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -726,7 +739,7 @@
             this.closeFlimBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeFlimBtn.Image")));
             this.closeFlimBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.closeFlimBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeFlimBtn.Location = new System.Drawing.Point(841, 38);
+            this.closeFlimBtn.Location = new System.Drawing.Point(809, 30);
             this.closeFlimBtn.Name = "closeFlimBtn";
             this.closeFlimBtn.ShowBorders = true;
             this.closeFlimBtn.Size = new System.Drawing.Size(38, 33);
@@ -735,7 +748,7 @@
             // 
             // viewFilmBox
             // 
-            this.viewFilmBox.Location = new System.Drawing.Point(435, 97);
+            this.viewFilmBox.Location = new System.Drawing.Point(403, 89);
             this.viewFilmBox.Name = "viewFilmBox";
             this.viewFilmBox.Size = new System.Drawing.Size(384, 512);
             this.viewFilmBox.TabIndex = 0;
@@ -753,6 +766,82 @@
             this.backFilmBtn.UseVisualStyleBackColor = true;
             this.backFilmBtn.Click += new System.EventHandler(this.backFilmBtn_Click);
             // 
+            // filmsPriceInput
+            // 
+            this.filmsPriceInput.AcceptsReturn = false;
+            this.filmsPriceInput.AcceptsTab = false;
+            this.filmsPriceInput.AnimationSpeed = 200;
+            this.filmsPriceInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.filmsPriceInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.filmsPriceInput.AutoSizeHeight = true;
+            this.filmsPriceInput.BackColor = System.Drawing.Color.Transparent;
+            this.filmsPriceInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("filmsPriceInput.BackgroundImage")));
+            this.filmsPriceInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.filmsPriceInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.filmsPriceInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.filmsPriceInput.BorderColorIdle = System.Drawing.Color.Silver;
+            this.filmsPriceInput.BorderRadius = 1;
+            this.filmsPriceInput.BorderThickness = 1;
+            this.filmsPriceInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.filmsPriceInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.filmsPriceInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.filmsPriceInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.filmsPriceInput.DefaultText = "";
+            this.filmsPriceInput.FillColor = System.Drawing.Color.White;
+            this.filmsPriceInput.HideSelection = true;
+            this.filmsPriceInput.IconLeft = null;
+            this.filmsPriceInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.filmsPriceInput.IconPadding = 10;
+            this.filmsPriceInput.IconRight = null;
+            this.filmsPriceInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.filmsPriceInput.Lines = new string[0];
+            this.filmsPriceInput.Location = new System.Drawing.Point(670, 98);
+            this.filmsPriceInput.MaxLength = 32767;
+            this.filmsPriceInput.MinimumSize = new System.Drawing.Size(1, 1);
+            this.filmsPriceInput.Modified = false;
+            this.filmsPriceInput.Multiline = false;
+            this.filmsPriceInput.Name = "filmsPriceInput";
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.filmsPriceInput.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.filmsPriceInput.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.filmsPriceInput.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.filmsPriceInput.OnIdleState = stateProperties16;
+            this.filmsPriceInput.Padding = new System.Windows.Forms.Padding(3);
+            this.filmsPriceInput.PasswordChar = '\0';
+            this.filmsPriceInput.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.filmsPriceInput.PlaceholderText = "Price";
+            this.filmsPriceInput.ReadOnly = false;
+            this.filmsPriceInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.filmsPriceInput.SelectedText = "";
+            this.filmsPriceInput.SelectionLength = 0;
+            this.filmsPriceInput.SelectionStart = 0;
+            this.filmsPriceInput.ShortcutsEnabled = true;
+            this.filmsPriceInput.Size = new System.Drawing.Size(146, 43);
+            this.filmsPriceInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.filmsPriceInput.TabIndex = 37;
+            this.filmsPriceInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.filmsPriceInput.TextMarginBottom = 0;
+            this.filmsPriceInput.TextMarginLeft = 3;
+            this.filmsPriceInput.TextMarginTop = 1;
+            this.filmsPriceInput.TextPlaceholder = "Price";
+            this.filmsPriceInput.UseSystemPasswordChar = false;
+            this.filmsPriceInput.WordWrap = true;
+            // 
             // FilmsInCinemaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -767,6 +856,7 @@
             this.Controls.Add(this.titleInput);
             this.Controls.Add(this.MoviesTable);
             this.Controls.Add(this.SaveMoviesButton);
+            this.Controls.Add(this.filmsPriceInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FilmsInCinemaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -787,15 +877,17 @@
         private Bunifu.UI.WinForms.BunifuTextBox directoryInput;
         private Bunifu.UI.WinForms.BunifuTextBox descriptionInput;
         private Bunifu.UI.WinForms.BunifuTextBox titleInput;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imagePath;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddMoviesButton;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddFilm;
         private System.Windows.Forms.Panel viewFilmPanel;
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeFlimBtn;
         private System.Windows.Forms.PictureBox viewFilmBox;
         private FontAwesome.Sharp.IconButton backFilmBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filmPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagePath;
+        private Bunifu.UI.WinForms.BunifuTextBox filmsPriceInput;
     }
 }
