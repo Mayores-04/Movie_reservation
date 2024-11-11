@@ -2,6 +2,7 @@
 using MovieMunch.Backend.Models;
 using MovieMunch.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MovieMunch.Services
@@ -11,14 +12,14 @@ namespace MovieMunch.Services
         private readonly IMongoCollection<CinemaSeats> _cinemaSeats;
         private readonly IMongoCollection<FilmsInCinema> _filmsInCinemaCollection;
         private readonly IMongoCollection<ComingSoon> _comingSoonCollection;
-        private readonly IMongoCollection<Movie> _movieCollection;  // Added the Movie collection
+        private readonly IMongoCollection<Movie> _movieCollection;   
 
         public SeatReservationServices(MongoDBConnection dbConnection)
         {
             _cinemaSeats = dbConnection.Database.GetCollection<CinemaSeats>("CinemaSeats");
             _filmsInCinemaCollection = dbConnection.Database.GetCollection<FilmsInCinema>("FilmsInCinema");
             _comingSoonCollection = dbConnection.Database.GetCollection<ComingSoon>("ComingSoon");
-            _movieCollection = dbConnection.Database.GetCollection<Movie>("Movies");  // Initialize the Movie collection
+            _movieCollection = dbConnection.Database.GetCollection<Movie>("Movies");  
         }
 
         public async Task ReserveSeatsAsync(string movieName, double moviePrice, List<string> seatNumbers, string reservedBy)
@@ -58,6 +59,18 @@ namespace MovieMunch.Services
                 await _cinemaSeats.InsertOneAsync(defaultSeats);
             }
         }
+
+        public async Task<int> GetTotalReservedSeatsAsync()
+        {
+            var reservedSeats = await _cinemaSeats
+                .Find(seat => seat.IsReserved == true)
+                .ToListAsync();
+
+            int totalReservedSeats = reservedSeats.Sum(seat => seat.SeatNumbers.Count);
+
+            return totalReservedSeats;
+        }
+
 
         public async Task<string> GetMovieImagePathAsync(string movieTitle)
         {

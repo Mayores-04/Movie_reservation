@@ -65,7 +65,6 @@ namespace MovieMunch
         }
         private void LoadingForm_Load(object sender, EventArgs e)
         {
-
             circleTimer.Start();
         }
     }

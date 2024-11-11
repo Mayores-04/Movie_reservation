@@ -151,13 +151,21 @@ namespace MovieMunch
         }
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
-        {
+        { 
             this.Visible = false;
+             
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is MainPage)
+                {
+                    openForm.Close();  
+                    break;
+                }
+            }
+             
             MainPage mainPage = new MainPage();
-            mainPage.Show();
-
             mainPage.SetUserInfo(_reservedBy);
+            mainPage.Show();
         }
-
     }
 }

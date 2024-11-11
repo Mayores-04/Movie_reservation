@@ -47,10 +47,10 @@ namespace MovieMunch
             this.lastLogo.ForeColor = System.Drawing.Color.White;
             this.lastLogo.Image = global::MovieMunch.Properties.Resources.MovieM_removebg_preview;
             this.lastLogo.ImageSize = new System.Drawing.Size(600, 500);
-            this.lastLogo.Location = new System.Drawing.Point(-8, -11);
+            this.lastLogo.Location = new System.Drawing.Point(-8, -8);
             this.lastLogo.Name = "lastLogo";
             this.lastLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.lastLogo.Size = new System.Drawing.Size(1297, 671);
+            this.lastLogo.Size = new System.Drawing.Size(1235, 670);
             this.lastLogo.TabIndex = 15;
             this.lastLogo.Visible = false;
             // 
@@ -187,11 +187,12 @@ namespace MovieMunch
             // LoadingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.lastLogo);
             this.Controls.Add(this.thirdCircle);
             this.Controls.Add(this.secondCircle);
             this.Controls.Add(this.sixthCircle);
-            this.Controls.Add(this.lastLogo);
             this.Controls.Add(this.firstCircle);
             this.Controls.Add(this.seventhCircle);
             this.Controls.Add(this.fifthCircle);

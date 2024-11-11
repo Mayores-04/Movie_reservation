@@ -74,19 +74,17 @@ namespace MovieMunch
 
             FadeIn(this);
 
-            defaultWidth = userPanel.Width;
-            userPanel.Width = 0;
+            defaultHeight = userPanel.Height;
+            userPanel.Height = 0;
             userPanel.Visible = false;
 
-            userPanelTimer.Interval = 10;
+            userPanelTimer.Interval = 15;
             userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
         }
 
         public void SetUserInfo(string name)
         {
-            userName = name;
-            char firstLetter = name[0];
-            userNameHolder.Text = firstLetter.ToString().ToUpper();
+            userNameHolder.Text = name.ToUpper();
         }
 
         //public void userNameHolderShow(string name)
@@ -221,7 +219,6 @@ namespace MovieMunch
             UpdateCircleColors();
         }
 
-
         private void MainImage_Click(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
@@ -308,13 +305,13 @@ namespace MovieMunch
             UpdateDisplayedImage();
         }
 
-        private void ResetAllButtonsToDefault()
-        {
-            SetButtonToDefault(SettingBtn, SettingDefaultImage);
-            SetButtonToDefault(HomeBtn, HomeDefaultImage);
-            SetButtonToDefault(FavBtn, FavDefaultImage);
-            SetButtonToDefault(TicketBtn, TicketDefaultImage);
-        }
+        //private void ResetAllButtonsToDefault()
+        //{
+        //    SetButtonToDefault(SettingBtn, SettingDefaultImage);
+        //    SetButtonToDefault(HomeBtn, HomeDefaultImage);
+        //    SetButtonToDefault(FavBtn, FavDefaultImage);
+        //    SetButtonToDefault(TicketBtn, TicketDefaultImage);
+        //}
 
         private void SetButtonToDefault(Button button, string defaultImage)
         {
@@ -329,43 +326,43 @@ namespace MovieMunch
             }
         }
 
-        private void SetButtonBackground(Button selectedButton, string selectedButtonImage)
-        {
-            ResetAllButtonsToDefault();
+        //private void SetButtonBackground(Button selectedButton, string selectedButtonImage)
+        //{
+        //    ResetAllButtonsToDefault();
 
-            if (System.IO.File.Exists(BtnBG))
-            {
-                selectedButton.BackgroundImage = new Bitmap(BtnBG);
-                selectedButton.Image = new Bitmap(selectedButtonImage);
-            }
-            else
-            {
-                MessageBox.Show("Image not found: " + BtnBG);
-            }
-        }
+        //    if (System.IO.File.Exists(BtnBG))
+        //    {
+        //        selectedButton.BackgroundImage = new Bitmap(BtnBG);
+        //        selectedButton.Image = new Bitmap(selectedButtonImage);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Image not found: " + BtnBG);
+        //    }
+        //}
 
-        private void HomeBtn_Click(object sender, EventArgs e)
-        {
-            ResetAllButtonsToDefault();
-            SetButtonBackground(HomeBtn, HomeImage);
-            //watchListWholePanel.Visible = false;
-        }
+        //private void HomeBtn_Click(object sender, EventArgs e)
+        //{
+        //    ResetAllButtonsToDefault();
+        //    SetButtonBackground(HomeBtn, HomeImage);
+        //    //watchListWholePanel.Visible = false;
+        //}
 
-        private void FavBtn_Click(object sender, EventArgs e)
-        {
-            ResetAllButtonsToDefault();
-            SetButtonBackground(FavBtn, FavImage);
-            //watchListWholePanel.Visible = true;
-            //this.Visible = false;
-            //WatchListForm watchListForm = new WatchListForm();
-            //watchListForm.ShowDialog();
-        }
+        //private void FavBtn_Click(object sender, EventArgs e)
+        //{
+        //    ResetAllButtonsToDefault();
+        //    SetButtonBackground(FavBtn, FavImage);
+        //    //watchListWholePanel.Visible = true;
+        //    //this.Visible = false;
+        //    //WatchListForm watchListForm = new WatchListForm();
+        //    //watchListForm.ShowDialog();
+        //}
 
-        private void TicketBtn_Click(object sender, EventArgs e)
-        {
-            ResetAllButtonsToDefault();
-            SetButtonBackground(TicketBtn, TicketImage);
-        }
+        //private void TicketBtn_Click(object sender, EventArgs e)
+        //{
+        //    ResetAllButtonsToDefault();
+        //    SetButtonBackground(TicketBtn, TicketImage);
+        //}
 
         private void closeFilmsDetailsBtn_Click_1(object sender, EventArgs e)
         {
@@ -426,7 +423,6 @@ namespace MovieMunch
                 filmsDescriptionDetails.Text = films.FilmsDescription;
                 filmsPriceDetails.Text = films.FilmsPrice.ToString("C");
             }
-
         }
 
         private FilmsInCinema _selectedFilm;
@@ -435,9 +431,11 @@ namespace MovieMunch
         {
             UserService userService = new UserService();
              
-            if (userNameHolder.Text == "MM")
+            if (userNameHolder.Text == "USERNAME")
             {
+
                 filmsDetailsPanel.Visible = false;
+                this.Close();
                 MessageBox.Show("You must log in to reserve a seat.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 LoginForm loginForm = new LoginForm();
                 loginForm.ShowDialog();
@@ -445,7 +443,7 @@ namespace MovieMunch
             }
              
             if (_selectedFilm != null)
-            {
+            { 
                 decimal price = Convert.ToDecimal(_selectedFilm.FilmsPrice);
 
                 var seatReservationForm = new SeatReservation(
@@ -454,6 +452,16 @@ namespace MovieMunch
                     userName                     
                 );
 
+                foreach (Form openForm in Application.OpenForms)
+                {
+                    if (openForm is SeatReservation)
+                    {
+                        openForm.Close();
+                        break;
+                    }
+                }
+
+                this.Close();
                 seatReservationForm.ShowDialog();
             }
             else
@@ -536,8 +544,10 @@ namespace MovieMunch
         private void comingSoonMovieSeatReservationBtn_Click(object sender, EventArgs e)
         {
             UserService userService = new UserService();
-            if (userNameHolder.Text == "MM")
+            if (userNameHolder.Text == "USERNAME")
             {
+
+                this.Close();
                 comingSoonMovieDetailsPanel.Visible = false;
                 MessageBox.Show("You must log in to reserve a seat.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 LoginForm loginForm = new LoginForm();
@@ -555,6 +565,15 @@ namespace MovieMunch
                     userName
                 );
 
+                foreach (Form openForm in Application.OpenForms)
+                {
+                    if (openForm is SeatReservation)
+                    {
+                        openForm.Close();
+                        break;
+                    }
+                }
+                this.Close();
                 seatReservationForm.ShowDialog();
             }
             else
@@ -773,7 +792,7 @@ namespace MovieMunch
         {
             UserService userService = new UserService();
 
-            if (userNameHolder.Text == "MM")
+            if (userNameHolder.Text == "USERNAME")
             {
                 trendingMoviesDetailsPanel.Visible = false;
                 this.Close();
@@ -804,55 +823,54 @@ namespace MovieMunch
             }
         }
 
-        int targetWidth;
-        int defaultWidth;
+        int targetHeight;
+        int defaultHeight;
         bool isExpanding;
 
         Timer userPanelTimer = new Timer();
 
-        private void SettingBtn_Click(object sender, EventArgs e)
+        private void userProfileBtn_Click(object sender, EventArgs e)
         {
             userPanelTimer.Start();
-            ResetAllButtonsToDefault();
-            SetButtonBackground(SettingBtn, SettingImage);
 
-            if (userPanel.Width == 0) 
+            if (userPanel.Height == 0)
             {
-                targetWidth = defaultWidth; 
+                targetHeight = defaultHeight;
                 isExpanding = true;
-                userPanel.Visible = true; 
+                userPanel.Visible = true;
             }
-            else 
+            else
             {
-                targetWidth = 0; 
+                targetHeight = 0;
                 isExpanding = false;
             }
 
-            userPanelTimer.Start(); 
+            userPanelTimer.Start();
         }
+
 
         private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
         {
             if (isExpanding)
             {
-                if (userPanel.Width < targetWidth)
+                if (userPanel.Height < targetHeight)
                 {
-                    userPanel.Width += 10;
-                    if (userPanel.Width >= targetWidth)
+                    userPanel.Height += 20;
+                    if (userPanel.Height >= targetHeight)
                     {
-                        userPanel.Width = targetWidth; 
+                        userPanel.Height = targetHeight; 
                         userPanelTimer.Stop();       
                     }
                 }
             }
             else 
             {
-                if (userPanel.Width > targetWidth)
+                if (userPanel.Height > targetHeight)
                 {
-                    userPanel.Width -= 10;
-                    if (userPanel.Width <= targetWidth)
+                    userPanel.Height -= 20;
+                    if (userPanel.Height <= targetHeight)
                     {
-                        userPanel.Width = targetWidth; 
+                        userPanel.Height = targetHeight; 
                         userPanelTimer.Stop();         
                         userPanel.Visible = false;  
                     }
@@ -876,6 +894,7 @@ namespace MovieMunch
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
+            this.Close();
             var userService = new UserService();
             userService.Logout();
         }
@@ -885,8 +904,6 @@ namespace MovieMunch
             exisSearchBtn.Visible = true;
 
             searchBtnBefore.Visible = false;
-            logoBefore.Visible = false;
-            logoAfter.Visible = true;
             searchInput.Visible = true;
             searchResultFlowWholePanel.Visible = false;
             searchResultsFlowLayoutPanel.Visible = false;
@@ -898,8 +915,6 @@ namespace MovieMunch
         private void exisSearchBtn_Click(object sender, EventArgs e)
         {
             searchBtnBefore.Visible = true;
-            logoBefore.Visible = true;
-            logoAfter.Visible = false;
             searchInput.Visible = false;
             searchResultFlowWholePanel.Visible = false;
             searchResultsFlowLayoutPanel.Visible = false;
@@ -968,5 +983,6 @@ namespace MovieMunch
         {
 
         }
+
     }
 }
