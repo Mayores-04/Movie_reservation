@@ -331,6 +331,7 @@ namespace MovieMunch
             this.bunifuIconButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.moviePicToReserve = new System.Windows.Forms.PictureBox();
             this.backToHomeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.userNameHolder = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoAfter)).BeginInit();
@@ -428,6 +429,7 @@ namespace MovieMunch
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.userNameHolder);
             this.bunifuPanel1.Controls.Add(this.searchInput);
             this.bunifuPanel1.Controls.Add(this.exisSearchBtn);
             this.bunifuPanel1.Controls.Add(this.searchBtnBefore);
@@ -5236,6 +5238,18 @@ namespace MovieMunch
             this.backToHomeBtn.Text = "Back";
             this.backToHomeBtn.Click += new System.EventHandler(this.backToHomeBtn_Click);
             // 
+            // userNameHolder
+            // 
+            this.userNameHolder.AutoSize = true;
+            this.userNameHolder.BackColor = System.Drawing.Color.Transparent;
+            this.userNameHolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameHolder.ForeColor = System.Drawing.Color.White;
+            this.userNameHolder.Location = new System.Drawing.Point(99, 20);
+            this.userNameHolder.Name = "userNameHolder";
+            this.userNameHolder.Size = new System.Drawing.Size(92, 32);
+            this.userNameHolder.TabIndex = 50;
+            this.userNameHolder.Text = "label3";
+            // 
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5255,6 +5269,7 @@ namespace MovieMunch
             this.Text = "SeatReservation";
             this.panel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).EndInit();
             this.seatReservationFlowLayoutPanel.ResumeLayout(false);
@@ -5566,5 +5581,6 @@ namespace MovieMunch
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton4;
         private System.Windows.Forms.PictureBox moviePicToReserve;
         private Guna.UI2.WinForms.Guna2Button backToHomeBtn;
+        private System.Windows.Forms.Label userNameHolder;
     }
 }

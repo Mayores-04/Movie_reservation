@@ -21,6 +21,8 @@ namespace MovieMunch
         private string _reservedBy;
         private decimal _moviePrice;
         private List<string> _selectedSeats;
+        private string userName;
+        
 
         public SeatReservation(string movieTitle, decimal moviePrice, string reservedBy)
         {
@@ -43,9 +45,13 @@ namespace MovieMunch
                     _allSeats.Add($"{j}{i}");
                 }
             }
+            userNameHolder.Text = reservedBy;
 
             movieTitlelbl.Text = _movieName;
             this.Load += SeatReservation_Load;
+            userName = reservedBy;
+            MainPage mainPage = new MainPage();
+            mainPage.SetUserInfo(userName);
         }
 
         private async void SeatReservation_Load(object sender, EventArgs e)
@@ -164,7 +170,7 @@ namespace MovieMunch
             }
              
             MainPage mainPage = new MainPage();
-            mainPage.SetUserInfo(_reservedBy);
+            mainPage.SetUserInfo(userName);
             mainPage.Show();
         }
     }

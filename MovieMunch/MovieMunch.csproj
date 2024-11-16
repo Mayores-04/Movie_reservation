@@ -289,12 +289,6 @@
     <Compile Include="Backend\Services\Reports.cs" />
     <Compile Include="Backend\Services\SeatReservationServices.cs" />
     <Compile Include="Backend\Services\UserService.cs" />
-    <Compile Include="Frontend\Forms\Components\ComingSoonZoomIn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\Components\ComingSoonZoomIn.Designer.cs">
-      <DependentUpon>ComingSoonZoomIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frontend\Forms\Components\editEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,9 +395,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\SnacksForm.resx">
       <DependentUpon>SnacksForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\Components\ComingSoonZoomIn.resx">
-      <DependentUpon>ComingSoonZoomIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
       <DependentUpon>editEmail.cs</DependentUpon>

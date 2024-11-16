@@ -35,16 +35,6 @@ namespace MovieMunch
 
         private string[] _imagePaths;
 
-        private readonly string BtnBG = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\Ellipse 7.png";
-        private readonly string HomeImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\homeIcon.png";
-        private readonly string HomeDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\home down 1.png";
-        private readonly string TicketImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\ticketup 1.png";
-        private readonly string TicketDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\TicketIcon.png";
-        private readonly string FavImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\heartup 1.png";
-        private readonly string FavDefaultImage = @"C:\Users\jakem\Source\Repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\FavIcon.png";
-        private readonly string SettingImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\settingup.png";
-        private readonly string SettingDefaultImage = @"C:\Users\jakem\source\repos\Movie_reservation\MovieMunch\Frontend\Forms\Assets\SettingIcon.png";
-
         private Button _selectedButton = null;
         private List<MovieInfo> _movies; 
         private string userName;
@@ -84,7 +74,9 @@ namespace MovieMunch
 
         public void SetUserInfo(string name)
         {
-            userNameHolder.Text = name.ToUpper();
+            //for()
+            userName = name;
+            userNameHolder.Text = userName;
         }
 
         //public void userNameHolderShow(string name)
@@ -814,6 +806,7 @@ namespace MovieMunch
                         _reservedBy
                     );
                     this.Visible = false;
+                    this.Close();
                     seatReservationForm.Show();
                 }
                 else
