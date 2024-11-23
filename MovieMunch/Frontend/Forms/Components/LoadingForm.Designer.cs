@@ -189,14 +189,14 @@ namespace MovieMunch
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.fifthCircle);
+            this.Controls.Add(this.fourthCircle);
             this.Controls.Add(this.lastLogo);
             this.Controls.Add(this.thirdCircle);
             this.Controls.Add(this.secondCircle);
             this.Controls.Add(this.sixthCircle);
             this.Controls.Add(this.firstCircle);
             this.Controls.Add(this.seventhCircle);
-            this.Controls.Add(this.fifthCircle);
-            this.Controls.Add(this.fourthCircle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

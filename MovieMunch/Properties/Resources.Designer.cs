@@ -133,9 +133,29 @@ namespace MovieMunch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap facebook {
+            get {
+                object obj = ResourceManager.GetObject("facebook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FavIcon {
             get {
                 object obj = ResourceManager.GetObject("FavIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap google {
+            get {
+                object obj = ResourceManager.GetObject("google", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +243,16 @@ namespace MovieMunch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap microsoft_logo {
+            get {
+                object obj = ResourceManager.GetObject("microsoft_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MM_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("MM-removebg-preview", resourceCulture);
@@ -236,6 +266,16 @@ namespace MovieMunch.Properties {
         internal static System.Drawing.Bitmap MovieM_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("MovieM-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap moviemunchBlack {
+            get {
+                object obj = ResourceManager.GetObject("moviemunchBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

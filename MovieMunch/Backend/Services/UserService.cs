@@ -43,7 +43,7 @@ public class UserService
         }
     }
 
-    public bool RegisterUser(string name, int age, long phoneNumber, string email, string password, string confirmPassword)
+    public bool RegisterUser(string name,  string email, string password, string confirmPassword)
     {
 
         if (!IsValidEmail(email))
@@ -64,8 +64,6 @@ public class UserService
         var user = new User
         {
             Name = name,
-            Age = age,
-            PhoneNumber = phoneNumber,
             Email = email,
             Password = hashedPassword,
             ConfirmPassword = hashedPassword,
@@ -129,7 +127,6 @@ public class UserService
             return false;
         }
 
-        // Find the user in the admin account collection.
         var adminAccount = _adminAccountCollection.Find(a => a.employeeEmail == email).FirstOrDefault();
 
         if (adminAccount == null)
@@ -137,13 +134,12 @@ public class UserService
             return false;
         }
 
-        // Verify the password for the admin.
         if (!PasswordHelper.VerifyPassword(password, adminAccount.employeePassword))
         {
             return false;
         }
 
-        return true;  // Return true for successful admin login
+        return true; 
     }
 
     private void IncrementUserCount()

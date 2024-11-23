@@ -1,4 +1,5 @@
 ﻿using Bunifu.UI.WinForms;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using MovieMunch.Admin;
 using MovieMunch.Backend.Models;
@@ -38,6 +39,7 @@ namespace MovieMunch
         private Button _selectedButton = null;
         private List<MovieInfo> _movies; 
         private string userName;
+
         public MainPage()
         {
             this.DoubleBuffered = true;
@@ -74,21 +76,14 @@ namespace MovieMunch
 
         public void SetUserInfo(string name)
         {
-            //for()
             userName = name;
             userNameHolder.Text = userName;
         }
 
-        //public void userNameHolderShow(string name)
-        //{
-        //    userName = name;
-        //    char firstLetter = name[0];
-        //    userNameHolder.Text = firstLetter.ToString().ToUpper();
-        //}
         private MovieInfo GetCurrentMovieInfo()
         {
             var seatReservationService = new MovieService();
-            List<MovieInfo> movies = seatReservationService.GetAllMovieInfos(); 
+            List<MovieInfo> movies = seatReservationService.GetAllMovieInfos();
 
             if (_currentImageIndex >= 0 && _currentImageIndex < movies.Count)
             {
@@ -107,7 +102,7 @@ namespace MovieMunch
 
         public void ClearUserInfo()
         {
-            userNameHolder.Text = "MM";
+            userNameHolder.Text = "USERNAME";
         }
 
         private void CloseCurrentForm()
@@ -437,8 +432,9 @@ namespace MovieMunch
             if (_selectedFilm != null)
             { 
                 decimal price = Convert.ToDecimal(_selectedFilm.FilmsPrice);
-
+                string Id = _selectedFilm.Id.ToString();
                 var seatReservationForm = new SeatReservation(
+                    Id,
                     _selectedFilm.FilmTitle,     
                     price,   
                     userName                     
@@ -454,7 +450,7 @@ namespace MovieMunch
                 }
 
                 this.Close();
-                seatReservationForm.ShowDialog();
+                seatReservationForm.Show();
             }
             else
             {
@@ -550,8 +546,10 @@ namespace MovieMunch
             if (_selectedComingSoonMovie != null)
             {
                 decimal price = Convert.ToDecimal(_selectedComingSoonMovie.ComingSoonPrice);
+                string Id = _selectedComingSoonMovie.Id.ToString();
 
                 var seatReservationForm = new SeatReservation(
+                    Id,
                     _selectedComingSoonMovie.ComingSoonTitle,
                     price,
                     userName
@@ -566,7 +564,7 @@ namespace MovieMunch
                     }
                 }
                 this.Close();
-                seatReservationForm.ShowDialog();
+                seatReservationForm.Show();
             }
             else
             {
@@ -801,6 +799,7 @@ namespace MovieMunch
                 if (currentMovieInfo != null)
                 {
                     var seatReservationForm = new SeatReservation(
+                        currentMovieInfo.Id,  
                         currentMovieInfo.Title,
                         currentMovieInfo.Price,
                         _reservedBy

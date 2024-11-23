@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MovieMunch.Frontend.Forms.Components
 {
-    public partial class SnackDealsZoomIn : UserControl
+    public partial class RegistrationModal : UserControl
     {
-        public SnackDealsZoomIn()
+        public RegistrationModal()
         {
             InitializeComponent();
         }

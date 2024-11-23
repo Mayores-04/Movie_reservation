@@ -15,51 +15,6 @@ namespace MovieMunch
             InitializeComponent();
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
-        {
-            UserService userService = new UserService();
-            string email = emailInput.Text;
-            string password = passwordInput.Text;
-
-            bool isAdminLogin = userService.AdminLogin(email, password);
-
-            if (isAdminLogin)
-            {
-                DialogResult result = MessageBox.Show(
-                    "Login successful as Admin. Do you want to open the Admin interface?",
-                    "Admin Login",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question
-                );
-
-                if (result == DialogResult.Yes)
-                {
-                    this.Close();
-                    MainPage mainPage = new MainPage();
-                    mainPage.Visible = false;
-                    
-                    MainAdmin mainAdmin = new MainAdmin();
-                    mainAdmin.Show();
-                    
-                }
-            }
-            else
-            {
-                bool isLogin = userService.LoginUser(email, password);
-
-                if (isLogin)
-                {
-                    this.Close();
-                    MessageBox.Show("Login successful!");
-                }
-                else
-                {
-                    MessageBox.Show("Login failed. Please check your credentials.");
-                }
-            }
-        }
-
-
         //private void OpenAdminInterface()
         //{
         //    // Ensure MainPage is closed if it is open
@@ -98,18 +53,82 @@ namespace MovieMunch
         //    mainPage.Show();
         //}
 
-        private void CloseButton(object sender, EventArgs e)
+        private void LoginBtn_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            MainPage mainPage = new MainPage();
-            mainPage.Show();
+            UserService userService = new UserService();
+            string email = emailInput.Text;
+            string password = passwordInput.Text;
+
+            bool isAdminLogin = userService.AdminLogin(email, password);
+
+            if (!termsAndRegistrationCheckBox.Checked)
+            {
+                termsAndRegMessage.Visible = true;
+                termsAndRegMessage.Text = "You must accept the terms and conditions.";
+                return;
+            }
+
+            termsAndRegMessage.Visible = false;
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) )
+            {
+                termsAndRegMessage.Visible = true;
+                termsAndRegMessage.Text = "Email, password, and confirm password are required!";
+                return;
+            }
+
+
+            if (isAdminLogin)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Login successful as Admin. Do you want to open the Admin interface?",
+                    "Admin Login",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Close();
+                    MainPage mainPage = new MainPage();
+                    mainPage.Visible = false;
+
+                    MainAdmin mainAdmin = new MainAdmin();
+                    mainAdmin.Show();
+
+                }
+            }
+            else
+            {
+                bool isLogin = userService.LoginUser(email, password);
+
+                if (isLogin)
+                {
+                    this.Close();
+                    MessageBox.Show("Login successful!");
+                }
+                else
+                {
+                    MessageBox.Show("Login failed. Please check your credentials.");
+                }
+            }
         }
 
-        private void SignUpBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
         {
+
             this.Close();
             RegisterForm regForm = new RegisterForm();
             regForm.ShowDialog();
+        }
+
+        private void loginFormClose_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
         }
     }
 }

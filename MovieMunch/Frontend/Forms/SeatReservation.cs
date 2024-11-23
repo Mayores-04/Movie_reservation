@@ -8,8 +8,8 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using System.Xml.Linq;
+using MovieMunch.Backend.Services;
+using MovieMunch.Backend.Models;
 
 namespace MovieMunch
 {
@@ -22,15 +22,36 @@ namespace MovieMunch
         private decimal _moviePrice;
         private List<string> _selectedSeats;
         private string userName;
-        
+        private string _movieId;
 
-        public SeatReservation(string movieTitle, decimal moviePrice, string reservedBy)
+        private MovieService _movieService;
+        private List<FilmsInCinema> _filmsInCinemas;
+        private List<ComingSoon> _comingSoon;
+        private SettingsForm _settingsForm;
+        private List<MovieInfo> _movies;
+        private FoodServices _foodServices;
+        private List<Foods> _foodsCollection;
+
+
+        public SeatReservation(string Id, string movieTitle, decimal moviePrice, string reservedBy)
         {
             InitializeComponent();
 
+            _movieId = Id;
             _movieName = movieTitle;
             _moviePrice = moviePrice;
             _reservedBy = reservedBy;
+
+
+            _movieService = new MovieService();
+            _movies = _movieService.GetAllMovieInfos();
+            _filmsInCinemas = _movieService.GetFilmsInCinemas();
+            _comingSoon = _movieService.GetComingSoons();
+
+
+            _foodServices = new FoodServices();
+            _foodsCollection = _foodServices.GetFoodsInCollection();
+
 
             var dbConnection = new MongoDBConnection();
             _seatReservationService = new SeatReservationServices(dbConnection);
@@ -102,7 +123,7 @@ namespace MovieMunch
             {
                 decimal totalPrice = _moviePrice * _selectedSeats.Count;
 
-                PaymentForm paymentForm = new PaymentForm(_movieName, totalPrice, _selectedSeats, _reservedBy);
+                PaymentForm paymentForm = new PaymentForm(_movieId, _movieName, totalPrice, _selectedSeats, _reservedBy);
                 paymentForm.ShowDialog();
 
                 if (paymentForm.IsPaymentSuccessful)
@@ -118,9 +139,7 @@ namespace MovieMunch
                             seatButton.Refresh();
                         }
                     }
-
                     await LoadSeatStatusAsync(_movieName);
-
                     _selectedSeats.Clear();
                 }
                 else
@@ -150,28 +169,31 @@ namespace MovieMunch
                         seatButton.FillColor = Color.White;
                         _selectedSeats.Remove(seatButton.Name);
                     }
-
                     seatButton.Refresh();
                 }
             }
         }
 
-        private void backToHomeBtn_Click(object sender, EventArgs e)
-        { 
-            this.Visible = false;
-             
+        private void SettingBtn_Click(object sender, EventArgs e)
+        {
             foreach (Form openForm in Application.OpenForms)
             {
                 if (openForm is MainPage)
                 {
-                    openForm.Close();  
+                    openForm.Close();
                     break;
                 }
             }
-             
+
             MainPage mainPage = new MainPage();
             mainPage.SetUserInfo(userName);
             mainPage.Show();
+            this.Visible = false;
+        }
+
+        private void addToWatchLaterBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

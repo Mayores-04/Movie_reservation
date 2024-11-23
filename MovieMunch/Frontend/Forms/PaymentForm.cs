@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieMunch.Frontend.Forms.Components;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -11,23 +12,18 @@ namespace MovieMunch.Frontend.Forms
         private List<string> _reservedSeats;
         private decimal _moviePrice;
         private string _reservedBy;
+        private string _movieId;
 
         public bool IsPaymentSuccessful { get; private set; } 
 
-        public PaymentForm(string movieName, decimal moviePrice, List<string> reservedSeats,  string reservedBy)
+        public PaymentForm(string Id, string movieName, decimal moviePrice, List<string> reservedSeats,  string reservedBy)
         {
             InitializeComponent();
+            _movieId = Id;
             _movieName = movieName;
             _reservedSeats = reservedSeats;
             _moviePrice = moviePrice;
             _reservedBy = reservedBy;
-
-        }
-
-        private void cardPaymentMethodBtn_Click_1(object sender, EventArgs e)
-        {
-            gcashPaypalPaymentPanel.Visible = false;
-            cardPaymentPanel.Visible = true;
         }
 
         public void clearText()
@@ -83,7 +79,7 @@ namespace MovieMunch.Frontend.Forms
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "PayPal"; 
-                totalPriceDetails.Text = _moviePrice.ToString("C"); 
+                totalPriceDetails.Text = _moviePrice.ToString("C");
 
                 gcashPaypalPaymentPanel.Visible = false;
                 orderDetailsPanel.Visible = true;
@@ -104,6 +100,8 @@ namespace MovieMunch.Frontend.Forms
                 gcashPaypalPaymentPanel.Visible = false;
                 orderDetailsPanel.Visible = true;
             }
+            resibo resibo = new resibo(_movieId, _movieName, _moviePrice, _reservedSeats, _reservedBy);
+            resibo.ShowDialog();
 
             IsPaymentSuccessful = true;
             Close();
@@ -137,6 +135,13 @@ namespace MovieMunch.Frontend.Forms
         {
             gcashPaypalPaymentPanel.Visible = true;
             orderDetailsPanel.Visible = false;
+        }
+
+        private void cardPaymentMethodBtn_Click(object sender, EventArgs e)
+        {
+            cardPaymentPanel.Visible = true;
+            gcashPaypalPaymentPanel.Visible = false;
+            clearText();
         }
     }
 }

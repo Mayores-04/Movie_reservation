@@ -226,6 +226,9 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
     <Reference Include="ZstdSharp, Version=0.7.3.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.7.3\lib\net461\ZstdSharp.dll</HintPath>
     </Reference>
@@ -319,17 +322,17 @@
     <Compile Include="Frontend\Forms\Components\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frontend\Forms\Components\SnackDealsZoomIn.cs">
+    <Compile Include="Frontend\Forms\Components\resibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\resibo.Designer.cs">
+      <DependentUpon>resibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Forms\Components\RegistrationModal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Frontend\Forms\Components\SnackDealsZoomIn.Designer.cs">
-      <DependentUpon>SnackDealsZoomIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frontend\Forms\Components\TrendingMoviesZoomIn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\Components\TrendingMoviesZoomIn.Designer.cs">
-      <DependentUpon>TrendingMoviesZoomIn.cs</DependentUpon>
+    <Compile Include="Frontend\Forms\Components\RegistrationModal.Designer.cs">
+      <DependentUpon>RegistrationModal.cs</DependentUpon>
     </Compile>
     <Compile Include="Frontend\Forms\MainPage.cs">
       <SubType>Form</SubType>
@@ -411,11 +414,11 @@
     <EmbeddedResource Include="Frontend\Forms\Components\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\Components\SnackDealsZoomIn.resx">
-      <DependentUpon>SnackDealsZoomIn.cs</DependentUpon>
+    <EmbeddedResource Include="Frontend\Forms\Components\resibo.resx">
+      <DependentUpon>resibo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\Components\TrendingMoviesZoomIn.resx">
-      <DependentUpon>TrendingMoviesZoomIn.cs</DependentUpon>
+    <EmbeddedResource Include="Frontend\Forms\Components\RegistrationModal.resx">
+      <DependentUpon>RegistrationModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
@@ -500,6 +503,10 @@
     <None Include="Frontend\Forms\images\CardIcon.png" />
     <None Include="Frontend\Forms\images\X.png" />
     <None Include="Frontend\Forms\images\introSecondCircle.png" />
+    <None Include="Frontend\Forms\Icons\facebook.png" />
+    <None Include="Frontend\Forms\Icons\google.png" />
+    <None Include="Frontend\Forms\Icons\microsoft_logo.png" />
+    <None Include="Frontend\Forms\Icons\moviemunchBlack.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>
