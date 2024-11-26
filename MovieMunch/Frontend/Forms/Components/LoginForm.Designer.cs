@@ -19,7 +19,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.termsAndRegMessage = new System.Windows.Forms.Label();
             this.loginFormClose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.termsAndRegistrationCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.rememberMeCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -71,26 +71,26 @@
             this.loginFormClose.TextOffset = new System.Drawing.Point(1, -3);
             this.loginFormClose.Click += new System.EventHandler(this.loginFormClose_Click);
             // 
-            // termsAndRegistrationCheckBox
+            // rememberMeCheckBox
             // 
-            this.termsAndRegistrationCheckBox.AutoSize = true;
-            this.termsAndRegistrationCheckBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.termsAndRegistrationCheckBox.CheckedState.BorderRadius = 0;
-            this.termsAndRegistrationCheckBox.CheckedState.BorderThickness = 0;
-            this.termsAndRegistrationCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.termsAndRegistrationCheckBox.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.termsAndRegistrationCheckBox.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.termsAndRegistrationCheckBox.ForeColor = System.Drawing.Color.White;
-            this.termsAndRegistrationCheckBox.Location = new System.Drawing.Point(294, 469);
-            this.termsAndRegistrationCheckBox.Name = "termsAndRegistrationCheckBox";
-            this.termsAndRegistrationCheckBox.Size = new System.Drawing.Size(212, 25);
-            this.termsAndRegistrationCheckBox.TabIndex = 710;
-            this.termsAndRegistrationCheckBox.Text = "Terms and conditions";
-            this.termsAndRegistrationCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.termsAndRegistrationCheckBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.termsAndRegistrationCheckBox.UncheckedState.BorderRadius = 0;
-            this.termsAndRegistrationCheckBox.UncheckedState.BorderThickness = 0;
-            this.termsAndRegistrationCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rememberMeCheckBox.AutoSize = true;
+            this.rememberMeCheckBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rememberMeCheckBox.CheckedState.BorderRadius = 0;
+            this.rememberMeCheckBox.CheckedState.BorderThickness = 0;
+            this.rememberMeCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rememberMeCheckBox.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.rememberMeCheckBox.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rememberMeCheckBox.ForeColor = System.Drawing.Color.White;
+            this.rememberMeCheckBox.Location = new System.Drawing.Point(294, 469);
+            this.rememberMeCheckBox.Name = "rememberMeCheckBox";
+            this.rememberMeCheckBox.Size = new System.Drawing.Size(155, 25);
+            this.rememberMeCheckBox.TabIndex = 710;
+            this.rememberMeCheckBox.Text = "Remember me";
+            this.rememberMeCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rememberMeCheckBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rememberMeCheckBox.UncheckedState.BorderRadius = 0;
+            this.rememberMeCheckBox.UncheckedState.BorderThickness = 0;
+            this.rememberMeCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // label6
             // 
@@ -309,7 +309,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.termsAndRegMessage);
             this.Controls.Add(this.loginFormClose);
-            this.Controls.Add(this.termsAndRegistrationCheckBox);
+            this.Controls.Add(this.rememberMeCheckBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.guna2Panel3);
@@ -334,7 +334,7 @@
         #endregion
         private System.Windows.Forms.Label termsAndRegMessage;
         private Guna.UI2.WinForms.Guna2CircleButton loginFormClose;
-        private Guna.UI2.WinForms.Guna2CheckBox termsAndRegistrationCheckBox;
+        private Guna.UI2.WinForms.Guna2CheckBox rememberMeCheckBox;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button LoginBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;

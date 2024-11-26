@@ -1,10 +1,9 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Collections.Generic;
 
-
-//Dito dumadaan yung mga data na papasok at lalabas from database collections
-public class User 
+public class User
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
@@ -12,12 +11,6 @@ public class User
 
     [BsonElement("Name")]
     public string Name { get; set; }
-
-    [BsonElement("age")]
-    public int Age { get; set; }
-
-    [BsonElement("phoneNumber")]
-    public long PhoneNumber { get; set; }
 
     [BsonElement("email")]
     public string Email { get; set; }
@@ -28,9 +21,29 @@ public class User
     [BsonElement("confirmPassword")]
     public string ConfirmPassword { get; set; }
 
-    [BsonElement("Status")]
-    public string Status { get; set; }
 
     [BsonElement("createdAt")]
     public DateTime CreatedAt { get; set; }
+
+    [BsonElement("Status")]
+    public string Status { get; set; }
+
+    [BsonElement("watchLater")]
+    public List<MovieDetails> WatchLater { get; set; } = new List<MovieDetails>();
 }
+
+public class MovieDetails
+{
+    [BsonElement("movieTitle")]
+    public string MovieTitle { get; set; }
+
+    [BsonElement("movieDescription")]
+    public string MovieDescription { get; set; }
+
+    [BsonElement("moviePrice")]
+    public decimal MoviePrice { get; set; }
+
+    [BsonElement("moviePic")]
+    public string MoviePic { get; set; } 
+}
+

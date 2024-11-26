@@ -21,7 +21,8 @@ public class MongoDBConnection
         EnsureCollectionExists<User>("Users");
         EnsureCollectionExists<AdminAccount>("AdminAccounts");
         EnsureCollectionExists<Foods>("Foods");
-        EnsureCollectionExists<Counts>("number_of_users");
+        EnsureCollectionExists<Counts>("number_of_users"); 
+
     }
 
     private void EnsureCollectionExists<T>(string collectionName)

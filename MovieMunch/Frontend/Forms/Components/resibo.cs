@@ -15,11 +15,11 @@ namespace MovieMunch.Frontend.Forms.Components
         private PrintDocument printDocument;
         private string _userName;
         private string _movieName;
-        private decimal _Price = 300;
+        private decimal _Price = 0;
         private string _ticketReference;
         private double _Discount = 0;
         private List<string> _seats;
-        private double _PaymentInput = 1000;
+        private double _PaymentInput = 1000000;
         private double _ChangeAmount;
         private double _TotalAmount;
         private string reference;

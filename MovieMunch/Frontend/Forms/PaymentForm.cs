@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using ZstdSharp.Unsafe;
 
 namespace MovieMunch.Frontend.Forms
 {
@@ -13,7 +14,6 @@ namespace MovieMunch.Frontend.Forms
         private decimal _moviePrice;
         private string _reservedBy;
         private string _movieId;
-
         public bool IsPaymentSuccessful { get; private set; } 
 
         public PaymentForm(string Id, string movieName, decimal moviePrice, List<string> reservedSeats,  string reservedBy)
@@ -51,6 +51,7 @@ namespace MovieMunch.Frontend.Forms
 
         private void gcashPaymentBtn_Click(object sender, EventArgs e)
         {
+            decimal totalAmount = _moviePrice * _reservedSeats.Count;
             //Gcash payment btn
             if (gcashPaymentBtn.Text == "Proceed to GCash payment")
             {
@@ -62,7 +63,7 @@ namespace MovieMunch.Frontend.Forms
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "GCash";
-                totalPriceDetails.Text = _moviePrice.ToString("C");
+                totalPriceDetails.Text = totalAmount.ToString("C");
 
                 gcashPaypalPaymentPanel.Visible = false;
                 orderDetailsPanel.Visible = true;
@@ -79,7 +80,7 @@ namespace MovieMunch.Frontend.Forms
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "PayPal"; 
-                totalPriceDetails.Text = _moviePrice.ToString("C");
+                totalPriceDetails.Text = totalAmount.ToString("C");
 
                 gcashPaypalPaymentPanel.Visible = false;
                 orderDetailsPanel.Visible = true;
@@ -110,6 +111,7 @@ namespace MovieMunch.Frontend.Forms
 
         private void cardPaymentBtn_Click(object sender, EventArgs e)
         {
+            decimal totalAmount = _moviePrice * _reservedSeats.Count;
             string cardName = cardNameInput.Text;
             string cardNumber = cardNumberInput.Text;
             string monthExpiration = cardMonthInput.Text;
@@ -123,7 +125,7 @@ namespace MovieMunch.Frontend.Forms
             MovietoReserveDetails.Text = _movieName;
             SeatsDetails.Text = string.Join(", ", _reservedSeats);
             PayWithDetails.Text = "Card";
-            totalPriceDetails.Text = _moviePrice.ToString("C");
+            totalPriceDetails.Text = totalAmount.ToString("C");
 
             cardPaymentPanel.Visible = false;
             orderDetailsPanel.Visible = true;

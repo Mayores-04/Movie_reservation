@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.SessionState;
 
 public class MovieService
 {
@@ -62,6 +63,7 @@ public class MovieService
             return new List<Movie>();
         }
     }
+
 
 
     public List<MovieInfo> GetAllMovieInfos()
@@ -261,6 +263,5 @@ public class MovieService
             return null;
         }
     }
-
-
 }
+

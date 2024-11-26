@@ -174,7 +174,7 @@ namespace MovieMunch
             }
         }
 
-        private void SettingBtn_Click(object sender, EventArgs e)
+        private void HomeBtn_Click(object sender, EventArgs e)
         {
             foreach (Form openForm in Application.OpenForms)
             {

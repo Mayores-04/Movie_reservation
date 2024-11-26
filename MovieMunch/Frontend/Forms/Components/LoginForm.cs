@@ -61,7 +61,7 @@ namespace MovieMunch
 
             bool isAdminLogin = userService.AdminLogin(email, password);
 
-            if (!termsAndRegistrationCheckBox.Checked)
+            if (!rememberMeCheckBox.Checked)
             {
                 termsAndRegMessage.Visible = true;
                 termsAndRegMessage.Text = "You must accept the terms and conditions.";
@@ -73,7 +73,7 @@ namespace MovieMunch
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) )
             {
                 termsAndRegMessage.Visible = true;
-                termsAndRegMessage.Text = "Email, password, and confirm password are required!";
+                termsAndRegMessage.Text = "Email and password are required.";
                 return;
             }
 
@@ -105,11 +105,11 @@ namespace MovieMunch
                 if (isLogin)
                 {
                     this.Close();
-                    MessageBox.Show("Login successful!");
                 }
                 else
                 {
-                    MessageBox.Show("Login failed. Please check your credentials.");
+                    termsAndRegMessage.Visible = true;
+                    termsAndRegMessage.Text = "Login failed. Please check your credentials.";
                 }
             }
         }

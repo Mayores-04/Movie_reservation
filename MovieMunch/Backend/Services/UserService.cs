@@ -3,24 +3,28 @@ using MongoDB.Driver;
 using MovieMunch;
 using MovieMunch.Backend.Models;
 using MovieMunch.Frontend.Forms;
+using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 public class UserService
 {
     private readonly IMongoCollection<User> _usersCollection;
     private readonly IMongoCollection<Counts> _countsCollection;
     private readonly IMongoCollection<AdminAccount> _adminAccountCollection;
-
+    private readonly IMongoCollection<User> _users;
     public UserService()
     {
         var dbConnection = new MongoDBConnection();
         _usersCollection = dbConnection.GetUsersCollection();
-        _countsCollection = dbConnection.GetNumberOfUsersCollection(); 
+        _countsCollection = dbConnection.GetNumberOfUsersCollection();
         _adminAccountCollection = dbConnection.GetAdminAccountsCollection();
+        _users = dbConnection.GetUsersCollection();
 
         CreateEmailIndex();
     }
@@ -43,7 +47,7 @@ public class UserService
         }
     }
 
-    public bool RegisterUser(string name,  string email, string password, string confirmPassword)
+    public bool RegisterUser(string name, string email, string password, string confirmPassword)
     {
 
         if (!IsValidEmail(email))
@@ -53,7 +57,6 @@ public class UserService
 
         if (!IsValidPassword(password))
         {
-            ShowMessage("Password must be at least 8 characters long and contain letters and numbers.");
             return false;
         }
 
@@ -67,13 +70,14 @@ public class UserService
             Email = email,
             Password = hashedPassword,
             ConfirmPassword = hashedPassword,
+            Status = "Active",
             CreatedAt = DateTime.UtcNow
         };
 
         // Try inserting the user into the collection.
         try
         {
-            _usersCollection.InsertOne(user); 
+            _usersCollection.InsertOne(user);
 
             // Increment user count after successful registration.
             IncrementUserCount();
@@ -99,26 +103,96 @@ public class UserService
     public bool IsUserLoggedIn { get; private set; }
     public bool LoginUser(string email, string password)
     {
+
+        MainPage mainPage = new MainPage();
         if (!IsValidEmail(email))
         {
-            ShowMessage("Invalid email format.");
             return false;
         }
 
         var existingUser = _usersCollection.Find(u => u.Email == email).FirstOrDefault();
 
+
         if (existingUser == null || !PasswordHelper.VerifyPassword(password, existingUser.Password))
         {
-            ShowMessage("Incorrect email or password.");
             return false;
         }
 
-        MainPage mainPage = new MainPage();
+        _reservedBy = existingUser.Name;
         mainPage.SetUserInfo(existingUser.Name);
-        
+        mainPage.SetLoggedInUserEmail(email);
 
         return true;
     }
+
+
+    private string email;
+    public async Task AddMoviesToWatchListOfUser(string userName, string movieTitle, string movieDescription, decimal moviePrice, string moviePic)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(userName))
+            {
+                MessageBox.Show("User name is null or empty.");
+                return;
+            }
+
+            // Create movie details object
+            var movie = new MovieDetails
+            {
+                MovieTitle = movieTitle,
+                MovieDescription = movieDescription,
+                MoviePrice = moviePrice,
+                MoviePic = moviePic
+            };
+
+            // Log movie details for debugging
+            Console.WriteLine($"Movie details: Title={movie.MovieTitle}, Description={movie.MovieDescription}, Price={movie.MoviePrice}, Pic={movie.MoviePic}");
+
+            // Create update definition
+            var update = Builders<User>.Update.AddToSet(u => u.WatchLater, movie);
+
+            // Execute the update
+            var result = await _usersCollection.UpdateOneAsync(
+                u => u.Email == userName,
+                update
+            );
+
+            // Log the result of the update
+            Console.WriteLine($"Update result: {result.ModifiedCount} document(s) modified.");
+
+            // Handle the result
+            if (result.ModifiedCount == 0)
+            {
+                MessageBox.Show("Movie is already in the watchlist or user not found.");
+            }
+            else
+            {
+                MessageBox.Show("Movie successfully added to watchlist!");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding movie to watchlist: {ex.Message}");
+            MessageBox.Show($"Error adding movie to watchlist: {ex.Message}");
+        }
+    }
+
+
+
+
+    public List<MovieDetails> GetWatchLaterMovies(string userName)
+    {
+        var user = _usersCollection.Find(u => u.Name == userName).FirstOrDefault();
+
+        if (user != null)
+        {
+            return user.WatchLater ?? new List<MovieDetails>();
+        }
+
+        return new List<MovieDetails>();
+    }
+
 
     public bool AdminLogin(string email, string password)
     {
@@ -139,7 +213,7 @@ public class UserService
             return false;
         }
 
-        return true; 
+        return true;
     }
 
     private void IncrementUserCount()
@@ -176,7 +250,6 @@ public class UserService
     {
         if (!IsValidEmail(email))
         {
-            ShowMessage("Invalid email format.");
             return false;
         }
 
@@ -225,4 +298,6 @@ public class UserService
         mainPage.ClearUserInfo();
         ShowMessage("You have successfully logged out.");
     }
+
+
 }

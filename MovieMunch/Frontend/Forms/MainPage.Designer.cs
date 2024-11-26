@@ -27,30 +27,29 @@ namespace MovieMunch
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges25 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges27 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges28 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges29 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges30 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges31 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges32 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges33 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges34 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges35 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges36 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges37 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges38 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges39 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges40 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges19 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.filmsInCinemaPanel = new System.Windows.Forms.Panel();
@@ -111,24 +110,13 @@ namespace MovieMunch
             this.smothFromLeftToRightTransition = new System.Windows.Forms.Timer(this.components);
             this.searchResultsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchResultFlowWholePanel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.trendingMoviesDetailsPanel = new System.Windows.Forms.Panel();
             this.trendingDescriptionDetails = new System.Windows.Forms.Label();
             this.closeTrendingMoviesDetails = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.trendingMovieSeatReservationBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.trendingMoviePriceDetails = new System.Windows.Forms.Label();
-            this.bunifuIconButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.addTrendingToWatchLaterBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.trendingMovieTitleDetails = new System.Windows.Forms.Label();
             this.trendingDetailsPictureBox = new System.Windows.Forms.PictureBox();
             this.comingSoonMovieDetailsPanel = new System.Windows.Forms.Panel();
@@ -136,7 +124,7 @@ namespace MovieMunch
             this.closeComingSoonMovieDetailsBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.comingSoonMovieSeatReservationBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.comingSoonPriceDetails = new System.Windows.Forms.Label();
-            this.bunifuIconButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.addComingSoonToWatchLater = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.comingSoonTitleDetails = new System.Windows.Forms.Label();
             this.comingSoonMoviePicBoxDetails = new System.Windows.Forms.PictureBox();
             this.filmsDetailsPanel = new System.Windows.Forms.Panel();
@@ -144,14 +132,13 @@ namespace MovieMunch
             this.closeFilmsDetailsBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.filmsMovieSeatReservationBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.filmsPriceDetails = new System.Windows.Forms.Label();
-            this.bunifuIconButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.addFilmMovieToWatchLaterBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.filmsTitleDetails = new System.Windows.Forms.Label();
             this.filmsPictureBoxDetails = new System.Windows.Forms.PictureBox();
             this.foodDetailsPanel = new System.Windows.Forms.Panel();
             this.closeFoodDetailsBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.snackDealsReservedSeatBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.foodPriceDetails = new System.Windows.Forms.Label();
-            this.bunifuIconButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.foodNameDetails = new System.Windows.Forms.Label();
             this.foodPicDetails = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -162,7 +149,7 @@ namespace MovieMunch
             this.searchBtnBefore = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.gotoWatchListBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.userNameHolder = new Guna.UI2.WinForms.Guna2TextBox();
             this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -820,11 +807,11 @@ namespace MovieMunch
             this.bunifuFormCaptionButton1.ColorContrastOnClick = 30;
             this.bunifuFormCaptionButton1.ColorContrastOnHover = 30;
             this.bunifuFormCaptionButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges21.BottomLeft = true;
-            borderEdges21.BottomRight = true;
-            borderEdges21.TopLeft = true;
-            borderEdges21.TopRight = true;
-            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges21;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges1;
             this.bunifuFormCaptionButton1.DefaultBorderColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DefaultColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -858,11 +845,11 @@ namespace MovieMunch
             this.bunifuIconButton5.ColorContrastOnClick = 30;
             this.bunifuIconButton5.ColorContrastOnHover = 30;
             this.bunifuIconButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges22.BottomLeft = true;
-            borderEdges22.BottomRight = true;
-            borderEdges22.TopLeft = true;
-            borderEdges22.TopRight = true;
-            this.bunifuIconButton5.CustomizableEdges = borderEdges22;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuIconButton5.CustomizableEdges = borderEdges2;
             this.bunifuIconButton5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton5.Image = null;
             this.bunifuIconButton5.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -933,11 +920,11 @@ namespace MovieMunch
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges23.BottomLeft = true;
-            borderEdges23.BottomRight = true;
-            borderEdges23.TopLeft = true;
-            borderEdges23.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges23;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges3;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1022,11 +1009,11 @@ namespace MovieMunch
             this.bunifuButton22.ColorContrastOnClick = 45;
             this.bunifuButton22.ColorContrastOnHover = 45;
             this.bunifuButton22.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges24.BottomLeft = true;
-            borderEdges24.BottomRight = true;
-            borderEdges24.TopLeft = true;
-            borderEdges24.TopRight = true;
-            this.bunifuButton22.CustomizableEdges = borderEdges24;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bunifuButton22.CustomizableEdges = borderEdges4;
             this.bunifuButton22.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton22.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1111,11 +1098,11 @@ namespace MovieMunch
             this.LoginBtn.ColorContrastOnClick = 45;
             this.LoginBtn.ColorContrastOnHover = 45;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges25.BottomLeft = true;
-            borderEdges25.BottomRight = true;
-            borderEdges25.TopLeft = true;
-            borderEdges25.TopRight = true;
-            this.LoginBtn.CustomizableEdges = borderEdges25;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.LoginBtn.CustomizableEdges = borderEdges5;
             this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LoginBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LoginBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1201,11 +1188,11 @@ namespace MovieMunch
             this.SignUpBtn.ColorContrastOnClick = 45;
             this.SignUpBtn.ColorContrastOnHover = 45;
             this.SignUpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges26.BottomLeft = true;
-            borderEdges26.BottomRight = true;
-            borderEdges26.TopLeft = true;
-            borderEdges26.TopRight = true;
-            this.SignUpBtn.CustomizableEdges = borderEdges26;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.SignUpBtn.CustomizableEdges = borderEdges6;
             this.SignUpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignUpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1298,127 +1285,6 @@ namespace MovieMunch
             this.searchResultFlowWholePanel.TabIndex = 44;
             this.searchResultFlowWholePanel.Visible = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1212, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 29);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "P";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1212, 134);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 29);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "A";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(1212, 194);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 29);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "S";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1212, 248);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 29);
-            this.label8.TabIndex = 53;
-            this.label8.Text = "O";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(1215, 305);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 29);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "B";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(1215, 363);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 29);
-            this.label10.TabIndex = 52;
-            this.label10.Text = "R";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(1217, 413);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(28, 29);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "A";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(1216, 491);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 29);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "M";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(1216, 529);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 29);
-            this.label13.TabIndex = 55;
-            this.label13.Text = "U";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(1216, 566);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 29);
-            this.label14.TabIndex = 53;
-            this.label14.Text = "N";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(1215, 605);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(28, 29);
-            this.label15.TabIndex = 53;
-            this.label15.Text = "A";
-            // 
             // guna2VScrollBar1
             // 
             this.guna2VScrollBar1.AutoScroll = true;
@@ -1444,7 +1310,7 @@ namespace MovieMunch
             this.trendingMoviesDetailsPanel.Controls.Add(this.closeTrendingMoviesDetails);
             this.trendingMoviesDetailsPanel.Controls.Add(this.trendingMovieSeatReservationBtn);
             this.trendingMoviesDetailsPanel.Controls.Add(this.trendingMoviePriceDetails);
-            this.trendingMoviesDetailsPanel.Controls.Add(this.bunifuIconButton2);
+            this.trendingMoviesDetailsPanel.Controls.Add(this.addTrendingToWatchLaterBtn);
             this.trendingMoviesDetailsPanel.Controls.Add(this.trendingMovieTitleDetails);
             this.trendingMoviesDetailsPanel.Controls.Add(this.trendingDetailsPictureBox);
             this.trendingMoviesDetailsPanel.Location = new System.Drawing.Point(233, 124);
@@ -1487,11 +1353,11 @@ namespace MovieMunch
             this.closeTrendingMoviesDetails.ColorContrastOnClick = 30;
             this.closeTrendingMoviesDetails.ColorContrastOnHover = 30;
             this.closeTrendingMoviesDetails.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges27.BottomLeft = true;
-            borderEdges27.BottomRight = true;
-            borderEdges27.TopLeft = true;
-            borderEdges27.TopRight = true;
-            this.closeTrendingMoviesDetails.CustomizableEdges = borderEdges27;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.closeTrendingMoviesDetails.CustomizableEdges = borderEdges7;
             this.closeTrendingMoviesDetails.DefaultBorderColor = System.Drawing.Color.White;
             this.closeTrendingMoviesDetails.DefaultColor = System.Drawing.Color.White;
             this.closeTrendingMoviesDetails.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -1528,11 +1394,11 @@ namespace MovieMunch
             this.trendingMovieSeatReservationBtn.ColorContrastOnClick = 45;
             this.trendingMovieSeatReservationBtn.ColorContrastOnHover = 45;
             this.trendingMovieSeatReservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges28.BottomLeft = true;
-            borderEdges28.BottomRight = true;
-            borderEdges28.TopLeft = true;
-            borderEdges28.TopRight = true;
-            this.trendingMovieSeatReservationBtn.CustomizableEdges = borderEdges28;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.trendingMovieSeatReservationBtn.CustomizableEdges = borderEdges8;
             this.trendingMovieSeatReservationBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.trendingMovieSeatReservationBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.trendingMovieSeatReservationBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1610,38 +1476,39 @@ namespace MovieMunch
             this.trendingMoviePriceDetails.TabIndex = 60;
             this.trendingMoviePriceDetails.Text = "Price";
             // 
-            // bunifuIconButton2
+            // addTrendingToWatchLaterBtn
             // 
-            this.bunifuIconButton2.AllowAnimations = true;
-            this.bunifuIconButton2.AllowBorderColorChanges = true;
-            this.bunifuIconButton2.AllowMouseEffects = true;
-            this.bunifuIconButton2.AnimationSpeed = 200;
-            this.bunifuIconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton2.BackgroundImage")));
-            this.bunifuIconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuIconButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton2.BorderRadius = 1;
-            this.bunifuIconButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
-            this.bunifuIconButton2.BorderThickness = 1;
-            this.bunifuIconButton2.ColorContrastOnClick = 30;
-            this.bunifuIconButton2.ColorContrastOnHover = 30;
-            this.bunifuIconButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges29.BottomLeft = true;
-            borderEdges29.BottomRight = true;
-            borderEdges29.TopLeft = true;
-            borderEdges29.TopRight = true;
-            this.bunifuIconButton2.CustomizableEdges = borderEdges29;
-            this.bunifuIconButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuIconButton2.Image = null;
-            this.bunifuIconButton2.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.bunifuIconButton2.Location = new System.Drawing.Point(39, 367);
-            this.bunifuIconButton2.Name = "bunifuIconButton2";
-            this.bunifuIconButton2.RoundBorders = true;
-            this.bunifuIconButton2.ShowBorders = true;
-            this.bunifuIconButton2.Size = new System.Drawing.Size(57, 57);
-            this.bunifuIconButton2.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.bunifuIconButton2.TabIndex = 59;
+            this.addTrendingToWatchLaterBtn.AllowAnimations = true;
+            this.addTrendingToWatchLaterBtn.AllowBorderColorChanges = true;
+            this.addTrendingToWatchLaterBtn.AllowMouseEffects = true;
+            this.addTrendingToWatchLaterBtn.AnimationSpeed = 200;
+            this.addTrendingToWatchLaterBtn.BackColor = System.Drawing.Color.Transparent;
+            this.addTrendingToWatchLaterBtn.BackgroundColor = System.Drawing.Color.Transparent;
+            this.addTrendingToWatchLaterBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addTrendingToWatchLaterBtn.BackgroundImage")));
+            this.addTrendingToWatchLaterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addTrendingToWatchLaterBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.addTrendingToWatchLaterBtn.BorderRadius = 1;
+            this.addTrendingToWatchLaterBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.addTrendingToWatchLaterBtn.BorderThickness = 1;
+            this.addTrendingToWatchLaterBtn.ColorContrastOnClick = 30;
+            this.addTrendingToWatchLaterBtn.ColorContrastOnHover = 30;
+            this.addTrendingToWatchLaterBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.addTrendingToWatchLaterBtn.CustomizableEdges = borderEdges9;
+            this.addTrendingToWatchLaterBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.addTrendingToWatchLaterBtn.Image = null;
+            this.addTrendingToWatchLaterBtn.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.addTrendingToWatchLaterBtn.Location = new System.Drawing.Point(39, 367);
+            this.addTrendingToWatchLaterBtn.Name = "addTrendingToWatchLaterBtn";
+            this.addTrendingToWatchLaterBtn.RoundBorders = true;
+            this.addTrendingToWatchLaterBtn.ShowBorders = true;
+            this.addTrendingToWatchLaterBtn.Size = new System.Drawing.Size(57, 57);
+            this.addTrendingToWatchLaterBtn.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.addTrendingToWatchLaterBtn.TabIndex = 59;
+            this.addTrendingToWatchLaterBtn.Click += new System.EventHandler(this.addTrendingToWatchLaterBtn_Click);
             // 
             // trendingMovieTitleDetails
             // 
@@ -1670,10 +1537,10 @@ namespace MovieMunch
             this.comingSoonMovieDetailsPanel.Controls.Add(this.closeComingSoonMovieDetailsBtn);
             this.comingSoonMovieDetailsPanel.Controls.Add(this.comingSoonMovieSeatReservationBtn);
             this.comingSoonMovieDetailsPanel.Controls.Add(this.comingSoonPriceDetails);
-            this.comingSoonMovieDetailsPanel.Controls.Add(this.bunifuIconButton1);
+            this.comingSoonMovieDetailsPanel.Controls.Add(this.addComingSoonToWatchLater);
             this.comingSoonMovieDetailsPanel.Controls.Add(this.comingSoonTitleDetails);
             this.comingSoonMovieDetailsPanel.Controls.Add(this.comingSoonMoviePicBoxDetails);
-            this.comingSoonMovieDetailsPanel.Location = new System.Drawing.Point(236, 124);
+            this.comingSoonMovieDetailsPanel.Location = new System.Drawing.Point(233, 123);
             this.comingSoonMovieDetailsPanel.Name = "comingSoonMovieDetailsPanel";
             this.comingSoonMovieDetailsPanel.Size = new System.Drawing.Size(767, 435);
             this.comingSoonMovieDetailsPanel.TabIndex = 63;
@@ -1713,11 +1580,11 @@ namespace MovieMunch
             this.closeComingSoonMovieDetailsBtn.ColorContrastOnClick = 30;
             this.closeComingSoonMovieDetailsBtn.ColorContrastOnHover = 30;
             this.closeComingSoonMovieDetailsBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges30.BottomLeft = true;
-            borderEdges30.BottomRight = true;
-            borderEdges30.TopLeft = true;
-            borderEdges30.TopRight = true;
-            this.closeComingSoonMovieDetailsBtn.CustomizableEdges = borderEdges30;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.closeComingSoonMovieDetailsBtn.CustomizableEdges = borderEdges10;
             this.closeComingSoonMovieDetailsBtn.DefaultBorderColor = System.Drawing.Color.White;
             this.closeComingSoonMovieDetailsBtn.DefaultColor = System.Drawing.Color.White;
             this.closeComingSoonMovieDetailsBtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -1754,11 +1621,11 @@ namespace MovieMunch
             this.comingSoonMovieSeatReservationBtn.ColorContrastOnClick = 45;
             this.comingSoonMovieSeatReservationBtn.ColorContrastOnHover = 45;
             this.comingSoonMovieSeatReservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges31.BottomLeft = true;
-            borderEdges31.BottomRight = true;
-            borderEdges31.TopLeft = true;
-            borderEdges31.TopRight = true;
-            this.comingSoonMovieSeatReservationBtn.CustomizableEdges = borderEdges31;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.comingSoonMovieSeatReservationBtn.CustomizableEdges = borderEdges11;
             this.comingSoonMovieSeatReservationBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.comingSoonMovieSeatReservationBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.comingSoonMovieSeatReservationBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1836,38 +1703,39 @@ namespace MovieMunch
             this.comingSoonPriceDetails.TabIndex = 60;
             this.comingSoonPriceDetails.Text = "Price";
             // 
-            // bunifuIconButton1
+            // addComingSoonToWatchLater
             // 
-            this.bunifuIconButton1.AllowAnimations = true;
-            this.bunifuIconButton1.AllowBorderColorChanges = true;
-            this.bunifuIconButton1.AllowMouseEffects = true;
-            this.bunifuIconButton1.AnimationSpeed = 200;
-            this.bunifuIconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton1.BackgroundImage")));
-            this.bunifuIconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuIconButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton1.BorderRadius = 1;
-            this.bunifuIconButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
-            this.bunifuIconButton1.BorderThickness = 1;
-            this.bunifuIconButton1.ColorContrastOnClick = 30;
-            this.bunifuIconButton1.ColorContrastOnHover = 30;
-            this.bunifuIconButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges32.BottomLeft = true;
-            borderEdges32.BottomRight = true;
-            borderEdges32.TopLeft = true;
-            borderEdges32.TopRight = true;
-            this.bunifuIconButton1.CustomizableEdges = borderEdges32;
-            this.bunifuIconButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuIconButton1.Image = null;
-            this.bunifuIconButton1.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.bunifuIconButton1.Location = new System.Drawing.Point(286, 334);
-            this.bunifuIconButton1.Name = "bunifuIconButton1";
-            this.bunifuIconButton1.RoundBorders = true;
-            this.bunifuIconButton1.ShowBorders = true;
-            this.bunifuIconButton1.Size = new System.Drawing.Size(57, 57);
-            this.bunifuIconButton1.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.bunifuIconButton1.TabIndex = 59;
+            this.addComingSoonToWatchLater.AllowAnimations = true;
+            this.addComingSoonToWatchLater.AllowBorderColorChanges = true;
+            this.addComingSoonToWatchLater.AllowMouseEffects = true;
+            this.addComingSoonToWatchLater.AnimationSpeed = 200;
+            this.addComingSoonToWatchLater.BackColor = System.Drawing.Color.Transparent;
+            this.addComingSoonToWatchLater.BackgroundColor = System.Drawing.Color.Transparent;
+            this.addComingSoonToWatchLater.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addComingSoonToWatchLater.BackgroundImage")));
+            this.addComingSoonToWatchLater.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addComingSoonToWatchLater.BorderColor = System.Drawing.Color.Transparent;
+            this.addComingSoonToWatchLater.BorderRadius = 1;
+            this.addComingSoonToWatchLater.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.addComingSoonToWatchLater.BorderThickness = 1;
+            this.addComingSoonToWatchLater.ColorContrastOnClick = 30;
+            this.addComingSoonToWatchLater.ColorContrastOnHover = 30;
+            this.addComingSoonToWatchLater.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.addComingSoonToWatchLater.CustomizableEdges = borderEdges12;
+            this.addComingSoonToWatchLater.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.addComingSoonToWatchLater.Image = null;
+            this.addComingSoonToWatchLater.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.addComingSoonToWatchLater.Location = new System.Drawing.Point(286, 334);
+            this.addComingSoonToWatchLater.Name = "addComingSoonToWatchLater";
+            this.addComingSoonToWatchLater.RoundBorders = true;
+            this.addComingSoonToWatchLater.ShowBorders = true;
+            this.addComingSoonToWatchLater.Size = new System.Drawing.Size(57, 57);
+            this.addComingSoonToWatchLater.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.addComingSoonToWatchLater.TabIndex = 59;
+            this.addComingSoonToWatchLater.Click += new System.EventHandler(this.addComingSoonToWatchLater_Click);
             // 
             // comingSoonTitleDetails
             // 
@@ -1896,7 +1764,7 @@ namespace MovieMunch
             this.filmsDetailsPanel.Controls.Add(this.closeFilmsDetailsBtn);
             this.filmsDetailsPanel.Controls.Add(this.filmsMovieSeatReservationBtn);
             this.filmsDetailsPanel.Controls.Add(this.filmsPriceDetails);
-            this.filmsDetailsPanel.Controls.Add(this.bunifuIconButton3);
+            this.filmsDetailsPanel.Controls.Add(this.addFilmMovieToWatchLaterBtn);
             this.filmsDetailsPanel.Controls.Add(this.filmsTitleDetails);
             this.filmsDetailsPanel.Controls.Add(this.filmsPictureBoxDetails);
             this.filmsDetailsPanel.Location = new System.Drawing.Point(233, 123);
@@ -1939,11 +1807,11 @@ namespace MovieMunch
             this.closeFilmsDetailsBtn.ColorContrastOnClick = 30;
             this.closeFilmsDetailsBtn.ColorContrastOnHover = 30;
             this.closeFilmsDetailsBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges33.BottomLeft = true;
-            borderEdges33.BottomRight = true;
-            borderEdges33.TopLeft = true;
-            borderEdges33.TopRight = true;
-            this.closeFilmsDetailsBtn.CustomizableEdges = borderEdges33;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.closeFilmsDetailsBtn.CustomizableEdges = borderEdges13;
             this.closeFilmsDetailsBtn.DefaultBorderColor = System.Drawing.Color.White;
             this.closeFilmsDetailsBtn.DefaultColor = System.Drawing.Color.White;
             this.closeFilmsDetailsBtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -1980,11 +1848,11 @@ namespace MovieMunch
             this.filmsMovieSeatReservationBtn.ColorContrastOnClick = 45;
             this.filmsMovieSeatReservationBtn.ColorContrastOnHover = 45;
             this.filmsMovieSeatReservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges34.BottomLeft = true;
-            borderEdges34.BottomRight = true;
-            borderEdges34.TopLeft = true;
-            borderEdges34.TopRight = true;
-            this.filmsMovieSeatReservationBtn.CustomizableEdges = borderEdges34;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.filmsMovieSeatReservationBtn.CustomizableEdges = borderEdges14;
             this.filmsMovieSeatReservationBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.filmsMovieSeatReservationBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.filmsMovieSeatReservationBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2062,38 +1930,39 @@ namespace MovieMunch
             this.filmsPriceDetails.TabIndex = 60;
             this.filmsPriceDetails.Text = "Price";
             // 
-            // bunifuIconButton3
+            // addFilmMovieToWatchLaterBtn
             // 
-            this.bunifuIconButton3.AllowAnimations = true;
-            this.bunifuIconButton3.AllowBorderColorChanges = true;
-            this.bunifuIconButton3.AllowMouseEffects = true;
-            this.bunifuIconButton3.AnimationSpeed = 200;
-            this.bunifuIconButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton3.BackgroundImage")));
-            this.bunifuIconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuIconButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton3.BorderRadius = 1;
-            this.bunifuIconButton3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
-            this.bunifuIconButton3.BorderThickness = 1;
-            this.bunifuIconButton3.ColorContrastOnClick = 30;
-            this.bunifuIconButton3.ColorContrastOnHover = 30;
-            this.bunifuIconButton3.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges35.BottomLeft = true;
-            borderEdges35.BottomRight = true;
-            borderEdges35.TopLeft = true;
-            borderEdges35.TopRight = true;
-            this.bunifuIconButton3.CustomizableEdges = borderEdges35;
-            this.bunifuIconButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuIconButton3.Image = null;
-            this.bunifuIconButton3.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.bunifuIconButton3.Location = new System.Drawing.Point(286, 334);
-            this.bunifuIconButton3.Name = "bunifuIconButton3";
-            this.bunifuIconButton3.RoundBorders = true;
-            this.bunifuIconButton3.ShowBorders = true;
-            this.bunifuIconButton3.Size = new System.Drawing.Size(57, 57);
-            this.bunifuIconButton3.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.bunifuIconButton3.TabIndex = 59;
+            this.addFilmMovieToWatchLaterBtn.AllowAnimations = true;
+            this.addFilmMovieToWatchLaterBtn.AllowBorderColorChanges = true;
+            this.addFilmMovieToWatchLaterBtn.AllowMouseEffects = true;
+            this.addFilmMovieToWatchLaterBtn.AnimationSpeed = 200;
+            this.addFilmMovieToWatchLaterBtn.BackColor = System.Drawing.Color.Transparent;
+            this.addFilmMovieToWatchLaterBtn.BackgroundColor = System.Drawing.Color.Transparent;
+            this.addFilmMovieToWatchLaterBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addFilmMovieToWatchLaterBtn.BackgroundImage")));
+            this.addFilmMovieToWatchLaterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addFilmMovieToWatchLaterBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.addFilmMovieToWatchLaterBtn.BorderRadius = 1;
+            this.addFilmMovieToWatchLaterBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.addFilmMovieToWatchLaterBtn.BorderThickness = 1;
+            this.addFilmMovieToWatchLaterBtn.ColorContrastOnClick = 30;
+            this.addFilmMovieToWatchLaterBtn.ColorContrastOnHover = 30;
+            this.addFilmMovieToWatchLaterBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.addFilmMovieToWatchLaterBtn.CustomizableEdges = borderEdges15;
+            this.addFilmMovieToWatchLaterBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.addFilmMovieToWatchLaterBtn.Image = null;
+            this.addFilmMovieToWatchLaterBtn.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.addFilmMovieToWatchLaterBtn.Location = new System.Drawing.Point(286, 334);
+            this.addFilmMovieToWatchLaterBtn.Name = "addFilmMovieToWatchLaterBtn";
+            this.addFilmMovieToWatchLaterBtn.RoundBorders = true;
+            this.addFilmMovieToWatchLaterBtn.ShowBorders = true;
+            this.addFilmMovieToWatchLaterBtn.Size = new System.Drawing.Size(57, 57);
+            this.addFilmMovieToWatchLaterBtn.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.addFilmMovieToWatchLaterBtn.TabIndex = 59;
+            this.addFilmMovieToWatchLaterBtn.Click += new System.EventHandler(this.btnFilmAddToWatchLater_Click);
             // 
             // filmsTitleDetails
             // 
@@ -2121,7 +1990,6 @@ namespace MovieMunch
             this.foodDetailsPanel.Controls.Add(this.closeFoodDetailsBtn);
             this.foodDetailsPanel.Controls.Add(this.snackDealsReservedSeatBtn);
             this.foodDetailsPanel.Controls.Add(this.foodPriceDetails);
-            this.foodDetailsPanel.Controls.Add(this.bunifuIconButton4);
             this.foodDetailsPanel.Controls.Add(this.foodNameDetails);
             this.foodDetailsPanel.Controls.Add(this.foodPicDetails);
             this.foodDetailsPanel.Location = new System.Drawing.Point(233, 123);
@@ -2153,11 +2021,11 @@ namespace MovieMunch
             this.closeFoodDetailsBtn.ColorContrastOnClick = 30;
             this.closeFoodDetailsBtn.ColorContrastOnHover = 30;
             this.closeFoodDetailsBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges36.BottomLeft = true;
-            borderEdges36.BottomRight = true;
-            borderEdges36.TopLeft = true;
-            borderEdges36.TopRight = true;
-            this.closeFoodDetailsBtn.CustomizableEdges = borderEdges36;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.closeFoodDetailsBtn.CustomizableEdges = borderEdges16;
             this.closeFoodDetailsBtn.DefaultBorderColor = System.Drawing.Color.White;
             this.closeFoodDetailsBtn.DefaultColor = System.Drawing.Color.White;
             this.closeFoodDetailsBtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -2194,11 +2062,11 @@ namespace MovieMunch
             this.snackDealsReservedSeatBtn.ColorContrastOnClick = 45;
             this.snackDealsReservedSeatBtn.ColorContrastOnHover = 45;
             this.snackDealsReservedSeatBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges37.BottomLeft = true;
-            borderEdges37.BottomRight = true;
-            borderEdges37.TopLeft = true;
-            borderEdges37.TopRight = true;
-            this.snackDealsReservedSeatBtn.CustomizableEdges = borderEdges37;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.snackDealsReservedSeatBtn.CustomizableEdges = borderEdges17;
             this.snackDealsReservedSeatBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.snackDealsReservedSeatBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.snackDealsReservedSeatBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2275,39 +2143,6 @@ namespace MovieMunch
             this.foodPriceDetails.Size = new System.Drawing.Size(112, 46);
             this.foodPriceDetails.TabIndex = 60;
             this.foodPriceDetails.Text = "Price";
-            // 
-            // bunifuIconButton4
-            // 
-            this.bunifuIconButton4.AllowAnimations = true;
-            this.bunifuIconButton4.AllowBorderColorChanges = true;
-            this.bunifuIconButton4.AllowMouseEffects = true;
-            this.bunifuIconButton4.AnimationSpeed = 200;
-            this.bunifuIconButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton4.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuIconButton4.BackgroundImage")));
-            this.bunifuIconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuIconButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuIconButton4.BorderRadius = 1;
-            this.bunifuIconButton4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
-            this.bunifuIconButton4.BorderThickness = 1;
-            this.bunifuIconButton4.ColorContrastOnClick = 30;
-            this.bunifuIconButton4.ColorContrastOnHover = 30;
-            this.bunifuIconButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges38.BottomLeft = true;
-            borderEdges38.BottomRight = true;
-            borderEdges38.TopLeft = true;
-            borderEdges38.TopRight = true;
-            this.bunifuIconButton4.CustomizableEdges = borderEdges38;
-            this.bunifuIconButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuIconButton4.Image = null;
-            this.bunifuIconButton4.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.bunifuIconButton4.Location = new System.Drawing.Point(540, 177);
-            this.bunifuIconButton4.Name = "bunifuIconButton4";
-            this.bunifuIconButton4.RoundBorders = true;
-            this.bunifuIconButton4.ShowBorders = true;
-            this.bunifuIconButton4.Size = new System.Drawing.Size(57, 57);
-            this.bunifuIconButton4.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.bunifuIconButton4.TabIndex = 59;
             // 
             // foodNameDetails
             // 
@@ -2393,11 +2228,11 @@ namespace MovieMunch
             this.exisSearchBtn.ColorContrastOnClick = 30;
             this.exisSearchBtn.ColorContrastOnHover = 30;
             this.exisSearchBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges39.BottomLeft = true;
-            borderEdges39.BottomRight = true;
-            borderEdges39.TopLeft = true;
-            borderEdges39.TopRight = true;
-            this.exisSearchBtn.CustomizableEdges = borderEdges39;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.exisSearchBtn.CustomizableEdges = borderEdges18;
             this.exisSearchBtn.DefaultBorderColor = System.Drawing.Color.White;
             this.exisSearchBtn.DefaultColor = System.Drawing.Color.White;
             this.exisSearchBtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -2450,26 +2285,26 @@ namespace MovieMunch
             this.searchInput.Modified = false;
             this.searchInput.Multiline = false;
             this.searchInput.Name = "searchInput";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.searchInput.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.searchInput.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.searchInput.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.searchInput.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchInput.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.searchInput.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchInput.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchInput.OnIdleState = stateProperties4;
             this.searchInput.Padding = new System.Windows.Forms.Padding(3);
             this.searchInput.PasswordChar = '\0';
             this.searchInput.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -2510,11 +2345,11 @@ namespace MovieMunch
             this.searchBtnBefore.ColorContrastOnClick = 30;
             this.searchBtnBefore.ColorContrastOnHover = 30;
             this.searchBtnBefore.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges40.BottomLeft = true;
-            borderEdges40.BottomRight = true;
-            borderEdges40.TopLeft = true;
-            borderEdges40.TopRight = true;
-            this.searchBtnBefore.CustomizableEdges = borderEdges40;
+            borderEdges19.BottomLeft = true;
+            borderEdges19.BottomRight = true;
+            borderEdges19.TopLeft = true;
+            borderEdges19.TopRight = true;
+            this.searchBtnBefore.CustomizableEdges = borderEdges19;
             this.searchBtnBefore.DialogResult = System.Windows.Forms.DialogResult.None;
             this.searchBtnBefore.Image = null;
             this.searchBtnBefore.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -2533,7 +2368,7 @@ namespace MovieMunch
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.LogoutBtn);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
+            this.guna2Panel1.Controls.Add(this.gotoWatchListBtn);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.userNameHolder);
             this.guna2Panel1.Controls.Add(this.userProfileBtn);
@@ -2562,27 +2397,28 @@ namespace MovieMunch
             this.LogoutBtn.Text = "LOG OUT";
             this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
-            // guna2Button2
+            // gotoWatchListBtn
             // 
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 25);
-            this.guna2Button2.IndicateFocus = true;
-            this.guna2Button2.Location = new System.Drawing.Point(17, 375);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(144, 35);
-            this.guna2Button2.TabIndex = 47;
-            this.guna2Button2.Text = "WATCH LATER";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gotoWatchListBtn.BorderRadius = 10;
+            this.gotoWatchListBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.gotoWatchListBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.gotoWatchListBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gotoWatchListBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.gotoWatchListBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.gotoWatchListBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.gotoWatchListBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gotoWatchListBtn.ForeColor = System.Drawing.Color.White;
+            this.gotoWatchListBtn.Image = ((System.Drawing.Image)(resources.GetObject("gotoWatchListBtn.Image")));
+            this.gotoWatchListBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gotoWatchListBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.gotoWatchListBtn.IndicateFocus = true;
+            this.gotoWatchListBtn.Location = new System.Drawing.Point(17, 375);
+            this.gotoWatchListBtn.Name = "gotoWatchListBtn";
+            this.gotoWatchListBtn.Size = new System.Drawing.Size(144, 35);
+            this.gotoWatchListBtn.TabIndex = 47;
+            this.gotoWatchListBtn.Text = "WATCH LATER";
+            this.gotoWatchListBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gotoWatchListBtn.Click += new System.EventHandler(this.gotoWatchListBtn_Click);
             // 
             // guna2Button1
             // 
@@ -2682,28 +2518,17 @@ namespace MovieMunch
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1202, 650);
+            this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.trendingMoviesDetailsPanel);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.searchResultFlowWholePanel);
             this.Controls.Add(this.bunifuPanel1);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.userPanel);
             this.Controls.Add(this.foodDetailsPanel);
             this.Controls.Add(this.filmsDetailsPanel);
             this.Controls.Add(this.comingSoonMovieDetailsPanel);
-            this.Controls.Add(this.trendingMoviesDetailsPanel);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainPage";
@@ -2820,30 +2645,19 @@ namespace MovieMunch
         private FlowLayoutPanel searchResultsFlowLayoutPanel;
         private Panel searchResultFlowWholePanel;
         private Bunifu.UI.WinForms.BunifuFormCaptionButton exisSearchBtn;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Label label15;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Panel trendingMoviesDetailsPanel;
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeTrendingMoviesDetails;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 trendingMovieSeatReservationBtn;
         private Label trendingMoviePriceDetails;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton2;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton addTrendingToWatchLaterBtn;
         private Label trendingMovieTitleDetails;
         private PictureBox trendingDetailsPictureBox;
         private Panel comingSoonMovieDetailsPanel;
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeComingSoonMovieDetailsBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 comingSoonMovieSeatReservationBtn;
         private Label comingSoonPriceDetails;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton addComingSoonToWatchLater;
         private Label comingSoonTitleDetails;
         private PictureBox comingSoonMoviePicBoxDetails;
         private Label comingSoonMovieDescriptionDetails;
@@ -2853,14 +2667,13 @@ namespace MovieMunch
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeFilmsDetailsBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 filmsMovieSeatReservationBtn;
         private Label filmsPriceDetails;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton3;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton addFilmMovieToWatchLaterBtn;
         private Label filmsTitleDetails;
         private PictureBox filmsPictureBoxDetails;
         private Panel foodDetailsPanel;
         private Bunifu.UI.WinForms.BunifuFormCaptionButton closeFoodDetailsBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 snackDealsReservedSeatBtn;
         private Label foodPriceDetails;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton bunifuIconButton4;
         private Label foodNameDetails;
         private PictureBox foodPicDetails;
         private Guna.UI2.WinForms.Guna2Button reserveSeatBtn;
@@ -2871,7 +2684,7 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2CircleButton userProfileBtn;
         private Guna.UI2.WinForms.Guna2Button SettingBtn;
         private Guna.UI2.WinForms.Guna2Button LogoutBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button gotoWatchListBtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;

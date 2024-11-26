@@ -33,6 +33,8 @@ namespace MovieMunch
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatReservation));
             this.seatReservationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.J6 = new Guna.UI2.WinForms.Guna2Button();
             this.J5 = new Guna.UI2.WinForms.Guna2Button();
             this.J4 = new Guna.UI2.WinForms.Guna2Button();
@@ -312,17 +314,15 @@ namespace MovieMunch
             this.btnReserveSeat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.userNameHolder = new Guna.UI2.WinForms.Guna2TextBox();
+            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.HomeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.logoBefore = new System.Windows.Forms.PictureBox();
             this.moviePicToReserve = new System.Windows.Forms.PictureBox();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.SettingBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.addToWatchLaterBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.seatReservationFlowLayoutPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -627,6 +627,24 @@ namespace MovieMunch
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(814, 700);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Location = new System.Drawing.Point(543, 107);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(263, 40);
+            this.guna2Panel4.TabIndex = 679;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(539, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "SHOW TIME";
             // 
             // J6
             // 
@@ -4876,11 +4894,9 @@ namespace MovieMunch
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
             this.guna2VScrollBar1.Location = new System.Drawing.Point(1193, 75);
-            this.guna2VScrollBar1.Maximum = 705;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 21;
             this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 575);
-            this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 115;
             // 
             // btnReserveSeat
@@ -4911,7 +4927,7 @@ namespace MovieMunch
             this.guna2Panel3.Controls.Add(this.guna2Button5);
             this.guna2Panel3.Controls.Add(this.userNameHolder);
             this.guna2Panel3.Controls.Add(this.userProfileBtn);
-            this.guna2Panel3.Controls.Add(this.SettingBtn);
+            this.guna2Panel3.Controls.Add(this.HomeBtn);
             this.guna2Panel3.Location = new System.Drawing.Point(-5, 69);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(170, 591);
@@ -4934,6 +4950,50 @@ namespace MovieMunch
             this.LogoutBtn.Size = new System.Drawing.Size(144, 35);
             this.LogoutBtn.TabIndex = 48;
             this.LogoutBtn.Text = "LOG OUT";
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BorderRadius = 10;
+            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 25);
+            this.guna2Button4.IndicateFocus = true;
+            this.guna2Button4.Location = new System.Drawing.Point(17, 375);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(144, 35);
+            this.guna2Button4.TabIndex = 47;
+            this.guna2Button4.Text = "WATCH LATER";
+            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BorderRadius = 10;
+            this.guna2Button5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 25);
+            this.guna2Button5.IndicateFocus = true;
+            this.guna2Button5.Location = new System.Drawing.Point(17, 331);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(144, 35);
+            this.guna2Button5.TabIndex = 46;
+            this.guna2Button5.Text = "TICKET";
+            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // userNameHolder
             // 
@@ -4962,6 +5022,49 @@ namespace MovieMunch
             this.userNameHolder.Size = new System.Drawing.Size(144, 30);
             this.userNameHolder.TabIndex = 45;
             this.userNameHolder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // userProfileBtn
+            // 
+            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
+            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userProfileBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.userProfileBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.userProfileBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.userProfileBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.userProfileBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.userProfileBtn.FillColor = System.Drawing.Color.Empty;
+            this.userProfileBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.userProfileBtn.ForeColor = System.Drawing.Color.White;
+            this.userProfileBtn.Location = new System.Drawing.Point(41, 45);
+            this.userProfileBtn.Name = "userProfileBtn";
+            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userProfileBtn.Size = new System.Drawing.Size(100, 100);
+            this.userProfileBtn.TabIndex = 44;
+            // 
+            // HomeBtn
+            // 
+            this.HomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.HomeBtn.BorderRadius = 10;
+            this.HomeBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.HomeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.HomeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.HomeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.HomeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.HomeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.HomeBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeBtn.ForeColor = System.Drawing.Color.White;
+            this.HomeBtn.Image = ((System.Drawing.Image)(resources.GetObject("HomeBtn.Image")));
+            this.HomeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.HomeBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.HomeBtn.IndicateFocus = true;
+            this.HomeBtn.Location = new System.Drawing.Point(17, 283);
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.Size = new System.Drawing.Size(144, 35);
+            this.HomeBtn.TabIndex = 43;
+            this.HomeBtn.Text = "HOME";
+            this.HomeBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // bunifuPanel1
             // 
@@ -5009,111 +5112,6 @@ namespace MovieMunch
             this.moviePicToReserve.Size = new System.Drawing.Size(200, 253);
             this.moviePicToReserve.TabIndex = 680;
             this.moviePicToReserve.TabStop = false;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 25);
-            this.guna2Button4.IndicateFocus = true;
-            this.guna2Button4.Location = new System.Drawing.Point(17, 375);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(144, 35);
-            this.guna2Button4.TabIndex = 47;
-            this.guna2Button4.Text = "WATCH LATER";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.BorderRadius = 10;
-            this.guna2Button5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 25);
-            this.guna2Button5.IndicateFocus = true;
-            this.guna2Button5.Location = new System.Drawing.Point(17, 331);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(144, 35);
-            this.guna2Button5.TabIndex = 46;
-            this.guna2Button5.Text = "TICKET";
-            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // userProfileBtn
-            // 
-            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
-            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userProfileBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.userProfileBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.userProfileBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.userProfileBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.userProfileBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.userProfileBtn.FillColor = System.Drawing.Color.Empty;
-            this.userProfileBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.userProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.userProfileBtn.Location = new System.Drawing.Point(41, 45);
-            this.userProfileBtn.Name = "userProfileBtn";
-            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userProfileBtn.Size = new System.Drawing.Size(100, 100);
-            this.userProfileBtn.TabIndex = 44;
-            // 
-            // SettingBtn
-            // 
-            this.SettingBtn.BackColor = System.Drawing.Color.Transparent;
-            this.SettingBtn.BorderRadius = 10;
-            this.SettingBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.SettingBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SettingBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SettingBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SettingBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SettingBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingBtn.ForeColor = System.Drawing.Color.White;
-            this.SettingBtn.Image = ((System.Drawing.Image)(resources.GetObject("SettingBtn.Image")));
-            this.SettingBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.SettingBtn.ImageSize = new System.Drawing.Size(30, 25);
-            this.SettingBtn.IndicateFocus = true;
-            this.SettingBtn.Location = new System.Drawing.Point(17, 283);
-            this.SettingBtn.Name = "SettingBtn";
-            this.SettingBtn.Size = new System.Drawing.Size(144, 35);
-            this.SettingBtn.TabIndex = 43;
-            this.SettingBtn.Text = "HOME";
-            this.SettingBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SettingBtn.Click += new System.EventHandler(this.SettingBtn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(539, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 22);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "SHOW TIME";
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Location = new System.Drawing.Point(543, 107);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(263, 40);
-            this.guna2Panel4.TabIndex = 679;
             // 
             // addToWatchLaterBtn
             // 
@@ -5462,7 +5460,7 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
         private Guna.UI2.WinForms.Guna2CircleButton userProfileBtn;
-        private Guna.UI2.WinForms.Guna2Button SettingBtn;
+        private Guna.UI2.WinForms.Guna2Button HomeBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CircleButton addToWatchLaterBtn;
