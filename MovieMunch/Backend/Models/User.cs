@@ -21,7 +21,6 @@ public class User
     [BsonElement("confirmPassword")]
     public string ConfirmPassword { get; set; }
 
-
     [BsonElement("createdAt")]
     public DateTime CreatedAt { get; set; }
 
@@ -30,6 +29,7 @@ public class User
 
     [BsonElement("watchLater")]
     public List<MovieDetails> WatchLater { get; set; } = new List<MovieDetails>();
+    public List<TicketDetails> TicketList { get; set; } = new List<TicketDetails>();
 }
 
 public class MovieDetails
@@ -47,3 +47,23 @@ public class MovieDetails
     public string MoviePic { get; set; } 
 }
 
+public class TicketDetails
+{
+    [BsonElement("movieId")]
+    public string MovieId { get; set; }
+
+    [BsonElement("userName")]
+    public string UserName { get; set; }
+
+    [BsonElement("movieTitle")]
+    public string MovieTitle { get; set; }
+
+    [BsonElement("moviePrice")]
+    public decimal MoviePrice { get; set; }
+
+    [BsonElement("seatTicketMapping")]
+    public Dictionary<string, string> SeatTicketMapping { get; set; } = new Dictionary<string, string>();
+
+    [BsonElement("datePurchased")]
+    public DateTime DatePurchased { get; set; }
+}

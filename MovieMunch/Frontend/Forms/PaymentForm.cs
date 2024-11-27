@@ -32,7 +32,6 @@ namespace MovieMunch.Frontend.Forms
             gcashPaypalUserEmailInput.Text = null;
         }
 
-
         private void gcashBtn_Click(object sender, EventArgs e)
         {
             gcashPaymentBtn.Text = "Proceed to GCash payment";
@@ -144,6 +143,11 @@ namespace MovieMunch.Frontend.Forms
             cardPaymentPanel.Visible = true;
             gcashPaypalPaymentPanel.Visible = false;
             clearText();
+        }
+
+        private void paymentFormClose(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }

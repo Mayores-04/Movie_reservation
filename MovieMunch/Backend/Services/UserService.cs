@@ -11,6 +11,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 public class UserService
 {
@@ -103,7 +104,6 @@ public class UserService
     public bool IsUserLoggedIn { get; private set; }
     public bool LoginUser(string email, string password)
     {
-
         MainPage mainPage = new MainPage();
         if (!IsValidEmail(email))
         {
@@ -112,7 +112,6 @@ public class UserService
 
         var existingUser = _usersCollection.Find(u => u.Email == email).FirstOrDefault();
 
-
         if (existingUser == null || !PasswordHelper.VerifyPassword(password, existingUser.Password))
         {
             return false;
@@ -120,9 +119,155 @@ public class UserService
 
         _reservedBy = existingUser.Name;
         mainPage.SetUserInfo(existingUser.Name);
-        mainPage.SetLoggedInUserEmail(email);
+        mainPage.SetLoggedInUserEmail(existingUser.Name);
+       
 
         return true;
+
+    }
+
+    public async Task AddReceiptToTicketListOfUser(
+        string referenceId,
+        string userName,
+        string movieTitle,
+        decimal moviePrice,
+        string ticketReference,
+        string seat)
+    {
+        if (string.IsNullOrWhiteSpace(userName))
+        {
+            MessageBox.Show("User name cannot be null or empty.");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(referenceId))
+        {
+            MessageBox.Show("Reference ID cannot be null or empty.");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(ticketReference) || string.IsNullOrWhiteSpace(seat))
+        {
+            MessageBox.Show("Ticket reference and seat cannot be null or empty.");
+            return;
+        }
+
+        try
+        {
+            var ticketInfo = new TicketDetails
+            {
+                MovieId = referenceId,
+                UserName = userName,
+                MovieTitle = movieTitle,
+                MoviePrice = moviePrice,
+                SeatTicketMapping = new Dictionary<string, string>
+            {
+                { seat, ticketReference }
+            },
+                DatePurchased = DateTime.Now
+            };
+
+            var update = Builders<User>.Update.AddToSet(u => u.TicketList, ticketInfo);
+
+            var result = await _usersCollection.UpdateOneAsync(
+                u => u.Name == userName,
+                update
+            );
+
+            if (result.ModifiedCount == 0)
+            {
+                MessageBox.Show("User not found. Ticket was not added.");
+            }
+            else
+            {
+                MessageBox.Show("Ticket added successfully to the user's ticket list.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding ticket to ticket list: {ex.Message}");
+            MessageBox.Show($"Error adding ticket to ticket list: {ex.Message}");
+        }
+    }
+
+    public async Task SaveTicketDetails(TicketDetails ticketDetails)
+    {
+        if (ticketDetails == null)
+        {
+            MessageBox.Show("Ticket details cannot be null.");
+            return;
+        }
+
+        try
+        {
+            var update = Builders<User>.Update.AddToSet(u => u.TicketList, ticketDetails);
+
+            var result = await _usersCollection.UpdateOneAsync(
+                u => u.Name == ticketDetails.UserName,  
+                update
+            );
+
+            if (result.ModifiedCount > 0)
+            {
+                MessageBox.Show("Ticket details saved successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Ticket details saved, but user record not updated.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving ticket details: {ex.Message}");
+            MessageBox.Show($"Error saving ticket details: {ex.Message}");
+        }
+    }
+
+
+    public List<TicketDetails> GetRecentlyPurchasedTickets(string userName)
+    {
+        try
+        {
+            var user = _usersCollection.Find(u => u.Name == userName).FirstOrDefault();
+
+            if (user?.TicketList != null)
+            {
+                var oneWeekAgo = DateTime.UtcNow.AddDays(-7);
+                return user.TicketList
+                           .Where(ticket => ticket.DatePurchased >= oneWeekAgo)
+                           .OrderBy(ticket => ticket.DatePurchased) // Optional: To ensure the list is ordered
+                           .ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any database or processing errors (e.g., log the exception)
+            Console.WriteLine($"Error fetching recently purchased tickets: {ex.Message}");
+        }
+
+        return new List<TicketDetails>(); // Return an empty list if any error occurs
+    }
+
+    public List<TicketDetails> GetPurchasedTickets(string userName)
+    {
+        try
+        {
+            var user = _usersCollection.Find(u => u.Name == userName).FirstOrDefault();
+
+            if (user?.TicketList != null)
+            {
+                return user.TicketList
+                           .OrderBy(ticket => ticket.DatePurchased)
+                           .ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any database or processing errors (e.g., log the exception)
+            Console.WriteLine($"Error fetching purchased tickets: {ex.Message}");
+        }
+
+        return new List<TicketDetails>(); // Return an empty list if any error occurs
     }
 
 
@@ -137,7 +282,6 @@ public class UserService
                 return;
             }
 
-            // Create movie details object
             var movie = new MovieDetails
             {
                 MovieTitle = movieTitle,
@@ -146,22 +290,17 @@ public class UserService
                 MoviePic = moviePic
             };
 
-            // Log movie details for debugging
             Console.WriteLine($"Movie details: Title={movie.MovieTitle}, Description={movie.MovieDescription}, Price={movie.MoviePrice}, Pic={movie.MoviePic}");
 
-            // Create update definition
             var update = Builders<User>.Update.AddToSet(u => u.WatchLater, movie);
 
-            // Execute the update
             var result = await _usersCollection.UpdateOneAsync(
-                u => u.Email == userName,
+                u => u.Name == userName,
                 update
             );
 
-            // Log the result of the update
             Console.WriteLine($"Update result: {result.ModifiedCount} document(s) modified.");
 
-            // Handle the result
             if (result.ModifiedCount == 0)
             {
                 MessageBox.Show("Movie is already in the watchlist or user not found.");
@@ -179,7 +318,23 @@ public class UserService
     }
 
 
+    public bool RemoveMovieFromWatchlist(string userName, string movieTitle)
+    {
+        try
+        {
+            var filter = Builders<User>.Filter.Eq(u => u.Name, userName);
+            var update = Builders<User>.Update.PullFilter(u => u.WatchLater, w => w.MovieTitle == movieTitle);
 
+            var result = _usersCollection.UpdateOne(filter, update);
+
+            return result.ModifiedCount > 0;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error removing movie from watchlist: {ex.Message}");
+            return false;
+        }
+    }
 
     public List<MovieDetails> GetWatchLaterMovies(string userName)
     {
@@ -192,7 +347,6 @@ public class UserService
 
         return new List<MovieDetails>();
     }
-
 
     public bool AdminLogin(string email, string password)
     {

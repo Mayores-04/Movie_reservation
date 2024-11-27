@@ -40,6 +40,7 @@ public class MongoDBConnection
         return _database.GetCollection<User>("Users");
     }
 
+
     public IMongoCollection<Counts> GetNumberOfUsersCollection()
     {
         return _database.GetCollection<Counts>("number_of_users");

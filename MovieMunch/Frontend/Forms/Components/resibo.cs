@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Markup;
 using Zen.Barcode;
+using ZstdSharp.Unsafe;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch.Frontend.Forms.Components
 {
@@ -19,11 +22,12 @@ namespace MovieMunch.Frontend.Forms.Components
         private string _ticketReference;
         private double _Discount = 0;
         private List<string> _seats;
-        private double _PaymentInput = 1000000;
+        private double _PaymentInput = 0;
         private double _ChangeAmount;
         private double _TotalAmount;
         private string reference;
 
+        private List<string> ticketReference;
         public resibo(string Id, string movieName, decimal moviePrice, List<string> reservedSeats, string reservedBy)
         {
             InitializeComponent();
@@ -33,54 +37,55 @@ namespace MovieMunch.Frontend.Forms.Components
             _userName = reservedBy;
             reference = Id?.ToString() ?? string.Empty;
 
+            Random randomAmount = new Random();
+            _PaymentInput = Convert.ToDouble(_Price) + randomAmount.Next(0, 100);
 
             printPreviewDialog1 = new PrintPreviewDialog();
             printDocument = new PrintDocument();
             printDocument.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             _ChangeAmount = _PaymentInput - Convert.ToDouble(_Price);
-            _ticketReference = GeneratedReference();
             _TotalAmount = Convert.ToDouble(_Price);
 
             try
             {
-                CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
+                // Initialize the ticket reference before QR code generation
+                _ticketReference = GenerateReferenceForQRCode();
 
                 if (string.IsNullOrWhiteSpace(_ticketReference))
                 {
-                    MessageBox.Show("Please enter text to generate a QR code.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ticket reference is missing. Please check your data.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
+                // Generate and display the QR code
+                CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
                 Image qrCodeImage = barcode.Draw(_ticketReference, 50);
 
+                // Resize QR Code image to fit the PictureBox
                 Image resizedQrCodeImage = ResizeImage(qrCodeImage, pictureBox1.Width, pictureBox1.Height);
-
                 pictureBox1.Image = resizedQrCodeImage;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error generating QR code: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private Image ResizeImage(Image img, int width, int height)
-        {
-            Bitmap resizedImage = new Bitmap(width, height);
-            using (Graphics graphics = Graphics.FromImage(resizedImage))
-            {
-                graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-                graphics.DrawImage(img, 0, 0, width, height);
-            }
-            return resizedImage;
+
+            AddTicketDataAsync();
         }
 
-        private string GeneratedReference()
+        private readonly UserService _userService = new UserService();
+
+        // Method to generate the ticket reference for the QR code
+        private string GenerateReferenceForQRCode()
         {
+            string generatedReference = string.Empty;
+
             if (string.IsNullOrEmpty(reference))
             {
                 Console.WriteLine("Invalid reference or reference is null");
                 return "ERROR";
             }
-             
+
             string digits = new string(reference.Where(char.IsDigit).ToArray());
 
             if (string.IsNullOrEmpty(digits))
@@ -92,11 +97,90 @@ namespace MovieMunch.Frontend.Forms.Components
             string uniqueId = digits.Length >= 4 ? digits.Substring(digits.Length - 4) : digits.PadLeft(4, '0');
             string date = DateTime.Now.ToString("yyyyMMdd");
             string prefix = "MOV";
-            string seat = _seats[currentSeatIndex];  
+
+            generatedReference = $"{prefix}-{date}-{uniqueId}";
+
+            return generatedReference;
+        }
+
+        public async Task AddTicketDataAsync()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(_movieName) || string.IsNullOrEmpty(_userName))
+                {
+                    MessageBox.Show("Please select a valid movie and user before proceeding.");
+                    return;
+                }
+
+                if (_seats == null || !_seats.Any())
+                {
+                    MessageBox.Show("No seats selected. Please reserve at least one seat.");
+                    return;
+                }
+
+                // Map seats to unique ticket references
+                Dictionary<string, string> seatTicketMapping = _seats.ToDictionary(
+                    seat => seat,
+                    seat => GenerateReference(seat) // Generate seat-specific reference
+                );
+
+                // Create ticket details
+                var ticketDetails = new TicketDetails
+                {
+                    MovieId = reference,
+                    UserName = _userName,
+                    MovieTitle = _movieName,
+                    MoviePrice = _Price,
+                    SeatTicketMapping = seatTicketMapping,
+                    DatePurchased = DateTime.Now
+                };
+
+                // Save ticket details using the service
+                await _userService.SaveTicketDetails(ticketDetails);
+
+                MessageBox.Show("Tickets successfully added!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding tickets: {ex.Message}");
+            }
+        }
+
+        private string GenerateReference(string seat)
+        {
+            if (string.IsNullOrEmpty(reference))
+            {
+                Console.WriteLine("Invalid reference or reference is null");
+                return "ERROR";
+            }
+
+            string digits = new string(reference.Where(char.IsDigit).ToArray());
+
+            if (string.IsNullOrEmpty(digits))
+            {
+                Console.WriteLine("No digits found in reference");
+                return "ERROR";
+            }
+
+            string uniqueId = digits.Length >= 4 ? digits.Substring(digits.Length - 4) : digits.PadLeft(4, '0');
+            string date = DateTime.Now.ToString("yyyyMMdd");
+            string prefix = "MOV";
+
             prefix += seat;
 
-            string ticketReference = $"{prefix}-{date}-{uniqueId}";
-            return ticketReference;
+            return $"{prefix}-{date}-{uniqueId}";
+        }
+
+        private Image ResizeImage(Image img, int width, int height)
+        {
+            Bitmap resizedImage = new Bitmap(width, height);
+            using (Graphics graphics = Graphics.FromImage(resizedImage))
+            {
+                graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                graphics.DrawImage(img, 0, 0, width, height);
+            }
+            return resizedImage;
         }
 
         private int currentSeatIndex = 0;
@@ -131,7 +215,7 @@ namespace MovieMunch.Frontend.Forms.Components
             if (currentSeatIndex < _seats.Count)
             {
                 string seat = _seats[currentSeatIndex];
-                string myRandomNo = GeneratedReference();
+                string myRandomNo = GenerateReference(seat);
                 string currentDateTime = DateTime.Now.ToString("MMM dd, yyyy/hh:mm tt");
 
                 e.Graphics.DrawString("MOVIE MUNCH CINEMAS INC.", subHeaderFont, Brushes.Black, new PointF(x, y));

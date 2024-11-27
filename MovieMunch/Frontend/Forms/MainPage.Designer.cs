@@ -150,7 +150,7 @@ namespace MovieMunch
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.gotoWatchListBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.gotoTicketFormBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userNameHolder = new Guna.UI2.WinForms.Guna2TextBox();
             this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SettingBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -195,9 +195,9 @@ namespace MovieMunch
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.flowLayoutPanel1.Controls.Add(this.filmsInCinemaPanel);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(157, 69);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(157, 76);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1053, 602);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1053, 599);
             this.flowLayoutPanel1.TabIndex = 42;
             // 
             // filmsInCinemaPanel
@@ -1293,12 +1293,12 @@ namespace MovieMunch
             this.guna2VScrollBar1.CausesValidation = false;
             this.guna2VScrollBar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 602;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1189, 69);
+            this.guna2VScrollBar1.LargeChange = 599;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1189, 76);
             this.guna2VScrollBar1.Maximum = 1739;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 21;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 602);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 599);
             this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 56;
             this.guna2VScrollBar1.ThumbSize = 9F;
@@ -2369,7 +2369,7 @@ namespace MovieMunch
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.LogoutBtn);
             this.guna2Panel1.Controls.Add(this.gotoWatchListBtn);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.gotoTicketFormBtn);
             this.guna2Panel1.Controls.Add(this.userNameHolder);
             this.guna2Panel1.Controls.Add(this.userProfileBtn);
             this.guna2Panel1.Controls.Add(this.SettingBtn);
@@ -2420,27 +2420,28 @@ namespace MovieMunch
             this.gotoWatchListBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.gotoWatchListBtn.Click += new System.EventHandler(this.gotoWatchListBtn_Click);
             // 
-            // guna2Button1
+            // gotoTicketFormBtn
             // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 25);
-            this.guna2Button1.IndicateFocus = true;
-            this.guna2Button1.Location = new System.Drawing.Point(17, 331);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(144, 35);
-            this.guna2Button1.TabIndex = 46;
-            this.guna2Button1.Text = "TICKET";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gotoTicketFormBtn.BorderRadius = 10;
+            this.gotoTicketFormBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.gotoTicketFormBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.gotoTicketFormBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gotoTicketFormBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.gotoTicketFormBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.gotoTicketFormBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.gotoTicketFormBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gotoTicketFormBtn.ForeColor = System.Drawing.Color.White;
+            this.gotoTicketFormBtn.Image = ((System.Drawing.Image)(resources.GetObject("gotoTicketFormBtn.Image")));
+            this.gotoTicketFormBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gotoTicketFormBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.gotoTicketFormBtn.IndicateFocus = true;
+            this.gotoTicketFormBtn.Location = new System.Drawing.Point(17, 331);
+            this.gotoTicketFormBtn.Name = "gotoTicketFormBtn";
+            this.gotoTicketFormBtn.Size = new System.Drawing.Size(144, 35);
+            this.gotoTicketFormBtn.TabIndex = 46;
+            this.gotoTicketFormBtn.Text = "TICKET";
+            this.gotoTicketFormBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gotoTicketFormBtn.Click += new System.EventHandler(this.gotoTicketFormBtn_Click);
             // 
             // userNameHolder
             // 
@@ -2519,13 +2520,13 @@ namespace MovieMunch
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Controls.Add(this.trendingMoviesDetailsPanel);
             this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.searchResultFlowWholePanel);
             this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.userPanel);
+            this.Controls.Add(this.trendingMoviesDetailsPanel);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.userPanel);
             this.Controls.Add(this.foodDetailsPanel);
             this.Controls.Add(this.filmsDetailsPanel);
             this.Controls.Add(this.comingSoonMovieDetailsPanel);
@@ -2685,7 +2686,7 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Button SettingBtn;
         private Guna.UI2.WinForms.Guna2Button LogoutBtn;
         private Guna.UI2.WinForms.Guna2Button gotoWatchListBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button gotoTicketFormBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;

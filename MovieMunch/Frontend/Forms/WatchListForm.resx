@@ -150,7 +150,7 @@
         PIqWznm17Uk6PVcUY/v0bnGgpSzQe8Oa53lDKPn3V1nWG3yVOG/njTX/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ticketBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gotoTicketFormBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA5VJREFUSEvtlklsFEcUhi1xiARKgBtHDjkniJPvSDnkkBM5oEgkp+QS5YYEByRL

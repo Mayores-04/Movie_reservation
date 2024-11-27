@@ -61,8 +61,6 @@ namespace MovieMunch
             LoadFilmsInCinemaToFlowLayoutPanel();
             LoadComingSoonToFlowLayoutPanel();
 
-
-
             _foodServices = new FoodServices(); 
             _foodsCollection = _foodServices.GetFoodsInCollection();
             LoadFoodsToYummyFlowLayoutPanel();
@@ -80,6 +78,10 @@ namespace MovieMunch
             filmsDetailsPanel.BringToFront();
             comingSoonMovieDetailsPanel.BringToFront();
             trendingMoviesDetailsPanel.BringToFront();
+            if(userName != "USERNAME")
+            {
+                userNameHolder.Text = "USERNAME";
+            }
         }
 
         public void SetUserInfo(string name)
@@ -111,12 +113,10 @@ namespace MovieMunch
         public void ClearUserInfo()
         {
             userNameHolder.Text = "USERNAME";
-        }
-
-        private void CloseCurrentForm()
-        {
-            FadeOut(this);
-            this.Close();
+            if(userNameHolder.Text == null)
+            {
+                userNameHolder.Text = "USERNAME";
+            }
         }
 
         private void PopulateImagePaths()
@@ -237,6 +237,9 @@ namespace MovieMunch
                 trendingMovieTitleDetails.Text = movieInfo.Title;
                 trendingDescriptionDetails.Text = movieInfo.Description;
                 trendingMoviePriceDetails.Text = movieInfo.Price.ToString("C");
+
+                trendingSelectedId = movieInfo.Id.ToString();
+                movieID = trendingSelectedId;
 
                 trendingSelectedTitle = movieInfo.Title;
                 trendingSelectedDescription = movieInfo.Description;
@@ -387,6 +390,9 @@ namespace MovieMunch
                 filmsDescriptionDetails.Text = films.FilmsDescription;
                 filmsPriceDetails.Text = films.FilmsPrice.ToString("C");
 
+                FilmsSelectedId = films.Id.ToString();
+                movieID = FilmsSelectedId;
+
                 FilmsSelectedPic = films.FilmImagePath;
                 FilmsSelectedTitle = films.FilmTitle;
                 FilmsSelectedDescription = films.FilmsDescription;
@@ -399,13 +405,13 @@ namespace MovieMunch
         {
             UserService userService = new UserService();
              
-            if (userNameHolder.Text == "USERNAME")
+            if (userNameHolder.Text == "USERNAME" || userNameHolder.Text == null)
             {
 
                 filmsDetailsPanel.Visible = false;
-                this.Close();
                 LoginForm loginForm = new LoginForm();
-                loginForm.ShowDialog();
+                loginForm.Show();
+                this.Close();
                 return;
             }
              
@@ -415,9 +421,11 @@ namespace MovieMunch
                 string Id = _selectedFilm.Id.ToString();
                 var seatReservationForm = new SeatReservation(
                     Id,
-                    _selectedFilm.FilmTitle,     
+                    _selectedFilm.FilmTitle,
+                    _selectedFilm.FilmsDescription,
                     price,   
-                    userName                     
+                    _selectedFilm.FilmImagePath,
+                    userName
                 );
 
                 foreach (Form openForm in Application.OpenForms)
@@ -429,8 +437,10 @@ namespace MovieMunch
                     }
                 }
 
-                this.Close();
                 seatReservationForm.Show();
+
+                this.Close();
+                this.Hide();
             }
             else
             {
@@ -506,6 +516,9 @@ namespace MovieMunch
                 comingSoonMovieDescriptionDetails.Text = csoon.ComingSoonDescription;
                 comingSoonPriceDetails.Text = csoon.ComingSoonPrice.ToString("C");
 
+                CsoonSelectedId = csoon.Id.ToString();
+                movieID = CsoonSelectedId;
+
                 CsoonSelectedTitle = csoon.ComingSoonTitle;
                 CsoonSelectedDescription = csoon.ComingSoonDescription;
                 CsoonSelectedPrice = Convert.ToDecimal(csoon.ComingSoonPrice);
@@ -517,13 +530,12 @@ namespace MovieMunch
         private void comingSoonMovieSeatReservationBtn_Click(object sender, EventArgs e)
         {
             UserService userService = new UserService();
-            if (userNameHolder.Text == "USERNAME")
+            if (userNameHolder.Text == "USERNAME" || userNameHolder.Text == null)
             {
-
-                this.Close();
                 comingSoonMovieDetailsPanel.Visible = false;
                 LoginForm loginForm = new LoginForm();
-                loginForm.ShowDialog();
+                loginForm.Show();
+                this.Close();
                 return;
             }
 
@@ -535,7 +547,9 @@ namespace MovieMunch
                 var seatReservationForm = new SeatReservation(
                     Id,
                     _selectedComingSoonMovie.ComingSoonTitle,
+                    _selectedComingSoonMovie.ComingSoonDescription,
                     price,
+                    _selectedComingSoonMovie.ComingSoonImagePath,
                     userName
                 );
 
@@ -547,8 +561,9 @@ namespace MovieMunch
                         break;
                     }
                 }
-                this.Close();
+
                 seatReservationForm.Show();
+                this.Close();
             }
             else
             {
@@ -766,12 +781,12 @@ namespace MovieMunch
         {
             UserService userService = new UserService();
 
-            if (userNameHolder.Text == "USERNAME")
+            if (userNameHolder.Text == "USERNAME" || userNameHolder.Text == null)
             {
                 trendingMoviesDetailsPanel.Visible = false;
-                this.Close();
                 LoginForm loginForm = new LoginForm();
-                loginForm.ShowDialog();
+                loginForm.Show();
+                this.Close();
                 return;
             }
             else
@@ -784,12 +799,13 @@ namespace MovieMunch
                     var seatReservationForm = new SeatReservation(
                         currentMovieInfo.Id,  
                         currentMovieInfo.Title,
+                        currentMovieInfo.Description,
                         currentMovieInfo.Price,
+                        currentMovieInfo.ImagePath,
                         _reservedBy
                     );
-                    this.Visible = false;
-                    this.Close();
                     seatReservationForm.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -823,7 +839,6 @@ namespace MovieMunch
 
             userPanelTimer.Start();
         }
-
 
         private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
         {
@@ -962,6 +977,7 @@ namespace MovieMunch
 
         }
 
+        private string FilmsSelectedId;
         private string FilmsSelectedTitle;
         private string FilmsSelectedDescription;
         private string FilmsSelectedPic;
@@ -971,15 +987,15 @@ namespace MovieMunch
         {
             try
             {
-                if (string.IsNullOrEmpty(CsoonSelectedTitle) ||
-                    string.IsNullOrEmpty(CsoonSelectedDescription) ||
-                    string.IsNullOrEmpty(CsoonSelectedPic))
+                if (string.IsNullOrEmpty(FilmsSelectedTitle) ||
+                    string.IsNullOrEmpty(FilmsSelectedDescription) ||
+                    string.IsNullOrEmpty(FilmsSelectedPic))
                 {
                     MessageBox.Show("Please select a valid movie before adding to the watchlist.");
                     return;
                 }
 
-                if (string.IsNullOrEmpty(userEmail))
+                if (string.IsNullOrEmpty(userName) || userNameHolder.Text == "USERNAME")
                 {
                     MessageBox.Show("No logged-in user found. Please log in.");
                     return;
@@ -990,7 +1006,7 @@ namespace MovieMunch
                 decimal moviePrice = Convert.ToDecimal(FilmsSelectedPrice);
                 string moviePic = FilmsSelectedPic;
 
-                await _userService.AddMoviesToWatchListOfUser(userEmail, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
             }
             catch (Exception ex)
             {
@@ -998,7 +1014,7 @@ namespace MovieMunch
             }
         }
 
-
+        private string CsoonSelectedId;
         private string CsoonSelectedTitle;
         private string CsoonSelectedDescription;
         private string CsoonSelectedPic;
@@ -1016,9 +1032,8 @@ namespace MovieMunch
                     return;
                 }
 
-                if (string.IsNullOrEmpty(userEmail))
+                if (string.IsNullOrEmpty(userName) || userNameHolder.Text == "USERNAME")
                 {
-                    MessageBox.Show("No logged-in user found. Please log in.");
                     return;
                 }
 
@@ -1027,7 +1042,7 @@ namespace MovieMunch
                 decimal moviePrice = Convert.ToDecimal(CsoonSelectedPrice);
                 string moviePic = CsoonSelectedPic;
 
-                await _userService.AddMoviesToWatchListOfUser(userEmail, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
             }
             catch (Exception ex)
             {
@@ -1035,35 +1050,43 @@ namespace MovieMunch
             }
         }
 
+        private string movieID;
         private void gotoWatchListBtn_Click(object sender, EventArgs e)
         {
-            var watchListForm = new WatchListForm(userName);  
-            watchListForm.Show();
-            this.Hide();
+            if (userName == null || userNameHolder.Text == "")
+            {
+                var watchListForm = new WatchListForm(movieID, "USERNAME", userName);
+                watchListForm.Show();
+            }
+            else
+            {
+                var watchListForm = new WatchListForm(movieID, userName, userName);
+                watchListForm.Show();
+            }
+            this.Close();
         }
 
         private readonly UserService _userService = new UserService();
 
 
+        private string trendingSelectedId;
         private string trendingSelectedTitle;
         private string trendingSelectedDescription;
         private string trendingSelectedPic;
         private decimal trendingSelectedPrice;
         private readonly IMongoCollection<User> _usersCollection;
 
-        public void SetLoggedInUserEmail(string email)
+        public void SetLoggedInUserEmail(string name)
         {
-            if (string.IsNullOrEmpty(email))
+            if (string.IsNullOrEmpty(name) || userNameHolder.Text == "USERNAME")
             {
-                MessageBox.Show("User is not logged in. Please log in.");
+                return;
             }
             else
             {
-                userEmail = email;
+                userName = name;
             }
         }
-
-        private string userEmail = "";
 
         private async void addTrendingToWatchLaterBtn_Click(object sender, EventArgs e)
         {
@@ -1077,23 +1100,36 @@ namespace MovieMunch
                     return;
                 }
 
-                if (string.IsNullOrEmpty(userEmail))
+                if (string.IsNullOrEmpty(userName) || userName == "USERNAME")
                 {
-                    MessageBox.Show("No logged-in user found. Please log in.");
                     return;
                 }
-
                 string movieTitle = trendingSelectedTitle;
                 string movieDescription = trendingSelectedDescription;
                 decimal moviePrice = trendingSelectedPrice;   
                 string moviePic = trendingSelectedPic;
 
-                await _userService.AddMoviesToWatchListOfUser(userEmail, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error adding movie to the watchlist: {ex.Message}");
             }
+        }
+
+        private void gotoTicketFormBtn_Click(object sender, EventArgs e)
+        {
+            if (userName == null || userNameHolder.Text == "")
+            {
+                var ticketForm = new TicketForm(movieID, "USERNAME", userName);
+                ticketForm.Show();
+            }
+            else
+            {
+                var ticketForm = new TicketForm(movieID, userName, userName);
+                ticketForm.Show();
+            }
+            this.Close();
         }
     }
 }

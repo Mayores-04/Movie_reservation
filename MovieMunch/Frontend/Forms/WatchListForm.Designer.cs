@@ -1,4 +1,6 @@
-﻿namespace MovieMunch.Frontend.Forms
+﻿using System.Windows.Forms;
+
+namespace MovieMunch.Frontend.Forms
 {
     partial class WatchListForm
     {
@@ -30,13 +32,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WatchListForm));
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.logoBefore = new System.Windows.Forms.PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.ticketBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.gotoTicketFormBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userNameHolder = new Guna.UI2.WinForms.Guna2TextBox();
             this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -55,24 +56,12 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.guna2Panel2);
             this.bunifuPanel1.Location = new System.Drawing.Point(-5, -3);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1216, 80);
             this.bunifuPanel1.TabIndex = 685;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(178, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // guna2Panel2
             // 
@@ -103,7 +92,7 @@
             this.guna2Panel3.BorderThickness = 3;
             this.guna2Panel3.Controls.Add(this.LogoutBtn);
             this.guna2Panel3.Controls.Add(this.guna2Button4);
-            this.guna2Panel3.Controls.Add(this.ticketBtn);
+            this.guna2Panel3.Controls.Add(this.gotoTicketFormBtn);
             this.guna2Panel3.Controls.Add(this.userNameHolder);
             this.guna2Panel3.Controls.Add(this.userProfileBtn);
             this.guna2Panel3.Controls.Add(this.homeBtn);
@@ -152,27 +141,28 @@
             this.guna2Button4.Text = "WATCH LATER";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // ticketBtn
+            // gotoTicketFormBtn
             // 
-            this.ticketBtn.BorderRadius = 10;
-            this.ticketBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.ticketBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ticketBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ticketBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ticketBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ticketBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.ticketBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ticketBtn.ForeColor = System.Drawing.Color.White;
-            this.ticketBtn.Image = ((System.Drawing.Image)(resources.GetObject("ticketBtn.Image")));
-            this.ticketBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ticketBtn.ImageSize = new System.Drawing.Size(30, 25);
-            this.ticketBtn.IndicateFocus = true;
-            this.ticketBtn.Location = new System.Drawing.Point(17, 331);
-            this.ticketBtn.Name = "ticketBtn";
-            this.ticketBtn.Size = new System.Drawing.Size(144, 35);
-            this.ticketBtn.TabIndex = 46;
-            this.ticketBtn.Text = "TICKET";
-            this.ticketBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gotoTicketFormBtn.BorderRadius = 10;
+            this.gotoTicketFormBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.gotoTicketFormBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.gotoTicketFormBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gotoTicketFormBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.gotoTicketFormBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.gotoTicketFormBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.gotoTicketFormBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gotoTicketFormBtn.ForeColor = System.Drawing.Color.White;
+            this.gotoTicketFormBtn.Image = ((System.Drawing.Image)(resources.GetObject("gotoTicketFormBtn.Image")));
+            this.gotoTicketFormBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gotoTicketFormBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.gotoTicketFormBtn.IndicateFocus = true;
+            this.gotoTicketFormBtn.Location = new System.Drawing.Point(17, 331);
+            this.gotoTicketFormBtn.Name = "gotoTicketFormBtn";
+            this.gotoTicketFormBtn.Size = new System.Drawing.Size(144, 35);
+            this.gotoTicketFormBtn.TabIndex = 46;
+            this.gotoTicketFormBtn.Text = "TICKET";
+            this.gotoTicketFormBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gotoTicketFormBtn.Click += new System.EventHandler(this.ticketBtn_Click);
             // 
             // userNameHolder
             // 
@@ -243,14 +233,17 @@
             this.homeBtn.TabIndex = 43;
             this.homeBtn.Text = "HOME";
             this.homeBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click_1);
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // watchListFlowLayoutPanel
             // 
-            this.watchListFlowLayoutPanel.Location = new System.Drawing.Point(171, 83);
+            this.watchListFlowLayoutPanel.AutoScroll = true;
+            this.watchListFlowLayoutPanel.Location = new System.Drawing.Point(162, 72);
+            this.watchListFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.watchListFlowLayoutPanel.Name = "watchListFlowLayoutPanel";
-            this.watchListFlowLayoutPanel.Size = new System.Drawing.Size(1040, 566);
+            this.watchListFlowLayoutPanel.Size = new System.Drawing.Size(1069, 578);
             this.watchListFlowLayoutPanel.TabIndex = 687;
+            this.watchListFlowLayoutPanel.WrapContents = false;
             // 
             // WatchListForm
             // 
@@ -263,14 +256,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WatchListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Watch List Page";
             this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-
-
 
         }
 
@@ -281,11 +272,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button LogoutBtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button ticketBtn;
+        private Guna.UI2.WinForms.Guna2Button gotoTicketFormBtn;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
         private Guna.UI2.WinForms.Guna2CircleButton userProfileBtn;
         private Guna.UI2.WinForms.Guna2Button homeBtn;
         private System.Windows.Forms.FlowLayoutPanel watchListFlowLayoutPanel;
-        private System.Windows.Forms.Label label1;
     }
 }

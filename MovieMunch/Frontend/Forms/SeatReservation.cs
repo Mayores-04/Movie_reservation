@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MovieMunch.Backend.Services;
 using MovieMunch.Backend.Models;
+using MongoDB.Driver;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch
 {
@@ -23,6 +25,9 @@ namespace MovieMunch
         private List<string> _selectedSeats;
         private string userName;
         private string _movieId;
+        private string _movieDescription;
+        private string _moviePic;
+
 
         private MovieService _movieService;
         private List<FilmsInCinema> _filmsInCinemas;
@@ -31,16 +36,27 @@ namespace MovieMunch
         private List<MovieInfo> _movies;
         private FoodServices _foodServices;
         private List<Foods> _foodsCollection;
+        private string id;
+        private string title;
+        private string description;
+        private decimal price;
+        private Image image;
+        private string reservedBy;
 
-
-        public SeatReservation(string Id, string movieTitle, decimal moviePrice, string reservedBy)
+        public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, string moviePic, string reservedBy)
         {
+
+            MainPage mainPage = new MainPage();
+            mainPage.Close();
+
             InitializeComponent();
 
             _movieId = Id;
             _movieName = movieTitle;
             _moviePrice = moviePrice;
             _reservedBy = reservedBy;
+            _moviePic = moviePic;
+            _movieDescription = movieDescription;
 
 
             _movieService = new MovieService();
@@ -71,8 +87,85 @@ namespace MovieMunch
             movieTitlelbl.Text = _movieName;
             this.Load += SeatReservation_Load;
             userName = reservedBy;
-            MainPage mainPage = new MainPage();
             mainPage.SetUserInfo(userName);
+
+
+
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
+
+            FadeIn(this);
+            defaultHeight = userPanel.Height;
+            userPanel.Height = 0;
+            userPanel.Visible = false;
+
+            userPanelTimer.Interval = 15;
+            userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
+            userPanel.BringToFront();
+        }
+
+        private void FadeIn(Control control)
+        {
+            control.Visible = true;
+
+            Timer timer = new Timer();
+            timer.Interval = 50;
+            timer.Tick += (s, e) =>
+            {
+                int alpha = control.BackColor.A;
+
+                if (alpha < 255)
+                {
+                    alpha += 5;
+                    if (alpha > 255) alpha = 255;
+                }
+                else
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                }
+            };
+            timer.Start();
+        }
+
+
+        private readonly UserService _userService = new UserService();
+        private async void addToWatchLaterBtn_ClickAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(_movieName) || string.IsNullOrEmpty(_movieDescription))
+                {
+                    MessageBox.Show("Please select a valid movie before adding it to the watchlist.",
+                        "Invalid Movie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(userName) || userName == "USERNAME")
+                {
+                    MessageBox.Show("You must be logged in to add movies to your watchlist.",
+                        "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    using (var loginForm = new LoginForm())
+                    {
+                        loginForm.ShowDialog();
+                    }
+                    return;
+                }
+
+                string movieTitle = _movieName;
+                string movieDescription = _movieDescription;
+                decimal moviePrice = _moviePrice;
+                string moviePic = _moviePic.ToString(); 
+
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An unexpected error occurred while adding the movie to the watchlist: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void SeatReservation_Load(object sender, EventArgs e)
@@ -121,14 +214,12 @@ namespace MovieMunch
         {
             if (_selectedSeats.Count > 0)
             {
-                decimal totalPrice = _moviePrice * _selectedSeats.Count;
-
-                PaymentForm paymentForm = new PaymentForm(_movieId, _movieName, totalPrice, _selectedSeats, _reservedBy);
+                PaymentForm paymentForm = new PaymentForm(_movieId, _movieName, _moviePrice, _selectedSeats, _reservedBy);
                 paymentForm.ShowDialog();
 
                 if (paymentForm.IsPaymentSuccessful)
                 {
-                    await _seatReservationService.ReserveSeatsAsync(_movieName, (double)totalPrice, _selectedSeats, _reservedBy);
+                    await _seatReservationService.ReserveSeatsAsync(_movieName, (double)_moviePrice, _selectedSeats, _reservedBy);
                     MessageBox.Show("Seats reserved successfully!");
 
                     foreach (string seat in _selectedSeats)
@@ -187,13 +278,97 @@ namespace MovieMunch
 
             MainPage mainPage = new MainPage();
             mainPage.SetUserInfo(userName);
-            mainPage.Show();
             this.Visible = false;
         }
 
-        private void addToWatchLaterBtn_Click(object sender, EventArgs e)
+        private void gotoWatchListBtn_Click(object sender, EventArgs e)
         {
+            if (userName == null || userNameHolder.Text == "")
+            {
+                var watchListForm = new WatchListForm(_movieId, "USERNAME", userName);
+                watchListForm.Show();
+            }
+            else
+            {
+                var watchListForm = new WatchListForm(_movieId, userName, userName);
+                watchListForm.Show();
+            }
+            this.Close();
+        }
 
+        int targetHeight;
+        int defaultHeight;
+        bool isExpanding;
+
+        Timer userPanelTimer = new Timer();
+        private User currentUser;
+        private void userProfileBtn_Click(object sender, EventArgs e)
+        {
+            userPanelTimer.Start();
+
+            if (userPanel.Height == 0)
+            {
+                targetHeight = defaultHeight;
+                isExpanding = true;
+                userPanel.Visible = true;
+            }
+            else
+            {
+                targetHeight = 0;
+                isExpanding = false;
+            }
+
+            userPanelTimer.Start();
+        }
+
+        private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
+        {
+            if (isExpanding)
+            {
+                if (userPanel.Height < targetHeight)
+                {
+                    userPanel.Height += 20;
+                    if (userPanel.Height >= targetHeight)
+                    {
+                        userPanel.Height = targetHeight;
+                        userPanelTimer.Stop();
+                    }
+                }
+            }
+            else
+            {
+                if (userPanel.Height > targetHeight)
+                {
+                    userPanel.Height -= 20;
+                    if (userPanel.Height <= targetHeight)
+                    {
+                        userPanel.Height = targetHeight;
+                        userPanelTimer.Stop();
+                        userPanel.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
+        }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            RegisterForm regForm = new RegisterForm();
+            regForm.Show();
+            this.Close();
+        }
+
+        private void gotoTicketFormBtn_Click(object sender, EventArgs e)
+        {
+            TicketForm ticketForm = new TicketForm(_movieId, userNameHolder.Text, userName);
+            ticketForm.Show();
+            this.Close();
         }
     }
 }
