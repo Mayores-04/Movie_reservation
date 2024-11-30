@@ -232,20 +232,19 @@ public class UserService
 
             if (user?.TicketList != null)
             {
-                var oneWeekAgo = DateTime.UtcNow.AddDays(-7);
+                var oneWeekAgo = DateTime.UtcNow.AddDays(-3);
                 return user.TicketList
                            .Where(ticket => ticket.DatePurchased >= oneWeekAgo)
-                           .OrderBy(ticket => ticket.DatePurchased) // Optional: To ensure the list is ordered
+                           .OrderBy(ticket => ticket.DatePurchased)  
                            .ToList();
             }
         }
         catch (Exception ex)
         {
-            // Handle any database or processing errors (e.g., log the exception)
             Console.WriteLine($"Error fetching recently purchased tickets: {ex.Message}");
         }
 
-        return new List<TicketDetails>(); // Return an empty list if any error occurs
+        return new List<TicketDetails>(); 
     }
 
     public List<TicketDetails> GetPurchasedTickets(string userName)

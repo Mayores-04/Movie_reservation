@@ -411,6 +411,7 @@ namespace MovieMunch
                 filmsDetailsPanel.Visible = false;
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();
+                loginForm.GetUsers(userNameHolder.Text);
                 this.Close();
                 return;
             }
@@ -534,6 +535,7 @@ namespace MovieMunch
             {
                 comingSoonMovieDetailsPanel.Visible = false;
                 LoginForm loginForm = new LoginForm();
+                loginForm.GetUsers(userNameHolder.Text);
                 loginForm.Show();
                 this.Close();
                 return;
@@ -785,6 +787,7 @@ namespace MovieMunch
             {
                 trendingMoviesDetailsPanel.Visible = false;
                 LoginForm loginForm = new LoginForm();
+                loginForm.GetUsers(userNameHolder.Text);
                 loginForm.Show();
                 this.Close();
                 return;
@@ -873,6 +876,7 @@ namespace MovieMunch
         {
             this.Close();
             LoginForm loginForm = new LoginForm();
+            loginForm.GetUsers(userName);
             loginForm.ShowDialog();
         }
 

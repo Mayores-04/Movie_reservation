@@ -298,11 +298,11 @@
     <Compile Include="Frontend\Forms\Components\editEmail.Designer.cs">
       <DependentUpon>editEmail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frontend\Forms\Components\FilmsInCinemaZoomIn.cs">
+    <Compile Include="Frontend\Forms\Components\foods.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Frontend\Forms\Components\FilmsInCinemaZoomIn.Designer.cs">
-      <DependentUpon>FilmsInCinemaZoomIn.cs</DependentUpon>
+    <Compile Include="Frontend\Forms\Components\foods.Designer.cs">
+      <DependentUpon>foods.cs</DependentUpon>
     </Compile>
     <Compile Include="Frontend\Forms\Components\LoadingForm.cs">
       <SubType>Form</SubType>
@@ -402,8 +402,8 @@
     <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
       <DependentUpon>editEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\Components\FilmsInCinemaZoomIn.resx">
-      <DependentUpon>FilmsInCinemaZoomIn.cs</DependentUpon>
+    <EmbeddedResource Include="Frontend\Forms\Components\foods.resx">
+      <DependentUpon>foods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

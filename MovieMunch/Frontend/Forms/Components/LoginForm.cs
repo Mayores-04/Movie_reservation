@@ -15,6 +15,13 @@ namespace MovieMunch
             InitializeComponent();
         }
 
+        private string _userName;
+
+        public void GetUsers(string userName)
+        {
+            _userName = userName;
+        }
+
         private void LoginBtn_Click_1(object sender, EventArgs e)
         {
             UserService userService = new UserService();
@@ -63,7 +70,15 @@ namespace MovieMunch
                 {
                     termsAndRegMessage.Visible = true;
                     termsAndRegMessage.Text = "Login failed. Please check your credentials.";
-                    return;
+
+                    foreach (Form openForm in Application.OpenForms)
+                    {
+                        if (openForm is MainPage)
+                        {
+                            openForm.Close();
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -79,9 +94,9 @@ namespace MovieMunch
 
         private void loginFormClose_Click(object sender, EventArgs e)
         {
-
             this.Close();
             MainPage mainPage = new MainPage();
+            mainPage.SetUserInfo(_userName);
             mainPage.Show();
         }
     }

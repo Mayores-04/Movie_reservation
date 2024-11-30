@@ -31,7 +31,6 @@ namespace MovieMunch.Frontend.Forms
         }
 
         private string _referenceId;
-
         private void LoadTicketList()
         {
             try
@@ -110,25 +109,52 @@ namespace MovieMunch.Frontend.Forms
             }
         }
 
-        private Label CreateCategoryHeader(string headerText)
+        private Panel CreateCategoryHeader(string headerText)
         {
-            return new Label
+            Label label = new Label
             {
                 Text = headerText,
                 Font = new Font("Segoe UI", 18, FontStyle.Bold),
-                ForeColor = ColorTranslator.FromHtml("#EE4540"),
+                ForeColor = ColorTranslator.FromHtml("#FFFFFF"),
                 BackColor = Color.Transparent,
                 TextAlign = ContentAlignment.MiddleLeft,
-                Size = new System.Drawing.Size(1000, 40),
-                Margin = new Padding(10, 20, 0, 10)
+                Dock = DockStyle.Fill,  
+                Padding = new Padding(10, 0, 0, 0)  
             };
+
+            Panel panel = new Panel
+            {
+                BackColor = ColorTranslator.FromHtml("#510A32"),
+                Size = new System.Drawing.Size(1036, 48),  
+                Margin = new Padding(-10, 20, 0, 10),
+                BorderStyle = BorderStyle.None,
+                AutoScroll = false,  
+                HorizontalScroll = { Enabled = false, Visible = false },
+            };
+
+            panel.Paint += (s, e) =>
+            {
+                var borderColor = ColorTranslator.FromHtml("#EE4540");
+                var borderThickness = 2;
+
+                var rect = panel.ClientRectangle;
+
+                e.Graphics.DrawLine(new Pen(borderColor, borderThickness), rect.Left, rect.Top, rect.Right, rect.Top);
+
+                e.Graphics.DrawLine(new Pen(borderColor, borderThickness), rect.Left, rect.Bottom - borderThickness, rect.Right, rect.Bottom - borderThickness);
+            };
+
+            panel.Controls.Add(label);
+
+            return panel;
         }
+
 
         private Guna.UI2.WinForms.Guna2Panel CreateTicketPanel(TicketDetails ticket)
         {
             var moviePanel = new Guna.UI2.WinForms.Guna2Panel
             {
-                Size = new System.Drawing.Size(1030, 200),
+                Size = new System.Drawing.Size(1018, 170),
                 BorderRadius = 10,
                 BorderThickness = 1,
                 Margin = new Padding(10, 10, 0, 10),
