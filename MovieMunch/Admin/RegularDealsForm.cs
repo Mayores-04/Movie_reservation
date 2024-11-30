@@ -4,14 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using MovieMunch.Backend.Models;
 
 namespace MovieMunch.Admin
 {
-    public partial class SnacksForm : Form
+    public partial class RegularDealsForm : Form
     {
         private readonly FoodServices _foodServices;
+        private readonly FoodServices _snackFoodServices;
 
-        public SnacksForm()
+        public RegularDealsForm()
         {
             InitializeComponent();
             _foodServices = new FoodServices();
@@ -72,7 +74,7 @@ namespace MovieMunch.Admin
 
         private void LoadSnacksInCinemaData()
         {
-            List<MovieMunch.Backend.Models.Foods> snacks = _foodServices.GetFoodsInCollection();
+            List <RegularDeals> snacks = _foodServices.GetFoodsInCollection();
             SnacksTable.Rows.Clear();
 
             foreach (var snack in snacks)
@@ -157,36 +159,6 @@ namespace MovieMunch.Admin
             }
         }
 
-        private void AddSnacksButton_Click(object sender, EventArgs e)
-        {
-            string foodName = RemoveSurroundingQuotes(SnacksTitleInput.Text);
-            string foodImagePath = RemoveSurroundingQuotes(SnacksDirectoryInput.Text);
-
-            if (!decimal.TryParse(SnacksDescriptionInput.Text, out decimal foodPrice))
-            {
-                MessageBox.Show("Invalid price format. Please enter a valid decimal number.");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(foodName) || string.IsNullOrEmpty(foodImagePath))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-
-            var newFood = new MovieMunch.Backend.Models.Foods
-            {
-                FoodName = foodName,
-                FoodPrice = foodPrice,
-                FoodImagePath = foodImagePath
-            };
-
-            _foodServices.AddFood(newFood);
-            MessageBox.Show("Snack saved successfully.");
-            LoadSnacksInCinemaData();
-            ClearAdminInput();
-        }
-
         private string RemoveSurroundingQuotes(string input)
         {
             if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
@@ -213,6 +185,36 @@ namespace MovieMunch.Admin
             MainAdmin mainAdminForm = new MainAdmin();
             mainAdminForm.Visible = true;
             this.Close();
+        }
+
+        private void AddRegularDealsButton_Click(object sender, EventArgs e)
+        {
+            string foodName = RemoveSurroundingQuotes(SnacksTitleInput.Text);
+            string foodImagePath = RemoveSurroundingQuotes(SnacksDirectoryInput.Text);
+
+            if (!decimal.TryParse(SnacksDescriptionInput.Text, out decimal foodPrice))
+            {
+                MessageBox.Show("Invalid price format. Please enter a valid decimal number.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(foodName) || string.IsNullOrEmpty(foodImagePath))
+            {
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+
+            var newFood = new  RegularDeals
+            {
+                FoodName = foodName,
+                FoodPrice = foodPrice,
+                FoodImagePath = foodImagePath
+            };
+
+            _foodServices.AddFood(newFood);
+            MessageBox.Show("Snack saved successfully.");
+            LoadSnacksInCinemaData();
+            ClearAdminInput();
         }
     }
 }

@@ -55,6 +55,7 @@ namespace MovieMunch
 
                     MainAdmin mainAdmin = new MainAdmin();
                     mainAdmin.Show();
+
                     this.Close();
                 }
             }

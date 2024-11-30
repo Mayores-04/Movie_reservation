@@ -255,7 +255,7 @@
   <data name="addToWatchLaterBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACGhJREFUaEPVWWlsVFUUpgud7ntpKxWmtHSZpRQGSmHKzBt2BAsSEcENjbj8MorB
+        DgAACw4BQL7hQQAACGhJREFUaEPVWWlsVFUUpgud7ntpKxWmtHSZpRQGSmHKzBt2BAsSEcENjbj8MorB
         BEWIKCgSEJAAJlAgKFAVY5CoyNLaZdpKWZSAUEAolKWCRZZQgnA935t7y7Rzu1CmUz3Jx3vzeu8533nn
         3HPPfXRxp9jTFG1ZhvKaXa/klRls++1G2x92g401QP2t7Ck1DP2mPEN5zp6paPnU/4bsz1TC7Yahc1Xy
         zsTbCnKw0x0TTpQabXVSku1AqXHoEk875VVuVCa404lGQCoalWncVscJolFqsH0iJeFmlFGUyKSXw7J7
@@ -408,4 +408,13 @@
         AAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="regular2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="regular2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="guna2PictureBox5.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>

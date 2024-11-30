@@ -20,9 +20,19 @@ public class MongoDBConnection
         EnsureCollectionExists<Movie>("Movies");
         EnsureCollectionExists<User>("Users");
         EnsureCollectionExists<AdminAccount>("AdminAccounts");
-        EnsureCollectionExists<Foods>("Foods");
+        EnsureCollectionExists<RegularDeals>("RegularDeals");
+        EnsureCollectionExists<SnackDeals>("SnackDeals");
+        EnsureCollectionExists<Counts>("number_of_users"); 
         EnsureCollectionExists<Counts>("number_of_users"); 
 
+    }
+    public IMongoCollection<CinemaSeats> GetCinemaSeatCollection()
+    {
+        return _database.GetCollection<CinemaSeats>("CinemaSeats");
+    }
+    public IMongoCollection<BsonDocument> GetCinemaSeatsAsBsonCollection()
+    {
+        return _database.GetCollection<BsonDocument>("CinemaSeats");
     }
 
     private void EnsureCollectionExists<T>(string collectionName)
@@ -66,10 +76,17 @@ public class MongoDBConnection
         return _database.GetCollection<ComingSoon>("ComingSoon");
     }
 
-    public IMongoCollection<Foods> GetFoodsCollection()
+    public IMongoCollection<RegularDeals> GetFoodsCollection()
     {
-        return _database.GetCollection<Foods>("Foods");
+        return _database.GetCollection<RegularDeals>("RegularDeals");
     }
+
+
+    public IMongoCollection<SnackDeals> GetSnackFoodsCollection()
+    {
+        return _database.GetCollection<SnackDeals>("SnackDeals");
+    }
+
 
     public IMongoDatabase Database => _database;
 }

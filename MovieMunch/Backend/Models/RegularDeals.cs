@@ -4,9 +4,8 @@ using System;
 
 namespace MovieMunch.Backend.Models
 {
-    public class Foods
+    public class RegularDeals
     {
-
         [BsonId]
         public ObjectId Id { get; set; }
 

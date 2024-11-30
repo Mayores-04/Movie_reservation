@@ -120,75 +120,74 @@ public class UserService
         _reservedBy = existingUser.Name;
         mainPage.SetUserInfo(existingUser.Name);
         mainPage.SetLoggedInUserEmail(existingUser.Name);
-       
 
         return true;
 
     }
 
-    public async Task AddReceiptToTicketListOfUser(
-        string referenceId,
-        string userName,
-        string movieTitle,
-        decimal moviePrice,
-        string ticketReference,
-        string seat)
-    {
-        if (string.IsNullOrWhiteSpace(userName))
-        {
-            MessageBox.Show("User name cannot be null or empty.");
-            return;
-        }
+    //public async Task AddReceiptToTicketListOfUser(
+    //    string referenceId,
+    //    string userName,
+    //    string movieTitle,
+    //    decimal moviePrice,
+    //    string ticketReference,
+    //    string seat)
+    //{
+    //    if (string.IsNullOrWhiteSpace(userName))
+    //    {
+    //        MessageBox.Show("User name cannot be null or empty.");
+    //        return;
+    //    }
 
-        if (string.IsNullOrWhiteSpace(referenceId))
-        {
-            MessageBox.Show("Reference ID cannot be null or empty.");
-            return;
-        }
+    //    if (string.IsNullOrWhiteSpace(referenceId))
+    //    {
+    //        MessageBox.Show("Reference ID cannot be null or empty.");
+    //        return;
+    //    }
 
-        if (string.IsNullOrWhiteSpace(ticketReference) || string.IsNullOrWhiteSpace(seat))
-        {
-            MessageBox.Show("Ticket reference and seat cannot be null or empty.");
-            return;
-        }
+    //    if (string.IsNullOrWhiteSpace(ticketReference) || string.IsNullOrWhiteSpace(seat))
+    //    {
+    //        MessageBox.Show("Ticket reference and seat cannot be null or empty.");
+    //        return;
+    //    }
 
-        try
-        {
-            var ticketInfo = new TicketDetails
-            {
-                MovieId = referenceId,
-                UserName = userName,
-                MovieTitle = movieTitle,
-                MoviePrice = moviePrice,
-                SeatTicketMapping = new Dictionary<string, string>
-            {
-                { seat, ticketReference }
-            },
-                DatePurchased = DateTime.Now
-            };
+    //    try
+    //    {
+    //        var ticketInfo = new TicketDetails
+    //        {
+    //            MovieId = referenceId,
+    //            UserName = userName,
+    //            MovieTitle = movieTitle,
+    //            MoviePrice = moviePrice,
+    //            SeatTicketMapping = new Dictionary<string, string>
+    //        {
+    //            { seat, ticketReference }
+    //        },
+    //            DatePurchased = DateTime.Now
+    //        };
 
-            var update = Builders<User>.Update.AddToSet(u => u.TicketList, ticketInfo);
+    //        var update = Builders<User>.Update.AddToSet(u => u.TicketList, ticketInfo);
 
-            var result = await _usersCollection.UpdateOneAsync(
-                u => u.Name == userName,
-                update
-            );
+    //        var result = await _usersCollection.UpdateOneAsync(
+    //            u => u.Name == userName,
+    //            update
+    //        );
 
-            if (result.ModifiedCount == 0)
-            {
-                MessageBox.Show("User not found. Ticket was not added.");
-            }
-            else
-            {
-                MessageBox.Show("Ticket added successfully to the user's ticket list.");
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error adding ticket to ticket list: {ex.Message}");
-            MessageBox.Show($"Error adding ticket to ticket list: {ex.Message}");
-        }
-    }
+    //        if (result.ModifiedCount == 0)
+    //        {
+    //            MessageBox.Show("User not found. Ticket was not added.");
+    //        }
+    //        else
+    //        {
+    //            MessageBox.Show("Ticket added successfully to the user's ticket list.");
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Console.WriteLine($"Error adding ticket to ticket list: {ex.Message}");
+    //        MessageBox.Show($"Error adding ticket to ticket list: {ex.Message}");
+    //    }
+    //}
 
     public async Task SaveTicketDetails(TicketDetails ticketDetails)
     {

@@ -35,7 +35,7 @@ namespace MovieMunch
         private SettingsForm _settingsForm;
         private List<MovieInfo> _movies;
         private FoodServices _foodServices;
-        private List<Foods> _foodsCollection;
+        private List<RegularDeals> _foodsCollection;
         private string id;
         private string title;
         private string description;
@@ -369,6 +369,26 @@ namespace MovieMunch
             TicketForm ticketForm = new TicketForm(_movieId, userNameHolder.Text, userName);
             ticketForm.Show();
             this.Close();
+        }
+
+        private void regularDealsBtn_Click(object sender, EventArgs e)
+        {
+            RegularDealsPanel.Visible = true;
+        }
+
+        private void snackDealsBtn_Click(object sender, EventArgs e)
+        {
+            SnacksDealsPanel.Visible = true;
+        }
+
+        private void closeRegularDealsBtn_Click(object sender, EventArgs e)
+        {
+            RegularDealsPanel.Visible = false;
+        }
+
+        private void closeSnackDealsBtn_Click(object sender, EventArgs e)
+        {
+            SnacksDealsPanel.Visible = false;
         }
     }
 }

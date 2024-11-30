@@ -30,7 +30,8 @@ namespace MovieMunch
         private SettingsForm _settingsForm;
 
         private FoodServices _foodServices; 
-        private List<Foods> _foodsCollection;
+        private List<RegularDeals> _foodsCollection;
+        private List<SnackDeals> _snackFoodsCollection;
 
         private int _currentImageIndex = 0;
 
@@ -63,7 +64,9 @@ namespace MovieMunch
 
             _foodServices = new FoodServices(); 
             _foodsCollection = _foodServices.GetFoodsInCollection();
+            _snackFoodsCollection = _foodServices.GetSnackFoodsCollection();
             LoadFoodsToYummyFlowLayoutPanel();
+            LoadFoodsToSnacksFlowLayoutPanel();
 
             FadeIn(this);
 
@@ -429,15 +432,6 @@ namespace MovieMunch
                     userName
                 );
 
-                foreach (Form openForm in Application.OpenForms)
-                {
-                    if (openForm is SeatReservation)
-                    {
-                        openForm.Close();
-                        break;
-                    }
-                }
-
                 seatReservationForm.Show();
 
                 this.Close();
@@ -590,7 +584,7 @@ namespace MovieMunch
         {
             yummyFlowLayoutPanel.Controls.Clear();
 
-            System.Windows.Forms.Panel[] yummPanels = { yummy1, yummy2, yummy3 };
+            System.Windows.Forms.Panel[] yummPanels = { yummy1, yummy2, yummy3, yummy4, yummy5 };
 
             foreach (var food in _foodsCollection)
             {
@@ -611,6 +605,7 @@ namespace MovieMunch
 
                 foodPictureBox.Tag = food;
                 foodPictureBox.Click += new EventHandler(FoodPictureBox_Click);
+                foodPictureBox.Click += new EventHandler(SnackFoodPictureBox_Click);
 
                 int index = _foodsCollection.IndexOf(food) % yummPanels.Length;
 
@@ -631,11 +626,56 @@ namespace MovieMunch
             FadeIn(yummyFlowLayoutPanel);
         }
 
+        private void LoadFoodsToSnacksFlowLayoutPanel()
+        {
+            snacksFlowLayoutPanel.Controls.Clear();
+
+            System.Windows.Forms.Panel[] snackPanels = { snack1, snack2, snack3, snack4, snack5 };
+
+            foreach (var food in _snackFoodsCollection)
+            {
+                if (food == null)
+                {
+                    MessageBox.Show("Null");
+                    continue;
+                }
+
+                PictureBox foodPictureBox = new PictureBox
+                {
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 323,
+                    Width = 560,
+                    ImageLocation = food.SFoodImagePath,
+                    Cursor = Cursors.Hand
+                };
+
+                foodPictureBox.Tag = food;
+                foodPictureBox.Click += new EventHandler(SnackFoodPictureBox_Click);
+
+                int index = _snackFoodsCollection.IndexOf(food) % snackPanels.Length;
+
+                if (index < snackPanels.Length)
+                {
+                    snackPanels[index].Controls.Add(foodPictureBox);
+                }
+            }
+
+            foreach (var panel in snackPanels)
+            {
+                if (panel != null)
+                {
+                    snacksFlowLayoutPanel.Controls.Add(panel);
+                }
+            }
+
+            FadeIn(snacksFlowLayoutPanel);
+        }
+
         private void FoodPictureBox_Click(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
 
-            var food = clickedPictureBox.Tag as Foods;
+            var food = clickedPictureBox.Tag as RegularDeals;
 
             if (food != null)
             {
@@ -648,11 +688,37 @@ namespace MovieMunch
             }
         }
 
+        private void SnackFoodPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            var food = clickedPictureBox.Tag as  SnackDeals;
+
+            if (food != null)
+            {
+                closeFoodDetailsBtn.Visible = true;
+                foodDetailsPanel.Visible = true;
+
+                foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
+                foodNameDetails.Text = food.SFoodName;
+                foodPriceDetails.Text = food.SFoodPrice.ToString("C");
+            }
+        }
+
         private void yummyFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
             if (_foodsCollection == null || _foodsCollection.Count == 0)
             {
                 LoadFoodsToYummyFlowLayoutPanel();
+            }
+        }
+
+
+        private void snacksFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (_snackFoodsCollection == null || _snackFoodsCollection.Count == 0)
+            {
+                LoadFoodsToSnacksFlowLayoutPanel();
             }
         }
 
@@ -1134,6 +1200,11 @@ namespace MovieMunch
                 ticketForm.Show();
             }
             this.Close();
+        }
+
+        private void snack1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
