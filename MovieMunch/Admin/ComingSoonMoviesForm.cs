@@ -1,8 +1,10 @@
 ﻿using MongoDB.Bson;
+using MovieMunch.Admin.FilmsInCinema;
 using MovieMunch.Backend.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace MovieMunch.Admin
@@ -10,11 +12,14 @@ namespace MovieMunch.Admin
     public partial class ComingSoonMoviesForm : Form
     {
         private readonly MovieService _movieService;
-        public ComingSoonMoviesForm()
+        public ComingSoonMoviesForm(string userName, string profilePic)
         {
+            _userName = userName;
+            _profilePic = profilePic;
             InitializeComponent();
             _movieService = new MovieService();
             LoadComingSoonInCinemaData();
+            formOptionsPanel.BringToFront();
 
             DataGridViewButtonColumn updateButtonColumn = new DataGridViewButtonColumn
             {
@@ -44,6 +49,64 @@ namespace MovieMunch.Admin
             ComingSoonTable.Columns.Add(viewButtonColumn);
 
             ComingSoonTable.CellContentClick += ComingSoonTable_CellContentClick;
+            ComingSoonTable.CellPainting += MoviesToShowTable_CellPainting;
+        }
+
+        private void MoviesToShowTable_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && (e.ColumnIndex == ComingSoonTable.Columns["UpdateButton"].Index ||
+                                    e.ColumnIndex == ComingSoonTable.Columns["DeleteButton"].Index ||
+                                    e.ColumnIndex == ComingSoonTable.Columns["ViewButton"].Index))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.Background | DataGridViewPaintParts.Border);
+
+                Color buttonColor = Color.Transparent;
+                Color borderColor = Color.Black;
+                if (e.ColumnIndex == ComingSoonTable.Columns["UpdateButton"].Index)
+                {
+                    buttonColor = Color.LightBlue;
+                    borderColor = Color.DarkBlue;
+                }
+                else if (e.ColumnIndex == ComingSoonTable.Columns["DeleteButton"].Index)
+                {
+                    buttonColor = Color.IndianRed;
+                    borderColor = Color.DarkRed;
+                }
+                else if (e.ColumnIndex == ComingSoonTable.Columns["ViewButton"].Index)
+                {
+                    buttonColor = Color.LightGreen;
+                    borderColor = Color.DarkGreen;
+                }
+
+                Rectangle rect = new Rectangle(e.CellBounds.X + 2, e.CellBounds.Y + 2, e.CellBounds.Width - 4, e.CellBounds.Height - 4);
+                GraphicsPath path = new GraphicsPath();
+                path.AddArc(rect.X, rect.Y, 10, 10, 180, 90);
+                path.AddArc(rect.Right - 10, rect.Y, 10, 10, 270, 90);
+                path.AddArc(rect.Right - 10, rect.Bottom - 10, 10, 10, 0, 90);
+                path.AddArc(rect.X, rect.Bottom - 10, 10, 10, 90, 90);
+                path.CloseFigure();
+
+                using (Brush brush = new SolidBrush(buttonColor))
+                {
+                    e.Graphics.FillPath(brush, path);
+                }
+
+                using (Pen pen = new Pen(borderColor, 2))
+                {
+                    e.Graphics.DrawPath(pen, path);
+                }
+
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    (string)e.FormattedValue,
+                    e.CellStyle.Font,
+                    rect,
+                    e.CellStyle.ForeColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
         }
 
         private void ViewComingSoon(string csoonID)
@@ -156,8 +219,32 @@ namespace MovieMunch.Admin
                 }
             }
         }
+        private string RemoveSurroundingQuotes(string input)
+        {
+            if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
+            {
+                return input.Substring(1, input.Length - 2);
+            }
+            return input;
+        }
 
-        private void AddComingSoon_Click(object sender, EventArgs e)
+        private void ClearAdminInput()
+        {
+            comingSoonTitleInput.Clear();
+            comingSoonDescriptionInput.Clear();
+            csoonPriceInput.Clear();
+            comingSoonDirectoryInput.Clear();
+        }
+
+        private void backComingSoonBtn_Click(object sender, EventArgs e)
+        {
+            MainAdmin mainAdminForm = new MainAdmin();
+            mainAdminForm.SetUserNamme(_userName, _profilePic);
+            mainAdminForm.Visible = true;
+            this.Close();
+        }
+
+        private void AddComingSoonButton_Click(object sender, EventArgs e)
         {
             string movieTitle = RemoveSurroundingQuotes(comingSoonTitleInput.Text);
             string movieDescription = RemoveSurroundingQuotes(comingSoonDescriptionInput.Text);
@@ -184,32 +271,50 @@ namespace MovieMunch.Admin
             ClearAdminInput();
         }
 
-        private string RemoveSurroundingQuotes(string input)
-        {
-            if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
-            {
-                return input.Substring(1, input.Length - 2);
-            }
-            return input;
-        }
-
-        private void ClearAdminInput()
-        {
-            comingSoonTitleInput.Clear();
-            comingSoonDescriptionInput.Clear();
-            csoonPriceInput.Clear();
-            comingSoonDirectoryInput.Clear();
-        }
-
-        private void closeImageBtn_Click(object sender, EventArgs e)
+        private void closeShowingImageBtn_Click(object sender, EventArgs e)
         {
             viewComingSoonPanel.Visible = false;
         }
 
-        private void backComingSoonBtn_Click(object sender, EventArgs e)
+        private void settingBtn_Click(object sender, EventArgs e)
         {
-            MainAdmin mainAdminForm = new MainAdmin();
-            mainAdminForm.Visible = true;
+            if (formOptionsPanel.Visible == true)
+            {
+                formOptionsPanel.Visible = false;
+            }
+            else
+            {
+                formOptionsPanel.Visible = true;
+            }
+        }
+
+        private void showingBtn_Click(object sender, EventArgs e)
+        {
+            Showing showing = new Showing(_userName, _profilePic);
+            showing.Show();
+            this.Close();
+        }
+
+        private void filmsBtn_Click(object sender, EventArgs e)
+        {
+            FilmsInCinemaForm films = new FilmsInCinemaForm(_userName, _profilePic);
+            films.Show();
+            this.Close();
+        }
+
+        private void employeesBtn_Click(object sender, EventArgs e)
+        {
+            EmployeeList employee = new EmployeeList(_userName, _profilePic);
+            employee.Show();
+            this.Close();
+        }
+
+        private string _userName;
+        private string _profilePic;
+        private void foodsBtn_Click(object sender, EventArgs e)
+        {
+            CinemaFoodDeals snackDeals = new CinemaFoodDeals(_userName, _profilePic);
+            snackDeals.Show();
             this.Close();
         }
     }

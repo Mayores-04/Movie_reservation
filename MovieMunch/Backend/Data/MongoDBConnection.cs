@@ -23,7 +23,7 @@ public class MongoDBConnection
         EnsureCollectionExists<RegularDeals>("RegularDeals");
         EnsureCollectionExists<SnackDeals>("SnackDeals");
         EnsureCollectionExists<Counts>("number_of_users"); 
-        EnsureCollectionExists<Counts>("number_of_users"); 
+        EnsureCollectionExists<Counts>("Sales"); 
 
     }
     public IMongoCollection<CinemaSeats> GetCinemaSeatCollection()
@@ -81,12 +81,15 @@ public class MongoDBConnection
         return _database.GetCollection<RegularDeals>("RegularDeals");
     }
 
-
     public IMongoCollection<SnackDeals> GetSnackFoodsCollection()
     {
         return _database.GetCollection<SnackDeals>("SnackDeals");
     }
 
+    public IMongoCollection<Sales> GetSalesCollection()
+    {
+        return _database.GetCollection<Sales>("Sales");
+    }
 
     public IMongoDatabase Database => _database;
 }

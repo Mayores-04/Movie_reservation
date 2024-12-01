@@ -270,17 +270,11 @@
     <Compile Include="Admin\Showing.Designer.cs">
       <DependentUpon>Showing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\RegularDealsForm.cs">
+    <Compile Include="Admin\CinemaFoodDeals.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\RegularDealsForm.Designer.cs">
-      <DependentUpon>RegularDealsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\SnackDealsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\SnackDealsForm.Designer.cs">
-      <DependentUpon>SnackDealsForm.cs</DependentUpon>
+    <Compile Include="Admin\CinemaFoodDeals.Designer.cs">
+      <DependentUpon>CinemaFoodDeals.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\Data\MongoDBConnection.cs" />
     <Compile Include="Backend\Helpers\PasswordHelper.cs" />
@@ -291,6 +285,7 @@
     <Compile Include="Backend\Models\FilmsInCinema.cs" />
     <Compile Include="Backend\Models\RegularDeals.cs" />
     <Compile Include="Backend\Models\Movie.cs" />
+    <Compile Include="Backend\Models\Sales.cs" />
     <Compile Include="Backend\Models\SnackFoods.cs" />
     <Compile Include="Backend\Models\User.cs" />
     <Compile Include="Backend\Services\EmployeesService.cs" />
@@ -403,11 +398,8 @@
     <EmbeddedResource Include="Admin\Showing.resx">
       <DependentUpon>Showing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\RegularDealsForm.resx">
-      <DependentUpon>RegularDealsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\SnackDealsForm.resx">
-      <DependentUpon>SnackDealsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\CinemaFoodDeals.resx">
+      <DependentUpon>CinemaFoodDeals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
       <DependentUpon>editEmail.cs</DependentUpon>

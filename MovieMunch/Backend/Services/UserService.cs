@@ -29,6 +29,28 @@ public class UserService
 
         CreateEmailIndex();
     }
+    public AdminAccount AdminLogin(string email, string password)
+    {
+        if (!IsValidEmail(email))
+        {
+            return null;
+        }
+
+        var adminAccount = _adminAccountCollection.Find(a => a.employeeEmail == email).FirstOrDefault();
+
+        if (adminAccount == null)
+        {
+            return null;
+        }
+
+        if (!PasswordHelper.VerifyPassword(password, adminAccount.employeePassword))
+        {
+            return null;
+        }
+
+        return adminAccount; 
+    }
+
 
     private void CreateEmailIndex()
     {
@@ -344,28 +366,6 @@ public class UserService
         }
 
         return new List<MovieDetails>();
-    }
-
-    public bool AdminLogin(string email, string password)
-    {
-        if (!IsValidEmail(email))
-        {
-            return false;
-        }
-
-        var adminAccount = _adminAccountCollection.Find(a => a.employeeEmail == email).FirstOrDefault();
-
-        if (adminAccount == null)
-        {
-            return false;
-        }
-
-        if (!PasswordHelper.VerifyPassword(password, adminAccount.employeePassword))
-        {
-            return false;
-        }
-
-        return true;
     }
 
     private void IncrementUserCount()

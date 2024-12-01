@@ -17,7 +17,7 @@ public class AdminAccount
     [BsonElement("password")]
     public string employeePassword { get; set; }
 
-    [BsonElement("Profile Picture")]
+    [BsonElement("ProfilePicture")]
     public string employeeProfilePic { get; set; }
 
     [BsonElement("createdAt")]

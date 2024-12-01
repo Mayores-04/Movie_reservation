@@ -33,6 +33,8 @@ namespace MovieMunch.Properties {
         internal Resources() {
         }
 
+        public static Image DefaultBackground { get; internal set; }
+
 
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.

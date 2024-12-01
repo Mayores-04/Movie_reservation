@@ -3,6 +3,7 @@ using MovieMunch.Admin.FilmsInCinema;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -12,6 +13,8 @@ namespace MovieMunch.Admin
     public partial class MainAdmin : Form
     {
         private readonly Reports _reports;
+        private string _userName;
+        private string _profilePic;
         public MainAdmin()
         {
             InitializeComponent();
@@ -19,8 +22,36 @@ namespace MovieMunch.Admin
             _reports = new Reports();
             formOptionsPanel.BringToFront();
             this.Load += new System.EventHandler(this.SystemReportData_Load);
+            SetUserNamme(_userName, _profilePic);
         }
 
+        public void SetUserNamme(string name, string profilePic)
+        {
+            _userName = name;
+            _profilePic = profilePic; 
+            userNameHolder.Text = _userName;
+            userNameHolder.Text = profilePic;
+            userNameHolder.Text = name;
+            try
+            {
+                if (!string.IsNullOrEmpty(profilePic) && File.Exists(profilePic))
+                {
+                    userProfileBtn.BackgroundImage = Image.FromFile(profilePic);
+                    userProfileBtn.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+                else
+                {
+                    userProfileBtn.BackgroundImage = Properties.Resources.DefaultBackground;  
+                    userProfileBtn.BackgroundImageLayout = ImageLayout.Center;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading background image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
 
         private void SystemReportData_Load(object sender, EventArgs e)
         {
@@ -54,6 +85,8 @@ namespace MovieMunch.Admin
                 decimal totalSales = _reports.GetTotalPriceOfAllMovies();
                 labelMovieSales.Text = totalSales == 0 ? "No sales data available." : $"{totalSales:C}";
 
+                
+
                 int totalReservedSeats = _reports.GetTotalReservedSeats();
                 labelReservedSeats.Text = $"{totalReservedSeats}";
 
@@ -79,11 +112,15 @@ namespace MovieMunch.Admin
                     }
                 }
 
+
                 foreach (var movie in movieData)
                 {
                     salesPerMovieTable.Rows.Add(movie.Key, $"{movie.Value.Sales:C}", $"{movie.Value.ReservedSeats} seats");
-
                     seatsPerMovieTable.Rows.Add(movie.Key, $"{movie.Value.ReservedSeats} seats");
+
+                    string salesId = "63f19f1e8e8d2c5fb0d1c84d";
+                    Reports report = new Reports();
+                    report.UpdateMovieSales(salesId);
                 }
             }
             catch (Exception ex)
@@ -126,10 +163,7 @@ namespace MovieMunch.Admin
                     point.Label = "‎ "; 
                 }
 
-
-
                 point.ToolTip = $"{movie.Key}: {movie.Value:C} ({percentage:F1}%)";
-
                 point.LegendText = movie.Key;
             }
 
@@ -167,59 +201,78 @@ namespace MovieMunch.Admin
         }
 
 
-        private void homeBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            MainPage mainPage = new MainPage();
-            mainPage.Visible = true;
-        }
-
-        private void settingBtn_Click(object sender, EventArgs e)
-        {
-            if (formOptionsPanel.Visible == false)
-            {
-                formOptionsPanel.Visible = true;
-            }
-            else
-            {
-                formOptionsPanel.Visible = false;
-            }
-        }
-
         private void showingBtn_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Showing moviesToShow = new Showing();
+            SetUserNamme(_userName, _profilePic);
+            Showing moviesToShow = new Showing(_userName, _profilePic);
             moviesToShow.ShowDialog();
+            this.Visible = false;
         }
 
         private void filmsBtn_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            FilmsInCinemaForm filmsInCinemaForm = new FilmsInCinemaForm();
+            SetUserNamme(_userName, _profilePic);
+            FilmsInCinemaForm filmsInCinemaForm = new FilmsInCinemaForm(_userName, _profilePic);
             filmsInCinemaForm.ShowDialog();
+            this.Visible = false;
         }
 
         private void comingSoonBtn_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            ComingSoonMoviesForm comingSoonMoviesForm = new ComingSoonMoviesForm();
+            SetUserNamme(_userName, _profilePic);
+            ComingSoonMoviesForm comingSoonMoviesForm = new ComingSoonMoviesForm(_userName, _profilePic);
             comingSoonMoviesForm.ShowDialog();
+            this.Visible = false;
         }
 
         private void employeesBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            EmployeeList employeeList = new EmployeeList();
+            SetUserNamme(_userName, _profilePic);
+            EmployeeList employeeList = new EmployeeList(_userName, _profilePic);
             employeeList.Show();
+            this.Close();
         }
 
         private void foodsBtn_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            RegularDealsForm snacksForm = new RegularDealsForm();
+            SetUserNamme(_userName, _profilePic);
+            CinemaFoodDeals snacksForm = new CinemaFoodDeals(_userName, _profilePic);
             snacksForm.ShowDialog();
+            this.Visible = false;
         }
 
+        private void switchToUserBtn_Click(object sender, EventArgs e)
+        {
+            SetUserNamme(_userName, _profilePic);
+            MainPage mainPage = new MainPage();
+            mainPage.Visible = true;
+            this.Close();
+        }
+
+        private void settingBtn_Click(object sender, EventArgs e)
+        {
+            if (formOptionsPanel.Visible == true)
+            {
+                formOptionsPanel.Visible = false;
+            }
+            else
+            {
+                formOptionsPanel.Visible = true;
+                adminProfilePanel.Visible = false;
+            }
+        }
+
+        private void userProfileBtn_Click(object sender, EventArgs e)
+        {
+            if (adminProfilePanel.Visible == true) 
+            {
+                adminProfilePanel.Visible = false;
+            }
+            else
+            {
+                adminProfilePanel.Visible = true;
+                formOptionsPanel.Visible = false;
+            }
+        }
     }
 }

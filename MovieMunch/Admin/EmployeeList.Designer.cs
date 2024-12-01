@@ -29,570 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeList));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            this.addEmployeeBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.employeePasswordInput = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.employeeEmailInput = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.employeeNameInput = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.EmployeeListTable = new Bunifu.UI.WinForms.BunifuDataGridView();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.viewEmployeePanel = new System.Windows.Forms.Panel();
+            this.closeShowingImageBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.viewEmployeeBox = new System.Windows.Forms.PictureBox();
+            this.backComingSoonBtn = new FontAwesome.Sharp.IconButton();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.settingBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.backCsoonBtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.logoBefore = new System.Windows.Forms.PictureBox();
+            this.formOptionsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.foodsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.comingSoonBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.filmsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.showingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.addEmployeeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.employeeImagePathInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeePasswordInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeEmailInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.employeeNameInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.EmployeeListTable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.employeeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeePassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeProfile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.employeeImagePathInput = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.viewEmployeePanel = new System.Windows.Forms.Panel();
-            this.closeImageBtn = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
-            this.viewEmployeeBox = new System.Windows.Forms.PictureBox();
-            this.backComingSoonBtn = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeListTable)).BeginInit();
             this.viewEmployeePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewEmployeeBox)).BeginInit();
+            this.bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).BeginInit();
+            this.formOptionsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeListTable)).BeginInit();
             this.SuspendLayout();
-            // 
-            // addEmployeeBtn
-            // 
-            this.addEmployeeBtn.AllowAnimations = true;
-            this.addEmployeeBtn.AllowMouseEffects = true;
-            this.addEmployeeBtn.AllowToggling = false;
-            this.addEmployeeBtn.AnimationSpeed = 200;
-            this.addEmployeeBtn.AutoGenerateColors = false;
-            this.addEmployeeBtn.AutoRoundBorders = true;
-            this.addEmployeeBtn.AutoSizeLeftIcon = true;
-            this.addEmployeeBtn.AutoSizeRightIcon = true;
-            this.addEmployeeBtn.BackColor = System.Drawing.Color.Transparent;
-            this.addEmployeeBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.addEmployeeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addEmployeeBtn.BackgroundImage")));
-            this.addEmployeeBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.addEmployeeBtn.ButtonText = "Add";
-            this.addEmployeeBtn.ButtonTextMarginLeft = 0;
-            this.addEmployeeBtn.ColorContrastOnClick = 45;
-            this.addEmployeeBtn.ColorContrastOnHover = 45;
-            this.addEmployeeBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.addEmployeeBtn.CustomizableEdges = borderEdges1;
-            this.addEmployeeBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.addEmployeeBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.addEmployeeBtn.DisabledFillColor = System.Drawing.Color.Empty;
-            this.addEmployeeBtn.DisabledForecolor = System.Drawing.Color.Empty;
-            this.addEmployeeBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.addEmployeeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addEmployeeBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployeeBtn.IconLeft = null;
-            this.addEmployeeBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addEmployeeBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.addEmployeeBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.addEmployeeBtn.IconMarginLeft = 11;
-            this.addEmployeeBtn.IconPadding = 10;
-            this.addEmployeeBtn.IconRight = null;
-            this.addEmployeeBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addEmployeeBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.addEmployeeBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.addEmployeeBtn.IconSize = 25;
-            this.addEmployeeBtn.IdleBorderColor = System.Drawing.Color.Empty;
-            this.addEmployeeBtn.IdleBorderRadius = 0;
-            this.addEmployeeBtn.IdleBorderThickness = 0;
-            this.addEmployeeBtn.IdleFillColor = System.Drawing.Color.Empty;
-            this.addEmployeeBtn.IdleIconLeftImage = null;
-            this.addEmployeeBtn.IdleIconRightImage = null;
-            this.addEmployeeBtn.IndicateFocus = false;
-            this.addEmployeeBtn.Location = new System.Drawing.Point(544, 46);
-            this.addEmployeeBtn.Name = "addEmployeeBtn";
-            this.addEmployeeBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.addEmployeeBtn.OnDisabledState.BorderRadius = 41;
-            this.addEmployeeBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.addEmployeeBtn.OnDisabledState.BorderThickness = 1;
-            this.addEmployeeBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.addEmployeeBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.addEmployeeBtn.OnDisabledState.IconLeftImage = null;
-            this.addEmployeeBtn.OnDisabledState.IconRightImage = null;
-            this.addEmployeeBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.addEmployeeBtn.onHoverState.BorderRadius = 41;
-            this.addEmployeeBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.addEmployeeBtn.onHoverState.BorderThickness = 1;
-            this.addEmployeeBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.addEmployeeBtn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.addEmployeeBtn.onHoverState.IconLeftImage = null;
-            this.addEmployeeBtn.onHoverState.IconRightImage = null;
-            this.addEmployeeBtn.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.addEmployeeBtn.OnIdleState.BorderRadius = 41;
-            this.addEmployeeBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.addEmployeeBtn.OnIdleState.BorderThickness = 1;
-            this.addEmployeeBtn.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.addEmployeeBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.addEmployeeBtn.OnIdleState.IconLeftImage = null;
-            this.addEmployeeBtn.OnIdleState.IconRightImage = null;
-            this.addEmployeeBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.addEmployeeBtn.OnPressedState.BorderRadius = 41;
-            this.addEmployeeBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.addEmployeeBtn.OnPressedState.BorderThickness = 1;
-            this.addEmployeeBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.addEmployeeBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.addEmployeeBtn.OnPressedState.IconLeftImage = null;
-            this.addEmployeeBtn.OnPressedState.IconRightImage = null;
-            this.addEmployeeBtn.Size = new System.Drawing.Size(175, 41);
-            this.addEmployeeBtn.TabIndex = 29;
-            this.addEmployeeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addEmployeeBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.addEmployeeBtn.TextMarginLeft = 0;
-            this.addEmployeeBtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.addEmployeeBtn.UseDefaultRadiusAndThickness = true;
-            this.addEmployeeBtn.Click += new System.EventHandler(this.addEmployeeBtn_Click);
-            // 
-            // employeePasswordInput
-            // 
-            this.employeePasswordInput.AcceptsReturn = false;
-            this.employeePasswordInput.AcceptsTab = false;
-            this.employeePasswordInput.AnimationSpeed = 200;
-            this.employeePasswordInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.employeePasswordInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.employeePasswordInput.AutoSizeHeight = true;
-            this.employeePasswordInput.BackColor = System.Drawing.Color.Transparent;
-            this.employeePasswordInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("employeePasswordInput.BackgroundImage")));
-            this.employeePasswordInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.employeePasswordInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.employeePasswordInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.employeePasswordInput.BorderColorIdle = System.Drawing.Color.Silver;
-            this.employeePasswordInput.BorderRadius = 1;
-            this.employeePasswordInput.BorderThickness = 1;
-            this.employeePasswordInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.employeePasswordInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.employeePasswordInput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeePasswordInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.employeePasswordInput.DefaultText = "";
-            this.employeePasswordInput.FillColor = System.Drawing.Color.White;
-            this.employeePasswordInput.HideSelection = true;
-            this.employeePasswordInput.IconLeft = null;
-            this.employeePasswordInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeePasswordInput.IconPadding = 10;
-            this.employeePasswordInput.IconRight = null;
-            this.employeePasswordInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeePasswordInput.Lines = new string[0];
-            this.employeePasswordInput.Location = new System.Drawing.Point(648, 137);
-            this.employeePasswordInput.MaxLength = 32767;
-            this.employeePasswordInput.MinimumSize = new System.Drawing.Size(1, 1);
-            this.employeePasswordInput.Modified = false;
-            this.employeePasswordInput.Multiline = false;
-            this.employeePasswordInput.Name = "employeePasswordInput";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeePasswordInput.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.employeePasswordInput.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeePasswordInput.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeePasswordInput.OnIdleState = stateProperties4;
-            this.employeePasswordInput.Padding = new System.Windows.Forms.Padding(3);
-            this.employeePasswordInput.PasswordChar = '\0';
-            this.employeePasswordInput.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.employeePasswordInput.PlaceholderText = "Password";
-            this.employeePasswordInput.ReadOnly = false;
-            this.employeePasswordInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.employeePasswordInput.SelectedText = "";
-            this.employeePasswordInput.SelectionLength = 0;
-            this.employeePasswordInput.SelectionStart = 0;
-            this.employeePasswordInput.ShortcutsEnabled = true;
-            this.employeePasswordInput.Size = new System.Drawing.Size(247, 43);
-            this.employeePasswordInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.employeePasswordInput.TabIndex = 28;
-            this.employeePasswordInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.employeePasswordInput.TextMarginBottom = 0;
-            this.employeePasswordInput.TextMarginLeft = 3;
-            this.employeePasswordInput.TextMarginTop = 1;
-            this.employeePasswordInput.TextPlaceholder = "Password";
-            this.employeePasswordInput.UseSystemPasswordChar = false;
-            this.employeePasswordInput.WordWrap = true;
-            // 
-            // employeeEmailInput
-            // 
-            this.employeeEmailInput.AcceptsReturn = false;
-            this.employeeEmailInput.AcceptsTab = false;
-            this.employeeEmailInput.AnimationSpeed = 200;
-            this.employeeEmailInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.employeeEmailInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.employeeEmailInput.AutoSizeHeight = true;
-            this.employeeEmailInput.BackColor = System.Drawing.Color.Transparent;
-            this.employeeEmailInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("employeeEmailInput.BackgroundImage")));
-            this.employeeEmailInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.employeeEmailInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.employeeEmailInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.employeeEmailInput.BorderColorIdle = System.Drawing.Color.Silver;
-            this.employeeEmailInput.BorderRadius = 1;
-            this.employeeEmailInput.BorderThickness = 1;
-            this.employeeEmailInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.employeeEmailInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.employeeEmailInput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEmailInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.employeeEmailInput.DefaultText = "";
-            this.employeeEmailInput.FillColor = System.Drawing.Color.White;
-            this.employeeEmailInput.HideSelection = true;
-            this.employeeEmailInput.IconLeft = null;
-            this.employeeEmailInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEmailInput.IconPadding = 10;
-            this.employeeEmailInput.IconRight = null;
-            this.employeeEmailInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeEmailInput.Lines = new string[0];
-            this.employeeEmailInput.Location = new System.Drawing.Point(395, 137);
-            this.employeeEmailInput.MaxLength = 32767;
-            this.employeeEmailInput.MinimumSize = new System.Drawing.Size(1, 1);
-            this.employeeEmailInput.Modified = false;
-            this.employeeEmailInput.Multiline = false;
-            this.employeeEmailInput.Name = "employeeEmailInput";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeEmailInput.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.employeeEmailInput.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeEmailInput.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeEmailInput.OnIdleState = stateProperties8;
-            this.employeeEmailInput.Padding = new System.Windows.Forms.Padding(3);
-            this.employeeEmailInput.PasswordChar = '\0';
-            this.employeeEmailInput.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.employeeEmailInput.PlaceholderText = "Email";
-            this.employeeEmailInput.ReadOnly = false;
-            this.employeeEmailInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.employeeEmailInput.SelectedText = "";
-            this.employeeEmailInput.SelectionLength = 0;
-            this.employeeEmailInput.SelectionStart = 0;
-            this.employeeEmailInput.ShortcutsEnabled = true;
-            this.employeeEmailInput.Size = new System.Drawing.Size(247, 43);
-            this.employeeEmailInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.employeeEmailInput.TabIndex = 27;
-            this.employeeEmailInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.employeeEmailInput.TextMarginBottom = 0;
-            this.employeeEmailInput.TextMarginLeft = 3;
-            this.employeeEmailInput.TextMarginTop = 1;
-            this.employeeEmailInput.TextPlaceholder = "Email";
-            this.employeeEmailInput.UseSystemPasswordChar = false;
-            this.employeeEmailInput.WordWrap = true;
-            // 
-            // employeeNameInput
-            // 
-            this.employeeNameInput.AcceptsReturn = false;
-            this.employeeNameInput.AcceptsTab = false;
-            this.employeeNameInput.AnimationSpeed = 200;
-            this.employeeNameInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.employeeNameInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.employeeNameInput.AutoSizeHeight = true;
-            this.employeeNameInput.BackColor = System.Drawing.Color.Transparent;
-            this.employeeNameInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("employeeNameInput.BackgroundImage")));
-            this.employeeNameInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.employeeNameInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.employeeNameInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.employeeNameInput.BorderColorIdle = System.Drawing.Color.Silver;
-            this.employeeNameInput.BorderRadius = 1;
-            this.employeeNameInput.BorderThickness = 1;
-            this.employeeNameInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.employeeNameInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.employeeNameInput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeNameInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.employeeNameInput.DefaultText = "";
-            this.employeeNameInput.FillColor = System.Drawing.Color.White;
-            this.employeeNameInput.HideSelection = true;
-            this.employeeNameInput.IconLeft = null;
-            this.employeeNameInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeNameInput.IconPadding = 10;
-            this.employeeNameInput.IconRight = null;
-            this.employeeNameInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeNameInput.Lines = new string[0];
-            this.employeeNameInput.Location = new System.Drawing.Point(142, 137);
-            this.employeeNameInput.MaxLength = 32767;
-            this.employeeNameInput.MinimumSize = new System.Drawing.Size(1, 1);
-            this.employeeNameInput.Modified = false;
-            this.employeeNameInput.Multiline = false;
-            this.employeeNameInput.Name = "employeeNameInput";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeNameInput.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.employeeNameInput.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeNameInput.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeNameInput.OnIdleState = stateProperties12;
-            this.employeeNameInput.Padding = new System.Windows.Forms.Padding(3);
-            this.employeeNameInput.PasswordChar = '\0';
-            this.employeeNameInput.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.employeeNameInput.PlaceholderText = "Name";
-            this.employeeNameInput.ReadOnly = false;
-            this.employeeNameInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.employeeNameInput.SelectedText = "";
-            this.employeeNameInput.SelectionLength = 0;
-            this.employeeNameInput.SelectionStart = 0;
-            this.employeeNameInput.ShortcutsEnabled = true;
-            this.employeeNameInput.Size = new System.Drawing.Size(247, 43);
-            this.employeeNameInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.employeeNameInput.TabIndex = 26;
-            this.employeeNameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.employeeNameInput.TextMarginBottom = 0;
-            this.employeeNameInput.TextMarginLeft = 3;
-            this.employeeNameInput.TextMarginTop = 1;
-            this.employeeNameInput.TextPlaceholder = "Name";
-            this.employeeNameInput.UseSystemPasswordChar = false;
-            this.employeeNameInput.WordWrap = true;
-            // 
-            // EmployeeListTable
-            // 
-            this.EmployeeListTable.AllowCustomTheming = false;
-            this.EmployeeListTable.AllowUserToAddRows = false;
-            this.EmployeeListTable.AllowUserToOrderColumns = true;
-            this.EmployeeListTable.AllowUserToResizeColumns = false;
-            this.EmployeeListTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeListTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.EmployeeListTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmployeeListTable.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.EmployeeListTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmployeeListTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.EmployeeListTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeListTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.EmployeeListTable.ColumnHeadersHeight = 40;
-            this.EmployeeListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.employeeId,
-            this.employeeName,
-            this.employeeEmail,
-            this.employeePassword,
-            this.employeeProfile});
-            this.EmployeeListTable.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            this.EmployeeListTable.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.EmployeeListTable.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeListTable.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.EmployeeListTable.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.EmployeeListTable.CurrentTheme.BackColor = System.Drawing.Color.DodgerBlue;
-            this.EmployeeListTable.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(221)))), ((int)(((byte)(255)))));
-            this.EmployeeListTable.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.EmployeeListTable.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.EmployeeListTable.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.EmployeeListTable.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.EmployeeListTable.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.EmployeeListTable.CurrentTheme.Name = null;
-            this.EmployeeListTable.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.EmployeeListTable.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.EmployeeListTable.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeListTable.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.EmployeeListTable.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeListTable.DefaultCellStyle = dataGridViewCellStyle3;
-            this.EmployeeListTable.EnableHeadersVisualStyles = false;
-            this.EmployeeListTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(221)))), ((int)(((byte)(255)))));
-            this.EmployeeListTable.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.EmployeeListTable.HeaderBgColor = System.Drawing.Color.Empty;
-            this.EmployeeListTable.HeaderForeColor = System.Drawing.Color.White;
-            this.EmployeeListTable.Location = new System.Drawing.Point(161, 233);
-            this.EmployeeListTable.Name = "EmployeeListTable";
-            this.EmployeeListTable.RowHeadersVisible = false;
-            this.EmployeeListTable.RowHeadersWidth = 48;
-            this.EmployeeListTable.RowTemplate.Height = 40;
-            this.EmployeeListTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmployeeListTable.Size = new System.Drawing.Size(890, 405);
-            this.EmployeeListTable.TabIndex = 25;
-            this.EmployeeListTable.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.DodgerBlue;
-            // 
-            // employeeId
-            // 
-            this.employeeId.HeaderText = "ID";
-            this.employeeId.MaxInputLength = 247;
-            this.employeeId.MinimumWidth = 6;
-            this.employeeId.Name = "employeeId";
-            // 
-            // employeeName
-            // 
-            this.employeeName.HeaderText = "Name";
-            this.employeeName.MaxInputLength = 247;
-            this.employeeName.MinimumWidth = 6;
-            this.employeeName.Name = "employeeName";
-            // 
-            // employeeEmail
-            // 
-            this.employeeEmail.HeaderText = "Email";
-            this.employeeEmail.MaxInputLength = 247;
-            this.employeeEmail.MinimumWidth = 6;
-            this.employeeEmail.Name = "employeeEmail";
-            // 
-            // employeePassword
-            // 
-            this.employeePassword.HeaderText = "Password";
-            this.employeePassword.MaxInputLength = 247;
-            this.employeePassword.MinimumWidth = 6;
-            this.employeePassword.Name = "employeePassword";
-            // 
-            // employeeProfile
-            // 
-            this.employeeProfile.HeaderText = "Profile";
-            this.employeeProfile.MaxInputLength = 247;
-            this.employeeProfile.MinimumWidth = 6;
-            this.employeeProfile.Name = "employeeProfile";
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(161, 69);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(214, 62);
-            this.bunifuLabel1.TabIndex = 30;
-            this.bunifuLabel1.Text = "Employee";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // employeeImagePathInput
-            // 
-            this.employeeImagePathInput.AcceptsReturn = false;
-            this.employeeImagePathInput.AcceptsTab = false;
-            this.employeeImagePathInput.AnimationSpeed = 200;
-            this.employeeImagePathInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.employeeImagePathInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.employeeImagePathInput.AutoSizeHeight = true;
-            this.employeeImagePathInput.BackColor = System.Drawing.Color.Transparent;
-            this.employeeImagePathInput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("employeeImagePathInput.BackgroundImage")));
-            this.employeeImagePathInput.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.employeeImagePathInput.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.employeeImagePathInput.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.employeeImagePathInput.BorderColorIdle = System.Drawing.Color.Silver;
-            this.employeeImagePathInput.BorderRadius = 1;
-            this.employeeImagePathInput.BorderThickness = 1;
-            this.employeeImagePathInput.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.employeeImagePathInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.employeeImagePathInput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeImagePathInput.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.employeeImagePathInput.DefaultText = "";
-            this.employeeImagePathInput.FillColor = System.Drawing.Color.White;
-            this.employeeImagePathInput.HideSelection = true;
-            this.employeeImagePathInput.IconLeft = null;
-            this.employeeImagePathInput.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeImagePathInput.IconPadding = 10;
-            this.employeeImagePathInput.IconRight = null;
-            this.employeeImagePathInput.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.employeeImagePathInput.Lines = new string[0];
-            this.employeeImagePathInput.Location = new System.Drawing.Point(909, 137);
-            this.employeeImagePathInput.MaxLength = 32767;
-            this.employeeImagePathInput.MinimumSize = new System.Drawing.Size(1, 1);
-            this.employeeImagePathInput.Modified = false;
-            this.employeeImagePathInput.Multiline = false;
-            this.employeeImagePathInput.Name = "employeeImagePathInput";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeImagePathInput.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.employeeImagePathInput.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeImagePathInput.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.employeeImagePathInput.OnIdleState = stateProperties16;
-            this.employeeImagePathInput.Padding = new System.Windows.Forms.Padding(3);
-            this.employeeImagePathInput.PasswordChar = '\0';
-            this.employeeImagePathInput.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.employeeImagePathInput.PlaceholderText = "Profile Directory";
-            this.employeeImagePathInput.ReadOnly = false;
-            this.employeeImagePathInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.employeeImagePathInput.SelectedText = "";
-            this.employeeImagePathInput.SelectionLength = 0;
-            this.employeeImagePathInput.SelectionStart = 0;
-            this.employeeImagePathInput.ShortcutsEnabled = true;
-            this.employeeImagePathInput.Size = new System.Drawing.Size(247, 43);
-            this.employeeImagePathInput.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.employeeImagePathInput.TabIndex = 31;
-            this.employeeImagePathInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.employeeImagePathInput.TextMarginBottom = 0;
-            this.employeeImagePathInput.TextMarginLeft = 3;
-            this.employeeImagePathInput.TextMarginTop = 1;
-            this.employeeImagePathInput.TextPlaceholder = "Profile Directory";
-            this.employeeImagePathInput.UseSystemPasswordChar = false;
-            this.employeeImagePathInput.WordWrap = true;
             // 
             // viewEmployeePanel
             // 
-            this.viewEmployeePanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.viewEmployeePanel.Controls.Add(this.closeImageBtn);
+            this.viewEmployeePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.viewEmployeePanel.Controls.Add(this.closeShowingImageBtn);
             this.viewEmployeePanel.Controls.Add(this.viewEmployeeBox);
             this.viewEmployeePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewEmployeePanel.Location = new System.Drawing.Point(0, 0);
@@ -601,52 +78,28 @@
             this.viewEmployeePanel.TabIndex = 32;
             this.viewEmployeePanel.Visible = false;
             // 
-            // closeImageBtn
+            // closeShowingImageBtn
             // 
-            this.closeImageBtn.AllowAnimations = true;
-            this.closeImageBtn.AllowBorderColorChanges = true;
-            this.closeImageBtn.AllowDefaults = true;
-            this.closeImageBtn.AllowMouseEffects = true;
-            this.closeImageBtn.AnimationSpeed = 200;
-            this.closeImageBtn.AutoSizeCaptions = true;
-            this.closeImageBtn.BackColor = System.Drawing.Color.Transparent;
-            this.closeImageBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.closeImageBtn.BackHoverColor = System.Drawing.Color.LightGray;
-            this.closeImageBtn.BackPressedColor = System.Drawing.Color.Silver;
-            this.closeImageBtn.BorderColor = System.Drawing.Color.LightGray;
-            this.closeImageBtn.BorderHoverColor = System.Drawing.Color.DarkGray;
-            this.closeImageBtn.BorderPressedColor = System.Drawing.Color.DarkGray;
-            this.closeImageBtn.BorderRadius = 15;
-            this.closeImageBtn.BorderStyle = Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderStyles.Solid;
-            this.closeImageBtn.BorderThickness = 1;
-            this.closeImageBtn.CaptionType = Bunifu.UI.WinForms.BunifuFormCaptionButton.CaptionTypes.Close;
-            this.closeImageBtn.ColorContrastOnClick = 30;
-            this.closeImageBtn.ColorContrastOnHover = 30;
-            this.closeImageBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.closeImageBtn.CustomizableEdges = borderEdges2;
-            this.closeImageBtn.DefaultBorderColor = System.Drawing.Color.Silver;
-            this.closeImageBtn.DefaultColor = System.Drawing.Color.Gainsboro;
-            this.closeImageBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.closeImageBtn.IconColor = System.Drawing.Color.Black;
-            this.closeImageBtn.IconHoverColor = System.Drawing.Color.Black;
-            this.closeImageBtn.IconPressedColor = System.Drawing.Color.Black;
-            this.closeImageBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeImageBtn.Image")));
-            this.closeImageBtn.ImageMargin = new System.Windows.Forms.Padding(1, 1, 0, 0);
-            this.closeImageBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closeImageBtn.Location = new System.Drawing.Point(808, 40);
-            this.closeImageBtn.Name = "closeImageBtn";
-            this.closeImageBtn.ShowBorders = true;
-            this.closeImageBtn.Size = new System.Drawing.Size(38, 33);
-            this.closeImageBtn.TabIndex = 4;
-            this.closeImageBtn.Click += new System.EventHandler(this.closeImageBtn_Click_1);
+            this.closeShowingImageBtn.BorderRadius = 10;
+            this.closeShowingImageBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.closeShowingImageBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closeShowingImageBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closeShowingImageBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closeShowingImageBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closeShowingImageBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.closeShowingImageBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeShowingImageBtn.ForeColor = System.Drawing.Color.White;
+            this.closeShowingImageBtn.IndicateFocus = true;
+            this.closeShowingImageBtn.Location = new System.Drawing.Point(536, 574);
+            this.closeShowingImageBtn.Name = "closeShowingImageBtn";
+            this.closeShowingImageBtn.Size = new System.Drawing.Size(194, 34);
+            this.closeShowingImageBtn.TabIndex = 60;
+            this.closeShowingImageBtn.Text = "CLOSE";
+            this.closeShowingImageBtn.Click += new System.EventHandler(this.closeShowingImageBtn_Click);
             // 
             // viewEmployeeBox
             // 
-            this.viewEmployeeBox.Location = new System.Drawing.Point(410, 95);
+            this.viewEmployeeBox.Location = new System.Drawing.Point(438, 56);
             this.viewEmployeeBox.Name = "viewEmployeeBox";
             this.viewEmployeeBox.Size = new System.Drawing.Size(384, 512);
             this.viewEmployeeBox.TabIndex = 0;
@@ -657,55 +110,457 @@
             this.backComingSoonBtn.IconChar = FontAwesome.Sharp.IconChar.Backward;
             this.backComingSoonBtn.IconColor = System.Drawing.Color.Black;
             this.backComingSoonBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.backComingSoonBtn.Location = new System.Drawing.Point(1100, 12);
+            this.backComingSoonBtn.Location = new System.Drawing.Point(1475, 12);
             this.backComingSoonBtn.Name = "backComingSoonBtn";
             this.backComingSoonBtn.Size = new System.Drawing.Size(75, 51);
             this.backComingSoonBtn.TabIndex = 37;
             this.backComingSoonBtn.UseVisualStyleBackColor = true;
             this.backComingSoonBtn.Click += new System.EventHandler(this.backComingSoonBtn_Click_1);
             // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.label1);
+            this.bunifuPanel1.Controls.Add(this.settingBtn);
+            this.bunifuPanel1.Controls.Add(this.backCsoonBtn);
+            this.bunifuPanel1.Controls.Add(this.logoBefore);
+            this.bunifuPanel1.Location = new System.Drawing.Point(-5, -3);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(1215, 80);
+            this.bunifuPanel1.TabIndex = 68;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(821, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 51);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "EMPLOYEES";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // settingBtn
+            // 
+            this.settingBtn.AllowAnimations = true;
+            this.settingBtn.AllowBorderColorChanges = true;
+            this.settingBtn.AllowMouseEffects = true;
+            this.settingBtn.AnimationSpeed = 200;
+            this.settingBtn.BackColor = System.Drawing.Color.Transparent;
+            this.settingBtn.BackgroundColor = System.Drawing.Color.Transparent;
+            this.settingBtn.BackgroundImage = global::MovieMunch.Properties.Resources.SettingIcon;
+            this.settingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.settingBtn.BorderRadius = 1;
+            this.settingBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.settingBtn.BorderThickness = 1;
+            this.settingBtn.ColorContrastOnClick = 30;
+            this.settingBtn.ColorContrastOnHover = 30;
+            this.settingBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.settingBtn.CustomizableEdges = borderEdges2;
+            this.settingBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.settingBtn.Image = null;
+            this.settingBtn.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.settingBtn.Location = new System.Drawing.Point(1143, 15);
+            this.settingBtn.Name = "settingBtn";
+            this.settingBtn.RoundBorders = true;
+            this.settingBtn.ShowBorders = true;
+            this.settingBtn.Size = new System.Drawing.Size(50, 50);
+            this.settingBtn.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.settingBtn.TabIndex = 44;
+            this.settingBtn.Click += new System.EventHandler(this.settingBtn_Click);
+            // 
+            // backCsoonBtn
+            // 
+            this.backCsoonBtn.BackColor = System.Drawing.Color.Transparent;
+            this.backCsoonBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backCsoonBtn.BackgroundImage")));
+            this.backCsoonBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backCsoonBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.backCsoonBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.backCsoonBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.backCsoonBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.backCsoonBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.backCsoonBtn.FillColor = System.Drawing.Color.Empty;
+            this.backCsoonBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.backCsoonBtn.ForeColor = System.Drawing.Color.White;
+            this.backCsoonBtn.Location = new System.Drawing.Point(168, 15);
+            this.backCsoonBtn.Name = "backCsoonBtn";
+            this.backCsoonBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.backCsoonBtn.Size = new System.Drawing.Size(67, 54);
+            this.backCsoonBtn.TabIndex = 55;
+            this.backCsoonBtn.Click += new System.EventHandler(this.backCsoonBtn_Click);
+            // 
+            // logoBefore
+            // 
+            this.logoBefore.BackColor = System.Drawing.Color.Transparent;
+            this.logoBefore.BackgroundImage = global::MovieMunch.Properties.Resources.MovieM_removebg_preview;
+            this.logoBefore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logoBefore.Location = new System.Drawing.Point(5, -15);
+            this.logoBefore.Name = "logoBefore";
+            this.logoBefore.Size = new System.Drawing.Size(169, 126);
+            this.logoBefore.TabIndex = 46;
+            this.logoBefore.TabStop = false;
+            // 
+            // formOptionsPanel
+            // 
+            this.formOptionsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.formOptionsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.formOptionsPanel.BorderRadius = 3;
+            this.formOptionsPanel.BorderThickness = 3;
+            this.formOptionsPanel.Controls.Add(this.foodsBtn);
+            this.formOptionsPanel.Controls.Add(this.comingSoonBtn);
+            this.formOptionsPanel.Controls.Add(this.filmsBtn);
+            this.formOptionsPanel.Controls.Add(this.showingBtn);
+            this.formOptionsPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.formOptionsPanel.Location = new System.Drawing.Point(987, 75);
+            this.formOptionsPanel.Name = "formOptionsPanel";
+            this.formOptionsPanel.Size = new System.Drawing.Size(201, 216);
+            this.formOptionsPanel.TabIndex = 69;
+            this.formOptionsPanel.Visible = false;
+            // 
+            // foodsBtn
+            // 
+            this.foodsBtn.BorderRadius = 10;
+            this.foodsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.foodsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.foodsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.foodsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.foodsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.foodsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.foodsBtn.ForeColor = System.Drawing.Color.White;
+            this.foodsBtn.Location = new System.Drawing.Point(11, 161);
+            this.foodsBtn.Name = "foodsBtn";
+            this.foodsBtn.Size = new System.Drawing.Size(180, 45);
+            this.foodsBtn.TabIndex = 4;
+            this.foodsBtn.Text = "FOODS";
+            this.foodsBtn.Click += new System.EventHandler(this.foodsBtn_Click);
+            // 
+            // comingSoonBtn
+            // 
+            this.comingSoonBtn.BorderRadius = 10;
+            this.comingSoonBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.comingSoonBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.comingSoonBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.comingSoonBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.comingSoonBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.comingSoonBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.comingSoonBtn.ForeColor = System.Drawing.Color.White;
+            this.comingSoonBtn.Location = new System.Drawing.Point(11, 110);
+            this.comingSoonBtn.Name = "comingSoonBtn";
+            this.comingSoonBtn.Size = new System.Drawing.Size(180, 45);
+            this.comingSoonBtn.TabIndex = 3;
+            this.comingSoonBtn.Text = "COMING SOON";
+            this.comingSoonBtn.Click += new System.EventHandler(this.comingSoonBtn_Click);
+            // 
+            // filmsBtn
+            // 
+            this.filmsBtn.BorderRadius = 10;
+            this.filmsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.filmsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.filmsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.filmsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.filmsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.filmsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.filmsBtn.ForeColor = System.Drawing.Color.White;
+            this.filmsBtn.Location = new System.Drawing.Point(11, 59);
+            this.filmsBtn.Name = "filmsBtn";
+            this.filmsBtn.Size = new System.Drawing.Size(180, 45);
+            this.filmsBtn.TabIndex = 1;
+            this.filmsBtn.Text = "FILMS";
+            this.filmsBtn.Click += new System.EventHandler(this.filmsBtn_Click);
+            // 
+            // showingBtn
+            // 
+            this.showingBtn.BorderRadius = 10;
+            this.showingBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showingBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showingBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showingBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.showingBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.showingBtn.ForeColor = System.Drawing.Color.White;
+            this.showingBtn.Location = new System.Drawing.Point(11, 8);
+            this.showingBtn.Name = "showingBtn";
+            this.showingBtn.Size = new System.Drawing.Size(180, 45);
+            this.showingBtn.TabIndex = 0;
+            this.showingBtn.Text = "SHOWING";
+            this.showingBtn.Click += new System.EventHandler(this.showingBtn_Click);
+            // 
+            // addEmployeeBtn
+            // 
+            this.addEmployeeBtn.BorderRadius = 10;
+            this.addEmployeeBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.addEmployeeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addEmployeeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addEmployeeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addEmployeeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addEmployeeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.addEmployeeBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployeeBtn.ForeColor = System.Drawing.Color.White;
+            this.addEmployeeBtn.IndicateFocus = true;
+            this.addEmployeeBtn.Location = new System.Drawing.Point(13, 95);
+            this.addEmployeeBtn.Name = "addEmployeeBtn";
+            this.addEmployeeBtn.Size = new System.Drawing.Size(136, 34);
+            this.addEmployeeBtn.TabIndex = 76;
+            this.addEmployeeBtn.Text = "ADD";
+            this.addEmployeeBtn.Click += new System.EventHandler(this.addEmployeeBtn_Click_1);
+            // 
+            // employeeImagePathInput
+            // 
+            this.employeeImagePathInput.BackColor = System.Drawing.Color.Transparent;
+            this.employeeImagePathInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.employeeImagePathInput.BorderRadius = 10;
+            this.employeeImagePathInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeImagePathInput.DefaultText = "";
+            this.employeeImagePathInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeImagePathInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeImagePathInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeImagePathInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeImagePathInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeImagePathInput.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeImagePathInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeeImagePathInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.employeeImagePathInput.Location = new System.Drawing.Point(1017, 95);
+            this.employeeImagePathInput.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.employeeImagePathInput.Name = "employeeImagePathInput";
+            this.employeeImagePathInput.PasswordChar = '\0';
+            this.employeeImagePathInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeeImagePathInput.PlaceholderText = "PIC DIRECTORY";
+            this.employeeImagePathInput.SelectedText = "";
+            this.employeeImagePathInput.Size = new System.Drawing.Size(170, 34);
+            this.employeeImagePathInput.TabIndex = 80;
+            // 
+            // employeePasswordInput
+            // 
+            this.employeePasswordInput.BackColor = System.Drawing.Color.Transparent;
+            this.employeePasswordInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.employeePasswordInput.BorderRadius = 10;
+            this.employeePasswordInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeePasswordInput.DefaultText = "";
+            this.employeePasswordInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeePasswordInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeePasswordInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeePasswordInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeePasswordInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeePasswordInput.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeePasswordInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeePasswordInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.employeePasswordInput.Location = new System.Drawing.Point(782, 94);
+            this.employeePasswordInput.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.employeePasswordInput.Name = "employeePasswordInput";
+            this.employeePasswordInput.PasswordChar = '\0';
+            this.employeePasswordInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeePasswordInput.PlaceholderText = "ENTER PASSWORD";
+            this.employeePasswordInput.SelectedText = "";
+            this.employeePasswordInput.Size = new System.Drawing.Size(228, 34);
+            this.employeePasswordInput.TabIndex = 79;
+            // 
+            // employeeEmailInput
+            // 
+            this.employeeEmailInput.BackColor = System.Drawing.Color.Transparent;
+            this.employeeEmailInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.employeeEmailInput.BorderRadius = 10;
+            this.employeeEmailInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeEmailInput.DefaultText = "";
+            this.employeeEmailInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeEmailInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeEmailInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEmailInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeEmailInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeEmailInput.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeEmailInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeeEmailInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.employeeEmailInput.Location = new System.Drawing.Point(439, 95);
+            this.employeeEmailInput.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.employeeEmailInput.Name = "employeeEmailInput";
+            this.employeeEmailInput.PasswordChar = '\0';
+            this.employeeEmailInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeeEmailInput.PlaceholderText = "ENTER EMAIL";
+            this.employeeEmailInput.SelectedText = "";
+            this.employeeEmailInput.Size = new System.Drawing.Size(335, 34);
+            this.employeeEmailInput.TabIndex = 78;
+            // 
+            // employeeNameInput
+            // 
+            this.employeeNameInput.BackColor = System.Drawing.Color.Transparent;
+            this.employeeNameInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.employeeNameInput.BorderRadius = 10;
+            this.employeeNameInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.employeeNameInput.DefaultText = "";
+            this.employeeNameInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.employeeNameInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.employeeNameInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeNameInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.employeeNameInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.employeeNameInput.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNameInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeeNameInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.employeeNameInput.Location = new System.Drawing.Point(156, 95);
+            this.employeeNameInput.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.employeeNameInput.Name = "employeeNameInput";
+            this.employeeNameInput.PasswordChar = '\0';
+            this.employeeNameInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.employeeNameInput.PlaceholderText = "ENTER NAME";
+            this.employeeNameInput.SelectedText = "";
+            this.employeeNameInput.Size = new System.Drawing.Size(275, 34);
+            this.employeeNameInput.TabIndex = 77;
+            // 
+            // EmployeeListTable
+            // 
+            this.EmployeeListTable.AllowUserToAddRows = false;
+            this.EmployeeListTable.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.EmployeeListTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.EmployeeListTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeListTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.EmployeeListTable.ColumnHeadersHeight = 27;
+            this.EmployeeListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.EmployeeListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employeeId,
+            this.employeeName,
+            this.employeeEmail,
+            this.employeePassword,
+            this.employeeProfile});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeListTable.DefaultCellStyle = dataGridViewCellStyle6;
+            this.EmployeeListTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.EmployeeListTable.Location = new System.Drawing.Point(13, 154);
+            this.EmployeeListTable.Name = "EmployeeListTable";
+            this.EmployeeListTable.RowHeadersVisible = false;
+            this.EmployeeListTable.RowHeadersWidth = 51;
+            this.EmployeeListTable.RowTemplate.Height = 24;
+            this.EmployeeListTable.Size = new System.Drawing.Size(1175, 484);
+            this.EmployeeListTable.TabIndex = 81;
+            this.EmployeeListTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.EmployeeListTable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.EmployeeListTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.EmployeeListTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.EmployeeListTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.EmployeeListTable.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.EmployeeListTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.EmployeeListTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.EmployeeListTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.EmployeeListTable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeListTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.EmployeeListTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.EmployeeListTable.ThemeStyle.HeaderStyle.Height = 27;
+            this.EmployeeListTable.ThemeStyle.ReadOnly = false;
+            this.EmployeeListTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.EmployeeListTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.EmployeeListTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeListTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.EmployeeListTable.ThemeStyle.RowsStyle.Height = 24;
+            this.EmployeeListTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.EmployeeListTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // employeeId
+            // 
+            this.employeeId.HeaderText = "ID";
+            this.employeeId.MinimumWidth = 6;
+            this.employeeId.Name = "employeeId";
+            // 
+            // employeeName
+            // 
+            this.employeeName.HeaderText = "NAME";
+            this.employeeName.MinimumWidth = 6;
+            this.employeeName.Name = "employeeName";
+            // 
+            // employeeEmail
+            // 
+            this.employeeEmail.HeaderText = "EMAIL";
+            this.employeeEmail.MinimumWidth = 6;
+            this.employeeEmail.Name = "employeeEmail";
+            // 
+            // employeePassword
+            // 
+            this.employeePassword.HeaderText = "PASSWORD";
+            this.employeePassword.MinimumWidth = 6;
+            this.employeePassword.Name = "employeePassword";
+            // 
+            // employeeProfile
+            // 
+            this.employeeProfile.HeaderText = "PIC DIRECTORY";
+            this.employeeProfile.MinimumWidth = 6;
+            this.employeeProfile.Name = "employeeProfile";
+            // 
             // EmployeeList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.viewEmployeePanel);
-            this.Controls.Add(this.backComingSoonBtn);
-            this.Controls.Add(this.employeeImagePathInput);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.EmployeeListTable);
             this.Controls.Add(this.addEmployeeBtn);
+            this.Controls.Add(this.employeeImagePathInput);
             this.Controls.Add(this.employeePasswordInput);
             this.Controls.Add(this.employeeEmailInput);
             this.Controls.Add(this.employeeNameInput);
-            this.Controls.Add(this.EmployeeListTable);
+            this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.backComingSoonBtn);
+            this.Controls.Add(this.formOptionsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmployeeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeList";
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeListTable)).EndInit();
             this.viewEmployeePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.viewEmployeeBox)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).EndInit();
+            this.formOptionsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeListTable)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton addEmployeeBtn;
-        private Bunifu.UI.WinForms.BunifuTextBox employeePasswordInput;
-        private Bunifu.UI.WinForms.BunifuTextBox employeeEmailInput;
-        private Bunifu.UI.WinForms.BunifuTextBox employeeNameInput;
-        private Bunifu.UI.WinForms.BunifuDataGridView EmployeeListTable;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuTextBox employeeImagePathInput;
         private System.Windows.Forms.Panel viewEmployeePanel;
-        private Bunifu.UI.WinForms.BunifuFormCaptionButton closeImageBtn;
         private System.Windows.Forms.PictureBox viewEmployeeBox;
         private FontAwesome.Sharp.IconButton backComingSoonBtn;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton settingBtn;
+        private Guna.UI2.WinForms.Guna2CircleButton backCsoonBtn;
+        private System.Windows.Forms.PictureBox logoBefore;
+        private Guna.UI2.WinForms.Guna2Panel formOptionsPanel;
+        private Guna.UI2.WinForms.Guna2Button foodsBtn;
+        private Guna.UI2.WinForms.Guna2Button comingSoonBtn;
+        private Guna.UI2.WinForms.Guna2Button filmsBtn;
+        private Guna.UI2.WinForms.Guna2Button showingBtn;
+        private Guna.UI2.WinForms.Guna2Button addEmployeeBtn;
+        private Guna.UI2.WinForms.Guna2TextBox employeeImagePathInput;
+        private Guna.UI2.WinForms.Guna2TextBox employeePasswordInput;
+        private Guna.UI2.WinForms.Guna2TextBox employeeEmailInput;
+        private Guna.UI2.WinForms.Guna2TextBox employeeNameInput;
+        private Guna.UI2.WinForms.Guna2DataGridView EmployeeListTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeId;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeePassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeProfile;
+        private Guna.UI2.WinForms.Guna2Button closeShowingImageBtn;
     }
 }

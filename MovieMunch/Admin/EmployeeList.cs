@@ -1,8 +1,10 @@
 ﻿using MongoDB.Bson;
+using MovieMunch.Admin.FilmsInCinema;
 using MovieMunch.Backend.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace MovieMunch.Admin
@@ -10,8 +12,12 @@ namespace MovieMunch.Admin
     public partial class EmployeeList : Form
     {
         private readonly EmployeesService _employees;
-        public EmployeeList()
+        public EmployeeList(string userName, string profilePic)
         {
+            _userName = userName;
+            _profilePic = profilePic;
+            MainAdmin mainAdmin = new MainAdmin();
+            mainAdmin.SetUserNamme(userName, profilePic);
             InitializeComponent();
             _employees = new EmployeesService();
             LoadEmployeeInCinemaData();
@@ -44,6 +50,64 @@ namespace MovieMunch.Admin
             EmployeeListTable.Columns.Add(viewButtonColumn);
 
             EmployeeListTable.CellContentClick += EmployeeListTable_CellContentClick;
+            EmployeeListTable.CellPainting += MoviesToShowTable_CellPainting;
+        }
+
+        private void MoviesToShowTable_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && (e.ColumnIndex == EmployeeListTable.Columns["UpdateButton"].Index ||
+                                    e.ColumnIndex == EmployeeListTable.Columns["DeleteButton"].Index ||
+                                    e.ColumnIndex == EmployeeListTable.Columns["ViewButton"].Index))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.Background | DataGridViewPaintParts.Border);
+
+                Color buttonColor = Color.Transparent;
+                Color borderColor = Color.Black;
+                if (e.ColumnIndex == EmployeeListTable.Columns["UpdateButton"].Index)
+                {
+                    buttonColor = Color.LightBlue;
+                    borderColor = Color.DarkBlue;
+                }
+                else if (e.ColumnIndex == EmployeeListTable.Columns["DeleteButton"].Index)
+                {
+                    buttonColor = Color.IndianRed;
+                    borderColor = Color.DarkRed;
+                }
+                else if (e.ColumnIndex == EmployeeListTable.Columns["ViewButton"].Index)
+                {
+                    buttonColor = Color.LightGreen;
+                    borderColor = Color.DarkGreen;
+                }
+
+                Rectangle rect = new Rectangle(e.CellBounds.X + 2, e.CellBounds.Y + 2, e.CellBounds.Width - 4, e.CellBounds.Height - 4);
+                GraphicsPath path = new GraphicsPath();
+                path.AddArc(rect.X, rect.Y, 10, 10, 180, 90);
+                path.AddArc(rect.Right - 10, rect.Y, 10, 10, 270, 90);
+                path.AddArc(rect.Right - 10, rect.Bottom - 10, 10, 10, 0, 90);
+                path.AddArc(rect.X, rect.Bottom - 10, 10, 10, 90, 90);
+                path.CloseFigure();
+
+                using (Brush brush = new SolidBrush(buttonColor))
+                {
+                    e.Graphics.FillPath(brush, path);
+                }
+
+                using (Pen pen = new Pen(borderColor, 2))
+                {
+                    e.Graphics.DrawPath(pen, path);
+                }
+
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    (string)e.FormattedValue,
+                    e.CellStyle.Font,
+                    rect,
+                    e.CellStyle.ForeColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
         }
 
         private void ViewProfilePic(string csoonID)
@@ -158,7 +222,7 @@ namespace MovieMunch.Admin
             }
         }
 
-        private void addEmployeeBtn_Click(object sender, EventArgs e)
+        private void addEmployeeBtn_Click_1(object sender, EventArgs e)
         {
             string employeeName = RemoveSurroundingQuotes(employeeNameInput.Text);
             string employeeEmail = RemoveSurroundingQuotes(employeeEmailInput.Text);
@@ -171,14 +235,13 @@ namespace MovieMunch.Admin
                 return;
             }
 
-            // Hash the password before storing it
             string hashedPassword = PasswordHelper.HashPassword(employeePassword);
 
             var newEmployee = new AdminAccount
             {
                 employeeName = employeeName,
                 employeeEmail = employeeEmail,
-                employeePassword = hashedPassword, // Store hashed password
+                employeePassword = hashedPassword,  
                 employeeProfilePic = employeeImagePath
             };
 
@@ -205,15 +268,65 @@ namespace MovieMunch.Admin
             employeeImagePathInput.Clear();
         }
 
-        private void closeImageBtn_Click_1(object sender, EventArgs e)
+        private void backComingSoonBtn_Click_1(object sender, EventArgs e)
+        {
+            MainAdmin mainAdminForm = new MainAdmin();
+            mainAdminForm.SetUserNamme(_userName, _profilePic);
+            mainAdminForm.Visible = true;
+            this.Close();
+        }
+
+        private void backCsoonBtn_Click(object sender, EventArgs e)
+        {
+            MainAdmin mainAdminForm = new MainAdmin();
+            mainAdminForm.Visible = true;
+            this.Close();
+        }
+
+        private void settingBtn_Click(object sender, EventArgs e)
+        {
+            if (formOptionsPanel.Visible == true)
+            {
+                formOptionsPanel.Visible = false;
+            }
+            else
+            {
+                formOptionsPanel.Visible = true;
+            }
+        }
+
+        private void closeShowingImageBtn_Click(object sender, EventArgs e)
         {
             viewEmployeePanel.Visible = false;
         }
 
-        private void backComingSoonBtn_Click_1(object sender, EventArgs e)
+        private void showingBtn_Click(object sender, EventArgs e)
         {
-            MainAdmin mainAdminForm = new MainAdmin();
-            mainAdminForm.Visible = true;
+            Showing showing = new Showing(_userName, _profilePic);
+            showing.Show();
+            this.Close();
+        }
+
+        private void filmsBtn_Click(object sender, EventArgs e)
+        {
+            FilmsInCinemaForm films = new FilmsInCinemaForm(_userName, _profilePic);
+            films.Show();
+            this.Close();
+        }
+
+        private void comingSoonBtn_Click(object sender, EventArgs e)
+        {
+            ComingSoonMoviesForm coming = new ComingSoonMoviesForm(_userName, _profilePic);
+            coming.Show();
+            this.Close();
+        }
+
+        private string _userName;
+        private string _profilePic;
+        private void foodsBtn_Click(object sender, EventArgs e)
+        {
+            CinemaFoodDeals foods = new CinemaFoodDeals(_userName, _profilePic);
+            foods.Show();
             this.Close();
         }
     }

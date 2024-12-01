@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using MovieMunch.Backend.Models;
 using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace CashierApplication.Backend.Services
         private readonly IMongoCollection<Counts> _countsCollection;
         private readonly IMongoCollection<User> _userCollection;
         private readonly IMongoCollection<CinemaSeats> _cinemaSeatsCollection;
+        private readonly IMongoCollection<Sales> _salesCollection;
 
         public Reports()
         {
@@ -17,6 +19,15 @@ namespace CashierApplication.Backend.Services
             _countsCollection = dbConnection.GetNumberOfUsersCollection();
             _userCollection = dbConnection.GetUsersCollection();
             _cinemaSeatsCollection = dbConnection.GetCinemaSeatCollection();
+            _salesCollection = dbConnection.GetSalesCollection();
+        }
+        public void UpdateMovieSales(string salesId)
+        {
+            var filter = Builders<Sales>.Filter.Eq(s => s.Id, salesId);
+
+            var update = Builders<Sales>.Update.Set(s => s.MovieSales, GetTotalPriceOfAllMovies());
+
+            _salesCollection.UpdateOne(filter, update);
         }
 
 

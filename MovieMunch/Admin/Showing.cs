@@ -1,10 +1,12 @@
 ﻿using MongoDB.Bson;
+using MovieMunch.Admin.FilmsInCinema;
 using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +18,14 @@ namespace MovieMunch.Admin
     {
 
         private readonly MovieService _movieService;
-        public Showing()
+        public Showing(string userName, string profilePic)
         {
+            _userName = userName;
+            _profilePic = profilePic;
             InitializeComponent();
             _movieService = new MovieService();
             LoadMoviesInCinemaData();
+            formOptionsPanel.BringToFront();
 
             DataGridViewButtonColumn updateButtonColumn = new DataGridViewButtonColumn
             {
@@ -51,6 +56,65 @@ namespace MovieMunch.Admin
             MoviesToShowTable.Columns.Add(ViewMovies);
 
             MoviesToShowTable.CellContentClick += MoviesToShowTable_CellContentClick;
+
+            MoviesToShowTable.CellPainting += MoviesToShowTable_CellPainting;
+        }
+
+        private void MoviesToShowTable_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && (e.ColumnIndex == MoviesToShowTable.Columns["UpdateButton"].Index ||
+                                    e.ColumnIndex == MoviesToShowTable.Columns["DeleteButton"].Index ||
+                                    e.ColumnIndex == MoviesToShowTable.Columns["ViewButton"].Index))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.Background | DataGridViewPaintParts.Border);
+
+                Color buttonColor = Color.Transparent;
+                Color borderColor = Color.Black;  
+                if (e.ColumnIndex == MoviesToShowTable.Columns["UpdateButton"].Index)
+                {
+                    buttonColor = Color.LightBlue;  
+                    borderColor = Color.DarkBlue; 
+                }
+                else if (e.ColumnIndex == MoviesToShowTable.Columns["DeleteButton"].Index)
+                {
+                    buttonColor = Color.IndianRed;  
+                    borderColor = Color.DarkRed;  
+                }
+                else if (e.ColumnIndex == MoviesToShowTable.Columns["ViewButton"].Index)
+                {
+                    buttonColor = Color.LightGreen; 
+                    borderColor = Color.DarkGreen;  
+                }
+
+                Rectangle rect = new Rectangle(e.CellBounds.X + 2, e.CellBounds.Y + 2, e.CellBounds.Width - 4, e.CellBounds.Height - 4);
+                GraphicsPath path = new GraphicsPath();
+                path.AddArc(rect.X, rect.Y, 10, 10, 180, 90);  
+                path.AddArc(rect.Right - 10, rect.Y, 10, 10, 270, 90);  
+                path.AddArc(rect.Right - 10, rect.Bottom - 10, 10, 10, 0, 90); 
+                path.AddArc(rect.X, rect.Bottom - 10, 10, 10, 90, 90); 
+                path.CloseFigure();
+
+                using (Brush brush = new SolidBrush(buttonColor))
+                {
+                    e.Graphics.FillPath(brush, path);
+                }
+
+                using (Pen pen = new Pen(borderColor, 2))
+                {
+                    e.Graphics.DrawPath(pen, path);
+                }
+
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    (string)e.FormattedValue,
+                    e.CellStyle.Font,
+                    rect,
+                    e.CellStyle.ForeColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;  
+            }
         }
 
         private void LoadMoviesInCinemaData()
@@ -168,12 +232,33 @@ namespace MovieMunch.Admin
         {
             string movieTitle = RemoveSurroundingQuotes(movieTitleInput.Text);
             string movieDescription = RemoveSurroundingQuotes(movieDescriptionInput.Text);
-            double moviePrice = Convert.ToDouble(RemoveSurroundingQuotes(moviePriceInput.Text));
             string movieImagePath = RemoveSurroundingQuotes(movieDirectoryInput.Text);
 
             if (string.IsNullOrEmpty(movieTitle) || string.IsNullOrEmpty(movieImagePath) || string.IsNullOrEmpty(movieDescription))
             {
                 MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+
+            double moviePrice;
+            try
+            {
+                moviePrice = Convert.ToDouble(RemoveSurroundingQuotes(moviePriceInput.Text));
+
+                if (moviePrice < 0)
+                {
+                    MessageBox.Show("Price cannot be negative. Please enter a valid price.");
+                    return;
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid price format. Please enter a valid numeric value.");
+                return;
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Price value is too large. Please enter a reasonable value.");
                 return;
             }
 
@@ -185,11 +270,19 @@ namespace MovieMunch.Admin
                 MovieImagePath = movieImagePath
             };
 
-            _movieService.AddMovies(newMovie);
-            MessageBox.Show("Movie saved successfully.");
-            LoadMoviesInCinemaData();
-            ClearAdminInput();
+            try
+            {
+                _movieService.AddMovies(newMovie);
+                MessageBox.Show("Movie saved successfully.");
+                LoadMoviesInCinemaData();
+                ClearAdminInput();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while saving the movie: {ex.Message}");
+            }
         }
+
 
         private string RemoveSurroundingQuotes(string input)
         {
@@ -208,15 +301,58 @@ namespace MovieMunch.Admin
             movieDirectoryInput.Clear();
         }
 
-        private void closeShowingImageBtn_Click(object sender, EventArgs e)
+        private void closeShowingImageBtn_Click_1(object sender, EventArgs e)
         {
             viewShowingImagePanel.Visible = false;
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click_1(object sender, EventArgs e)
         {
             MainAdmin mainAdminForm = new MainAdmin();
+            mainAdminForm.SetUserNamme(_userName, _profilePic);
             mainAdminForm.Visible = true;
+            this.Close();
+        }
+
+        private void settingBtn_Click(object sender, EventArgs e)
+        {
+            if (formOptionsPanel.Visible == true)
+            {
+                formOptionsPanel.Visible = false;
+            }
+            else
+            {
+                formOptionsPanel.Visible = true;
+            }
+        }
+
+        private void filmsBtn_Click(object sender, EventArgs e)
+        {
+            FilmsInCinemaForm filmsInCinemaForm = new FilmsInCinemaForm(_userName, _profilePic);
+            filmsInCinemaForm.Show();
+            this.Close();
+        }
+
+        private void comingSoonBtn_Click(object sender, EventArgs e)
+        {
+            ComingSoonMoviesForm csoon = new ComingSoonMoviesForm(_userName, _profilePic);
+            csoon.Show();
+            this.Close();
+        }
+
+        private void employeesBtn_Click(object sender, EventArgs e)
+        {
+            EmployeeList employeelist = new EmployeeList(_userName, _profilePic);
+            employeelist.Show();
+            this.Close();
+        }
+
+        private string _userName;
+        private string _profilePic;
+        private void foodsBtn_Click(object sender, EventArgs e)
+        {
+            CinemaFoodDeals snack = new CinemaFoodDeals(_userName, _profilePic);
+            snack.Show();
             this.Close();
         }
     }
