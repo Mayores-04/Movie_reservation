@@ -30,17 +30,21 @@ namespace MovieMunch
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatReservation));
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges103 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges104 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges105 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges106 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges107 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges108 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Guna.UI2.WinForms.Guna2PictureBox regular2;
             Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatReservation));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.seatReservationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.snackDealsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.regularDealsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.J6 = new Guna.UI2.WinForms.Guna2Button();
@@ -325,7 +329,6 @@ namespace MovieMunch
             this.gotoWatchListBtn = new Guna.UI2.WinForms.Guna2Button();
             this.gotoTicketFormBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userNameHolder = new Guna.UI2.WinForms.Guna2TextBox();
-            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.HomeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -343,8 +346,6 @@ namespace MovieMunch
             this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.LoginBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SignUpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.regularDealsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.snackDealsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.RegularDealsPanel = new System.Windows.Forms.Panel();
             this.closeRegularDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -365,8 +366,24 @@ namespace MovieMunch
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label31 = new System.Windows.Forms.Label();
+            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.userProfileCustomHolder = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.saveUserChangesBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             regular2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(regular2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).BeginInit();
             this.seatReservationFlowLayoutPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -387,7 +404,6 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.regular5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regular4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regular3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(regular2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regular1)).BeginInit();
             this.guna2Panel6.SuspendLayout();
             this.SnacksDealsPanel.SuspendLayout();
@@ -396,10 +412,33 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).BeginInit();
             this.SuspendLayout();
+            // 
+            // regular2
+            // 
+            regular2.BorderRadius = 10;
+            regular2.ImageRotate = 0F;
+            regular2.Location = new System.Drawing.Point(356, 89);
+            regular2.Name = "regular2";
+            regular2.Size = new System.Drawing.Size(205, 119);
+            regular2.TabIndex = 2;
+            regular2.TabStop = false;
+            // 
+            // guna2PictureBox5
+            // 
+            guna2PictureBox5.BorderRadius = 10;
+            guna2PictureBox5.ImageRotate = 0F;
+            guna2PictureBox5.Location = new System.Drawing.Point(356, 89);
+            guna2PictureBox5.Name = "guna2PictureBox5";
+            guna2PictureBox5.Size = new System.Drawing.Size(205, 119);
+            guna2PictureBox5.TabIndex = 2;
+            guna2PictureBox5.TabStop = false;
             // 
             // seatReservationFlowLayoutPanel
             // 
@@ -694,6 +733,42 @@ namespace MovieMunch
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(814, 700);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // snackDealsBtn
+            // 
+            this.snackDealsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.snackDealsBtn.BorderRadius = 20;
+            this.snackDealsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.snackDealsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.snackDealsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.snackDealsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.snackDealsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.snackDealsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.snackDealsBtn.ForeColor = System.Drawing.Color.White;
+            this.snackDealsBtn.Location = new System.Drawing.Point(454, 644);
+            this.snackDealsBtn.Name = "snackDealsBtn";
+            this.snackDealsBtn.Size = new System.Drawing.Size(352, 43);
+            this.snackDealsBtn.TabIndex = 720;
+            this.snackDealsBtn.Text = "SELECT FROM SNACK DEALS CATEGORY";
+            this.snackDealsBtn.Click += new System.EventHandler(this.snackDealsBtn_Click);
+            // 
+            // regularDealsBtn
+            // 
+            this.regularDealsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.regularDealsBtn.BorderRadius = 20;
+            this.regularDealsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.regularDealsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.regularDealsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.regularDealsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.regularDealsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.regularDealsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.regularDealsBtn.ForeColor = System.Drawing.Color.White;
+            this.regularDealsBtn.Location = new System.Drawing.Point(15, 644);
+            this.regularDealsBtn.Name = "regularDealsBtn";
+            this.regularDealsBtn.Size = new System.Drawing.Size(352, 43);
+            this.regularDealsBtn.TabIndex = 719;
+            this.regularDealsBtn.Text = "SELECT FROM REGULAR DEALS CATEGORY";
+            this.regularDealsBtn.Click += new System.EventHandler(this.regularDealsBtn_Click);
             // 
             // guna2Panel4
             // 
@@ -4960,14 +5035,13 @@ namespace MovieMunch
             this.guna2VScrollBar1.BindingContainer = this.seatReservationFlowLayoutPanel;
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 575;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1247, 75);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1193, 75);
             this.guna2VScrollBar1.Maximum = 705;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 21;
             this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 575);
             this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 115;
-            this.guna2VScrollBar1.Value = 11;
             // 
             // btnReserveSeat
             // 
@@ -4992,11 +5066,11 @@ namespace MovieMunch
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.guna2Panel3.BorderThickness = 3;
+            this.guna2Panel3.Controls.Add(this.userProfileBtn);
             this.guna2Panel3.Controls.Add(this.LogoutBtn);
             this.guna2Panel3.Controls.Add(this.gotoWatchListBtn);
             this.guna2Panel3.Controls.Add(this.gotoTicketFormBtn);
             this.guna2Panel3.Controls.Add(this.userNameHolder);
-            this.guna2Panel3.Controls.Add(this.userProfileBtn);
             this.guna2Panel3.Controls.Add(this.HomeBtn);
             this.guna2Panel3.Location = new System.Drawing.Point(-5, 69);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -5094,26 +5168,6 @@ namespace MovieMunch
             this.userNameHolder.Size = new System.Drawing.Size(144, 30);
             this.userNameHolder.TabIndex = 45;
             this.userNameHolder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // userProfileBtn
-            // 
-            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
-            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userProfileBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.userProfileBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.userProfileBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.userProfileBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.userProfileBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.userProfileBtn.FillColor = System.Drawing.Color.Empty;
-            this.userProfileBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.userProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.userProfileBtn.Location = new System.Drawing.Point(41, 45);
-            this.userProfileBtn.Name = "userProfileBtn";
-            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userProfileBtn.Size = new System.Drawing.Size(100, 100);
-            this.userProfileBtn.TabIndex = 44;
-            this.userProfileBtn.Click += new System.EventHandler(this.userProfileBtn_Click);
             // 
             // HomeBtn
             // 
@@ -5214,7 +5268,8 @@ namespace MovieMunch
             this.userPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.userPanel.Controls.Add(this.bunifuPanel2);
             this.userPanel.Controls.Add(this.bunifuPanel3);
-            this.userPanel.Location = new System.Drawing.Point(193, 108);
+            this.userPanel.Controls.Add(this.flowLayoutPanel2);
+            this.userPanel.Location = new System.Drawing.Point(200, 97);
             this.userPanel.Name = "userPanel";
             this.userPanel.Size = new System.Drawing.Size(957, 429);
             this.userPanel.TabIndex = 718;
@@ -5260,11 +5315,11 @@ namespace MovieMunch
             this.bunifuFormCaptionButton1.ColorContrastOnClick = 30;
             this.bunifuFormCaptionButton1.ColorContrastOnHover = 30;
             this.bunifuFormCaptionButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges103.BottomLeft = true;
-            borderEdges103.BottomRight = true;
-            borderEdges103.TopLeft = true;
-            borderEdges103.TopRight = true;
-            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges103;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges1;
             this.bunifuFormCaptionButton1.DefaultBorderColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DefaultColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -5298,11 +5353,11 @@ namespace MovieMunch
             this.bunifuIconButton5.ColorContrastOnClick = 30;
             this.bunifuIconButton5.ColorContrastOnHover = 30;
             this.bunifuIconButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges104.BottomLeft = true;
-            borderEdges104.BottomRight = true;
-            borderEdges104.TopLeft = true;
-            borderEdges104.TopRight = true;
-            this.bunifuIconButton5.CustomizableEdges = borderEdges104;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuIconButton5.CustomizableEdges = borderEdges2;
             this.bunifuIconButton5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton5.Image = null;
             this.bunifuIconButton5.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -5373,11 +5428,11 @@ namespace MovieMunch
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges105.BottomLeft = true;
-            borderEdges105.BottomRight = true;
-            borderEdges105.TopLeft = true;
-            borderEdges105.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges105;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges3;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -5462,11 +5517,11 @@ namespace MovieMunch
             this.bunifuButton22.ColorContrastOnClick = 45;
             this.bunifuButton22.ColorContrastOnHover = 45;
             this.bunifuButton22.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges106.BottomLeft = true;
-            borderEdges106.BottomRight = true;
-            borderEdges106.TopLeft = true;
-            borderEdges106.TopRight = true;
-            this.bunifuButton22.CustomizableEdges = borderEdges106;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bunifuButton22.CustomizableEdges = borderEdges4;
             this.bunifuButton22.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton22.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -5551,11 +5606,11 @@ namespace MovieMunch
             this.LoginBtn.ColorContrastOnClick = 45;
             this.LoginBtn.ColorContrastOnHover = 45;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges107.BottomLeft = true;
-            borderEdges107.BottomRight = true;
-            borderEdges107.TopLeft = true;
-            borderEdges107.TopRight = true;
-            this.LoginBtn.CustomizableEdges = borderEdges107;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.LoginBtn.CustomizableEdges = borderEdges5;
             this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LoginBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LoginBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -5641,11 +5696,11 @@ namespace MovieMunch
             this.SignUpBtn.ColorContrastOnClick = 45;
             this.SignUpBtn.ColorContrastOnHover = 45;
             this.SignUpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges108.BottomLeft = true;
-            borderEdges108.BottomRight = true;
-            borderEdges108.TopLeft = true;
-            borderEdges108.TopRight = true;
-            this.SignUpBtn.CustomizableEdges = borderEdges108;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.SignUpBtn.CustomizableEdges = borderEdges6;
             this.SignUpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignUpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -5711,42 +5766,6 @@ namespace MovieMunch
             this.SignUpBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.SignUpBtn.UseDefaultRadiusAndThickness = true;
             this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
-            // 
-            // regularDealsBtn
-            // 
-            this.regularDealsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.regularDealsBtn.BorderRadius = 20;
-            this.regularDealsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.regularDealsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.regularDealsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.regularDealsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.regularDealsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.regularDealsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.regularDealsBtn.ForeColor = System.Drawing.Color.White;
-            this.regularDealsBtn.Location = new System.Drawing.Point(15, 644);
-            this.regularDealsBtn.Name = "regularDealsBtn";
-            this.regularDealsBtn.Size = new System.Drawing.Size(352, 43);
-            this.regularDealsBtn.TabIndex = 719;
-            this.regularDealsBtn.Text = "SELECT FROM REGULAR DEALS CATEGORY";
-            this.regularDealsBtn.Click += new System.EventHandler(this.regularDealsBtn_Click);
-            // 
-            // snackDealsBtn
-            // 
-            this.snackDealsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.snackDealsBtn.BorderRadius = 20;
-            this.snackDealsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.snackDealsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.snackDealsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.snackDealsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.snackDealsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.snackDealsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.snackDealsBtn.ForeColor = System.Drawing.Color.White;
-            this.snackDealsBtn.Location = new System.Drawing.Point(454, 644);
-            this.snackDealsBtn.Name = "snackDealsBtn";
-            this.snackDealsBtn.Size = new System.Drawing.Size(352, 43);
-            this.snackDealsBtn.TabIndex = 720;
-            this.snackDealsBtn.Text = "SELECT FROM SNACK DEALS CATEGORY";
-            this.snackDealsBtn.Click += new System.EventHandler(this.snackDealsBtn_Click);
             // 
             // RegularDealsPanel
             // 
@@ -5834,16 +5853,6 @@ namespace MovieMunch
             this.regular3.Size = new System.Drawing.Size(205, 119);
             this.regular3.TabIndex = 3;
             this.regular3.TabStop = false;
-            // 
-            // regular2
-            // 
-            regular2.BorderRadius = 10;
-            regular2.ImageRotate = 0F;
-            regular2.Location = new System.Drawing.Point(356, 89);
-            regular2.Name = "regular2";
-            regular2.Size = new System.Drawing.Size(205, 119);
-            regular2.TabIndex = 2;
-            regular2.TabStop = false;
             // 
             // regular1
             // 
@@ -5966,16 +5975,6 @@ namespace MovieMunch
             this.guna2PictureBox4.TabIndex = 3;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // guna2PictureBox5
-            // 
-            guna2PictureBox5.BorderRadius = 10;
-            guna2PictureBox5.ImageRotate = 0F;
-            guna2PictureBox5.Location = new System.Drawing.Point(356, 89);
-            guna2PictureBox5.Name = "guna2PictureBox5";
-            guna2PictureBox5.Size = new System.Drawing.Size(205, 119);
-            guna2PictureBox5.TabIndex = 2;
-            guna2PictureBox5.TabStop = false;
-            // 
             // guna2PictureBox6
             // 
             this.guna2PictureBox6.BorderRadius = 10;
@@ -6008,25 +6007,456 @@ namespace MovieMunch
             this.label31.Text = "SELECTED DESIRED SNACKS DEALS";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // userProfileBtn
+            // 
+            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
+            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userProfileBtn.FillColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.ImageRotate = 0F;
+            this.userProfileBtn.Location = new System.Drawing.Point(39, 47);
+            this.userProfileBtn.Name = "userProfileBtn";
+            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userProfileBtn.Size = new System.Drawing.Size(100, 100);
+            this.userProfileBtn.TabIndex = 72;
+            this.userProfileBtn.TabStop = false;
+            this.userProfileBtn.Click += new System.EventHandler(this.userProfileBtn_Click_2);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.flowLayoutPanel2.Controls.Add(this.panel5);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(195, 61);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(794, 376);
+            this.flowLayoutPanel2.TabIndex = 68;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.userProfileCustomHolder);
+            this.panel5.Controls.Add(this.bunifuButton23);
+            this.panel5.Controls.Add(this.guna2TextBox6);
+            this.panel5.Controls.Add(this.guna2TextBox5);
+            this.panel5.Controls.Add(this.guna2TextBox4);
+            this.panel5.Controls.Add(this.guna2TextBox3);
+            this.panel5.Controls.Add(this.guna2TextBox2);
+            this.panel5.Controls.Add(this.label32);
+            this.panel5.Controls.Add(this.label33);
+            this.panel5.Controls.Add(this.saveUserChangesBtn);
+            this.panel5.Controls.Add(this.guna2TextBox1);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(759, 610);
+            this.panel5.TabIndex = 0;
+            // 
+            // userProfileCustomHolder
+            // 
+            this.userProfileCustomHolder.BackColor = System.Drawing.Color.Transparent;
+            this.userProfileCustomHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileCustomHolder.BackgroundImage")));
+            this.userProfileCustomHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userProfileCustomHolder.FillColor = System.Drawing.Color.Transparent;
+            this.userProfileCustomHolder.ImageRotate = 0F;
+            this.userProfileCustomHolder.Location = new System.Drawing.Point(309, 26);
+            this.userProfileCustomHolder.Name = "userProfileCustomHolder";
+            this.userProfileCustomHolder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userProfileCustomHolder.Size = new System.Drawing.Size(150, 150);
+            this.userProfileCustomHolder.TabIndex = 71;
+            this.userProfileCustomHolder.TabStop = false;
+            // 
+            // bunifuButton23
+            // 
+            this.bunifuButton23.AllowAnimations = true;
+            this.bunifuButton23.AllowMouseEffects = true;
+            this.bunifuButton23.AllowToggling = false;
+            this.bunifuButton23.AnimationSpeed = 200;
+            this.bunifuButton23.AutoGenerateColors = false;
+            this.bunifuButton23.AutoRoundBorders = false;
+            this.bunifuButton23.AutoSizeLeftIcon = true;
+            this.bunifuButton23.AutoSizeRightIcon = true;
+            this.bunifuButton23.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton23.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.bunifuButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton23.BackgroundImage")));
+            this.bunifuButton23.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bunifuButton23.ButtonText = "SAVE CHANGES";
+            this.bunifuButton23.ButtonTextMarginLeft = 0;
+            this.bunifuButton23.ColorContrastOnClick = 45;
+            this.bunifuButton23.ColorContrastOnHover = 45;
+            this.bunifuButton23.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.bunifuButton23.CustomizableEdges = borderEdges7;
+            this.bunifuButton23.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton23.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton23.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton23.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton23.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bunifuButton23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton23.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton23.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuButton23.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton23.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bunifuButton23.IconMarginLeft = 11;
+            this.bunifuButton23.IconPadding = 10;
+            this.bunifuButton23.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bunifuButton23.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton23.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bunifuButton23.IconSize = 25;
+            this.bunifuButton23.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.bunifuButton23.IdleBorderRadius = 20;
+            this.bunifuButton23.IdleBorderThickness = 1;
+            this.bunifuButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.bunifuButton23.IdleIconLeftImage = null;
+            this.bunifuButton23.IdleIconRightImage = null;
+            this.bunifuButton23.IndicateFocus = false;
+            this.bunifuButton23.Location = new System.Drawing.Point(299, 544);
+            this.bunifuButton23.Name = "bunifuButton23";
+            this.bunifuButton23.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton23.OnDisabledState.BorderRadius = 20;
+            this.bunifuButton23.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bunifuButton23.OnDisabledState.BorderThickness = 1;
+            this.bunifuButton23.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton23.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton23.OnDisabledState.IconLeftImage = null;
+            this.bunifuButton23.OnDisabledState.IconRightImage = null;
+            this.bunifuButton23.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuButton23.onHoverState.BorderRadius = 20;
+            this.bunifuButton23.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bunifuButton23.onHoverState.BorderThickness = 1;
+            this.bunifuButton23.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuButton23.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton23.onHoverState.IconLeftImage = null;
+            this.bunifuButton23.onHoverState.IconRightImage = null;
+            this.bunifuButton23.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.bunifuButton23.OnIdleState.BorderRadius = 20;
+            this.bunifuButton23.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bunifuButton23.OnIdleState.BorderThickness = 1;
+            this.bunifuButton23.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.bunifuButton23.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton23.OnIdleState.IconLeftImage = null;
+            this.bunifuButton23.OnIdleState.IconRightImage = null;
+            this.bunifuButton23.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton23.OnPressedState.BorderRadius = 20;
+            this.bunifuButton23.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bunifuButton23.OnPressedState.BorderThickness = 1;
+            this.bunifuButton23.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton23.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton23.OnPressedState.IconLeftImage = null;
+            this.bunifuButton23.OnPressedState.IconRightImage = null;
+            this.bunifuButton23.Size = new System.Drawing.Size(176, 39);
+            this.bunifuButton23.TabIndex = 68;
+            this.bunifuButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton23.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bunifuButton23.TextMarginLeft = 0;
+            this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton23.UseDefaultRadiusAndThickness = true;
+            // 
+            // guna2TextBox6
+            // 
+            this.guna2TextBox6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.guna2TextBox6.BorderRadius = 8;
+            this.guna2TextBox6.BorderThickness = 2;
+            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox6.DefaultText = "CONFIRM NEW PASSWORD";
+            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox6.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox6.IconRight")));
+            this.guna2TextBox6.IconRightSize = new System.Drawing.Size(18, 18);
+            this.guna2TextBox6.Location = new System.Drawing.Point(42, 499);
+            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox6.Name = "guna2TextBox6";
+            this.guna2TextBox6.PasswordChar = '\0';
+            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox6.PlaceholderText = "";
+            this.guna2TextBox6.ReadOnly = true;
+            this.guna2TextBox6.SelectedText = "";
+            this.guna2TextBox6.Size = new System.Drawing.Size(675, 30);
+            this.guna2TextBox6.TabIndex = 67;
+            // 
+            // guna2TextBox5
+            // 
+            this.guna2TextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.guna2TextBox5.BorderRadius = 8;
+            this.guna2TextBox5.BorderThickness = 2;
+            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox5.DefaultText = "TYPE TO CHANGE PASSWORD";
+            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox5.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox5.IconRight")));
+            this.guna2TextBox5.IconRightSize = new System.Drawing.Size(18, 18);
+            this.guna2TextBox5.Location = new System.Drawing.Point(42, 461);
+            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox5.Name = "guna2TextBox5";
+            this.guna2TextBox5.PasswordChar = '\0';
+            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox5.PlaceholderText = "";
+            this.guna2TextBox5.ReadOnly = true;
+            this.guna2TextBox5.SelectedText = "";
+            this.guna2TextBox5.Size = new System.Drawing.Size(675, 30);
+            this.guna2TextBox5.TabIndex = 66;
+            // 
+            // guna2TextBox4
+            // 
+            this.guna2TextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.guna2TextBox4.BorderRadius = 8;
+            this.guna2TextBox4.BorderThickness = 2;
+            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox4.DefaultText = "TYPE TO CHANGE USERNAME";
+            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox4.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox4.IconRight")));
+            this.guna2TextBox4.IconRightSize = new System.Drawing.Size(18, 18);
+            this.guna2TextBox4.Location = new System.Drawing.Point(42, 366);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox4.Name = "guna2TextBox4";
+            this.guna2TextBox4.PasswordChar = '\0';
+            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox4.PlaceholderText = "";
+            this.guna2TextBox4.ReadOnly = true;
+            this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.Size = new System.Drawing.Size(675, 30);
+            this.guna2TextBox4.TabIndex = 65;
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2TextBox3.BorderRadius = 10;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "********";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox3.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox3.Location = new System.Drawing.Point(166, 414);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.White;
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.ReadOnly = true;
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.Size = new System.Drawing.Size(552, 30);
+            this.guna2TextBox3.TabIndex = 64;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2TextBox2.BorderRadius = 10;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "USERNAME";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox2.Location = new System.Drawing.Point(166, 319);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.White;
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.ReadOnly = true;
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(552, 30);
+            this.guna2TextBox2.TabIndex = 63;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(37, 408);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(126, 36);
+            this.label32.TabIndex = 62;
+            this.label32.Text = "PASSWORD:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(37, 313);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(123, 36);
+            this.label33.TabIndex = 61;
+            this.label33.Text = "USERNAME:";
+            // 
+            // saveUserChangesBtn
+            // 
+            this.saveUserChangesBtn.AllowAnimations = true;
+            this.saveUserChangesBtn.AllowMouseEffects = true;
+            this.saveUserChangesBtn.AllowToggling = false;
+            this.saveUserChangesBtn.AnimationSpeed = 200;
+            this.saveUserChangesBtn.AutoGenerateColors = false;
+            this.saveUserChangesBtn.AutoRoundBorders = false;
+            this.saveUserChangesBtn.AutoSizeLeftIcon = true;
+            this.saveUserChangesBtn.AutoSizeRightIcon = true;
+            this.saveUserChangesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.saveUserChangesBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserChangesBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveUserChangesBtn.BackgroundImage")));
+            this.saveUserChangesBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserChangesBtn.ButtonText = "SAVE CHANGES";
+            this.saveUserChangesBtn.ButtonTextMarginLeft = 0;
+            this.saveUserChangesBtn.ColorContrastOnClick = 45;
+            this.saveUserChangesBtn.ColorContrastOnHover = 45;
+            this.saveUserChangesBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.saveUserChangesBtn.CustomizableEdges = borderEdges8;
+            this.saveUserChangesBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.saveUserChangesBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.saveUserChangesBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.saveUserChangesBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.saveUserChangesBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.saveUserChangesBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveUserChangesBtn.ForeColor = System.Drawing.Color.White;
+            this.saveUserChangesBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveUserChangesBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.saveUserChangesBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.saveUserChangesBtn.IconMarginLeft = 11;
+            this.saveUserChangesBtn.IconPadding = 10;
+            this.saveUserChangesBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saveUserChangesBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.saveUserChangesBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.saveUserChangesBtn.IconSize = 25;
+            this.saveUserChangesBtn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserChangesBtn.IdleBorderRadius = 20;
+            this.saveUserChangesBtn.IdleBorderThickness = 1;
+            this.saveUserChangesBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserChangesBtn.IdleIconLeftImage = null;
+            this.saveUserChangesBtn.IdleIconRightImage = null;
+            this.saveUserChangesBtn.IndicateFocus = false;
+            this.saveUserChangesBtn.Location = new System.Drawing.Point(299, 254);
+            this.saveUserChangesBtn.Name = "saveUserChangesBtn";
+            this.saveUserChangesBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.saveUserChangesBtn.OnDisabledState.BorderRadius = 20;
+            this.saveUserChangesBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserChangesBtn.OnDisabledState.BorderThickness = 1;
+            this.saveUserChangesBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.saveUserChangesBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.saveUserChangesBtn.OnDisabledState.IconLeftImage = null;
+            this.saveUserChangesBtn.OnDisabledState.IconRightImage = null;
+            this.saveUserChangesBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveUserChangesBtn.onHoverState.BorderRadius = 20;
+            this.saveUserChangesBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserChangesBtn.onHoverState.BorderThickness = 1;
+            this.saveUserChangesBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveUserChangesBtn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.saveUserChangesBtn.onHoverState.IconLeftImage = null;
+            this.saveUserChangesBtn.onHoverState.IconRightImage = null;
+            this.saveUserChangesBtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserChangesBtn.OnIdleState.BorderRadius = 20;
+            this.saveUserChangesBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserChangesBtn.OnIdleState.BorderThickness = 1;
+            this.saveUserChangesBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserChangesBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.saveUserChangesBtn.OnIdleState.IconLeftImage = null;
+            this.saveUserChangesBtn.OnIdleState.IconRightImage = null;
+            this.saveUserChangesBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveUserChangesBtn.OnPressedState.BorderRadius = 20;
+            this.saveUserChangesBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserChangesBtn.OnPressedState.BorderThickness = 1;
+            this.saveUserChangesBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveUserChangesBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.saveUserChangesBtn.OnPressedState.IconLeftImage = null;
+            this.saveUserChangesBtn.OnPressedState.IconRightImage = null;
+            this.saveUserChangesBtn.Size = new System.Drawing.Size(176, 39);
+            this.saveUserChangesBtn.TabIndex = 60;
+            this.saveUserChangesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saveUserChangesBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.saveUserChangesBtn.TextMarginLeft = 0;
+            this.saveUserChangesBtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.saveUserChangesBtn.UseDefaultRadiusAndThickness = true;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.guna2TextBox1.BorderRadius = 8;
+            this.guna2TextBox1.BorderThickness = 2;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "USERNAME";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconRight")));
+            this.guna2TextBox1.IconRightSize = new System.Drawing.Size(18, 18);
+            this.guna2TextBox1.Location = new System.Drawing.Point(234, 202);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.ReadOnly = true;
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(313, 30);
+            this.guna2TextBox1.TabIndex = 58;
+            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(1296, 650);
-            this.Controls.Add(this.SnacksDealsPanel);
-            this.Controls.Add(this.RegularDealsPanel);
+            this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.guna2VScrollBar1);
+            this.Controls.Add(this.userPanel);
             this.Controls.Add(this.addToWatchLaterBtn);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnReserveSeat);
             this.Controls.Add(this.moviePicToReserve);
             this.Controls.Add(this.seatReservationFlowLayoutPanel);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.userPanel);
+            this.Controls.Add(this.SnacksDealsPanel);
+            this.Controls.Add(this.RegularDealsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeatReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeatReservation";
+            ((System.ComponentModel.ISupportInitialize)(regular2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).EndInit();
             this.seatReservationFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -6052,7 +6482,6 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.regular5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.regular4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.regular3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(regular2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.regular1)).EndInit();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
@@ -6062,9 +6491,13 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6359,7 +6792,6 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Button gotoWatchListBtn;
         private Guna.UI2.WinForms.Guna2Button gotoTicketFormBtn;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
-        private Guna.UI2.WinForms.Guna2CircleButton userProfileBtn;
         private Guna.UI2.WinForms.Guna2Button HomeBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label3;
@@ -6397,5 +6829,19 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label label31;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileBtn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileCustomHolder;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton23;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 saveUserChangesBtn;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

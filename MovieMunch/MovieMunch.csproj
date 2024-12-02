@@ -366,12 +366,6 @@
     <Compile Include="Frontend\Forms\TicketForm.Designer.cs">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frontend\Forms\UserProfileForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\UserProfileForm.Designer.cs">
-      <DependentUpon>UserProfileForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frontend\Forms\WatchListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,9 +431,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\UserProfileForm.resx">
-      <DependentUpon>UserProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\WatchListForm.resx">
       <DependentUpon>WatchListForm.cs</DependentUpon>

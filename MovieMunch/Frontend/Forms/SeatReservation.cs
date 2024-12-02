@@ -12,6 +12,7 @@ using MovieMunch.Backend.Services;
 using MovieMunch.Backend.Models;
 using MongoDB.Driver;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.IO;
 
 namespace MovieMunch
 {
@@ -40,10 +41,11 @@ namespace MovieMunch
         private string title;
         private string description;
         private decimal price;
+        private string _profilePic;
         private Image image;
         private string reservedBy;
 
-        public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, string moviePic, string reservedBy)
+        public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, string moviePic, string reservedBy, string profilePic)
         {
 
             MainPage mainPage = new MainPage();
@@ -56,6 +58,7 @@ namespace MovieMunch
             _moviePrice = moviePrice;
             _reservedBy = reservedBy;
             _moviePic = moviePic;
+            _profilePic = profilePic;
             _movieDescription = movieDescription;
 
 
@@ -87,7 +90,7 @@ namespace MovieMunch
             movieTitlelbl.Text = _movieName;
             this.Load += SeatReservation_Load;
             userName = reservedBy;
-            mainPage.SetUserInfo(userName);
+            mainPage.SetUserInfo(userName, _profilePic);
 
 
 
@@ -103,6 +106,43 @@ namespace MovieMunch
             userPanelTimer.Interval = 15;
             userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
             userPanel.BringToFront();
+            SnacksDealsPanel.BringToFront();
+            RegularDealsPanel.BringToFront();
+            try
+            {
+                if (!string.IsNullOrEmpty(profilePic) && File.Exists(profilePic))
+                {
+                    userProfileBtn.Image = System.Drawing.Image.FromFile(profilePic);
+                    userProfileBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    userProfileBtn.Image = Properties.Resources.DefaultBackground;
+                    userProfileBtn.SizeMode = PictureBoxSizeMode.CenterImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                if (!string.IsNullOrEmpty(profilePic) && File.Exists(profilePic))
+                {
+                    userProfileCustomHolder.Image = System.Drawing.Image.FromFile(profilePic);
+                    userProfileCustomHolder.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    userProfileCustomHolder.Image = Properties.Resources.DefaultBackground;
+                    userProfileCustomHolder.SizeMode = PictureBoxSizeMode.CenterImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FadeIn(Control control)
@@ -277,7 +317,7 @@ namespace MovieMunch
             }
 
             MainPage mainPage = new MainPage();
-            mainPage.SetUserInfo(userName);
+            mainPage.SetUserInfo(userName, _profilePic);
             this.Visible = false;
         }
 
@@ -285,12 +325,12 @@ namespace MovieMunch
         {
             if (userName == null || userNameHolder.Text == "")
             {
-                var watchListForm = new WatchListForm(_movieId, "USERNAME", userName);
+                var watchListForm = new WatchListForm(_movieId, "USERNAME", userName, _profilePic);
                 watchListForm.Show();
             }
             else
             {
-                var watchListForm = new WatchListForm(_movieId, userName, userName);
+                var watchListForm = new WatchListForm(_movieId, userName, userName, _profilePic);
                 watchListForm.Show();
             }
             this.Close();
@@ -302,24 +342,6 @@ namespace MovieMunch
 
         Timer userPanelTimer = new Timer();
         private User currentUser;
-        private void userProfileBtn_Click(object sender, EventArgs e)
-        {
-            userPanelTimer.Start();
-
-            if (userPanel.Height == 0)
-            {
-                targetHeight = defaultHeight;
-                isExpanding = true;
-                userPanel.Visible = true;
-            }
-            else
-            {
-                targetHeight = 0;
-                isExpanding = false;
-            }
-
-            userPanelTimer.Start();
-        }
 
         private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
         {
@@ -366,7 +388,7 @@ namespace MovieMunch
 
         private void gotoTicketFormBtn_Click(object sender, EventArgs e)
         {
-            TicketForm ticketForm = new TicketForm(_movieId, userNameHolder.Text, userName);
+            TicketForm ticketForm = new TicketForm(_movieId, userNameHolder.Text, userName, _profilePic);
             ticketForm.Show();
             this.Close();
         }
@@ -389,6 +411,25 @@ namespace MovieMunch
         private void closeSnackDealsBtn_Click(object sender, EventArgs e)
         {
             SnacksDealsPanel.Visible = false;
+        }
+
+        private void userProfileBtn_Click_2(object sender, EventArgs e)
+        {
+            userPanelTimer.Start();
+
+            if (userPanel.Height == 0)
+            {
+                targetHeight = defaultHeight;
+                isExpanding = true;
+                userPanel.Visible = true;
+            }
+            else
+            {
+                targetHeight = 0;
+                isExpanding = false;
+            }
+
+            userPanelTimer.Start();
         }
     }
 }

@@ -6,6 +6,7 @@ using MovieMunch.Frontend.Forms;
 using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
@@ -140,7 +141,7 @@ public class UserService
         }
 
         _reservedBy = existingUser.Name;
-        mainPage.SetUserInfo(existingUser.Name);
+        mainPage.SetUserInfo(existingUser.Name, existingUser.userProfilePic);
         mainPage.SetLoggedInUserEmail(existingUser.Name);
 
         return true;
@@ -411,18 +412,14 @@ public class UserService
             return false;
         }
 
-        // Hash the new password before storing it in the database.
         string hashedPassword = PasswordHelper.HashPassword(password);
 
-        // Filter to find the document by email.
         var filter = Builders<User>.Filter.Eq(u => u.Email, email);
 
-        // Update definition to set the new hashed password.
         var update = Builders<User>.Update.Set(u => u.Password, hashedPassword);
 
         try
         {
-            // Attempt to update the user's password.
             var updateResult = _usersCollection.UpdateOne(filter, update);
 
             if (updateResult.ModifiedCount > 0)
@@ -443,6 +440,76 @@ public class UserService
             return false;
         }
     }
+
+    public User GetUserByUsername(string username)
+    {
+        try
+        {
+            var filter = Builders<User>.Filter.Eq(u => u.Name, username);
+            return _usersCollection.Find(filter).FirstOrDefault();  // Return the first matching user
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching user by username: {ex.Message}");
+            return null;
+        }
+    }
+
+    public bool UpdateUserProfile(string currentUsername, string newUsername, string profilePicPath)
+    {
+        try
+        {
+            // Find user by current username
+            var filter = Builders<User>.Filter.Eq(u => u.Name, currentUsername);
+
+            var updates = new List<UpdateDefinition<User>>();
+
+            // Add update for username if provided
+            if (!string.IsNullOrWhiteSpace(newUsername))
+            {
+                updates.Add(Builders<User>.Update.Set(u => u.Name, newUsername));
+            }
+
+            // Add update for profile picture path if provided
+            if (!string.IsNullOrWhiteSpace(profilePicPath))
+            {
+                updates.Add(Builders<User>.Update.Set(u => u.userProfilePic, profilePicPath)); // Saving the file path
+            }
+
+            // If no updates are specified, return false
+            if (!updates.Any())
+            {
+                return false;
+            }
+
+            // Combine the updates
+            var updateDefinition = Builders<User>.Update.Combine(updates);
+
+            // Execute the update operation
+            var result = _usersCollection.UpdateOne(filter, updateDefinition);
+
+            // Check if a document was updated
+            if (result.MatchedCount == 0)
+            {
+                Console.WriteLine("No user found to update.");
+                return false;
+            }
+
+            // Log the result for debugging
+            Console.WriteLine($"Update result: Matched {result.MatchedCount}, Modified {result.ModifiedCount}");
+
+            return result.ModifiedCount > 0;
+        }
+        catch (Exception ex)
+        {
+            // Log any exceptions that occur
+            Console.WriteLine($"Error updating user profile: {ex.Message}");
+            return false;
+        }
+    }
+
+
+
     public void Logout()
     {
         IsUserLoggedIn = false;

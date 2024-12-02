@@ -45,8 +45,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.logoBefore = new System.Windows.Forms.PictureBox();
-            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.settingBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.userNameHolder = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -82,6 +82,7 @@
             this.filmsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.showingBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -102,8 +103,8 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.logoBefore);
             this.bunifuPanel1.Controls.Add(this.userProfileBtn);
+            this.bunifuPanel1.Controls.Add(this.logoBefore);
             this.bunifuPanel1.Controls.Add(this.settingBtn);
             this.bunifuPanel1.Controls.Add(this.userNameHolder);
             this.bunifuPanel1.Controls.Add(this.label6);
@@ -112,6 +113,21 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1215, 80);
             this.bunifuPanel1.TabIndex = 42;
+            // 
+            // userProfileBtn
+            // 
+            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
+            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userProfileBtn.FillColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.ImageRotate = 0F;
+            this.userProfileBtn.Location = new System.Drawing.Point(1070, 14);
+            this.userProfileBtn.Name = "userProfileBtn";
+            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userProfileBtn.Size = new System.Drawing.Size(55, 55);
+            this.userProfileBtn.TabIndex = 71;
+            this.userProfileBtn.TabStop = false;
+            this.userProfileBtn.Click += new System.EventHandler(this.userProfileBtn_Click_1);
             // 
             // logoBefore
             // 
@@ -123,26 +139,6 @@
             this.logoBefore.Size = new System.Drawing.Size(169, 126);
             this.logoBefore.TabIndex = 46;
             this.logoBefore.TabStop = false;
-            // 
-            // userProfileBtn
-            // 
-            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
-            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userProfileBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.userProfileBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.userProfileBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.userProfileBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.userProfileBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.userProfileBtn.FillColor = System.Drawing.Color.Empty;
-            this.userProfileBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.userProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.userProfileBtn.Location = new System.Drawing.Point(1068, 14);
-            this.userProfileBtn.Name = "userProfileBtn";
-            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userProfileBtn.Size = new System.Drawing.Size(55, 55);
-            this.userProfileBtn.TabIndex = 51;
-            this.userProfileBtn.Click += new System.EventHandler(this.userProfileBtn_Click);
             // 
             // settingBtn
             // 
@@ -815,6 +811,7 @@
             this.Text = "Admin Dashboard";
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -864,10 +861,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ReservedSeatsSeats;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CircleButton userProfileBtn;
         private System.Windows.Forms.PictureBox logoBefore;
         private Guna.UI2.WinForms.Guna2Panel adminProfilePanel;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button switchToUserBtn;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileBtn;
     }
 }

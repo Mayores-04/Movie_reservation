@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch.Frontend.Forms
 {
@@ -12,15 +14,17 @@ namespace MovieMunch.Frontend.Forms
         private readonly string _userName;
         private readonly string _userEmail;
         private readonly string _movieId;
+        private readonly string _profilePic;
         private readonly UserService _userService;
 
-        public TicketForm(string movieId, string userName, string userEmail)
+        public TicketForm(string movieId, string userName, string userEmail, string profilePic)
         {
             InitializeComponent();
 
             _userName = userName ?? "Guest";
             _userEmail = userEmail ?? "N/A";
             _movieId = movieId;
+            _profilePic = profilePic;
             _userService = new UserService();
 
             userNameHolder.Text = _userName;
@@ -28,6 +32,49 @@ namespace MovieMunch.Frontend.Forms
 
             MainPage mainPage = new MainPage();
             mainPage.Close();
+
+            defaultHeight = userPanel.Height;
+            userPanel.Height = 0;
+            userPanel.Visible = false;
+
+            userPanelTimer.Interval = 15;
+            userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
+
+            try
+            {
+                if (!string.IsNullOrEmpty(profilePic) && File.Exists(profilePic))
+                {
+                    userProfileBtn.Image = System.Drawing.Image.FromFile(profilePic);
+                    userProfileBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    userProfileBtn.Image = Properties.Resources.DefaultBackground;
+                    userProfileBtn.SizeMode = PictureBoxSizeMode.CenterImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                if (!string.IsNullOrEmpty(profilePic) && File.Exists(profilePic))
+                {
+                    userProfileCustomHolder.Image = System.Drawing.Image.FromFile(profilePic);
+                    userProfileCustomHolder.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    userProfileCustomHolder.Image = Properties.Resources.DefaultBackground;
+                    userProfileCustomHolder.SizeMode = PictureBoxSizeMode.CenterImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private string _referenceId;
@@ -252,15 +299,70 @@ namespace MovieMunch.Frontend.Forms
         {
             var mainPage = new MainPage();
             mainPage.SetLoggedInUserEmail(_userEmail);
-            mainPage.SetUserInfo(_userName ?? "USERNAME");
+            mainPage.SetUserInfo(_userName ?? "USERNAME", _profilePic);
             this.Close();
         }
 
         private void gotoWatchListBtn_Click(object sender, EventArgs e)
         {
-            var watchListForm = new WatchListForm(_movieId, _userName ?? "Guest", _userEmail);
+            var watchListForm = new WatchListForm(_movieId, _userName ?? "Guest", _userEmail, _profilePic);
             watchListForm.Show();
             this.Close();
+        }
+
+        int targetHeight;
+        int defaultHeight;
+        bool isExpanding;
+
+        Timer userPanelTimer = new Timer();
+        private User currentUser;
+
+        private void smothFromLeftToRightTransition_Click(object sender, EventArgs e)
+        {
+            if (isExpanding)
+            {
+                if (userPanel.Height < targetHeight)
+                {
+                    userPanel.Height += 20;
+                    if (userPanel.Height >= targetHeight)
+                    {
+                        userPanel.Height = targetHeight;
+                        userPanelTimer.Stop();
+                    }
+                }
+            }
+            else
+            {
+                if (userPanel.Height > targetHeight)
+                {
+                    userPanel.Height -= 20;
+                    if (userPanel.Height <= targetHeight)
+                    {
+                        userPanel.Height = targetHeight;
+                        userPanelTimer.Stop();
+                        userPanel.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void userProfileBtn_Click(object sender, EventArgs e)
+        {
+            userPanelTimer.Start();
+
+            if (userPanel.Height == 0)
+            {
+                targetHeight = defaultHeight;
+                isExpanding = true;
+                userPanel.Visible = true;
+            }
+            else
+            {
+                targetHeight = 0;
+                isExpanding = false;
+            }
+
+            userPanelTimer.Start();
         }
     }
 }

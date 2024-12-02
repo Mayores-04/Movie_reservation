@@ -16,10 +16,12 @@ namespace MovieMunch
         }
 
         private string _userName;
+        private string _profilePic;
 
-        public void GetUsers(string userName)
+        public void GetUsers(string userName, string profilePic)
         {
             _userName = userName;
+            _profilePic = profilePic;
         }
 
 
@@ -92,6 +94,7 @@ namespace MovieMunch
 
             this.Close();
             RegisterForm regForm = new RegisterForm();
+            regForm.GetUsers(_userName, _profilePic);
             regForm.ShowDialog();
         }
 
@@ -99,7 +102,7 @@ namespace MovieMunch
         {
             this.Close();
             MainPage mainPage = new MainPage();
-            mainPage.SetUserInfo(_userName);
+            mainPage.SetUserInfo(_userName, _profilePic);
             mainPage.Show();
         }
     }

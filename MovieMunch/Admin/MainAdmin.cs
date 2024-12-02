@@ -30,26 +30,24 @@ namespace MovieMunch.Admin
             _userName = name;
             _profilePic = profilePic; 
             userNameHolder.Text = _userName;
-            userNameHolder.Text = profilePic;
             userNameHolder.Text = name;
             try
             {
                 if (!string.IsNullOrEmpty(profilePic) && File.Exists(profilePic))
                 {
-                    userProfileBtn.BackgroundImage = Image.FromFile(profilePic);
-                    userProfileBtn.BackgroundImageLayout = ImageLayout.Stretch;
+                    userProfileBtn.Image = System.Drawing.Image.FromFile(profilePic);
+                    userProfileBtn.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
                 else
                 {
-                    userProfileBtn.BackgroundImage = Properties.Resources.DefaultBackground;  
-                    userProfileBtn.BackgroundImageLayout = ImageLayout.Center;
+                    userProfileBtn.Image = Properties.Resources.DefaultBackground;
+                    userProfileBtn.SizeMode = PictureBoxSizeMode.CenterImage;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading background image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
 
         }
 
@@ -262,9 +260,9 @@ namespace MovieMunch.Admin
             }
         }
 
-        private void userProfileBtn_Click(object sender, EventArgs e)
+        private void userProfileBtn_Click_1(object sender, EventArgs e)
         {
-            if (adminProfilePanel.Visible == true) 
+            if (adminProfilePanel.Visible == true)
             {
                 adminProfilePanel.Visible = false;
             }

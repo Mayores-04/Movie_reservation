@@ -10,10 +10,20 @@ namespace MovieMunch
             InitializeComponent();
         }
 
+        private string _userName;
+        private string _profilePic;
+
+        public void GetUsers(string userName, string profilePic)
+        {
+            _userName = userName;
+            _profilePic = profilePic;
+        }
+
         private void LoginBtnLinked_Click(object sender, EventArgs e)
         {
             
             LoginForm logForm = new LoginForm();
+            logForm.GetUsers(_userName, _profilePic);
             logForm.Show();
             this.Close();
         }
@@ -21,6 +31,7 @@ namespace MovieMunch
         private void regFormClose_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
+            mainPage.SetUserInfo(_userName, _profilePic);
             mainPage.Show();
             this.Close();
         }

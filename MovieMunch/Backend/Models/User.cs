@@ -12,6 +12,9 @@ public class User
     [BsonElement("Name")]
     public string Name { get; set; }
 
+    [BsonElement("ProfilePicture")]
+    public string userProfilePic { get; set; }
+
     [BsonElement("email")]
     public string Email { get; set; }
 
