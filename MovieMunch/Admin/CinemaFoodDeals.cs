@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using MovieMunch.Backend.Models;
 using MovieMunch.Admin.FilmsInCinema;
 using System.Drawing.Drawing2D;
-
+using System.Text.RegularExpressions;
 namespace MovieMunch.Admin
 {
     public partial class CinemaFoodDeals : Form
@@ -157,13 +157,13 @@ namespace MovieMunch.Admin
         private void ViewSnack(string snackId)
         {
             viewSnacksPanel.Visible = true;
-            var snack = _foodServices.GetFoodById(new ObjectId(snackId));
+            var snack = _snackFoodServices.GetSnackFoodById(new ObjectId(snackId));
 
             if (snack != null)
             {
                 try
                 {
-                    viewSnacksBox.BackgroundImage = Image.FromFile(snack.FoodImagePath);
+                    viewSnacksBox.BackgroundImage = Image.FromFile(snack.SFoodImagePath);
                     viewSnacksBox.BackgroundImageLayout = ImageLayout.Stretch;
                 }
                 catch (Exception ex)
@@ -180,13 +180,13 @@ namespace MovieMunch.Admin
         private void ViewRegular(string snackId)
         {
             regularPanelBox.Visible = true;
-            var snack = _foodServices.GetFoodById(new ObjectId(snackId));
+            var reg = _foodServices.GetFoodById(new ObjectId(snackId));
 
-            if (snack != null)
+            if (reg != null)
             {
                 try
                 {
-                    regularPictureBox.BackgroundImage = Image.FromFile(snack.FoodImagePath);
+                    regularPictureBox.BackgroundImage = Image.FromFile(reg.FoodImagePath);
                     regularPictureBox.BackgroundImageLayout = ImageLayout.Stretch;
                 }
                 catch (Exception ex)
@@ -224,22 +224,23 @@ namespace MovieMunch.Admin
 
         private void SnacksTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0)
             {
-                string snackId = SnacksTable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                return;
+            }
+            string snackId = SnacksTable.Rows[e.RowIndex].Cells["SnacksId"].Value.ToString();
 
-                if (SnacksTable.Columns[e.ColumnIndex].Name == "UpdateButton")
-                {
-                    UpdateSnacks(snackId);
-                }
-                else if (SnacksTable.Columns[e.ColumnIndex].Name == "DeleteButton")
-                {
-                    DeleteSnacks(snackId);
-                }
-                else if (SnacksTable.Columns[e.ColumnIndex].Name == "ViewButton")
-                {
-                    ViewSnack(snackId);
-                }
+            if (SnacksTable.Columns[e.ColumnIndex].Name == "UpdateButton")
+            {
+                UpdateSnacks(snackId);
+            }
+            else if (SnacksTable.Columns[e.ColumnIndex].Name == "DeleteButton")
+            {
+                DeleteSnacks(snackId);
+            }
+            else if (SnacksTable.Columns[e.ColumnIndex].Name == "ViewButton")
+            {
+                ViewSnack(snackId);
             }
         }
 
@@ -247,7 +248,7 @@ namespace MovieMunch.Admin
         {
             if (e.RowIndex >= 0)
             {
-                string snackId = RegularTable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string snackId = RegularTable.Rows[e.RowIndex].Cells["regularId"].Value.ToString();
 
                 if (RegularTable.Columns[e.ColumnIndex].Name == "UpdateButton")
                 {
@@ -264,20 +265,22 @@ namespace MovieMunch.Admin
             }
         }
 
-        private void UpdateRegular(string snacksID)
+        private void UpdateSnacks(string snacksID)
         {
             if (ObjectId.TryParse(snacksID, out var objectId))
             {
-                var snack = _foodServices.GetFoodById(objectId);
+                var snack = _snackFoodServices.GetSnackFoodById(objectId);
 
                 if (snack != null)
                 {
-                    var currentRow = RegularTable.Rows[RegularTable.CurrentCell.RowIndex];
-                    snack.FoodName = currentRow.Cells[1].Value.ToString(); 
-                    snack.FoodPrice = Convert.ToDecimal(currentRow.Cells[2].Value); 
-                    snack.FoodImagePath = currentRow.Cells[3].Value.ToString();
+                    var currentRow = SnacksTable.Rows[SnacksTable.CurrentCell.RowIndex];
+                    snack.SFoodName = currentRow.Cells[1].Value.ToString();
+                    snack.SFoodPrice = Convert.ToDecimal(currentRow.Cells[2].Value);
 
-                    _foodServices.UpdateFood(snack);
+                    // Apply regex sanitization to the image path
+                    snack.SFoodImagePath = SanitizeImagePath(currentRow.Cells[3].Value.ToString());
+
+                    _snackFoodServices.UpdateSnackFood(snack);
                     MessageBox.Show("Snack updated successfully.");
                     LoadSnacksInCinemaData();
                 }
@@ -292,20 +295,21 @@ namespace MovieMunch.Admin
             }
         }
 
-        private void UpdateSnacks(string snacksID)
+        private void UpdateRegular(string snacksID)
         {
             if (ObjectId.TryParse(snacksID, out var objectId))
             {
-                var snack = _snackFoodServices.GetSnackFoodById(objectId);
+                var snack = _foodServices.GetFoodById(objectId);
 
                 if (snack != null)
                 {
-                    var currentRow = SnacksTable.Rows[SnacksTable.CurrentCell.RowIndex];
-                    snack.SFoodName = currentRow.Cells[1].Value.ToString();
-                    snack.SFoodPrice = Convert.ToDecimal(currentRow.Cells[2].Value);
-                    snack.SFoodImagePath = currentRow.Cells[3].Value.ToString();
+                    var currentRow = RegularTable.Rows[RegularTable.CurrentCell.RowIndex];
+                    snack.FoodName = currentRow.Cells[1].Value.ToString();
+                    snack.FoodPrice = Convert.ToDecimal(currentRow.Cells[2].Value);
 
-                    _snackFoodServices.UpdateSnackFood(snack);
+                    snack.FoodImagePath = SanitizeImagePath(currentRow.Cells[3].Value.ToString());
+
+                    _foodServices.UpdateFood(snack);
                     MessageBox.Show("Snack updated successfully.");
                     LoadSnacksInCinemaData();
                 }
@@ -372,6 +376,18 @@ namespace MovieMunch.Admin
                     MessageBox.Show("Invalid ID format.");
                 }
             }
+        }
+        private string SanitizeImagePath(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return string.Empty;
+
+            // Remove surrounding quotes
+            input = RemoveSurroundingQuotes(input);
+
+            // Regex to allow only valid characters in file paths
+            string pattern = @"[^a-zA-Z0-9_\\:/.]";
+            return Regex.Replace(input, pattern, string.Empty);
         }
 
         private string RemoveSurroundingQuotes(string input)
@@ -491,7 +507,7 @@ namespace MovieMunch.Admin
 
         private void employeesBtn_Click(object sender, EventArgs e)
         {
-            EmployeeList employee = new EmployeeList(_userName, _profilePic);
+            EmployeesManagementForm employee = new EmployeesManagementForm(_userName, _profilePic);
             employee.Show();
             this.Close();
         }
@@ -526,6 +542,11 @@ namespace MovieMunch.Admin
                 snacksPanel.Visible = false;
                 snackDealsBtn.FillColor = Color.FromArgb(199, 44, 65);
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            regularPanelBox.Visible = false;
         }
     }
 }

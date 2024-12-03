@@ -3,16 +3,23 @@ using MovieMunch.Admin.FilmsInCinema;
 using MovieMunch.Backend.Services;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch.Admin
 {
-    public partial class EmployeeList : Form
+    public partial class EmployeesManagementForm : Form
     {
-        private readonly EmployeesService _employees;
-        public EmployeeList(string userName, string profilePic)
+
+        private EmployeesService _employees;
+        public EmployeesManagementForm(string userName, string profilePic)
         {
             _userName = userName;
             _profilePic = profilePic;
@@ -21,6 +28,7 @@ namespace MovieMunch.Admin
             InitializeComponent();
             _employees = new EmployeesService();
             LoadEmployeeInCinemaData();
+            formOptionsPanel.BringToFront();
 
             DataGridViewButtonColumn updateButtonColumn = new DataGridViewButtonColumn
             {
@@ -241,7 +249,7 @@ namespace MovieMunch.Admin
             {
                 employeeName = employeeName,
                 employeeEmail = employeeEmail,
-                employeePassword = hashedPassword,  
+                employeePassword = hashedPassword,
                 employeeProfilePic = employeeImagePath
             };
 
@@ -268,17 +276,10 @@ namespace MovieMunch.Admin
             employeeImagePathInput.Clear();
         }
 
-        private void backComingSoonBtn_Click_1(object sender, EventArgs e)
-        {
-            MainAdmin mainAdminForm = new MainAdmin();
-            mainAdminForm.SetUserNamme(_userName, _profilePic);
-            mainAdminForm.Visible = true;
-            this.Close();
-        }
-
         private void backCsoonBtn_Click(object sender, EventArgs e)
         {
             MainAdmin mainAdminForm = new MainAdmin();
+            mainAdminForm.SetUserNamme(_userName, _profilePic);
             mainAdminForm.Visible = true;
             this.Close();
         }
@@ -300,21 +301,21 @@ namespace MovieMunch.Admin
             viewEmployeePanel.Visible = false;
         }
 
-        private void showingBtn_Click(object sender, EventArgs e)
+        private void showingBtn_Click_1(object sender, EventArgs e)
         {
             Showing showing = new Showing(_userName, _profilePic);
             showing.Show();
             this.Close();
         }
 
-        private void filmsBtn_Click(object sender, EventArgs e)
+        private void filmsBtn_Click_1(object sender, EventArgs e)
         {
             FilmsInCinemaForm films = new FilmsInCinemaForm(_userName, _profilePic);
             films.Show();
             this.Close();
         }
 
-        private void comingSoonBtn_Click(object sender, EventArgs e)
+        private void comingSoonBtn_Click_1(object sender, EventArgs e)
         {
             ComingSoonMoviesForm coming = new ComingSoonMoviesForm(_userName, _profilePic);
             coming.Show();
@@ -323,7 +324,7 @@ namespace MovieMunch.Admin
 
         private string _userName;
         private string _profilePic;
-        private void foodsBtn_Click(object sender, EventArgs e)
+        private void foodsBtn_Click_1(object sender, EventArgs e)
         {
             CinemaFoodDeals foods = new CinemaFoodDeals(_userName, _profilePic);
             foods.Show();

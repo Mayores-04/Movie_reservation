@@ -73,52 +73,57 @@ public class UserService
 
     public bool RegisterUser(string name, string email, string password, string confirmPassword)
     {
+        // Check if the password and confirm password match
+        if (password != confirmPassword)
+        {
+            Console.WriteLine("Passwords do not match.");
+            return false;
+        }
 
         if (!IsValidEmail(email))
         {
+            Console.WriteLine("Invalid email format.");
             return false;
         }
 
         if (!IsValidPassword(password))
         {
+            Console.WriteLine("Invalid password format.");
             return false;
         }
 
-        // Hash the password before storing it in the database.
+        // Check if the email already exists in the database
+        if (_usersCollection.Find(u => u.Email == email).FirstOrDefault() != null)
+        {
+            Console.WriteLine($"Error: Email {email} is already in use.");
+            return false;
+        }
+
         string hashedPassword = PasswordHelper.HashPassword(password);
 
-        // Create a new user.
         var user = new User
         {
             Name = name,
             Email = email,
             Password = hashedPassword,
-            ConfirmPassword = hashedPassword,
             Status = "Active",
             CreatedAt = DateTime.UtcNow
         };
 
-        // Try inserting the user into the collection.
         try
         {
             _usersCollection.InsertOne(user);
-
-            // Increment user count after successful registration.
             IncrementUserCount();
-
             return true;
-        }
-        catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
-        {
-            return false;
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error during registration: {ex.Message}");
-            ShowMessage("An error occurred while registering the user.");
             return false;
         }
     }
+
+
 
     private string _movieName;
     private List<string> _reservedSeats;
@@ -145,72 +150,7 @@ public class UserService
         mainPage.SetLoggedInUserEmail(existingUser.Name);
 
         return true;
-
     }
-
-    //public async Task AddReceiptToTicketListOfUser(
-    //    string referenceId,
-    //    string userName,
-    //    string movieTitle,
-    //    decimal moviePrice,
-    //    string ticketReference,
-    //    string seat)
-    //{
-    //    if (string.IsNullOrWhiteSpace(userName))
-    //    {
-    //        MessageBox.Show("User name cannot be null or empty.");
-    //        return;
-    //    }
-
-    //    if (string.IsNullOrWhiteSpace(referenceId))
-    //    {
-    //        MessageBox.Show("Reference ID cannot be null or empty.");
-    //        return;
-    //    }
-
-    //    if (string.IsNullOrWhiteSpace(ticketReference) || string.IsNullOrWhiteSpace(seat))
-    //    {
-    //        MessageBox.Show("Ticket reference and seat cannot be null or empty.");
-    //        return;
-    //    }
-
-    //    try
-    //    {
-    //        var ticketInfo = new TicketDetails
-    //        {
-    //            MovieId = referenceId,
-    //            UserName = userName,
-    //            MovieTitle = movieTitle,
-    //            MoviePrice = moviePrice,
-    //            SeatTicketMapping = new Dictionary<string, string>
-    //        {
-    //            { seat, ticketReference }
-    //        },
-    //            DatePurchased = DateTime.Now
-    //        };
-
-    //        var update = Builders<User>.Update.AddToSet(u => u.TicketList, ticketInfo);
-
-    //        var result = await _usersCollection.UpdateOneAsync(
-    //            u => u.Name == userName,
-    //            update
-    //        );
-
-    //        if (result.ModifiedCount == 0)
-    //        {
-    //            MessageBox.Show("User not found. Ticket was not added.");
-    //        }
-    //        else
-    //        {
-    //            MessageBox.Show("Ticket added successfully to the user's ticket list.");
-    //        }
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        Console.WriteLine($"Error adding ticket to ticket list: {ex.Message}");
-    //        MessageBox.Show($"Error adding ticket to ticket list: {ex.Message}");
-    //    }
-    //}
 
     public async Task SaveTicketDetails(TicketDetails ticketDetails)
     {
@@ -385,12 +325,12 @@ public class UserService
     }
     private bool IsValidEmail(string email)
     {
-        return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"); //Regex for email input
+        return Regex.IsMatch(email, @"^(?!.*@.*@)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");  
     }
 
     private bool IsValidPassword(string password)
     {
-        return password.Length >= 8 && Regex.IsMatch(password, @"[A-Za-z]") && Regex.IsMatch(password, @"[0-9]"); //Regex for password input
+        return password.Length >= 8 && Regex.IsMatch(password, @"[A-Za-z]") && Regex.IsMatch(password, @"[0-9]");
     }
 
     private void ShowMessage(string message)

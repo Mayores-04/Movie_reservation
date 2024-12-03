@@ -57,6 +57,9 @@
             this.ComingSoonDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.csoonPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComingSoonImagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaysCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTimeCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTimeCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewComingSoonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewComingSoonBox)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -425,7 +428,10 @@
             this.ComingSoonTitle,
             this.ComingSoonDescription,
             this.csoonPrice,
-            this.ComingSoonImagePath});
+            this.ComingSoonImagePath,
+            this.DaysCB,
+            this.StartTimeCB,
+            this.EndTimeCB});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,6 +500,24 @@
             this.ComingSoonImagePath.MinimumWidth = 6;
             this.ComingSoonImagePath.Name = "ComingSoonImagePath";
             // 
+            // DaysCB
+            // 
+            this.DaysCB.HeaderText = "Days";
+            this.DaysCB.MinimumWidth = 6;
+            this.DaysCB.Name = "DaysCB";
+            // 
+            // StartTimeCB
+            // 
+            this.StartTimeCB.HeaderText = "Start Time";
+            this.StartTimeCB.MinimumWidth = 6;
+            this.StartTimeCB.Name = "StartTimeCB";
+            // 
+            // EndTimeCB
+            // 
+            this.EndTimeCB.HeaderText = "End Time";
+            this.EndTimeCB.MinimumWidth = 6;
+            this.EndTimeCB.Name = "EndTimeCB";
+            // 
             // ComingSoonMoviesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -541,11 +565,14 @@
         private Guna.UI2.WinForms.Guna2TextBox comingSoonTitleInput;
         private Guna.UI2.WinForms.Guna2DataGridView ComingSoonTable;
         private Guna.UI2.WinForms.Guna2Button closeShowingImageBtn;
+        private Guna.UI2.WinForms.Guna2Button showingBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn csoonPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComingSoonImagePath;
-        private Guna.UI2.WinForms.Guna2Button showingBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaysCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTimeCB;
     }
 }

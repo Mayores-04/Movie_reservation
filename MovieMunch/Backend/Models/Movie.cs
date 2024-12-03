@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace MovieMunch.Models
@@ -17,10 +18,21 @@ namespace MovieMunch.Models
         public string MovieDescription { get; set; }
 
         [BsonElement("imagePath")]
-        public string MovieImagePath { get; set; }  // Path to the image
+        public string MovieImagePath { get; set; }
 
         [BsonElement("Price")]
         public double MoviePrice { get; set; }
+
+        [BsonElement("Day")]
+        public string Day { get; set; }
+
+        [BsonElement("StartTime")]
+        public DateTime StartTime { get; set; }
+
+        [BsonElement("EndTime")]
+        public DateTime EndTime { get; set; }
+
+
     }
 
     public class MovieInfo
@@ -36,15 +48,12 @@ namespace MovieMunch.Models
         public string Description { get; set; }
 
         [BsonElement("imagePath")]
-        public string ImagePath { get; set; }  // Path to the image (not the Image object)
+        public string ImagePath { get; set; }
 
         [BsonElement("Price")]
         public decimal Price { get; set; }
-
-         ////If you need to store the image in memory, you can use byte[] for MongoDB storage
-         //[BsonElement("image")]
-         //public byte[] Image { get; set; }  // Uncomment if you want to store the actual image data
-
-        public Image Image { get; internal set; } // This property could be used in the UI (not stored in MongoDB)
+        public string Day { get; internal set; }
+        public DateTime StartTime { get; internal set; }
+        public DateTime EndTime { get; internal set; }
     }
 }

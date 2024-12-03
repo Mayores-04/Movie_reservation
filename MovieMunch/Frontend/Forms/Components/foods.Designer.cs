@@ -186,7 +186,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.filmsDetailsPanel);
             this.Name = "FilmsInCinemaZoomIn";
-            this.Size = new System.Drawing.Size(1641, 580);
+            this.Size = new System.Drawing.Size(1200, 580);
             this.filmsDetailsPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();

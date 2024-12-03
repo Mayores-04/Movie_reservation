@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -124,7 +125,7 @@ namespace MovieMunch.Admin
 
             foreach (var movie in movies)
             {
-                MoviesToShowTable.Rows.Add(movie.Id, movie.MovieTitle, movie.MovieDescription, movie.MoviePrice, movie.MovieImagePath);
+                MoviesToShowTable.Rows.Add(movie.Id, movie.MovieTitle, movie.MovieDescription, movie.MoviePrice, movie.MovieImagePath, movie.Day, movie.StartTime, movie.EndTime);
             }
         }
 
@@ -171,7 +172,6 @@ namespace MovieMunch.Admin
                 }
             }
         }
-
         private void UpdateMovies(string movieID)
         {
             if (ObjectId.TryParse(movieID, out var objectId))
@@ -181,14 +181,40 @@ namespace MovieMunch.Admin
                 if (movie != null)
                 {
                     var currentRow = MoviesToShowTable.Rows[MoviesToShowTable.CurrentCell.RowIndex];
-                    movie.MovieTitle = currentRow.Cells["moviesTitle"].Value.ToString();
-                    movie.MovieDescription = currentRow.Cells["moviesDescription"].Value.ToString(); 
-                    movie.MoviePrice = Convert.ToDouble(currentRow.Cells["moviePrice"].Value.ToString());
-                    movie.MovieImagePath = currentRow.Cells["moviesImagePath"].Value.ToString();
 
-                    _movieService.UpdateMovies(movie);
-                    MessageBox.Show("Movie updated successfully.");
-                    LoadMoviesInCinemaData();
+                    // Update basic fields
+                    movie.MovieTitle = currentRow.Cells["moviesTitle"].Value.ToString();
+                    movie.MovieDescription = currentRow.Cells["moviesDescription"].Value.ToString();
+                    movie.MoviePrice = Convert.ToDouble(currentRow.Cells["moviePrice"].Value.ToString());
+
+                    // Sanitize the image path before updating
+                    movie.MovieImagePath = SanitizeImagePath(currentRow.Cells["moviesImagePath"].Value.ToString());
+
+                    movie.Day = currentRow.Cells["DayCB"].Value.ToString(); // Assuming "DayCB" contains the day as string
+
+                    // Update StartTime and EndTime
+                    try
+                    {
+                        // Parse StartTime and EndTime as DateTime
+                        movie.StartTime = DateTime.Parse(currentRow.Cells["StartTimeCB"].Value.ToString());
+                        movie.EndTime = DateTime.Parse(currentRow.Cells["EndTimeCB"].Value.ToString());
+                    }
+                    catch (FormatException ex)
+                    {
+                        MessageBox.Show($"Invalid time format: {ex.Message}");
+                        return;
+                    }
+
+                    try
+                    {
+                        _movieService.UpdateMovies(movie);
+                        MessageBox.Show("Movie updated successfully.");
+                        LoadMoviesInCinemaData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while updating the movie: {ex.Message}");
+                    }
                 }
                 else
                 {
@@ -199,6 +225,26 @@ namespace MovieMunch.Admin
             {
                 MessageBox.Show("Invalid ID format.");
             }
+        }
+
+        private string SanitizeImagePath(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return string.Empty;
+
+            input = RemoveSurroundingQuotes(input);
+
+            string pattern = @"[^a-zA-Z0-9_\\:/.]";
+            return Regex.Replace(input, pattern, string.Empty);
+        }
+
+        private string RemoveSurroundingQuotes(string input)
+        {
+            if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
+            {
+                return input.Substring(1, input.Length - 2);
+            }
+            return input;
         }
 
         private void DeleteMovies(string movieID)
@@ -234,12 +280,6 @@ namespace MovieMunch.Admin
             string movieDescription = RemoveSurroundingQuotes(movieDescriptionInput.Text);
             string movieImagePath = RemoveSurroundingQuotes(movieDirectoryInput.Text);
 
-            if (string.IsNullOrEmpty(movieTitle) || string.IsNullOrEmpty(movieImagePath) || string.IsNullOrEmpty(movieDescription))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-
             double moviePrice;
             try
             {
@@ -268,6 +308,7 @@ namespace MovieMunch.Admin
                 MovieDescription = movieDescription,
                 MoviePrice = moviePrice,
                 MovieImagePath = movieImagePath
+
             };
 
             try
@@ -281,16 +322,6 @@ namespace MovieMunch.Admin
             {
                 MessageBox.Show($"An error occurred while saving the movie: {ex.Message}");
             }
-        }
-
-
-        private string RemoveSurroundingQuotes(string input)
-        {
-            if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
-            {
-                return input.Substring(1, input.Length - 2);
-            }
-            return input;
         }
 
         private void ClearAdminInput()
@@ -342,7 +373,7 @@ namespace MovieMunch.Admin
 
         private void employeesBtn_Click(object sender, EventArgs e)
         {
-            EmployeeList employeelist = new EmployeeList(_userName, _profilePic);
+            EmployeesManagementForm employeelist = new EmployeesManagementForm(_userName, _profilePic);
             employeelist.Show();
             this.Close();
         }

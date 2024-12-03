@@ -75,10 +75,13 @@ public class MovieService
             return movies.Select(movie => new MovieInfo
             {
                 Id = movie.Id.ToString(),
-                Title = movie.MovieTitle,        
-                ImagePath = movie.MovieImagePath, 
+                Title = movie.MovieTitle,
+                ImagePath = movie.MovieImagePath,
                 Description = movie.MovieDescription,
-                Price = (decimal)movie.MoviePrice
+                Price = (decimal)movie.MoviePrice,
+                Day = movie.Day,
+                StartTime = movie.StartTime,
+                EndTime = movie.EndTime
             }).ToList();
         }
         catch (Exception ex)
@@ -264,4 +267,3 @@ public class MovieService
         }
     }
 }
-

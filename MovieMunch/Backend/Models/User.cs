@@ -47,7 +47,10 @@ public class MovieDetails
     public decimal MoviePrice { get; set; }
 
     [BsonElement("moviePic")]
-    public string MoviePic { get; set; } 
+    public string MoviePic { get; set; }
+    public string Day { get; internal set; }
+    public DateTime StartTime { get; internal set; }
+    public DateTime EndTime { get; internal set; }
 }
 
 public class TicketDetails

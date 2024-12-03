@@ -5,6 +5,8 @@ using System;
 using System.Drawing;
 using MovieMunch.Backend.Services;
 using System.Drawing.Drawing2D;
+using MovieMunch.Models;
+using System.Text.RegularExpressions;
 
 namespace MovieMunch.Admin.FilmsInCinema
 {
@@ -141,10 +143,9 @@ namespace MovieMunch.Admin.FilmsInCinema
 
             foreach (var film in films)
             {
-                MoviesTable.Rows.Add(film.Id, film.FilmTitle, film.FilmsDescription, film.FilmsPrice, film.FilmImagePath);
+                MoviesTable.Rows.Add(film.Id, film.FilmTitle, film.FilmsDescription, film.FilmsPrice, film.FilmImagePath, film.Day, film.StartTime, film.EndTime);
             }
         }
-
         private void MoviesTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -165,50 +166,20 @@ namespace MovieMunch.Admin.FilmsInCinema
                 }
             }
         }
-
-        private void UpdateFilm(string filmId)
-        {
-            if (ObjectId.TryParse(filmId, out var objectId))
-            {
-                var film = _movieService.GetFilmById(objectId);
-
-                if (film != null)
-                {
-                    var currentRow = MoviesTable.Rows[MoviesTable.CurrentCell.RowIndex];
-                    film.FilmTitle = currentRow.Cells["Title"].Value.ToString(); 
-                    film.FilmsDescription = currentRow.Cells["Description"].Value.ToString(); 
-                    film.FilmsPrice = Convert.ToDouble(currentRow.Cells["filmPrice"].Value.ToString()); 
-                    film.FilmImagePath = currentRow.Cells["imagePath"].Value.ToString(); 
-
-                    _movieService.UpdateFilm(film);
-                    MessageBox.Show("Film updated successfully.");
-                    LoadFilmsInCinemaData();
-                }
-                else
-                {
-                    MessageBox.Show("Film not found.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Invalid ID format.");
-            }
-        }
-
         private void DeleteFilm(string filmId)
         {
             var confirmResult = MessageBox.Show("Are you sure you want to delete this film?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmResult == DialogResult.Yes)
             {
-                if (ObjectId.TryParse(filmId, out var objectId)) 
+                if (ObjectId.TryParse(filmId, out var objectId))
                 {
-                    bool isDeleted = _movieService.DeleteFilmById(objectId); 
+                    bool isDeleted = _movieService.DeleteFilmById(objectId);
 
                     if (isDeleted)
                     {
                         MessageBox.Show("Film successfully deleted.");
-                        LoadFilmsInCinemaData(); 
+                        LoadFilmsInCinemaData();
                     }
                     else
                     {
@@ -222,6 +193,54 @@ namespace MovieMunch.Admin.FilmsInCinema
             }
         }
 
+        private void UpdateFilm(string filmId)
+        {
+            if (ObjectId.TryParse(filmId, out var objectId))
+            {
+                var film = _movieService.GetFilmById(objectId);
+
+                if (film != null)
+                {
+                    var currentRow = MoviesTable.Rows[MoviesTable.CurrentCell.RowIndex];
+                    film.FilmTitle = currentRow.Cells["Title"].Value.ToString();
+                    film.FilmsDescription = currentRow.Cells["Description"].Value.ToString();
+                    film.FilmsPrice = Convert.ToDouble(currentRow.Cells["filmPrice"].Value.ToString());
+
+                    film.FilmImagePath = SanitizeImagePath(currentRow.Cells["imagePath"].Value.ToString());
+
+                    try
+                    {
+                        _movieService.UpdateFilm(film);
+                        MessageBox.Show("Film updated successfully.");
+                        LoadFilmsInCinemaData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while updating the film: {ex.Message}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Film not found.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid ID format.");
+            }
+        }
+
+        private string SanitizeImagePath(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return string.Empty;
+
+            input = RemoveSurroundingQuotes(input);
+
+            string pattern = @"[^a-zA-Z0-9_\\:/.]";
+            return Regex.Replace(input, pattern, string.Empty);
+        }
+
         private string RemoveSurroundingQuotes(string input)
         {
             if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
@@ -230,6 +249,7 @@ namespace MovieMunch.Admin.FilmsInCinema
             }
             return input;
         }
+
 
         private void ClearAdminInput()
         {
@@ -307,7 +327,7 @@ namespace MovieMunch.Admin.FilmsInCinema
 
         private void employeesBtn_Click(object sender, EventArgs e)
         {
-            EmployeeList employeeList = new EmployeeList(_userName, _profilePic);
+            EmployeesManagementForm employeeList = new EmployeesManagementForm(_userName, _profilePic);
             employeeList.Show();
             this.Close();
         }

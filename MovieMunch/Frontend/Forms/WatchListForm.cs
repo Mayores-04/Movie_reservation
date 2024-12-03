@@ -16,7 +16,13 @@ namespace MovieMunch.Frontend.Forms
         private string _profilePic;
         private readonly UserService _userService;
 
-        public WatchListForm(string movieID, string userName, string userEmail, string profilePic)
+
+
+        private string _movieDay;
+        private DateTime _movieStart;
+        private DateTime _movieEnd;
+        public WatchListForm(string movieID, string userName, string userEmail, string profilePic,
+            string movieDay, DateTime movieStart, DateTime movieEnd)
         {
             InitializeComponent();
 
@@ -28,6 +34,10 @@ namespace MovieMunch.Frontend.Forms
             userNameHolder.Text = _userName;
             LoadWatchList();
 
+            //Schedule
+            _movieDay = movieDay;
+            _movieStart = movieStart;
+            _movieEnd = movieEnd;
 
             defaultHeight = userPanel.Height;
             userPanel.Height = 0;
@@ -71,6 +81,9 @@ namespace MovieMunch.Frontend.Forms
             {
                 MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            changeNewUsernameInput.PlaceholderText = userName;
         }
 
         private void LoadWatchList()
@@ -237,7 +250,9 @@ namespace MovieMunch.Frontend.Forms
 
         private void ReserveSeat(MovieDetails movie)
         {
-            SeatReservation seatReservation = new SeatReservation(_movieId, movie.MovieTitle, movie.MovieDescription, movie.MoviePrice, movie.MoviePic, _userName, _profilePic);
+            SeatReservation seatReservation = new SeatReservation(_movieId, movie.MovieTitle, movie.MovieDescription, movie.MoviePrice, 
+                movie.MoviePic,
+                _userName, _profilePic, _movieDay, _movieStart, _movieEnd);
             seatReservation.Show();
             this.Close();
         }
@@ -305,12 +320,12 @@ namespace MovieMunch.Frontend.Forms
         {
             if (_userName == null || userNameHolder.Text == "")
             {
-                var ticketForm = new TicketForm(_movieId, "USERNAME", _userName, _profilePic);
+                var ticketForm = new TicketForm(_movieId, "USERNAME", _userName, _profilePic, _movieDay, _movieStart, _movieEnd);
                 ticketForm.Show();
             }
             else
             {
-                var ticketForm = new TicketForm(_movieId, _userName, _userName, _profilePic);
+                var ticketForm = new TicketForm(_movieId, _userName, _userName, _profilePic, _movieDay, _movieStart, _movieEnd);
                 ticketForm.Show();
             }
             this.Close();
@@ -371,5 +386,172 @@ namespace MovieMunch.Frontend.Forms
 
             userPanelTimer.Start();
         }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var userService = new UserService();
+            userService.Logout();
+        }
+
+
+        private string profilePicBase;
+
+        private void saveUserPicOrNameBtn_Click(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+
+            string username = userNameHolder.Text;
+            string newUsername = changeNewUsernameInput.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                MessageBox.Show("Username cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(newUsername) && string.IsNullOrWhiteSpace(profilePicBase))
+            {
+                MessageBox.Show("Please provide either a new username or select a profile picture.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string profilePicPath = string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(profilePicBase))
+            {
+                profilePicPath = profilePicBase;
+            }
+
+            bool isUpdated = userService.UpdateUserProfile(username, newUsername, profilePicPath);
+
+            if (isUpdated)
+            {
+                MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                _profilePic = profilePicBase;
+            }
+            else
+            {
+                MessageBox.Show("Failed to update the profile. Please check the username and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            var user = userService.GetUserByUsername(username);
+            ReloadUserProfile(user?.Name);
+        }
+
+        private void changePicBtn_Click(object sender, EventArgs e)
+        {
+            string selectedFilePath = SelectImageFile();
+
+            if (!string.IsNullOrEmpty(selectedFilePath))
+            {
+                profilePicBase = selectedFilePath;
+                _profilePic = selectedFilePath;
+
+                userProfileBtn.Image = System.Drawing.Image.FromFile(profilePicBase);
+                userProfileCustomHolder.Image = System.Drawing.Image.FromFile(profilePicBase);
+
+                MessageBox.Show("Profile picture selected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private string SelectImageFile()
+        {
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog.Title = "Select Profile Picture";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                return openFileDialog.FileName;
+            }
+            return string.Empty;
+        }
+
+        private void ReloadUserProfile(string username)
+        {
+            UserService userService = new UserService();
+            var user = userService.GetUserByUsername(username);
+
+            if (user != null)
+            {
+                userNameHolder.Text = user.Name;
+
+                if (!string.IsNullOrWhiteSpace(user.userProfilePic) && File.Exists(user.userProfilePic))
+                {
+                    try
+                    {
+                        userProfileBtn.Image = System.Drawing.Image.FromFile(user.userProfilePic);
+                        userProfileCustomHolder.Image = System.Drawing.Image.FromFile(user.userProfilePic);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Profile picture not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("User profile not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        private void saveUserNameOrPasswordBtn_Click(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+
+
+            string email = changePrevEmailInput.Text.Trim();
+
+            string password = prevPasswordInput.Text.Trim();
+
+            string newPassword = changePasswordInput.Text.Trim();
+            string confirmNewPassword = changeConfirmNewPasswordInput.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(newPassword))
+            {
+                MessageBox.Show("Email and password cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool prevAccount = userService.new_edited_account(email, newPassword);
+
+            if (prevAccount)
+            {
+                MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                changePrevEmailInput.PlaceholderText = "TYPE TO CHANGE EMAIL";
+                prevPasswordInput.PlaceholderText = "TYPE PREVIOUS PASSWORD INPUT";
+            }
+            else
+            {
+                MessageBox.Show("Failed to update the account. Please check the email and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.GetUsers(_userName, _profilePic);
+            loginForm.ShowDialog();
+        }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.GetUsers(_userName, _profilePic);
+            registerForm.ShowDialog();
+        }
+
     }
 }

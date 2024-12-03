@@ -1,6 +1,5 @@
 ﻿using MovieMunch.Admin;
 using MovieMunch.Admin.FilmsInCinema;
-using MovieMunch.Forms.Components;
 using MovieMunch.Frontend.Forms;
 using MovieMunch.Frontend.Forms.Components;
 using MovieMunch.Services;
@@ -19,9 +18,6 @@ namespace MovieMunch
 
             LoadingForm loadingForm = new LoadingForm();
             Application.Run(loadingForm);
-
-            //editEmail em = new editEmail();
-            //Application.Run(em);
         }
     }
 }

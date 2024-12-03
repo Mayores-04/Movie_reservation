@@ -37,9 +37,13 @@ namespace MovieMunch
             this.termsAndRegistrationCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.regFormClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.termsAndRegMessage = new System.Windows.Forms.Label();
+            this.termsAndConditionPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.closeTermsAndConditionPanel = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.successRegisterBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.termsAndConditionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -316,7 +320,7 @@ namespace MovieMunch
             this.termsAndRegistrationCheckBox.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.termsAndRegistrationCheckBox.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termsAndRegistrationCheckBox.ForeColor = System.Drawing.Color.White;
-            this.termsAndRegistrationCheckBox.Location = new System.Drawing.Point(726, 534);
+            this.termsAndRegistrationCheckBox.Location = new System.Drawing.Point(224, 543);
             this.termsAndRegistrationCheckBox.Name = "termsAndRegistrationCheckBox";
             this.termsAndRegistrationCheckBox.Size = new System.Drawing.Size(212, 25);
             this.termsAndRegistrationCheckBox.TabIndex = 5;
@@ -361,14 +365,68 @@ namespace MovieMunch
             this.termsAndRegMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.termsAndRegMessage.Visible = false;
             // 
+            // termsAndConditionPanel
+            // 
+            this.termsAndConditionPanel.BackColor = System.Drawing.Color.Transparent;
+            this.termsAndConditionPanel.BorderRadius = 30;
+            this.termsAndConditionPanel.Controls.Add(this.successRegisterBtn);
+            this.termsAndConditionPanel.Controls.Add(this.closeTermsAndConditionPanel);
+            this.termsAndConditionPanel.Controls.Add(this.termsAndRegistrationCheckBox);
+            this.termsAndConditionPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
+            this.termsAndConditionPanel.Location = new System.Drawing.Point(487, 12);
+            this.termsAndConditionPanel.Name = "termsAndConditionPanel";
+            this.termsAndConditionPanel.Size = new System.Drawing.Size(631, 626);
+            this.termsAndConditionPanel.TabIndex = 706;
+            this.termsAndConditionPanel.Visible = false;
+            // 
+            // closeTermsAndConditionPanel
+            // 
+            this.closeTermsAndConditionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(177)))), ((int)(((byte)(155)))));
+            this.closeTermsAndConditionPanel.BorderThickness = 2;
+            this.closeTermsAndConditionPanel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closeTermsAndConditionPanel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closeTermsAndConditionPanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closeTermsAndConditionPanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closeTermsAndConditionPanel.FillColor = System.Drawing.Color.Transparent;
+            this.closeTermsAndConditionPanel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeTermsAndConditionPanel.ForeColor = System.Drawing.Color.White;
+            this.closeTermsAndConditionPanel.ImageSize = new System.Drawing.Size(50, 50);
+            this.closeTermsAndConditionPanel.Location = new System.Drawing.Point(559, 12);
+            this.closeTermsAndConditionPanel.Name = "closeTermsAndConditionPanel";
+            this.closeTermsAndConditionPanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closeTermsAndConditionPanel.Size = new System.Drawing.Size(50, 50);
+            this.closeTermsAndConditionPanel.TabIndex = 705;
+            this.closeTermsAndConditionPanel.Text = "x";
+            this.closeTermsAndConditionPanel.TextOffset = new System.Drawing.Point(1, -3);
+            this.closeTermsAndConditionPanel.Click += new System.EventHandler(this.closeTermsAndConditionPanel_Click);
+            // 
+            // successRegisterBtn
+            // 
+            this.successRegisterBtn.BackColor = System.Drawing.Color.Transparent;
+            this.successRegisterBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.successRegisterBtn.BorderRadius = 15;
+            this.successRegisterBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.successRegisterBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.successRegisterBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.successRegisterBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.successRegisterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(159)))));
+            this.successRegisterBtn.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.successRegisterBtn.ForeColor = System.Drawing.Color.Black;
+            this.successRegisterBtn.Location = new System.Drawing.Point(225, 574);
+            this.successRegisterBtn.Name = "successRegisterBtn";
+            this.successRegisterBtn.Size = new System.Drawing.Size(198, 38);
+            this.successRegisterBtn.TabIndex = 706;
+            this.successRegisterBtn.Text = "PROCEED";
+            this.successRegisterBtn.Click += new System.EventHandler(this.successRegisterBtn_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.termsAndConditionPanel);
             this.Controls.Add(this.termsAndRegMessage);
             this.Controls.Add(this.regFormClose);
-            this.Controls.Add(this.termsAndRegistrationCheckBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.guna2Panel3);
@@ -389,8 +447,9 @@ namespace MovieMunch
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.termsAndConditionPanel.ResumeLayout(false);
+            this.termsAndConditionPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -412,5 +471,8 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2CheckBox termsAndRegistrationCheckBox;
         private Guna.UI2.WinForms.Guna2CircleButton regFormClose;
         private Label termsAndRegMessage;
+        private Guna.UI2.WinForms.Guna2Panel termsAndConditionPanel;
+        private Guna.UI2.WinForms.Guna2CircleButton closeTermsAndConditionPanel;
+        private Guna.UI2.WinForms.Guna2Button successRegisterBtn;
     }
 }

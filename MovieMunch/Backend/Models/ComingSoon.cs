@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using System;
 
 namespace MovieMunch.Backend.Models
 {
@@ -20,5 +21,16 @@ namespace MovieMunch.Backend.Models
 
         [BsonElement("imagePath")]
         public string ComingSoonImagePath { get; set; }
+
+
+        [BsonElement("Day")]
+        public string Day { get; set; }
+
+        [BsonElement("StartTime")]
+        public DateTime StartTime { get; set; }
+
+        [BsonElement("EndTime")]
+        public DateTime EndTime { get; set; }
+
     }
 }

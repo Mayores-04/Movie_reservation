@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace MovieMunch.Admin
@@ -139,7 +140,7 @@ namespace MovieMunch.Admin
 
             foreach (var movie in comingSoonMovies)
             {
-                ComingSoonTable.Rows.Add(movie.Id, movie.ComingSoonTitle, movie.ComingSoonDescription, movie.ComingSoonPrice, movie.ComingSoonImagePath);
+                ComingSoonTable.Rows.Add(movie.Id, movie.ComingSoonTitle, movie.ComingSoonDescription, movie.ComingSoonPrice, movie.ComingSoonImagePath, movie.Day, movie.StartTime, movie.EndTime);
             }
         }
 
@@ -176,11 +177,19 @@ namespace MovieMunch.Admin
                     movie.ComingSoonTitle = currentRow.Cells["ComingSoonTitle"].Value.ToString();
                     movie.ComingSoonDescription = currentRow.Cells["ComingSoonDescription"].Value.ToString();
                     movie.ComingSoonPrice = Convert.ToDouble(currentRow.Cells["csoonPrice"].Value.ToString());
-                    movie.ComingSoonImagePath = currentRow.Cells["ComingSoonImagePath"].Value.ToString();
 
-                    _movieService.UpdateComingSoon(movie);
-                    MessageBox.Show("Coming soon movie updated successfully.");
-                    LoadComingSoonInCinemaData();
+                    movie.ComingSoonImagePath = SanitizeImagePath(currentRow.Cells["ComingSoonImagePath"].Value.ToString());
+
+                    try
+                    {
+                        _movieService.UpdateComingSoon(movie);
+                        MessageBox.Show("Coming soon movie updated successfully.");
+                        LoadComingSoonInCinemaData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while updating the coming soon movie: {ex.Message}");
+                    }
                 }
                 else
                 {
@@ -192,6 +201,28 @@ namespace MovieMunch.Admin
                 MessageBox.Show("Invalid ID format.");
             }
         }
+
+        private string SanitizeImagePath(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return string.Empty;
+
+            input = RemoveSurroundingQuotes(input);
+
+            string pattern = @"[^a-zA-Z0-9_\\:/.]";
+            return Regex.Replace(input, pattern, string.Empty);
+        }
+
+        private string RemoveSurroundingQuotes(string input)
+        {
+            if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
+            {
+                return input.Substring(1, input.Length - 2);
+            }
+            return input;
+        }
+
+
 
         private void DeleteComingSoon(string movieID)
         {
@@ -219,15 +250,6 @@ namespace MovieMunch.Admin
                 }
             }
         }
-        private string RemoveSurroundingQuotes(string input)
-        {
-            if (!string.IsNullOrEmpty(input) && input.StartsWith("\"") && input.EndsWith("\""))
-            {
-                return input.Substring(1, input.Length - 2);
-            }
-            return input;
-        }
-
         private void ClearAdminInput()
         {
             comingSoonTitleInput.Clear();
@@ -304,7 +326,7 @@ namespace MovieMunch.Admin
 
         private void employeesBtn_Click(object sender, EventArgs e)
         {
-            EmployeeList employee = new EmployeeList(_userName, _profilePic);
+            EmployeesManagementForm employee = new EmployeesManagementForm(_userName, _profilePic);
             employee.Show();
             this.Close();
         }

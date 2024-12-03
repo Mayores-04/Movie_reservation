@@ -57,6 +57,9 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imagePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaysCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTimeCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTimeCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewFilmPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewFilmBox)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -425,7 +428,10 @@
             this.Title,
             this.Description,
             this.filmPrice,
-            this.imagePath});
+            this.imagePath,
+            this.DaysCB,
+            this.StartTimeCB,
+            this.EndTimeCB});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,6 +500,24 @@
             this.imagePath.MinimumWidth = 6;
             this.imagePath.Name = "imagePath";
             // 
+            // DaysCB
+            // 
+            this.DaysCB.HeaderText = "Days";
+            this.DaysCB.MinimumWidth = 6;
+            this.DaysCB.Name = "DaysCB";
+            // 
+            // StartTimeCB
+            // 
+            this.StartTimeCB.HeaderText = "Start Time";
+            this.StartTimeCB.MinimumWidth = 6;
+            this.StartTimeCB.Name = "StartTimeCB";
+            // 
+            // EndTimeCB
+            // 
+            this.EndTimeCB.HeaderText = "End Time";
+            this.EndTimeCB.MinimumWidth = 6;
+            this.EndTimeCB.Name = "EndTimeCB";
+            // 
             // FilmsInCinemaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -541,11 +565,14 @@
         private Guna.UI2.WinForms.Guna2TextBox descriptionInput;
         private Guna.UI2.WinForms.Guna2TextBox titleInput;
         private Guna.UI2.WinForms.Guna2DataGridView MoviesTable;
+        private Guna.UI2.WinForms.Guna2Button closeShowingImageBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn filmPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn imagePath;
-        private Guna.UI2.WinForms.Guna2Button closeShowingImageBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaysCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTimeCB;
     }
 }

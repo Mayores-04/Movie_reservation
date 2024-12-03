@@ -33,7 +33,6 @@ namespace MovieMunch
         private MovieService _movieService;
         private List<FilmsInCinema> _filmsInCinemas;
         private List<ComingSoon> _comingSoon;
-        private SettingsForm _settingsForm;
         private List<MovieInfo> _movies;
         private FoodServices _foodServices;
         private List<RegularDeals> _foodsCollection;
@@ -45,7 +44,13 @@ namespace MovieMunch
         private Image image;
         private string reservedBy;
 
-        public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, string moviePic, string reservedBy, string profilePic)
+
+        private string _movieDays;
+        private DateTime _movieStart;
+        private DateTime _movieEnd;
+
+        public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, 
+            string moviePic, string reservedBy, string profilePic, string MovieDays, DateTime movieStartTime, DateTime movieEndTime)
         {
 
             MainPage mainPage = new MainPage();
@@ -60,7 +65,14 @@ namespace MovieMunch
             _moviePic = moviePic;
             _profilePic = profilePic;
             _movieDescription = movieDescription;
+            
+            //Dates
+            _movieDays = MovieDays;
+            _movieStart = movieStartTime;
+            _movieEnd = movieEndTime;
 
+            DayHolder.Text = $"{ _movieDays.ToString()}";
+            StartDateHolder.Text = $"{_movieStart} - {_movieEnd}";
 
             _movieService = new MovieService();
             _movies = _movieService.GetAllMovieInfos();
@@ -91,8 +103,6 @@ namespace MovieMunch
             this.Load += SeatReservation_Load;
             userName = reservedBy;
             mainPage.SetUserInfo(userName, _profilePic);
-
-
 
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -143,7 +153,11 @@ namespace MovieMunch
             {
                 MessageBox.Show($"Error loading profile picture: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            changeNewUsernameInput.PlaceholderText = userName;
         }
+
 
         private void FadeIn(Control control)
         {
@@ -325,12 +339,12 @@ namespace MovieMunch
         {
             if (userName == null || userNameHolder.Text == "")
             {
-                var watchListForm = new WatchListForm(_movieId, "USERNAME", userName, _profilePic);
+                var watchListForm = new WatchListForm(_movieId, "USERNAME", userName, _profilePic, _movieDays, _movieStart, _movieEnd);
                 watchListForm.Show();
             }
             else
             {
-                var watchListForm = new WatchListForm(_movieId, userName, userName, _profilePic);
+                var watchListForm = new WatchListForm(_movieId, userName, userName, _profilePic, _movieDays, _movieStart, _movieEnd);
                 watchListForm.Show();
             }
             this.Close();
@@ -372,23 +386,9 @@ namespace MovieMunch
             }
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Close();
-        }
-
-        private void SignUpBtn_Click(object sender, EventArgs e)
-        {
-            RegisterForm regForm = new RegisterForm();
-            regForm.Show();
-            this.Close();
-        }
-
         private void gotoTicketFormBtn_Click(object sender, EventArgs e)
         {
-            TicketForm ticketForm = new TicketForm(_movieId, userNameHolder.Text, userName, _profilePic);
+            TicketForm ticketForm = new TicketForm(_movieId, userNameHolder.Text, userName, _profilePic, _movieDays, _movieStart, _movieEnd);
             ticketForm.Show();
             this.Close();
         }
@@ -430,6 +430,182 @@ namespace MovieMunch
             }
 
             userPanelTimer.Start();
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var userService = new UserService();
+            userService.Logout();
+        }
+
+
+
+        private string profilePicBase;
+        private string imagePath;
+        private string profilePic;
+        private string day;
+        private DateTime startTime;
+        private DateTime endTime;
+
+        private void saveUserPicOrNameBtn_Click(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+
+            string username = userNameHolder.Text;
+            string newUsername = changeNewUsernameInput.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                MessageBox.Show("Username cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(newUsername) && string.IsNullOrWhiteSpace(profilePicBase))
+            {
+                MessageBox.Show("Please provide either a new username or select a profile picture.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string profilePicPath = string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(profilePicBase))
+            {
+                profilePicPath = profilePicBase;
+            }
+
+            bool isUpdated = userService.UpdateUserProfile(username, newUsername, profilePicPath);
+
+            if (isUpdated)
+            {
+                MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                _profilePic = profilePicBase;
+            }
+            else
+            {
+                MessageBox.Show("Failed to update the profile. Please check the username and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            var user = userService.GetUserByUsername(username);
+            ReloadUserProfile(user?.Name);
+        }
+
+        private void changePicBtn_Click(object sender, EventArgs e)
+        {
+            string selectedFilePath = SelectImageFile();
+
+            if (!string.IsNullOrEmpty(selectedFilePath))
+            {
+                profilePicBase = selectedFilePath;
+                _profilePic = selectedFilePath;
+
+                userProfileBtn.Image = System.Drawing.Image.FromFile(profilePicBase);
+                userProfileCustomHolder.Image = System.Drawing.Image.FromFile(profilePicBase);
+
+                MessageBox.Show("Profile picture selected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private string SelectImageFile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog.Title = "Select Profile Picture";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                return openFileDialog.FileName;
+            }
+            return string.Empty;
+        }
+
+        private void ReloadUserProfile(string username)
+        {
+            UserService userService = new UserService();
+            var user = userService.GetUserByUsername(username);
+
+            if (user != null)
+            {
+                userNameHolder.Text = user.Name;
+
+                if (!string.IsNullOrWhiteSpace(user.userProfilePic) && File.Exists(user.userProfilePic))
+                {
+                    try
+                    {
+                        userProfileBtn.Image = System.Drawing.Image.FromFile(user.userProfilePic);
+                        userProfileCustomHolder.Image = System.Drawing.Image.FromFile(user.userProfilePic);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Profile picture not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("User profile not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        private void saveUserNameOrPasswordBtn_Click(object sender, EventArgs e)
+        {
+            UserService userService = new UserService();
+
+
+            string email = changePrevEmailInput.Text.Trim();
+
+            string password = prevPasswordInput.Text.Trim();
+
+            string newPassword = changePasswordInput.Text.Trim();
+            string confirmNewPassword = changeConfirmNewPasswordInput.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(newPassword))
+            {
+                MessageBox.Show("Email and password cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool prevAccount = userService.new_edited_account(email, newPassword);
+
+            if (prevAccount)
+            {
+                MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                changePrevEmailInput.PlaceholderText = "TYPE TO CHANGE EMAIL";
+                prevPasswordInput.PlaceholderText = "TYPE PREVIOUS PASSWORD INPUT";
+            }
+            else
+            {
+                MessageBox.Show("Failed to update the account. Please check the email and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.GetUsers(userName, _profilePic);
+            loginForm.ShowDialog();
+        }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.GetUsers(userName, _profilePic);
+            registerForm.ShowDialog();
+        }
+
+        private void movieScheduleHolder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

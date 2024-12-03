@@ -226,7 +226,7 @@ namespace MovieMunch.Admin
         private void employeesBtn_Click(object sender, EventArgs e)
         {
             SetUserNamme(_userName, _profilePic);
-            EmployeeList employeeList = new EmployeeList(_userName, _profilePic);
+            EmployeesManagementForm employeeList = new EmployeesManagementForm(_userName, _profilePic);
             employeeList.Show();
             this.Close();
         }

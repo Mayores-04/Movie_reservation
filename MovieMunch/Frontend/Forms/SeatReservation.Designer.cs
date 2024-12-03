@@ -32,20 +32,26 @@ namespace MovieMunch
         {
             Guna.UI2.WinForms.Guna2PictureBox regular2;
             Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatReservation));
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.seatReservationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.StartDateHolder = new System.Windows.Forms.Label();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.movieTitlelbl = new System.Windows.Forms.Label();
+            this.availableTimeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.dateToWatchComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DayHolder = new System.Windows.Forms.Label();
             this.snackDealsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.regularDealsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.J6 = new Guna.UI2.WinForms.Guna2Button();
             this.J5 = new Guna.UI2.WinForms.Guna2Button();
@@ -289,8 +295,6 @@ namespace MovieMunch
             this.A12 = new Guna.UI2.WinForms.Guna2Button();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.label25 = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -317,14 +321,10 @@ namespace MovieMunch
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timeReserved = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.movieTitlelbl = new System.Windows.Forms.Label();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnReserveSeat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.gotoWatchListBtn = new Guna.UI2.WinForms.Guna2Button();
             this.gotoTicketFormBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -342,10 +342,26 @@ namespace MovieMunch
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.LoginBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.SignUpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.SignUpBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.changePicBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.prevPasswordInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.userProfileCustomHolder = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.saveUserNameOrPasswordBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.changeConfirmNewPasswordInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.changePasswordInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.changePrevEmailInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.saveUserPicOrNameBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.changeNewUsernameInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.RegularDealsPanel = new System.Windows.Forms.Panel();
             this.closeRegularDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -366,30 +382,17 @@ namespace MovieMunch
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label31 = new System.Windows.Forms.Label();
-            this.userProfileBtn = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.userProfileCustomHolder = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.saveUserChangesBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             regular2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(regular2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).BeginInit();
             this.seatReservationFlowLayoutPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.guna2Panel9.SuspendLayout();
+            this.guna2Panel8.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).BeginInit();
@@ -398,6 +401,9 @@ namespace MovieMunch
             this.bunifuPanel2.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).BeginInit();
             this.RegularDealsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.regular6)).BeginInit();
@@ -414,10 +420,6 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             this.guna2Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).BeginInit();
             this.SuspendLayout();
             // 
             // regular2
@@ -453,9 +455,16 @@ namespace MovieMunch
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.guna2Panel1.Controls.Add(this.StartDateHolder);
+            this.guna2Panel1.Controls.Add(this.guna2Panel9);
+            this.guna2Panel1.Controls.Add(this.guna2Panel8);
+            this.guna2Panel1.Controls.Add(this.guna2Panel4);
+            this.guna2Panel1.Controls.Add(this.availableTimeComboBox);
+            this.guna2Panel1.Controls.Add(this.label35);
+            this.guna2Panel1.Controls.Add(this.dateToWatchComboBox);
+            this.guna2Panel1.Controls.Add(this.DayHolder);
             this.guna2Panel1.Controls.Add(this.snackDealsBtn);
             this.guna2Panel1.Controls.Add(this.regularDealsBtn);
-            this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.J6);
             this.guna2Panel1.Controls.Add(this.J5);
@@ -699,7 +708,6 @@ namespace MovieMunch
             this.guna2Panel1.Controls.Add(this.A12);
             this.guna2Panel1.Controls.Add(this.label28);
             this.guna2Panel1.Controls.Add(this.label27);
-            this.guna2Panel1.Controls.Add(this.panel3);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.label25);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
@@ -726,13 +734,156 @@ namespace MovieMunch
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.panel1);
-            this.guna2Panel1.Controls.Add(this.timeReserved);
-            this.guna2Panel1.Controls.Add(this.panel4);
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(814, 700);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // StartDateHolder
+            // 
+            this.StartDateHolder.AutoSize = true;
+            this.StartDateHolder.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDateHolder.ForeColor = System.Drawing.Color.White;
+            this.StartDateHolder.Location = new System.Drawing.Point(254, 120);
+            this.StartDateHolder.Name = "StartDateHolder";
+            this.StartDateHolder.Size = new System.Drawing.Size(81, 24);
+            this.StartDateHolder.TabIndex = 729;
+            this.StartDateHolder.Text = "start time";
+            // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2Panel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2Panel9.BorderThickness = 2;
+            this.guna2Panel9.Controls.Add(this.label36);
+            this.guna2Panel9.Location = new System.Drawing.Point(15, 576);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(791, 36);
+            this.guna2Panel9.TabIndex = 728;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(285, 6);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(252, 22);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "FOODS AND BEVERAGES";
+            // 
+            // guna2Panel8
+            // 
+            this.guna2Panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2Panel8.BorderThickness = 2;
+            this.guna2Panel8.Controls.Add(this.label1);
+            this.guna2Panel8.Location = new System.Drawing.Point(15, 157);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(791, 36);
+            this.guna2Panel8.TabIndex = 727;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(357, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "SCREEN";
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2Panel4.BorderThickness = 2;
+            this.guna2Panel4.Controls.Add(this.movieTitlelbl);
+            this.guna2Panel4.Location = new System.Drawing.Point(15, 19);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(791, 48);
+            this.guna2Panel4.TabIndex = 726;
+            // 
+            // movieTitlelbl
+            // 
+            this.movieTitlelbl.AutoSize = true;
+            this.movieTitlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movieTitlelbl.ForeColor = System.Drawing.Color.White;
+            this.movieTitlelbl.Location = new System.Drawing.Point(8, 6);
+            this.movieTitlelbl.Name = "movieTitlelbl";
+            this.movieTitlelbl.Size = new System.Drawing.Size(179, 36);
+            this.movieTitlelbl.TabIndex = 0;
+            this.movieTitlelbl.Text = "TRENDING";
+            // 
+            // availableTimeComboBox
+            // 
+            this.availableTimeComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.availableTimeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.availableTimeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.availableTimeComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.availableTimeComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.availableTimeComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.availableTimeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.availableTimeComboBox.ItemHeight = 30;
+            this.availableTimeComboBox.Items.AddRange(new object[] {
+            "SUNDAY",
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY"});
+            this.availableTimeComboBox.Location = new System.Drawing.Point(690, 109);
+            this.availableTimeComboBox.Name = "availableTimeComboBox";
+            this.availableTimeComboBox.Size = new System.Drawing.Size(106, 36);
+            this.availableTimeComboBox.TabIndex = 725;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(572, 80);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(110, 24);
+            this.label35.TabIndex = 724;
+            this.label35.Text = "Choose Date";
+            // 
+            // dateToWatchComboBox
+            // 
+            this.dateToWatchComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.dateToWatchComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dateToWatchComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dateToWatchComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.dateToWatchComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.dateToWatchComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dateToWatchComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.dateToWatchComboBox.ItemHeight = 30;
+            this.dateToWatchComboBox.Items.AddRange(new object[] {
+            "SUNDAY",
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY"});
+            this.dateToWatchComboBox.Location = new System.Drawing.Point(576, 110);
+            this.dateToWatchComboBox.Name = "dateToWatchComboBox";
+            this.dateToWatchComboBox.Size = new System.Drawing.Size(106, 36);
+            this.dateToWatchComboBox.TabIndex = 723;
+            // 
+            // DayHolder
+            // 
+            this.DayHolder.AutoSize = true;
+            this.DayHolder.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DayHolder.ForeColor = System.Drawing.Color.White;
+            this.DayHolder.Location = new System.Drawing.Point(252, 80);
+            this.DayHolder.Name = "DayHolder";
+            this.DayHolder.Size = new System.Drawing.Size(119, 33);
+            this.DayHolder.TabIndex = 721;
+            this.DayHolder.Text = "start time";
+            this.DayHolder.Click += new System.EventHandler(this.movieScheduleHolder_Click);
             // 
             // snackDealsBtn
             // 
@@ -770,23 +921,16 @@ namespace MovieMunch
             this.regularDealsBtn.Text = "SELECT FROM REGULAR DEALS CATEGORY";
             this.regularDealsBtn.Click += new System.EventHandler(this.regularDealsBtn_Click);
             // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Location = new System.Drawing.Point(543, 107);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(263, 40);
-            this.guna2Panel4.TabIndex = 679;
-            // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(539, 82);
+            this.label3.Location = new System.Drawing.Point(15, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 22);
+            this.label3.Size = new System.Drawing.Size(254, 55);
             this.label3.TabIndex = 1;
             this.label3.Text = "SHOW TIME";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // J6
             // 
@@ -4633,7 +4777,7 @@ namespace MovieMunch
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(451, 615);
+            this.label28.Location = new System.Drawing.Point(451, 622);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(102, 16);
             this.label28.TabIndex = 678;
@@ -4644,33 +4788,11 @@ namespace MovieMunch
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(15, 615);
+            this.label27.Location = new System.Drawing.Point(15, 622);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(132, 16);
             this.label27.TabIndex = 677;
             this.label27.Text = "REGULAR DEALS";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label26);
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(15, 571);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(791, 30);
-            this.panel3.TabIndex = 676;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(274, 3);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(252, 22);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "FOODS AND BEVERAGES";
             // 
             // guna2Button3
             // 
@@ -4970,66 +5092,6 @@ namespace MovieMunch
             this.label2.TabIndex = 650;
             this.label2.Text = "A";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(15, 159);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(791, 30);
-            this.panel1.TabIndex = 408;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(346, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SCREEN";
-            // 
-            // timeReserved
-            // 
-            this.timeReserved.BorderRadius = 15;
-            this.timeReserved.Checked = true;
-            this.timeReserved.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.timeReserved.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeReserved.ForeColor = System.Drawing.Color.White;
-            this.timeReserved.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.timeReserved.Location = new System.Drawing.Point(15, 82);
-            this.timeReserved.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeReserved.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeReserved.Name = "timeReserved";
-            this.timeReserved.Size = new System.Drawing.Size(314, 65);
-            this.timeReserved.TabIndex = 409;
-            this.timeReserved.Value = new System.DateTime(2024, 11, 8, 2, 18, 30, 867);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.movieTitlelbl);
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(15, 29);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(791, 50);
-            this.panel4.TabIndex = 407;
-            // 
-            // movieTitlelbl
-            // 
-            this.movieTitlelbl.AutoSize = true;
-            this.movieTitlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.movieTitlelbl.ForeColor = System.Drawing.Color.White;
-            this.movieTitlelbl.Location = new System.Drawing.Point(3, 6);
-            this.movieTitlelbl.Name = "movieTitlelbl";
-            this.movieTitlelbl.Size = new System.Drawing.Size(179, 36);
-            this.movieTitlelbl.TabIndex = 0;
-            this.movieTitlelbl.Text = "TRENDING";
-            // 
             // guna2VScrollBar1
             // 
             this.guna2VScrollBar1.BindingContainer = this.seatReservationFlowLayoutPanel;
@@ -5077,6 +5139,21 @@ namespace MovieMunch
             this.guna2Panel3.Size = new System.Drawing.Size(170, 591);
             this.guna2Panel3.TabIndex = 685;
             // 
+            // userProfileBtn
+            // 
+            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
+            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userProfileBtn.FillColor = System.Drawing.Color.Transparent;
+            this.userProfileBtn.ImageRotate = 0F;
+            this.userProfileBtn.Location = new System.Drawing.Point(39, 47);
+            this.userProfileBtn.Name = "userProfileBtn";
+            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userProfileBtn.Size = new System.Drawing.Size(100, 100);
+            this.userProfileBtn.TabIndex = 72;
+            this.userProfileBtn.TabStop = false;
+            this.userProfileBtn.Click += new System.EventHandler(this.userProfileBtn_Click_2);
+            // 
             // LogoutBtn
             // 
             this.LogoutBtn.BorderRadius = 10;
@@ -5094,6 +5171,7 @@ namespace MovieMunch
             this.LogoutBtn.Size = new System.Drawing.Size(144, 35);
             this.LogoutBtn.TabIndex = 48;
             this.LogoutBtn.Text = "LOG OUT";
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
             // gotoWatchListBtn
             // 
@@ -5315,11 +5393,11 @@ namespace MovieMunch
             this.bunifuFormCaptionButton1.ColorContrastOnClick = 30;
             this.bunifuFormCaptionButton1.ColorContrastOnHover = 30;
             this.bunifuFormCaptionButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges5;
             this.bunifuFormCaptionButton1.DefaultBorderColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DefaultColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -5353,11 +5431,11 @@ namespace MovieMunch
             this.bunifuIconButton5.ColorContrastOnClick = 30;
             this.bunifuIconButton5.ColorContrastOnHover = 30;
             this.bunifuIconButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuIconButton5.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.bunifuIconButton5.CustomizableEdges = borderEdges6;
             this.bunifuIconButton5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton5.Image = null;
             this.bunifuIconButton5.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -5399,373 +5477,583 @@ namespace MovieMunch
             this.bunifuPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.bunifuPanel3.BorderRadius = 3;
             this.bunifuPanel3.BorderThickness = 2;
-            this.bunifuPanel3.Controls.Add(this.bunifuButton21);
-            this.bunifuPanel3.Controls.Add(this.bunifuButton22);
-            this.bunifuPanel3.Controls.Add(this.LoginBtn);
             this.bunifuPanel3.Controls.Add(this.SignUpBtn);
-            this.bunifuPanel3.Location = new System.Drawing.Point(-7, 58);
+            this.bunifuPanel3.Controls.Add(this.LoginBtn);
+            this.bunifuPanel3.Controls.Add(this.guna2Button4);
+            this.bunifuPanel3.Location = new System.Drawing.Point(65, 58);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(210, 382);
+            this.bunifuPanel3.Size = new System.Drawing.Size(138, 382);
             this.bunifuPanel3.TabIndex = 51;
-            // 
-            // bunifuButton21
-            // 
-            this.bunifuButton21.AllowAnimations = true;
-            this.bunifuButton21.AllowMouseEffects = true;
-            this.bunifuButton21.AllowToggling = false;
-            this.bunifuButton21.AnimationSpeed = 200;
-            this.bunifuButton21.AutoGenerateColors = false;
-            this.bunifuButton21.AutoRoundBorders = false;
-            this.bunifuButton21.AutoSizeLeftIcon = true;
-            this.bunifuButton21.AutoSizeRightIcon = true;
-            this.bunifuButton21.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton21.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton21.BackgroundImage")));
-            this.bunifuButton21.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton21.ButtonText = "USER CUSTOMIZATION";
-            this.bunifuButton21.ButtonTextMarginLeft = 0;
-            this.bunifuButton21.ColorContrastOnClick = 45;
-            this.bunifuButton21.ColorContrastOnHover = 45;
-            this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges3;
-            this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton21.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton21.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton21.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton21.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton21.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton21.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bunifuButton21.IconMarginLeft = 11;
-            this.bunifuButton21.IconPadding = 10;
-            this.bunifuButton21.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton21.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton21.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bunifuButton21.IconSize = 25;
-            this.bunifuButton21.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton21.IdleBorderRadius = 20;
-            this.bunifuButton21.IdleBorderThickness = 1;
-            this.bunifuButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton21.IdleIconLeftImage = null;
-            this.bunifuButton21.IdleIconRightImage = null;
-            this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(20, 71);
-            this.bunifuButton21.Name = "bunifuButton21";
-            this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton21.OnDisabledState.BorderRadius = 20;
-            this.bunifuButton21.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton21.OnDisabledState.BorderThickness = 1;
-            this.bunifuButton21.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton21.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton21.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton21.OnDisabledState.IconRightImage = null;
-            this.bunifuButton21.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton21.onHoverState.BorderRadius = 20;
-            this.bunifuButton21.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton21.onHoverState.BorderThickness = 1;
-            this.bunifuButton21.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton21.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton21.onHoverState.IconLeftImage = null;
-            this.bunifuButton21.onHoverState.IconRightImage = null;
-            this.bunifuButton21.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton21.OnIdleState.BorderRadius = 20;
-            this.bunifuButton21.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton21.OnIdleState.BorderThickness = 1;
-            this.bunifuButton21.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton21.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton21.OnIdleState.IconLeftImage = null;
-            this.bunifuButton21.OnIdleState.IconRightImage = null;
-            this.bunifuButton21.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton21.OnPressedState.BorderRadius = 20;
-            this.bunifuButton21.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton21.OnPressedState.BorderThickness = 1;
-            this.bunifuButton21.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton21.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton21.OnPressedState.IconLeftImage = null;
-            this.bunifuButton21.OnPressedState.IconRightImage = null;
-            this.bunifuButton21.Size = new System.Drawing.Size(176, 39);
-            this.bunifuButton21.TabIndex = 2;
-            this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton21.TextMarginLeft = 0;
-            this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton21.UseDefaultRadiusAndThickness = true;
-            // 
-            // bunifuButton22
-            // 
-            this.bunifuButton22.AllowAnimations = true;
-            this.bunifuButton22.AllowMouseEffects = true;
-            this.bunifuButton22.AllowToggling = false;
-            this.bunifuButton22.AnimationSpeed = 200;
-            this.bunifuButton22.AutoGenerateColors = false;
-            this.bunifuButton22.AutoRoundBorders = false;
-            this.bunifuButton22.AutoSizeLeftIcon = true;
-            this.bunifuButton22.AutoSizeRightIcon = true;
-            this.bunifuButton22.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton22.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton22.BackgroundImage")));
-            this.bunifuButton22.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton22.ButtonText = "SECURITY";
-            this.bunifuButton22.ButtonTextMarginLeft = 0;
-            this.bunifuButton22.ColorContrastOnClick = 45;
-            this.bunifuButton22.ColorContrastOnHover = 45;
-            this.bunifuButton22.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bunifuButton22.CustomizableEdges = borderEdges4;
-            this.bunifuButton22.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton22.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton22.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton22.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton22.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuButton22.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton22.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton22.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton22.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bunifuButton22.IconMarginLeft = 11;
-            this.bunifuButton22.IconPadding = 10;
-            this.bunifuButton22.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton22.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton22.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bunifuButton22.IconSize = 25;
-            this.bunifuButton22.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton22.IdleBorderRadius = 20;
-            this.bunifuButton22.IdleBorderThickness = 1;
-            this.bunifuButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton22.IdleIconLeftImage = null;
-            this.bunifuButton22.IdleIconRightImage = null;
-            this.bunifuButton22.IndicateFocus = false;
-            this.bunifuButton22.Location = new System.Drawing.Point(20, 142);
-            this.bunifuButton22.Name = "bunifuButton22";
-            this.bunifuButton22.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton22.OnDisabledState.BorderRadius = 20;
-            this.bunifuButton22.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton22.OnDisabledState.BorderThickness = 1;
-            this.bunifuButton22.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton22.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton22.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton22.OnDisabledState.IconRightImage = null;
-            this.bunifuButton22.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton22.onHoverState.BorderRadius = 20;
-            this.bunifuButton22.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton22.onHoverState.BorderThickness = 1;
-            this.bunifuButton22.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton22.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton22.onHoverState.IconLeftImage = null;
-            this.bunifuButton22.onHoverState.IconRightImage = null;
-            this.bunifuButton22.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton22.OnIdleState.BorderRadius = 20;
-            this.bunifuButton22.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton22.OnIdleState.BorderThickness = 1;
-            this.bunifuButton22.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton22.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton22.OnIdleState.IconLeftImage = null;
-            this.bunifuButton22.OnIdleState.IconRightImage = null;
-            this.bunifuButton22.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton22.OnPressedState.BorderRadius = 20;
-            this.bunifuButton22.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton22.OnPressedState.BorderThickness = 1;
-            this.bunifuButton22.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton22.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton22.OnPressedState.IconLeftImage = null;
-            this.bunifuButton22.OnPressedState.IconRightImage = null;
-            this.bunifuButton22.Size = new System.Drawing.Size(176, 39);
-            this.bunifuButton22.TabIndex = 3;
-            this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton22.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton22.TextMarginLeft = 0;
-            this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton22.UseDefaultRadiusAndThickness = true;
-            // 
-            // LoginBtn
-            // 
-            this.LoginBtn.AllowAnimations = true;
-            this.LoginBtn.AllowMouseEffects = true;
-            this.LoginBtn.AllowToggling = false;
-            this.LoginBtn.AnimationSpeed = 200;
-            this.LoginBtn.AutoGenerateColors = false;
-            this.LoginBtn.AutoRoundBorders = false;
-            this.LoginBtn.AutoSizeLeftIcon = true;
-            this.LoginBtn.AutoSizeRightIcon = true;
-            this.LoginBtn.BackColor = System.Drawing.Color.Transparent;
-            this.LoginBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
-            this.LoginBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.LoginBtn.ButtonText = "Login";
-            this.LoginBtn.ButtonTextMarginLeft = 0;
-            this.LoginBtn.ColorContrastOnClick = 45;
-            this.LoginBtn.ColorContrastOnHover = 45;
-            this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.LoginBtn.CustomizableEdges = borderEdges5;
-            this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.LoginBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.LoginBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.LoginBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.LoginBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LoginBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.LoginBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.LoginBtn.IconMarginLeft = 11;
-            this.LoginBtn.IconPadding = 10;
-            this.LoginBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.LoginBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.LoginBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.LoginBtn.IconSize = 25;
-            this.LoginBtn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.LoginBtn.IdleBorderRadius = 20;
-            this.LoginBtn.IdleBorderThickness = 1;
-            this.LoginBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.LoginBtn.IdleIconLeftImage = null;
-            this.LoginBtn.IdleIconRightImage = null;
-            this.LoginBtn.IndicateFocus = false;
-            this.LoginBtn.Location = new System.Drawing.Point(20, 211);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.LoginBtn.OnDisabledState.BorderRadius = 20;
-            this.LoginBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.LoginBtn.OnDisabledState.BorderThickness = 1;
-            this.LoginBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.LoginBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.LoginBtn.OnDisabledState.IconLeftImage = null;
-            this.LoginBtn.OnDisabledState.IconRightImage = null;
-            this.LoginBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.LoginBtn.onHoverState.BorderRadius = 20;
-            this.LoginBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.LoginBtn.onHoverState.BorderThickness = 1;
-            this.LoginBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.LoginBtn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.onHoverState.IconLeftImage = null;
-            this.LoginBtn.onHoverState.IconRightImage = null;
-            this.LoginBtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.LoginBtn.OnIdleState.BorderRadius = 20;
-            this.LoginBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.LoginBtn.OnIdleState.BorderThickness = 1;
-            this.LoginBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.LoginBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.OnIdleState.IconLeftImage = null;
-            this.LoginBtn.OnIdleState.IconRightImage = null;
-            this.LoginBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.LoginBtn.OnPressedState.BorderRadius = 20;
-            this.LoginBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.LoginBtn.OnPressedState.BorderThickness = 1;
-            this.LoginBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.LoginBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.OnPressedState.IconLeftImage = null;
-            this.LoginBtn.OnPressedState.IconRightImage = null;
-            this.LoginBtn.Size = new System.Drawing.Size(176, 39);
-            this.LoginBtn.TabIndex = 0;
-            this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LoginBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LoginBtn.TextMarginLeft = 0;
-            this.LoginBtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.LoginBtn.UseDefaultRadiusAndThickness = true;
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // SignUpBtn
             // 
-            this.SignUpBtn.AllowAnimations = true;
-            this.SignUpBtn.AllowMouseEffects = true;
-            this.SignUpBtn.AllowToggling = false;
-            this.SignUpBtn.AnimationSpeed = 200;
-            this.SignUpBtn.AutoGenerateColors = false;
-            this.SignUpBtn.AutoRoundBorders = false;
-            this.SignUpBtn.AutoSizeLeftIcon = true;
-            this.SignUpBtn.AutoSizeRightIcon = true;
             this.SignUpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.SignUpBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SignUpBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SignUpBtn.BackgroundImage")));
-            this.SignUpBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.SignUpBtn.ButtonText = "Sign Up";
-            this.SignUpBtn.ButtonTextMarginLeft = 0;
-            this.SignUpBtn.ColorContrastOnClick = 45;
-            this.SignUpBtn.ColorContrastOnHover = 45;
-            this.SignUpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.SignUpBtn.CustomizableEdges = borderEdges6;
-            this.SignUpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.SignUpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.SignUpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.SignUpBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.SignUpBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.SignUpBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SignUpBtn.BorderRadius = 10;
+            this.SignUpBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.SignUpBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SignUpBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SignUpBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SignUpBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SignUpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.SignUpBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpBtn.ForeColor = System.Drawing.Color.White;
-            this.SignUpBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignUpBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.SignUpBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.SignUpBtn.IconMarginLeft = 11;
-            this.SignUpBtn.IconPadding = 10;
-            this.SignUpBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SignUpBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.SignUpBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.SignUpBtn.IconSize = 25;
-            this.SignUpBtn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SignUpBtn.IdleBorderRadius = 20;
-            this.SignUpBtn.IdleBorderThickness = 1;
-            this.SignUpBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SignUpBtn.IdleIconLeftImage = null;
-            this.SignUpBtn.IdleIconRightImage = null;
-            this.SignUpBtn.IndicateFocus = false;
-            this.SignUpBtn.Location = new System.Drawing.Point(20, 278);
+            this.SignUpBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SignUpBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.SignUpBtn.IndicateFocus = true;
+            this.SignUpBtn.Location = new System.Drawing.Point(20, 219);
             this.SignUpBtn.Name = "SignUpBtn";
-            this.SignUpBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.SignUpBtn.OnDisabledState.BorderRadius = 20;
-            this.SignUpBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.SignUpBtn.OnDisabledState.BorderThickness = 1;
-            this.SignUpBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.SignUpBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.SignUpBtn.OnDisabledState.IconLeftImage = null;
-            this.SignUpBtn.OnDisabledState.IconRightImage = null;
-            this.SignUpBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.SignUpBtn.onHoverState.BorderRadius = 20;
-            this.SignUpBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.SignUpBtn.onHoverState.BorderThickness = 1;
-            this.SignUpBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.SignUpBtn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.SignUpBtn.onHoverState.IconLeftImage = null;
-            this.SignUpBtn.onHoverState.IconRightImage = null;
-            this.SignUpBtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SignUpBtn.OnIdleState.BorderRadius = 20;
-            this.SignUpBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.SignUpBtn.OnIdleState.BorderThickness = 1;
-            this.SignUpBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SignUpBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.SignUpBtn.OnIdleState.IconLeftImage = null;
-            this.SignUpBtn.OnIdleState.IconRightImage = null;
-            this.SignUpBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.SignUpBtn.OnPressedState.BorderRadius = 20;
-            this.SignUpBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.SignUpBtn.OnPressedState.BorderThickness = 1;
-            this.SignUpBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.SignUpBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.SignUpBtn.OnPressedState.IconLeftImage = null;
-            this.SignUpBtn.OnPressedState.IconRightImage = null;
-            this.SignUpBtn.Size = new System.Drawing.Size(176, 39);
-            this.SignUpBtn.TabIndex = 1;
-            this.SignUpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SignUpBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SignUpBtn.TextMarginLeft = 0;
-            this.SignUpBtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.SignUpBtn.UseDefaultRadiusAndThickness = true;
+            this.SignUpBtn.Size = new System.Drawing.Size(176, 35);
+            this.SignUpBtn.TabIndex = 49;
+            this.SignUpBtn.Text = "SIGN UP";
             this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LoginBtn.BorderRadius = 10;
+            this.LoginBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.LoginBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoginBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoginBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoginBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoginBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.ForeColor = System.Drawing.Color.White;
+            this.LoginBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LoginBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.LoginBtn.IndicateFocus = true;
+            this.LoginBtn.Location = new System.Drawing.Point(20, 272);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(176, 35);
+            this.LoginBtn.TabIndex = 48;
+            this.LoginBtn.Text = "SIGN IN";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderRadius = 10;
+            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 25);
+            this.guna2Button4.IndicateFocus = true;
+            this.guna2Button4.Location = new System.Drawing.Point(20, 86);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(176, 35);
+            this.guna2Button4.TabIndex = 47;
+            this.guna2Button4.Text = "USER CUSTOMIZATION";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.flowLayoutPanel2.Controls.Add(this.panel5);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(197, 61);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(791, 376);
+            this.flowLayoutPanel2.TabIndex = 68;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.changePicBtn);
+            this.panel5.Controls.Add(this.guna2TextBox5);
+            this.panel5.Controls.Add(this.label32);
+            this.panel5.Controls.Add(this.prevPasswordInput);
+            this.panel5.Controls.Add(this.userProfileCustomHolder);
+            this.panel5.Controls.Add(this.saveUserNameOrPasswordBtn);
+            this.panel5.Controls.Add(this.changeConfirmNewPasswordInput);
+            this.panel5.Controls.Add(this.changePasswordInput);
+            this.panel5.Controls.Add(this.changePrevEmailInput);
+            this.panel5.Controls.Add(this.guna2TextBox3);
+            this.panel5.Controls.Add(this.guna2TextBox2);
+            this.panel5.Controls.Add(this.label33);
+            this.panel5.Controls.Add(this.label34);
+            this.panel5.Controls.Add(this.saveUserPicOrNameBtn);
+            this.panel5.Controls.Add(this.changeNewUsernameInput);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(725, 678);
+            this.panel5.TabIndex = 0;
+            // 
+            // changePicBtn
+            // 
+            this.changePicBtn.BackColor = System.Drawing.Color.Transparent;
+            this.changePicBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.changePicBtn.BorderRadius = 2;
+            this.changePicBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.changePicBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.changePicBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.changePicBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.changePicBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changePicBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.changePicBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changePicBtn.ForeColor = System.Drawing.Color.White;
+            this.changePicBtn.Image = ((System.Drawing.Image)(resources.GetObject("changePicBtn.Image")));
+            this.changePicBtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.changePicBtn.IndicateFocus = true;
+            this.changePicBtn.Location = new System.Drawing.Point(318, 140);
+            this.changePicBtn.Name = "changePicBtn";
+            this.changePicBtn.Size = new System.Drawing.Size(35, 35);
+            this.changePicBtn.TabIndex = 47;
+            this.changePicBtn.Click += new System.EventHandler(this.changePicBtn_Click);
+            // 
+            // guna2TextBox5
+            // 
+            this.guna2TextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2TextBox5.BorderRadius = 10;
+            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox5.DefaultText = "********";
+            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox5.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox5.Location = new System.Drawing.Point(209, 499);
+            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox5.Name = "guna2TextBox5";
+            this.guna2TextBox5.PasswordChar = '\0';
+            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.White;
+            this.guna2TextBox5.PlaceholderText = "";
+            this.guna2TextBox5.ReadOnly = true;
+            this.guna2TextBox5.SelectedText = "";
+            this.guna2TextBox5.Size = new System.Drawing.Size(508, 30);
+            this.guna2TextBox5.TabIndex = 74;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(36, 493);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(173, 36);
+            this.label32.TabIndex = 73;
+            this.label32.Text = "NEW PASSWORD:";
+            // 
+            // prevPasswordInput
+            // 
+            this.prevPasswordInput.BackColor = System.Drawing.Color.Transparent;
+            this.prevPasswordInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.prevPasswordInput.BorderRadius = 8;
+            this.prevPasswordInput.BorderThickness = 2;
+            this.prevPasswordInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.prevPasswordInput.DefaultText = "";
+            this.prevPasswordInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.prevPasswordInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.prevPasswordInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prevPasswordInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.prevPasswordInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.prevPasswordInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevPasswordInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.prevPasswordInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.prevPasswordInput.IconRight = ((System.Drawing.Image)(resources.GetObject("prevPasswordInput.IconRight")));
+            this.prevPasswordInput.IconRightSize = new System.Drawing.Size(18, 18);
+            this.prevPasswordInput.Location = new System.Drawing.Point(42, 453);
+            this.prevPasswordInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.prevPasswordInput.Name = "prevPasswordInput";
+            this.prevPasswordInput.PasswordChar = '\0';
+            this.prevPasswordInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.prevPasswordInput.PlaceholderText = "TYPE PREVIOUS PASSWORD";
+            this.prevPasswordInput.SelectedText = "";
+            this.prevPasswordInput.Size = new System.Drawing.Size(675, 30);
+            this.prevPasswordInput.TabIndex = 72;
+            // 
+            // userProfileCustomHolder
+            // 
+            this.userProfileCustomHolder.BackColor = System.Drawing.Color.Transparent;
+            this.userProfileCustomHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileCustomHolder.BackgroundImage")));
+            this.userProfileCustomHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userProfileCustomHolder.FillColor = System.Drawing.Color.Transparent;
+            this.userProfileCustomHolder.ImageRotate = 0F;
+            this.userProfileCustomHolder.Location = new System.Drawing.Point(309, 26);
+            this.userProfileCustomHolder.Name = "userProfileCustomHolder";
+            this.userProfileCustomHolder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.userProfileCustomHolder.Size = new System.Drawing.Size(150, 150);
+            this.userProfileCustomHolder.TabIndex = 71;
+            this.userProfileCustomHolder.TabStop = false;
+            // 
+            // saveUserNameOrPasswordBtn
+            // 
+            this.saveUserNameOrPasswordBtn.AllowAnimations = true;
+            this.saveUserNameOrPasswordBtn.AllowMouseEffects = true;
+            this.saveUserNameOrPasswordBtn.AllowToggling = false;
+            this.saveUserNameOrPasswordBtn.AnimationSpeed = 200;
+            this.saveUserNameOrPasswordBtn.AutoGenerateColors = false;
+            this.saveUserNameOrPasswordBtn.AutoRoundBorders = false;
+            this.saveUserNameOrPasswordBtn.AutoSizeLeftIcon = true;
+            this.saveUserNameOrPasswordBtn.AutoSizeRightIcon = true;
+            this.saveUserNameOrPasswordBtn.BackColor = System.Drawing.Color.Transparent;
+            this.saveUserNameOrPasswordBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserNameOrPasswordBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveUserNameOrPasswordBtn.BackgroundImage")));
+            this.saveUserNameOrPasswordBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserNameOrPasswordBtn.ButtonText = "SAVE CHANGES";
+            this.saveUserNameOrPasswordBtn.ButtonTextMarginLeft = 0;
+            this.saveUserNameOrPasswordBtn.ColorContrastOnClick = 45;
+            this.saveUserNameOrPasswordBtn.ColorContrastOnHover = 45;
+            this.saveUserNameOrPasswordBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.saveUserNameOrPasswordBtn.CustomizableEdges = borderEdges7;
+            this.saveUserNameOrPasswordBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.saveUserNameOrPasswordBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.saveUserNameOrPasswordBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.saveUserNameOrPasswordBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.saveUserNameOrPasswordBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.saveUserNameOrPasswordBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveUserNameOrPasswordBtn.ForeColor = System.Drawing.Color.White;
+            this.saveUserNameOrPasswordBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveUserNameOrPasswordBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.saveUserNameOrPasswordBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.saveUserNameOrPasswordBtn.IconMarginLeft = 11;
+            this.saveUserNameOrPasswordBtn.IconPadding = 10;
+            this.saveUserNameOrPasswordBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saveUserNameOrPasswordBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.saveUserNameOrPasswordBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.saveUserNameOrPasswordBtn.IconSize = 25;
+            this.saveUserNameOrPasswordBtn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserNameOrPasswordBtn.IdleBorderRadius = 20;
+            this.saveUserNameOrPasswordBtn.IdleBorderThickness = 1;
+            this.saveUserNameOrPasswordBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserNameOrPasswordBtn.IdleIconLeftImage = null;
+            this.saveUserNameOrPasswordBtn.IdleIconRightImage = null;
+            this.saveUserNameOrPasswordBtn.IndicateFocus = false;
+            this.saveUserNameOrPasswordBtn.Location = new System.Drawing.Point(299, 623);
+            this.saveUserNameOrPasswordBtn.Name = "saveUserNameOrPasswordBtn";
+            this.saveUserNameOrPasswordBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.saveUserNameOrPasswordBtn.OnDisabledState.BorderRadius = 20;
+            this.saveUserNameOrPasswordBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserNameOrPasswordBtn.OnDisabledState.BorderThickness = 1;
+            this.saveUserNameOrPasswordBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.saveUserNameOrPasswordBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.saveUserNameOrPasswordBtn.OnDisabledState.IconLeftImage = null;
+            this.saveUserNameOrPasswordBtn.OnDisabledState.IconRightImage = null;
+            this.saveUserNameOrPasswordBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveUserNameOrPasswordBtn.onHoverState.BorderRadius = 20;
+            this.saveUserNameOrPasswordBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserNameOrPasswordBtn.onHoverState.BorderThickness = 1;
+            this.saveUserNameOrPasswordBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveUserNameOrPasswordBtn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.saveUserNameOrPasswordBtn.onHoverState.IconLeftImage = null;
+            this.saveUserNameOrPasswordBtn.onHoverState.IconRightImage = null;
+            this.saveUserNameOrPasswordBtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserNameOrPasswordBtn.OnIdleState.BorderRadius = 20;
+            this.saveUserNameOrPasswordBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserNameOrPasswordBtn.OnIdleState.BorderThickness = 1;
+            this.saveUserNameOrPasswordBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserNameOrPasswordBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.saveUserNameOrPasswordBtn.OnIdleState.IconLeftImage = null;
+            this.saveUserNameOrPasswordBtn.OnIdleState.IconRightImage = null;
+            this.saveUserNameOrPasswordBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveUserNameOrPasswordBtn.OnPressedState.BorderRadius = 20;
+            this.saveUserNameOrPasswordBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserNameOrPasswordBtn.OnPressedState.BorderThickness = 1;
+            this.saveUserNameOrPasswordBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveUserNameOrPasswordBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.saveUserNameOrPasswordBtn.OnPressedState.IconLeftImage = null;
+            this.saveUserNameOrPasswordBtn.OnPressedState.IconRightImage = null;
+            this.saveUserNameOrPasswordBtn.Size = new System.Drawing.Size(176, 39);
+            this.saveUserNameOrPasswordBtn.TabIndex = 68;
+            this.saveUserNameOrPasswordBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saveUserNameOrPasswordBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.saveUserNameOrPasswordBtn.TextMarginLeft = 0;
+            this.saveUserNameOrPasswordBtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.saveUserNameOrPasswordBtn.UseDefaultRadiusAndThickness = true;
+            this.saveUserNameOrPasswordBtn.Click += new System.EventHandler(this.saveUserNameOrPasswordBtn_Click);
+            // 
+            // changeConfirmNewPasswordInput
+            // 
+            this.changeConfirmNewPasswordInput.BackColor = System.Drawing.Color.Transparent;
+            this.changeConfirmNewPasswordInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.changeConfirmNewPasswordInput.BorderRadius = 8;
+            this.changeConfirmNewPasswordInput.BorderThickness = 2;
+            this.changeConfirmNewPasswordInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.changeConfirmNewPasswordInput.DefaultText = "";
+            this.changeConfirmNewPasswordInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.changeConfirmNewPasswordInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.changeConfirmNewPasswordInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changeConfirmNewPasswordInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changeConfirmNewPasswordInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.changeConfirmNewPasswordInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeConfirmNewPasswordInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changeConfirmNewPasswordInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.changeConfirmNewPasswordInput.IconRight = ((System.Drawing.Image)(resources.GetObject("changeConfirmNewPasswordInput.IconRight")));
+            this.changeConfirmNewPasswordInput.IconRightSize = new System.Drawing.Size(18, 18);
+            this.changeConfirmNewPasswordInput.Location = new System.Drawing.Point(42, 578);
+            this.changeConfirmNewPasswordInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.changeConfirmNewPasswordInput.Name = "changeConfirmNewPasswordInput";
+            this.changeConfirmNewPasswordInput.PasswordChar = '\0';
+            this.changeConfirmNewPasswordInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changeConfirmNewPasswordInput.PlaceholderText = "CONFIRM NEW PASSWORD";
+            this.changeConfirmNewPasswordInput.SelectedText = "";
+            this.changeConfirmNewPasswordInput.Size = new System.Drawing.Size(675, 30);
+            this.changeConfirmNewPasswordInput.TabIndex = 67;
+            // 
+            // changePasswordInput
+            // 
+            this.changePasswordInput.BackColor = System.Drawing.Color.Transparent;
+            this.changePasswordInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.changePasswordInput.BorderRadius = 8;
+            this.changePasswordInput.BorderThickness = 2;
+            this.changePasswordInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.changePasswordInput.DefaultText = "";
+            this.changePasswordInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.changePasswordInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.changePasswordInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changePasswordInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changePasswordInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.changePasswordInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changePasswordInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changePasswordInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.changePasswordInput.IconRight = ((System.Drawing.Image)(resources.GetObject("changePasswordInput.IconRight")));
+            this.changePasswordInput.IconRightSize = new System.Drawing.Size(18, 18);
+            this.changePasswordInput.Location = new System.Drawing.Point(42, 540);
+            this.changePasswordInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.changePasswordInput.Name = "changePasswordInput";
+            this.changePasswordInput.PasswordChar = '\0';
+            this.changePasswordInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changePasswordInput.PlaceholderText = "TYPE TO CHANGE PASSWORD";
+            this.changePasswordInput.SelectedText = "";
+            this.changePasswordInput.Size = new System.Drawing.Size(675, 30);
+            this.changePasswordInput.TabIndex = 66;
+            // 
+            // changePrevEmailInput
+            // 
+            this.changePrevEmailInput.BackColor = System.Drawing.Color.Transparent;
+            this.changePrevEmailInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.changePrevEmailInput.BorderRadius = 8;
+            this.changePrevEmailInput.BorderThickness = 2;
+            this.changePrevEmailInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.changePrevEmailInput.DefaultText = "";
+            this.changePrevEmailInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.changePrevEmailInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.changePrevEmailInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changePrevEmailInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changePrevEmailInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.changePrevEmailInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changePrevEmailInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changePrevEmailInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.changePrevEmailInput.IconRight = ((System.Drawing.Image)(resources.GetObject("changePrevEmailInput.IconRight")));
+            this.changePrevEmailInput.IconRightSize = new System.Drawing.Size(18, 18);
+            this.changePrevEmailInput.Location = new System.Drawing.Point(42, 366);
+            this.changePrevEmailInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.changePrevEmailInput.Name = "changePrevEmailInput";
+            this.changePrevEmailInput.PasswordChar = '\0';
+            this.changePrevEmailInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changePrevEmailInput.PlaceholderText = "TYPE PREVIOUS EMAIL";
+            this.changePrevEmailInput.SelectedText = "";
+            this.changePrevEmailInput.Size = new System.Drawing.Size(675, 30);
+            this.changePrevEmailInput.TabIndex = 65;
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2TextBox3.BorderRadius = 10;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "********";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox3.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox3.Location = new System.Drawing.Point(264, 414);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.White;
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.ReadOnly = true;
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.Size = new System.Drawing.Size(453, 30);
+            this.guna2TextBox3.TabIndex = 64;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2TextBox2.BorderRadius = 10;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "example@gmail.com";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.guna2TextBox2.Location = new System.Drawing.Point(217, 319);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.White;
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.ReadOnly = true;
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(501, 30);
+            this.guna2TextBox2.TabIndex = 63;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(37, 408);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(225, 36);
+            this.label33.TabIndex = 62;
+            this.label33.Text = "PREVIOUS PASSWORD:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(37, 313);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(177, 36);
+            this.label34.TabIndex = 61;
+            this.label34.Text = "PREVIOUS EMAIL:";
+            // 
+            // saveUserPicOrNameBtn
+            // 
+            this.saveUserPicOrNameBtn.AllowAnimations = true;
+            this.saveUserPicOrNameBtn.AllowMouseEffects = true;
+            this.saveUserPicOrNameBtn.AllowToggling = false;
+            this.saveUserPicOrNameBtn.AnimationSpeed = 200;
+            this.saveUserPicOrNameBtn.AutoGenerateColors = false;
+            this.saveUserPicOrNameBtn.AutoRoundBorders = false;
+            this.saveUserPicOrNameBtn.AutoSizeLeftIcon = true;
+            this.saveUserPicOrNameBtn.AutoSizeRightIcon = true;
+            this.saveUserPicOrNameBtn.BackColor = System.Drawing.Color.Transparent;
+            this.saveUserPicOrNameBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserPicOrNameBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveUserPicOrNameBtn.BackgroundImage")));
+            this.saveUserPicOrNameBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserPicOrNameBtn.ButtonText = "APPLY CHANGES";
+            this.saveUserPicOrNameBtn.ButtonTextMarginLeft = 0;
+            this.saveUserPicOrNameBtn.ColorContrastOnClick = 45;
+            this.saveUserPicOrNameBtn.ColorContrastOnHover = 45;
+            this.saveUserPicOrNameBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.saveUserPicOrNameBtn.CustomizableEdges = borderEdges8;
+            this.saveUserPicOrNameBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.saveUserPicOrNameBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.saveUserPicOrNameBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.saveUserPicOrNameBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.saveUserPicOrNameBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.saveUserPicOrNameBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveUserPicOrNameBtn.ForeColor = System.Drawing.Color.White;
+            this.saveUserPicOrNameBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveUserPicOrNameBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.saveUserPicOrNameBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.saveUserPicOrNameBtn.IconMarginLeft = 11;
+            this.saveUserPicOrNameBtn.IconPadding = 10;
+            this.saveUserPicOrNameBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saveUserPicOrNameBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.saveUserPicOrNameBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.saveUserPicOrNameBtn.IconSize = 25;
+            this.saveUserPicOrNameBtn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserPicOrNameBtn.IdleBorderRadius = 20;
+            this.saveUserPicOrNameBtn.IdleBorderThickness = 1;
+            this.saveUserPicOrNameBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserPicOrNameBtn.IdleIconLeftImage = null;
+            this.saveUserPicOrNameBtn.IdleIconRightImage = null;
+            this.saveUserPicOrNameBtn.IndicateFocus = false;
+            this.saveUserPicOrNameBtn.Location = new System.Drawing.Point(299, 254);
+            this.saveUserPicOrNameBtn.Name = "saveUserPicOrNameBtn";
+            this.saveUserPicOrNameBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.saveUserPicOrNameBtn.OnDisabledState.BorderRadius = 20;
+            this.saveUserPicOrNameBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserPicOrNameBtn.OnDisabledState.BorderThickness = 1;
+            this.saveUserPicOrNameBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.saveUserPicOrNameBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.saveUserPicOrNameBtn.OnDisabledState.IconLeftImage = null;
+            this.saveUserPicOrNameBtn.OnDisabledState.IconRightImage = null;
+            this.saveUserPicOrNameBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveUserPicOrNameBtn.onHoverState.BorderRadius = 20;
+            this.saveUserPicOrNameBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserPicOrNameBtn.onHoverState.BorderThickness = 1;
+            this.saveUserPicOrNameBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveUserPicOrNameBtn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.saveUserPicOrNameBtn.onHoverState.IconLeftImage = null;
+            this.saveUserPicOrNameBtn.onHoverState.IconRightImage = null;
+            this.saveUserPicOrNameBtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserPicOrNameBtn.OnIdleState.BorderRadius = 20;
+            this.saveUserPicOrNameBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserPicOrNameBtn.OnIdleState.BorderThickness = 1;
+            this.saveUserPicOrNameBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.saveUserPicOrNameBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.saveUserPicOrNameBtn.OnIdleState.IconLeftImage = null;
+            this.saveUserPicOrNameBtn.OnIdleState.IconRightImage = null;
+            this.saveUserPicOrNameBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveUserPicOrNameBtn.OnPressedState.BorderRadius = 20;
+            this.saveUserPicOrNameBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.saveUserPicOrNameBtn.OnPressedState.BorderThickness = 1;
+            this.saveUserPicOrNameBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveUserPicOrNameBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.saveUserPicOrNameBtn.OnPressedState.IconLeftImage = null;
+            this.saveUserPicOrNameBtn.OnPressedState.IconRightImage = null;
+            this.saveUserPicOrNameBtn.Size = new System.Drawing.Size(176, 39);
+            this.saveUserPicOrNameBtn.TabIndex = 60;
+            this.saveUserPicOrNameBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saveUserPicOrNameBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.saveUserPicOrNameBtn.TextMarginLeft = 0;
+            this.saveUserPicOrNameBtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.saveUserPicOrNameBtn.UseDefaultRadiusAndThickness = true;
+            this.saveUserPicOrNameBtn.Click += new System.EventHandler(this.saveUserPicOrNameBtn_Click);
+            // 
+            // changeNewUsernameInput
+            // 
+            this.changeNewUsernameInput.BackColor = System.Drawing.Color.Transparent;
+            this.changeNewUsernameInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.changeNewUsernameInput.BorderRadius = 8;
+            this.changeNewUsernameInput.BorderThickness = 2;
+            this.changeNewUsernameInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.changeNewUsernameInput.DefaultText = "";
+            this.changeNewUsernameInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.changeNewUsernameInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.changeNewUsernameInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changeNewUsernameInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.changeNewUsernameInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.changeNewUsernameInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeNewUsernameInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changeNewUsernameInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.changeNewUsernameInput.IconRight = ((System.Drawing.Image)(resources.GetObject("changeNewUsernameInput.IconRight")));
+            this.changeNewUsernameInput.IconRightSize = new System.Drawing.Size(18, 18);
+            this.changeNewUsernameInput.Location = new System.Drawing.Point(234, 202);
+            this.changeNewUsernameInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.changeNewUsernameInput.Name = "changeNewUsernameInput";
+            this.changeNewUsernameInput.PasswordChar = '\0';
+            this.changeNewUsernameInput.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.changeNewUsernameInput.PlaceholderText = "USERNAME";
+            this.changeNewUsernameInput.SelectedText = "";
+            this.changeNewUsernameInput.Size = new System.Drawing.Size(313, 30);
+            this.changeNewUsernameInput.TabIndex = 58;
+            this.changeNewUsernameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RegularDealsPanel
             // 
@@ -5998,443 +6286,15 @@ namespace MovieMunch
             // 
             // label31
             // 
+            this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(108, 6);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(604, 36);
+            this.label31.Size = new System.Drawing.Size(580, 36);
             this.label31.TabIndex = 0;
             this.label31.Text = "SELECTED DESIRED SNACKS DEALS";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // userProfileBtn
-            // 
-            this.userProfileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.userProfileBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileBtn.BackgroundImage")));
-            this.userProfileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userProfileBtn.FillColor = System.Drawing.Color.Transparent;
-            this.userProfileBtn.ImageRotate = 0F;
-            this.userProfileBtn.Location = new System.Drawing.Point(39, 47);
-            this.userProfileBtn.Name = "userProfileBtn";
-            this.userProfileBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userProfileBtn.Size = new System.Drawing.Size(100, 100);
-            this.userProfileBtn.TabIndex = 72;
-            this.userProfileBtn.TabStop = false;
-            this.userProfileBtn.Click += new System.EventHandler(this.userProfileBtn_Click_2);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.flowLayoutPanel2.Controls.Add(this.panel5);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(195, 61);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(794, 376);
-            this.flowLayoutPanel2.TabIndex = 68;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.userProfileCustomHolder);
-            this.panel5.Controls.Add(this.bunifuButton23);
-            this.panel5.Controls.Add(this.guna2TextBox6);
-            this.panel5.Controls.Add(this.guna2TextBox5);
-            this.panel5.Controls.Add(this.guna2TextBox4);
-            this.panel5.Controls.Add(this.guna2TextBox3);
-            this.panel5.Controls.Add(this.guna2TextBox2);
-            this.panel5.Controls.Add(this.label32);
-            this.panel5.Controls.Add(this.label33);
-            this.panel5.Controls.Add(this.saveUserChangesBtn);
-            this.panel5.Controls.Add(this.guna2TextBox1);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(759, 610);
-            this.panel5.TabIndex = 0;
-            // 
-            // userProfileCustomHolder
-            // 
-            this.userProfileCustomHolder.BackColor = System.Drawing.Color.Transparent;
-            this.userProfileCustomHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userProfileCustomHolder.BackgroundImage")));
-            this.userProfileCustomHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userProfileCustomHolder.FillColor = System.Drawing.Color.Transparent;
-            this.userProfileCustomHolder.ImageRotate = 0F;
-            this.userProfileCustomHolder.Location = new System.Drawing.Point(309, 26);
-            this.userProfileCustomHolder.Name = "userProfileCustomHolder";
-            this.userProfileCustomHolder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userProfileCustomHolder.Size = new System.Drawing.Size(150, 150);
-            this.userProfileCustomHolder.TabIndex = 71;
-            this.userProfileCustomHolder.TabStop = false;
-            // 
-            // bunifuButton23
-            // 
-            this.bunifuButton23.AllowAnimations = true;
-            this.bunifuButton23.AllowMouseEffects = true;
-            this.bunifuButton23.AllowToggling = false;
-            this.bunifuButton23.AnimationSpeed = 200;
-            this.bunifuButton23.AutoGenerateColors = false;
-            this.bunifuButton23.AutoRoundBorders = false;
-            this.bunifuButton23.AutoSizeLeftIcon = true;
-            this.bunifuButton23.AutoSizeRightIcon = true;
-            this.bunifuButton23.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton23.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton23.BackgroundImage")));
-            this.bunifuButton23.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton23.ButtonText = "SAVE CHANGES";
-            this.bunifuButton23.ButtonTextMarginLeft = 0;
-            this.bunifuButton23.ColorContrastOnClick = 45;
-            this.bunifuButton23.ColorContrastOnHover = 45;
-            this.bunifuButton23.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.bunifuButton23.CustomizableEdges = borderEdges7;
-            this.bunifuButton23.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton23.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton23.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton23.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton23.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuButton23.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton23.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton23.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton23.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bunifuButton23.IconMarginLeft = 11;
-            this.bunifuButton23.IconPadding = 10;
-            this.bunifuButton23.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton23.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton23.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bunifuButton23.IconSize = 25;
-            this.bunifuButton23.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton23.IdleBorderRadius = 20;
-            this.bunifuButton23.IdleBorderThickness = 1;
-            this.bunifuButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton23.IdleIconLeftImage = null;
-            this.bunifuButton23.IdleIconRightImage = null;
-            this.bunifuButton23.IndicateFocus = false;
-            this.bunifuButton23.Location = new System.Drawing.Point(299, 544);
-            this.bunifuButton23.Name = "bunifuButton23";
-            this.bunifuButton23.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton23.OnDisabledState.BorderRadius = 20;
-            this.bunifuButton23.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton23.OnDisabledState.BorderThickness = 1;
-            this.bunifuButton23.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton23.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton23.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton23.OnDisabledState.IconRightImage = null;
-            this.bunifuButton23.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton23.onHoverState.BorderRadius = 20;
-            this.bunifuButton23.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton23.onHoverState.BorderThickness = 1;
-            this.bunifuButton23.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton23.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton23.onHoverState.IconLeftImage = null;
-            this.bunifuButton23.onHoverState.IconRightImage = null;
-            this.bunifuButton23.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton23.OnIdleState.BorderRadius = 20;
-            this.bunifuButton23.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton23.OnIdleState.BorderThickness = 1;
-            this.bunifuButton23.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.bunifuButton23.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton23.OnIdleState.IconLeftImage = null;
-            this.bunifuButton23.OnIdleState.IconRightImage = null;
-            this.bunifuButton23.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton23.OnPressedState.BorderRadius = 20;
-            this.bunifuButton23.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton23.OnPressedState.BorderThickness = 1;
-            this.bunifuButton23.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton23.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton23.OnPressedState.IconLeftImage = null;
-            this.bunifuButton23.OnPressedState.IconRightImage = null;
-            this.bunifuButton23.Size = new System.Drawing.Size(176, 39);
-            this.bunifuButton23.TabIndex = 68;
-            this.bunifuButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton23.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton23.TextMarginLeft = 0;
-            this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton23.UseDefaultRadiusAndThickness = true;
-            // 
-            // guna2TextBox6
-            // 
-            this.guna2TextBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.guna2TextBox6.BorderRadius = 8;
-            this.guna2TextBox6.BorderThickness = 2;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "CONFIRM NEW PASSWORD";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2TextBox6.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox6.IconRight")));
-            this.guna2TextBox6.IconRightSize = new System.Drawing.Size(18, 18);
-            this.guna2TextBox6.Location = new System.Drawing.Point(42, 499);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.ReadOnly = true;
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(675, 30);
-            this.guna2TextBox6.TabIndex = 67;
-            // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.guna2TextBox5.BorderRadius = 8;
-            this.guna2TextBox5.BorderThickness = 2;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "TYPE TO CHANGE PASSWORD";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2TextBox5.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox5.IconRight")));
-            this.guna2TextBox5.IconRightSize = new System.Drawing.Size(18, 18);
-            this.guna2TextBox5.Location = new System.Drawing.Point(42, 461);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.ReadOnly = true;
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(675, 30);
-            this.guna2TextBox5.TabIndex = 66;
-            // 
-            // guna2TextBox4
-            // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.guna2TextBox4.BorderRadius = 8;
-            this.guna2TextBox4.BorderThickness = 2;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "TYPE TO CHANGE USERNAME";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2TextBox4.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox4.IconRight")));
-            this.guna2TextBox4.IconRightSize = new System.Drawing.Size(18, 18);
-            this.guna2TextBox4.Location = new System.Drawing.Point(42, 366);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.ReadOnly = true;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(675, 30);
-            this.guna2TextBox4.TabIndex = 65;
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.guna2TextBox3.BorderRadius = 10;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "********";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(166, 414);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.White;
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.ReadOnly = true;
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(552, 30);
-            this.guna2TextBox3.TabIndex = 64;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "USERNAME";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(166, 319);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.White;
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(552, 30);
-            this.guna2TextBox2.TabIndex = 63;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(37, 408);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(126, 36);
-            this.label32.TabIndex = 62;
-            this.label32.Text = "PASSWORD:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(37, 313);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(123, 36);
-            this.label33.TabIndex = 61;
-            this.label33.Text = "USERNAME:";
-            // 
-            // saveUserChangesBtn
-            // 
-            this.saveUserChangesBtn.AllowAnimations = true;
-            this.saveUserChangesBtn.AllowMouseEffects = true;
-            this.saveUserChangesBtn.AllowToggling = false;
-            this.saveUserChangesBtn.AnimationSpeed = 200;
-            this.saveUserChangesBtn.AutoGenerateColors = false;
-            this.saveUserChangesBtn.AutoRoundBorders = false;
-            this.saveUserChangesBtn.AutoSizeLeftIcon = true;
-            this.saveUserChangesBtn.AutoSizeRightIcon = true;
-            this.saveUserChangesBtn.BackColor = System.Drawing.Color.Transparent;
-            this.saveUserChangesBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.saveUserChangesBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveUserChangesBtn.BackgroundImage")));
-            this.saveUserChangesBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.saveUserChangesBtn.ButtonText = "SAVE CHANGES";
-            this.saveUserChangesBtn.ButtonTextMarginLeft = 0;
-            this.saveUserChangesBtn.ColorContrastOnClick = 45;
-            this.saveUserChangesBtn.ColorContrastOnHover = 45;
-            this.saveUserChangesBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.saveUserChangesBtn.CustomizableEdges = borderEdges8;
-            this.saveUserChangesBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.saveUserChangesBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.saveUserChangesBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.saveUserChangesBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.saveUserChangesBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.saveUserChangesBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveUserChangesBtn.ForeColor = System.Drawing.Color.White;
-            this.saveUserChangesBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveUserChangesBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.saveUserChangesBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.saveUserChangesBtn.IconMarginLeft = 11;
-            this.saveUserChangesBtn.IconPadding = 10;
-            this.saveUserChangesBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saveUserChangesBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.saveUserChangesBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.saveUserChangesBtn.IconSize = 25;
-            this.saveUserChangesBtn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.saveUserChangesBtn.IdleBorderRadius = 20;
-            this.saveUserChangesBtn.IdleBorderThickness = 1;
-            this.saveUserChangesBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.saveUserChangesBtn.IdleIconLeftImage = null;
-            this.saveUserChangesBtn.IdleIconRightImage = null;
-            this.saveUserChangesBtn.IndicateFocus = false;
-            this.saveUserChangesBtn.Location = new System.Drawing.Point(299, 254);
-            this.saveUserChangesBtn.Name = "saveUserChangesBtn";
-            this.saveUserChangesBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.saveUserChangesBtn.OnDisabledState.BorderRadius = 20;
-            this.saveUserChangesBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.saveUserChangesBtn.OnDisabledState.BorderThickness = 1;
-            this.saveUserChangesBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.saveUserChangesBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.saveUserChangesBtn.OnDisabledState.IconLeftImage = null;
-            this.saveUserChangesBtn.OnDisabledState.IconRightImage = null;
-            this.saveUserChangesBtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.saveUserChangesBtn.onHoverState.BorderRadius = 20;
-            this.saveUserChangesBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.saveUserChangesBtn.onHoverState.BorderThickness = 1;
-            this.saveUserChangesBtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.saveUserChangesBtn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.saveUserChangesBtn.onHoverState.IconLeftImage = null;
-            this.saveUserChangesBtn.onHoverState.IconRightImage = null;
-            this.saveUserChangesBtn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.saveUserChangesBtn.OnIdleState.BorderRadius = 20;
-            this.saveUserChangesBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.saveUserChangesBtn.OnIdleState.BorderThickness = 1;
-            this.saveUserChangesBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.saveUserChangesBtn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.saveUserChangesBtn.OnIdleState.IconLeftImage = null;
-            this.saveUserChangesBtn.OnIdleState.IconRightImage = null;
-            this.saveUserChangesBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.saveUserChangesBtn.OnPressedState.BorderRadius = 20;
-            this.saveUserChangesBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.saveUserChangesBtn.OnPressedState.BorderThickness = 1;
-            this.saveUserChangesBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.saveUserChangesBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.saveUserChangesBtn.OnPressedState.IconLeftImage = null;
-            this.saveUserChangesBtn.OnPressedState.IconRightImage = null;
-            this.saveUserChangesBtn.Size = new System.Drawing.Size(176, 39);
-            this.saveUserChangesBtn.TabIndex = 60;
-            this.saveUserChangesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.saveUserChangesBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.saveUserChangesBtn.TextMarginLeft = 0;
-            this.saveUserChangesBtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.saveUserChangesBtn.UseDefaultRadiusAndThickness = true;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.guna2TextBox1.BorderRadius = 8;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "USERNAME";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.guna2TextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconRight")));
-            this.guna2TextBox1.IconRightSize = new System.Drawing.Size(18, 18);
-            this.guna2TextBox1.Location = new System.Drawing.Point(234, 202);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(313, 30);
-            this.guna2TextBox1.TabIndex = 58;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SeatReservation
             // 
@@ -6442,7 +6302,6 @@ namespace MovieMunch
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.guna2VScrollBar1);
-            this.Controls.Add(this.userPanel);
             this.Controls.Add(this.addToWatchLaterBtn);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnReserveSeat);
@@ -6451,6 +6310,7 @@ namespace MovieMunch
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.SnacksDealsPanel);
             this.Controls.Add(this.RegularDealsPanel);
+            this.Controls.Add(this.userPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeatReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -6460,13 +6320,14 @@ namespace MovieMunch
             this.seatReservationFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.guna2Panel9.ResumeLayout(false);
+            this.guna2Panel9.PerformLayout();
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).EndInit();
@@ -6476,6 +6337,10 @@ namespace MovieMunch
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.bunifuPanel3.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).EndInit();
             this.RegularDealsPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.regular6)).EndInit();
@@ -6493,11 +6358,7 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userProfileBtn)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).EndInit();
+            this.guna2Panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6506,8 +6367,6 @@ namespace MovieMunch
         #endregion
         private System.Windows.Forms.FlowLayoutPanel seatReservationFlowLayoutPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label26;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.Label label25;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
@@ -6774,10 +6633,6 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Button A14;
         private Guna.UI2.WinForms.Guna2Button A13;
         private Guna.UI2.WinForms.Guna2Button A12;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker timeReserved;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label movieTitlelbl;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
@@ -6793,7 +6648,6 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Button gotoTicketFormBtn;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
         private Guna.UI2.WinForms.Guna2Button HomeBtn;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CircleButton addToWatchLaterBtn;
         private System.Windows.Forms.Panel userPanel;
@@ -6803,10 +6657,6 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label29;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 LoginBtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 SignUpBtn;
         private Guna.UI2.WinForms.Guna2Button snackDealsBtn;
         private Guna.UI2.WinForms.Guna2Button regularDealsBtn;
         private System.Windows.Forms.Panel RegularDealsPanel;
@@ -6832,16 +6682,33 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileCustomHolder;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton23;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2Button changePicBtn;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private System.Windows.Forms.Label label32;
+        private Guna.UI2.WinForms.Guna2TextBox prevPasswordInput;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileCustomHolder;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 saveUserNameOrPasswordBtn;
+        private Guna.UI2.WinForms.Guna2TextBox changeConfirmNewPasswordInput;
+        private Guna.UI2.WinForms.Guna2TextBox changePasswordInput;
+        private Guna.UI2.WinForms.Guna2TextBox changePrevEmailInput;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 saveUserChangesBtn;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label34;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 saveUserPicOrNameBtn;
+        private Guna.UI2.WinForms.Guna2TextBox changeNewUsernameInput;
+        private Guna.UI2.WinForms.Guna2Button SignUpBtn;
+        private Guna.UI2.WinForms.Guna2Button LoginBtn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private System.Windows.Forms.Label DayHolder;
+        private System.Windows.Forms.Label label35;
+        private Guna.UI2.WinForms.Guna2ComboBox dateToWatchComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox availableTimeComboBox;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label StartDateHolder;
     }
 }

@@ -240,11 +240,11 @@
     <Compile Include="Admin\ComingSoonMoviesForm.Designer.cs">
       <DependentUpon>ComingSoonMoviesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EmployeeList.cs">
+    <Compile Include="Admin\EmployeesManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\EmployeeList.Designer.cs">
-      <DependentUpon>EmployeeList.cs</DependentUpon>
+    <Compile Include="Admin\EmployeesManagementForm.Designer.cs">
+      <DependentUpon>EmployeesManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\FilmsInCinemaForm.cs">
       <SubType>Form</SubType>
@@ -294,12 +294,6 @@
     <Compile Include="Backend\Services\Reports.cs" />
     <Compile Include="Backend\Services\SeatReservationServices.cs" />
     <Compile Include="Backend\Services\UserService.cs" />
-    <Compile Include="Frontend\Forms\Components\editEmail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\Components\editEmail.Designer.cs">
-      <DependentUpon>editEmail.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frontend\Forms\Components\foods.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,12 +324,6 @@
     <Compile Include="Frontend\Forms\Components\resibo.Designer.cs">
       <DependentUpon>resibo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frontend\Forms\Components\RegistrationModal.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\Components\RegistrationModal.Designer.cs">
-      <DependentUpon>RegistrationModal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frontend\Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,12 +342,6 @@
     <Compile Include="Frontend\Forms\SeatReservation.Designer.cs">
       <DependentUpon>SeatReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frontend\Forms\SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frontend\Forms\SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frontend\Forms\TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,8 +359,8 @@
     <EmbeddedResource Include="Admin\ComingSoonMoviesForm.resx">
       <DependentUpon>ComingSoonMoviesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\EmployeeList.resx">
-      <DependentUpon>EmployeeList.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\EmployeesManagementForm.resx">
+      <DependentUpon>EmployeesManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FilmsInCinemaForm.resx">
       <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
@@ -395,9 +377,6 @@
     <EmbeddedResource Include="Admin\CinemaFoodDeals.resx">
       <DependentUpon>CinemaFoodDeals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\Components\editEmail.resx">
-      <DependentUpon>editEmail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\Components\foods.resx">
       <DependentUpon>foods.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,9 +392,6 @@
     <EmbeddedResource Include="Frontend\Forms\Components\resibo.resx">
       <DependentUpon>resibo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\Components\RegistrationModal.resx">
-      <DependentUpon>RegistrationModal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -425,9 +401,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\SeatReservation.resx">
       <DependentUpon>SeatReservation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frontend\Forms\SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frontend\Forms\TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>

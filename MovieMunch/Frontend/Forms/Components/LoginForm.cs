@@ -24,7 +24,6 @@ namespace MovieMunch
             _profilePic = profilePic;
         }
 
-
         private void LoginBtn_Click_1(object sender, EventArgs e)
         {
             UserService userService = new UserService();
@@ -33,7 +32,6 @@ namespace MovieMunch
 
             termsAndRegMessage.Visible = false;
 
-            // Check if email or password fields are empty
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
                 termsAndRegMessage.Visible = true;
@@ -41,7 +39,6 @@ namespace MovieMunch
                 return;
             }
 
-            // Attempt admin login
             AdminAccount admin = userService.AdminLogin(email, password);
 
             if (admin != null) // Admin login successful
@@ -74,7 +71,6 @@ namespace MovieMunch
 
                 if (isLogin)
                 {
-                    // User login successful
                     this.Close();
                 }
                 else

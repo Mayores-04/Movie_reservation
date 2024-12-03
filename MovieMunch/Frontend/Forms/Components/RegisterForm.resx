@@ -121,7 +121,7 @@
   <data name="regEmailInput.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAaBJREFUWEft1zssA3EAx/HziMEjIhHxSkg8IhIjRgxGg8dADJjFhJiEGBgMEovN
+        DwAACw8BkvkDpQAAAaBJREFUWEft1zssA3EAx/HziMEjIhHxSkg8IhIjRgxGg8dADJjFhJiEGBgMEovN
         LEyEhQkTCQmLxSAek8UriEf4/prepW1a7V1bd8P9kk/Tu6T/+/X+//81Nfz4cZBqDzF+PCTwsoQ2F83A
         KjOkNy5mGFaZc9TrwIU04QRWmXdcogcZ+I/oOl24xhOsMhPYxAemkO5CuZiGrreBSVhltGYKMIsXbKMI
         6Ugx1vCIBei6YWvGXMBZ6McrTlGLVKYGGvcBIzoRTNQyZrSYL/CMXiQ7bfp8NzSeNkvgAReSP8so+djC
@@ -134,7 +134,7 @@
   <data name="regNameInput.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAlhJREFUWEft10+ITVEAx/FnhjEWombBaEZDSGMhyiyGSc3syMLOVkSG0mDDzBJL
+        DwAACw8BkvkDpQAAAlhJREFUWEft10+ITVEAx/FnhjEWombBaEZDSGMhyiyGSc3syMLOVkSG0mDDzBJL
         UsafhWayQWnCjiYRKVbYISQbf5LxP//n+73Nqadm5t375ty3Mb/69DrnnnPun3fvufcUJpNTqlGPpWhA
         FSqe2diF+3iHz3iPB9iBmahIVuAh/o74gU/4VVR3D0uQaxbgBdzhVxzFWjRjNQ7Bg3O77azPJdNxFe7o
         ORZitCzDM9juGuwXPe3wr/iDVVaME7fb7jdarYidE/BsvTppEq7iqaQUOTfg4PuTUun0wPY3k1Lk3IWD
@@ -150,7 +150,7 @@
   <data name="regPasswordInput.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAeBJREFUWEftmLFLVVEcgJ+rk9AfkIFTUDSFbe3aEg6BQ9FkS25BoKJERINDQ4tD
+        DwAACw8BkvkDpQAAAeBJREFUWEftmLFLVVEcgJ+rk9AfkIFTUDSFbe3aEg6BQ9FkS25BoKJERINDQ4tD
         boro0NBQLhU6GJGbuqkgaIMiDS2R1PcdPNt799377jki4gcfj9/h/H7vx33vnnPubVwEenASV3Af/+BP
         /IxPsRfPBJv4jf8K/IsvsAuz4NX4gvELvQqPsQ+v4i18gJ8wzvmO5iVnGf2CA7znQAEDuIvO/+pASp6j
         hf1/XHegBNfwGM175kAqdtCiIyEqzzCaZ1PdDtQlFrShTlhD84dCVJM3aLHXIarONJr/NkQ18a6xmFeo
@@ -164,7 +164,7 @@
   <data name="regConfirmPasswordInput.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAKLJJREFUeF7t3S2UbcW5LuC4yMhIZCQSiUQikUhkJDIOGYmM3BKJjERGRkYikbH3
+        vgAADr4B6kKxwAAAKLJJREFUeF7t3S2UbcW5LuC4yMhIZCQSiUQikUhkJDIOGYmM3BKJjERGRkYikbH3
         1ntJX5rd1d011/pqrjlnPc8Y7xjnjMPZe6+/WV/9/wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA5Xz+v3zd8reP8kPLP9/Jjy0f//990/L0
         5/6xBQB4gL+0pDFO4/z3ljTcP7f8n53yS0v+zn+05N/wRcunLQBAkTT26YF/aPl3S69BPlL+05KRhr+2
