@@ -1,9 +1,8 @@
 ﻿using System;
 
-
-namespace MovieMunch
+namespace MovieMunch.Admin
 {
-    partial class LoadingForm
+    public partial class AdminLoadingForm
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Timer timer;
@@ -21,7 +20,7 @@ namespace MovieMunch
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLoadingForm));
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();

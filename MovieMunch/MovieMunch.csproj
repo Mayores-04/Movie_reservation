@@ -252,6 +252,12 @@
     <Compile Include="Admin\FilmsInCinemaForm.Designer.cs">
       <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminLoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLoadingForm.Designer.cs">
+      <DependentUpon>AdminLoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\MainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FilmsInCinemaForm.resx">
       <DependentUpon>FilmsInCinemaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminLoadingForm.resx">
+      <DependentUpon>AdminLoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\MainAdmin.resx">
       <DependentUpon>MainAdmin.cs</DependentUpon>

@@ -52,24 +52,10 @@ namespace MovieMunch
 
             if (admin != null)  
             {
-                DialogResult result = MessageBox.Show(
-                    $"Login successful as Admin ({admin.employeeName}). Do you want to open the Admin interface?",
-                    "Admin Login",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question
-                );
-
-                if (result == DialogResult.Yes)
-                {
-                    MainAdmin mainAdmin = new MainAdmin();
-                    mainAdmin.SetUserNamme(admin.employeeName, admin.employeeProfilePic);
-                    mainAdmin.Show();
-                    this.Close();
-                }
-                else
-                {
-                    return;
-                }
+                AdminLoadingForm adminLoginForm = new AdminLoadingForm();
+                adminLoginForm.setUserNamme(admin.employeeName, admin.employeeProfilePic);
+                adminLoginForm.Show();
+                this.Close();
             }
             else
             {
