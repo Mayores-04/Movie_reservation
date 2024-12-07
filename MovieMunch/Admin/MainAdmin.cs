@@ -244,11 +244,6 @@ namespace MovieMunch.Admin
             LoadingForm loadingForm = new LoadingForm();
             loadingForm.Show();
             this.Close();
-
-            //SetUserNamme(_userName, _profilePic);
-            //MainPage mainPage = new MainPage();
-            //mainPage.Visible = true;
-            //this.Close();
         }
 
         private void settingBtn_Click(object sender, EventArgs e)

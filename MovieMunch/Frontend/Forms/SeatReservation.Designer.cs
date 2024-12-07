@@ -366,24 +366,50 @@ namespace MovieMunch
             this.RegularDealsPanel = new System.Windows.Forms.Panel();
             this.closeRegularDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.regularDealsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.reg1 = new System.Windows.Forms.Panel();
-            this.reg2 = new System.Windows.Forms.Panel();
-            this.reg3 = new System.Windows.Forms.Panel();
-            this.reg4 = new System.Windows.Forms.Panel();
-            this.reg5 = new System.Windows.Forms.Panel();
-            this.reg6 = new System.Windows.Forms.Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.SnacksDealsPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.snacksFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.snack1 = new System.Windows.Forms.Panel();
-            this.snack2 = new System.Windows.Forms.Panel();
-            this.snack3 = new System.Windows.Forms.Panel();
-            this.snack4 = new System.Windows.Forms.Panel();
-            this.snack5 = new System.Windows.Forms.Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.closeSnackDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.reg2 = new System.Windows.Forms.Panel();
+            this.reg1 = new System.Windows.Forms.Panel();
+            this.regularDealsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.reg1NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg1panel = new System.Windows.Forms.Panel();
+            this.buyFoodsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.reg2panel = new System.Windows.Forms.Panel();
+            this.reg2NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.reg5panel = new System.Windows.Forms.Panel();
+            this.reg5NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg5 = new System.Windows.Forms.Panel();
+            this.reg6panel = new System.Windows.Forms.Panel();
+            this.reg6NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg6 = new System.Windows.Forms.Panel();
+            this.reg3panel = new System.Windows.Forms.Panel();
+            this.reg3NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg3 = new System.Windows.Forms.Panel();
+            this.reg4panel = new System.Windows.Forms.Panel();
+            this.reg4NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg4 = new System.Windows.Forms.Panel();
+            this.snackFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.snack1panel = new System.Windows.Forms.Panel();
+            this.snack1NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.snack1 = new System.Windows.Forms.Panel();
+            this.snack2panel = new System.Windows.Forms.Panel();
+            this.snack2NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.snack2 = new System.Windows.Forms.Panel();
+            this.snack3panel = new System.Windows.Forms.Panel();
+            this.snack3NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.snack3 = new System.Windows.Forms.Panel();
+            this.snack4panel = new System.Windows.Forms.Panel();
+            this.snack4NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.snack4 = new System.Windows.Forms.Panel();
+            this.snack5panel = new System.Windows.Forms.Panel();
+            this.snack5NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.snack5 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.snackBuyFoodBtn = new Guna.UI2.WinForms.Guna2Button();
             label30 = new System.Windows.Forms.Label();
             label31 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -407,12 +433,36 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).BeginInit();
             this.RegularDealsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.regularDealsFlowLayoutPanel.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.SnacksDealsPanel.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.snacksFlowLayoutPanel.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
+            this.regularDealsFlowLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg1NumericUpDown)).BeginInit();
+            this.reg1panel.SuspendLayout();
+            this.reg2panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg2NumericUpDown)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.reg5panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg5NumericUpDown)).BeginInit();
+            this.reg6panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg6NumericUpDown)).BeginInit();
+            this.reg3panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg3NumericUpDown)).BeginInit();
+            this.reg4panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg4NumericUpDown)).BeginInit();
+            this.snackFlowLayoutPanel.SuspendLayout();
+            this.snack1panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.snack1NumericUpDown)).BeginInit();
+            this.snack2panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.snack2NumericUpDown)).BeginInit();
+            this.snack3panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.snack3NumericUpDown)).BeginInit();
+            this.snack4panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.snack4NumericUpDown)).BeginInit();
+            this.snack5panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.snack5NumericUpDown)).BeginInit();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // label30
@@ -6114,68 +6164,6 @@ namespace MovieMunch
             this.panel2.Size = new System.Drawing.Size(911, 393);
             this.panel2.TabIndex = 66;
             // 
-            // regularDealsFlowLayoutPanel
-            // 
-            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg1);
-            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg2);
-            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg3);
-            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg4);
-            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg5);
-            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg6);
-            this.regularDealsFlowLayoutPanel.Location = new System.Drawing.Point(92, 68);
-            this.regularDealsFlowLayoutPanel.Name = "regularDealsFlowLayoutPanel";
-            this.regularDealsFlowLayoutPanel.Size = new System.Drawing.Size(744, 307);
-            this.regularDealsFlowLayoutPanel.TabIndex = 2;
-            this.regularDealsFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.regularDealsFlowLayoutPanel_Paint);
-            // 
-            // reg1
-            // 
-            this.reg1.Location = new System.Drawing.Point(20, 20);
-            this.reg1.Margin = new System.Windows.Forms.Padding(20);
-            this.reg1.Name = "reg1";
-            this.reg1.Size = new System.Drawing.Size(205, 119);
-            this.reg1.TabIndex = 0;
-            // 
-            // reg2
-            // 
-            this.reg2.Location = new System.Drawing.Point(265, 20);
-            this.reg2.Margin = new System.Windows.Forms.Padding(20);
-            this.reg2.Name = "reg2";
-            this.reg2.Size = new System.Drawing.Size(205, 119);
-            this.reg2.TabIndex = 1;
-            // 
-            // reg3
-            // 
-            this.reg3.Location = new System.Drawing.Point(510, 20);
-            this.reg3.Margin = new System.Windows.Forms.Padding(20);
-            this.reg3.Name = "reg3";
-            this.reg3.Size = new System.Drawing.Size(205, 119);
-            this.reg3.TabIndex = 1;
-            // 
-            // reg4
-            // 
-            this.reg4.Location = new System.Drawing.Point(20, 179);
-            this.reg4.Margin = new System.Windows.Forms.Padding(20);
-            this.reg4.Name = "reg4";
-            this.reg4.Size = new System.Drawing.Size(205, 126);
-            this.reg4.TabIndex = 1;
-            // 
-            // reg5
-            // 
-            this.reg5.Location = new System.Drawing.Point(265, 179);
-            this.reg5.Margin = new System.Windows.Forms.Padding(20);
-            this.reg5.Name = "reg5";
-            this.reg5.Size = new System.Drawing.Size(205, 119);
-            this.reg5.TabIndex = 1;
-            // 
-            // reg6
-            // 
-            this.reg6.Location = new System.Drawing.Point(510, 179);
-            this.reg6.Margin = new System.Windows.Forms.Padding(20);
-            this.reg6.Name = "reg6";
-            this.reg6.Size = new System.Drawing.Size(205, 119);
-            this.reg6.TabIndex = 2;
-            // 
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
@@ -6201,65 +6189,12 @@ namespace MovieMunch
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.panel6.Controls.Add(this.snacksFlowLayoutPanel);
+            this.panel6.Controls.Add(this.snackFlowLayoutPanel);
             this.panel6.Controls.Add(this.guna2Panel7);
             this.panel6.Location = new System.Drawing.Point(1, 66);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(911, 393);
             this.panel6.TabIndex = 66;
-            // 
-            // snacksFlowLayoutPanel
-            // 
-            this.snacksFlowLayoutPanel.Controls.Add(this.snack1);
-            this.snacksFlowLayoutPanel.Controls.Add(this.snack2);
-            this.snacksFlowLayoutPanel.Controls.Add(this.snack3);
-            this.snacksFlowLayoutPanel.Controls.Add(this.snack4);
-            this.snacksFlowLayoutPanel.Controls.Add(this.snack5);
-            this.snacksFlowLayoutPanel.Location = new System.Drawing.Point(92, 68);
-            this.snacksFlowLayoutPanel.Name = "snacksFlowLayoutPanel";
-            this.snacksFlowLayoutPanel.Size = new System.Drawing.Size(744, 307);
-            this.snacksFlowLayoutPanel.TabIndex = 1;
-            this.snacksFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.snacksFlowLayoutPanel_Paint_1);
-            // 
-            // snack1
-            // 
-            this.snack1.Location = new System.Drawing.Point(20, 20);
-            this.snack1.Margin = new System.Windows.Forms.Padding(20);
-            this.snack1.Name = "snack1";
-            this.snack1.Size = new System.Drawing.Size(205, 119);
-            this.snack1.TabIndex = 0;
-            // 
-            // snack2
-            // 
-            this.snack2.Location = new System.Drawing.Point(265, 20);
-            this.snack2.Margin = new System.Windows.Forms.Padding(20);
-            this.snack2.Name = "snack2";
-            this.snack2.Size = new System.Drawing.Size(205, 119);
-            this.snack2.TabIndex = 1;
-            // 
-            // snack3
-            // 
-            this.snack3.Location = new System.Drawing.Point(510, 20);
-            this.snack3.Margin = new System.Windows.Forms.Padding(20);
-            this.snack3.Name = "snack3";
-            this.snack3.Size = new System.Drawing.Size(205, 119);
-            this.snack3.TabIndex = 1;
-            // 
-            // snack4
-            // 
-            this.snack4.Location = new System.Drawing.Point(20, 179);
-            this.snack4.Margin = new System.Windows.Forms.Padding(20);
-            this.snack4.Name = "snack4";
-            this.snack4.Size = new System.Drawing.Size(205, 126);
-            this.snack4.TabIndex = 1;
-            // 
-            // snack5
-            // 
-            this.snack5.Location = new System.Drawing.Point(265, 179);
-            this.snack5.Margin = new System.Windows.Forms.Padding(20);
-            this.snack5.Name = "snack5";
-            this.snack5.Size = new System.Drawing.Size(205, 119);
-            this.snack5.TabIndex = 1;
             // 
             // guna2Panel7
             // 
@@ -6293,20 +6228,447 @@ namespace MovieMunch
             this.closeSnackDealsBtn.TextOffset = new System.Drawing.Point(1, -3);
             this.closeSnackDealsBtn.Click += new System.EventHandler(this.closeSnackDealsBtn_Click);
             // 
+            // reg2
+            // 
+            this.reg2.Location = new System.Drawing.Point(17, 17);
+            this.reg2.Margin = new System.Windows.Forms.Padding(20);
+            this.reg2.Name = "reg2";
+            this.reg2.Size = new System.Drawing.Size(205, 119);
+            this.reg2.TabIndex = 1;
+            // 
+            // reg1
+            // 
+            this.reg1.Location = new System.Drawing.Point(17, 17);
+            this.reg1.Margin = new System.Windows.Forms.Padding(20);
+            this.reg1.Name = "reg1";
+            this.reg1.Size = new System.Drawing.Size(205, 119);
+            this.reg1.TabIndex = 0;
+            // 
+            // regularDealsFlowLayoutPanel
+            // 
+            this.regularDealsFlowLayoutPanel.AutoScroll = true;
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg1panel);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg2panel);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg3panel);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg4panel);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg5panel);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg6panel);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.panel4);
+            this.regularDealsFlowLayoutPanel.Location = new System.Drawing.Point(85, 68);
+            this.regularDealsFlowLayoutPanel.Name = "regularDealsFlowLayoutPanel";
+            this.regularDealsFlowLayoutPanel.Size = new System.Drawing.Size(778, 307);
+            this.regularDealsFlowLayoutPanel.TabIndex = 2;
+            this.regularDealsFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.regularDealsFlowLayoutPanel_Paint);
+            // 
+            // reg1NumericUpDown
+            // 
+            this.reg1NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg1NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg1NumericUpDown.BorderRadius = 15;
+            this.reg1NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg1NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg1NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg1NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg1NumericUpDown.Name = "reg1NumericUpDown";
+            this.reg1NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg1NumericUpDown.TabIndex = 3;
+            this.reg1NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg1panel
+            // 
+            this.reg1panel.Controls.Add(this.reg1NumericUpDown);
+            this.reg1panel.Controls.Add(this.reg1);
+            this.reg1panel.Location = new System.Drawing.Point(3, 3);
+            this.reg1panel.Name = "reg1panel";
+            this.reg1panel.Size = new System.Drawing.Size(238, 199);
+            this.reg1panel.TabIndex = 3;
+            // 
+            // buyFoodsBtn
+            // 
+            this.buyFoodsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.buyFoodsBtn.BorderRadius = 15;
+            this.buyFoodsBtn.BorderThickness = 2;
+            this.buyFoodsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buyFoodsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buyFoodsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buyFoodsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buyFoodsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.buyFoodsBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyFoodsBtn.ForeColor = System.Drawing.Color.White;
+            this.buyFoodsBtn.Location = new System.Drawing.Point(17, 14);
+            this.buyFoodsBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.buyFoodsBtn.Name = "buyFoodsBtn";
+            this.buyFoodsBtn.Size = new System.Drawing.Size(693, 48);
+            this.buyFoodsBtn.TabIndex = 4;
+            this.buyFoodsBtn.Text = "SAVE";
+            this.buyFoodsBtn.Click += new System.EventHandler(this.buyFoodsBtn_Click);
+            // 
+            // reg2panel
+            // 
+            this.reg2panel.Controls.Add(this.reg2NumericUpDown);
+            this.reg2panel.Controls.Add(this.reg2);
+            this.reg2panel.Location = new System.Drawing.Point(247, 3);
+            this.reg2panel.Name = "reg2panel";
+            this.reg2panel.Size = new System.Drawing.Size(238, 199);
+            this.reg2panel.TabIndex = 4;
+            // 
+            // reg2NumericUpDown
+            // 
+            this.reg2NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg2NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg2NumericUpDown.BorderRadius = 15;
+            this.reg2NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg2NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg2NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg2NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg2NumericUpDown.Name = "reg2NumericUpDown";
+            this.reg2NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg2NumericUpDown.TabIndex = 3;
+            this.reg2NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.buyFoodsBtn);
+            this.panel4.Location = new System.Drawing.Point(3, 413);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(726, 77);
+            this.panel4.TabIndex = 5;
+            // 
+            // reg5panel
+            // 
+            this.reg5panel.Controls.Add(this.reg5NumericUpDown);
+            this.reg5panel.Controls.Add(this.reg5);
+            this.reg5panel.Location = new System.Drawing.Point(247, 208);
+            this.reg5panel.Name = "reg5panel";
+            this.reg5panel.Size = new System.Drawing.Size(238, 199);
+            this.reg5panel.TabIndex = 6;
+            // 
+            // reg5NumericUpDown
+            // 
+            this.reg5NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg5NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg5NumericUpDown.BorderRadius = 15;
+            this.reg5NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg5NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg5NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg5NumericUpDown.Name = "reg5NumericUpDown";
+            this.reg5NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg5NumericUpDown.TabIndex = 3;
+            this.reg5NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg5
+            // 
+            this.reg5.Location = new System.Drawing.Point(17, 17);
+            this.reg5.Margin = new System.Windows.Forms.Padding(20);
+            this.reg5.Name = "reg5";
+            this.reg5.Size = new System.Drawing.Size(205, 119);
+            this.reg5.TabIndex = 0;
+            // 
+            // reg6panel
+            // 
+            this.reg6panel.Controls.Add(this.reg6NumericUpDown);
+            this.reg6panel.Controls.Add(this.reg6);
+            this.reg6panel.Location = new System.Drawing.Point(491, 208);
+            this.reg6panel.Name = "reg6panel";
+            this.reg6panel.Size = new System.Drawing.Size(238, 199);
+            this.reg6panel.TabIndex = 7;
+            // 
+            // reg6NumericUpDown
+            // 
+            this.reg6NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg6NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg6NumericUpDown.BorderRadius = 15;
+            this.reg6NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg6NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg6NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg6NumericUpDown.Name = "reg6NumericUpDown";
+            this.reg6NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg6NumericUpDown.TabIndex = 3;
+            this.reg6NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg6
+            // 
+            this.reg6.Location = new System.Drawing.Point(17, 17);
+            this.reg6.Margin = new System.Windows.Forms.Padding(20);
+            this.reg6.Name = "reg6";
+            this.reg6.Size = new System.Drawing.Size(205, 119);
+            this.reg6.TabIndex = 1;
+            // 
+            // reg3panel
+            // 
+            this.reg3panel.Controls.Add(this.reg3NumericUpDown);
+            this.reg3panel.Controls.Add(this.reg3);
+            this.reg3panel.Location = new System.Drawing.Point(491, 3);
+            this.reg3panel.Name = "reg3panel";
+            this.reg3panel.Size = new System.Drawing.Size(238, 199);
+            this.reg3panel.TabIndex = 8;
+            // 
+            // reg3NumericUpDown
+            // 
+            this.reg3NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg3NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg3NumericUpDown.BorderRadius = 15;
+            this.reg3NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg3NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg3NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg3NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg3NumericUpDown.Name = "reg3NumericUpDown";
+            this.reg3NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg3NumericUpDown.TabIndex = 3;
+            this.reg3NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg3
+            // 
+            this.reg3.Location = new System.Drawing.Point(17, 17);
+            this.reg3.Margin = new System.Windows.Forms.Padding(20);
+            this.reg3.Name = "reg3";
+            this.reg3.Size = new System.Drawing.Size(205, 119);
+            this.reg3.TabIndex = 1;
+            // 
+            // reg4panel
+            // 
+            this.reg4panel.Controls.Add(this.reg4NumericUpDown);
+            this.reg4panel.Controls.Add(this.reg4);
+            this.reg4panel.Location = new System.Drawing.Point(3, 208);
+            this.reg4panel.Name = "reg4panel";
+            this.reg4panel.Size = new System.Drawing.Size(238, 199);
+            this.reg4panel.TabIndex = 9;
+            // 
+            // reg4NumericUpDown
+            // 
+            this.reg4NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg4NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg4NumericUpDown.BorderRadius = 15;
+            this.reg4NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg4NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg4NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg4NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg4NumericUpDown.Name = "reg4NumericUpDown";
+            this.reg4NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg4NumericUpDown.TabIndex = 3;
+            this.reg4NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg4
+            // 
+            this.reg4.Location = new System.Drawing.Point(17, 17);
+            this.reg4.Margin = new System.Windows.Forms.Padding(20);
+            this.reg4.Name = "reg4";
+            this.reg4.Size = new System.Drawing.Size(205, 119);
+            this.reg4.TabIndex = 0;
+            // 
+            // snackFlowLayoutPanel
+            // 
+            this.snackFlowLayoutPanel.AutoScroll = true;
+            this.snackFlowLayoutPanel.Controls.Add(this.snack1panel);
+            this.snackFlowLayoutPanel.Controls.Add(this.snack2panel);
+            this.snackFlowLayoutPanel.Controls.Add(this.snack3panel);
+            this.snackFlowLayoutPanel.Controls.Add(this.snack4panel);
+            this.snackFlowLayoutPanel.Controls.Add(this.snack5panel);
+            this.snackFlowLayoutPanel.Controls.Add(this.panel17);
+            this.snackFlowLayoutPanel.Location = new System.Drawing.Point(85, 68);
+            this.snackFlowLayoutPanel.Name = "snackFlowLayoutPanel";
+            this.snackFlowLayoutPanel.Size = new System.Drawing.Size(778, 307);
+            this.snackFlowLayoutPanel.TabIndex = 3;
+            // 
+            // snack1panel
+            // 
+            this.snack1panel.Controls.Add(this.snack1NumericUpDown);
+            this.snack1panel.Controls.Add(this.snack1);
+            this.snack1panel.Location = new System.Drawing.Point(3, 3);
+            this.snack1panel.Name = "snack1panel";
+            this.snack1panel.Size = new System.Drawing.Size(238, 199);
+            this.snack1panel.TabIndex = 3;
+            // 
+            // snack1NumericUpDown
+            // 
+            this.snack1NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.snack1NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.snack1NumericUpDown.BorderRadius = 15;
+            this.snack1NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.snack1NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.snack1NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.snack1NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.snack1NumericUpDown.Name = "snack1NumericUpDown";
+            this.snack1NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.snack1NumericUpDown.TabIndex = 3;
+            this.snack1NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // snack1
+            // 
+            this.snack1.Location = new System.Drawing.Point(17, 17);
+            this.snack1.Margin = new System.Windows.Forms.Padding(20);
+            this.snack1.Name = "snack1";
+            this.snack1.Size = new System.Drawing.Size(205, 119);
+            this.snack1.TabIndex = 0;
+            // 
+            // snack2panel
+            // 
+            this.snack2panel.Controls.Add(this.snack2NumericUpDown);
+            this.snack2panel.Controls.Add(this.snack2);
+            this.snack2panel.Location = new System.Drawing.Point(247, 3);
+            this.snack2panel.Name = "snack2panel";
+            this.snack2panel.Size = new System.Drawing.Size(238, 199);
+            this.snack2panel.TabIndex = 4;
+            // 
+            // snack2NumericUpDown
+            // 
+            this.snack2NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.snack2NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.snack2NumericUpDown.BorderRadius = 15;
+            this.snack2NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.snack2NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.snack2NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.snack2NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.snack2NumericUpDown.Name = "snack2NumericUpDown";
+            this.snack2NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.snack2NumericUpDown.TabIndex = 3;
+            this.snack2NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // snack2
+            // 
+            this.snack2.Location = new System.Drawing.Point(17, 17);
+            this.snack2.Margin = new System.Windows.Forms.Padding(20);
+            this.snack2.Name = "snack2";
+            this.snack2.Size = new System.Drawing.Size(205, 119);
+            this.snack2.TabIndex = 1;
+            // 
+            // snack3panel
+            // 
+            this.snack3panel.Controls.Add(this.snack3NumericUpDown);
+            this.snack3panel.Controls.Add(this.snack3);
+            this.snack3panel.Location = new System.Drawing.Point(491, 3);
+            this.snack3panel.Name = "snack3panel";
+            this.snack3panel.Size = new System.Drawing.Size(238, 199);
+            this.snack3panel.TabIndex = 8;
+            // 
+            // snack3NumericUpDown
+            // 
+            this.snack3NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.snack3NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.snack3NumericUpDown.BorderRadius = 15;
+            this.snack3NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.snack3NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.snack3NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.snack3NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.snack3NumericUpDown.Name = "snack3NumericUpDown";
+            this.snack3NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.snack3NumericUpDown.TabIndex = 3;
+            this.snack3NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // snack3
+            // 
+            this.snack3.Location = new System.Drawing.Point(17, 17);
+            this.snack3.Margin = new System.Windows.Forms.Padding(20);
+            this.snack3.Name = "snack3";
+            this.snack3.Size = new System.Drawing.Size(205, 119);
+            this.snack3.TabIndex = 1;
+            // 
+            // snack4panel
+            // 
+            this.snack4panel.Controls.Add(this.snack4NumericUpDown);
+            this.snack4panel.Controls.Add(this.snack4);
+            this.snack4panel.Location = new System.Drawing.Point(3, 208);
+            this.snack4panel.Name = "snack4panel";
+            this.snack4panel.Size = new System.Drawing.Size(238, 199);
+            this.snack4panel.TabIndex = 9;
+            // 
+            // snack4NumericUpDown
+            // 
+            this.snack4NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.snack4NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.snack4NumericUpDown.BorderRadius = 15;
+            this.snack4NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.snack4NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.snack4NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.snack4NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.snack4NumericUpDown.Name = "snack4NumericUpDown";
+            this.snack4NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.snack4NumericUpDown.TabIndex = 3;
+            this.snack4NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // snack4
+            // 
+            this.snack4.Location = new System.Drawing.Point(17, 17);
+            this.snack4.Margin = new System.Windows.Forms.Padding(20);
+            this.snack4.Name = "snack4";
+            this.snack4.Size = new System.Drawing.Size(205, 119);
+            this.snack4.TabIndex = 0;
+            // 
+            // snack5panel
+            // 
+            this.snack5panel.Controls.Add(this.snack5NumericUpDown);
+            this.snack5panel.Controls.Add(this.snack5);
+            this.snack5panel.Location = new System.Drawing.Point(247, 208);
+            this.snack5panel.Name = "snack5panel";
+            this.snack5panel.Size = new System.Drawing.Size(238, 199);
+            this.snack5panel.TabIndex = 6;
+            // 
+            // snack5NumericUpDown
+            // 
+            this.snack5NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.snack5NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.snack5NumericUpDown.BorderRadius = 15;
+            this.snack5NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.snack5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.snack5NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.snack5NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.snack5NumericUpDown.Name = "snack5NumericUpDown";
+            this.snack5NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.snack5NumericUpDown.TabIndex = 3;
+            this.snack5NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // snack5
+            // 
+            this.snack5.Location = new System.Drawing.Point(17, 17);
+            this.snack5.Margin = new System.Windows.Forms.Padding(20);
+            this.snack5.Name = "snack5";
+            this.snack5.Size = new System.Drawing.Size(205, 119);
+            this.snack5.TabIndex = 0;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.snackBuyFoodBtn);
+            this.panel17.Location = new System.Drawing.Point(3, 413);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(726, 77);
+            this.panel17.TabIndex = 5;
+            // 
+            // snackBuyFoodBtn
+            // 
+            this.snackBuyFoodBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.snackBuyFoodBtn.BorderRadius = 15;
+            this.snackBuyFoodBtn.BorderThickness = 2;
+            this.snackBuyFoodBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.snackBuyFoodBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.snackBuyFoodBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.snackBuyFoodBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.snackBuyFoodBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.snackBuyFoodBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snackBuyFoodBtn.ForeColor = System.Drawing.Color.White;
+            this.snackBuyFoodBtn.Location = new System.Drawing.Point(17, 14);
+            this.snackBuyFoodBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.snackBuyFoodBtn.Name = "snackBuyFoodBtn";
+            this.snackBuyFoodBtn.Size = new System.Drawing.Size(693, 48);
+            this.snackBuyFoodBtn.TabIndex = 4;
+            this.snackBuyFoodBtn.Text = "SAVE";
+            this.snackBuyFoodBtn.Click += new System.EventHandler(this.snackBuyFoodBtn_Click);
+            // 
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.SnacksDealsPanel);
             this.Controls.Add(this.addToWatchLaterBtn);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnReserveSeat);
             this.Controls.Add(this.moviePicToReserve);
             this.Controls.Add(this.seatReservationFlowLayoutPanel);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.RegularDealsPanel);
             this.Controls.Add(this.userPanel);
-            this.Controls.Add(this.SnacksDealsPanel);
+            this.Controls.Add(this.RegularDealsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeatReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -6337,12 +6699,36 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).EndInit();
             this.RegularDealsPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.regularDealsFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
             this.SnacksDealsPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.snacksFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
+            this.regularDealsFlowLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg1NumericUpDown)).EndInit();
+            this.reg1panel.ResumeLayout(false);
+            this.reg2panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg2NumericUpDown)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.reg5panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg5NumericUpDown)).EndInit();
+            this.reg6panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg6NumericUpDown)).EndInit();
+            this.reg3panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg3NumericUpDown)).EndInit();
+            this.reg4panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg4NumericUpDown)).EndInit();
+            this.snackFlowLayoutPanel.ResumeLayout(false);
+            this.snack1panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.snack1NumericUpDown)).EndInit();
+            this.snack2panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.snack2NumericUpDown)).EndInit();
+            this.snack3panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.snack3NumericUpDown)).EndInit();
+            this.snack4panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.snack4NumericUpDown)).EndInit();
+            this.snack5panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.snack5NumericUpDown)).EndInit();
+            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -6681,19 +7067,45 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label StartDateHolder;
-        private System.Windows.Forms.FlowLayoutPanel snacksFlowLayoutPanel;
-        private System.Windows.Forms.Panel snack1;
-        private System.Windows.Forms.Panel snack2;
-        private System.Windows.Forms.Panel snack3;
-        private System.Windows.Forms.Panel snack4;
-        private System.Windows.Forms.Panel snack5;
+        private Guna.UI2.WinForms.Guna2Button exitApplicationBtn;
         private System.Windows.Forms.FlowLayoutPanel regularDealsFlowLayoutPanel;
+        private System.Windows.Forms.Panel reg1panel;
+        private Guna.UI2.WinForms.Guna2Button buyFoodsBtn;
+        private Guna.UI2.WinForms.Guna2NumericUpDown reg1NumericUpDown;
         private System.Windows.Forms.Panel reg1;
         private System.Windows.Forms.Panel reg2;
+        private System.Windows.Forms.Panel reg2panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown reg2NumericUpDown;
+        private System.Windows.Forms.Panel reg3panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown reg3NumericUpDown;
         private System.Windows.Forms.Panel reg3;
-        private System.Windows.Forms.Panel reg4;
+        private System.Windows.Forms.Panel reg5panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown reg5NumericUpDown;
         private System.Windows.Forms.Panel reg5;
+        private System.Windows.Forms.Panel reg6panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown reg6NumericUpDown;
         private System.Windows.Forms.Panel reg6;
-        private Guna.UI2.WinForms.Guna2Button exitApplicationBtn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel reg4panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown reg4NumericUpDown;
+        private System.Windows.Forms.Panel reg4;
+        private System.Windows.Forms.FlowLayoutPanel snackFlowLayoutPanel;
+        private System.Windows.Forms.Panel snack1panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown snack1NumericUpDown;
+        private System.Windows.Forms.Panel snack1;
+        private System.Windows.Forms.Panel snack2panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown snack2NumericUpDown;
+        private System.Windows.Forms.Panel snack2;
+        private System.Windows.Forms.Panel snack3panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown snack3NumericUpDown;
+        private System.Windows.Forms.Panel snack3;
+        private System.Windows.Forms.Panel snack4panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown snack4NumericUpDown;
+        private System.Windows.Forms.Panel snack4;
+        private System.Windows.Forms.Panel snack5panel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown snack5NumericUpDown;
+        private System.Windows.Forms.Panel snack5;
+        private System.Windows.Forms.Panel panel17;
+        private Guna.UI2.WinForms.Guna2Button snackBuyFoodBtn;
     }
 }

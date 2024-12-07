@@ -626,9 +626,9 @@ namespace MovieMunch
         
         private void LoadFoodsToSnacksFlowLayoutPanel()
         {
-            if (snacksFlowLayoutPanel == null)
+            if (snackFlowLayoutPanel == null)
             {
-                MessageBox.Show("snacksFlowLayoutPanel is not initialized.");
+                MessageBox.Show("snackFlowLayoutPanel is not initialized.");
                 return;
             }
 
@@ -638,30 +638,43 @@ namespace MovieMunch
                 return;
             }
 
-            snacksFlowLayoutPanel.Controls.Clear();
+            Panel[] snackPanels = { snack1panel, snack2panel, snack3panel, snack4panel, snack5panel };
+            Panel[] snackPanelsContent = { snack1, snack2, snack3, snack4, snack5 };
+            Guna2NumericUpDown[] numericNums = { snack1NumericUpDown, snack2NumericUpDown, snack3NumericUpDown, snack4NumericUpDown, snack5NumericUpDown };
 
-            Panel[] snackPanels = { snack1, snack2, snack3, snack4, snack5 };
-
-            foreach (var panel in snackPanels)
+            for (int i = 0; i < snackPanels.Length; i++)
             {
-                if (panel == null)
+                if (snackPanels[i] == null)
                 {
-                    MessageBox.Show("One of the snack panels is not initialized.");
+                    MessageBox.Show($"Parent panel {nameof(snackPanels)}[{i}] is not initialized.");
+                    return;
+                }
+
+                if (snackPanelsContent[i] == null)
+                {
+                    MessageBox.Show($"Content panel {nameof(snackPanelsContent)}[{i}] is not initialized.");
+                    return;
+                }
+
+                if (numericNums[i] == null)
+                {
+                    MessageBox.Show($"NumericUpDown {nameof(numericNums)}[{i}] is not initialized.");
                     return;
                 }
             }
 
-            foreach (var food in _snacksFoodsCollection)
+            for (int i = 0; i < _snacksFoodsCollection.Count; i++)
             {
+                var food = _snacksFoodsCollection[i];
                 if (food == null)
                 {
-                    MessageBox.Show("One of the food items in the collection is null.");
+                    MessageBox.Show($"Food item at index {i} is null.");
                     continue;
                 }
 
                 if (string.IsNullOrEmpty(food.SFoodImagePath))
                 {
-                    MessageBox.Show("Food image path is null or empty.");
+                    MessageBox.Show($"Food image path for item at index {i} is null or empty.");
                     continue;
                 }
 
@@ -675,25 +688,24 @@ namespace MovieMunch
                 };
 
                 foodPictureBox.Tag = food;
-                foodPictureBox.Click += new EventHandler(SnackFoodPictureBox_Click);
+                foodPictureBox.Click += RegularFoodPictureBox_Click;
 
-                int index = _snacksFoodsCollection.IndexOf(food) % snackPanels.Length;
+                int panelIndex = i % snackPanelsContent.Length;
 
-                if (index < snackPanels.Length)
-                {
-                    snackPanels[index].Controls.Add(foodPictureBox);
-                }
+                snackPanelsContent[panelIndex].Controls.Add(foodPictureBox);
+
+                numericNums[panelIndex].Tag = food;
             }
 
             foreach (var panel in snackPanels)
             {
-                if (panel != null)
+                if (!snackFlowLayoutPanel.Controls.Contains(panel))
                 {
-                    snacksFlowLayoutPanel.Controls.Add(panel);
+                    snackFlowLayoutPanel.Controls.Add(panel);
                 }
             }
 
-            FadeIn(snacksFlowLayoutPanel);
+            FadeIn(snackFlowLayoutPanel);
         }
 
 
@@ -724,44 +736,87 @@ namespace MovieMunch
             }
         }
 
+        private void snackBuyFoodBtn_Click(object sender, EventArgs e)
+        {
+            Guna2NumericUpDown[] numericNums = { snack1NumericUpDown, snack2NumericUpDown, snack3NumericUpDown, snack4NumericUpDown, snack5NumericUpDown};
+
+            var selectedFoods = new List<string>();
+
+            foreach (var numericUpDown in numericNums)
+            {
+                if (numericUpDown != null && numericUpDown.Tag is SnackDeals food)
+                {
+                    int quantity = (int)numericUpDown.Value;
+
+                    if (quantity > 0)
+                    {
+                        selectedFoods.Add($"{food.SFoodName} x {quantity}");
+                    }
+                }
+            }
+
+            if (selectedFoods.Any())
+            {
+                string message = "You selected the following items:\n" + string.Join("\n", selectedFoods);
+                MessageBox.Show(message, "Selected Foods", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No items selected.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void LoadFoodsToRegularFlowLayoutPanel()
         {
             if (regularDealsFlowLayoutPanel == null)
             {
-                MessageBox.Show("snacksFlowLayoutPanel is not initialized.");
+                MessageBox.Show("regularDealsFlowLayoutPanel is not initialized.");
                 return;
             }
 
             if (_foodsCollection == null || !_foodsCollection.Any())
             {
-                MessageBox.Show("_snacksFoodsCollection is not initialized or empty.");
+                MessageBox.Show("_foodsCollection is not initialized or empty.");
                 return;
             }
 
-            regularDealsFlowLayoutPanel.Controls.Clear();
+            Panel[] regPanels = { reg1panel, reg2panel, reg3panel, reg4panel, reg5panel, reg6panel };
+            Panel[] regPanelsContent = { reg1, reg2, reg3, reg4, reg5, reg6 };
+            Guna2NumericUpDown[] numericNums = { reg1NumericUpDown, reg2NumericUpDown, reg3NumericUpDown, reg4NumericUpDown, reg5NumericUpDown, reg6NumericUpDown };
 
-            Panel[] regPanels = { reg1, reg2, reg3, reg4, reg5, reg6 };
-
-            foreach (var panel in regPanels)
+            for (int i = 0; i < regPanels.Length; i++)
             {
-                if (panel == null)
+                if (regPanels[i] == null)
                 {
-                    MessageBox.Show("One of the snack panels is not initialized.");
+                    MessageBox.Show($"Parent panel {nameof(regPanels)}[{i}] is not initialized.");
+                    return;
+                }
+
+                if (regPanelsContent[i] == null)
+                {
+                    MessageBox.Show($"Content panel {nameof(regPanelsContent)}[{i}] is not initialized.");
+                    return;
+                }
+
+                if (numericNums[i] == null)
+                {
+                    MessageBox.Show($"NumericUpDown {nameof(numericNums)}[{i}] is not initialized.");
                     return;
                 }
             }
 
-            foreach (var food in _foodsCollection)
+            for (int i = 0; i < _foodsCollection.Count; i++)
             {
+                var food = _foodsCollection[i];
                 if (food == null)
                 {
-                    MessageBox.Show("One of the food items in the collection is null.");
+                    MessageBox.Show($"Food item at index {i} is null.");
                     continue;
                 }
 
                 if (string.IsNullOrEmpty(food.FoodImagePath))
                 {
-                    MessageBox.Show("Food image path is null or empty.");
+                    MessageBox.Show($"Food image path for item at index {i} is null or empty.");
                     continue;
                 }
 
@@ -775,19 +830,20 @@ namespace MovieMunch
                 };
 
                 foodPictureBox.Tag = food;
-                foodPictureBox.Click += new EventHandler(RegularFoodPictureBox_Click);
+                foodPictureBox.Click += RegularFoodPictureBox_Click;
 
-                int index = _foodsCollection.IndexOf(food) % regPanels.Length;
+                int panelIndex = i % regPanelsContent.Length;
 
-                if (index < regPanels.Length)
-                {
-                    regPanels[index].Controls.Add(foodPictureBox);
-                }
+                // Add the PictureBox to the panel
+                regPanelsContent[panelIndex].Controls.Add(foodPictureBox);
+
+                // Associate the NumericUpDown with the food item
+                numericNums[panelIndex].Tag = food;
             }
 
             foreach (var panel in regPanels)
             {
-                if (panel != null)
+                if (!regularDealsFlowLayoutPanel.Controls.Contains(panel))
                 {
                     regularDealsFlowLayoutPanel.Controls.Add(panel);
                 }
@@ -795,6 +851,7 @@ namespace MovieMunch
 
             FadeIn(regularDealsFlowLayoutPanel);
         }
+
 
         private void regularDealsFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -824,9 +881,43 @@ namespace MovieMunch
             }
         }
 
+        private void buyFoodsBtn_Click(object sender, EventArgs e)
+        {
+            Guna2NumericUpDown[] numericNums = { reg1NumericUpDown, reg2NumericUpDown, reg3NumericUpDown, reg4NumericUpDown, reg5NumericUpDown, reg6NumericUpDown };
+
+            var selectedFoods = new List<string>();
+
+            foreach (var numericUpDown in numericNums)
+            {
+                if (numericUpDown != null && numericUpDown.Tag is RegularDeals food)
+                {
+                    int quantity = (int)numericUpDown.Value;
+
+                    if (quantity > 0)
+                    {
+                        selectedFoods.Add($"{food.FoodName} x {quantity}");
+                    }
+                }
+            }
+
+            if (selectedFoods.Any())
+            {
+                string message = "You selected the following items:\n" + string.Join("\n", selectedFoods);
+                MessageBox.Show(message, "Selected Foods", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No items selected.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
         private void exitApplicationBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }
