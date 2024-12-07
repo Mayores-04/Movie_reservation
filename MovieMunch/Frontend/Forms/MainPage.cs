@@ -56,6 +56,8 @@ namespace MovieMunch
             _filmsInCinemas = _movieService.GetFilmsInCinemas();
             _comingSoon = _movieService.GetComingSoons();
 
+            userPanel.BringToFront();
+
             PopulateImagePaths();
 
             UpdateDisplayedImage();
@@ -77,10 +79,9 @@ namespace MovieMunch
             userPanelTimer.Interval = 15;
             userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
             userPanel.BringToFront();
-
             filmsDetailsPanel.BringToFront();
             comingSoonMovieDetailsPanel.BringToFront();
-            trendingMoviesDetailsPanel.BringToFront();
+
             if (userName != "USERNAME")
             {
                 userNameHolder.Text = "USERNAME";
@@ -169,10 +170,10 @@ namespace MovieMunch
             }
         }
 
-        private void closeTrendingMoviesDetails_Click_1(object sender, EventArgs e)
-        {
-            trendingMoviesDetailsPanel.Visible = false;
-        }
+        //private void closeTrendingMoviesDetails_Click_1(object sender, EventArgs e)
+        //{
+        //    trendingMoviesDetailsPanel.Visible = false;
+        //}
 
         private void UpdateCircleColors()
         {
@@ -263,21 +264,21 @@ namespace MovieMunch
 
             if (movieInfo != null)
             {
-                closeTrendingMoviesDetails.Visible = true;
-                trendingMoviesDetailsPanel.Visible = true;
+                //closeTrendingMoviesDetails.Visible = true;
+                //trendingMoviesDetailsPanel.Visible = true;
 
-                try
-                {
-                    trendingDetailsPictureBox.BackgroundImage = System.Drawing.Image.FromFile(movieInfo.ImagePath);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Failed to load image: {ex.Message}");
-                }
+                //try
+                //{
+                //    trendingDetailsPictureBox.BackgroundImage = System.Drawing.Image.FromFile(movieInfo.ImagePath);
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show($"Failed to load image: {ex.Message}");
+                //}
 
-                trendingMovieTitleDetails.Text = movieInfo.Title;
-                trendingDescriptionDetails.Text = movieInfo.Description;
-                trendingMoviePriceDetails.Text = movieInfo.Price.ToString("C");
+                //trendingMovieTitleDetails.Text = movieInfo.Title;
+                //trendingDescriptionDetails.Text = movieInfo.Description;
+                //trendingMoviePriceDetails.Text = movieInfo.Price.ToString("C");
 
                 trendingSelectedId = movieInfo.Id.ToString();
                 movieID = trendingSelectedId;
@@ -426,7 +427,6 @@ namespace MovieMunch
             if (films != null)
             {
                 _selectedFilm = films;
-                closeFilmsDetailsBtn.Visible = true;
                 filmsDetailsPanel.Visible = true;
 
                 filmsPictureBoxDetails.BackgroundImage = System.Drawing.Image.FromFile(films.FilmImagePath);
@@ -542,9 +542,6 @@ namespace MovieMunch
 
 
 
-        private string _csoonMovieDays;
-        private DateTime _csoonMovieStart;
-        private DateTime _csoonMovieEnd;
         private void ComingSoonPictureBox_Click(object sender, EventArgs e)
         {
             PictureBox clickedPictureBox = sender as PictureBox;
@@ -609,15 +606,6 @@ namespace MovieMunch
                     _selectedComingSoonMovie.EndTime
                 );
 
-                foreach (Form openForm in Application.OpenForms)
-                {
-                    if (openForm is SeatReservation)
-                    {
-                        openForm.Close();
-                        break;
-                    }
-                }
-
                 seatReservationForm.Show();
                 this.Close();
             }
@@ -633,11 +621,6 @@ namespace MovieMunch
             {
                 LoadComingSoonToFlowLayoutPanel();
             }
-        }
-
-        private void closeFoodDetailsBtn_Click(object sender, EventArgs e)
-        {
-            foodDetailsPanel.Visible = false;
         }
 
         private void LoadFoodsToYummyFlowLayoutPanel()
@@ -739,12 +722,12 @@ namespace MovieMunch
 
             if (food != null)
             {
-                closeFoodDetailsBtn.Visible = true;
-                foodDetailsPanel.Visible = true;
+                //closeFoodDetailsBtn.Visible = true;
+                //foodDetailsPanel.Visible = true;
 
-                foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.FoodImagePath);
-                foodNameDetails.Text = food.FoodName;
-                foodPriceDetails.Text = food.FoodPrice.ToString("C");
+                //foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.FoodImagePath);
+                //foodNameDetails.Text = food.FoodName;
+                //foodPriceDetails.Text = food.FoodPrice.ToString("C");
             }
         }
 
@@ -756,12 +739,12 @@ namespace MovieMunch
 
             if (food != null)
             {
-                closeFoodDetailsBtn.Visible = true;
-                foodDetailsPanel.Visible = true;
+                //closeFoodDetailsBtn.Visible = true;
+                //foodDetailsPanel.Visible = true;
 
-                foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
-                foodNameDetails.Text = food.SFoodName;
-                foodPriceDetails.Text = food.SFoodPrice.ToString("C");
+                //foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
+                //foodNameDetails.Text = food.SFoodName;
+                //foodPriceDetails.Text = food.SFoodPrice.ToString("C");
             }
         }
 
@@ -915,7 +898,7 @@ namespace MovieMunch
 
             if (userNameHolder.Text == "USERNAME" || userNameHolder.Text == null)
             {
-                trendingMoviesDetailsPanel.Visible = false;
+                //trendingMoviesDetailsPanel.Visible = false;
                 LoginForm loginForm = new LoginForm();
                 loginForm.GetUsers(userNameHolder.Text, _profilePic);
                 loginForm.Show();
@@ -1125,7 +1108,6 @@ namespace MovieMunch
         private string FilmsSelectedDescription;
         private string FilmsSelectedPic;
         private decimal FilmsSelectedPrice;
-
         private async void btnFilmAddToWatchLater_Click(object sender, EventArgs e)
         {
             try
@@ -1149,7 +1131,7 @@ namespace MovieMunch
                 decimal moviePrice = Convert.ToDecimal(FilmsSelectedPrice);
                 string moviePic = FilmsSelectedPic;
 
-                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic, _filmMovieDays, _filmMovieStart, _filmMovieEnd);
             }
             catch (Exception ex)
             {
@@ -1162,7 +1144,9 @@ namespace MovieMunch
         private string CsoonSelectedDescription;
         private string CsoonSelectedPic;
         private decimal CsoonSelectedPrice;
-
+        private string _csoonMovieDays;
+        private DateTime _csoonMovieStart;
+        private DateTime _csoonMovieEnd;
         private async void addComingSoonToWatchLater_Click(object sender, EventArgs e)
         {
             try
@@ -1185,7 +1169,7 @@ namespace MovieMunch
                 decimal moviePrice = Convert.ToDecimal(CsoonSelectedPrice);
                 string moviePic = CsoonSelectedPic;
 
-                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic, _csoonMovieDays, _csoonMovieStart, _csoonMovieEnd);
             }
             catch (Exception ex)
             {
@@ -1252,7 +1236,7 @@ namespace MovieMunch
                 decimal moviePrice = trendingSelectedPrice;
                 string moviePic = trendingSelectedPic;
 
-                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic, _MovieDays, _MovieStart, _MovieEnd);
             }
             catch (Exception ex)
             {
@@ -1416,11 +1400,6 @@ namespace MovieMunch
             {
                 MessageBox.Show("Failed to update the account. Please check the email and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void filmsTitleDetails_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void exitApplicationBtn_Click(object sender, EventArgs e)

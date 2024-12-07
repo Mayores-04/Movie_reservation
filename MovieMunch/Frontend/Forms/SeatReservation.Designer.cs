@@ -30,13 +30,14 @@ namespace MovieMunch
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Guna2PictureBox regular2;
-            Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+            System.Windows.Forms.Label label30;
+            System.Windows.Forms.Label label31;
+            System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatReservation));
-            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.seatReservationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.StartDateHolder = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace MovieMunch
             this.DayHolder = new System.Windows.Forms.Label();
             this.snackDealsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.regularDealsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.J6 = new Guna.UI2.WinForms.Guna2Button();
             this.J5 = new Guna.UI2.WinForms.Guna2Button();
             this.J4 = new Guna.UI2.WinForms.Guna2Button();
@@ -324,6 +324,7 @@ namespace MovieMunch
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnReserveSeat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.exitApplicationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userProfileBtn = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.gotoWatchListBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -365,27 +366,27 @@ namespace MovieMunch
             this.RegularDealsPanel = new System.Windows.Forms.Panel();
             this.closeRegularDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.regular6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.regular5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.regular4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.regular3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.regular1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.regularDealsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.reg1 = new System.Windows.Forms.Panel();
+            this.reg2 = new System.Windows.Forms.Panel();
+            this.reg3 = new System.Windows.Forms.Panel();
+            this.reg4 = new System.Windows.Forms.Panel();
+            this.reg5 = new System.Windows.Forms.Panel();
+            this.reg6 = new System.Windows.Forms.Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label30 = new System.Windows.Forms.Label();
             this.SnacksDealsPanel = new System.Windows.Forms.Panel();
-            this.closeSnackDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.snacksFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.snack1 = new System.Windows.Forms.Panel();
+            this.snack2 = new System.Windows.Forms.Panel();
+            this.snack3 = new System.Windows.Forms.Panel();
+            this.snack4 = new System.Windows.Forms.Panel();
+            this.snack5 = new System.Windows.Forms.Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            regular2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(regular2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).BeginInit();
+            this.closeSnackDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            label30 = new System.Windows.Forms.Label();
+            label31 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             this.seatReservationFlowLayoutPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
@@ -406,41 +407,46 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).BeginInit();
             this.RegularDealsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.regular6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular1)).BeginInit();
+            this.regularDealsFlowLayoutPanel.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.SnacksDealsPanel.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            this.snacksFlowLayoutPanel.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // regular2
+            // label30
             // 
-            regular2.BorderRadius = 10;
-            regular2.ImageRotate = 0F;
-            regular2.Location = new System.Drawing.Point(356, 89);
-            regular2.Name = "regular2";
-            regular2.Size = new System.Drawing.Size(205, 119);
-            regular2.TabIndex = 2;
-            regular2.TabStop = false;
+            label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label30.ForeColor = System.Drawing.Color.White;
+            label30.Location = new System.Drawing.Point(108, 6);
+            label30.Name = "label30";
+            label30.Size = new System.Drawing.Size(604, 36);
+            label30.TabIndex = 0;
+            label30.Text = "SELECTED DESIRED REGULAR DEALS";
+            label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2PictureBox5
+            // label31
             // 
-            guna2PictureBox5.BorderRadius = 10;
-            guna2PictureBox5.ImageRotate = 0F;
-            guna2PictureBox5.Location = new System.Drawing.Point(356, 89);
-            guna2PictureBox5.Name = "guna2PictureBox5";
-            guna2PictureBox5.Size = new System.Drawing.Size(205, 119);
-            guna2PictureBox5.TabIndex = 2;
-            guna2PictureBox5.TabStop = false;
+            label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label31.ForeColor = System.Drawing.Color.White;
+            label31.Location = new System.Drawing.Point(108, 6);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(584, 36);
+            label31.TabIndex = 0;
+            label31.Text = "SELECTED DESIRED SNACKS DEALS";
+            label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Font = new System.Drawing.Font("Arial Narrow", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Location = new System.Drawing.Point(15, 88);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(254, 55);
+            label3.TabIndex = 1;
+            label3.Text = "SHOW TIME";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // seatReservationFlowLayoutPanel
             // 
@@ -465,7 +471,7 @@ namespace MovieMunch
             this.guna2Panel1.Controls.Add(this.DayHolder);
             this.guna2Panel1.Controls.Add(this.snackDealsBtn);
             this.guna2Panel1.Controls.Add(this.regularDealsBtn);
-            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(label3);
             this.guna2Panel1.Controls.Add(this.J6);
             this.guna2Panel1.Controls.Add(this.J5);
             this.guna2Panel1.Controls.Add(this.J4);
@@ -819,6 +825,7 @@ namespace MovieMunch
             // availableTimeComboBox
             // 
             this.availableTimeComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.availableTimeComboBox.BorderRadius = 15;
             this.availableTimeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.availableTimeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.availableTimeComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -853,6 +860,7 @@ namespace MovieMunch
             // dateToWatchComboBox
             // 
             this.dateToWatchComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.dateToWatchComboBox.BorderRadius = 15;
             this.dateToWatchComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.dateToWatchComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dateToWatchComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -883,7 +891,6 @@ namespace MovieMunch
             this.DayHolder.Size = new System.Drawing.Size(119, 33);
             this.DayHolder.TabIndex = 721;
             this.DayHolder.Text = "start time";
-            this.DayHolder.Click += new System.EventHandler(this.movieScheduleHolder_Click);
             // 
             // snackDealsBtn
             // 
@@ -920,17 +927,6 @@ namespace MovieMunch
             this.regularDealsBtn.TabIndex = 719;
             this.regularDealsBtn.Text = "SELECT FROM REGULAR DEALS CATEGORY";
             this.regularDealsBtn.Click += new System.EventHandler(this.regularDealsBtn_Click);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 55);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "SHOW TIME";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // J6
             // 
@@ -5096,13 +5092,11 @@ namespace MovieMunch
             // 
             this.guna2VScrollBar1.BindingContainer = this.seatReservationFlowLayoutPanel;
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 575;
+            this.guna2VScrollBar1.LargeChange = 10;
             this.guna2VScrollBar1.Location = new System.Drawing.Point(1193, 75);
-            this.guna2VScrollBar1.Maximum = 705;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 21;
             this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 575);
-            this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 115;
             // 
             // btnReserveSeat
@@ -5128,6 +5122,7 @@ namespace MovieMunch
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.guna2Panel3.BorderThickness = 3;
+            this.guna2Panel3.Controls.Add(this.exitApplicationBtn);
             this.guna2Panel3.Controls.Add(this.userProfileBtn);
             this.guna2Panel3.Controls.Add(this.LogoutBtn);
             this.guna2Panel3.Controls.Add(this.gotoWatchListBtn);
@@ -5138,6 +5133,28 @@ namespace MovieMunch
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(170, 591);
             this.guna2Panel3.TabIndex = 685;
+            // 
+            // exitApplicationBtn
+            // 
+            this.exitApplicationBtn.BackColor = System.Drawing.Color.Transparent;
+            this.exitApplicationBtn.BorderRadius = 10;
+            this.exitApplicationBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.exitApplicationBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.exitApplicationBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.exitApplicationBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.exitApplicationBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.exitApplicationBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.exitApplicationBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitApplicationBtn.ForeColor = System.Drawing.Color.White;
+            this.exitApplicationBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.exitApplicationBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.exitApplicationBtn.IndicateFocus = true;
+            this.exitApplicationBtn.Location = new System.Drawing.Point(17, 489);
+            this.exitApplicationBtn.Name = "exitApplicationBtn";
+            this.exitApplicationBtn.Size = new System.Drawing.Size(144, 35);
+            this.exitApplicationBtn.TabIndex = 73;
+            this.exitApplicationBtn.Text = "EXIT";
+            this.exitApplicationBtn.Click += new System.EventHandler(this.exitApplicationBtn_Click);
             // 
             // userProfileBtn
             // 
@@ -5166,7 +5183,7 @@ namespace MovieMunch
             this.LogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutBtn.ForeColor = System.Drawing.Color.White;
             this.LogoutBtn.IndicateFocus = true;
-            this.LogoutBtn.Location = new System.Drawing.Point(14, 530);
+            this.LogoutBtn.Location = new System.Drawing.Point(17, 530);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(144, 35);
             this.LogoutBtn.TabIndex = 48;
@@ -5188,11 +5205,11 @@ namespace MovieMunch
             this.gotoWatchListBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gotoWatchListBtn.ImageSize = new System.Drawing.Size(30, 25);
             this.gotoWatchListBtn.IndicateFocus = true;
-            this.gotoWatchListBtn.Location = new System.Drawing.Point(17, 375);
+            this.gotoWatchListBtn.Location = new System.Drawing.Point(17, 365);
             this.gotoWatchListBtn.Name = "gotoWatchListBtn";
             this.gotoWatchListBtn.Size = new System.Drawing.Size(144, 35);
             this.gotoWatchListBtn.TabIndex = 47;
-            this.gotoWatchListBtn.Text = "WATCH LATER";
+            this.gotoWatchListBtn.Text = "WATCH LIST";
             this.gotoWatchListBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.gotoWatchListBtn.Click += new System.EventHandler(this.gotoWatchListBtn_Click);
             // 
@@ -5211,7 +5228,7 @@ namespace MovieMunch
             this.gotoTicketFormBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gotoTicketFormBtn.ImageSize = new System.Drawing.Size(30, 25);
             this.gotoTicketFormBtn.IndicateFocus = true;
-            this.gotoTicketFormBtn.Location = new System.Drawing.Point(17, 331);
+            this.gotoTicketFormBtn.Location = new System.Drawing.Point(17, 324);
             this.gotoTicketFormBtn.Name = "gotoTicketFormBtn";
             this.gotoTicketFormBtn.Size = new System.Drawing.Size(144, 35);
             this.gotoTicketFormBtn.TabIndex = 46;
@@ -5393,11 +5410,11 @@ namespace MovieMunch
             this.bunifuFormCaptionButton1.ColorContrastOnClick = 30;
             this.bunifuFormCaptionButton1.ColorContrastOnHover = 30;
             this.bunifuFormCaptionButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuFormCaptionButton1.CustomizableEdges = borderEdges1;
             this.bunifuFormCaptionButton1.DefaultBorderColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DefaultColor = System.Drawing.Color.White;
             this.bunifuFormCaptionButton1.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -5431,11 +5448,11 @@ namespace MovieMunch
             this.bunifuIconButton5.ColorContrastOnClick = 30;
             this.bunifuIconButton5.ColorContrastOnHover = 30;
             this.bunifuIconButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.bunifuIconButton5.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuIconButton5.CustomizableEdges = borderEdges2;
             this.bunifuIconButton5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuIconButton5.Image = null;
             this.bunifuIconButton5.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -5705,11 +5722,11 @@ namespace MovieMunch
             this.saveUserNameOrPasswordBtn.ColorContrastOnClick = 45;
             this.saveUserNameOrPasswordBtn.ColorContrastOnHover = 45;
             this.saveUserNameOrPasswordBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.saveUserNameOrPasswordBtn.CustomizableEdges = borderEdges7;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.saveUserNameOrPasswordBtn.CustomizableEdges = borderEdges3;
             this.saveUserNameOrPasswordBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.saveUserNameOrPasswordBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.saveUserNameOrPasswordBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -5955,11 +5972,11 @@ namespace MovieMunch
             this.saveUserPicOrNameBtn.ColorContrastOnClick = 45;
             this.saveUserPicOrNameBtn.ColorContrastOnHover = 45;
             this.saveUserPicOrNameBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.saveUserPicOrNameBtn.CustomizableEdges = borderEdges8;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.saveUserPicOrNameBtn.CustomizableEdges = borderEdges4;
             this.saveUserPicOrNameBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.saveUserPicOrNameBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.saveUserPicOrNameBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -6090,101 +6107,170 @@ namespace MovieMunch
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.panel2.Controls.Add(this.regular6);
-            this.panel2.Controls.Add(this.regular5);
-            this.panel2.Controls.Add(this.regular4);
-            this.panel2.Controls.Add(this.regular3);
-            this.panel2.Controls.Add(regular2);
-            this.panel2.Controls.Add(this.regular1);
+            this.panel2.Controls.Add(this.regularDealsFlowLayoutPanel);
             this.panel2.Controls.Add(this.guna2Panel6);
             this.panel2.Location = new System.Drawing.Point(1, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(911, 393);
             this.panel2.TabIndex = 66;
             // 
-            // regular6
+            // regularDealsFlowLayoutPanel
             // 
-            this.regular6.BorderRadius = 10;
-            this.regular6.ImageRotate = 0F;
-            this.regular6.Location = new System.Drawing.Point(658, 238);
-            this.regular6.Name = "regular6";
-            this.regular6.Size = new System.Drawing.Size(205, 119);
-            this.regular6.TabIndex = 6;
-            this.regular6.TabStop = false;
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg1);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg2);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg3);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg4);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg5);
+            this.regularDealsFlowLayoutPanel.Controls.Add(this.reg6);
+            this.regularDealsFlowLayoutPanel.Location = new System.Drawing.Point(92, 68);
+            this.regularDealsFlowLayoutPanel.Name = "regularDealsFlowLayoutPanel";
+            this.regularDealsFlowLayoutPanel.Size = new System.Drawing.Size(744, 307);
+            this.regularDealsFlowLayoutPanel.TabIndex = 2;
+            this.regularDealsFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.regularDealsFlowLayoutPanel_Paint);
             // 
-            // regular5
+            // reg1
             // 
-            this.regular5.BorderRadius = 10;
-            this.regular5.ImageRotate = 0F;
-            this.regular5.Location = new System.Drawing.Point(356, 238);
-            this.regular5.Name = "regular5";
-            this.regular5.Size = new System.Drawing.Size(205, 119);
-            this.regular5.TabIndex = 5;
-            this.regular5.TabStop = false;
+            this.reg1.Location = new System.Drawing.Point(20, 20);
+            this.reg1.Margin = new System.Windows.Forms.Padding(20);
+            this.reg1.Name = "reg1";
+            this.reg1.Size = new System.Drawing.Size(205, 119);
+            this.reg1.TabIndex = 0;
             // 
-            // regular4
+            // reg2
             // 
-            this.regular4.BorderRadius = 10;
-            this.regular4.ImageRotate = 0F;
-            this.regular4.Location = new System.Drawing.Point(51, 238);
-            this.regular4.Name = "regular4";
-            this.regular4.Size = new System.Drawing.Size(205, 119);
-            this.regular4.TabIndex = 4;
-            this.regular4.TabStop = false;
+            this.reg2.Location = new System.Drawing.Point(265, 20);
+            this.reg2.Margin = new System.Windows.Forms.Padding(20);
+            this.reg2.Name = "reg2";
+            this.reg2.Size = new System.Drawing.Size(205, 119);
+            this.reg2.TabIndex = 1;
             // 
-            // regular3
+            // reg3
             // 
-            this.regular3.BorderRadius = 10;
-            this.regular3.ImageRotate = 0F;
-            this.regular3.Location = new System.Drawing.Point(658, 89);
-            this.regular3.Name = "regular3";
-            this.regular3.Size = new System.Drawing.Size(205, 119);
-            this.regular3.TabIndex = 3;
-            this.regular3.TabStop = false;
+            this.reg3.Location = new System.Drawing.Point(510, 20);
+            this.reg3.Margin = new System.Windows.Forms.Padding(20);
+            this.reg3.Name = "reg3";
+            this.reg3.Size = new System.Drawing.Size(205, 119);
+            this.reg3.TabIndex = 1;
             // 
-            // regular1
+            // reg4
             // 
-            this.regular1.BorderRadius = 10;
-            this.regular1.ImageRotate = 0F;
-            this.regular1.Location = new System.Drawing.Point(51, 89);
-            this.regular1.Name = "regular1";
-            this.regular1.Size = new System.Drawing.Size(205, 119);
-            this.regular1.TabIndex = 1;
-            this.regular1.TabStop = false;
+            this.reg4.Location = new System.Drawing.Point(20, 179);
+            this.reg4.Margin = new System.Windows.Forms.Padding(20);
+            this.reg4.Name = "reg4";
+            this.reg4.Size = new System.Drawing.Size(205, 126);
+            this.reg4.TabIndex = 1;
+            // 
+            // reg5
+            // 
+            this.reg5.Location = new System.Drawing.Point(265, 179);
+            this.reg5.Margin = new System.Windows.Forms.Padding(20);
+            this.reg5.Name = "reg5";
+            this.reg5.Size = new System.Drawing.Size(205, 119);
+            this.reg5.TabIndex = 1;
+            // 
+            // reg6
+            // 
+            this.reg6.Location = new System.Drawing.Point(510, 179);
+            this.reg6.Margin = new System.Windows.Forms.Padding(20);
+            this.reg6.Name = "reg6";
+            this.reg6.Size = new System.Drawing.Size(205, 119);
+            this.reg6.TabIndex = 2;
             // 
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
             this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
             this.guna2Panel6.BorderThickness = 2;
-            this.guna2Panel6.Controls.Add(this.label30);
+            this.guna2Panel6.Controls.Add(label30);
             this.guna2Panel6.Location = new System.Drawing.Point(51, 18);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(812, 48);
             this.guna2Panel6.TabIndex = 0;
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(114, 4);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(604, 36);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "SELECTED DESIRED REGULAR DEALS";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SnacksDealsPanel
             // 
             this.SnacksDealsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.SnacksDealsPanel.Controls.Add(this.closeSnackDealsBtn);
             this.SnacksDealsPanel.Controls.Add(this.panel6);
+            this.SnacksDealsPanel.Controls.Add(this.closeSnackDealsBtn);
             this.SnacksDealsPanel.Location = new System.Drawing.Point(214, 100);
             this.SnacksDealsPanel.Name = "SnacksDealsPanel";
             this.SnacksDealsPanel.Size = new System.Drawing.Size(914, 460);
             this.SnacksDealsPanel.TabIndex = 721;
             this.SnacksDealsPanel.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.panel6.Controls.Add(this.snacksFlowLayoutPanel);
+            this.panel6.Controls.Add(this.guna2Panel7);
+            this.panel6.Location = new System.Drawing.Point(1, 66);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(911, 393);
+            this.panel6.TabIndex = 66;
+            // 
+            // snacksFlowLayoutPanel
+            // 
+            this.snacksFlowLayoutPanel.Controls.Add(this.snack1);
+            this.snacksFlowLayoutPanel.Controls.Add(this.snack2);
+            this.snacksFlowLayoutPanel.Controls.Add(this.snack3);
+            this.snacksFlowLayoutPanel.Controls.Add(this.snack4);
+            this.snacksFlowLayoutPanel.Controls.Add(this.snack5);
+            this.snacksFlowLayoutPanel.Location = new System.Drawing.Point(92, 68);
+            this.snacksFlowLayoutPanel.Name = "snacksFlowLayoutPanel";
+            this.snacksFlowLayoutPanel.Size = new System.Drawing.Size(744, 307);
+            this.snacksFlowLayoutPanel.TabIndex = 1;
+            this.snacksFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.snacksFlowLayoutPanel_Paint_1);
+            // 
+            // snack1
+            // 
+            this.snack1.Location = new System.Drawing.Point(20, 20);
+            this.snack1.Margin = new System.Windows.Forms.Padding(20);
+            this.snack1.Name = "snack1";
+            this.snack1.Size = new System.Drawing.Size(205, 119);
+            this.snack1.TabIndex = 0;
+            // 
+            // snack2
+            // 
+            this.snack2.Location = new System.Drawing.Point(265, 20);
+            this.snack2.Margin = new System.Windows.Forms.Padding(20);
+            this.snack2.Name = "snack2";
+            this.snack2.Size = new System.Drawing.Size(205, 119);
+            this.snack2.TabIndex = 1;
+            // 
+            // snack3
+            // 
+            this.snack3.Location = new System.Drawing.Point(510, 20);
+            this.snack3.Margin = new System.Windows.Forms.Padding(20);
+            this.snack3.Name = "snack3";
+            this.snack3.Size = new System.Drawing.Size(205, 119);
+            this.snack3.TabIndex = 1;
+            // 
+            // snack4
+            // 
+            this.snack4.Location = new System.Drawing.Point(20, 179);
+            this.snack4.Margin = new System.Windows.Forms.Padding(20);
+            this.snack4.Name = "snack4";
+            this.snack4.Size = new System.Drawing.Size(205, 126);
+            this.snack4.TabIndex = 1;
+            // 
+            // snack5
+            // 
+            this.snack5.Location = new System.Drawing.Point(265, 179);
+            this.snack5.Margin = new System.Windows.Forms.Padding(20);
+            this.snack5.Name = "snack5";
+            this.snack5.Size = new System.Drawing.Size(205, 119);
+            this.snack5.TabIndex = 1;
+            // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2Panel7.BorderThickness = 2;
+            this.guna2Panel7.Controls.Add(label31);
+            this.guna2Panel7.Location = new System.Drawing.Point(51, 18);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.Size = new System.Drawing.Size(812, 48);
+            this.guna2Panel7.TabIndex = 0;
             // 
             // closeSnackDealsBtn
             // 
@@ -6207,116 +6293,24 @@ namespace MovieMunch
             this.closeSnackDealsBtn.TextOffset = new System.Drawing.Point(1, -3);
             this.closeSnackDealsBtn.Click += new System.EventHandler(this.closeSnackDealsBtn_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.panel6.Controls.Add(this.guna2PictureBox1);
-            this.panel6.Controls.Add(this.guna2PictureBox2);
-            this.panel6.Controls.Add(this.guna2PictureBox3);
-            this.panel6.Controls.Add(this.guna2PictureBox4);
-            this.panel6.Controls.Add(guna2PictureBox5);
-            this.panel6.Controls.Add(this.guna2PictureBox6);
-            this.panel6.Controls.Add(this.guna2Panel7);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 67);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(914, 393);
-            this.panel6.TabIndex = 66;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(658, 238);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(205, 119);
-            this.guna2PictureBox1.TabIndex = 6;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BorderRadius = 10;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(356, 238);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(205, 119);
-            this.guna2PictureBox2.TabIndex = 5;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BorderRadius = 10;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(51, 238);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(205, 119);
-            this.guna2PictureBox3.TabIndex = 4;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BorderRadius = 10;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(658, 89);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(205, 119);
-            this.guna2PictureBox4.TabIndex = 3;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.BorderRadius = 10;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(51, 89);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(205, 119);
-            this.guna2PictureBox6.TabIndex = 1;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.guna2Panel7.BorderThickness = 2;
-            this.guna2Panel7.Controls.Add(this.label31);
-            this.guna2Panel7.Location = new System.Drawing.Point(51, 18);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(812, 48);
-            this.guna2Panel7.TabIndex = 0;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(108, 6);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(580, 36);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "SELECTED DESIRED SNACKS DEALS";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.addToWatchLaterBtn);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnReserveSeat);
             this.Controls.Add(this.moviePicToReserve);
             this.Controls.Add(this.seatReservationFlowLayoutPanel);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.SnacksDealsPanel);
             this.Controls.Add(this.RegularDealsPanel);
             this.Controls.Add(this.userPanel);
+            this.Controls.Add(this.SnacksDealsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeatReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeatReservation";
-            ((System.ComponentModel.ISupportInitialize)(regular2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(guna2PictureBox5)).EndInit();
             this.seatReservationFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -6343,22 +6337,12 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).EndInit();
             this.RegularDealsPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.regular6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.regular1)).EndInit();
+            this.regularDealsFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel6.PerformLayout();
             this.SnacksDealsPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            this.snacksFlowLayoutPanel.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
-            this.guna2Panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6648,7 +6632,6 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Button gotoTicketFormBtn;
         private Guna.UI2.WinForms.Guna2TextBox userNameHolder;
         private Guna.UI2.WinForms.Guna2Button HomeBtn;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CircleButton addToWatchLaterBtn;
         private System.Windows.Forms.Panel userPanel;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
@@ -6662,23 +6645,11 @@ namespace MovieMunch
         private System.Windows.Forms.Panel RegularDealsPanel;
         private Guna.UI2.WinForms.Guna2CircleButton closeRegularDealsBtn;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2PictureBox regular6;
-        private Guna.UI2.WinForms.Guna2PictureBox regular5;
-        private Guna.UI2.WinForms.Guna2PictureBox regular4;
-        private Guna.UI2.WinForms.Guna2PictureBox regular3;
-        private Guna.UI2.WinForms.Guna2PictureBox regular1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel SnacksDealsPanel;
         private Guna.UI2.WinForms.Guna2CircleButton closeSnackDealsBtn;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2CirclePictureBox userProfileBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel5;
@@ -6710,5 +6681,19 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label StartDateHolder;
+        private System.Windows.Forms.FlowLayoutPanel snacksFlowLayoutPanel;
+        private System.Windows.Forms.Panel snack1;
+        private System.Windows.Forms.Panel snack2;
+        private System.Windows.Forms.Panel snack3;
+        private System.Windows.Forms.Panel snack4;
+        private System.Windows.Forms.Panel snack5;
+        private System.Windows.Forms.FlowLayoutPanel regularDealsFlowLayoutPanel;
+        private System.Windows.Forms.Panel reg1;
+        private System.Windows.Forms.Panel reg2;
+        private System.Windows.Forms.Panel reg3;
+        private System.Windows.Forms.Panel reg4;
+        private System.Windows.Forms.Panel reg5;
+        private System.Windows.Forms.Panel reg6;
+        private Guna.UI2.WinForms.Guna2Button exitApplicationBtn;
     }
 }

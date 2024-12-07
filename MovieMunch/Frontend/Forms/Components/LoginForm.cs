@@ -12,7 +12,16 @@ namespace MovieMunch
 
         public LoginForm()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is RegisterForm)
+                {
+                    openForm.Close();
+                    break;
+                }
+            }
         }
 
         private string _userName;
@@ -41,7 +50,7 @@ namespace MovieMunch
 
             AdminAccount admin = userService.AdminLogin(email, password);
 
-            if (admin != null) // Admin login successful
+            if (admin != null)  
             {
                 DialogResult result = MessageBox.Show(
                     $"Login successful as Admin ({admin.employeeName}). Do you want to open the Admin interface?",
@@ -52,7 +61,6 @@ namespace MovieMunch
 
                 if (result == DialogResult.Yes)
                 {
-                    // Open Admin interface
                     MainAdmin mainAdmin = new MainAdmin();
                     mainAdmin.SetUserNamme(admin.employeeName, admin.employeeProfilePic);
                     mainAdmin.Show();
@@ -60,13 +68,11 @@ namespace MovieMunch
                 }
                 else
                 {
-                    // Stay on the current page
                     return;
                 }
             }
             else
             {
-                // Attempt regular user login
                 bool isLogin = userService.LoginUser(email, password);
 
                 if (isLogin)
@@ -75,14 +81,20 @@ namespace MovieMunch
                 }
                 else
                 {
-                    // User login failed
                     termsAndRegMessage.Visible = true;
                     termsAndRegMessage.Text = "Login failed. Please check your credentials.";
+
+                    foreach (Form openForm in Application.OpenForms)
+                    {
+                        if (openForm is MainPage)
+                        {
+                            openForm.Close();
+                            break;
+                        }
+                    }
                 }
             }
         }
-
-
 
 
         private void SignUpBtn_Click(object sender, EventArgs e)

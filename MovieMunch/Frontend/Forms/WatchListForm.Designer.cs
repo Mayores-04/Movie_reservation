@@ -39,6 +39,7 @@ namespace MovieMunch.Frontend.Forms
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.logoBefore = new System.Windows.Forms.PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.exitApplicationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userProfileBtn = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -53,6 +54,9 @@ namespace MovieMunch.Frontend.Forms
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.SignUpBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.changePicBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -70,9 +74,6 @@ namespace MovieMunch.Frontend.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.saveUserPicOrNameBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.changeNewUsernameInput = new Guna.UI2.WinForms.Guna2TextBox();
-            this.SignUpBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBefore)).BeginInit();
@@ -129,6 +130,7 @@ namespace MovieMunch.Frontend.Forms
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.guna2Panel3.BorderThickness = 3;
+            this.guna2Panel3.Controls.Add(this.exitApplicationBtn);
             this.guna2Panel3.Controls.Add(this.userProfileBtn);
             this.guna2Panel3.Controls.Add(this.LogoutBtn);
             this.guna2Panel3.Controls.Add(this.guna2Button4);
@@ -139,6 +141,28 @@ namespace MovieMunch.Frontend.Forms
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(170, 591);
             this.guna2Panel3.TabIndex = 686;
+            // 
+            // exitApplicationBtn
+            // 
+            this.exitApplicationBtn.BackColor = System.Drawing.Color.Transparent;
+            this.exitApplicationBtn.BorderRadius = 10;
+            this.exitApplicationBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.exitApplicationBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.exitApplicationBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.exitApplicationBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.exitApplicationBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.exitApplicationBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.exitApplicationBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitApplicationBtn.ForeColor = System.Drawing.Color.White;
+            this.exitApplicationBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.exitApplicationBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.exitApplicationBtn.IndicateFocus = true;
+            this.exitApplicationBtn.Location = new System.Drawing.Point(17, 489);
+            this.exitApplicationBtn.Name = "exitApplicationBtn";
+            this.exitApplicationBtn.Size = new System.Drawing.Size(144, 35);
+            this.exitApplicationBtn.TabIndex = 73;
+            this.exitApplicationBtn.Text = "EXIT";
+            this.exitApplicationBtn.Click += new System.EventHandler(this.exitApplicationBtn_Click);
             // 
             // userProfileBtn
             // 
@@ -167,7 +191,7 @@ namespace MovieMunch.Frontend.Forms
             this.LogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutBtn.ForeColor = System.Drawing.Color.White;
             this.LogoutBtn.IndicateFocus = true;
-            this.LogoutBtn.Location = new System.Drawing.Point(14, 530);
+            this.LogoutBtn.Location = new System.Drawing.Point(17, 530);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(144, 35);
             this.LogoutBtn.TabIndex = 48;
@@ -189,11 +213,11 @@ namespace MovieMunch.Frontend.Forms
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(30, 25);
             this.guna2Button4.IndicateFocus = true;
-            this.guna2Button4.Location = new System.Drawing.Point(17, 375);
+            this.guna2Button4.Location = new System.Drawing.Point(17, 365);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(144, 35);
             this.guna2Button4.TabIndex = 47;
-            this.guna2Button4.Text = "WATCH LATER";
+            this.guna2Button4.Text = "WATCH LIST";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // gotoTicketFormBtn
@@ -211,7 +235,7 @@ namespace MovieMunch.Frontend.Forms
             this.gotoTicketFormBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gotoTicketFormBtn.ImageSize = new System.Drawing.Size(30, 25);
             this.gotoTicketFormBtn.IndicateFocus = true;
-            this.gotoTicketFormBtn.Location = new System.Drawing.Point(17, 331);
+            this.gotoTicketFormBtn.Location = new System.Drawing.Point(17, 324);
             this.gotoTicketFormBtn.Name = "gotoTicketFormBtn";
             this.gotoTicketFormBtn.Size = new System.Drawing.Size(144, 35);
             this.gotoTicketFormBtn.TabIndex = 46;
@@ -426,6 +450,71 @@ namespace MovieMunch.Frontend.Forms
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(210, 382);
             this.bunifuPanel3.TabIndex = 51;
+            // 
+            // SignUpBtn
+            // 
+            this.SignUpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SignUpBtn.BorderRadius = 10;
+            this.SignUpBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.SignUpBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SignUpBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SignUpBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SignUpBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SignUpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.SignUpBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpBtn.ForeColor = System.Drawing.Color.White;
+            this.SignUpBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SignUpBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.SignUpBtn.IndicateFocus = true;
+            this.SignUpBtn.Location = new System.Drawing.Point(20, 219);
+            this.SignUpBtn.Name = "SignUpBtn";
+            this.SignUpBtn.Size = new System.Drawing.Size(176, 35);
+            this.SignUpBtn.TabIndex = 55;
+            this.SignUpBtn.Text = "SIGN UP";
+            this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LoginBtn.BorderRadius = 10;
+            this.LoginBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.LoginBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoginBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoginBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoginBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoginBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.ForeColor = System.Drawing.Color.White;
+            this.LoginBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LoginBtn.ImageSize = new System.Drawing.Size(30, 25);
+            this.LoginBtn.IndicateFocus = true;
+            this.LoginBtn.Location = new System.Drawing.Point(20, 272);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(176, 35);
+            this.LoginBtn.TabIndex = 54;
+            this.LoginBtn.Text = "SIGN IN";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 25);
+            this.guna2Button1.IndicateFocus = true;
+            this.guna2Button1.Location = new System.Drawing.Point(20, 86);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(176, 35);
+            this.guna2Button1.TabIndex = 53;
+            this.guna2Button1.Text = "USER CUSTOMIZATION";
             // 
             // flowLayoutPanel2
             // 
@@ -931,71 +1020,6 @@ namespace MovieMunch.Frontend.Forms
             this.changeNewUsernameInput.TabIndex = 58;
             this.changeNewUsernameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // SignUpBtn
-            // 
-            this.SignUpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.SignUpBtn.BorderRadius = 10;
-            this.SignUpBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.SignUpBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SignUpBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SignUpBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SignUpBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SignUpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.SignUpBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUpBtn.ForeColor = System.Drawing.Color.White;
-            this.SignUpBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SignUpBtn.ImageSize = new System.Drawing.Size(30, 25);
-            this.SignUpBtn.IndicateFocus = true;
-            this.SignUpBtn.Location = new System.Drawing.Point(20, 219);
-            this.SignUpBtn.Name = "SignUpBtn";
-            this.SignUpBtn.Size = new System.Drawing.Size(176, 35);
-            this.SignUpBtn.TabIndex = 55;
-            this.SignUpBtn.Text = "SIGN UP";
-            this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
-            // 
-            // LoginBtn
-            // 
-            this.LoginBtn.BackColor = System.Drawing.Color.Transparent;
-            this.LoginBtn.BorderRadius = 10;
-            this.LoginBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.LoginBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LoginBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LoginBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LoginBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LoginBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.LoginBtn.ImageSize = new System.Drawing.Size(30, 25);
-            this.LoginBtn.IndicateFocus = true;
-            this.LoginBtn.Location = new System.Drawing.Point(20, 272);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(176, 35);
-            this.LoginBtn.TabIndex = 54;
-            this.LoginBtn.Text = "SIGN IN";
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(8)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 25);
-            this.guna2Button1.IndicateFocus = true;
-            this.guna2Button1.Location = new System.Drawing.Point(20, 86);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(176, 35);
-            this.guna2Button1.TabIndex = 53;
-            this.guna2Button1.Text = "USER CUSTOMIZATION";
-            // 
             // WatchListForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1066,5 +1090,6 @@ namespace MovieMunch.Frontend.Forms
         private Guna.UI2.WinForms.Guna2Button SignUpBtn;
         private Guna.UI2.WinForms.Guna2Button LoginBtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button exitApplicationBtn;
     }
 }

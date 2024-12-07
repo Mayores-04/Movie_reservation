@@ -1,73 +1,67 @@
-﻿using Amazon.Runtime.Internal.Endpoints.StandardLibrary;
-using System;
+﻿using AxWMPLib;
+using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace MovieMunch
 {
     public partial class LoadingForm : Form
     {
-        private int circleCount = 0;
-        private Timer circleTimer;
-        private Timer delayTimer;  
+        private MainPage mainPage;
 
         public LoadingForm()
         {
             InitializeComponent();
 
-            circleTimer = new Timer
-            {
-                Interval = 300
-            };
-            circleTimer.Tick += CircleTimer_Tick;
+            guna2Panel1.BackColor = ColorTranslator.FromHtml("#2D142C"); 
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.BringToFront();
+
+            string path = "C:/Users/jakem/Downloads/user.mp4";
+            axWindowsMediaPlayer1.URL = path;
+
+            axWindowsMediaPlayer1.PlayStateChange += AxWindowsMediaPlayer1_PlayStateChange;
+
+            mainPage = new MainPage();
+            mainPage.Hide();
         }
 
-        private void CircleTimer_Tick(object sender, EventArgs e)
+        private void AxWindowsMediaPlayer1_PlayStateChange(object sender, _WMPOCXEvents_PlayStateChangeEvent e)
         {
-            switch (circleCount)
+            if ((WMPPlayState)e.newState == WMPPlayState.wmppsPlaying)
             {
-                case 0:
-                    firstCircle.Visible = true;
-                    break;
-                case 1:
-                    firstCircle.Visible = false;
-                    secondCircle.Visible = true;
-                    break;
-                case 2:
-                    secondCircle.Visible = false;
-                    thirdCircle.Visible = true;
-                    break;
-                case 3:
-                    thirdCircle.Visible = false;
-                    fourthCircle.Visible = true;
-                    break;
-                case 4:
-                    fourthCircle.Visible = false;
-                    fifthCircle.Visible = true;
-                    break;
-                case 5:
-                    fifthCircle.Visible = false;
-                    sixthCircle.Visible = true;
-                    break;
-                case 6:
-                    sixthCircle.Visible = false;
-                    seventhCircle.Visible = true;
-                    break;
-                case 7:
-                    lastLogo.Visible = true;
-                    seventhCircle.Visible = false;
-                    circleTimer.Stop();
-                    MainPage mainPage = new MainPage();
-                    mainPage.Show();
-                    this.Hide();
-                    break;
+                guna2Panel1.Visible = true;  
+                TransitionOverlay(false);   
             }
-            circleCount++;
+            else if ((WMPPlayState)e.newState == WMPPlayState.wmppsStopped)
+            {
+                guna2Panel1.Visible = true; 
+                TransitionOverlay(true);   
+                NavigateToMainPage();
+            }
         }
-        private void LoadingForm_Load(object sender, EventArgs e)
+
+
+        private async void TransitionOverlay(bool show)
         {
-            circleTimer.Start();
+            float opacity = show ? 0f : 1f;
+            float increment = show ? 0.1f : -0.1f;
+
+            while ((show && opacity < 1f) || (!show && opacity > 0f))
+            {
+                guna2Panel1.BackColor = Color.FromArgb((int)(opacity * 255), 45, 20, 44);  
+                opacity += increment;
+                await Task.Delay(50);  
+            }
+
+            guna2Panel1.Visible = true;
+        }
+
+        private void NavigateToMainPage()
+        {
+            mainPage.Show();
+            this.Hide();
         }
     }
 }
-
-

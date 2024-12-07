@@ -21,7 +21,6 @@ namespace MovieMunch.Backend.Models
         [BsonElement("imagePath")]
         public string FilmImagePath { get; set; }
 
-
         [BsonElement("Day")]
         public string Day { get; set; }
 

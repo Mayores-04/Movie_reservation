@@ -48,7 +48,6 @@ namespace MovieMunch.Frontend.Forms.Components
 
             try
             {
-                // Initialize the ticket reference before QR code generation
                 _ticketReference = GenerateReferenceForQRCode();
 
                 if (string.IsNullOrWhiteSpace(_ticketReference))
@@ -57,11 +56,9 @@ namespace MovieMunch.Frontend.Forms.Components
                     return;
                 }
 
-                // Generate and display the QR code
                 CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
                 Image qrCodeImage = barcode.Draw(_ticketReference, 50);
 
-                // Resize QR Code image to fit the PictureBox
                 Image resizedQrCodeImage = ResizeImage(qrCodeImage, pictureBox1.Width, pictureBox1.Height);
                 pictureBox1.Image = resizedQrCodeImage;
             }
@@ -75,7 +72,6 @@ namespace MovieMunch.Frontend.Forms.Components
 
         private readonly UserService _userService = new UserService();
 
-        // Method to generate the ticket reference for the QR code
         private string GenerateReferenceForQRCode()
         {
             string generatedReference = string.Empty;
@@ -119,13 +115,11 @@ namespace MovieMunch.Frontend.Forms.Components
                     return;
                 }
 
-                // Map seats to unique ticket references
                 Dictionary<string, string> seatTicketMapping = _seats.ToDictionary(
                     seat => seat,
-                    seat => GenerateReference(seat) // Generate seat-specific reference
+                    seat => GenerateReference(seat) 
                 );
 
-                // Create ticket details
                 var ticketDetails = new TicketDetails
                 {
                     MovieId = reference,
@@ -136,7 +130,6 @@ namespace MovieMunch.Frontend.Forms.Components
                     DatePurchased = DateTime.Now
                 };
 
-                // Save ticket details using the service
                 await _userService.SaveTicketDetails(ticketDetails);
 
                 MessageBox.Show("Tickets successfully added!");

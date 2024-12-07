@@ -38,8 +38,8 @@ namespace MovieMunch
             this.regFormClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.termsAndRegMessage = new System.Windows.Forms.Label();
             this.termsAndConditionPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.closeTermsAndConditionPanel = new Guna.UI2.WinForms.Guna2CircleButton();
             this.successRegisterBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.closeTermsAndConditionPanel = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -379,6 +379,25 @@ namespace MovieMunch
             this.termsAndConditionPanel.TabIndex = 706;
             this.termsAndConditionPanel.Visible = false;
             // 
+            // successRegisterBtn
+            // 
+            this.successRegisterBtn.BackColor = System.Drawing.Color.Transparent;
+            this.successRegisterBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.successRegisterBtn.BorderRadius = 15;
+            this.successRegisterBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.successRegisterBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.successRegisterBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.successRegisterBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.successRegisterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(159)))));
+            this.successRegisterBtn.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.successRegisterBtn.ForeColor = System.Drawing.Color.Black;
+            this.successRegisterBtn.Location = new System.Drawing.Point(225, 574);
+            this.successRegisterBtn.Name = "successRegisterBtn";
+            this.successRegisterBtn.Size = new System.Drawing.Size(198, 38);
+            this.successRegisterBtn.TabIndex = 706;
+            this.successRegisterBtn.Text = "PROCEED";
+            this.successRegisterBtn.Click += new System.EventHandler(this.successRegisterBtn_Click);
+            // 
             // closeTermsAndConditionPanel
             // 
             this.closeTermsAndConditionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(177)))), ((int)(((byte)(155)))));
@@ -400,31 +419,11 @@ namespace MovieMunch
             this.closeTermsAndConditionPanel.TextOffset = new System.Drawing.Point(1, -3);
             this.closeTermsAndConditionPanel.Click += new System.EventHandler(this.closeTermsAndConditionPanel_Click);
             // 
-            // successRegisterBtn
-            // 
-            this.successRegisterBtn.BackColor = System.Drawing.Color.Transparent;
-            this.successRegisterBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.successRegisterBtn.BorderRadius = 15;
-            this.successRegisterBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.successRegisterBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.successRegisterBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.successRegisterBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.successRegisterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(159)))));
-            this.successRegisterBtn.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.successRegisterBtn.ForeColor = System.Drawing.Color.Black;
-            this.successRegisterBtn.Location = new System.Drawing.Point(225, 574);
-            this.successRegisterBtn.Name = "successRegisterBtn";
-            this.successRegisterBtn.Size = new System.Drawing.Size(198, 38);
-            this.successRegisterBtn.TabIndex = 706;
-            this.successRegisterBtn.Text = "PROCEED";
-            this.successRegisterBtn.Click += new System.EventHandler(this.successRegisterBtn_Click);
-            // 
             // RegisterForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Controls.Add(this.termsAndConditionPanel);
             this.Controls.Add(this.termsAndRegMessage);
             this.Controls.Add(this.regFormClose);
             this.Controls.Add(this.label6);
@@ -439,6 +438,7 @@ namespace MovieMunch
             this.Controls.Add(this.regEmailInput);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.termsAndConditionPanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";

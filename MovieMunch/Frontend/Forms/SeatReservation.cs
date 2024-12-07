@@ -13,6 +13,7 @@ using MovieMunch.Backend.Models;
 using MongoDB.Driver;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.IO;
+using System.Collections;
 
 namespace MovieMunch
 {
@@ -29,13 +30,15 @@ namespace MovieMunch
         private string _movieDescription;
         private string _moviePic;
 
-
         private MovieService _movieService;
         private List<FilmsInCinema> _filmsInCinemas;
         private List<ComingSoon> _comingSoon;
         private List<MovieInfo> _movies;
+
         private FoodServices _foodServices;
         private List<RegularDeals> _foodsCollection;
+        private List<SnackDeals> _snacksFoodsCollection;
+
         private string id;
         private string title;
         private string description;
@@ -44,7 +47,6 @@ namespace MovieMunch
         private Image image;
         private string reservedBy;
 
-
         private string _movieDays;
         private DateTime _movieStart;
         private DateTime _movieEnd;
@@ -52,6 +54,9 @@ namespace MovieMunch
         public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, 
             string moviePic, string reservedBy, string profilePic, string MovieDays, DateTime movieStartTime, DateTime movieEndTime)
         {
+            _foodServices = new FoodServices();
+            _foodsCollection = _foodServices.GetFoodsInCollection();
+            _snacksFoodsCollection = _foodServices.GetSnackFoodsCollection();
 
             MainPage mainPage = new MainPage();
             mainPage.Close();
@@ -71,7 +76,7 @@ namespace MovieMunch
             _movieStart = movieStartTime;
             _movieEnd = movieEndTime;
 
-            DayHolder.Text = $"{ _movieDays.ToString()}";
+            DayHolder.Text = $"{ _movieDays}";
             StartDateHolder.Text = $"{_movieStart} - {_movieEnd}";
 
             _movieService = new MovieService();
@@ -213,7 +218,7 @@ namespace MovieMunch
                 decimal moviePrice = _moviePrice;
                 string moviePic = _moviePic.ToString(); 
 
-                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic);
+                await _userService.AddMoviesToWatchListOfUser(userName, movieTitle, movieDescription, moviePrice, moviePic, _movieDays, _movieStart, _movieEnd);
             }
             catch (Exception ex)
             {
@@ -395,12 +400,32 @@ namespace MovieMunch
 
         private void regularDealsBtn_Click(object sender, EventArgs e)
         {
-            RegularDealsPanel.Visible = true;
+            if(SnacksDealsPanel.Visible == true)
+            {
+                SnacksDealsPanel.Visible = false;
+                RegularDealsPanel.Visible = true;
+            }
+            else
+            {
+                RegularDealsPanel.Visible = true;
+            }
+
+            LoadFoodsToRegularFlowLayoutPanel();
         }
 
         private void snackDealsBtn_Click(object sender, EventArgs e)
         {
-            SnacksDealsPanel.Visible = true;
+            if(RegularDealsPanel.Visible == true)
+            {
+                RegularDealsPanel.Visible = false;
+                SnacksDealsPanel.Visible = true;
+            }
+            else
+            {
+                SnacksDealsPanel.Visible = true;
+            }
+
+            LoadFoodsToSnacksFlowLayoutPanel();
         }
 
         private void closeRegularDealsBtn_Click(object sender, EventArgs e)
@@ -438,8 +463,6 @@ namespace MovieMunch
             var userService = new UserService();
             userService.Logout();
         }
-
-
 
         private string profilePicBase;
         private string imagePath;
@@ -552,8 +575,6 @@ namespace MovieMunch
             }
         }
 
-
-
         private void saveUserNameOrPasswordBtn_Click(object sender, EventArgs e)
         {
             UserService userService = new UserService();
@@ -602,10 +623,210 @@ namespace MovieMunch
             registerForm.GetUsers(userName, _profilePic);
             registerForm.ShowDialog();
         }
-
-        private void movieScheduleHolder_Click(object sender, EventArgs e)
+        
+        private void LoadFoodsToSnacksFlowLayoutPanel()
         {
+            if (snacksFlowLayoutPanel == null)
+            {
+                MessageBox.Show("snacksFlowLayoutPanel is not initialized.");
+                return;
+            }
 
+            if (_snacksFoodsCollection == null || !_snacksFoodsCollection.Any())
+            {
+                MessageBox.Show("_snacksFoodsCollection is not initialized or empty.");
+                return;
+            }
+
+            snacksFlowLayoutPanel.Controls.Clear();
+
+            Panel[] snackPanels = { snack1, snack2, snack3, snack4, snack5 };
+
+            foreach (var panel in snackPanels)
+            {
+                if (panel == null)
+                {
+                    MessageBox.Show("One of the snack panels is not initialized.");
+                    return;
+                }
+            }
+
+            foreach (var food in _snacksFoodsCollection)
+            {
+                if (food == null)
+                {
+                    MessageBox.Show("One of the food items in the collection is null.");
+                    continue;
+                }
+
+                if (string.IsNullOrEmpty(food.SFoodImagePath))
+                {
+                    MessageBox.Show("Food image path is null or empty.");
+                    continue;
+                }
+
+                PictureBox foodPictureBox = new PictureBox
+                {
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 119,
+                    Width = 205,
+                    ImageLocation = food.SFoodImagePath,
+                    Cursor = Cursors.Hand
+                };
+
+                foodPictureBox.Tag = food;
+                foodPictureBox.Click += new EventHandler(SnackFoodPictureBox_Click);
+
+                int index = _snacksFoodsCollection.IndexOf(food) % snackPanels.Length;
+
+                if (index < snackPanels.Length)
+                {
+                    snackPanels[index].Controls.Add(foodPictureBox);
+                }
+            }
+
+            foreach (var panel in snackPanels)
+            {
+                if (panel != null)
+                {
+                    snacksFlowLayoutPanel.Controls.Add(panel);
+                }
+            }
+
+            FadeIn(snacksFlowLayoutPanel);
+        }
+
+
+        private void SnackFoodPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            var food = clickedPictureBox.Tag as SnackDeals;
+
+            if (food != null)
+            {
+                MessageBox.Show("snacks foods");
+
+                //closeFoodDetailsBtn.Visible = true;
+                //foodDetailsPanel.Visible = true;
+
+                //foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
+                //foodNameDetails.Text = food.SFoodName;
+                //foodPriceDetails.Text = food.SFoodPrice.ToString("C");
+            }
+        }
+
+        private void snacksFlowLayoutPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+            if (_snacksFoodsCollection == null || _snacksFoodsCollection.Count == 0)
+            {
+                LoadFoodsToSnacksFlowLayoutPanel();
+            }
+        }
+
+        private void LoadFoodsToRegularFlowLayoutPanel()
+        {
+            if (regularDealsFlowLayoutPanel == null)
+            {
+                MessageBox.Show("snacksFlowLayoutPanel is not initialized.");
+                return;
+            }
+
+            if (_foodsCollection == null || !_foodsCollection.Any())
+            {
+                MessageBox.Show("_snacksFoodsCollection is not initialized or empty.");
+                return;
+            }
+
+            regularDealsFlowLayoutPanel.Controls.Clear();
+
+            Panel[] regPanels = { reg1, reg2, reg3, reg4, reg5, reg6 };
+
+            foreach (var panel in regPanels)
+            {
+                if (panel == null)
+                {
+                    MessageBox.Show("One of the snack panels is not initialized.");
+                    return;
+                }
+            }
+
+            foreach (var food in _foodsCollection)
+            {
+                if (food == null)
+                {
+                    MessageBox.Show("One of the food items in the collection is null.");
+                    continue;
+                }
+
+                if (string.IsNullOrEmpty(food.FoodImagePath))
+                {
+                    MessageBox.Show("Food image path is null or empty.");
+                    continue;
+                }
+
+                PictureBox foodPictureBox = new PictureBox
+                {
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Height = 119,
+                    Width = 205,
+                    ImageLocation = food.FoodImagePath,
+                    Cursor = Cursors.Hand
+                };
+
+                foodPictureBox.Tag = food;
+                foodPictureBox.Click += new EventHandler(RegularFoodPictureBox_Click);
+
+                int index = _foodsCollection.IndexOf(food) % regPanels.Length;
+
+                if (index < regPanels.Length)
+                {
+                    regPanels[index].Controls.Add(foodPictureBox);
+                }
+            }
+
+            foreach (var panel in regPanels)
+            {
+                if (panel != null)
+                {
+                    regularDealsFlowLayoutPanel.Controls.Add(panel);
+                }
+            }
+
+            FadeIn(regularDealsFlowLayoutPanel);
+        }
+
+        private void regularDealsFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (_foodsCollection == null || _foodsCollection.Count == 0)
+            {
+                LoadFoodsToRegularFlowLayoutPanel();
+            }
+        }
+
+
+        private void RegularFoodPictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+
+            var food = clickedPictureBox.Tag as RegularDeals;
+
+            if (food != null)
+            {
+
+                MessageBox.Show("regular foods");
+                //closeFoodDetailsBtn.Visible = true;
+                //foodDetailsPanel.Visible = true;
+
+                //foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
+                //foodNameDetails.Text = food.SFoodName;
+                //foodPriceDetails.Text = food.SFoodPrice.ToString("C");
+            }
+        }
+
+        private void exitApplicationBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -11,6 +11,16 @@ namespace MovieMunch
         public RegisterForm()
         {
             InitializeComponent();
+            termsAndConditionPanel.BringToFront();
+
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is LoginForm)
+                {
+                    openForm.Close();
+                    break;
+                }
+            }
         }
 
         private string _userName;
@@ -24,7 +34,6 @@ namespace MovieMunch
 
         private void LoginBtnLinked_Click(object sender, EventArgs e)
         {
-            
             LoginForm logForm = new LoginForm();
             logForm.GetUsers(_userName, _profilePic);
             logForm.Show();

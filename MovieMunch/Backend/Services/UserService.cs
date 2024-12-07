@@ -106,7 +106,8 @@ public class UserService
             Name = name,
             Email = email,
             Password = hashedPassword,
-            Status = "Active",
+            ConfirmPassword = hashedPassword,
+            //Status = "Active",
             CreatedAt = DateTime.UtcNow
         };
 
@@ -233,7 +234,7 @@ public class UserService
 
 
     private string email;
-    public async Task AddMoviesToWatchListOfUser(string userName, string movieTitle, string movieDescription, decimal moviePrice, string moviePic)
+    public async Task AddMoviesToWatchListOfUser(string userName, string movieTitle, string movieDescription, decimal moviePrice, string moviePic, string movieDays, DateTime movieStart, DateTime movieEnd)
     {
         try
         {
@@ -248,7 +249,10 @@ public class UserService
                 MovieTitle = movieTitle,
                 MovieDescription = movieDescription,
                 MoviePrice = moviePrice,
-                MoviePic = moviePic
+                MoviePic = moviePic, 
+                Day = movieDays,
+                StartTime = movieStart, 
+                EndTime = movieEnd
             };
 
             Console.WriteLine($"Movie details: Title={movie.MovieTitle}, Description={movie.MovieDescription}, Price={movie.MoviePrice}, Pic={movie.MoviePic}");

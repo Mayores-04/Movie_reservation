@@ -553,5 +553,9 @@ namespace MovieMunch.Frontend.Forms
             registerForm.ShowDialog();
         }
 
+        private void exitApplicationBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
