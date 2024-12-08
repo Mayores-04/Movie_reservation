@@ -38,12 +38,16 @@ namespace MovieMunch
             this.regFormClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.termsAndRegMessage = new System.Windows.Forms.Label();
             this.termsAndConditionPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.successRegisterBtn = new Guna.UI2.WinForms.Guna2Button();
             this.closeTermsAndConditionPanel = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.termsAndAgreementsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.successRegisterBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.termsAndConditionPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -320,7 +324,7 @@ namespace MovieMunch
             this.termsAndRegistrationCheckBox.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.termsAndRegistrationCheckBox.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termsAndRegistrationCheckBox.ForeColor = System.Drawing.Color.White;
-            this.termsAndRegistrationCheckBox.Location = new System.Drawing.Point(224, 543);
+            this.termsAndRegistrationCheckBox.Location = new System.Drawing.Point(226, 543);
             this.termsAndRegistrationCheckBox.Name = "termsAndRegistrationCheckBox";
             this.termsAndRegistrationCheckBox.Size = new System.Drawing.Size(212, 25);
             this.termsAndRegistrationCheckBox.TabIndex = 5;
@@ -369,8 +373,10 @@ namespace MovieMunch
             // 
             this.termsAndConditionPanel.BackColor = System.Drawing.Color.Transparent;
             this.termsAndConditionPanel.BorderRadius = 30;
-            this.termsAndConditionPanel.Controls.Add(this.successRegisterBtn);
             this.termsAndConditionPanel.Controls.Add(this.closeTermsAndConditionPanel);
+            this.termsAndConditionPanel.Controls.Add(this.label1);
+            this.termsAndConditionPanel.Controls.Add(this.flowLayoutPanel1);
+            this.termsAndConditionPanel.Controls.Add(this.successRegisterBtn);
             this.termsAndConditionPanel.Controls.Add(this.termsAndRegistrationCheckBox);
             this.termsAndConditionPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
             this.termsAndConditionPanel.Location = new System.Drawing.Point(487, 12);
@@ -378,6 +384,62 @@ namespace MovieMunch
             this.termsAndConditionPanel.Size = new System.Drawing.Size(631, 626);
             this.termsAndConditionPanel.TabIndex = 706;
             this.termsAndConditionPanel.Visible = false;
+            // 
+            // closeTermsAndConditionPanel
+            // 
+            this.closeTermsAndConditionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(177)))), ((int)(((byte)(155)))));
+            this.closeTermsAndConditionPanel.BorderThickness = 2;
+            this.closeTermsAndConditionPanel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closeTermsAndConditionPanel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closeTermsAndConditionPanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closeTermsAndConditionPanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closeTermsAndConditionPanel.FillColor = System.Drawing.Color.Transparent;
+            this.closeTermsAndConditionPanel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeTermsAndConditionPanel.ForeColor = System.Drawing.Color.White;
+            this.closeTermsAndConditionPanel.ImageSize = new System.Drawing.Size(50, 50);
+            this.closeTermsAndConditionPanel.Location = new System.Drawing.Point(578, 8);
+            this.closeTermsAndConditionPanel.Name = "closeTermsAndConditionPanel";
+            this.closeTermsAndConditionPanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closeTermsAndConditionPanel.Size = new System.Drawing.Size(45, 45);
+            this.closeTermsAndConditionPanel.TabIndex = 705;
+            this.closeTermsAndConditionPanel.Text = "x";
+            this.closeTermsAndConditionPanel.TextOffset = new System.Drawing.Point(1, -3);
+            this.closeTermsAndConditionPanel.Click += new System.EventHandler(this.closeTermsAndConditionPanel_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(535, 66);
+            this.label1.TabIndex = 708;
+            this.label1.Text = "Terms and Conditions of MovieMunch Cinema’s Seat Reservation Application";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.termsAndAgreementsRichTextBox);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 92);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(595, 436);
+            this.flowLayoutPanel1.TabIndex = 707;
+            // 
+            // termsAndAgreementsRichTextBox
+            // 
+            this.termsAndAgreementsRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(7)))), ((int)(((byte)(29)))));
+            this.termsAndAgreementsRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.termsAndAgreementsRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.termsAndAgreementsRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.termsAndAgreementsRichTextBox.ForeColor = System.Drawing.Color.White;
+            this.termsAndAgreementsRichTextBox.HideSelection = false;
+            this.termsAndAgreementsRichTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.termsAndAgreementsRichTextBox.Location = new System.Drawing.Point(3, 3);
+            this.termsAndAgreementsRichTextBox.Name = "termsAndAgreementsRichTextBox";
+            this.termsAndAgreementsRichTextBox.ReadOnly = true;
+            this.termsAndAgreementsRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.termsAndAgreementsRichTextBox.Size = new System.Drawing.Size(615, 433);
+            this.termsAndAgreementsRichTextBox.TabIndex = 1;
+            this.termsAndAgreementsRichTextBox.Text = resources.GetString("termsAndAgreementsRichTextBox.Text");
             // 
             // successRegisterBtn
             // 
@@ -398,32 +460,12 @@ namespace MovieMunch
             this.successRegisterBtn.Text = "PROCEED";
             this.successRegisterBtn.Click += new System.EventHandler(this.successRegisterBtn_Click);
             // 
-            // closeTermsAndConditionPanel
-            // 
-            this.closeTermsAndConditionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(177)))), ((int)(((byte)(155)))));
-            this.closeTermsAndConditionPanel.BorderThickness = 2;
-            this.closeTermsAndConditionPanel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.closeTermsAndConditionPanel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.closeTermsAndConditionPanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.closeTermsAndConditionPanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.closeTermsAndConditionPanel.FillColor = System.Drawing.Color.Transparent;
-            this.closeTermsAndConditionPanel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeTermsAndConditionPanel.ForeColor = System.Drawing.Color.White;
-            this.closeTermsAndConditionPanel.ImageSize = new System.Drawing.Size(50, 50);
-            this.closeTermsAndConditionPanel.Location = new System.Drawing.Point(559, 12);
-            this.closeTermsAndConditionPanel.Name = "closeTermsAndConditionPanel";
-            this.closeTermsAndConditionPanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.closeTermsAndConditionPanel.Size = new System.Drawing.Size(50, 50);
-            this.closeTermsAndConditionPanel.TabIndex = 705;
-            this.closeTermsAndConditionPanel.Text = "x";
-            this.closeTermsAndConditionPanel.TextOffset = new System.Drawing.Point(1, -3);
-            this.closeTermsAndConditionPanel.Click += new System.EventHandler(this.closeTermsAndConditionPanel_Click);
-            // 
             // RegisterForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.termsAndConditionPanel);
             this.Controls.Add(this.termsAndRegMessage);
             this.Controls.Add(this.regFormClose);
             this.Controls.Add(this.label6);
@@ -438,7 +480,6 @@ namespace MovieMunch
             this.Controls.Add(this.regEmailInput);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.termsAndConditionPanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
@@ -449,6 +490,7 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.termsAndConditionPanel.ResumeLayout(false);
             this.termsAndConditionPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -474,5 +516,8 @@ namespace MovieMunch
         private Guna.UI2.WinForms.Guna2Panel termsAndConditionPanel;
         private Guna.UI2.WinForms.Guna2CircleButton closeTermsAndConditionPanel;
         private Guna.UI2.WinForms.Guna2Button successRegisterBtn;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Label label1;
+        private RichTextBox termsAndAgreementsRichTextBox;
     }
 }

@@ -96,7 +96,14 @@ namespace MovieMunch
         {
             this.Close();
             MainPage mainPage = new MainPage();
-            mainPage.SetUserInfo(_userName, _profilePic);
+            if(_userName == null)
+            {
+                mainPage.SetUserInfo("USERNAME", _profilePic);
+            }
+            else
+            {
+                mainPage.SetUserInfo(_userName, _profilePic);
+            }
             mainPage.Show();
         }
     }
