@@ -51,6 +51,8 @@ namespace MovieMunch
         private DateTime _movieStart;
         private DateTime _movieEnd;
 
+        private PaymentForm paymentForm;
+
         public SeatReservation(string Id, string movieTitle, string movieDescription, decimal moviePrice, 
             string moviePic, string reservedBy, string profilePic, string MovieDays, DateTime movieStartTime, DateTime movieEndTime)
         {
@@ -274,11 +276,14 @@ namespace MovieMunch
             if (_selectedSeats.Count > 0)
             {
                 PaymentForm paymentForm = new PaymentForm(_movieId, _movieName, _moviePrice, _selectedSeats, _reservedBy);
+                paymentForm.GetOrderedRegularFoods(_foodName, _foodQuantity, _foodPrice);
+                paymentForm.GetOrderedSnacksFoods(_snackName, _snackQuantity, _snackPrice);
                 paymentForm.ShowDialog();
 
                 if (paymentForm.IsPaymentSuccessful)
                 {
-                    await _seatReservationService.ReserveSeatsAsync(_movieName, (double)_moviePrice, _selectedSeats, _reservedBy);
+                    await _seatReservationService.ReserveSeatsAsync(_movieName, (double)_moviePrice, _selectedSeats, _reservedBy, 
+                        _foodName, _foodPrice, _foodQuantity, _snackName, _snackPrice, _snackQuantity);
                     MessageBox.Show("Seats reserved successfully!");
 
                     foreach (string seat in _selectedSeats)
@@ -289,12 +294,12 @@ namespace MovieMunch
                             seatButton.Refresh();
                         }
                     }
+
                     await LoadSeatStatusAsync(_movieName);
                     _selectedSeats.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("Payment was not successful. Please try again.");
                 }
             }
             else
@@ -688,7 +693,6 @@ namespace MovieMunch
                 };
 
                 foodPictureBox.Tag = food;
-                foodPictureBox.Click += RegularFoodPictureBox_Click;
 
                 int panelIndex = i % snackPanelsContent.Length;
 
@@ -708,33 +712,18 @@ namespace MovieMunch
             FadeIn(snackFlowLayoutPanel);
         }
 
-
-        private void SnackFoodPictureBox_Click(object sender, EventArgs e)
-        {
-            PictureBox clickedPictureBox = sender as PictureBox;
-
-            var food = clickedPictureBox.Tag as SnackDeals;
-
-            if (food != null)
-            {
-                MessageBox.Show("snacks foods");
-
-                //closeFoodDetailsBtn.Visible = true;
-                //foodDetailsPanel.Visible = true;
-
-                //foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
-                //foodNameDetails.Text = food.SFoodName;
-                //foodPriceDetails.Text = food.SFoodPrice.ToString("C");
-            }
-        }
-
-        private void snacksFlowLayoutPanel_Paint_1(object sender, PaintEventArgs e)
+        private void snackFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
             if (_snacksFoodsCollection == null || _snacksFoodsCollection.Count == 0)
             {
                 LoadFoodsToSnacksFlowLayoutPanel();
             }
         }
+
+        
+        private List<string> _snackName = new List<string>();
+        private List<int> _snackQuantity = new List<int>();
+        private List<decimal> _snackPrice = new List<decimal>();
 
         private void snackBuyFoodBtn_Click(object sender, EventArgs e)
         {
@@ -748,9 +737,13 @@ namespace MovieMunch
                 {
                     int quantity = (int)numericUpDown.Value;
 
-                    if (quantity > 0)
+                    if(quantity > 0)
                     {
-                        selectedFoods.Add($"{food.SFoodName} x {quantity}");
+                        selectedFoods.Add($"{food.SFoodName} x {quantity}, Price: {food.SFoodPrice * quantity}");
+
+                        _snackName.Add(food.SFoodName);
+                        _snackQuantity.Add(quantity);
+                        _snackPrice.Add(food.SFoodPrice);
                     }
                 }
             }
@@ -830,14 +823,11 @@ namespace MovieMunch
                 };
 
                 foodPictureBox.Tag = food;
-                foodPictureBox.Click += RegularFoodPictureBox_Click;
 
                 int panelIndex = i % regPanelsContent.Length;
 
-                // Add the PictureBox to the panel
                 regPanelsContent[panelIndex].Controls.Add(foodPictureBox);
 
-                // Associate the NumericUpDown with the food item
                 numericNums[panelIndex].Tag = food;
             }
 
@@ -861,25 +851,9 @@ namespace MovieMunch
             }
         }
 
-
-        private void RegularFoodPictureBox_Click(object sender, EventArgs e)
-        {
-            PictureBox clickedPictureBox = sender as PictureBox;
-
-            var food = clickedPictureBox.Tag as RegularDeals;
-
-            if (food != null)
-            {
-
-                MessageBox.Show("regular foods");
-                //closeFoodDetailsBtn.Visible = true;
-                //foodDetailsPanel.Visible = true;
-
-                //foodPicDetails.BackgroundImage = System.Drawing.Image.FromFile(food.SFoodImagePath);
-                //foodNameDetails.Text = food.SFoodName;
-                //foodPriceDetails.Text = food.SFoodPrice.ToString("C");
-            }
-        }
+        private List<string> _foodName = new List<string>();
+        private List<int> _foodQuantity = new List<int>();
+        private List<decimal> _foodPrice = new List<decimal>();
 
         private void buyFoodsBtn_Click(object sender, EventArgs e)
         {
@@ -893,9 +867,12 @@ namespace MovieMunch
                 {
                     int quantity = (int)numericUpDown.Value;
 
-                    if (quantity > 0)
+                    if(quantity > 0)
                     {
-                        selectedFoods.Add($"{food.FoodName} x {quantity}");
+                        selectedFoods.Add($"{food.FoodName} x {quantity}, Price: {food.FoodPrice * quantity}");
+                        _foodName.Add(food.FoodName);
+                        _foodQuantity.Add(quantity);
+                        _foodPrice.Add(food.FoodPrice);
                     }
                 }
             }
@@ -911,13 +888,9 @@ namespace MovieMunch
             }
         }
 
-
-
         private void exitApplicationBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-
     }
 }

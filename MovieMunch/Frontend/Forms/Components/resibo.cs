@@ -66,14 +66,35 @@ namespace MovieMunch.Frontend.Forms.Components
             {
                 MessageBox.Show($"Error generating QR code: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
-            AddTicketDataAsync();
+        private List<string> _foodName;
+        private List<int> _foodQuantity = new List<int>();
+        private List<decimal> _foodPrice = new List<decimal>();
+
+        public void GetOrderedRegularFoods(List<string> foodName, List<int> quantity, List<decimal> foodPrice)
+        {
+            _foodName = foodName;
+            _foodQuantity = quantity;
+            _foodPrice = foodPrice;
+        }
+
+        private List<string> _snackName;
+        private List<int> _snackQuantity = new List<int>();
+        private List<decimal> _snackPrice = new List<decimal>();
+
+        public void GetOrderedSnacksFoods(List<string> snackName, List<int> quantity, List<decimal> snackPrice)
+        {
+            _snackName = snackName;
+            _snackQuantity = quantity;
+            _snackPrice = snackPrice;
         }
 
         private readonly UserService _userService = new UserService();
 
         private string GenerateReferenceForQRCode()
         {
+
             string generatedReference = string.Empty;
 
             if (string.IsNullOrEmpty(reference))
@@ -127,12 +148,16 @@ namespace MovieMunch.Frontend.Forms.Components
                     MovieTitle = _movieName,
                     MoviePrice = _Price,
                     SeatTicketMapping = seatTicketMapping,
-                    DatePurchased = DateTime.Now
+                    DatePurchased = DateTime.Now,
+                    RegularFoodsName = _foodName,
+                    RegularFoodsPrice = _foodPrice,
+                    RegularFoodsQuantity = _foodQuantity,
+                    SnackFoodsName = _snackName,
+                    SnackFoodsPrice = _snackPrice,
+                    SnackFoodsQuantity = _snackQuantity
                 };
 
                 await _userService.SaveTicketDetails(ticketDetails);
-
-                MessageBox.Show("Tickets successfully added!");
             }
             catch (Exception ex)
             {
@@ -180,22 +205,25 @@ namespace MovieMunch.Frontend.Forms.Components
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Font headerFont = new Font("Arial", 28, FontStyle.Bold);
-            Font subHeaderFont = new Font("Arial", 22, FontStyle.Bold);
-            Font bodyFont = new Font("Arial", 22);
-            Font subFont = new Font("Arial", 19);
+
+            Font headerFont = new Font("Arial", 24, FontStyle.Bold);
+            Font subHeaderFont = new Font("Arial", 20, FontStyle.Bold);
+            Font bodyFont = new Font("Arial", 20);
+            Font subFont = new Font("Arial", 16);
+            Font orderedFont = new Font("Arial", 12);
 
             float x = 50;
-            float y = 50;
+            float y = 15;
             float lineHeight = 25;
 
-            string imagePath = "C:\\Users\\jakem\\source\\repos\\MovieMunchTicket\\MovieMunchTicket\\image\\movieMunchTransparentLogo.png";
+            // Print Logo
+            string imagePath = "C:\\Users\\jakem\\source\\repos\\Movie_reservation\\MovieMunch\\Frontend\\Forms\\Assets\\MovieMunchLogo-removebg-preview_1.png";
             if (System.IO.File.Exists(imagePath))
             {
                 Image logo = Image.FromFile(imagePath);
-                float imageWidth = 500;
-                float imageHeight = 250;
-                e.Graphics.DrawImage(logo, new RectangleF(x + 130, y, imageWidth, imageHeight));
+                float imageWidth = 300;
+                float imageHeight = 150;
+                e.Graphics.DrawImage(logo, new RectangleF(x + 230, y, imageWidth, imageHeight));
                 y += imageHeight + lineHeight;
             }
 
@@ -225,7 +253,7 @@ namespace MovieMunch.Frontend.Forms.Components
                 e.Graphics.DrawString(currentDateTime, subHeaderFont, Brushes.Black, new PointF(x, y));
                 y += lineHeight;
 
-                e.Graphics.DrawString("______________________________________", bodyFont, Brushes.Black, new PointF(x, y));
+                e.Graphics.DrawString("______________________________________________", bodyFont, Brushes.Black, new PointF(x, y));
                 y += lineHeight * 2;
 
                 e.Graphics.DrawString("Name", bodyFont, Brushes.Black, new PointF(x, y));
@@ -243,43 +271,52 @@ namespace MovieMunch.Frontend.Forms.Components
                 e.Graphics.DrawString(seat, bodyFont, Brushes.Black, new PointF(x + 285, y));
                 y += lineHeight * 2;
 
-
-                e.Graphics.DrawString("Price", bodyFont, Brushes.Black, new PointF(x, y));
+                e.Graphics.DrawString("Movie Price", bodyFont, Brushes.Black, new PointF(x, y));
                 e.Graphics.DrawString(":", bodyFont, Brushes.Black, new PointF(x + 270, y));
                 e.Graphics.DrawString($"₱{_Price}", bodyFont, Brushes.Black, new PointF(x + 285, y));
                 y += lineHeight * 2;
 
-
-                e.Graphics.DrawString("Discount", bodyFont, Brushes.Black, new PointF(x, y));
-                e.Graphics.DrawString(":", bodyFont, Brushes.Black, new PointF(x + 270, y));
-                e.Graphics.DrawString($"{_Discount}%", bodyFont, Brushes.Black, new PointF(x + 285, y));
+                e.Graphics.DrawString("Ordered Foods", subHeaderFont, Brushes.Black, new PointF(x, y));
                 y += lineHeight * 2;
 
-                e.Graphics.DrawString("Payment Received", bodyFont, Brushes.Black, new PointF(x, y));
-                e.Graphics.DrawString(":", bodyFont, Brushes.Black, new PointF(x + 270, y));
-                e.Graphics.DrawString($"₱{_PaymentInput}", bodyFont, Brushes.Black, new PointF(x + 285, y));
-                y += lineHeight * 2;
+                if (_foodName != null && _foodName.Count > 0)
+                {
+                    e.Graphics.DrawString("Regular Foods:", bodyFont, Brushes.Black, new PointF(x, y));
+                    y += lineHeight + 10;  
 
-                e.Graphics.DrawString("Change", bodyFont, Brushes.Black, new PointF(x, y));
-                e.Graphics.DrawString(":", bodyFont, Brushes.Black, new PointF(x + 270, y));
-                e.Graphics.DrawString($"₱{_ChangeAmount}", bodyFont, Brushes.Black, new PointF(x + 285, y));
-                y += lineHeight * 2;
+                    for (int i = 0; i < _foodName.Count; i++)
+                    {
+                        e.Graphics.DrawString($"{_foodName[i]} x {_foodQuantity[i]} - ₱{_foodPrice[i] * _foodQuantity[i]}", orderedFont, Brushes.Black, new PointF(x + 20, y));
+                        y += lineHeight;
+                    }
 
-                e.Graphics.DrawString("______________________________________", bodyFont, Brushes.Black, new PointF(x, y));
-                y += lineHeight * 2;
+                    y += 15; 
+                }
+
+                if (_snackName != null && _snackName.Count > 0)
+                {
+                    e.Graphics.DrawString("Snack Foods:", bodyFont, Brushes.Black, new PointF(x, y));
+                    y += lineHeight + 10;  
+
+                    for (int i = 0; i < _snackName.Count; i++)
+                    {
+                        e.Graphics.DrawString($"{_snackName[i]} x {_snackQuantity[i]} - ₱{_snackPrice[i] * _snackQuantity[i]}", orderedFont, Brushes.Black, new PointF(x + 20, y));
+                        y += lineHeight;
+                    }
+
+                    y -= 20;
+                }
+
+
+                e.Graphics.DrawString("______________________________________________", bodyFont, Brushes.Black, new PointF(x, y));
+                y += lineHeight + 10;
 
                 e.Graphics.DrawString("TOTAL AMOUNT", headerFont, Brushes.Black, new PointF(x, y));
                 e.Graphics.DrawString(":", headerFont, Brushes.Black, new PointF(x + 320, y));
                 e.Graphics.DrawString($"₱{_TotalAmount}", headerFont, Brushes.Black, new PointF(x + 355, y));
                 y += lineHeight * 2;
 
-                e.Graphics.DrawString("______________________________________", bodyFont, Brushes.Black, new PointF(x, y));
-                y += lineHeight * 2;
-
                 e.Graphics.DrawString("Thank you for choosing Movie Munch Cinemas!", subFont, Brushes.Black, new PointF(x, y));
-                y += lineHeight;
-
-                e.Graphics.DrawString("This Serves as your official receipt.", subFont, Brushes.Black, new PointF(x, y));
                 y += lineHeight;
 
                 e.Graphics.DrawString("Valid only on the screening details indicated.", subFont, Brushes.Black, new PointF(x, y));
@@ -299,15 +336,18 @@ namespace MovieMunch.Frontend.Forms.Components
             }
         }
 
+
         private void printReceiptBtn_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument;
             printPreviewDialog1.ShowDialog();
         }
 
+
         private void OkBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you!");
+            Task task = AddTicketDataAsync();
             this.Close();
         }
     }

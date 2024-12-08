@@ -24,5 +24,23 @@ namespace MovieMunch.Models
 
         [BsonElement("IsReserved")]
         public bool IsReserved { get; set; }
+
+        [BsonElement("Regular Foods")]
+        public List<string> RegularFoodsName { get; set; }
+
+        [BsonElement("Regular Foods Price")]
+        public List<decimal> RegularFoodsPrice { get; set; }
+
+        [BsonElement("Regular Foods Quantity")]
+        public List<int> RegularFoodsQuantity { get; set; }
+
+        [BsonElement("Snack Foods")]
+        public List<string> SnackFoodsName { get; set; }
+
+        [BsonElement("Snack Foods Price")]
+        public List<decimal> SnackFoodsPrice { get; set; }
+
+        [BsonElement("Snack Foods Quantity")]
+        public List<int> SnackFoodsQuantity { get; set; }
     }
 }

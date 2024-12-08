@@ -43,11 +43,18 @@ namespace MovieMunch
         private void regFormClose_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
-            mainPage.SetUserInfo(_userName, _profilePic);
+            if(_userName == null)
+            {
+                _userName = "USERNAME";
+                mainPage.SetUserInfo(_userName, _profilePic);
+            }
+            else
+            {
+                mainPage.SetUserInfo(_userName, _profilePic);
+            }
             mainPage.Show();
             this.Close();
         }
-
 
         private void closeTermsAndConditionPanel_Click(object sender, EventArgs e)
         {
@@ -79,7 +86,6 @@ namespace MovieMunch
             {
                 termsAndConditionPanel.Visible = true;
             }
-
         }
 
         private void successRegisterBtn_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace MovieMunch.Frontend.Forms
         private decimal _moviePrice;
         private string _reservedBy;
         private string _movieId;
-        public bool IsPaymentSuccessful { get; private set; } 
+        public bool IsPaymentSuccessful { get; private set; }
 
         public PaymentForm(string Id, string movieName, decimal moviePrice, List<string> reservedSeats,  string reservedBy)
         {
@@ -24,6 +24,28 @@ namespace MovieMunch.Frontend.Forms
             _reservedSeats = reservedSeats;
             _moviePrice = moviePrice;
             _reservedBy = reservedBy;
+        }
+
+        private List<string> _foodName;
+        private List<int> _foodQuantity = new List<int>();
+        private List<decimal> _foodPrice = new List<decimal>();
+
+        public void GetOrderedRegularFoods(List<string> foodName, List<int> quantity, List<decimal> foodPrice)
+        {
+            _foodName = foodName;
+            _foodQuantity = quantity;
+            _foodPrice = foodPrice;
+        }
+
+        private List<string> _snackName;
+        private List<int> _snackQuantity = new List<int>();
+        private List<decimal> _snackPrice = new List<decimal>();
+
+        public void GetOrderedSnacksFoods(List<string> snackName, List<int> quantity, List<decimal> snackPrice)
+        {
+            _snackName = snackName;
+            _snackQuantity = quantity;
+            _snackPrice = snackPrice;
         }
 
         public void clearText()
@@ -50,7 +72,24 @@ namespace MovieMunch.Frontend.Forms
 
         private void gcashPaymentBtn_Click(object sender, EventArgs e)
         {
-            decimal totalAmount = _moviePrice * _reservedSeats.Count;
+            decimal totalRegularFoodCost = 0;
+
+            for (int i = 0; i < _foodQuantity.Count; i++)
+            {
+                totalRegularFoodCost += _foodQuantity[i] * _foodPrice[i];
+            }
+
+            decimal totalSnackFoodCost = 0;
+
+            for (int i = 0; i < _snackQuantity.Count; i++)
+            {
+                totalSnackFoodCost += _snackQuantity[i] * _snackPrice[i];
+            }
+
+            decimal totalFoodCost = totalRegularFoodCost + totalSnackFoodCost;
+
+            decimal totalAmount = (_moviePrice * _reservedSeats.Count) + totalFoodCost;
+
             //Gcash payment btn
             if (gcashPaymentBtn.Text == "Proceed to GCash payment")
             {
@@ -62,6 +101,21 @@ namespace MovieMunch.Frontend.Forms
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
                 PayWithDetails.Text = "GCash";
+
+                var regpairs = new List<string>();
+                for (int i = 0; i < _foodName.Count; i++)
+                {
+                    regpairs.Add($"{_foodName[i]} x {_foodQuantity[i]}");
+                }
+                regularFoodsLabel.Text = string.Join("\n", regpairs);
+
+                var snackpairs = new List<string>();
+                for (int i = 0; i < _snackName.Count; i++)
+                {
+                    snackpairs.Add($"{_snackName[i]} x {_snackQuantity[i]}");
+                }
+                snackFoodLabel.Text = string.Join("\n", snackpairs);
+
                 totalPriceDetails.Text = totalAmount.ToString("C");
 
                 gcashPaypalPaymentPanel.Visible = false;
@@ -78,7 +132,24 @@ namespace MovieMunch.Frontend.Forms
                 AccountName.Text = paypalName;
                 MovietoReserveDetails.Text = _movieName;
                 SeatsDetails.Text = string.Join(", ", _reservedSeats);
-                PayWithDetails.Text = "PayPal"; 
+                PayWithDetails.Text = "PayPal";
+
+                var regpairs = new List<string>();
+                for (int i = 0; i < _foodName.Count; i++)
+                {
+                    regpairs.Add($"{_foodName[i]} x {_foodQuantity[i]}");
+                }
+                regularFoodsLabel.Text = string.Join("\n", regpairs);
+
+                var snackpairs = new List<string>();
+                for (int i = 0; i < _snackName.Count; i++)
+                {
+                    snackpairs.Add($"{_snackName[i]} x {_snackQuantity[i]}");
+                }
+                snackFoodLabel.Text = string.Join("\n", snackpairs);
+
+
+
                 totalPriceDetails.Text = totalAmount.ToString("C");
 
                 gcashPaypalPaymentPanel.Visible = false;
@@ -101,6 +172,8 @@ namespace MovieMunch.Frontend.Forms
                 orderDetailsPanel.Visible = true;
             }
             resibo resibo = new resibo(_movieId, _movieName, _moviePrice, _reservedSeats, _reservedBy);
+            resibo.GetOrderedRegularFoods(_foodName, _foodQuantity, _foodPrice);
+            resibo.GetOrderedSnacksFoods(_snackName, _snackQuantity, _snackPrice);
             resibo.ShowDialog();
 
             IsPaymentSuccessful = true;
@@ -110,7 +183,23 @@ namespace MovieMunch.Frontend.Forms
 
         private void cardPaymentBtn_Click(object sender, EventArgs e)
         {
-            decimal totalAmount = _moviePrice * _reservedSeats.Count;
+            decimal totalRegularFoodCost = 0;
+
+            for (int i = 0; i < _foodQuantity.Count; i++)
+            {
+                totalRegularFoodCost += _foodQuantity[i] * _foodPrice[i];
+            }
+
+            decimal totalSnackFoodCost = 0;
+
+            for (int i = 0; i < _snackQuantity.Count; i++)
+            {
+                totalSnackFoodCost += _snackQuantity[i] * _snackPrice[i];
+            }
+
+            decimal totalFoodCost = totalRegularFoodCost + totalSnackFoodCost;
+
+            decimal totalAmount = (_moviePrice * _reservedSeats.Count) + totalFoodCost;
             string cardName = cardNameInput.Text;
             string cardNumber = cardNumberInput.Text;
             string monthExpiration = cardMonthInput.Text;
@@ -124,6 +213,21 @@ namespace MovieMunch.Frontend.Forms
             MovietoReserveDetails.Text = _movieName;
             SeatsDetails.Text = string.Join(", ", _reservedSeats);
             PayWithDetails.Text = "Card";
+
+            var regpairs = new List<string>();
+            for (int i = 0; i < _foodName.Count; i++)
+            {
+                regpairs.Add($"{_foodName[i]} x {_foodQuantity[i]}");
+            }
+            regularFoodsLabel.Text = string.Join("\n", regpairs);
+
+            var snackpairs = new List<string>();
+            for (int i = 0; i < _snackName.Count; i++)
+            {
+                snackpairs.Add($"{_snackName[i]} x {_snackQuantity[i]}");
+            }
+            snackFoodLabel.Text = string.Join("\n", snackpairs);
+
             totalPriceDetails.Text = totalAmount.ToString("C");
 
             cardPaymentPanel.Visible = false;

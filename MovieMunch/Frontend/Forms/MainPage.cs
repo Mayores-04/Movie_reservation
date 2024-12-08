@@ -1018,7 +1018,7 @@ namespace MovieMunch
 
         private void searchBtn_Click_1(object sender, EventArgs e)
         {
-            exisSearchBtn.Visible = true;
+            exitSearchBtn.Visible = true;
 
             searchBtnBefore.Visible = false;
             searchInput.Visible = true;
@@ -1029,13 +1029,13 @@ namespace MovieMunch
             rightTurnBtn.BringToFront();
         }
 
-        private void exisSearchBtn_Click(object sender, EventArgs e)
+        private void exitSearchBtn_Click(object sender, EventArgs e)
         {
             searchBtnBefore.Visible = true;
             searchInput.Visible = false;
             searchResultFlowWholePanel.Visible = false;
             searchResultsFlowLayoutPanel.Visible = false;
-            exisSearchBtn.Visible = false;
+            exitSearchBtn.Visible = false;
 
             LeftTurnBtn.BringToFront();
             rightTurnBtn.BringToFront();
@@ -1056,47 +1056,89 @@ namespace MovieMunch
 
                 searchResultsFlowLayoutPanel.Controls.Clear();
 
+                // Fetch movie and snack lists
                 List<string> trendingMovies = _movieService.GetAllMovies().Select(movie => movie.MovieTitle).ToList();
                 List<string> filmsInCinema = _movieService.GetFilmsInCinemas().Select(movie => movie.FilmTitle).ToList();
                 List<string> comingSoon = _movieService.GetComingSoons().Select(movie => movie.ComingSoonTitle).ToList();
                 List<string> snacks = _foodServices.GetFoodsInCollection().Select(snack => snack.FoodName).ToList();
 
+                // Filter results
                 List<string> filteredTrendingMovies = trendingMovies.Where(title => title.ToLower().Contains(searchText)).ToList();
                 List<string> filteredFilmsInCinema = filmsInCinema.Where(title => title.ToLower().Contains(searchText)).ToList();
                 List<string> filteredComingSoon = comingSoon.Where(title => title.ToLower().Contains(searchText)).ToList();
                 List<string> filteredSnacks = snacks.Where(name => name.ToLower().Contains(searchText)).ToList();
 
-                DisplaySearchResults(filteredTrendingMovies, "Trending Movies");
-                DisplaySearchResults(filteredFilmsInCinema, "Films in Cinema");
-                DisplaySearchResults(filteredComingSoon, "Coming Soon");
-                DisplaySearchResults(filteredSnacks, "Snacks");
+                // Create a dictionary of categories and results
+                var searchCategories = new Dictionary<string, List<string>>
+        {
+            { "Trending Movies", filteredTrendingMovies },
+            { "Films in Cinema", filteredFilmsInCinema },
+            { "Coming Soon", filteredComingSoon },
+            { "Snacks", filteredSnacks }
+        };
+
+                // Display search results
+                DisplaySearchResults(searchCategories);
             }
         }
 
-        private void DisplaySearchResults(List<string> items, string category)
+        private void DisplaySearchResults(Dictionary<string, List<string>> categories)
         {
-            if (items.Count > 0)
+            searchResultsFlowLayoutPanel.Controls.Clear();
+
+            bool anyResultsFound = false;
+
+            foreach (var category in categories)
             {
-                Label categoryLabel = new Label
+                if (category.Value.Count > 0)
                 {
-                    Text = category,
-                    Font = new Font("Segoe UI", 16F, FontStyle.Bold),
+                    anyResultsFound = true;
+
+                    Label categoryLabel = new Label
+                    {
+                        Text = category.Key,
+                        Font = new Font("Segoe UI", 16F, FontStyle.Bold),
+                        AutoSize = true,
+                        Margin = new Padding(0, 10, 0, 5)
+                    };
+                    searchResultsFlowLayoutPanel.Controls.Add(categoryLabel);
+
+                    foreach (string item in category.Value)
+                    {
+                        Label itemLabel = new Label
+                        {
+                            Text = $"• {item}",
+                            Font = new Font("Segoe UI", 12F),
+                            AutoSize = true,
+                            Margin = new Padding(20, 0, 0, 5)
+                        };
+                        searchResultsFlowLayoutPanel.Controls.Add(itemLabel);
+                    }
+                }
+            }
+
+            if (!anyResultsFound)
+            {
+                searchResultFlowWholePanel.Height = 60;
+                searchResultsFlowLayoutPanel.Height = 60;
+
+                Label noResultsLabel = new Label
+                {
+                    Text = "No results found.",
+                    Font = new Font("Segoe UI", 14F, FontStyle.Italic),
+                    ForeColor = Color.Gray,
                     AutoSize = true,
                     Margin = new Padding(0, 10, 0, 5)
                 };
-                searchResultsFlowLayoutPanel.Controls.Add(categoryLabel);
-
-                foreach (string item in items)
-                {
-                    Label itemLabel = new Label();
-                    itemLabel.Text = $"• {item}";
-                    itemLabel.Font = new Font("Segoe UI", 12F);
-                    itemLabel.AutoSize = true;
-                    itemLabel.Margin = new Padding(20, 0, 0, 5);
-                    searchResultsFlowLayoutPanel.Controls.Add(itemLabel);
-                }
+                searchResultsFlowLayoutPanel.Controls.Add(noResultsLabel);
+            }
+            else
+            {
+                searchResultFlowWholePanel.Height = 185;
+                searchResultsFlowLayoutPanel.Height = 185;
             }
         }
+
 
         private void snackDealsReservedSeatBtn_Click(object sender, EventArgs e)
         {

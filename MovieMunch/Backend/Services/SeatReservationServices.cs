@@ -22,7 +22,9 @@ namespace MovieMunch.Services
             _movieCollection = dbConnection.Database.GetCollection<Movie>("Movies");  
         }
 
-        public async Task ReserveSeatsAsync(string movieName, double moviePrice, List<string> seatNumbers, string reservedBy)
+        public async Task ReserveSeatsAsync(string movieName, double moviePrice, List<string> seatNumbers, string reservedBy, 
+            List<string> regularFoodsName, List<decimal> regularFoodPrice, List<int> regularFoodsQuantity, 
+            List<string> snackFoodsName, List<decimal> snackPrice, List<int> snackFoodsQuantity)
         {
             var reservation = new CinemaSeats
             {
@@ -30,7 +32,13 @@ namespace MovieMunch.Services
                 MoviePrice = moviePrice,
                 SeatNumbers = seatNumbers,
                 ReservedBy = reservedBy,
-                IsReserved = true
+                IsReserved = true,
+                RegularFoodsName = regularFoodsName,
+                RegularFoodsPrice = regularFoodPrice,
+                RegularFoodsQuantity = regularFoodsQuantity,
+                SnackFoodsName = snackFoodsName,
+                SnackFoodsPrice = snackPrice,
+                SnackFoodsQuantity = snackFoodsQuantity
             };
 
             await _cinemaSeats.InsertOneAsync(reservation);

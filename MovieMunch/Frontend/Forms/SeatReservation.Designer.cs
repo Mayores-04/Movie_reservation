@@ -366,32 +366,30 @@ namespace MovieMunch
             this.RegularDealsPanel = new System.Windows.Forms.Panel();
             this.closeRegularDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.SnacksDealsPanel = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.closeSnackDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.reg2 = new System.Windows.Forms.Panel();
-            this.reg1 = new System.Windows.Forms.Panel();
             this.regularDealsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.reg1NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.reg1panel = new System.Windows.Forms.Panel();
-            this.buyFoodsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.reg1NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg1 = new System.Windows.Forms.Panel();
             this.reg2panel = new System.Windows.Forms.Panel();
             this.reg2NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.reg5panel = new System.Windows.Forms.Panel();
-            this.reg5NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.reg5 = new System.Windows.Forms.Panel();
-            this.reg6panel = new System.Windows.Forms.Panel();
-            this.reg6NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.reg6 = new System.Windows.Forms.Panel();
+            this.reg2 = new System.Windows.Forms.Panel();
             this.reg3panel = new System.Windows.Forms.Panel();
             this.reg3NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.reg3 = new System.Windows.Forms.Panel();
             this.reg4panel = new System.Windows.Forms.Panel();
             this.reg4NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.reg4 = new System.Windows.Forms.Panel();
+            this.reg5panel = new System.Windows.Forms.Panel();
+            this.reg5NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg5 = new System.Windows.Forms.Panel();
+            this.reg6panel = new System.Windows.Forms.Panel();
+            this.reg6NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.reg6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.buyFoodsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SnacksDealsPanel = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.snackFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.snack1panel = new System.Windows.Forms.Panel();
             this.snack1NumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -410,6 +408,8 @@ namespace MovieMunch
             this.snack5 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.snackBuyFoodBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.closeSnackDealsBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             label30 = new System.Windows.Forms.Label();
             label31 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -433,24 +433,23 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).BeginInit();
             this.RegularDealsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            this.SnacksDealsPanel.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.guna2Panel7.SuspendLayout();
             this.regularDealsFlowLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reg1NumericUpDown)).BeginInit();
             this.reg1panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg1NumericUpDown)).BeginInit();
             this.reg2panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reg2NumericUpDown)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.reg5panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reg5NumericUpDown)).BeginInit();
-            this.reg6panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reg6NumericUpDown)).BeginInit();
             this.reg3panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reg3NumericUpDown)).BeginInit();
             this.reg4panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reg4NumericUpDown)).BeginInit();
+            this.reg5panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg5NumericUpDown)).BeginInit();
+            this.reg6panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reg6NumericUpDown)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
+            this.SnacksDealsPanel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.snackFlowLayoutPanel.SuspendLayout();
             this.snack1panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.snack1NumericUpDown)).BeginInit();
@@ -463,6 +462,7 @@ namespace MovieMunch
             this.snack5panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.snack5NumericUpDown)).BeginInit();
             this.panel17.SuspendLayout();
+            this.guna2Panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label30
@@ -6164,86 +6164,6 @@ namespace MovieMunch
             this.panel2.Size = new System.Drawing.Size(911, 393);
             this.panel2.TabIndex = 66;
             // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.guna2Panel6.BorderThickness = 2;
-            this.guna2Panel6.Controls.Add(label30);
-            this.guna2Panel6.Location = new System.Drawing.Point(51, 18);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(812, 48);
-            this.guna2Panel6.TabIndex = 0;
-            // 
-            // SnacksDealsPanel
-            // 
-            this.SnacksDealsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.SnacksDealsPanel.Controls.Add(this.panel6);
-            this.SnacksDealsPanel.Controls.Add(this.closeSnackDealsBtn);
-            this.SnacksDealsPanel.Location = new System.Drawing.Point(214, 100);
-            this.SnacksDealsPanel.Name = "SnacksDealsPanel";
-            this.SnacksDealsPanel.Size = new System.Drawing.Size(914, 460);
-            this.SnacksDealsPanel.TabIndex = 721;
-            this.SnacksDealsPanel.Visible = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
-            this.panel6.Controls.Add(this.snackFlowLayoutPanel);
-            this.panel6.Controls.Add(this.guna2Panel7);
-            this.panel6.Location = new System.Drawing.Point(1, 66);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(911, 393);
-            this.panel6.TabIndex = 66;
-            // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.guna2Panel7.BorderThickness = 2;
-            this.guna2Panel7.Controls.Add(label31);
-            this.guna2Panel7.Location = new System.Drawing.Point(51, 18);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(812, 48);
-            this.guna2Panel7.TabIndex = 0;
-            // 
-            // closeSnackDealsBtn
-            // 
-            this.closeSnackDealsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
-            this.closeSnackDealsBtn.BorderThickness = 5;
-            this.closeSnackDealsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.closeSnackDealsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.closeSnackDealsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.closeSnackDealsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.closeSnackDealsBtn.FillColor = System.Drawing.Color.Transparent;
-            this.closeSnackDealsBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeSnackDealsBtn.ForeColor = System.Drawing.Color.White;
-            this.closeSnackDealsBtn.ImageSize = new System.Drawing.Size(50, 50);
-            this.closeSnackDealsBtn.Location = new System.Drawing.Point(857, 8);
-            this.closeSnackDealsBtn.Name = "closeSnackDealsBtn";
-            this.closeSnackDealsBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.closeSnackDealsBtn.Size = new System.Drawing.Size(50, 50);
-            this.closeSnackDealsBtn.TabIndex = 720;
-            this.closeSnackDealsBtn.Text = "x";
-            this.closeSnackDealsBtn.TextOffset = new System.Drawing.Point(1, -3);
-            this.closeSnackDealsBtn.Click += new System.EventHandler(this.closeSnackDealsBtn_Click);
-            // 
-            // reg2
-            // 
-            this.reg2.Location = new System.Drawing.Point(17, 17);
-            this.reg2.Margin = new System.Windows.Forms.Padding(20);
-            this.reg2.Name = "reg2";
-            this.reg2.Size = new System.Drawing.Size(205, 119);
-            this.reg2.TabIndex = 1;
-            // 
-            // reg1
-            // 
-            this.reg1.Location = new System.Drawing.Point(17, 17);
-            this.reg1.Margin = new System.Windows.Forms.Padding(20);
-            this.reg1.Name = "reg1";
-            this.reg1.Size = new System.Drawing.Size(205, 119);
-            this.reg1.TabIndex = 0;
-            // 
             // regularDealsFlowLayoutPanel
             // 
             this.regularDealsFlowLayoutPanel.AutoScroll = true;
@@ -6260,6 +6180,15 @@ namespace MovieMunch
             this.regularDealsFlowLayoutPanel.TabIndex = 2;
             this.regularDealsFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.regularDealsFlowLayoutPanel_Paint);
             // 
+            // reg1panel
+            // 
+            this.reg1panel.Controls.Add(this.reg1NumericUpDown);
+            this.reg1panel.Controls.Add(this.reg1);
+            this.reg1panel.Location = new System.Drawing.Point(3, 3);
+            this.reg1panel.Name = "reg1panel";
+            this.reg1panel.Size = new System.Drawing.Size(238, 199);
+            this.reg1panel.TabIndex = 3;
+            // 
             // reg1NumericUpDown
             // 
             this.reg1NumericUpDown.BackColor = System.Drawing.Color.Transparent;
@@ -6274,34 +6203,13 @@ namespace MovieMunch
             this.reg1NumericUpDown.TabIndex = 3;
             this.reg1NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             // 
-            // reg1panel
+            // reg1
             // 
-            this.reg1panel.Controls.Add(this.reg1NumericUpDown);
-            this.reg1panel.Controls.Add(this.reg1);
-            this.reg1panel.Location = new System.Drawing.Point(3, 3);
-            this.reg1panel.Name = "reg1panel";
-            this.reg1panel.Size = new System.Drawing.Size(238, 199);
-            this.reg1panel.TabIndex = 3;
-            // 
-            // buyFoodsBtn
-            // 
-            this.buyFoodsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.buyFoodsBtn.BorderRadius = 15;
-            this.buyFoodsBtn.BorderThickness = 2;
-            this.buyFoodsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buyFoodsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buyFoodsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buyFoodsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buyFoodsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
-            this.buyFoodsBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyFoodsBtn.ForeColor = System.Drawing.Color.White;
-            this.buyFoodsBtn.Location = new System.Drawing.Point(17, 14);
-            this.buyFoodsBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.buyFoodsBtn.Name = "buyFoodsBtn";
-            this.buyFoodsBtn.Size = new System.Drawing.Size(693, 48);
-            this.buyFoodsBtn.TabIndex = 4;
-            this.buyFoodsBtn.Text = "SAVE";
-            this.buyFoodsBtn.Click += new System.EventHandler(this.buyFoodsBtn_Click);
+            this.reg1.Location = new System.Drawing.Point(17, 17);
+            this.reg1.Margin = new System.Windows.Forms.Padding(20);
+            this.reg1.Name = "reg1";
+            this.reg1.Size = new System.Drawing.Size(205, 119);
+            this.reg1.TabIndex = 0;
             // 
             // reg2panel
             // 
@@ -6326,75 +6234,13 @@ namespace MovieMunch
             this.reg2NumericUpDown.TabIndex = 3;
             this.reg2NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             // 
-            // panel4
+            // reg2
             // 
-            this.panel4.Controls.Add(this.buyFoodsBtn);
-            this.panel4.Location = new System.Drawing.Point(3, 413);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(726, 77);
-            this.panel4.TabIndex = 5;
-            // 
-            // reg5panel
-            // 
-            this.reg5panel.Controls.Add(this.reg5NumericUpDown);
-            this.reg5panel.Controls.Add(this.reg5);
-            this.reg5panel.Location = new System.Drawing.Point(247, 208);
-            this.reg5panel.Name = "reg5panel";
-            this.reg5panel.Size = new System.Drawing.Size(238, 199);
-            this.reg5panel.TabIndex = 6;
-            // 
-            // reg5NumericUpDown
-            // 
-            this.reg5NumericUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.reg5NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.reg5NumericUpDown.BorderRadius = 15;
-            this.reg5NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.reg5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.reg5NumericUpDown.Location = new System.Drawing.Point(17, 146);
-            this.reg5NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.reg5NumericUpDown.Name = "reg5NumericUpDown";
-            this.reg5NumericUpDown.Size = new System.Drawing.Size(205, 32);
-            this.reg5NumericUpDown.TabIndex = 3;
-            this.reg5NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            // 
-            // reg5
-            // 
-            this.reg5.Location = new System.Drawing.Point(17, 17);
-            this.reg5.Margin = new System.Windows.Forms.Padding(20);
-            this.reg5.Name = "reg5";
-            this.reg5.Size = new System.Drawing.Size(205, 119);
-            this.reg5.TabIndex = 0;
-            // 
-            // reg6panel
-            // 
-            this.reg6panel.Controls.Add(this.reg6NumericUpDown);
-            this.reg6panel.Controls.Add(this.reg6);
-            this.reg6panel.Location = new System.Drawing.Point(491, 208);
-            this.reg6panel.Name = "reg6panel";
-            this.reg6panel.Size = new System.Drawing.Size(238, 199);
-            this.reg6panel.TabIndex = 7;
-            // 
-            // reg6NumericUpDown
-            // 
-            this.reg6NumericUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.reg6NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
-            this.reg6NumericUpDown.BorderRadius = 15;
-            this.reg6NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.reg6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.reg6NumericUpDown.Location = new System.Drawing.Point(17, 146);
-            this.reg6NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.reg6NumericUpDown.Name = "reg6NumericUpDown";
-            this.reg6NumericUpDown.Size = new System.Drawing.Size(205, 32);
-            this.reg6NumericUpDown.TabIndex = 3;
-            this.reg6NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
-            // 
-            // reg6
-            // 
-            this.reg6.Location = new System.Drawing.Point(17, 17);
-            this.reg6.Margin = new System.Windows.Forms.Padding(20);
-            this.reg6.Name = "reg6";
-            this.reg6.Size = new System.Drawing.Size(205, 119);
-            this.reg6.TabIndex = 1;
+            this.reg2.Location = new System.Drawing.Point(17, 17);
+            this.reg2.Margin = new System.Windows.Forms.Padding(20);
+            this.reg2.Name = "reg2";
+            this.reg2.Size = new System.Drawing.Size(205, 119);
+            this.reg2.TabIndex = 1;
             // 
             // reg3panel
             // 
@@ -6458,6 +6304,128 @@ namespace MovieMunch
             this.reg4.Size = new System.Drawing.Size(205, 119);
             this.reg4.TabIndex = 0;
             // 
+            // reg5panel
+            // 
+            this.reg5panel.Controls.Add(this.reg5NumericUpDown);
+            this.reg5panel.Controls.Add(this.reg5);
+            this.reg5panel.Location = new System.Drawing.Point(247, 208);
+            this.reg5panel.Name = "reg5panel";
+            this.reg5panel.Size = new System.Drawing.Size(238, 199);
+            this.reg5panel.TabIndex = 6;
+            // 
+            // reg5NumericUpDown
+            // 
+            this.reg5NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg5NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg5NumericUpDown.BorderRadius = 15;
+            this.reg5NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg5NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg5NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg5NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg5NumericUpDown.Name = "reg5NumericUpDown";
+            this.reg5NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg5NumericUpDown.TabIndex = 3;
+            this.reg5NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg5
+            // 
+            this.reg5.Location = new System.Drawing.Point(17, 17);
+            this.reg5.Margin = new System.Windows.Forms.Padding(20);
+            this.reg5.Name = "reg5";
+            this.reg5.Size = new System.Drawing.Size(205, 119);
+            this.reg5.TabIndex = 0;
+            // 
+            // reg6panel
+            // 
+            this.reg6panel.Controls.Add(this.reg6NumericUpDown);
+            this.reg6panel.Controls.Add(this.reg6);
+            this.reg6panel.Location = new System.Drawing.Point(491, 208);
+            this.reg6panel.Name = "reg6panel";
+            this.reg6panel.Size = new System.Drawing.Size(238, 199);
+            this.reg6panel.TabIndex = 7;
+            // 
+            // reg6NumericUpDown
+            // 
+            this.reg6NumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.reg6NumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.reg6NumericUpDown.BorderRadius = 15;
+            this.reg6NumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reg6NumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reg6NumericUpDown.Location = new System.Drawing.Point(17, 146);
+            this.reg6NumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.reg6NumericUpDown.Name = "reg6NumericUpDown";
+            this.reg6NumericUpDown.Size = new System.Drawing.Size(205, 32);
+            this.reg6NumericUpDown.TabIndex = 3;
+            this.reg6NumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
+            // 
+            // reg6
+            // 
+            this.reg6.Location = new System.Drawing.Point(17, 17);
+            this.reg6.Margin = new System.Windows.Forms.Padding(20);
+            this.reg6.Name = "reg6";
+            this.reg6.Size = new System.Drawing.Size(205, 119);
+            this.reg6.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.buyFoodsBtn);
+            this.panel4.Location = new System.Drawing.Point(3, 413);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(726, 77);
+            this.panel4.TabIndex = 5;
+            // 
+            // buyFoodsBtn
+            // 
+            this.buyFoodsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.buyFoodsBtn.BorderRadius = 15;
+            this.buyFoodsBtn.BorderThickness = 2;
+            this.buyFoodsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buyFoodsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buyFoodsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buyFoodsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buyFoodsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.buyFoodsBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyFoodsBtn.ForeColor = System.Drawing.Color.White;
+            this.buyFoodsBtn.Location = new System.Drawing.Point(17, 14);
+            this.buyFoodsBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.buyFoodsBtn.Name = "buyFoodsBtn";
+            this.buyFoodsBtn.Size = new System.Drawing.Size(693, 48);
+            this.buyFoodsBtn.TabIndex = 4;
+            this.buyFoodsBtn.Text = "SAVE";
+            this.buyFoodsBtn.Click += new System.EventHandler(this.buyFoodsBtn_Click);
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2Panel6.BorderThickness = 2;
+            this.guna2Panel6.Controls.Add(label30);
+            this.guna2Panel6.Location = new System.Drawing.Point(51, 18);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(812, 48);
+            this.guna2Panel6.TabIndex = 0;
+            // 
+            // SnacksDealsPanel
+            // 
+            this.SnacksDealsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.SnacksDealsPanel.Controls.Add(this.panel6);
+            this.SnacksDealsPanel.Controls.Add(this.closeSnackDealsBtn);
+            this.SnacksDealsPanel.Location = new System.Drawing.Point(214, 100);
+            this.SnacksDealsPanel.Name = "SnacksDealsPanel";
+            this.SnacksDealsPanel.Size = new System.Drawing.Size(914, 460);
+            this.SnacksDealsPanel.TabIndex = 721;
+            this.SnacksDealsPanel.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.panel6.Controls.Add(this.snackFlowLayoutPanel);
+            this.panel6.Controls.Add(this.guna2Panel7);
+            this.panel6.Location = new System.Drawing.Point(1, 66);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(911, 393);
+            this.panel6.TabIndex = 66;
+            // 
             // snackFlowLayoutPanel
             // 
             this.snackFlowLayoutPanel.AutoScroll = true;
@@ -6471,6 +6439,7 @@ namespace MovieMunch
             this.snackFlowLayoutPanel.Name = "snackFlowLayoutPanel";
             this.snackFlowLayoutPanel.Size = new System.Drawing.Size(778, 307);
             this.snackFlowLayoutPanel.TabIndex = 3;
+            this.snackFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.snackFlowLayoutPanel_Paint);
             // 
             // snack1panel
             // 
@@ -6655,6 +6624,38 @@ namespace MovieMunch
             this.snackBuyFoodBtn.Text = "SAVE";
             this.snackBuyFoodBtn.Click += new System.EventHandler(this.snackBuyFoodBtn_Click);
             // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(69)))), ((int)(((byte)(64)))));
+            this.guna2Panel7.BorderThickness = 2;
+            this.guna2Panel7.Controls.Add(label31);
+            this.guna2Panel7.Location = new System.Drawing.Point(51, 18);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.Size = new System.Drawing.Size(812, 48);
+            this.guna2Panel7.TabIndex = 0;
+            // 
+            // closeSnackDealsBtn
+            // 
+            this.closeSnackDealsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.closeSnackDealsBtn.BorderThickness = 5;
+            this.closeSnackDealsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closeSnackDealsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closeSnackDealsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closeSnackDealsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closeSnackDealsBtn.FillColor = System.Drawing.Color.Transparent;
+            this.closeSnackDealsBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeSnackDealsBtn.ForeColor = System.Drawing.Color.White;
+            this.closeSnackDealsBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.closeSnackDealsBtn.Location = new System.Drawing.Point(857, 8);
+            this.closeSnackDealsBtn.Name = "closeSnackDealsBtn";
+            this.closeSnackDealsBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closeSnackDealsBtn.Size = new System.Drawing.Size(50, 50);
+            this.closeSnackDealsBtn.TabIndex = 720;
+            this.closeSnackDealsBtn.Text = "x";
+            this.closeSnackDealsBtn.TextOffset = new System.Drawing.Point(1, -3);
+            this.closeSnackDealsBtn.Click += new System.EventHandler(this.closeSnackDealsBtn_Click);
+            // 
             // SeatReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -6699,24 +6700,23 @@ namespace MovieMunch
             ((System.ComponentModel.ISupportInitialize)(this.userProfileCustomHolder)).EndInit();
             this.RegularDealsPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.guna2Panel6.ResumeLayout(false);
-            this.SnacksDealsPanel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.guna2Panel7.ResumeLayout(false);
             this.regularDealsFlowLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reg1NumericUpDown)).EndInit();
             this.reg1panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg1NumericUpDown)).EndInit();
             this.reg2panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reg2NumericUpDown)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.reg5panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reg5NumericUpDown)).EndInit();
-            this.reg6panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reg6NumericUpDown)).EndInit();
             this.reg3panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reg3NumericUpDown)).EndInit();
             this.reg4panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reg4NumericUpDown)).EndInit();
+            this.reg5panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg5NumericUpDown)).EndInit();
+            this.reg6panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reg6NumericUpDown)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.guna2Panel6.ResumeLayout(false);
+            this.SnacksDealsPanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.snackFlowLayoutPanel.ResumeLayout(false);
             this.snack1panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.snack1NumericUpDown)).EndInit();
@@ -6729,6 +6729,7 @@ namespace MovieMunch
             this.snack5panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.snack5NumericUpDown)).EndInit();
             this.panel17.ResumeLayout(false);
+            this.guna2Panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
