@@ -10,6 +10,7 @@ using Zen.Barcode;
 using ZstdSharp.Unsafe;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
+
 namespace MovieMunch.Frontend.Forms.Components
 {
     public partial class resibo : Form
@@ -94,7 +95,6 @@ namespace MovieMunch.Frontend.Forms.Components
 
         private string GenerateReferenceForQRCode()
         {
-
             string generatedReference = string.Empty;
 
             if (string.IsNullOrEmpty(reference))
@@ -205,7 +205,6 @@ namespace MovieMunch.Frontend.Forms.Components
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-
             Font headerFont = new Font("Arial", 24, FontStyle.Bold);
             Font subHeaderFont = new Font("Arial", 20, FontStyle.Bold);
             Font bodyFont = new Font("Arial", 20);
@@ -216,7 +215,6 @@ namespace MovieMunch.Frontend.Forms.Components
             float y = 15;
             float lineHeight = 25;
 
-            // Print Logo
             string imagePath = "C:\\Users\\jakem\\source\\repos\\Movie_reservation\\MovieMunch\\Frontend\\Forms\\Assets\\MovieMunchLogo-removebg-preview_1.png";
             if (System.IO.File.Exists(imagePath))
             {
@@ -307,7 +305,6 @@ namespace MovieMunch.Frontend.Forms.Components
                     y -= 20;
                 }
 
-
                 e.Graphics.DrawString("______________________________________________", bodyFont, Brushes.Black, new PointF(x, y));
                 y += lineHeight + 10;
 
@@ -336,13 +333,11 @@ namespace MovieMunch.Frontend.Forms.Components
             }
         }
 
-
         private void printReceiptBtn_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument;
             printPreviewDialog1.ShowDialog();
         }
-
 
         private void OkBtn_Click(object sender, EventArgs e)
         {

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using Zen.Barcode;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MovieMunch.Frontend.Forms
@@ -22,6 +24,9 @@ namespace MovieMunch.Frontend.Forms
         private string _movieDay;
         private DateTime _movieStart;
         private DateTime _movieEnd;
+
+        private string reference;
+        private string _ticketReference;
         public TicketForm(string movieId, string userName, string userEmail, string profilePic, string movieDay, 
             DateTime movieStart, DateTime movieEnd)
         {
@@ -50,6 +55,8 @@ namespace MovieMunch.Frontend.Forms
 
             userPanelTimer.Interval = 15;
             userPanelTimer.Tick += smothFromLeftToRightTransition_Click;
+
+           
 
             try
             {
@@ -143,7 +150,6 @@ namespace MovieMunch.Frontend.Forms
 
         private void AddTicketCategories(FlowLayoutPanel flowLayoutPanel, List<TicketDetails> recentlyPurchasedTickets, List<TicketDetails> purchasedTickets)
         {
-            // Add "Recently Purchased Tickets" section
             if (recentlyPurchasedTickets.Any())
             {
                 var recentlyPurchasedHeader = CreateCategoryHeader("Recently Purchased Tickets");
@@ -156,7 +162,6 @@ namespace MovieMunch.Frontend.Forms
                 }
             }
 
-            // Add "Purchased Tickets" section
             if (purchasedTickets.Any())
             {
                 var purchasedHeader = CreateCategoryHeader("Purchased Tickets");
@@ -210,102 +215,139 @@ namespace MovieMunch.Frontend.Forms
             return panel;
         }
 
-
         private Guna.UI2.WinForms.Guna2Panel CreateTicketPanel(TicketDetails ticket)
         {
+            var ticketId = ticket.MovieId ?? Guid.NewGuid().ToString();
+
+            CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
+            Image qrCodeImage = barcode.Draw(ticketId, 100);
+
+            // Main panel for the ticket
             var moviePanel = new Guna.UI2.WinForms.Guna2Panel
             {
-                Size = new System.Drawing.Size(1018, 170),
+                Size = new System.Drawing.Size(1018, 250),
                 BorderRadius = 10,
                 BorderThickness = 1,
                 Margin = new Padding(10, 10, 0, 10),
-                FillColor = ColorTranslator.FromHtml("#510A32"),
+                FillColor = ColorTranslator.FromHtml("#801336"),
                 BorderColor = ColorTranslator.FromHtml("#EE4540")
             };
 
-            var logoPictureBox = new PictureBox
+            // Ticket Header Panel 
+            var ticketHeaderPanel = new Guna.UI2.WinForms.Guna2Panel
             {
-                Size = new System.Drawing.Size(100, 100),
-                Location = new System.Drawing.Point(10, 10),
-                BackColor = Color.Transparent,
-                Image = Properties.Resources.MovieMunchLogo_removebg_preview,
-                SizeMode = PictureBoxSizeMode.Zoom
+                FillColor = ColorTranslator.FromHtml("#510A32"),
+                BorderColor = ColorTranslator.FromHtml("#C72C41"),
+                BorderThickness = 1,
+                Size = new System.Drawing.Size(988, 46),
+                Location = new System.Drawing.Point(15, 15)
             };
 
-            var titleLabel = new Label
+            // purchased date   
+            var purchaseDateLabel = new Label
             {
-                Text = ticket.MovieTitle,
-                Font = new Font("Segoe UI", 16, FontStyle.Bold),
-                Location = new System.Drawing.Point(120, 10),
-                ForeColor = Color.White,
-                Size = new System.Drawing.Size(500, 30),
-                BackColor = Color.Transparent
-            };
-
-            var userNameLabel = new Label
-            {
-                Text = $"User: {ticket.UserName}",
-                Font = new Font("Segoe UI", 12),
-                Location = new System.Drawing.Point(120, 50),
+                Text = $"Date of Purchase: {ticket.DatePurchased:dd MMMM yyyy}",
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Location = new System.Drawing.Point(10, 13),
                 ForeColor = Color.White,
                 Size = new System.Drawing.Size(300, 20),
                 BackColor = Color.Transparent
             };
-            
-            var seatLabels = new List<string>();
-            foreach (var seat in ticket.SeatTicketMapping)
+
+            // MOVIE MUNCH TICKET Text 
+            var ticketTextLabel = new Label
             {
-                seatLabels.Add(seat.Key); 
+                Text = "MOVIE MUNCH TICKET",
+                Font = new Font("Segoe UI", 14, FontStyle.Bold),
+                Location = new System.Drawing.Point(720, 10),
+                ForeColor = Color.White,
+                Size = new System.Drawing.Size(250, 30),
+                BackColor = Color.Transparent,
+                TextAlign = ContentAlignment.TopRight
+            };
+
+            ticketHeaderPanel.Controls.Add(purchaseDateLabel);
+            ticketHeaderPanel.Controls.Add(ticketTextLabel);
+
+            // QR Code 
+            var qrCodePictureBox = new Guna2PictureBox
+            {
+                Size = new System.Drawing.Size(150, 150),
+                Location = new System.Drawing.Point(15, 80),
+                BackColor = Color.Transparent,
+                BorderRadius = 5,
+                Image = qrCodeImage,
+                SizeMode = PictureBoxSizeMode.Zoom
+            };
+
+            // Movie Name  
+            var movieNameTextBox = new Label
+            {
+                Text = ticket.MovieTitle ?? "Movie Title",
+                Font = new Font("Segoe UI", 20, FontStyle.Bold),
+                Location = new System.Drawing.Point(175, 190),  
+                ForeColor = Color.White,
+                Size = new System.Drawing.Size(580, 40),
+                BackColor = Color.Transparent
+            };
+
+            // Seats and Theater Info  
+            var seatsInfoLabel = new Label
+            {
+                Text = $"Theater: 01\nSeats: {string.Join(", ", ticket.SeatTicketMapping.Keys)}\n" +
+                       $"Date: {ticket.DatePurchased:dd MMMM yyyy}\nTicket Id: {ticketId}",
+                Font = new Font("Segoe UI", 10),
+                Location = new System.Drawing.Point(180, 75),
+                Size = new System.Drawing.Size(255, 110), 
+                ForeColor = Color.White,
+                BackColor = Color.Transparent
+            };
+
+
+            // Center Section - Snacks/Regular Foods
+            var foodDetails = string.Empty;
+            if (ticket.RegularFoodsName != null && ticket.RegularFoodsName.Any())
+            {
+                foodDetails += $"Regular Foods: {string.Join(", ", ticket.RegularFoodsName)}\n";
+            }
+            if (ticket.SnackFoodsName != null && ticket.SnackFoodsName.Any())
+            {
+                foodDetails += $"Snack Foods: {string.Join(", ", ticket.SnackFoodsName)}";
             }
 
-            var seatsLabel = new Label
+            var foodDetailsLabel = new Label
             {
-                Text = $"Seat(s): {string.Join(", ", seatLabels)}",  
-                Font = new Font("Segoe UI", 12),
-                Location = new System.Drawing.Point(120, 80),
+                Text = foodDetails,
+                Font = new Font("Segoe UI", 10),
+                Location = new System.Drawing.Point(450, 75),
                 ForeColor = Color.White,
-                Size = new System.Drawing.Size(300, 20),
-                BackColor = Color.Transparent
+                Size = new System.Drawing.Size(310, 110),
+                BackColor = Color.Transparent,
+                TextAlign = ContentAlignment.TopLeft
             };
 
-            var referenceNumber = new Label
-            {
-                Text = $"Reference: {ticket.MovieId}", 
-                Font = new Font("Segoe UI", 12),
-                Location = new System.Drawing.Point(120, 110),
-                ForeColor = Color.White,
-                Size = new System.Drawing.Size(300, 20),
-                BackColor = Color.Transparent
-            };
+            string movieMunchLogoPath = "C:\\Users\\jakem\\source\\repos\\Movie_reservation\\MovieMunch\\Frontend\\Forms\\Assets\\movieMunchWhite.png";
+            Image movieMunchLogo = Image.FromFile(movieMunchLogoPath);
 
-            var barcodePictureBox = new PictureBox
+            // Movie Munch Logo
+            var logoPictureBox = new PictureBox
             {
-                Size = new System.Drawing.Size(150, 50),
-                Location = new System.Drawing.Point(850, 10),
-                BackColor = Color.White,
-                Image = Properties.Resources.MovieMunchLogo_removebg_preview, 
+                Size = new System.Drawing.Size(200, 100),
+                Location = new System.Drawing.Point(780, 100),
+                BackColor = Color.Transparent,
+                Image = movieMunchLogo,
                 SizeMode = PictureBoxSizeMode.Zoom
             };
 
-            var brandingLabel = new Label
-            {
-                Text = "MovieMunch",
-                Font = new Font("Segoe UI", 14, FontStyle.Bold),
-                Location = new System.Drawing.Point(850, 70),
-                ForeColor = ColorTranslator.FromHtml("#EE4540"),
-                Size = new System.Drawing.Size(150, 30),
-                BackColor = Color.Transparent,
-                TextAlign = ContentAlignment.MiddleCenter
-            };
-
+            moviePanel.Controls.Add(ticketHeaderPanel); 
+            moviePanel.Controls.Add(qrCodePictureBox);
+            moviePanel.Controls.Add(movieNameTextBox);
+            moviePanel.Controls.Add(foodDetailsLabel);
+            moviePanel.Controls.Add(seatsInfoLabel);
             moviePanel.Controls.Add(logoPictureBox);
-            moviePanel.Controls.Add(titleLabel);
-            moviePanel.Controls.Add(userNameLabel);
-            moviePanel.Controls.Add(seatsLabel);
-            moviePanel.Controls.Add(referenceNumber);
-            moviePanel.Controls.Add(barcodePictureBox);
-            moviePanel.Controls.Add(brandingLabel);
 
+            ticketHeaderPanel.BringToFront();
+            logoPictureBox.BringToFront();
             return moviePanel;
         }
 

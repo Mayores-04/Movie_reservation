@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -195,27 +196,30 @@ namespace MovieMunch.Frontend.Forms
                 Text = movie.MovieDescription,
                 Font = new Font("Segoe UI", 12),
                 Location = new System.Drawing.Point(350, 80),  
-                Size = new System.Drawing.Size(200, 100),
+                Size = new System.Drawing.Size(665, 250),
                 ForeColor = Color.LightGray,
-                AutoEllipsis = true
+                AutoEllipsis = true,
+                BackColor = Color.Transparent
             };
 
             var reserveSeatButton = new Guna.UI2.WinForms.Guna2Button
             {
                 Text = "Reserve Seat",
-                Size = new System.Drawing.Size(120, 40),
+                Size = new System.Drawing.Size(160, 40),
                 Location = new System.Drawing.Point(340, 350),
-                FillColor = Color.FromArgb(220, 53, 69), 
+                FillColor = Color.FromArgb(220, 53, 69),
                 ForeColor = Color.White,
-                BorderRadius = 5
+                Font = new Font("Segoe UI", 12, FontStyle.Bold), 
+                BorderRadius = 20 
             };
+
 
             reserveSeatButton.Click += (sender, args) => ReserveSeat(movie);
             var removeButton = new Guna.UI2.WinForms.Guna2Button
             {
                 Text = string.Empty, 
                 Size = new System.Drawing.Size(45, 45), 
-                Location = new System.Drawing.Point(480, 350), 
+                Location = new System.Drawing.Point(510, 350), 
                 FillColor = Color.Transparent,  
                 BorderThickness = 0,  
                 BorderRadius = 25, 

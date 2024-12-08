@@ -3,6 +3,7 @@ using MovieMunch.Backend.Models;
 using MovieMunch.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CashierApplication.Backend.Services
 {
@@ -12,6 +13,7 @@ namespace CashierApplication.Backend.Services
         private readonly IMongoCollection<User> _userCollection;
         private readonly IMongoCollection<CinemaSeats> _cinemaSeatsCollection;
         private readonly IMongoCollection<Sales> _salesCollection;
+        private readonly IMongoCollection<CinemaSeats> _salesOfFoods;
 
         public Reports()
         {
@@ -20,7 +22,37 @@ namespace CashierApplication.Backend.Services
             _userCollection = dbConnection.GetUsersCollection();
             _cinemaSeatsCollection = dbConnection.GetCinemaSeatCollection();
             _salesCollection = dbConnection.GetSalesCollection();
+            _salesOfFoods = dbConnection.GetCinemaSeatCollection();
         }
+
+        public async Task<decimal> CalculateTotalFoodSalesAsync()
+        {
+            var cinemaSeats = await _salesOfFoods.Find(_ => true).ToListAsync();
+
+            decimal totalSales = 0;
+
+            foreach (var seat in cinemaSeats)
+            {
+                if (seat.RegularFoodsPrice != null && seat.RegularFoodsQuantity != null)
+                {
+                    for (int i = 0; i < seat.RegularFoodsPrice.Count; i++)
+                    {
+                        totalSales += seat.RegularFoodsPrice[i] * seat.RegularFoodsQuantity[i];
+                    }
+                }
+
+                if (seat.SnackFoodsPrice != null && seat.SnackFoodsQuantity != null)
+                {
+                    for (int i = 0; i < seat.SnackFoodsPrice.Count; i++)
+                    {
+                        totalSales += seat.SnackFoodsPrice[i] * seat.SnackFoodsQuantity[i];
+                    }
+                }
+            }
+
+            return totalSales;
+        }
+
         public void UpdateMovieSales(string salesId)
         {
             var filter = Builders<Sales>.Filter.Eq(s => s.Id, salesId);
@@ -104,6 +136,8 @@ namespace CashierApplication.Backend.Services
 
             return totalPrice;
         }
+
+
 
         public Dictionary<string, int> GetReservedSeatsPerMovie()
         {

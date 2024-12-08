@@ -55,6 +55,10 @@ public class MovieDetails
 
 public class TicketDetails
 {
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+
     [BsonElement("movieId")]
     public string MovieId { get; set; }
 

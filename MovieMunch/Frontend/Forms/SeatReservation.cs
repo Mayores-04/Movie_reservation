@@ -284,7 +284,6 @@ namespace MovieMunch
                 {
                     await _seatReservationService.ReserveSeatsAsync(_movieName, (double)_moviePrice, _selectedSeats, _reservedBy, 
                         _foodName, _foodPrice, _foodQuantity, _snackName, _snackPrice, _snackQuantity);
-                    MessageBox.Show("Seats reserved successfully!");
 
                     foreach (string seat in _selectedSeats)
                     {

@@ -21,6 +21,7 @@ namespace MovieMunch.Admin
             var dbConnection = new MongoDBConnection();
             _reports = new Reports();
             formOptionsPanel.BringToFront();
+            adminProfilePanel.BringToFront();
             this.Load += new System.EventHandler(this.SystemReportData_Load);
             SetUserNamme(_userName, _profilePic);
         }
@@ -57,7 +58,7 @@ namespace MovieMunch.Admin
             UpdateCharts();
         }
 
-        private void UpdateLabels()
+        private async void UpdateLabels()
         {
             try
             {
@@ -83,10 +84,11 @@ namespace MovieMunch.Admin
                 decimal totalSales = _reports.GetTotalPriceOfAllMovies();
                 labelMovieSales.Text = totalSales == 0 ? "No sales data available." : $"{totalSales:C}";
 
-                
-
                 int totalReservedSeats = _reports.GetTotalReservedSeats();
                 labelReservedSeats.Text = $"{totalReservedSeats}";
+
+                decimal totalFoodsSales = await _reports.CalculateTotalFoodSalesAsync();
+                labelFoodSales.Text = $"{totalFoodsSales:C}";
 
                 var movieSales = _reports.GetMovieSales();
 
@@ -198,7 +200,6 @@ namespace MovieMunch.Admin
             }
         }
 
-
         private void showingBtn_Click(object sender, EventArgs e)
         {
             SetUserNamme(_userName, _profilePic);
@@ -271,5 +272,54 @@ namespace MovieMunch.Admin
                 formOptionsPanel.Visible = false;
             }
         }
+
+        private void numbersOfUsersBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateLabels();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating the user count: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void totalReservedSeatsBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateLabels();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating reserved seats: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void movieSalesBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateLabels();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating movie sales: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void foodsSalesBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateLabels();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating food sales: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
